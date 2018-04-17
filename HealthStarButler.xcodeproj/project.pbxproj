@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.debug.xcconfig"; sourceTree = "<group>"; };
+		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,6 +28,7 @@
 		5D829A2D2085C7D1001993B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D829A472085CBB9001993B6 /* HealthStarButler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthStarButler-Prefix.pch"; sourceTree = "<group>"; };
 		5D829A482085CC53001993B6 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,8 @@
 			children = (
 				5D829A1D2085C7D1001993B6 /* HealthStarButler */,
 				5D829A1C2085C7D1001993B6 /* Products */,
+				B57C64CA421B6D48070A8489 /* Pods */,
+				C304EF3E1EAF2A12195628D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +205,23 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		B57C64CA421B6D48070A8489 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */,
+				C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C304EF3E1EAF2A12195628D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D829A312085C7D1001993B6 /* Build configuration list for PBXNativeTarget "HealthStarButler" */;
 			buildPhases = (
+				FE589E07E4F36B2C354A5F3F /* [CP] Check Pods Manifest.lock */,
 				5D829A172085C7D1001993B6 /* Sources */,
 				5D829A182085C7D1001993B6 /* Frameworks */,
 				5D829A192085C7D1001993B6 /* Resources */,
+				68C15FD6DDB7DB2E9F430D81 /* [CP] Embed Pods Frameworks */,
+				27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +289,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C15FD6DDB7DB2E9F430D81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE589E07E4F36B2C354A5F3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthStarButler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D829A172085C7D1001993B6 /* Sources */ = {
@@ -346,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -398,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -407,6 +488,7 @@
 		};
 		5D829A322085C7D1001993B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -425,6 +507,7 @@
 		};
 		5D829A332085C7D1001993B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

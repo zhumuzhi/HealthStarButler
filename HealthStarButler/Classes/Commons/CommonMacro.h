@@ -14,9 +14,9 @@
 #pragma mark -------------------- Log --------------------
 
 #ifdef DEBUG
-#define MEDLog(...) NSLog(@"%s(%d行)\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define NSLog(...) NSLog(@"%s(%d行)\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
-#define MEDLog(...)
+#define NSLog(...)
 #endif
 
 #pragma mark -------------------- Frame --------------------
