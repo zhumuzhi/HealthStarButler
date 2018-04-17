@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
+		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
+		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
+		5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A292085C7D1001993B6 /* LaunchScreen.storyboard */; };
+		5D829A2E2085C7D1001993B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A2D2085C7D1001993B6 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D829A252085C7D1001993B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D829A272085C7D1001993B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D829A2A2085C7D1001993B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D829A2C2085C7D1001993B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D829A2D2085C7D1001993B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D829A182085C7D1001993B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D829A122085C7D1001993B6 = {
+			isa = PBXGroup;
+			children = (
+				5D829A1D2085C7D1001993B6 /* HealthStarButler */,
+				5D829A1C2085C7D1001993B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D829A1C2085C7D1001993B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A1B2085C7D1001993B6 /* HealthStarButler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D829A1D2085C7D1001993B6 /* HealthStarButler */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A342085C873001993B6 /* Classes */,
+			);
+			path = HealthStarButler;
+			sourceTree = "<group>";
+		};
+		5D829A342085C873001993B6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A3D2085C904001993B6 /* Magement */,
+				5D829A402085C976001993B6 /* Consultation  */,
+				5D829A3C2085C8FD001993B6 /* Home */,
+				5D829A3F2085C93D001993B6 /* TreatmentGuide */,
+				5D829A3E2085C92F001993B6 /* Information */,
+				5D829A422085CA5E001993B6 /* Mine */,
+				5D829A372085C89A001993B6 /* Network */,
+				5D829A3A2085C8C4001993B6 /* BaseView */,
+				5D829A392085C8B9001993B6 /* BaseController */,
+				5D829A382085C8A4001993B6 /* Category */,
+				5D829A362085C88D001993B6 /* Appdelegate */,
+				5D829A3B2085C8CD001993B6 /* Third */,
+				5D829A352085C884001993B6 /* Other */,
+				5D829A412085C9A5001993B6 /* Supporting Files */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5D829A352085C884001993B6 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5D829A362085C88D001993B6 /* Appdelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A1E2085C7D1001993B6 /* AppDelegate.h */,
+				5D829A1F2085C7D1001993B6 /* AppDelegate.m */,
+			);
+			path = Appdelegate;
+			sourceTree = "<group>";
+		};
+		5D829A372085C89A001993B6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5D829A382085C8A4001993B6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		5D829A392085C8B9001993B6 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		5D829A3A2085C8C4001993B6 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		5D829A3B2085C8CD001993B6 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		5D829A3C2085C8FD001993B6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5D829A3D2085C904001993B6 /* Magement */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Magement;
+			sourceTree = "<group>";
+		};
+		5D829A3E2085C92F001993B6 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
+			sourceTree = "<group>";
+		};
+		5D829A3F2085C93D001993B6 /* TreatmentGuide */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TreatmentGuide;
+			sourceTree = "<group>";
+		};
+		5D829A402085C976001993B6 /* Consultation  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Consultation ";
+			sourceTree = "<group>";
+		};
+		5D829A412085C9A5001993B6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A242085C7D1001993B6 /* Main.storyboard */,
+				5D829A272085C7D1001993B6 /* Assets.xcassets */,
+				5D829A292085C7D1001993B6 /* LaunchScreen.storyboard */,
+				5D829A2C2085C7D1001993B6 /* Info.plist */,
+				5D829A2D2085C7D1001993B6 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D829A422085CA5E001993B6 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D829A1A2085C7D1001993B6 /* HealthStarButler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D829A312085C7D1001993B6 /* Build configuration list for PBXNativeTarget "HealthStarButler" */;
+			buildPhases = (
+				5D829A172085C7D1001993B6 /* Sources */,
+				5D829A182085C7D1001993B6 /* Frameworks */,
+				5D829A192085C7D1001993B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthStarButler;
+			productName = HealthStarButler;
+			productReference = 5D829A1B2085C7D1001993B6 /* HealthStarButler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D829A132085C7D1001993B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = zhumuzhi;
+				TargetAttributes = {
+					5D829A1A2085C7D1001993B6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 5D829A162085C7D1001993B6 /* Build configuration list for PBXProject "HealthStarButler" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D829A122085C7D1001993B6;
+			productRefGroup = 5D829A1C2085C7D1001993B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D829A1A2085C7D1001993B6 /* HealthStarButler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D829A192085C7D1001993B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
+				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
+				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D829A172085C7D1001993B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
+				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D829A242085C7D1001993B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D829A252085C7D1001993B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D829A292085C7D1001993B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D829A2A2085C7D1001993B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D829A2F2085C7D1001993B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5D829A302085C7D1001993B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D829A322085C7D1001993B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GFW576JD52;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5D829A332085C7D1001993B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GFW576JD52;
+				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D829A162085C7D1001993B6 /* Build configuration list for PBXProject "HealthStarButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D829A2F2085C7D1001993B6 /* Debug */,
+				5D829A302085C7D1001993B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D829A312085C7D1001993B6 /* Build configuration list for PBXNativeTarget "HealthStarButler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D829A322085C7D1001993B6 /* Debug */,
+				5D829A332085C7D1001993B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D829A132085C7D1001993B6 /* Project object */;
+}
