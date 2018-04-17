@@ -8,7 +8,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import "MEDTabBarControllerConfig.h"
+#import "MEDTabBarMidButton.h"
+
+@interface AppDelegate () <UITabBarControllerDelegate, CYLTabBarControllerDelegate>
 
 @end
 
@@ -17,7 +20,55 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    [MEDTabBarMidButton registerPlusButton];
+    
+    MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
+    CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
+    
+    [self.window setRootViewController:tabBarController];
+    
+    tabBarController.delegate = self;
+    //设置选中哪个图标
+    //[tabBarController setSelectedIndex:1];
+    [self.window makeKeyAndVisible];
+    
+    [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
     return YES;
+    
+}
+
+#pragma mark - UITabBarControllerDelegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    [[self cyl_tabBarController] updateSelectionStatusIfNeededForTabBarController:tabBarController shouldSelectViewController:viewController];
+    return YES;
+}
+
+#pragma mark - CYLTabBarControllerDelegate
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectControl:(UIControl *)control {
+    
+    UIView *animationView;
+    
+    if ([control cyl_isTabButton]) {
+        //更改红标状态
+        animationView = [control cyl_tabImageView];
+    }
+    
+    // 即使 PlusButton 也添加了点击事件，点击 PlusButton 后也会触发该代理方法。
+    if ([control cyl_isPlusButton]) {
+        UIButton *button = CYLExternPlusButton;
+        animationView = button.imageView;
+    }
+    
+    if (!([self cyl_tabBarController].selectedIndex == 2)) {
+        //缩放动画
+        //旋转动画
+    }
 }
 
 

@@ -48,10 +48,10 @@
     
     if ([wifi currentReachabilityStatus] != NotReachable||[conn currentReachabilityStatus] != NotReachable)
     {
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//        UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
-        CGPoint point = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2+100 );
-        NSValue *value = [NSValue valueWithCGPoint:point];
+//        CGPoint point = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2+100 );
+//        NSValue *value = [NSValue valueWithCGPoint:point];
         //[window makeToast:@"当前网络可使用" duration:2 position:value];
         
     }
@@ -59,10 +59,10 @@
     else
     {
         //[SVProgressHUD dismiss];
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+//        UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
-        CGPoint point = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2+100 );
-        NSValue *value = [NSValue valueWithCGPoint:point];
+//        CGPoint point = CGPointMake([UIScreen mainScreen].bounds.size.width/2,[UIScreen mainScreen].bounds.size.height/2+100 );
+//        NSValue *value = [NSValue valueWithCGPoint:point];
         //[window makeToast:@"网络异常，请检查您的网络" duration:2 position:value];
     }
 }

@@ -18,7 +18,7 @@
 /**
  *  当前网络是否可用
  *
- *  @return 
+ *  return 
  */
 +(BOOL)isNetWork;
 @end

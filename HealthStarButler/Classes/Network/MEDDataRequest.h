@@ -15,7 +15,7 @@ typedef void (^ImageFailureBlock)(NSError *error);
 #pragma mark - 宏定义
 /**
  *  宏定义请求成功的block
- *  @param response 请求成功返回的数据
+ *  param response 请求成功返回的数据
  */
 typedef void (^MEDResponseSuccess)(NSURLSessionDataTask * task,id responseObject);
 
