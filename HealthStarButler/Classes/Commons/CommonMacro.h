@@ -19,6 +19,14 @@
 #define NSLog(...)
 #endif
 
+
+#ifdef DEBUG
+#define NSLogFunc NSLog(@"=====Begin==========\n FILE: %@\n FUNC: %s\n LINE: %d\n", [NSString stringWithUTF8String:__FILE__].lastPathComponent, __PRETTY_FUNCTION__, __LINE__)
+
+#else
+#define NSLogFunc
+#endif
+
 #pragma mark -------------------- Frame --------------------
 
 // 屏幕宽度

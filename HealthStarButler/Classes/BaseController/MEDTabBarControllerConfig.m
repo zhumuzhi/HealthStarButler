@@ -10,11 +10,11 @@
 //NavigationController
 #import "MEDNavigationController.h"
 //引入各个模块
-#import "MEDHomePageController.h"
-#import "MEDTreatmentGuideController.h"
 #import "MEDManagementController.h"
+#import "MEDConsultationController.h"
+#import "MEDTreatmentGuideController.h"
 #import "MEDInformationController.h"
-#import "MEDMineController.h"
+
 
 //static CGFloat const MEDTabBarControllerHeight = 40.f;
 
@@ -87,11 +87,11 @@
 
 - (NSArray *)viewControllers {
     
-    MEDHomePageController *homepageController = [[MEDHomePageController alloc] init];
-    UIViewController *firstNavigationController = [[MEDNavigationController alloc] initWithRootViewController:homepageController];
+    MEDManagementController *managementController = [[MEDManagementController alloc] init];
+    UIViewController *firstNavigationController = [[MEDNavigationController alloc] initWithRootViewController:managementController];
     
-    MEDTreatmentGuideController *treatmentGuideController = [[MEDTreatmentGuideController alloc] init];
-    UIViewController *secondNavigationController = [[MEDNavigationController alloc] initWithRootViewController:treatmentGuideController];
+    MEDConsultationController *consultationController = [[MEDConsultationController alloc] init];
+    UIViewController *secondNavigationController = [[MEDNavigationController alloc] initWithRootViewController:consultationController];
     
 //    MEDManagementController *magenmentController = [[MEDManagementController alloc] init];
 //    UIViewController *thirdNavigationController = [[MEDNavigationController alloc] initWithRootViewController:magenmentController];
@@ -99,8 +99,8 @@
     MEDInformationController *informationController = [[MEDInformationController alloc] init];
     UIViewController *fourthNavigationController = [[MEDNavigationController alloc] initWithRootViewController: informationController];
     
-    MEDMineController *mineController = [[MEDMineController alloc] init];
-    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:mineController];
+    MEDTreatmentGuideController *guideController = [[MEDTreatmentGuideController alloc] init];
+    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:guideController];
     
     NSArray *viewControllers = @[
                                  firstNavigationController,
@@ -116,14 +116,14 @@
     
     NSDictionary *firstTabBarItemsAttributes = @{
 
-                                                 CYLTabBarItemTitle : @"首页",
-                                                 CYLTabBarItemImage : @"tab_home", CYLTabBarItemSelectedImage : @"tab_home_selected",
+                                                 CYLTabBarItemTitle : @"管理",
+                                                 CYLTabBarItemImage : @"tab_management", CYLTabBarItemSelectedImage : @"tab_management_selsected",
                                                  };
     
     NSDictionary *secondTabBarItemsAttributes = @{
-                                                                                                    CYLTabBarItemTitle : @"导诊",
-                                                  CYLTabBarItemImage : @"tab_guide",
-                                                  CYLTabBarItemSelectedImage : @"tab_guide_selected",
+                                                                                                    CYLTabBarItemTitle : @"咨询",
+                                                  CYLTabBarItemImage : @"tab_consultation",
+                                                  CYLTabBarItemSelectedImage : @"tab_consultation _selected",
                                                   };
 //    NSDictionary *thirdTabBarItemsAttributes = @{
 //                                                                                                  CYLTabBarItemTitle : @"",
@@ -137,13 +137,13 @@
 //      };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                                                                     CYLTabBarItemTitle : @"资讯",
-                                                  CYLTabBarItemImage : @"tab_Information",
-                                                  CYLTabBarItemSelectedImage : @"tab_Information_selected"
+                                                  CYLTabBarItemImage : @"tab_information",
+                                                  CYLTabBarItemSelectedImage : @"tab_information_selected"
                                                   };
     NSDictionary *fifthTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"我的",
-                                                  CYLTabBarItemImage : @"tab_mine",
-                                                  CYLTabBarItemSelectedImage : @"tab_mine_selected"
+                                                  CYLTabBarItemTitle : @"导诊",
+                                                  CYLTabBarItemImage : @"tab_guide",
+                                                  CYLTabBarItemSelectedImage : @"tab_guide_selected"
                                                   };
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,

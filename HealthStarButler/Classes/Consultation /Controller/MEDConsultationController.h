@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MEDConsultationController : UIViewController
+@interface MEDConsultationController : MEDBaseViewController
 
 @end

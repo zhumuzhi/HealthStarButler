@@ -7,8 +7,9 @@
 //
 
 #import "MEDTabBarMidButton.h"
-#import "MEDManagementController.h"
 #import "MEDNavigationController.h"
+
+#import "MEDHomePageController.h"
 
 @interface MEDTabBarMidButton ()
 {
@@ -63,10 +64,14 @@
     MEDTabBarMidButton *button = [[MEDTabBarMidButton alloc] init];
     UIImage *buttonImage = [UIImage imageNamed:@"post_normal"];
     [button setImage:buttonImage forState:UIControlStateNormal];
-    [button setTitle:@"管理" forState:UIControlStateNormal];
+//    UIImage *buttonImage = [UIImage imageNamed:@"tab_home"];
+//    [button setImage:buttonImage forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"tab_home_selected"] forState:UIControlStateSelected];
+    
+    [button setTitle:@"首页" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     
-    [button setTitle:@"管理" forState:UIControlStateSelected];
+    [button setTitle:@"首页" forState:UIControlStateSelected];
     [button setTitleColor:MEDCommonBlue forState:UIControlStateSelected];
     
     button.titleLabel.font = [UIFont systemFontOfSize:9.5];
@@ -88,8 +93,8 @@
 
 + (UIViewController *)plusChildViewController {
     
-    MEDManagementController *magenmentController = [[MEDManagementController alloc] init];
-    UIViewController *thirdNavigationController = [[MEDNavigationController alloc] initWithRootViewController:magenmentController];
+    MEDHomePageController *homeController = [[MEDHomePageController alloc] init];
+    UIViewController *thirdNavigationController = [[MEDNavigationController alloc] initWithRootViewController:homeController];
     
     return thirdNavigationController;
 }

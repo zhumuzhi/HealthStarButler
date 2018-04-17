@@ -16,8 +16,7 @@
 #pragma mark -------------------- 公共 --------------------
 #import "CommonMacro.h"
 #import "MEDMainUrl.h"
-
-
+#import "MEDBaseViewController.h"
 
 
 #pragma mark -------------------- 分类 --------------------
