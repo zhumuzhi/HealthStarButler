@@ -13,6 +13,10 @@
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
 		5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A292085C7D1001993B6 /* LaunchScreen.storyboard */; };
 		5D829A2E2085C7D1001993B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A2D2085C7D1001993B6 /* main.m */; };
+		5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A492085D5DB001993B6 /* UIView+MED.m */; };
+		5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A582085D73F001993B6 /* MEDNetClient.m */; };
+		5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A592085D73F001993B6 /* MEDDataRequest.m */; };
+		5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A5A2085D73F001993B6 /* MEDNetStatusManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,15 @@
 		5D829A2D2085C7D1001993B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D829A472085CBB9001993B6 /* HealthStarButler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthStarButler-Prefix.pch"; sourceTree = "<group>"; };
 		5D829A482085CC53001993B6 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		5D829A492085D5DB001993B6 /* UIView+MED.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MED.m"; sourceTree = "<group>"; };
+		5D829A4A2085D5DB001993B6 /* UIView+MED.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MED.h"; sourceTree = "<group>"; };
+		5D829A4D2085D6F0001993B6 /* MEDMainUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMainUrl.h; sourceTree = "<group>"; };
+		5D829A582085D73F001993B6 /* MEDNetClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDNetClient.m; sourceTree = "<group>"; };
+		5D829A592085D73F001993B6 /* MEDDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDDataRequest.m; sourceTree = "<group>"; };
+		5D829A5A2085D73F001993B6 /* MEDNetStatusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDNetStatusManager.m; sourceTree = "<group>"; };
+		5D829A5B2085D73F001993B6 /* MEDDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDDataRequest.h; sourceTree = "<group>"; };
+		5D829A5C2085D73F001993B6 /* MEDNetClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDNetClient.h; sourceTree = "<group>"; };
+		5D829A5D2085D73F001993B6 /* MEDNetStatusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDNetStatusManager.h; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +123,12 @@
 		5D829A372085C89A001993B6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5D829A5C2085D73F001993B6 /* MEDNetClient.h */,
+				5D829A582085D73F001993B6 /* MEDNetClient.m */,
+				5D829A5B2085D73F001993B6 /* MEDDataRequest.h */,
+				5D829A592085D73F001993B6 /* MEDDataRequest.m */,
+				5D829A5D2085D73F001993B6 /* MEDNetStatusManager.h */,
+				5D829A5A2085D73F001993B6 /* MEDNetStatusManager.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -117,6 +136,9 @@
 		5D829A382085C8A4001993B6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D829A4C2085D5DF001993B6 /* Third */,
+				5D829A4A2085D5DB001993B6 /* UIView+MED.h */,
+				5D829A492085D5DB001993B6 /* UIView+MED.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -201,8 +223,16 @@
 			children = (
 				5D829A472085CBB9001993B6 /* HealthStarButler-Prefix.pch */,
 				5D829A482085CC53001993B6 /* CommonMacro.h */,
+				5D829A4D2085D6F0001993B6 /* MEDMainUrl.h */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		5D829A4C2085D5DF001993B6 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
@@ -350,7 +380,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
+				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
+				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
+				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
