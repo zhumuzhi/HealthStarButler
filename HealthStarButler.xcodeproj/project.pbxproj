@@ -23,6 +23,8 @@
 		5D829A2A2085C7D1001993B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D829A2C2085C7D1001993B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D829A2D2085C7D1001993B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D829A472085CBB9001993B6 /* HealthStarButler-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HealthStarButler-Prefix.pch"; sourceTree = "<group>"; };
+		5D829A482085CC53001993B6 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5D829A3F2085C93D001993B6 /* TreatmentGuide */,
 				5D829A3E2085C92F001993B6 /* Information */,
 				5D829A422085CA5E001993B6 /* Mine */,
+				5D829A432085CB5B001993B6 /* Commons */,
 				5D829A372085C89A001993B6 /* Network */,
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 				5D829A392085C8B9001993B6 /* BaseController */,
@@ -184,6 +187,15 @@
 			children = (
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		5D829A432085CB5B001993B6 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				5D829A472085CBB9001993B6 /* HealthStarButler-Prefix.pch */,
+				5D829A482085CC53001993B6 /* CommonMacro.h */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,6 +411,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -416,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

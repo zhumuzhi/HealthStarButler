@@ -1,0 +1,19 @@
+//
+//  HealthStarButler-Prefix.pch
+//  HealthStarButler
+//
+//  Created by 朱慕之 on 2018/4/17.
+//  Copyright © 2018年 zhumuzhi. All rights reserved.
+//
+
+#ifndef HealthStarButler_Prefix_pch
+#define HealthStarButler_Prefix_pch
+
+#endif /* HealthStarButler_Prefix_pch */
+
+#ifdef __OBJC__
+
+#import "CommonMacro.h"
+
+#endif
+
