@@ -14,7 +14,7 @@
 #pragma mark -------------------- Log --------------------
 
 #ifdef DEBUG
-#define NSLog(...) NSLog(@"%s(%d行)\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define NSLog(...) NSLog(@"%s(%d行)%@",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
 #define NSLog(...)
 #endif

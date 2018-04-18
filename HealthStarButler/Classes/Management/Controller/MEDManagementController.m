@@ -8,6 +8,7 @@
 
 #import "MEDManagementController.h"
 
+
 @interface MEDManagementController ()
 
 @end
@@ -17,8 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"管理";
     
+    [self setupNavigation];
+}
+
+
+- (void)setupNavigation {
+    self.navigationItem.title = @"管理";
+    [self setupPersonNavigationItem];
 }
 
 - (void)didReceiveMemoryWarning {

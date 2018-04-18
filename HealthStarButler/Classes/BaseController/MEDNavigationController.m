@@ -40,7 +40,9 @@
     
 //    [self.navigationBar setShadowImage:[[UIImage alloc] init]];//清空导航条的阴影线
 //    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];//清空导航条的阴影线
+    
 }
+
 
 /**
  *  重写push方法拦截所有push进来的子控制器
@@ -48,13 +50,18 @@
  */
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
-    if (self.childViewControllers.count > 0) { // 如果viewController不是最早push进来的子控制器
+    
+    NSUInteger count = self.childViewControllers.count;
+    
+    //NSLog(@"子控制个数为:%zd", count);
+    
+    if (count > 0) { // 如果viewController不是最早push进来的子控制器
         
         UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //        backButton.frame = CGRectMake(0, 0, 25, 25);
         backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        [backButton setImage:[UIImage imageNamed:@"Nav_back"] forState:UIControlStateNormal];
-        [backButton setImage:[UIImage imageNamed:@"Nav_back"] forState:UIControlStateHighlighted];
+        [backButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+        [backButton setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateHighlighted];
         [backButton addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
         
         // Nav左Item
@@ -68,6 +75,22 @@
         // 隐藏tabBar
         viewController.hidesBottomBarWhenPushed = YES;
     }
+//    else if (count == 0){
+//        UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//        //        backButton.frame = CGRectMake(0, 0, 25, 25);
+//        backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//        [backButton setImage:[UIImage imageNamed:@"nav_mine"] forState:UIControlStateNormal];
+//        [backButton setImage:[UIImage imageNamed:@"nav_mine"] forState:UIControlStateHighlighted];
+//        [backButton addTarget:self action:@selector(clickMineButton) forControlEvents:UIControlEventTouchUpInside];
+//
+//        // Nav左Item
+//        UIBarButtonItem *leftBarBtn = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+//
+//        //设置空隙Item
+//        UIBarButtonItem *spaceItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+//        spaceItem.width = -15;
+//        viewController.navigationItem.leftBarButtonItems = @[spaceItem, leftBarBtn]; //同时
+//    }
     
     // 所有设置搞定后, 再push控制器 (这句super的push要放在后面, 让viewController可以覆盖上面设置的leftBarButtonItem)
     [super pushViewController:viewController animated:animated];
@@ -78,10 +101,19 @@
     self.tabBarController.tabBar.frame = frame;
 }
 
+- (void)clickMineButton {
+    NSLog(@"点击按钮跳转至个人中心");
+    
+    MEDMineController *mimeController = [[MEDMineController alloc] init];
+    [self.navigationController pushViewController:mimeController animated:YES];
+}
+
 - (void)back
 {
     [self popViewControllerAnimated:YES];
 }
+
+
 
 #pragma mark - <UIGestureRecognizerDelegate>
 /**

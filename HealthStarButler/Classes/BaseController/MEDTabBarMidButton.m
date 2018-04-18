@@ -54,30 +54,33 @@
 }
 
 #pragma mark - CYLPlusButtonSubclassing Methods
-
 /*
- *
  Create a custom UIButton with title and add it to the center of our tab bar
- *
  */
 + (id)plusButton {
     MEDTabBarMidButton *button = [[MEDTabBarMidButton alloc] init];
-    UIImage *buttonImage = [UIImage imageNamed:@"post_normal"];
-    [button setImage:buttonImage forState:UIControlStateNormal];
-//    UIImage *buttonImage = [UIImage imageNamed:@"tab_home"];
+//    UIImage *buttonImage = [UIImage imageNamed:@"post_normal"];
 //    [button setImage:buttonImage forState:UIControlStateNormal];
-//    [button setImage:[UIImage imageNamed:@"tab_home_selected"] forState:UIControlStateSelected];
+    
+    UIImage *buttonImage = [UIImage imageNamed:@"tab_home"];
+    [button setImage:buttonImage forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"tab_home_selected"] forState:UIControlStateSelected];
+    
     
     [button setTitle:@"首页" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    
     [button setTitle:@"首页" forState:UIControlStateSelected];
     [button setTitleColor:MEDCommonBlue forState:UIControlStateSelected];
     
-    button.titleLabel.font = [UIFont systemFontOfSize:9.5];
-    [button sizeToFit]; // or set frame in this way `button.frame = CGRectMake(0.0, 0.0, 250, 100);`
-    //    button.frame = CGRectMake(0.0, 0.0, 250, 100);
-    //    button.backgroundColor = [UIColor redColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:10];
+    button.imageView.frame = CGRectMake(0.0, 0.0, 128, 114);
+    button.titleLabel.frame = CGRectMake(0, button.bottom-20, button.width, 10);
+    
+    //[button sizeToFit];
+    
+    button.frame = CGRectMake(0.0, 0.0, 60, 55);
+    
+//    button.backgroundColor = [UIColor redColor];
     
     // if you use `+plusChildViewController` , do not addTarget to plusButton.
 //    [button addTarget:button action:@selector(clickPublish) forControlEvents:UIControlEventTouchUpInside];
@@ -86,7 +89,7 @@
 }
 
 //- (void)clickPublish {
-//
+
 //}
 
 #pragma mark - CYLPlusButtonSubclassing
@@ -102,7 +105,15 @@
 + (NSUInteger)indexOfPlusButtonInTabBar {
     return 2;
 }
-//
+
++ (CGFloat)multiplierOfTabBarHeight:(CGFloat)tabBarHeight {
+    return  0.3;
+}
+
++ (CGFloat)constantOfPlusButtonCenterYOffsetForTabBarHeight:(CGFloat)tabBarHeight {
+    return  -10;
+}
+
 //+ (BOOL)shouldSelectPlusChildViewController {
 //    BOOL isSelected = CYLExternPlusButton.selected;
 //    if (isSelected) {
@@ -113,19 +124,8 @@
 //    return YES;
 //}
 
-+ (CGFloat)multiplierOfTabBarHeight:(CGFloat)tabBarHeight {
-    return  0.3;
-}
-
-+ (CGFloat)constantOfPlusButtonCenterYOffsetForTabBarHeight:(CGFloat)tabBarHeight {
-    return  -10;
-}
-
 //+ (NSString *)tabBarContext {
 //    return NSStringFromClass([self class]);
 //}
-
-
-
 
 @end

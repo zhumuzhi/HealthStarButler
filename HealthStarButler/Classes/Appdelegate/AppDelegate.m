@@ -30,14 +30,15 @@
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
     
-    [self.window setRootViewController:tabBarController];
-    
+    self.window.rootViewController = tabBarController;
+    //[self.window setRootViewController:tabBarController];
     tabBarController.delegate = self;
-    //设置选中哪个图标
-    //[tabBarController setSelectedIndex:1];
+    //设置选中哪个控制器
+    [tabBarController setSelectedIndex:2];
     [self.window makeKeyAndVisible];
-    
     [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
+    
+    
     return YES;
     
 }

@@ -17,7 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupNavigation];
+}
+
+- (void)setupNavigation {
+    
     self.navigationItem.title = @"首页";
+    [self setupPersonNavigationItem];
+    
 }
 
 - (void)didReceiveMemoryWarning {

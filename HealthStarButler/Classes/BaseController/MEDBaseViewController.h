@@ -10,4 +10,7 @@
 
 @interface MEDBaseViewController : UIViewController
 
+/** 设置导航栏个人中心按钮 */
+- (void)setupPersonNavigationItem;
+
 @end

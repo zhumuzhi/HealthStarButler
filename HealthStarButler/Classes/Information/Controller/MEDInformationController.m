@@ -17,9 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupNavigation];
+}
+
+- (void)setupNavigation {
+    
     self.navigationItem.title = @"资讯";
+    [self setupPersonNavigationItem];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -28,14 +28,13 @@
 - (CYLTabBarController *)tabBarController {
     if (_tabBarController == nil) {
         
-        UIEdgeInsets imageInsets = UIEdgeInsetsZero;
-        UIOffset titlePositionAdjustment = UIOffsetZero;
-        
-//        UIEdgeInsets imageInsets = UIEdgeInsetsMake(4.5, 0, -4.5, 0);
-//        UIOffset titlePositionAdjustment = UIOffsetMake(0, MAXFLOAT);
+        /**
+         以下两行代码目的在于手动设置让TabBarItem只显示图标，不显示文字，并让图标垂直居中。
+         等效于在 `-tabBarItemsAttributesForController` 方法中不传 `CYLTabBarItemTitle` 字段。(推荐)*/
+        UIEdgeInsets imageInsets = UIEdgeInsetsZero; //UIEdgeInsetsMake(4.5, 0, -4.5, 0);
+        UIOffset titlePositionAdjustment = UIOffsetZero; //UIOffsetMake(0, MAXFLOAT);
         
         CYLTabBarController *tabBarController =
-//       [[CYLTabBarController alloc] initWithViewControllers:self.viewControllers tabBarItemsAttributes:self.tabBarItemsAttributesForController];
         
         [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers
                                                                                    tabBarItemsAttributes:self.tabBarItemsAttributesForController
@@ -54,31 +53,27 @@
 
 - (void)customizeTabBarAppearance:(CYLTabBarController *)tabBarController {
     //自定义 TabBar高度
-//        tabBarController.tabBarHeight = CYL_IS_IPHONE_X ? 65 : 40;
-    // 普通状态下的文字属性
+//    tabBarController.tabBarHeight = CYL_IS_IPHONE_X ? 65 : 40;
+    // 普通/选中状态下的文字属性
     NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
     normalAttrs[NSForegroundColorAttributeName] = [UIColor grayColor];
-    
-    // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
     selectedAttrs[NSForegroundColorAttributeName] = MEDCommonBlue;
-    
     // 设置文字属性
     UITabBarItem *tabBar = [UITabBarItem appearance];
     [tabBar setTitleTextAttributes:normalAttrs forState:UIControlStateNormal];
     [tabBar setTitleTextAttributes:selectedAttrs forState:UIControlStateSelected];
     
     //设置bar shadow image
-    // This shadow image attribute is ignored if the tab bar does not also have a custom background image.So at least set somthing.
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
     [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
-    //    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
+        [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
     
     // 设置背景图片
-    //    UITabBar *tabBarAppearance = [UITabBar appearance];
-    //    UIImage *tabBarBackgroundImage = [UIImage imageNamed:@"tab_bar"];
-    //    UIImage *scanedTabBarBackgroundImage = [[self class] scaleImage:tabBarBackgroundImage toScale:1.0];
-    //     [tabBarAppearance setBackgroundImage:scanedTabBarBackgroundImage];
+    UITabBar *tabBarAppearance = [UITabBar appearance];
+    UIImage *tabBarBackgroundImage = [UIImage imageNamed:@"tab_bar"];
+    UIImage *scanedTabBarBackgroundImage = [[self class] scaleImage:tabBarBackgroundImage toScale:1.0];
+     [tabBarAppearance setBackgroundImage:scanedTabBarBackgroundImage];
     
     // 去除 TabBar 自带的顶部阴影
     // iOS10 后 需要使用 `-[CYLTabBarController hideTabBadgeBackgroundSeparator]` 见 AppDelegate 类中的演示;
@@ -125,16 +120,6 @@
                                                   CYLTabBarItemImage : @"tab_consultation",
                                                   CYLTabBarItemSelectedImage : @"tab_consultation _selected",
                                                   };
-//    NSDictionary *thirdTabBarItemsAttributes = @{
-//                                                                                                  CYLTabBarItemTitle : @"",
-//                                                 CYLTabBarItemImage : @"",
-//                                                 CYLTabBarItemSelectedImage : @"",
-//                                                 };
-//    @{
-//      CYLTabBarItemTitle : @"管理",
-//      CYLTabBarItemImage : @"tab_magement",
-//      CYLTabBarItemSelectedImage : @"tab_magement_selected",
-//      };
     NSDictionary *fourthTabBarItemsAttributes = @{
                                                                                                     CYLTabBarItemTitle : @"资讯",
                                                   CYLTabBarItemImage : @"tab_information",
@@ -148,20 +133,20 @@
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,
                                        secondTabBarItemsAttributes,
-//                                       thirdTabBarItemsAttributes,
                                        fourthTabBarItemsAttributes,
                                        fifthTabBarItemsAttributes
                                        ];
     return tabBarItemsAttributes;
 }
 
-//+ (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize {
-//    UIGraphicsBeginImageContext(CGSizeMake([UIScreen mainScreen].bounds.size.width * scaleSize, image.size.height * scaleSize));
-//    [image drawInRect:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width * scaleSize, image.size.height * scaleSize)];
-//    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
-//    return scaledImage;
-//}
+/** 设置图片使用方法 */
++ (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize {
+    UIGraphicsBeginImageContext(CGSizeMake([UIScreen mainScreen].bounds.size.width * scaleSize, image.size.height * scaleSize));
+    [image drawInRect:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width * scaleSize, image.size.height * scaleSize)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
+}
 
 + (void)customizeInterfaceWithTabBarController:(CYLTabBarController *)tabBarController {
     
@@ -196,8 +181,6 @@
     //    [UINavigationBar appearance].barTintColor = [UIColor redColor];
     
     UIColor *MainNavBarColor = MEDCommonBlue;
-    //    UIColor *MainViewColor   = [UIColor colorWithRed:126/255.0 green:126/255.0 blue:126/255.0 alpha:1];
-    
     // 设置是 广泛使用WRNavigationBar，还是局部使用WRNavigationBar，目前默认是广泛使用
     [WRNavigationBar wr_widely];
     // 设置导航栏默认的背景颜色

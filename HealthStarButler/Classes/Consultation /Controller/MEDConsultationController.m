@@ -17,10 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"咨询";
     
+    [self setupNavigation];
+}
+
+- (void)setupNavigation {
+    
+    self.navigationItem.title = @"咨询";
+    [self setupPersonNavigationItem];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

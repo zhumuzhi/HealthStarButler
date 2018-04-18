@@ -17,7 +17,7 @@
 #import "CommonMacro.h"
 #import "MEDMainUrl.h"
 #import "MEDBaseViewController.h"
-
+#import "MEDMineController.h"    //个人中心
 
 #pragma mark -------------------- 分类 --------------------
 #import "UIView+MED.h"
