@@ -41,6 +41,9 @@
 //    [self.navigationBar setShadowImage:[[UIImage alloc] init]];//清空导航条的阴影线
 //    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];//清空导航条的阴影线
     
+
+//    MEDNavigationController *nav2 = (MEDNavigationController *)self.childViewControllers[2];
+//    [nav2.tabBarItem setImageInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
 }
 
 

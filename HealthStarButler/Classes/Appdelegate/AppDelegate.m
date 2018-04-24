@@ -21,23 +21,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    // 设置根视图
+//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    CJTabBarController *tabBarController = [CJTabBarController new];
+//    //CJSTabBarController *tabBarController = [CJSTabBarController new];
+//    self.window.rootViewController = tabBarController;
+//    [self.window makeKeyAndVisible];
     
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
-    
+    //设置中间按钮
     [MEDTabBarMidButton registerPlusButton];
-    
+    [MEDTabBarMidButton.plusButton setSelected:YES];
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
-    
     self.window.rootViewController = tabBarController;
-    //[self.window setRootViewController:tabBarController];
     tabBarController.delegate = self;
-    //设置选中哪个控制器
-    [tabBarController setSelectedIndex:2];
     [self.window makeKeyAndVisible];
+    // 设置TabBar
     [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
-    
     
     return YES;
     

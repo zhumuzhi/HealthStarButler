@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
+		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
+		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -28,11 +30,16 @@
 		5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A952085DAC3001993B6 /* MEDManagementController.m */; };
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
+		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.debug.xcconfig"; sourceTree = "<group>"; };
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
+		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
+		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
+		5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserModel.m; sourceTree = "<group>"; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -74,6 +81,8 @@
 		5D829A992085DCC6001993B6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		5D829A9B2085E36B001993B6 /* MEDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDBaseViewController.h; sourceTree = "<group>"; };
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
+		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
+		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +98,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A47F7208F08CD007DAD29 /* Controller */,
+				5D4A47F8208F08D5007DAD29 /* Model */,
+				5D4A47F9208F08DA007DAD29 /* View */,
+			);
+			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		5D4A47F7208F08CD007DAD29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */,
+				5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D4A47F8208F08D5007DAD29 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */,
+				5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D4A47F9208F08DA007DAD29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5D829A122085C7D1001993B6 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +162,7 @@
 		5D829A342085C873001993B6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5D4A47F6208F0457007DAD29 /* UserLogin */,
 				5D829A3D2085C904001993B6 /* Management */,
 				5D829A402085C976001993B6 /* Consultation  */,
 				5D829A3C2085C8FD001993B6 /* Home */,
@@ -125,7 +170,6 @@
 				5D829A3F2085C93D001993B6 /* TreatmentGuide */,
 				5D829A422085CA5E001993B6 /* Mine */,
 				5D829A432085CB5B001993B6 /* Commons */,
-				5D829A372085C89A001993B6 /* Network */,
 				5D829A392085C8B9001993B6 /* BaseController */,
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 				5D829A382085C8A4001993B6 /* Category */,
@@ -179,6 +223,8 @@
 		5D829A392085C8B9001993B6 /* BaseController */ = {
 			isa = PBXGroup;
 			children = (
+				5D97AE862089C206007D586A /* MZMiddleButton(未使用) */,
+				5D829A372085C89A001993B6 /* Network */,
 				5D829A9B2085E36B001993B6 /* MEDBaseViewController.h */,
 				5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */,
 				5D829A632085D7E1001993B6 /* MEDTabBarControllerConfig.h */,
@@ -450,6 +496,15 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		5D97AE862089C206007D586A /* MZMiddleButton(未使用) */ = {
+			isa = PBXGroup;
+			children = (
+				5D97AE8A2089C493007D586A /* MZPlusButton.h */,
+				5D97AE8B2089C493007D586A /* MZPlusButton.m */,
+			);
+			path = "MZMiddleButton(未使用)";
+			sourceTree = "<group>";
+		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -594,11 +649,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
+				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
+				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,

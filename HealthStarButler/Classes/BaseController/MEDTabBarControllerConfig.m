@@ -15,11 +15,8 @@
 #import "MEDTreatmentGuideController.h"
 #import "MEDInformationController.h"
 
-
 //static CGFloat const MEDTabBarControllerHeight = 40.f;
-
 @interface MEDTabBarControllerConfig()<UITabBarControllerDelegate>
-
 @property (nonatomic, strong, readwrite) CYLTabBarController *tabBarController;
 @end
 
@@ -151,6 +148,10 @@
 + (void)customizeInterfaceWithTabBarController:(CYLTabBarController *)tabBarController {
     
     [tabBarController hideTabBadgeBackgroundSeparator];
+    [tabBarController setSelectedIndex:2];
+    
+    
+    
     //添加小红点
 //        UIViewController *viewController = tabBarController.viewControllers[0];
 //        UIView *tabBadgePointView0 = [UIView cyl_tabBadgePointViewWithClolor:MEDRandomColor radius:4.5];
