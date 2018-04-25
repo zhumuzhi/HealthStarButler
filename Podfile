@@ -17,9 +17,9 @@ target 'HealthStarButler' do
  pod 'CYLTabBarController', '~> 1.17.6'
  # 下拉刷新
  pod 'MJRefresh'
- #字典转模型
+ # 字典转模型
  pod 'MJExtension'
-
-
-
+ # HUD
+ pod 'SVProgressHUD', '~> 2.2.5'
+ 
 end

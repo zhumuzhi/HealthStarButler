@@ -10,6 +10,9 @@
 
 #import "MEDTabBarControllerConfig.h"
 #import "MEDTabBarMidButton.h"
+#import "MEDUserLoginController.h"
+#import "MEDNavigationController.h"
+
 
 @interface AppDelegate () <UITabBarControllerDelegate, CYLTabBarControllerDelegate>
 
@@ -36,12 +39,22 @@
     [MEDTabBarMidButton.plusButton setSelected:YES];
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
-    self.window.rootViewController = tabBarController;
-    tabBarController.delegate = self;
-    [self.window makeKeyAndVisible];
-    // 设置TabBar
-    [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
     
+    NSString *login = [[NSUserDefaults standardUserDefaults] objectForKey:@"login"];
+    
+    if ((!login)||([login isEqualToString:@"0"])){
+        MEDUserLoginController *loginController = [[MEDUserLoginController alloc]init];
+        MEDNavigationController *loginNavC = [[MEDNavigationController alloc]initWithRootViewController:loginController];
+        self.window.rootViewController = loginNavC;
+        
+    } else {
+        self.window.rootViewController = tabBarController;
+        tabBarController.delegate = self;
+        // 设置TabBar
+        [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
+    }
+    [self.window makeKeyAndVisible];
+
     return YES;
     
 }

@@ -14,14 +14,22 @@
 #ifdef __OBJC__
 
 #pragma mark -------------------- 公共 --------------------
-#import "CommonMacro.h"
-#import "MEDMainUrl.h"
-#import "MEDBaseViewController.h"
-#import "MEDMineController.h"    //个人中心
+#import <UIKit/UIKit.h>
+#import "CommonMacro.h"  //宏定义
+#import "MEDMainUrl.h"   //URL
+
+
+#pragma mark -------------------- Model --------------------
+#import "MEDUserModel.h"
+
+#pragma mark -------------------- BaseController --------------------
+#import "MEDBaseViewController.h"   //BaseController
+#import "MEDMineController.h"       //个人中心
+
 
 #pragma mark -------------------- 分类 --------------------
 #import "UIView+MED.h"
-
+#import "NSObject+MED.h"
 
 #pragma mark -------------------- 第三方 --------------------
 #import "AFNetworking.h"      //网络

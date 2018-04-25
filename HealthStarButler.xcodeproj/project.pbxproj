@@ -10,6 +10,8 @@
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
+		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
+		5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480C2090672E007DAD29 /* NSObject+MED.m */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -40,6 +42,10 @@
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
 		5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserModel.m; sourceTree = "<group>"; };
+		5D4A480820906142007DAD29 /* MEDMobileNumberTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDMobileNumberTool.h; sourceTree = "<group>"; };
+		5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDMobileNumberTool.m; sourceTree = "<group>"; };
+		5D4A480B2090672E007DAD29 /* NSObject+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MED.h"; sourceTree = "<group>"; };
+		5D4A480C2090672E007DAD29 /* NSObject+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MED.m"; sourceTree = "<group>"; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
 			isa = PBXGroup;
 			children = (
+				5D4A48072090209F007DAD29 /* Tool */,
 				5D4A47F7208F08CD007DAD29 /* Controller */,
 				5D4A47F8208F08D5007DAD29 /* Model */,
 				5D4A47F9208F08DA007DAD29 /* View */,
@@ -120,8 +127,8 @@
 		5D4A47F8208F08D5007DAD29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */,
 				5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */,
+				5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +138,22 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5D4A48072090209F007DAD29 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5D4A480820906142007DAD29 /* MEDMobileNumberTool.h */,
+				5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		5D4A480E20906D11007DAD29 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HUD;
 			sourceTree = "<group>";
 		};
 		5D829A122085C7D1001993B6 = {
@@ -213,9 +236,11 @@
 		5D829A382085C8A4001993B6 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				5D829A4C2085D5DF001993B6 /* Third */,
 				5D829A4A2085D5DB001993B6 /* UIView+MED.h */,
 				5D829A492085D5DB001993B6 /* UIView+MED.m */,
+				5D4A480B2090672E007DAD29 /* NSObject+MED.h */,
+				5D4A480C2090672E007DAD29 /* NSObject+MED.m */,
+				5D829A4C2085D5DF001993B6 /* Third */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -240,6 +265,7 @@
 		5D829A3A2085C8C4001993B6 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				5D4A480E20906D11007DAD29 /* HUD */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -309,8 +335,8 @@
 				5D829A242085C7D1001993B6 /* Main.storyboard */,
 				5D829A272085C7D1001993B6 /* Assets.xcassets */,
 				5D829A292085C7D1001993B6 /* LaunchScreen.storyboard */,
-				5D829A2C2085C7D1001993B6 /* Info.plist */,
 				5D829A2D2085C7D1001993B6 /* main.m */,
+				5D829A2C2085C7D1001993B6 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -599,10 +625,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -652,12 +680,14 @@
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
+				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
@@ -813,10 +843,7 @@
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -832,10 +859,7 @@
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

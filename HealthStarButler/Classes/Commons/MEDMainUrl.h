@@ -87,6 +87,8 @@
 #define MED_USER_LOGIN      @"user/login"
 #define TELEPHONE_NUMBER    @"telephone_number"
 #define PASSWORD            @"password"
+#define DEVICETOKEN         @"deviceToken"
+
 
 //忘记密码
 #define FORGET_PASSWORD     @"user/reset_pwd"

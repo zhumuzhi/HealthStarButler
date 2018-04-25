@@ -62,11 +62,17 @@
 #define MEDCommonGray      MEDGrayColor(102)      //待定 健康方案字体颜色
 #define MEDCommonLightGray MEDGrayColor(170)      //待定 健康方案标题颜色
 
+#pragma mark -------------------- 字体 --------------------
+#define MEDSYSFont(f) [UIFont systemFontOfSize:f]
+#define MEDSYSBoldFont(f) [UIFont boldSystemFontOfSize:f]
 
 #pragma mark -------------------- Other --------------------
 
 // weakSelf
 #define MEDWeakSelf(type)  __weak typeof(type) weak##type = type;
+
+//NSUserDefaults
+#define UserDefaults (NSUserDefaults *)[NSUserDefaults standardUserDefaults]
 
 // 是否是空对象
 #define MEDIsEmpty(_object) (_object == nil \
