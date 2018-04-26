@@ -142,6 +142,8 @@
         return;
     }
     
+    [MEDProgressHUD dismissHUD];
+    
     MEDNetClient *manager = [MEDDataRequest managerWithBaseURL:MED_DOMAIN_REQUEST sessionConfiguration:NO];
     
     NSString  * appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];

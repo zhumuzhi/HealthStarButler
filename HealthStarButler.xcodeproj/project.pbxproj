@@ -12,6 +12,7 @@
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
 		5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480C2090672E007DAD29 /* NSObject+MED.m */; };
+		5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDMobileNumberTool.m; sourceTree = "<group>"; };
 		5D4A480B2090672E007DAD29 /* NSObject+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MED.h"; sourceTree = "<group>"; };
 		5D4A480C2090672E007DAD29 /* NSObject+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MED.m"; sourceTree = "<group>"; };
+		5D4A480F209070A0007DAD29 /* MEDProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDProgressHUD.h; sourceTree = "<group>"; };
+		5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDProgressHUD.m; sourceTree = "<group>"; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 		5D4A480E20906D11007DAD29 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
+				5D4A480F209070A0007DAD29 /* MEDProgressHUD.h */,
+				5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
+				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -843,7 +849,10 @@
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -859,7 +868,10 @@
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

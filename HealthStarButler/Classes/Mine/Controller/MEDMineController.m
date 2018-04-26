@@ -7,6 +7,7 @@
 //
 
 #import "MEDMineController.h"
+#import "AppDelegate.h"
 
 @interface MEDMineController ()
 
@@ -18,22 +19,47 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"个人中心";
+    [self configureNavigation];
     
 }
 
+- (void)configureNavigation
+{
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    rightButton.frame = CGRectMake(0, 0, 60, 44);
+    [rightButton addTarget:self action:@selector(clickQuitButton) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
+    self.navigationItem.rightBarButtonItem = rightItem;
+}
+
+
+- (void)clickQuitButton
+{
+    UIAlertController *quitAlert = [UIAlertController alertControllerWithTitle:@"退出确认" message:@"请问您是够确定退出？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消退出");
+    }];
+    UIAlertAction *confimAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [kUserDefaults setObject:LoginFailed forKey:Login];
+        [kAppDelegate mainTabBarSwitch];
+        
+    }];
+    [quitAlert addAction:cancelAction];
+    [quitAlert addAction:confimAction];
+    
+    [kRootViewController presentViewController:quitAlert animated:YES completion:^{
+        
+    }];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+    NSLog(@"个人中心收到内存警告");
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

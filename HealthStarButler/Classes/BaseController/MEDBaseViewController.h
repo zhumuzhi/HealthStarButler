@@ -13,4 +13,11 @@
 /** 设置导航栏个人中心按钮 */
 - (void)setupPersonNavigationItem;
 
+
+
+
+- (NSString*)convertToJSONData:(id)infoDict;
+- (NSString*)dictionaryToJson:(NSDictionary *)dic;
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
+
 @end

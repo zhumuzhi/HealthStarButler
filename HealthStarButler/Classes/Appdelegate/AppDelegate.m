@@ -15,7 +15,9 @@
 
 
 @interface AppDelegate () <UITabBarControllerDelegate, CYLTabBarControllerDelegate>
-
+{
+    CYLTabBarController * _tabBarController;
+}
 @end
 
 @implementation AppDelegate
@@ -23,15 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-//    // 设置根视图
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    CJTabBarController *tabBarController = [CJTabBarController new];
-//    //CJSTabBarController *tabBarController = [CJSTabBarController new];
-//    self.window.rootViewController = tabBarController;
-//    [self.window makeKeyAndVisible];
-    
+        
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     //设置中间按钮
@@ -39,24 +33,27 @@
     [MEDTabBarMidButton.plusButton setSelected:YES];
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
-    
-    NSString *login = [[NSUserDefaults standardUserDefaults] objectForKey:@"login"];
-    
-    if ((!login)||([login isEqualToString:@"0"])){
-        MEDUserLoginController *loginController = [[MEDUserLoginController alloc]init];
-        MEDNavigationController *loginNavC = [[MEDNavigationController alloc]initWithRootViewController:loginController];
-        self.window.rootViewController = loginNavC;
-        
-    } else {
-        self.window.rootViewController = tabBarController;
-        tabBarController.delegate = self;
-        // 设置TabBar
-        [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:tabBarController];
-    }
+    _tabBarController = tabBarController;
+    [self mainTabBarSwitch];
     [self.window makeKeyAndVisible];
 
     return YES;
     
+}
+
+/** 根据登录情况切换主页 */
+- (void)mainTabBarSwitch {
+    NSString *loginStr = [kUserDefaults objectForKey:Login];
+    if (kStringIsEmpty(loginStr)||([loginStr isEqualToString:LoginFailed])){
+        MEDUserLoginController *loginController = [[MEDUserLoginController alloc]init];
+        MEDNavigationController *loginNavC = [[MEDNavigationController alloc]initWithRootViewController:loginController];
+        self.window.rootViewController = loginNavC;
+    } else {
+        self.window.rootViewController = _tabBarController;
+        _tabBarController.delegate = self;
+        // 设置TabBar
+        [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
+    }
 }
 
 #pragma mark - UITabBarControllerDelegate

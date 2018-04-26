@@ -27,6 +27,9 @@
 #import "MEDMineController.h"       //个人中心
 
 
+#pragma mark -------------------- BaseView --------------------
+#import "MEDProgressHUD.h"
+
 #pragma mark -------------------- 分类 --------------------
 #import "UIView+MED.h"
 #import "NSObject+MED.h"

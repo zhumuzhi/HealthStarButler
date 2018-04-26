@@ -55,6 +55,12 @@
 #define MEDGrayColor(v)    MEDRGB((v), (v), (v))
 #define MEDRandomColor     MEDRGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
+//rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+//清除背景色
+#define CLEARCOLOR [UIColor clearColor]
+
 #define MEDCommonBgColor   MEDGrayColor(206)      //待定
 #define MEDCommonBlue      MEDRGB(28, 196, 225) //待定
 #define MEDCommonBlack     MEDRGB(40, 40, 40)   //待定
@@ -62,22 +68,110 @@
 #define MEDCommonGray      MEDGrayColor(102)      //待定 健康方案字体颜色
 #define MEDCommonLightGray MEDGrayColor(170)      //待定 健康方案标题颜色
 
+#define MEDBlue          MEDRGB(28,196,225)
+#define MEDGray          MEDGrayColor(102)
+#define MEDLightGray     MEDGrayColor(170)
+#define MEDBlack         MEDGrayColor(40)
+
 #pragma mark -------------------- 字体 --------------------
 #define MEDSYSFont(f) [UIFont systemFontOfSize:f]
 #define MEDSYSBoldFont(f) [UIFont boldSystemFontOfSize:f]
+
+#pragma mark -------------------- NetStatus --------------------
+#define Status   @"status"     //状态key
+#define Status_OK   0          //状态成功
+#define Data     @"data"       //数据Key
+#define DataInfo @"dataInfo"   //存放登陆之后的所有数据
+
+
+#pragma mark -------------------- UserDefaults_Keys --------------------
+#define UserLogin  @"userLogin"    //登录信息存储
+
+#define FirstLogin @"first_login"  //首次登录判断
+
+#define Login      @"login"        //登录判断
+#define LoginSuccessful @"1"       //登录成功
+#define LoginFailed     @"0"       //登录失败
+
+#define Identity   @"identity"     //身份判断
+#define UID        @"uid"          //uid
 
 #pragma mark -------------------- Other --------------------
 
 // weakSelf
 #define MEDWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define MEDStrongSelf(type)  __strong typeof(type) type = weak##type;
 
 //NSUserDefaults
-#define UserDefaults (NSUserDefaults *)[NSUserDefaults standardUserDefaults]
+#define kUserDefaults       [NSUserDefaults standardUserDefaults]
+
+//UIApplication
+#define kApplication        [UIApplication sharedApplication]
+
+//KeyWindow
+#define kKeyWindow          [UIApplication sharedApplication].keyWindow
+
+//AppDelegate
+#define kAppDelegate        ((AppDelegate*)([UIApplication sharedApplication].delegate))
+
+//rootViewController
+#define kRootViewController [UIApplication sharedApplication].keyWindow.rootViewController
+
+//通知中心
+#define kNotificationCenter [NSNotificationCenter defaultCenter]
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+
+//数组是否为空
+#define kArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+//字典是否为空
+ #define kDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
 
 // 是否是空对象
-#define MEDIsEmpty(_object) (_object == nil \
+#define kObjectIsEmpty(_object) (_object == nil \
 || [_object isKindOfClass:[NSNull class]] \
 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+//APP版本号
+#define kAppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//系统版本号
+#define kSystemVersion [[UIDevice currentDevice] systemVersion]
+//获取一段时间间隔
+#define kStartTime CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+#define kEndTime   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
+
+//判断是真机还是模拟器
+#if TARGET_OS_IPHONE
+//真机
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+//模拟器
+#endif
+
+//获取沙盒Document路径
+#define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒temp路径
+#define kTempPath NSTemporaryDirectory()
+//获取沙盒Cache路径
+#define kCachePath [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+//获取当前语言
+#define CurrentLanguage (［NSLocale preferredLanguages] objectAtIndex:0])
+
+//读取本地图片
+#define LOADIMAGE(file,ext) [UIImage imageWithContentsOfFile:［NSBundle mainBundle]pathForResource:file ofType:ext］
+
+//定义UIImage对象
+#define IMAGE(A) [UIImage imageWithContentsOfFile:［NSBundle mainBundle] pathForResource:A ofType:nil］
+
+//定义UIImage对象
+#define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer］
+
+//G－C－D
+#define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
+#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
 
 
