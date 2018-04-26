@@ -13,6 +13,10 @@
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
 		5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480C2090672E007DAD29 /* NSObject+MED.m */; };
 		5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */; };
+		5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A481D2091AAFD007DAD29 /* MEDManageHorizontalCell.m */; };
+		5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */; };
+		5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */; };
+		5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -49,6 +53,12 @@
 		5D4A480C2090672E007DAD29 /* NSObject+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MED.m"; sourceTree = "<group>"; };
 		5D4A480F209070A0007DAD29 /* MEDProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDProgressHUD.h; sourceTree = "<group>"; };
 		5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDProgressHUD.m; sourceTree = "<group>"; };
+		5D4A481C2091AAFD007DAD29 /* MEDManageVerticalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDManageVerticalCell.h; sourceTree = "<group>"; };
+		5D4A481D2091AAFD007DAD29 /* MEDManageHorizontalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDManageHorizontalCell.m; sourceTree = "<group>"; };
+		5D4A481E2091AAFD007DAD29 /* MEDManageHorizontalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDManageHorizontalCell.h; sourceTree = "<group>"; };
+		5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDManageVerticalCell.m; sourceTree = "<group>"; };
+		5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageVerticalCell.xib; sourceTree = "<group>"; };
+		5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageHorizontalCell.xib; sourceTree = "<group>"; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,10 +120,10 @@
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
 			isa = PBXGroup;
 			children = (
-				5D4A48072090209F007DAD29 /* Tool */,
 				5D4A47F7208F08CD007DAD29 /* Controller */,
 				5D4A47F8208F08D5007DAD29 /* Model */,
 				5D4A47F9208F08DA007DAD29 /* View */,
+				5D4A48072090209F007DAD29 /* Tool */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -130,8 +140,8 @@
 		5D4A47F8208F08D5007DAD29 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */,
 				5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */,
+				5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,10 +207,10 @@
 				5D829A3E2085C92F001993B6 /* Information */,
 				5D829A3F2085C93D001993B6 /* TreatmentGuide */,
 				5D829A422085CA5E001993B6 /* Mine */,
-				5D829A432085CB5B001993B6 /* Commons */,
 				5D829A392085C8B9001993B6 /* BaseController */,
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 				5D829A382085C8A4001993B6 /* Category */,
+				5D829A432085CB5B001993B6 /* Commons */,
 				5D829A362085C88D001993B6 /* Appdelegate */,
 				5D829A3B2085C8CD001993B6 /* Third */,
 				5D829A352085C884001993B6 /* Other */,
@@ -296,10 +306,10 @@
 		5D829A3D2085C904001993B6 /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				5D829A6D2085D911001993B6 /* SubController */,
 				5D829A6A2085D8E4001993B6 /* Controller */,
 				5D829A6C2085D8F4001993B6 /* View */,
 				5D829A6B2085D8EF001993B6 /* Model */,
-				5D829A6D2085D911001993B6 /* SubController */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -392,6 +402,12 @@
 		5D829A6C2085D8F4001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D4A481E2091AAFD007DAD29 /* MEDManageHorizontalCell.h */,
+				5D4A481D2091AAFD007DAD29 /* MEDManageHorizontalCell.m */,
+				5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */,
+				5D4A481C2091AAFD007DAD29 /* MEDManageVerticalCell.h */,
+				5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */,
+				5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +632,8 @@
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
+				5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */,
+				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +706,7 @@
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
+				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
@@ -695,6 +714,7 @@
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
+				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,

@@ -148,7 +148,8 @@
 + (void)customizeInterfaceWithTabBarController:(CYLTabBarController *)tabBarController {
     
     [tabBarController hideTabBadgeBackgroundSeparator];
-    [tabBarController setSelectedIndex:2];
+    //设置默认TabBatController
+    [tabBarController setSelectedIndex:0];
     
     
     

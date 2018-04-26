@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MEDUserModel : NSObject
+@interface MEDUserModel : NSObject 
 /** uid */
 @property (nonatomic, copy) NSString *uid;
 /** 用户名 */

@@ -15,15 +15,17 @@
 
 @implementation MEDMineController
 
+#pragma mark - LifeCycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"个人中心";
-    [self configureNavigation];
+    [self navigationConfig];
     
 }
 
-- (void)configureNavigation
+- (void)navigationConfig
 {
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
     rightButton.frame = CGRectMake(0, 0, 60, 44);

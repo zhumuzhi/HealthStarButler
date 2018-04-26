@@ -11,24 +11,18 @@
 #import "AppDelegate.h"
 
 @interface MEDUserLoginController ()<UITextFieldDelegate>
-
-//@property (nonatomic, strong) UIImageView *headImageView;
 {
     /** 头像 */
     UIImageView *_headImageView;
     /** 用户名密码 */
     UITextField *_userName,*_passWord;
-    
+    /** 点击事件 */
     UIControl *_loginControl;
 }
 
 @end
 
 @implementation MEDUserLoginController
-
-#pragma mark - LazyLoad
-#pragma mark - Stter and Getter 属性设置获取
-#pragma mark - System Method
 
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
@@ -212,41 +206,37 @@
     if (deviceTokenNotEmpty) {
         [param setObject:[kUserDefaults objectForKey:DEVICETOKEN] forKey:Identity];
     }
-    [kUserDefaults setObject:userDefaulsDict forKey:UserLogin];
+    [kUserDefaults setObject:userDefaulsDict forKey:LoginInfo];
     [kUserDefaults synchronize];
     
     //NSLog(@"登录的参数字典:%@", param);
     [MEDDataRequest POST:MED_USER_LOGIN params:param success:^(NSURLSessionDataTask *task, id responseObject) {
         [self loginControlClick:self->_loginControl];
         //NSLog(@"登录页面返回的信息:%@",responseObject);
-        if ([responseObject[Status] integerValue] == Status_OK) {
-            
+        if (StatusSuccessful(responseObject)) {
             MEDUserModel *userModel = [MEDUserModel sharedUserModel];
-            NSDictionary *dataDict = responseObject[Data];
-            userModel = [MEDUserModel mj_objectWithKeyValues:dataDict];
+            NSDictionary *userInfoDict = responseObject[Data];
+            userModel = [MEDUserModel mj_objectWithKeyValues:userInfoDict];
             //NSLog(@"登录成功后模型%@", userModel);
             
-            //我的设备页--判断是否第一次登录
-            NSInteger first_login = [dataDict[FirstLogin] intValue];
-            NSString *first = [NSString stringWithFormat:@"%ld",(long)first_login];
-            [kUserDefaults setObject:userModel.uid forKey:UID];
-            [kUserDefaults setObject:first forKey:FirstLogin];
-            [kUserDefaults setObject:@"1" forKey:Login];
-            [kUserDefaults synchronize];
+            //用户信息中有<null>值("im_username": null)，直接用UserDefaults保存会报错，所以转换为字符串保存; 尝试调整模型后直接保存用户模型
+            NSString *dataString = [self convertToJSONData:userInfoDict];
+            [kUserDefaults setObject:dataString forKey:UserInfo]; //保存用户信息Str
             
-            //切换至首页
+            
+            [kUserDefaults setObject:userModel.uid forKey:UID];  //保存uid,方便使用
+            [kUserDefaults setObject:LoginSuccessful forKey:Login];// 保存登录状态
+            [kUserDefaults synchronize];
+            //切换首页(根据登录状态判断)
             [kAppDelegate mainTabBarSwitch];
             
-            //数据库使用的字符串
-//            NSString *dataString = [self convertToJSONData:dataDict];
-//            [UserDefaults setObject:dataString forKey:DataInfo];
         }
         
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"登录失败,错误参数:%@", error);
 
         [MEDProgressHUD dismissHUDErrorTitle:@"登录失败\n请重新登陆"];
-        [kUserDefaults setObject:@"0" forKey:@"login"];
+        [kUserDefaults setObject:LoginFailed forKey:Login];
         [kUserDefaults synchronize];
 //        [kAppDelegate mainTabBarSwitch];
         

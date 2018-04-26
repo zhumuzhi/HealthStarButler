@@ -75,6 +75,8 @@
 + (void)GET:(NSString *)url params:(NSDictionary *)params
    success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
     //MYLog(@"GET网络请求的url--：%@",url);
+    //请求状态HUD
+    [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
         
         //[MEDProgressHUD dismissHUDErrorTitle:@"网络异常，请检查您的网络"];
@@ -90,7 +92,7 @@
     [manager.requestSerializer setValue:@"v1" forHTTPHeaderField:@"apiversion"];
     [manager.requestSerializer setValue:@"health" forHTTPHeaderField:@"apiplatform"];
     [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        [MEDProgressHUD dismissHUD];
         id dic = [MEDDataRequest responseConfiguration:responseObject];
         
         success(task,dic);
@@ -103,7 +105,8 @@
    success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
     
     //MYLog(@"GET+base网络请求的url--：%@",url);
-    
+    //请求状态HUD
+    [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
         
         //[MEDProgressHUD dismissHUDErrorTitle:@"网络异常，请检查您的网络"];
@@ -121,7 +124,7 @@
     [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        [MEDProgressHUD dismissHUD];
         
         id dic = [MEDDataRequest responseConfiguration:responseObject];
         
@@ -137,12 +140,12 @@
 + (void)POST:(NSString *)url params:(NSDictionary *)params
     success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
     //MYLog(@"POST网络请求的url--：%@",url);
+    //请求状态HUD
+    [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
         //[MEDProgressHUD dismissHUDErrorTitle:@"网络异常，请检查您的网络"];
         return;
     }
-    
-    [MEDProgressHUD dismissHUD];
     
     MEDNetClient *manager = [MEDDataRequest managerWithBaseURL:MED_DOMAIN_REQUEST sessionConfiguration:NO];
     
@@ -151,7 +154,7 @@
     [manager.requestSerializer setValue:@"v1" forHTTPHeaderField:@"apiversion"];
     [manager.requestSerializer setValue:@"health" forHTTPHeaderField:@"apiplatform"];
     [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        [MEDProgressHUD dismissHUD];
         id dic = [MEDDataRequest responseConfiguration:responseObject];
         
         success(task,dic);
@@ -161,6 +164,8 @@
 }
 
 +(void)POST:(NSString *)url params:(NSDictionary *)params imageFile:(NSArray *)imagefile success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
+    //请求状态HUD
+    [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
         
         //[MEDProgressHUD dismissHUDErrorTitle:@"网络异常，请检查您的网络"];
@@ -188,7 +193,7 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-           
+        [MEDProgressHUD dismissHUD];
         id dic = [MEDDataRequest responseConfiguration:responseObject];
         success(task,dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -201,6 +206,8 @@
 + (void)POST:(NSString *)url baseURL:(NSString *)baseUrl params:(NSDictionary *)params
     success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
     //MYLog(@"POST+Base网络请求的url--：%@",url);
+    //请求状态HUD
+    [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
         
         //[MEDProgressHUD dismissHUDErrorTitle:@"网络异常，请检查您的网络"];
@@ -217,7 +224,7 @@
     [manager POST:url parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
+        [MEDProgressHUD dismissHUD];
         id dic = [MEDDataRequest responseConfiguration:responseObject];
         
         success(task,dic);

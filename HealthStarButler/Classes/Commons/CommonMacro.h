@@ -78,16 +78,20 @@
 #define MEDSYSBoldFont(f) [UIFont boldSystemFontOfSize:f]
 
 #pragma mark -------------------- NetStatus --------------------
-#define Status   @"status"     //状态key
-#define Status_OK   0          //状态成功
+#define Status     @"status"   //状态key
+#define Status_OK  0           //状态成功
+#define UserId     @"userId"   //userId 请求参数
+
+#define StatusSuccessful(responseObject) ([responseObject[Status] integerValue] == Status_OK) //请求成功判断
+
 #define Data     @"data"       //数据Key
 #define DataInfo @"dataInfo"   //存放登陆之后的所有数据
 
-
 #pragma mark -------------------- UserDefaults_Keys --------------------
-#define UserLogin  @"userLogin"    //登录信息存储
+#define LoginInfo  @"loginInfo"    //登录信息存储
+#define UserInfo   @"userInfo"     //用户信息
 
-#define FirstLogin @"first_login"  //首次登录判断
+//#define FirstLogin @"first_login"  //首次登录判断
 
 #define Login      @"login"        //登录判断
 #define LoginSuccessful @"1"       //登录成功
@@ -95,6 +99,8 @@
 
 #define Identity   @"identity"     //身份判断
 #define UID        @"uid"          //uid
+
+
 
 #pragma mark -------------------- Other --------------------
 
