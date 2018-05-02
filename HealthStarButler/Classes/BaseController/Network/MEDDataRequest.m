@@ -74,7 +74,7 @@
 
 + (void)GET:(NSString *)url params:(NSDictionary *)params
    success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
-    //MYLog(@"GET网络请求的url--：%@",url);
+    //NSLog(@"GET网络请求的url--：%@",url);
     //请求状态HUD
     [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
@@ -104,7 +104,7 @@
 + (void)GET:(NSString *)url baseURL:(NSString *)baseUrl params:(NSDictionary *)params
    success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
     
-    //MYLog(@"GET+base网络请求的url--：%@",url);
+    //NSLog(@"GET+base网络请求的url--：%@",url);
     //请求状态HUD
     [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
@@ -139,7 +139,7 @@
 
 + (void)POST:(NSString *)url params:(NSDictionary *)params
     success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
-    //MYLog(@"POST网络请求的url--：%@",url);
+    //NSLog(@"POST网络请求的url--：%@",url);
     //请求状态HUD
     [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
@@ -205,7 +205,7 @@
 
 + (void)POST:(NSString *)url baseURL:(NSString *)baseUrl params:(NSDictionary *)params
     success:(MEDResponseSuccess)success fail:(MEDResponseFail)fail{
-    //MYLog(@"POST+Base网络请求的url--：%@",url);
+    //NSLog(@"POST+Base网络请求的url--：%@",url);
     //请求状态HUD
     [MEDProgressHUD showHUDStatusTitle:nil];
     if (![MEDNetStatusManager isNetWork]) {
@@ -450,7 +450,7 @@
     }
 
     
-//    http://miot.mmednet.com/shark/p/user/upload/icon?user_id
+//    http://miot.mmednet.com/shark/p/user/upload/icon?uid
     
     NSString *path = [NSString stringWithFormat:@"user/upload/icon?uid=%@",token];
     

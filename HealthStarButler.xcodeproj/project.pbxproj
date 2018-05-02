@@ -17,6 +17,34 @@
 		5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */; };
 		5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */; };
 		5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */; };
+		5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */; };
+		5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B32099A50500B84C1E /* MEDCompanyRankingController.m */; };
+		5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B52099A50500B84C1E /* MEDCompanyRankModel.m */; };
+		5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207B92099A50500B84C1E /* MEDCompanyRankCell.xib */; };
+		5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207BB2099A50500B84C1E /* MEDCompanyRankHeadView.xib */; };
+		5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207BC2099A50500B84C1E /* MEDCompanyRankHeadView.m */; };
+		5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207BD2099A50500B84C1E /* MEDCompanyRankCell.m */; };
+		5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207C02099A50500B84C1E /* MEDHomePhysiologyController.m */; };
+		5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207C32099A50500B84C1E /* MEDHomePhysiologyModel.m */; };
+		5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207C62099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib */; };
+		5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207C72099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m */; };
+		5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207C82099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib */; };
+		5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207CB2099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m */; };
+		5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207CC2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib */; };
+		5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207CE2099A50500B84C1E /* MEDHomePhysiologyweightCell.xib */; };
+		5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207D02099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m */; };
+		5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207D12099A50500B84C1E /* MEDHomePhysiologyweightCell.m */; };
+		5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207D52099A50500B84C1E /* MEDHomeLifeHabitController.m */; };
+		5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207D82099A50500B84C1E /* MEDHomeHabitSportCell.m */; };
+		5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207D92099A50500B84C1E /* MEDHomeHabitFoodCell.m */; };
+		5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207DA2099A50500B84C1E /* MEDHomeHabitSleepCell.m */; };
+		5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207DB2099A50500B84C1E /* MEDHomeHabitSportCell.xib */; };
+		5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207DE2099A50500B84C1E /* MEDHomeHabitFoodCell.xib */; };
+		5D8208022099A50500B84C1E /* MEDHomeHabitSleepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207DF2099A50500B84C1E /* MEDHomeHabitSleepCell.xib */; };
+		5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207E42099A50500B84C1E /* MEDHomeComplianceController.m */; };
+		5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207E62099A50500B84C1E /* MEDHomeComplianceModel.m */; };
+		5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8207E92099A50500B84C1E /* MEDHomeComplianceCell.xib */; };
+		5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207EA2099A50500B84C1E /* MEDHomeComplianceCell.m */; };
 		5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A1F2085C7D1001993B6 /* AppDelegate.m */; };
 		5D829A262085C7D1001993B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A242085C7D1001993B6 /* Main.storyboard */; };
 		5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D829A272085C7D1001993B6 /* Assets.xcassets */; };
@@ -38,6 +66,13 @@
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
+		5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F8C2091D10C000D1B26 /* MEDAlertMananger.m */; };
+		5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F8F2091D56F000D1B26 /* MEDHomeRankScoreCell.m */; };
+		5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F982092BFF9000D1B26 /* MEDScoreProgressBar.m */; };
+		5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */; };
+		5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */; };
+		5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */; };
+		5DC39FAC209440F2000D1B26 /* blockTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FAB209440F2000D1B26 /* blockTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +94,52 @@
 		5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDManageVerticalCell.m; sourceTree = "<group>"; };
 		5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageVerticalCell.xib; sourceTree = "<group>"; };
 		5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageHorizontalCell.xib; sourceTree = "<group>"; };
+		5D8207AD2099536C00B84C1E /* MEDScoreOperationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDScoreOperationView.h; sourceTree = "<group>"; };
+		5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDScoreOperationView.m; sourceTree = "<group>"; };
+		5D8207B22099A50500B84C1E /* MEDCompanyRankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankingController.h; sourceTree = "<group>"; };
+		5D8207B32099A50500B84C1E /* MEDCompanyRankingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCompanyRankingController.m; sourceTree = "<group>"; };
+		5D8207B52099A50500B84C1E /* MEDCompanyRankModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCompanyRankModel.m; sourceTree = "<group>"; };
+		5D8207B62099A50500B84C1E /* MEDCompanyRankModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankModel.h; sourceTree = "<group>"; };
+		5D8207B82099A50500B84C1E /* MEDCompanyRankHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankHeadView.h; sourceTree = "<group>"; };
+		5D8207B92099A50500B84C1E /* MEDCompanyRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDCompanyRankCell.xib; sourceTree = "<group>"; };
+		5D8207BA2099A50500B84C1E /* MEDCompanyRankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankCell.h; sourceTree = "<group>"; };
+		5D8207BB2099A50500B84C1E /* MEDCompanyRankHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDCompanyRankHeadView.xib; sourceTree = "<group>"; };
+		5D8207BC2099A50500B84C1E /* MEDCompanyRankHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCompanyRankHeadView.m; sourceTree = "<group>"; };
+		5D8207BD2099A50500B84C1E /* MEDCompanyRankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCompanyRankCell.m; sourceTree = "<group>"; };
+		5D8207C02099A50500B84C1E /* MEDHomePhysiologyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyController.m; sourceTree = "<group>"; };
+		5D8207C12099A50500B84C1E /* MEDHomePhysiologyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyController.h; sourceTree = "<group>"; };
+		5D8207C32099A50500B84C1E /* MEDHomePhysiologyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyModel.m; sourceTree = "<group>"; };
+		5D8207C42099A50500B84C1E /* MEDHomePhysiologyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyModel.h; sourceTree = "<group>"; };
+		5D8207C62099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomePhysiologyBloodPressureCell.xib; sourceTree = "<group>"; };
+		5D8207C72099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyWaistlineCell.m; sourceTree = "<group>"; };
+		5D8207C82099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomePhysiologyWaistlineCell.xib; sourceTree = "<group>"; };
+		5D8207C92099A50500B84C1E /* MEDHomePhysiologyweightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyweightCell.h; sourceTree = "<group>"; };
+		5D8207CA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyBloodGlucoseCell.h; sourceTree = "<group>"; };
+		5D8207CB2099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyBloodPressureCell.m; sourceTree = "<group>"; };
+		5D8207CC2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomePhysiologyBloodGlucoseCell.xib; sourceTree = "<group>"; };
+		5D8207CD2099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyWaistlineCell.h; sourceTree = "<group>"; };
+		5D8207CE2099A50500B84C1E /* MEDHomePhysiologyweightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomePhysiologyweightCell.xib; sourceTree = "<group>"; };
+		5D8207CF2099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomePhysiologyBloodPressureCell.h; sourceTree = "<group>"; };
+		5D8207D02099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyBloodGlucoseCell.m; sourceTree = "<group>"; };
+		5D8207D12099A50500B84C1E /* MEDHomePhysiologyweightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomePhysiologyweightCell.m; sourceTree = "<group>"; };
+		5D8207D42099A50500B84C1E /* MEDHomeLifeHabitController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeLifeHabitController.h; sourceTree = "<group>"; };
+		5D8207D52099A50500B84C1E /* MEDHomeLifeHabitController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeLifeHabitController.m; sourceTree = "<group>"; };
+		5D8207D82099A50500B84C1E /* MEDHomeHabitSportCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHabitSportCell.m; sourceTree = "<group>"; };
+		5D8207D92099A50500B84C1E /* MEDHomeHabitFoodCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHabitFoodCell.m; sourceTree = "<group>"; };
+		5D8207DA2099A50500B84C1E /* MEDHomeHabitSleepCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHabitSleepCell.m; sourceTree = "<group>"; };
+		5D8207DB2099A50500B84C1E /* MEDHomeHabitSportCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomeHabitSportCell.xib; sourceTree = "<group>"; };
+		5D8207DC2099A50500B84C1E /* MEDHomeHabitSportCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeHabitSportCell.h; sourceTree = "<group>"; };
+		5D8207DD2099A50500B84C1E /* MEDHomeHabitFoodCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeHabitFoodCell.h; sourceTree = "<group>"; };
+		5D8207DE2099A50500B84C1E /* MEDHomeHabitFoodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomeHabitFoodCell.xib; sourceTree = "<group>"; };
+		5D8207DF2099A50500B84C1E /* MEDHomeHabitSleepCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomeHabitSleepCell.xib; sourceTree = "<group>"; };
+		5D8207E02099A50500B84C1E /* MEDHomeHabitSleepCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeHabitSleepCell.h; sourceTree = "<group>"; };
+		5D8207E32099A50500B84C1E /* MEDHomeComplianceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeComplianceController.h; sourceTree = "<group>"; };
+		5D8207E42099A50500B84C1E /* MEDHomeComplianceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeComplianceController.m; sourceTree = "<group>"; };
+		5D8207E62099A50500B84C1E /* MEDHomeComplianceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeComplianceModel.m; sourceTree = "<group>"; };
+		5D8207E72099A50500B84C1E /* MEDHomeComplianceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeComplianceModel.h; sourceTree = "<group>"; };
+		5D8207E92099A50500B84C1E /* MEDHomeComplianceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDHomeComplianceCell.xib; sourceTree = "<group>"; };
+		5D8207EA2099A50500B84C1E /* MEDHomeComplianceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDHomeComplianceCell.m; sourceTree = "<group>"; };
+		5D8207EB2099A50500B84C1E /* MEDHomeComplianceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDHomeComplianceCell.h; sourceTree = "<group>"; };
 		5D829A1B2085C7D1001993B6 /* HealthStarButler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStarButler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D829A1E2085C7D1001993B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D829A1F2085C7D1001993B6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +183,20 @@
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
+		5DC39F8B2091D10C000D1B26 /* MEDAlertMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAlertMananger.h; sourceTree = "<group>"; };
+		5DC39F8C2091D10C000D1B26 /* MEDAlertMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDAlertMananger.m; sourceTree = "<group>"; };
+		5DC39F8E2091D56F000D1B26 /* MEDHomeRankScoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeRankScoreCell.h; sourceTree = "<group>"; };
+		5DC39F8F2091D56F000D1B26 /* MEDHomeRankScoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeRankScoreCell.m; sourceTree = "<group>"; };
+		5DC39F972092BFF9000D1B26 /* MEDScoreProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDScoreProgressBar.h; sourceTree = "<group>"; };
+		5DC39F982092BFF9000D1B26 /* MEDScoreProgressBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDScoreProgressBar.m; sourceTree = "<group>"; };
+		5DC39F9A2092D637000D1B26 /* MEDScoreButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDScoreButton.h; sourceTree = "<group>"; };
+		5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDScoreButton.m; sourceTree = "<group>"; };
+		5DC39FA020932773000D1B26 /* MEDBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDBaseWebViewController.h; sourceTree = "<group>"; };
+		5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseWebViewController.m; sourceTree = "<group>"; };
+		5DC39FA42093289A000D1B26 /* MEDHealthQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthQuestionnaireController.h; sourceTree = "<group>"; };
+		5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthQuestionnaireController.m; sourceTree = "<group>"; };
+		5DC39FAA209440F2000D1B26 /* blockTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blockTestViewController.h; sourceTree = "<group>"; };
+		5DC39FAB209440F2000D1B26 /* blockTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blockTestViewController.m; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +264,174 @@
 				5D4A4810209070A0007DAD29 /* MEDProgressHUD.m */,
 			);
 			path = HUD;
+			sourceTree = "<group>";
+		};
+		5D8207B02099A50500B84C1E /* RankList */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207B12099A50500B84C1E /* Controller */,
+				5D8207B42099A50500B84C1E /* Model */,
+				5D8207B72099A50500B84C1E /* View */,
+			);
+			path = RankList;
+			sourceTree = "<group>";
+		};
+		5D8207B12099A50500B84C1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207B22099A50500B84C1E /* MEDCompanyRankingController.h */,
+				5D8207B32099A50500B84C1E /* MEDCompanyRankingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D8207B42099A50500B84C1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207B52099A50500B84C1E /* MEDCompanyRankModel.m */,
+				5D8207B62099A50500B84C1E /* MEDCompanyRankModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D8207B72099A50500B84C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207B82099A50500B84C1E /* MEDCompanyRankHeadView.h */,
+				5D8207B92099A50500B84C1E /* MEDCompanyRankCell.xib */,
+				5D8207BA2099A50500B84C1E /* MEDCompanyRankCell.h */,
+				5D8207BB2099A50500B84C1E /* MEDCompanyRankHeadView.xib */,
+				5D8207BC2099A50500B84C1E /* MEDCompanyRankHeadView.m */,
+				5D8207BD2099A50500B84C1E /* MEDCompanyRankCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D8207BE2099A50500B84C1E /* Physiology */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207BF2099A50500B84C1E /* Controller */,
+				5D8207C22099A50500B84C1E /* Model */,
+				5D8207C52099A50500B84C1E /* View */,
+			);
+			path = Physiology;
+			sourceTree = "<group>";
+		};
+		5D8207BF2099A50500B84C1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207C02099A50500B84C1E /* MEDHomePhysiologyController.m */,
+				5D8207C12099A50500B84C1E /* MEDHomePhysiologyController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D8207C22099A50500B84C1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207C32099A50500B84C1E /* MEDHomePhysiologyModel.m */,
+				5D8207C42099A50500B84C1E /* MEDHomePhysiologyModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D8207C52099A50500B84C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207C62099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib */,
+				5D8207C72099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m */,
+				5D8207C82099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib */,
+				5D8207C92099A50500B84C1E /* MEDHomePhysiologyweightCell.h */,
+				5D8207CA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.h */,
+				5D8207CB2099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m */,
+				5D8207CC2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib */,
+				5D8207CD2099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.h */,
+				5D8207CE2099A50500B84C1E /* MEDHomePhysiologyweightCell.xib */,
+				5D8207CF2099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.h */,
+				5D8207D02099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m */,
+				5D8207D12099A50500B84C1E /* MEDHomePhysiologyweightCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D8207D22099A50500B84C1E /* LifeHabit */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207D32099A50500B84C1E /* Controller */,
+				5D8207D62099A50500B84C1E /* Model */,
+				5D8207D72099A50500B84C1E /* View */,
+			);
+			path = LifeHabit;
+			sourceTree = "<group>";
+		};
+		5D8207D32099A50500B84C1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207D42099A50500B84C1E /* MEDHomeLifeHabitController.h */,
+				5D8207D52099A50500B84C1E /* MEDHomeLifeHabitController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D8207D62099A50500B84C1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D8207D72099A50500B84C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207D82099A50500B84C1E /* MEDHomeHabitSportCell.m */,
+				5D8207D92099A50500B84C1E /* MEDHomeHabitFoodCell.m */,
+				5D8207DA2099A50500B84C1E /* MEDHomeHabitSleepCell.m */,
+				5D8207DB2099A50500B84C1E /* MEDHomeHabitSportCell.xib */,
+				5D8207DC2099A50500B84C1E /* MEDHomeHabitSportCell.h */,
+				5D8207DD2099A50500B84C1E /* MEDHomeHabitFoodCell.h */,
+				5D8207DE2099A50500B84C1E /* MEDHomeHabitFoodCell.xib */,
+				5D8207DF2099A50500B84C1E /* MEDHomeHabitSleepCell.xib */,
+				5D8207E02099A50500B84C1E /* MEDHomeHabitSleepCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D8207E12099A50500B84C1E /* Compliance */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207E22099A50500B84C1E /* Controller */,
+				5D8207E52099A50500B84C1E /* Model */,
+				5D8207E82099A50500B84C1E /* View */,
+			);
+			path = Compliance;
+			sourceTree = "<group>";
+		};
+		5D8207E22099A50500B84C1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207E32099A50500B84C1E /* MEDHomeComplianceController.h */,
+				5D8207E42099A50500B84C1E /* MEDHomeComplianceController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D8207E52099A50500B84C1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207E62099A50500B84C1E /* MEDHomeComplianceModel.m */,
+				5D8207E72099A50500B84C1E /* MEDHomeComplianceModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D8207E82099A50500B84C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D8207E92099A50500B84C1E /* MEDHomeComplianceCell.xib */,
+				5D8207EA2099A50500B84C1E /* MEDHomeComplianceCell.m */,
+				5D8207EB2099A50500B84C1E /* MEDHomeComplianceCell.h */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D829A122085C7D1001993B6 = {
@@ -273,6 +536,8 @@
 				5D829A622085D7E1001993B6 /* MEDTabBarMidButton.m */,
 				5D829A672085D8C9001993B6 /* MEDNavigationController.h */,
 				5D829A682085D8C9001993B6 /* MEDNavigationController.m */,
+				5DC39FA020932773000D1B26 /* MEDBaseWebViewController.h */,
+				5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -280,6 +545,8 @@
 		5D829A3A2085C8C4001993B6 /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				5DC39F8B2091D10C000D1B26 /* MEDAlertMananger.h */,
+				5DC39F8C2091D10C000D1B26 /* MEDAlertMananger.m */,
 				5D4A480E20906D11007DAD29 /* HUD */,
 			);
 			path = BaseView;
@@ -296,6 +563,7 @@
 		5D829A3C2085C8FD001993B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5DC39F862091CE31000D1B26 /* SubController */,
 				5D829A7C2085D9B0001993B6 /* Controller */,
 				5D829A7D2085D9B0001993B6 /* Model */,
 				5D829A7E2085D9B0001993B6 /* View */,
@@ -415,6 +683,9 @@
 		5D829A6D2085D911001993B6 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DC39FA32093280B000D1B26 /* HealthQuestionnaire */,
+				5DC39FAA209440F2000D1B26 /* blockTestViewController.h */,
+				5DC39FAB209440F2000D1B26 /* blockTestViewController.m */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -461,6 +732,7 @@
 		5D829A7E2085D9B0001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5DC39F8A2091CFBB000D1B26 /* RankScoreCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +824,41 @@
 			path = "MZMiddleButton(未使用)";
 			sourceTree = "<group>";
 		};
+		5DC39F862091CE31000D1B26 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5DC39F8A2091CFBB000D1B26 /* RankScoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				5DC39F8E2091D56F000D1B26 /* MEDHomeRankScoreCell.h */,
+				5DC39F8F2091D56F000D1B26 /* MEDHomeRankScoreCell.m */,
+				5DC39F972092BFF9000D1B26 /* MEDScoreProgressBar.h */,
+				5DC39F982092BFF9000D1B26 /* MEDScoreProgressBar.m */,
+				5D8207AD2099536C00B84C1E /* MEDScoreOperationView.h */,
+				5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */,
+				5DC39F9A2092D637000D1B26 /* MEDScoreButton.h */,
+				5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */,
+				5D8207E12099A50500B84C1E /* Compliance */,
+				5D8207D22099A50500B84C1E /* LifeHabit */,
+				5D8207BE2099A50500B84C1E /* Physiology */,
+				5D8207B02099A50500B84C1E /* RankList */,
+			);
+			path = RankScoreCell;
+			sourceTree = "<group>";
+		};
+		5DC39FA32093280B000D1B26 /* HealthQuestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				5DC39FA42093289A000D1B26 /* MEDHealthQuestionnaireController.h */,
+				5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */,
+			);
+			path = HealthQuestionnaire;
+			sourceTree = "<group>";
+		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,10 +936,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
+				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
+				5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */,
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
+				5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */,
+				5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
 				5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */,
+				5D8208022099A50500B84C1E /* MEDHomeHabitSleepCell.xib in Resources */,
+				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
+				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
+				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
+				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,29 +1018,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
+				5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
+				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
+				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
+				5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
+				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
+				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
+				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
+				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,
+				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
+				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
+				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
+				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
+				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
+				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
+				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
+				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
 				5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */,
 				5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
+				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
+				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
+				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
+				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
+				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
+				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
+				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
+				5DC39FAC209440F2000D1B26 /* blockTestViewController.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

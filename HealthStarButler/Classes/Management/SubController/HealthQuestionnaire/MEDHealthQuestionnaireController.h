@@ -1,0 +1,13 @@
+//
+//  MEDHealthQuestionnaireController.h
+//  HealthStarButler
+//
+//  Created by 朱慕之 on 2018/4/27.
+//  Copyright © 2018年 zhumuzhi. All rights reserved.
+//
+
+#import "MEDBaseWebViewController.h"
+
+@interface MEDHealthQuestionnaireController : MEDBaseWebViewController
+
+@end

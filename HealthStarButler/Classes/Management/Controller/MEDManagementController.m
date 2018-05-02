@@ -9,6 +9,8 @@
 #import "MEDManagementController.h"
 #import "MEDManageVerticalCell.h"
 #import "MEDManageHorizontalCell.h"
+//健康调查问卷
+#import "MEDHealthQuestionnaireController.h"
 
 @interface MEDManagementController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -33,7 +35,7 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setupNavigation];
+    [self configNavigation];
     [self.view addSubview:self.manageCollectionView];
     
 }
@@ -78,18 +80,36 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
     
 }
 
-
-
-
 #pragma mark - UI Config
 /** 设置Navigation */
-- (void)setupNavigation {
+- (void)configNavigation {
     
     self.title = @"管理";
     self.navigationItem.title = @"健康管理";
     
     [self setupPersonNavigationItem];
-    
+}
+- (UICollectionView *)manageCollectionView {
+    if (!_manageCollectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        
+        _manageCollectionView.collectionViewLayout = layout;
+        
+        _manageCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
+        _manageCollectionView.frame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height - TabBar_Height);
+        _manageCollectionView.backgroundColor = MEDGrayColor(243);
+        _manageCollectionView.showsVerticalScrollIndicator = NO;
+        _manageCollectionView.delegate = self;
+        _manageCollectionView.dataSource = self;
+        
+        [_manageCollectionView registerNib:[UINib nibWithNibName:@"MEDManageVerticalCell" bundle:nil] forCellWithReuseIdentifier:kManageVerticalCellID];
+        [_manageCollectionView registerNib:[UINib nibWithNibName:@"MEDManageHorizontalCell" bundle:nil] forCellWithReuseIdentifier:kManageHorizontalCellID];
+        
+        [_manageCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kManageCollectionHeaderVID];
+        [_manageCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kManageCollectionFooterVID];
+    }
+    return _manageCollectionView;
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -152,6 +172,16 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
     return nil;
 }
 
+#pragma mark - UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"点击了第%ld-Section中的第%ld-Row数据", indexPath.section, indexPath.row);
+    
+    MEDHealthQuestionnaireController *HQController = [[MEDHealthQuestionnaireController alloc] init];
+    [self.navigationController pushViewController:HQController animated:YES];
+    
+}
+
+
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 //动态设置每个Item的尺寸大小
@@ -198,11 +228,6 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
     return CGSizeMake(SCREEN_WIDTH, 0);
 }
 
-#pragma mark - UICollectionViewDelegate
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"点击了第%ld-Section中的第%ld-Row数据", indexPath.section, indexPath.row);
-
-}
 
 #pragma mark - Lazy
 
@@ -251,30 +276,5 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
     
     return _collectionData;
 }
-
-- (UICollectionView *)manageCollectionView {
-    if (!_manageCollectionView) {
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        
-        _manageCollectionView.collectionViewLayout = layout;
-        
-        _manageCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-        _manageCollectionView.frame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height - TabBar_Height);
-        _manageCollectionView.backgroundColor = MEDGrayColor(243);
-        _manageCollectionView.showsVerticalScrollIndicator = NO;
-        _manageCollectionView.delegate = self;
-        _manageCollectionView.dataSource = self;
-        
-        [_manageCollectionView registerNib:[UINib nibWithNibName:@"MEDManageVerticalCell" bundle:nil] forCellWithReuseIdentifier:kManageVerticalCellID];
-        [_manageCollectionView registerNib:[UINib nibWithNibName:@"MEDManageHorizontalCell" bundle:nil] forCellWithReuseIdentifier:kManageHorizontalCellID];
-        
-        [_manageCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kManageCollectionHeaderVID];
-        [_manageCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:kManageCollectionFooterVID];
-    }
-    return _manageCollectionView;
-}
-
-
 
 @end

@@ -149,9 +149,7 @@
     
     [tabBarController hideTabBadgeBackgroundSeparator];
     //设置默认TabBatController
-    [tabBarController setSelectedIndex:0];
-    
-    
+    [tabBarController setSelectedIndex:2];
     
     //添加小红点
 //        UIViewController *viewController = tabBarController.viewControllers[0];

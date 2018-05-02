@@ -37,20 +37,13 @@
 
 - (void)clickQuitButton
 {
-    UIAlertController *quitAlert = [UIAlertController alertControllerWithTitle:@"退出确认" message:@"请问您是够确定退出？" preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"取消退出");
-    }];
-    UIAlertAction *confimAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [MEDAlertMananger presentAlertWithTitle:@"退出" message:@"确认退出" actionTitle:@[@"确认"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
+        NSLog(@"@@~~ : %lu, %@", (unsigned long)buttonIndex, buttonTitle);
         
-        [kUserDefaults setObject:LoginFailed forKey:Login];
-        [kAppDelegate mainTabBarSwitch];
-        
-    }];
-    [quitAlert addAction:cancelAction];
-    [quitAlert addAction:confimAction];
-    
-    [kRootViewController presentViewController:quitAlert animated:YES completion:^{
+        if (buttonIndex==1) {
+            [kUserDefaults setObject:LoginFailed forKey:Login];
+            [kAppDelegate mainTabBarSwitch];
+        }
         
     }];
 }

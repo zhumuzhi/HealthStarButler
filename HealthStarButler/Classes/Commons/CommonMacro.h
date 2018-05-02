@@ -28,23 +28,28 @@
 #endif
 
 #pragma mark -------------------- Frame --------------------
-
 // 屏幕宽度
 #define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
 // 屏幕高度
 #define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
 
-// iPhone X
+// 是否iPhone X
 #define  MED_iPhoneX        (SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f ? YES : NO)
 
-// 状态栏
+// 状态栏Height
 #define StatusBarHeight     (MED_iPhoneX ? 44.f : 20.f )
-// 导航栏
+// 导航栏Height
 #define Navigation_Height   (StatusBarHeight + 44.f)
 // TabBar距离底部
 #define MED_TabbarSafeBottomMargin  (MED_iPhoneX ? 34.f : 0.0f)
-// TabBar
+// TabBarHeight
 #define TabBar_Height       (MED_TabbarSafeBottomMargin + 49.f)
+
+// TabBar一级页面Frame
+#define NormalFrame CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height-TabBar_Height)
+
+/** 二级页面Frame(由一级页面Push有Navigation) */
+#define SecondPageFrame CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height-MED_TabbarSafeBottomMargin)
 
 
 #pragma mark -------------------- Color --------------------
@@ -55,13 +60,15 @@
 #define MEDGrayColor(v)    MEDRGB((v), (v), (v))
 #define MEDRandomColor     MEDRGB(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
 
+#define ZB_COLOR_HEX(x)              ([UIColor colorWithHexColor:(x)])
+
 //rgb颜色转换（16进制->10进制）
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 //清除背景色
 #define CLEARCOLOR [UIColor clearColor]
 
-#define MEDCommonBgColor   MEDGrayColor(206)      //待定
+#define MEDCommonBgColor   MEDGrayColor(206)    //待定
 #define MEDCommonBlue      MEDRGB(28, 196, 225) //待定
 #define MEDCommonBlack     MEDRGB(40, 40, 40)   //待定
 
@@ -157,6 +164,13 @@
 //模拟器
 #endif
 
+//判断是否为iPad
+#define kISiPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//判断是否为iPhone
+#define kISiPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+
 //获取沙盒Document路径
 #define kDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
 //获取沙盒temp路径
@@ -176,8 +190,18 @@
 //定义UIImage对象
 #define ImageNamed(_pointer) [UIImage imageNamed:[UIUtil imageName:_pointer］
 
+// 求两个数中的最大值
+#define MAX_VALUE(X,Y) ((X) > (Y) ? (X) : (Y))
+
+
+
 //G－C－D
+
+//GCD - 一次性执行
+#define kDISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
+//GCD - 在Main线程上运行
+#define kDISPATCH_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
+//GCD - 开启异步线程
+#define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
+
 #define BACK(block) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block)
-#define MAIN(block) dispatch_async(dispatch_get_main_queue(),block)
-
-
