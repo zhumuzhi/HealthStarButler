@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
+		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -78,6 +79,8 @@
 /* Begin PBXFileReference section */
 		0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.debug.xcconfig"; sourceTree = "<group>"; };
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeMonitorCell.h; sourceTree = "<group>"; };
+		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -212,6 +215,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D1AC62B209AB9D500FB16C9 /* MonitorCell */ = {
+			isa = PBXGroup;
+			children = (
+				5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */,
+				5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */,
+			);
+			path = MonitorCell;
+			sourceTree = "<group>";
+		};
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +744,7 @@
 		5D829A7E2085D9B0001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D1AC62B209AB9D500FB16C9 /* MonitorCell */,
 				5DC39F8A2091CFBB000D1B26 /* RankScoreCell */,
 			);
 			path = View;
@@ -1030,6 +1043,7 @@
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
+				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
 				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
 				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,

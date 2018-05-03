@@ -159,6 +159,7 @@
         
         success(task,dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [MEDProgressHUD dismissHUD];
         fail(task,error);
     }];
 }

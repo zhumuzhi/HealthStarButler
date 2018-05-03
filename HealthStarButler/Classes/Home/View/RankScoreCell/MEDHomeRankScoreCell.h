@@ -13,9 +13,9 @@
 @property (nonatomic, copy) void (^rankBtnClicked)(UIButton *button);
 
 //设置数据的模型
-@property (nonatomic, strong) NSArray *cellData;
+@property (nonatomic, strong) NSDictionary *rankData;
 
-+ (instancetype)homerankScoreCellWithTableView:(UITableView *)tableView;
++ (instancetype)homeRankScoreCellWithTableView:(UITableView *)tableView;
 
 @end
 

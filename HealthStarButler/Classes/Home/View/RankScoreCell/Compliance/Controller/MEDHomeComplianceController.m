@@ -55,7 +55,6 @@ static NSString *const cellID = @"complianceCell";
     }];
 }
 
-
 #pragma mark - LifCycle
 - (void)viewDidLoad {
     [super viewDidLoad];

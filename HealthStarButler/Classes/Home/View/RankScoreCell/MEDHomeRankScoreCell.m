@@ -25,8 +25,9 @@
 
 @implementation MEDHomeRankScoreCell
 
+#pragma mark - Init
 //便利构造对象方法
-+ (instancetype)homerankScoreCellWithTableView:(UITableView *)tableView {
++ (instancetype)homeRankScoreCellWithTableView:(UITableView *)tableView {
     static NSString *identifer = @"homeRankCell";
     MEDHomeRankScoreCell *cell = [tableView dequeueReusableCellWithIdentifier:identifer];
     if (cell == nil) {
@@ -89,7 +90,7 @@
     [self.contentView addSubview:_operationView];
 }
 
-//设置控件的frame
+#pragma mark - Frame
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -120,6 +121,14 @@
     //操作页面
     CGFloat operationVY = CGRectGetMaxY(self.scoreProgressBar.frame) + 10;
     self.operationView.frame = CGRectMake(0, operationVY, SCREEN_WIDTH, 50);
+}
+
+#pragma mark - setData
+-(void)setRankData:(NSDictionary *)rankData
+{
+    self.rankLabel.text = [NSString stringWithFormat:@"当前排名: %@", rankData[@"ranking"]];
+    self.scoreLabel.text = [NSString stringWithFormat:@"%.1f分", [rankData[@"personalTotalScore"] floatValue]];
+    self.scoreProgressBar.percent = [[NSString stringWithFormat:@"%.1f分", [rankData[@"personalTotalScore"] floatValue]] floatValue];
 }
 
 
