@@ -111,7 +111,6 @@
     self.scoreLabel.frame = CGRectMake(scoreLX, scoreLY, scoreLW, scoreLH);
     self.scoreLabel.centerY = self.rankLabel.centerY;
     
-    
     //进度页面frame
     CGFloat progressX = padding*2;
     CGFloat progressY = CGRectGetMaxY(self.scoreLabel.frame)+10;
@@ -130,7 +129,6 @@
     self.scoreLabel.text = [NSString stringWithFormat:@"%.1f分", [rankData[@"personalTotalScore"] floatValue]];
     self.scoreProgressBar.percent = [[NSString stringWithFormat:@"%.1f分", [rankData[@"personalTotalScore"] floatValue]] floatValue];
 }
-
 
 - (void)awakeFromNib {
     [super awakeFromNib];
