@@ -16,6 +16,11 @@
 #import "MEDHomeLifeHabitController.h"   //生活习惯
 /** 监测Cell */
 #import "MEDHomeMonitorCell.h"
+/** 饮食Cell */
+#import "MEDHomeFoodPlanCell.h"
+/** 方案Cell */
+#import "MEDHomeHealthPlanCell.h"
+/** 资讯Cell */
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -130,6 +135,12 @@
              ];
         };
         return cell;
+    }else if(indexPath.section == 2){
+        MEDHomeFoodPlanCell *cell = [MEDHomeFoodPlanCell homeFoodPlanCellWithTableView:tableView];
+        return cell;
+    }else if(indexPath.section == 3){
+        MEDHomeHealthPlanCell *cell = [MEDHomeHealthPlanCell homeHealthPlanCellWithTableView:tableView];
+        return cell;
     }else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
         if (cell == nil) {
@@ -143,12 +154,41 @@
 #pragma mark - TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"选中了第%zd", indexPath.section);
+    //NSLog(@"选中了第%zd", indexPath.section);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSInteger section = indexPath.section;
-    if (section == 0) {
-        MEDCompanyRankingController *rankList = [[MEDCompanyRankingController alloc] init];
-        [self.navigationController pushViewController:rankList animated:YES];
+    
+    switch (section) {
+        case 0:
+        {
+            MEDCompanyRankingController *rankList = [[MEDCompanyRankingController alloc] init];
+            [self.navigationController pushViewController:rankList animated:YES];
+            NSLog(@"排名Cell");
+        }
+            break;
+        case 1:
+        {
+            NSLog(@"监测Cell");
+        }
+            break;
+        case 2:
+        {
+            NSLog(@"饮食日志Cell");
+        }
+            break;
+        case 3:
+        {
+            NSLog(@"健康方案Cell");
+        }
+            break;
+        case 4:
+        {
+            NSLog(@"健康资讯Cell");
+        }
+            break;
+        default:
+            break;
     }
 }
 
@@ -158,6 +198,10 @@
         return 140.0f;
     }else if(indexPath.section == 1){
         return 188.0f;
+    }else if(indexPath.section == 2){
+        return 120.0f;
+    }else if(indexPath.section == 3){
+        return 130.0f;
     }else {
         return 44.0f;
     }

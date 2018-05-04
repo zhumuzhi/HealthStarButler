@@ -10,6 +10,7 @@
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
+		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -84,6 +85,8 @@
 		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeFoodPlanCell.h; sourceTree = "<group>"; };
 		5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeFoodPlanCell.m; sourceTree = "<group>"; };
+		5D1AC634209BFA8800FB16C9 /* MEDHomeHealthPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeHealthPlanCell.h; sourceTree = "<group>"; };
+		5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHealthPlanCell.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -234,6 +237,15 @@
 				5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */,
 			);
 			path = FoodPlanCell;
+			sourceTree = "<group>";
+		};
+		5D1AC633209BF8B800FB16C9 /* HealthPlanCell */ = {
+			isa = PBXGroup;
+			children = (
+				5D1AC634209BFA8800FB16C9 /* MEDHomeHealthPlanCell.h */,
+				5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */,
+			);
+			path = HealthPlanCell;
 			sourceTree = "<group>";
 		};
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
@@ -756,6 +768,7 @@
 		5D829A7E2085D9B0001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D1AC633209BF8B800FB16C9 /* HealthPlanCell */,
 				5D1AC62F209AF48000FB16C9 /* FoodPlanCell */,
 				5D1AC62B209AB9D500FB16C9 /* MonitorCell */,
 				5DC39F8A2091CFBB000D1B26 /* RankScoreCell */,
@@ -1062,6 +1075,7 @@
 				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
 				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
+				5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,

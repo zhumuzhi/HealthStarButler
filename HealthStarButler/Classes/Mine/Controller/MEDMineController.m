@@ -27,9 +27,11 @@
 
 - (void)navigationConfig
 {
-    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeSystem];
     rightButton.frame = CGRectMake(0, 0, 60, 44);
+    [rightButton setTitle:@"退出" forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(clickQuitButton) forControlEvents:UIControlEventTouchUpInside];
+    
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -37,11 +39,15 @@
 
 - (void)clickQuitButton
 {
+    MEDWeakSelf(self);
     [MEDAlertMananger presentAlertWithTitle:@"退出" message:@"确认退出" actionTitle:@[@"确认"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
         NSLog(@"@@~~ : %lu, %@", (unsigned long)buttonIndex, buttonTitle);
         
         if (buttonIndex==1) {
+            [weakself.navigationController popViewControllerAnimated:NO];
+            //保存登录信息
             [kUserDefaults setObject:LoginFailed forKey:Login];
+            //切换打开程序后至登录页面(根据登录信息判断)
             [kAppDelegate mainTabBarSwitch];
         }
         
