@@ -64,13 +64,13 @@
     //设置bar shadow image
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
     [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
-        [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
+    [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
     
     // 设置背景图片
-    UITabBar *tabBarAppearance = [UITabBar appearance];
-    UIImage *tabBarBackgroundImage = [UIImage imageNamed:@"tab_bar"];
-    UIImage *scanedTabBarBackgroundImage = [[self class] scaleImage:tabBarBackgroundImage toScale:1.0];
-     [tabBarAppearance setBackgroundImage:scanedTabBarBackgroundImage];
+//    UITabBar *tabBarAppearance = [UITabBar appearance];
+//    UIImage *tabBarBackgroundImage = [UIImage imageNamed:@"tab_bar"];
+//    UIImage *scanedTabBarBackgroundImage = [[self class] scaleImage:tabBarBackgroundImage toScale:1.0];
+//     [tabBarAppearance setBackgroundImage:scanedTabBarBackgroundImage];
     
     // 去除 TabBar 自带的顶部阴影
     // iOS10 后 需要使用 `-[CYLTabBarController hideTabBadgeBackgroundSeparator]` 见 AppDelegate 类中的演示;

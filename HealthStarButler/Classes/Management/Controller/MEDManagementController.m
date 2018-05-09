@@ -60,7 +60,7 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
     [param setObject:userModel.uid forKey:UserId];
     
     [MEDDataRequest POST:diseaseQuestionnaire_Whether params:param success:^(NSURLSessionDataTask *task, id responseObject) {
-        if (StatusSuccessful(responseObject)) {
+        if (NetStatusSuccessful(responseObject)) {
             NSString *dataNum = responseObject[@"data"];
             if ([dataNum integerValue] == 0) { //没有问卷
                 self.isHaveDisease = NO;

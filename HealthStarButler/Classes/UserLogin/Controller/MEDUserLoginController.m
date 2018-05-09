@@ -213,7 +213,7 @@
     [MEDDataRequest POST:MED_USER_LOGIN params:param success:^(NSURLSessionDataTask *task, id responseObject) {
         [self loginControlClick:self->_loginControl];
         //NSLog(@"登录页面返回的信息:%@",responseObject);
-        if (StatusSuccessful(responseObject)) {
+        if (NetStatusSuccessful(responseObject)) {
             MEDUserModel *userModel = [MEDUserModel sharedUserModel];
             NSDictionary *userInfoDict = responseObject[Data];
             userModel = [MEDUserModel mj_objectWithKeyValues:userInfoDict];

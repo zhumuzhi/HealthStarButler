@@ -89,7 +89,7 @@
 #define Status_OK  0           //状态成功
 #define UserId     @"userId"   //userId 请求参数
 
-#define StatusSuccessful(responseObject) ([responseObject[Status] integerValue] == Status_OK) //请求成功判断
+#define NetStatusSuccessful(responseObject) ([responseObject[Status] integerValue] == Status_OK) //请求成功判断
 
 #define Data     @"data"       //数据Key
 #define DataInfo @"dataInfo"   //存放登陆之后的所有数据
@@ -192,6 +192,9 @@
 
 // 求两个数中的最大值
 #define MAX_VALUE(X,Y) ((X) > (Y) ? (X) : (Y))
+
+//NSString
+#define NSLocalStr(strkey, table)        (NSLocalizedStringFromTable((@"" strkey) ,(@"" table) , @"not set") )
 
 
 

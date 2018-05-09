@@ -69,6 +69,18 @@
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
+		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
+		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
+		5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */; };
+		5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7420A18D65008F902E /* MEDFoodDateFeedbackCell.xib */; };
+		5DBD2C7A20A1930E008F902E /* MEDFeedBackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7920A1930E008F902E /* MEDFeedBackModel.m */; };
+		5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9120A2D373008F902E /* TDTouchID.m */; };
+		5DBD2C9520A2E1F0008F902E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBD2C9420A2E1F0008F902E /* HealthKit.framework */; };
+		5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9B20A2E463008F902E /* MEDHealthMananger.m */; };
+		5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9F20A2E4E4008F902E /* NSDate+TFDate.m */; };
+		5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2CA120A2E5A5008F902E /* HealthKitDetailViewController.m */; };
+		5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DBD2CA220A2E5A6008F902E /* HealthKitDetailViewController.xib */; };
+		5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2CA920A2E65D008F902E /* MEDHealthKitListController.m */; };
 		5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F8C2091D10C000D1B26 /* MEDAlertMananger.m */; };
 		5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F8F2091D56F000D1B26 /* MEDHomeRankScoreCell.m */; };
 		5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F982092BFF9000D1B26 /* MEDScoreProgressBar.m */; };
@@ -192,6 +204,29 @@
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
+		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
+		5DBD2C67209FFCBB008F902E /* NSString+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MED.m"; sourceTree = "<group>"; };
+		5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDateUtils.h; sourceTree = "<group>"; };
+		5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDDateUtils.m; sourceTree = "<group>"; };
+		5DBD2C7220A18D65008F902E /* MEDFoodDateFeedbackCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDFoodDateFeedbackCell.h; sourceTree = "<group>"; };
+		5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDFoodDateFeedbackCell.m; sourceTree = "<group>"; };
+		5DBD2C7420A18D65008F902E /* MEDFoodDateFeedbackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MEDFoodDateFeedbackCell.xib; sourceTree = "<group>"; };
+		5DBD2C7820A1930E008F902E /* MEDFeedBackModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDFeedBackModel.h; sourceTree = "<group>"; };
+		5DBD2C7920A1930E008F902E /* MEDFeedBackModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDFeedBackModel.m; sourceTree = "<group>"; };
+		5DBD2C9020A2D373008F902E /* TDTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTouchID.h; sourceTree = "<group>"; };
+		5DBD2C9120A2D373008F902E /* TDTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTouchID.m; sourceTree = "<group>"; };
+		5DBD2C9320A2E1F0008F902E /* HealthStarButler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthStarButler.entitlements; sourceTree = "<group>"; };
+		5DBD2C9420A2E1F0008F902E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		5DBD2C9720A2E236008F902E /* HealthStarButler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthStarButler.entitlements; sourceTree = "<group>"; };
+		5DBD2C9A20A2E463008F902E /* MEDHealthMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthMananger.h; sourceTree = "<group>"; };
+		5DBD2C9B20A2E463008F902E /* MEDHealthMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthMananger.m; sourceTree = "<group>"; };
+		5DBD2C9E20A2E4E4008F902E /* NSDate+TFDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TFDate.h"; sourceTree = "<group>"; };
+		5DBD2C9F20A2E4E4008F902E /* NSDate+TFDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TFDate.m"; sourceTree = "<group>"; };
+		5DBD2CA120A2E5A5008F902E /* HealthKitDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitDetailViewController.m; sourceTree = "<group>"; };
+		5DBD2CA220A2E5A6008F902E /* HealthKitDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthKitDetailViewController.xib; sourceTree = "<group>"; };
+		5DBD2CA320A2E5A6008F902E /* HealthKitDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitDetailViewController.h; sourceTree = "<group>"; };
+		5DBD2CA820A2E65D008F902E /* MEDHealthKitListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthKitListController.h; sourceTree = "<group>"; };
+		5DBD2CA920A2E65D008F902E /* MEDHealthKitListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthKitListController.m; sourceTree = "<group>"; };
 		5DC39F8B2091D10C000D1B26 /* MEDAlertMananger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAlertMananger.h; sourceTree = "<group>"; };
 		5DC39F8C2091D10C000D1B26 /* MEDAlertMananger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDAlertMananger.m; sourceTree = "<group>"; };
 		5DC39F8E2091D56F000D1B26 /* MEDHomeRankScoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeRankScoreCell.h; sourceTree = "<group>"; };
@@ -215,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */,
+				5DBD2C9520A2E1F0008F902E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +269,12 @@
 		5D1AC62F209AF48000FB16C9 /* FoodPlanCell */ = {
 			isa = PBXGroup;
 			children = (
+				5DBD2C7720A192F1008F902E /* Model */,
 				5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */,
 				5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */,
+				5DBD2C7220A18D65008F902E /* MEDFoodDateFeedbackCell.h */,
+				5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */,
+				5DBD2C7420A18D65008F902E /* MEDFoodDateFeedbackCell.xib */,
 			);
 			path = FoodPlanCell;
 			sourceTree = "<group>";
@@ -287,6 +327,7 @@
 		5D4A48072090209F007DAD29 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5DBD2C8C20A2D344008F902E /* TouchID */,
 				5D4A480820906142007DAD29 /* MEDMobileNumberTool.h */,
 				5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */,
 			);
@@ -491,6 +532,7 @@
 		5D829A1D2085C7D1001993B6 /* HealthStarButler */ = {
 			isa = PBXGroup;
 			children = (
+				5DBD2C9720A2E236008F902E /* HealthStarButler.entitlements */,
 				5D829A342085C873001993B6 /* Classes */,
 			);
 			path = HealthStarButler;
@@ -510,6 +552,7 @@
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 				5D829A382085C8A4001993B6 /* Category */,
 				5D829A432085CB5B001993B6 /* Commons */,
+				5DBD2C6920A15199008F902E /* Utils */,
 				5D829A362085C88D001993B6 /* Appdelegate */,
 				5D829A3B2085C8CD001993B6 /* Third */,
 				5D829A352085C884001993B6 /* Other */,
@@ -554,6 +597,8 @@
 				5D829A492085D5DB001993B6 /* UIView+MED.m */,
 				5D4A480B2090672E007DAD29 /* NSObject+MED.h */,
 				5D4A480C2090672E007DAD29 /* NSObject+MED.m */,
+				5DBD2C66209FFCBB008F902E /* NSString+MED.h */,
+				5DBD2C67209FFCBB008F902E /* NSString+MED.m */,
 				5D829A4C2085D5DF001993B6 /* Third */,
 			);
 			path = Category;
@@ -663,6 +708,7 @@
 		5D829A422085CA5E001993B6 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				5DBD2C9820A2E429008F902E /* SubController */,
 				5D829A872085D9E9001993B6 /* Controller */,
 				5D829A852085D9E9001993B6 /* Model */,
 				5D829A862085D9E9001993B6 /* View */,
@@ -768,10 +814,10 @@
 		5D829A7E2085D9B0001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D1AC633209BF8B800FB16C9 /* HealthPlanCell */,
-				5D1AC62F209AF48000FB16C9 /* FoodPlanCell */,
-				5D1AC62B209AB9D500FB16C9 /* MonitorCell */,
 				5DC39F8A2091CFBB000D1B26 /* RankScoreCell */,
+				5D1AC62B209AB9D500FB16C9 /* MonitorCell */,
+				5D1AC62F209AF48000FB16C9 /* FoodPlanCell */,
+				5D1AC633209BF8B800FB16C9 /* HealthPlanCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,6 +909,82 @@
 			path = "MZMiddleButton(未使用)";
 			sourceTree = "<group>";
 		};
+		5DBD2C6920A15199008F902E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */,
+				5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5DBD2C7720A192F1008F902E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C7820A1930E008F902E /* MEDFeedBackModel.h */,
+				5DBD2C7920A1930E008F902E /* MEDFeedBackModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DBD2C8C20A2D344008F902E /* TouchID */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C9020A2D373008F902E /* TDTouchID.h */,
+				5DBD2C9120A2D373008F902E /* TDTouchID.m */,
+			);
+			path = TouchID;
+			sourceTree = "<group>";
+		};
+		5DBD2C9620A2E20D008F902E /* license */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C9320A2E1F0008F902E /* HealthStarButler.entitlements */,
+			);
+			path = license;
+			sourceTree = "<group>";
+		};
+		5DBD2C9820A2E429008F902E /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C9920A2E437008F902E /* healtKit */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5DBD2C9920A2E437008F902E /* healtKit */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2CA820A2E65D008F902E /* MEDHealthKitListController.h */,
+				5DBD2CA920A2E65D008F902E /* MEDHealthKitListController.m */,
+				5DBD2CA320A2E5A6008F902E /* HealthKitDetailViewController.h */,
+				5DBD2CA120A2E5A5008F902E /* HealthKitDetailViewController.m */,
+				5DBD2CA220A2E5A6008F902E /* HealthKitDetailViewController.xib */,
+				5DBD2CA620A2E5FB008F902E /* Tool */,
+				5DBD2C9620A2E20D008F902E /* license */,
+			);
+			path = healtKit;
+			sourceTree = "<group>";
+		};
+		5DBD2C9D20A2E4E4008F902E /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C9E20A2E4E4008F902E /* NSDate+TFDate.h */,
+				5DBD2C9F20A2E4E4008F902E /* NSDate+TFDate.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		5DBD2CA620A2E5FB008F902E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C9D20A2E4E4008F902E /* Date */,
+				5DBD2C9A20A2E463008F902E /* MEDHealthMananger.h */,
+				5DBD2C9B20A2E463008F902E /* MEDHealthMananger.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
@@ -910,6 +1032,7 @@
 		C304EF3E1EAF2A12195628D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DBD2C9420A2E1F0008F902E /* HealthKit.framework */,
 				2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */,
 			);
 			name = Frameworks;
@@ -949,6 +1072,11 @@
 				TargetAttributes = {
 					5D829A1A2085C7D1001993B6 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -976,6 +1104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
+				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
 				5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */,
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
@@ -988,6 +1117,7 @@
 				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
 				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
+				5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 			);
@@ -1056,6 +1186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
@@ -1076,6 +1207,7 @@
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
 				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
 				5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */,
+				5DBD2C7A20A1930E008F902E /* MEDFeedBackModel.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
@@ -1089,25 +1221,32 @@
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
+				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
 				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
+				5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */,
 				5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */,
 				5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */,
+				5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
+				5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */,
+				5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */,
 				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
+				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
 				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
 				5DC39FAC209440F2000D1B26 /* blockTestViewController.m in Sources */,
 				5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */,
+				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1249,6 +1388,8 @@
 			baseConfigurationReference = 0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthStarButler/HealthStarButler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
@@ -1259,6 +1400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1268,6 +1410,8 @@
 			baseConfigurationReference = C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthStarButler/HealthStarButler.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
@@ -1278,6 +1422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhumuzhi.HealthStarButler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

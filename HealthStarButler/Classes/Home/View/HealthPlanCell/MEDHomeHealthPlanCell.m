@@ -8,6 +8,14 @@
 
 #import "MEDHomeHealthPlanCell.h"
 
+@interface MEDHomeHealthPlanCell()
+
+@property (nonatomic, strong) UITextView *planDetails;
+@property (nonatomic, strong) UIView *healthPlanView;
+@property (nonatomic, strong) UIImageView *healthPlanImage;
+
+@end
+
 @implementation MEDHomeHealthPlanCell
 
 #pragma mark - init
@@ -19,6 +27,8 @@
     if (cell == nil) {
         cell = [[MEDHomeHealthPlanCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    cell.backgroundColor = [UIColor whiteColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 /** init */
@@ -27,6 +37,7 @@
     if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         /** 配置子控件 */
         [self configSubView];
+
     }
     return self;
 }
@@ -42,9 +53,15 @@
     healthPlanView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:healthPlanView];
     
+    //指示View
+    UIView *indicator = [[UIView alloc] init];
+    indicator.frame = CGRectMake(MARGIN, MARGIN, 3, 15);
+    indicator.backgroundColor = MEDCommonBlue;
+    [healthPlanView addSubview:indicator];
+    
     //标题
     CGSize titleSize = [@"健康方案" sizeWithFont:[UIFont systemFontOfSize:14]];
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(MARGIN, MARGIN + 3, titleSize.width, titleSize.height)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(indicator.frame)+MARGIN/2, MARGIN, titleSize.width, titleSize.height)];
     title.font = [UIFont systemFontOfSize:14];
     title.text = @"健康方案";
     title.textColor = MEDGrayColor(40);
@@ -54,7 +71,8 @@
     UIImageView *healthPlanImage = [[UIImageView alloc] init];
     healthPlanImage.frame = CGRectMake(MARGIN, CGRectGetMaxY(title.frame)+MARGIN*2, 50, 50);
     healthPlanImage.image = [UIImage imageNamed:@"home_p_yinshi"];
-    [healthPlanView addSubview:healthPlanImage];
+    self.healthPlanImage = healthPlanImage;
+    [healthPlanView addSubview:self.healthPlanImage];
     
     //按钮
     NSArray *btnArray = @[@"饮食",@"运动",@"睡眠",@"用药"];
@@ -105,13 +123,47 @@
 //        planDetails.text = [NSString stringWithFormat:@"今日推荐摄入的总量为%ld~%ld千卡，摄入原则:",(long)_homePlanModel.inputEnergyMin,(long)_homePlanModel.inputEnergyMax];
 //    }
     [healthPlanView addSubview:planDetails];
+    
+    self.healthPlanView = healthPlanView;
 }
 
 - (void)planButtonClick:(UIButton *)button {
     //MYLog(@"点击了按钮%ld",(long)button.tag);
     //0为饮食，1为运动，2为睡眠，3为用药
+    for (UIButton *btn in self.healthPlanView.subviews) {
+        if ([btn isKindOfClass:[UIButton class]]) {
+            btn.selected = NO;
+            [btn setBackgroundColor:[UIColor whiteColor]];
+        }
+    }
+    button.selected = !button.selected;
+    [button setBackgroundColor:MEDCommonBlue];
     
-    
+    switch (button.tag) {
+        case 0:
+        {
+            self.healthPlanImage.image = [UIImage imageNamed:@"home_p_yinshi"];
+        }
+            break;
+        case 1:
+        {
+            self.healthPlanImage.image = [UIImage imageNamed:@"home_p_yundong"];
+        }
+            break;
+        case 2:
+        {
+            self.healthPlanImage.image = [UIImage imageNamed:@"home_p_shuimian"];
+        }
+            break;
+        case 3:
+        {
+            self.healthPlanImage.image = [UIImage imageNamed:@"home_p_yongyao"];
+            self.planDetails.text = @"已为您生成用药方案，请点击进入查看";
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - frame

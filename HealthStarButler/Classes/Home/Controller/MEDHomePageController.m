@@ -18,15 +18,22 @@
 #import "MEDHomeMonitorCell.h"
 /** 饮食Cell */
 #import "MEDHomeFoodPlanCell.h"
+#import "MEDFeedBackModel.h"
+#import "MEDFoodDateFeedbackCell.h"
 /** 方案Cell */
 #import "MEDHomeHealthPlanCell.h"
 /** 资讯Cell */
+
+#import "TDTouchID.h"
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *homeTableView;
 
 @property (nonatomic, strong) NSDictionary *rankData; //排名数据
+@property (nonatomic, assign) BOOL isWriteFoodDate; //是否填写过饮食日志
+@property (nonatomic, strong) MEDFeedBackModel *feedModel;
+
 
 @end
 
@@ -41,6 +48,39 @@
     [self getUserInfo];
     
     [self configTableView];
+    
+    // sizeWithFont测试
+    
+}
+
+#pragma mark - 指纹测试
+/**
+ 验证 TouchID
+ */
+- (void)touchVerification {
+    
+    TDTouchID *touchID = [[TDTouchID alloc] init];
+    
+    [touchID td_showTouchIDWithDescribe:nil BlockState:^(TDTouchIDState state, NSError *error) {
+        
+        if (state == TDTouchIDStateNotSupport) {    //不支持TouchID
+            [MEDProgressHUD dismissHUDErrorTitle:@"当前设备不支持TouchID, 请输入密码"];
+            
+        } else if (state == TDTouchIDStateSuccess) {    //TouchID验证成功
+            
+            NSLog(@"jump");
+            [MEDProgressHUD dismissHUDSuccessTitle:@"指纹验证成功"];
+            
+            
+        } else if (state == TDTouchIDStateInputPassword) { //用户选择手动输入密码
+            [MEDProgressHUD dismissHUDErrorTitle:@"当前设备不支持TouchID, 请输入密码"];
+
+        }
+        
+        // ps:以上的状态处理并没有写完全!
+        // 在使用中你需要根据回调的状态进行处理,需要处理什么就处理什么
+    }];
+    
 }
 
 #pragma mark - NetWork
@@ -52,9 +92,12 @@
     NSDictionary *userInfoDict = [self dictionaryWithJsonString:dataStr];
     MEDUserModel *userModel = [MEDUserModel sharedUserModel];
     userModel = [MEDUserModel mj_objectWithKeyValues:userInfoDict];
-    //NSLog(@"首页获取的用户信息为:%@", userModel);
-    
+    NSLog(@"首页获取的用户信息为:%@", userModel);
+    /**  获取排名信息*/
     [self getPersonalScoreRank];
+    /** 是否填写饮食日志 */
+    [self isWriteFoodDateRequest];
+    
 }
 
 /** 获取排名分数信息 */
@@ -64,7 +107,10 @@
     [param setValue:userModel.uid forKey:@"uid"];
     
     [MEDDataRequest POST:MED_PersonalScoreRank params:param success:^(NSURLSessionDataTask *task, id responseObject) {
-        if(StatusSuccessful(responseObject)){
+        
+        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
+        
+        if(NetStatusSuccessful(responseObject)){
             NSDictionary *dataDict = responseObject[@"data"];
             self.rankData = dataDict;
             [self.homeTableView reloadData];
@@ -73,7 +119,53 @@
             NSLog(@"获取Rank数据失败");
             [self.homeTableView reloadData];
     }];
-    
+}
+
+/** 判断是否填写饮食日志 */
+- (void)isWriteFoodDateRequest {
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    MEDUserModel *userModel = [MEDUserModel sharedUserModel];
+    if (userModel.uid != nil) {
+        [param setValue:userModel.uid forKey:@"uid"];
+    }
+    NSString *dateStr = [MEDDateUtils dateyyyyMMddStrFromDate:[NSDate date]];
+    [param setValue:dateStr forKey:@"date"];
+    MEDWeakSelf(self);
+    [MEDDataRequest POST:MEDFOODDATE_RESULT params:param success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
+        if (NetStatusSuccessful(responseObject)) {
+            NSDictionary *dataDic = responseObject[@"data"];
+            if (dataDic.count != 0) { //如果不为零说明填写过
+                weakself.isWriteFoodDate = YES;
+                
+                MEDFeedBackModel *feedModel = [[MEDFeedBackModel alloc]init];
+                [feedModel feedBackDataWithDict:responseObject];
+                weakself.feedModel = feedModel;
+                
+            } else {
+                weakself.isWriteFoodDate = NO;
+            }
+
+        }
+    } fail:^(NSURLSessionDataTask *task, NSError *error) {
+        //[MEDProgressHUD dismissHUDErrorTitle:@"请连接网络"];
+        NSLog(@"首页饮食日志请求判断失败：%@",error);
+    }];
+}
+
+- (void)getHealthPlan {
+    //NSString *url = @"Scheme/base/listlastone";
+    //参数
+    NSMutableDictionary *parameter = [[NSMutableDictionary alloc]init];
+    MEDUserModel *userModel = [MEDUserModel sharedUserModel];
+    if (userModel.uid != nil) {
+        [parameter setObject:userModel.uid forKey:@"uid"];
+    }
+    [MEDDataRequest GET:MED_NEW_PROJECT params:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
+        //NSLog(@"首页健康方案请求获得的结果:%@", responseObject[@"data"]);
+    } fail:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"首页获取健康方案失败：%@",error);
+    }];
 }
 
 
@@ -136,8 +228,16 @@
         };
         return cell;
     }else if(indexPath.section == 2){
-        MEDHomeFoodPlanCell *cell = [MEDHomeFoodPlanCell homeFoodPlanCellWithTableView:tableView];
-        return cell;
+        
+        if (_isWriteFoodDate == YES) {
+            MEDFoodDateFeedbackCell *cell = [MEDFoodDateFeedbackCell feedbackCellWithTableView:tableView];
+            cell.feedModel = self.feedModel;
+            return cell;
+            
+        }else {
+            MEDHomeFoodPlanCell *cell = [MEDHomeFoodPlanCell homeFoodPlanCellWithTableView:tableView];
+            return cell;
+        }
     }else if(indexPath.section == 3){
         MEDHomeHealthPlanCell *cell = [MEDHomeHealthPlanCell homeHealthPlanCellWithTableView:tableView];
         return cell;
@@ -170,6 +270,9 @@
         case 1:
         {
             NSLog(@"监测Cell");
+            /** 指纹验证测试 */
+            [self touchVerification];
+            
         }
             break;
         case 2:
@@ -195,13 +298,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section==0) {
-        return 140.0f;
+        return 140.0f; //分数排名
     }else if(indexPath.section == 1){
-        return 188.0f;
+        return 188.0f; //健康监测
     }else if(indexPath.section == 2){
-        return 120.0f;
+        return 120.0f; //饮食日志
     }else if(indexPath.section == 3){
-        return 130.0f;
+        return 130.0f; //健康方案
     }else {
         return 44.0f;
     }
