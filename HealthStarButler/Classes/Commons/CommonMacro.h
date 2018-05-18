@@ -11,14 +11,15 @@
 
 #endif /* CommonMacro_h */
 
+
+
 #pragma mark -------------------- Log --------------------
 
 #ifdef DEBUG
-#define NSLog(...) NSLog(@"%s(%d行)%@",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define NSLog(...) NSLog(@"%s (%d行) \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
 #else
 #define NSLog(...)
 #endif
-
 
 #ifdef DEBUG
 #define NSLogFunc NSLog(@"=====Begin==========\n FILE: %@\n FUNC: %s\n LINE: %d\n", [NSString stringWithUTF8String:__FILE__].lastPathComponent, __PRETTY_FUNCTION__, __LINE__)

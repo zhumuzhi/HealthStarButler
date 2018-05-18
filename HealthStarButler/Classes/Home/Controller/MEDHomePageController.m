@@ -26,6 +26,7 @@
 
 #import "TDTouchID.h"
 
+
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *homeTableView;
@@ -34,6 +35,9 @@
 @property (nonatomic, assign) BOOL isWriteFoodDate; //是否填写过饮食日志
 @property (nonatomic, strong) MEDFeedBackModel *feedModel;
 
+@property (nonatomic, copy) void(^myblock)(void);
+
+@property (nonatomic, strong) NSDate *now;
 
 @end
 
@@ -48,9 +52,22 @@
     [self getUserInfo];
     
     [self configTableView];
-    
-    // sizeWithFont测试
-    
+
+}
+
+- (void)kovTest {
+    _now = [NSDate date];
+    [self addObserver:self forKeyPath:@"now" options:NSKeyValueObservingOptionNew context:nil];
+    NSLog(@"1");
+    [self willChangeValueForKey:@"now"]; // 手动触发self.now的KVO，必写
+    NSLog(@"2");
+    [self didChangeValueForKey:@"now"]; // 手动触发self.now的KVO，必写
+    NSLog(@"4");
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"%@-%@-%@",keyPath, object, change);
 }
 
 #pragma mark - 指纹测试
@@ -92,7 +109,7 @@
     NSDictionary *userInfoDict = [self dictionaryWithJsonString:dataStr];
     MEDUserModel *userModel = [MEDUserModel sharedUserModel];
     userModel = [MEDUserModel mj_objectWithKeyValues:userInfoDict];
-    NSLog(@"首页获取的用户信息为:%@", userModel);
+//    NSLog(@"首页获取的用户信息为:%@", userModel);
     /**  获取排名信息*/
     [self getPersonalScoreRank];
     /** 是否填写饮食日志 */
@@ -108,7 +125,7 @@
     
     [MEDDataRequest POST:MED_PersonalScoreRank params:param success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
+//        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
         
         if(NetStatusSuccessful(responseObject)){
             NSDictionary *dataDict = responseObject[@"data"];
@@ -116,7 +133,7 @@
             [self.homeTableView reloadData];
         }
         } fail:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"获取Rank数据失败");
+//            NSLog(@"获取Rank数据失败");
             [self.homeTableView reloadData];
     }];
 }
@@ -132,7 +149,7 @@
     [param setValue:dateStr forKey:@"date"];
     MEDWeakSelf(self);
     [MEDDataRequest POST:MEDFOODDATE_RESULT params:param success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
+//        NSLog(@"首页饮食日志填写确认网络请求:%@", responseObject[@"data"]);
         if (NetStatusSuccessful(responseObject)) {
             NSDictionary *dataDic = responseObject[@"data"];
             if (dataDic.count != 0) { //如果不为零说明填写过
@@ -149,7 +166,7 @@
         }
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
         //[MEDProgressHUD dismissHUDErrorTitle:@"请连接网络"];
-        NSLog(@"首页饮食日志请求判断失败：%@",error);
+//        NSLog(@"首页饮食日志请求判断失败：%@",error);
     }];
 }
 
@@ -164,7 +181,7 @@
     [MEDDataRequest GET:MED_NEW_PROJECT params:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
         //NSLog(@"首页健康方案请求获得的结果:%@", responseObject[@"data"]);
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"首页获取健康方案失败：%@",error);
+//        NSLog(@"首页获取健康方案失败：%@",error);
     }];
 }
 

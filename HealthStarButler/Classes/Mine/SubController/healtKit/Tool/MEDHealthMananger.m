@@ -58,7 +58,11 @@ static MEDHealthMananger *_healthManager = nil;
         [readSet addObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceCycling]];
     }
     if (type & TFQuantityTypeSwimming) {
-        [readSet addObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming]];
+        if (@available(iOS 10.0, *)) {
+            [readSet addObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming]];
+        } else {
+            // Fallback on earlier versions
+        }
     }
     if (type & TFQuantityTypeHeight) {
         [readSet addObject:[HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight]];
@@ -296,7 +300,11 @@ static MEDHealthMananger *_healthManager = nil;
         case TFQuantityTypeSwimming:
             
         {
-            quantityType  = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming];
+            if (@available(iOS 10.0, *)) {
+                quantityType  = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming];
+            } else {
+                // Fallback on earlier versions
+            }
             [self TF_fetchAllHealthStartDate:startDate endDate:endDate hComponents:hComponents quantityType:TFQuantityTypeSwimming type:quantityType queryResultBlock:^(NSArray *queryResults) {
                 if (queryResultBlock) {
                     queryResultBlock(queryResults);
@@ -460,7 +468,11 @@ static MEDHealthMananger *_healthManager = nil;
         unit = [HKUnit meterUnit];
     }
     if (type == TFQuantityTypeSwimming) {
-        quantityType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming];
+        if (@available(iOS 10.0, *)) {
+            quantityType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceSwimming];
+        } else {
+            // Fallback on earlier versions
+        }
         unit = [HKUnit meterUnit];
     }
     if (type == TFQuantityTypeHeight) {

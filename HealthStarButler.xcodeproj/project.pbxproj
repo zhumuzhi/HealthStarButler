@@ -68,6 +68,7 @@
 		5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A952085DAC3001993B6 /* MEDManagementController.m */; };
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
+		5D9174E920A43BDD0035E73C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9174E820A43BDD0035E73C /* HealthKit.framework */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
 		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
 		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
@@ -75,7 +76,6 @@
 		5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7420A18D65008F902E /* MEDFoodDateFeedbackCell.xib */; };
 		5DBD2C7A20A1930E008F902E /* MEDFeedBackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7920A1930E008F902E /* MEDFeedBackModel.m */; };
 		5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9120A2D373008F902E /* TDTouchID.m */; };
-		5DBD2C9520A2E1F0008F902E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBD2C9420A2E1F0008F902E /* HealthKit.framework */; };
 		5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9B20A2E463008F902E /* MEDHealthMananger.m */; };
 		5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C9F20A2E4E4008F902E /* NSDate+TFDate.m */; };
 		5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2CA120A2E5A5008F902E /* HealthKitDetailViewController.m */; };
@@ -202,6 +202,7 @@
 		5D829A992085DCC6001993B6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		5D829A9B2085E36B001993B6 /* MEDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDBaseViewController.h; sourceTree = "<group>"; };
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
+		5D9174E820A43BDD0035E73C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
 		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
@@ -216,8 +217,6 @@
 		5DBD2C9020A2D373008F902E /* TDTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTouchID.h; sourceTree = "<group>"; };
 		5DBD2C9120A2D373008F902E /* TDTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTouchID.m; sourceTree = "<group>"; };
 		5DBD2C9320A2E1F0008F902E /* HealthStarButler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthStarButler.entitlements; sourceTree = "<group>"; };
-		5DBD2C9420A2E1F0008F902E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		5DBD2C9720A2E236008F902E /* HealthStarButler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthStarButler.entitlements; sourceTree = "<group>"; };
 		5DBD2C9A20A2E463008F902E /* MEDHealthMananger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthMananger.h; sourceTree = "<group>"; };
 		5DBD2C9B20A2E463008F902E /* MEDHealthMananger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthMananger.m; sourceTree = "<group>"; };
 		5DBD2C9E20A2E4E4008F902E /* NSDate+TFDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TFDate.h"; sourceTree = "<group>"; };
@@ -250,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */,
-				5DBD2C9520A2E1F0008F902E /* HealthKit.framework in Frameworks */,
+				5D9174E920A43BDD0035E73C /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,7 +531,6 @@
 		5D829A1D2085C7D1001993B6 /* HealthStarButler */ = {
 			isa = PBXGroup;
 			children = (
-				5DBD2C9720A2E236008F902E /* HealthStarButler.entitlements */,
 				5D829A342085C873001993B6 /* Classes */,
 			);
 			path = HealthStarButler;
@@ -1032,7 +1030,7 @@
 		C304EF3E1EAF2A12195628D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5DBD2C9420A2E1F0008F902E /* HealthKit.framework */,
+				5D9174E820A43BDD0035E73C /* HealthKit.framework */,
 				2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */,
 			);
 			name = Frameworks;
@@ -1388,7 +1386,7 @@
 			baseConfigurationReference = 0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HealthStarButler/HealthStarButler.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HealthStarButler/Classes/Mine/SubController/healtKit/license/HealthStarButler.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
@@ -1410,7 +1408,7 @@
 			baseConfigurationReference = C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = HealthStarButler/HealthStarButler.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HealthStarButler/Classes/Mine/SubController/healtKit/license/HealthStarButler.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
