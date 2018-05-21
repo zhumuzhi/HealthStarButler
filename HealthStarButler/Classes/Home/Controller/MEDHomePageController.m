@@ -52,8 +52,11 @@
     [self getUserInfo];
     
     [self configTableView];
-
+    
 }
+
+
+
 
 - (void)kovTest {
     _now = [NSDate date];

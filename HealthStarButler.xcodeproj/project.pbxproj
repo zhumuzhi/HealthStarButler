@@ -20,6 +20,7 @@
 		5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */; };
 		5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */; };
 		5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */; };
+		5D4E339320B29A1D0026B2C4 /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E339220B29A1D0026B2C4 /* NSString+category.m */; };
 		5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */; };
 		5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B32099A50500B84C1E /* MEDCompanyRankingController.m */; };
 		5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B52099A50500B84C1E /* MEDCompanyRankModel.m */; };
@@ -115,6 +116,10 @@
 		5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDManageVerticalCell.m; sourceTree = "<group>"; };
 		5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageVerticalCell.xib; sourceTree = "<group>"; };
 		5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageHorizontalCell.xib; sourceTree = "<group>"; };
+		5D4E339020B29A070026B2C4 /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		5D4E339120B29A1D0026B2C4 /* NSString+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
+		5D4E339220B29A1D0026B2C4 /* NSString+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+category.m"; sourceTree = "<group>"; };
+		5D4E339820B2A9D50026B2C4 /* MEDHomePageControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomePageControllerDelegate.h; sourceTree = "<group>"; };
 		5D8207AD2099536C00B84C1E /* MEDScoreOperationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDScoreOperationView.h; sourceTree = "<group>"; };
 		5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDScoreOperationView.m; sourceTree = "<group>"; };
 		5D8207B22099A50500B84C1E /* MEDCompanyRankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankingController.h; sourceTree = "<group>"; };
@@ -562,6 +567,9 @@
 		5D829A352085C884001993B6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5D4E339020B29A070026B2C4 /* NSString+Extension.h */,
+				5D4E339120B29A1D0026B2C4 /* NSString+category.h */,
+				5D4E339220B29A1D0026B2C4 /* NSString+category.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -798,6 +806,7 @@
 			children = (
 				5D829A882085DA07001993B6 /* MEDHomePageController.h */,
 				5D829A892085DA07001993B6 /* MEDHomePageController.m */,
+				5D4E339820B2A9D50026B2C4 /* MEDHomePageControllerDelegate.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1218,6 +1227,7 @@
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
+				5D4E339320B29A1D0026B2C4 /* NSString+category.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
