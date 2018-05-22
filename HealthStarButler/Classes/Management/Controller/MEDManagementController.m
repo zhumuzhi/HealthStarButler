@@ -9,8 +9,10 @@
 #import "MEDManagementController.h"
 #import "MEDManageVerticalCell.h"
 #import "MEDManageHorizontalCell.h"
-//健康调查问卷
+// 健康调查问卷
 #import "MEDHealthQuestionnaireController.h"
+// 中医体质问卷
+#import "MEDChineseMedicineQuestionnaireController.h"
 
 @interface MEDManagementController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -176,8 +178,17 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"点击了第%ld-Section中的第%ld-Row数据", indexPath.section, indexPath.row);
     
-    MEDHealthQuestionnaireController *HQController = [[MEDHealthQuestionnaireController alloc] init];
-    [self.navigationController pushViewController:HQController animated:YES];
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+            MEDHealthQuestionnaireController *HQController = [[MEDHealthQuestionnaireController alloc] init];
+            [self.navigationController pushViewController:HQController animated:YES];
+        }else if(indexPath.row == 1){
+            MEDChineseMedicineQuestionnaireController *chineseMedicine = [[MEDChineseMedicineQuestionnaireController alloc] init];
+            [self.navigationController pushViewController:chineseMedicine animated:YES];
+        }
+
+    }
     
 }
 

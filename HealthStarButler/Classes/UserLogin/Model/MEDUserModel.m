@@ -9,17 +9,42 @@
 #import "MEDUserModel.h"
 
 @implementation MEDUserModel
-
+//全局变量
+static id _instance = nil;
+//单例方法
 +(instancetype)sharedUserModel
 {
-    static id instance =nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance =[[MEDUserModel alloc]init];
-    });
-    return instance;
+    return [[self alloc] init];
 }
 
+////alloc会调用allocWithZone:
++(instancetype)allocWithZone:(struct _NSZone *)zone{
+    //只进行一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+//初始化方法
+- (instancetype)init{
+    // 只进行一次
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super init];
+    });
+    return _instance;
+}
+
+//copy在底层 会调用copyWithZone:
+- (id)copyWithZone:(NSZone *)zone{
+    return  _instance;
+}
+- (id)mutableCopyWithZone:(NSZone *)zone{
+    return _instance;
+}
+
+//重写描述方法
 - (NSString *)description{
     unsigned int count;
     const char *clasName = object_getClassName(self);
