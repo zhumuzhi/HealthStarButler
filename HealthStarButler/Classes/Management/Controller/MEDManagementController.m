@@ -14,6 +14,9 @@
 // 中医体质问卷
 #import "MEDChineseMedicineQuestionnaireController.h"
 
+// GCD展示
+#import "GDDExhibitionController.h"
+
 @interface MEDManagementController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 /** 是否有疾病 */
@@ -188,8 +191,12 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
             [self.navigationController pushViewController:chineseMedicine animated:YES];
         }
 
+    }else if (indexPath.section == 2) {
+        //将我们的storyBoard实例化
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"GDDExhibitionController" bundle:nil];
+        GDDExhibitionController *gcdVC = [storyBoard instantiateViewControllerWithIdentifier:@"GDDExhibitionController"];
+        [self.navigationController pushViewController:gcdVC animated:YES];
     }
-    
 }
 
 

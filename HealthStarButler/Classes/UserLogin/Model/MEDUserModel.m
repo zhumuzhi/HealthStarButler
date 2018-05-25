@@ -9,15 +9,17 @@
 #import "MEDUserModel.h"
 
 @implementation MEDUserModel
-//全局变量
+
+// 全局变量
 static id _instance = nil;
-//单例方法
+
+// 单例方法
 +(instancetype)sharedUserModel
 {
     return [[self alloc] init];
 }
 
-////alloc会调用allocWithZone:
+// alloc会调用allocWithZone:
 +(instancetype)allocWithZone:(struct _NSZone *)zone{
     //只进行一次
     static dispatch_once_t onceToken;
@@ -26,7 +28,8 @@ static id _instance = nil;
     });
     return _instance;
 }
-//初始化方法
+
+// 初始化方法
 - (instancetype)init{
     // 只进行一次
     static dispatch_once_t onceToken;
@@ -40,6 +43,7 @@ static id _instance = nil;
 - (id)copyWithZone:(NSZone *)zone{
     return  _instance;
 }
+
 - (id)mutableCopyWithZone:(NSZone *)zone{
     return _instance;
 }
@@ -76,7 +80,5 @@ static id _instance = nil;
     }
     return string;
 }
-
-
 
 @end

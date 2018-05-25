@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Exhibition Controller-->
+        <scene sceneID="Bjf-oI-Qic">
+            <objects>
+                <viewController storyboardIdentifier="GDDExhibitionController" id="lso-jn-eEl" customClass="GDDExhibitionController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vz4-6t-t8j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddn-96-3K4">
+                                <rect key="frame" x="100" y="170" width="62" height="30"/>
+                                <state key="normal" title="同步并发"/>
+                                <connections>
+                                    <action selector="syncConcurrentAvtion:" destination="lso-jn-eEl" eventType="touchUpInside" id="95a-zU-xZn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOy-pI-CBP">
+                                <rect key="frame" x="100" y="210" width="62" height="30"/>
+                                <state key="normal" title="同步串行"/>
+                                <connections>
+                                    <action selector="syncSerialAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="G7L-Le-EUA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQh-AO-PZI">
+                                <rect key="frame" x="92.5" y="250" width="77" height="30"/>
+                                <state key="normal" title="同步主队列"/>
+                                <connections>
+                                    <action selector="syncMainAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="YUQ-ZV-dYd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlD-hP-rIc">
+                                <rect key="frame" x="84" y="290" width="94" height="30"/>
+                                <state key="normal" title="GCD线程通信"/>
+                                <connections>
+                                    <action selector="communicationAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="uk0-ci-Xd5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHq-Pt-AWZ">
+                                <rect key="frame" x="84" y="330" width="94" height="30"/>
+                                <state key="normal" title="GCD快速迭代"/>
+                                <connections>
+                                    <action selector="applyAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="Aqx-wZ-2qC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgB-cT-ed4">
+                                <rect key="frame" x="205" y="330" width="79" height="30"/>
+                                <state key="normal" title="GCD队列组"/>
+                                <connections>
+                                    <action selector="groupAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="AIf-Dv-m7o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4A-cH-661">
+                                <rect key="frame" x="213" y="290" width="63" height="30"/>
+                                <state key="normal" title="GCD栅栏"/>
+                                <connections>
+                                    <action selector="barrierAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="oVD-jZ-n0Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-K1-VVK">
+                                <rect key="frame" x="205.5" y="250" width="77" height="30"/>
+                                <state key="normal" title="异步主队列"/>
+                                <connections>
+                                    <action selector="asyncMainAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="Q90-7Z-FKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-0Z-Ydf">
+                                <rect key="frame" x="213" y="210" width="62" height="30"/>
+                                <state key="normal" title="异步串行"/>
+                                <connections>
+                                    <action selector="asyncSerialAction:" destination="lso-jn-eEl" eventType="touchUpInside" id="4iP-1q-66z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-6d-Cdp">
+                                <rect key="frame" x="213" y="170" width="62" height="30"/>
+                                <state key="normal" title="异步并发"/>
+                                <connections>
+                                    <action selector="asyncCOncurrent:" destination="lso-jn-eEl" eventType="touchUpInside" id="0gr-xz-4Ve"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mB8-bT-CnA">
+                                <rect key="frame" x="137" y="537" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MMy-kC-9ae"/>
+                                    <constraint firstAttribute="height" constant="100" id="dbW-rY-QcG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-5t-fvp">
+                                <rect key="frame" x="156" y="502" width="62" height="30"/>
+                                <state key="normal" title="隐藏图片"/>
+                                <connections>
+                                    <action selector="hideImageView:" destination="lso-jn-eEl" eventType="touchUpInside" id="WXo-4C-GiS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ddn-96-3K4" firstAttribute="leading" secondItem="j2y-CT-Gjw" secondAttribute="leading" constant="100" id="4wf-NB-FNs"/>
+                            <constraint firstItem="BQh-AO-PZI" firstAttribute="top" secondItem="GOy-pI-CBP" secondAttribute="bottom" constant="10" id="9Di-9m-ebJ"/>
+                            <constraint firstItem="j2y-CT-Gjw" firstAttribute="bottom" secondItem="mB8-bT-CnA" secondAttribute="bottom" constant="30" id="9UW-DB-7al"/>
+                            <constraint firstItem="j2y-CT-Gjw" firstAttribute="trailing" secondItem="vsF-6d-Cdp" secondAttribute="trailing" constant="100" id="AGx-0k-W3K"/>
+                            <constraint firstItem="rWk-0Z-Ydf" firstAttribute="top" secondItem="vsF-6d-Cdp" secondAttribute="bottom" constant="10" id="CiP-Pm-l0S"/>
+                            <constraint firstItem="X4A-cH-661" firstAttribute="top" secondItem="ixT-K1-VVK" secondAttribute="bottom" constant="10" id="DLK-Sg-RcS"/>
+                            <constraint firstItem="RgB-cT-ed4" firstAttribute="top" secondItem="X4A-cH-661" secondAttribute="bottom" constant="10" id="NMJ-aq-vVh"/>
+                            <constraint firstItem="vsF-6d-Cdp" firstAttribute="top" secondItem="j2y-CT-Gjw" secondAttribute="top" constant="150" id="Pt2-bd-Eac"/>
+                            <constraint firstItem="hlD-hP-rIc" firstAttribute="centerX" secondItem="BQh-AO-PZI" secondAttribute="centerX" id="Qwc-HO-ou8"/>
+                            <constraint firstItem="mB8-bT-CnA" firstAttribute="top" secondItem="nEl-5t-fvp" secondAttribute="bottom" constant="5" id="ZVE-VD-ASr"/>
+                            <constraint firstItem="X4A-cH-661" firstAttribute="centerX" secondItem="ixT-K1-VVK" secondAttribute="centerX" id="ZXa-bm-ygg"/>
+                            <constraint firstItem="bHq-Pt-AWZ" firstAttribute="top" secondItem="hlD-hP-rIc" secondAttribute="bottom" constant="10" id="cor-9x-dSZ"/>
+                            <constraint firstItem="nEl-5t-fvp" firstAttribute="centerX" secondItem="mB8-bT-CnA" secondAttribute="centerX" id="frw-C6-Ujv"/>
+                            <constraint firstItem="GOy-pI-CBP" firstAttribute="top" secondItem="Ddn-96-3K4" secondAttribute="bottom" constant="10" id="gIE-vy-vYO"/>
+                            <constraint firstItem="BQh-AO-PZI" firstAttribute="centerX" secondItem="GOy-pI-CBP" secondAttribute="centerX" id="kld-UW-FGD"/>
+                            <constraint firstItem="Ddn-96-3K4" firstAttribute="top" secondItem="j2y-CT-Gjw" secondAttribute="top" constant="150" id="mWv-XU-FFw"/>
+                            <constraint firstItem="bHq-Pt-AWZ" firstAttribute="centerX" secondItem="hlD-hP-rIc" secondAttribute="centerX" id="odX-g9-eMq"/>
+                            <constraint firstItem="ixT-K1-VVK" firstAttribute="top" secondItem="rWk-0Z-Ydf" secondAttribute="bottom" constant="10" id="p9S-j9-wJ9"/>
+                            <constraint firstItem="mB8-bT-CnA" firstAttribute="centerX" secondItem="vz4-6t-t8j" secondAttribute="centerX" id="sPZ-lK-cvk"/>
+                            <constraint firstItem="GOy-pI-CBP" firstAttribute="leading" secondItem="Ddn-96-3K4" secondAttribute="leading" id="sSZ-KY-uBV"/>
+                            <constraint firstItem="rWk-0Z-Ydf" firstAttribute="centerX" secondItem="vsF-6d-Cdp" secondAttribute="centerX" id="wSl-la-3vP"/>
+                            <constraint firstItem="hlD-hP-rIc" firstAttribute="top" secondItem="BQh-AO-PZI" secondAttribute="bottom" constant="10" id="wTQ-wu-EUa"/>
+                            <constraint firstItem="RgB-cT-ed4" firstAttribute="centerX" secondItem="X4A-cH-661" secondAttribute="centerX" id="wcg-GC-agg"/>
+                            <constraint firstItem="GOy-pI-CBP" firstAttribute="centerX" secondItem="Ddn-96-3K4" secondAttribute="centerX" id="wfK-Kp-lPy"/>
+                            <constraint firstItem="ixT-K1-VVK" firstAttribute="centerX" secondItem="rWk-0Z-Ydf" secondAttribute="centerX" id="xqN-dD-B0G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j2y-CT-Gjw"/>
+                    </view>
+                    <connections>
+                        <outlet property="hideImageViewButton" destination="nEl-5t-fvp" id="hLo-mg-9ny"/>
+                        <outlet property="imageView" destination="mB8-bT-CnA" id="Z5E-1S-x9h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7q-OJ-SaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-231" y="46"/>
+        </scene>
+    </scenes>
+</document>

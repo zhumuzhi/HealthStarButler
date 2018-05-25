@@ -9,8 +9,6 @@
 #import "MEDChineseMedicineQuestionnaireController.h"
 #import <WebKit/WebKit.h>
 
-#define CHINAQUESTION @"health/question/tcmQuestionnaire"
-
 @interface MEDChineseMedicineQuestionnaireController ()
 
 @property (nonatomic, strong) WKWebView *webView;
