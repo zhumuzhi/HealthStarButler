@@ -164,6 +164,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## UMCAnalytics
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
+
+
+## UMCCommon
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
+
+
+## UMCSecurityPlugins
+
+Copyright 2011 - 2018 umeng.com. All rights reserved.
+
+
 ## WRNavigationBar
 
 MIT License

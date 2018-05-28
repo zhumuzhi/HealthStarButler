@@ -22,4 +22,8 @@ target 'HealthStarButler' do
  # HUD
  pod 'SVProgressHUD', '~> 2.2.5'
  
+ pod 'UMCCommon'
+ pod 'UMCAnalytics'
+ pod 'UMCSecurityPlugins'
+ 
 end

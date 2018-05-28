@@ -56,6 +56,12 @@
 }
 
 
+- (void)kovBase {
+    /*
+     */
+    
+    
+}
 
 
 - (void)kovTest {
@@ -117,6 +123,7 @@
     [self getPersonalScoreRank];
     /** 是否填写饮食日志 */
     [self isWriteFoodDateRequest];
+    
     
 }
 
