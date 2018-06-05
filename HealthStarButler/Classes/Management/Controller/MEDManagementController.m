@@ -13,6 +13,8 @@
 #import "MEDHealthQuestionnaireController.h"
 // 中医体质问卷
 #import "MEDChineseMedicineQuestionnaireController.h"
+// 就诊记录
+#import "MEDMedicalRecordController.h"
 
 // GCD展示
 #import "GDDExhibitionController.h"
@@ -192,13 +194,18 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
         }
 
     }else if (indexPath.section == 2) {
-        //将我们的storyBoard实例化
-        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"GDDExhibitionController" bundle:nil];
-        GDDExhibitionController *gcdVC = [storyBoard instantiateViewControllerWithIdentifier:@"GDDExhibitionController"];
-        [self.navigationController pushViewController:gcdVC animated:YES];
+
+        if (indexPath.row == 0) {
+            //将我们的storyBoard实例化
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"GDDExhibitionController" bundle:nil];
+            GDDExhibitionController *gcdVC = [storyBoard instantiateViewControllerWithIdentifier:@"GDDExhibitionController"];
+            [self.navigationController pushViewController:gcdVC animated:YES];
+        }else if(indexPath.row == 1){ //就诊记录
+            MEDMedicalRecordController *record = [[MEDMedicalRecordController alloc] init];
+            [self.navigationController pushViewController:record animated:YES];
+        }
     }
 }
-
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 

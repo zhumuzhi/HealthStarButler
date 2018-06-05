@@ -74,6 +74,8 @@
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D9174E920A43BDD0035E73C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D9174E820A43BDD0035E73C /* HealthKit.framework */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
+		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
+		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
 		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
 		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
 		5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */; };
@@ -91,6 +93,42 @@
 		5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */; };
 		5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */; };
 		5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */; };
+		5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */; };
+		5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */; };
+		5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */; };
+		5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAC20C6682100512610 /* MEDTextField.m */; };
+		5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAD20C6682100512610 /* MEDPersonalDatePickView.m */; };
+		5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAE20C6682100512610 /* MEDCommonAddCell.m */; };
+		5DCE9AF820C6682100512610 /* MZpopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAF20C6682100512610 /* MZpopMenu.m */; };
+		5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AB120C6682100512610 /* MEDTreatmentRecordDescribeView.m */; };
+		5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE9AB220C6682100512610 /* MEDMedicalRecordCommonCell.xib */; };
+		5DCE9AFB20C6682100512610 /* MEDTreatmentRecordDescribeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE9AB520C6682100512610 /* MEDTreatmentRecordDescribeView.xib */; };
+		5DCE9AFC20C6682100512610 /* MEDTreatmentRecordDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE9AB820C6682100512610 /* MEDTreatmentRecordDescCell.xib */; };
+		5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ABA20C6682100512610 /* MEDTreatmentRecordDescCell.m */; };
+		5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ABC20C6682100512610 /* MEDMedicalRecordCommonCell.m */; };
+		5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ABF20C6682100512610 /* MEDAddTestReportController.m */; };
+		5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AC020C6682100512610 /* MEDTestReportListController.m */; };
+		5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AC120C6682100512610 /* MEDEditTestReportController.m */; };
+		5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AC820C6682100512610 /* MEDDetectionReportFile.m */; };
+		5DCE9B0320C6682100512610 /* MEDTestReportModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AC920C6682100512610 /* MEDTestReportModel.m */; };
+		5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ACB20C6682100512610 /* TZTestCell.m */; };
+		5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ACF20C6682100512610 /* TZImageCropManager.m */; };
+		5DCE9B0620C6682100512610 /* TZAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD120C6682100512610 /* TZAssetCell.m */; };
+		5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD220C6682100512610 /* TZVideoPlayerController.m */; };
+		5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD320C6682100512610 /* TZAssetModel.m */; };
+		5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD420C6682100512610 /* NSBundle+TZImagePicker.m */; };
+		5DCE9B0A20C6682100512610 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD720C6682100512610 /* UIView+Layout.m */; };
+		5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD820C6682100512610 /* TZPhotoPreviewController.m */; };
+		5DCE9B0C20C6682100512610 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DCE9AD920C6682100512610 /* TZImagePickerController.bundle */; };
+		5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ADA20C6682100512610 /* TZProgressView.m */; };
+		5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ADD20C6682100512610 /* TZImageManager.m */; };
+		5DCE9B0F20C6682100512610 /* TZPhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9ADF20C6682100512610 /* TZPhotoPickerController.m */; };
+		5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AE020C6682100512610 /* TZPhotoPreviewCell.m */; };
+		5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AE620C6682100512610 /* TZImagePickerController.m */; };
+		5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AE720C6682100512610 /* TZLocationManager.m */; };
+		5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AE820C6682100512610 /* TZGifPhotoPreviewController.m */; };
+		5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AEC20C6682100512610 /* LxGridViewFlowLayout.m */; };
+		5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AEE20C6682100512610 /* MEDMedicalRecordController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +254,9 @@
 		5D9174E820A43BDD0035E73C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
+		5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
+		5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationDemoController.m; sourceTree = "<group>"; };
+		5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSOperationDemoController.xib; sourceTree = "<group>"; };
 		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
 		5DBD2C67209FFCBB008F902E /* NSString+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MED.m"; sourceTree = "<group>"; };
 		5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDateUtils.h; sourceTree = "<group>"; };
@@ -249,6 +290,74 @@
 		5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseWebViewController.m; sourceTree = "<group>"; };
 		5DC39FA42093289A000D1B26 /* MEDHealthQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthQuestionnaireController.h; sourceTree = "<group>"; };
 		5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthQuestionnaireController.m; sourceTree = "<group>"; };
+		5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordListController.m; sourceTree = "<group>"; };
+		5DCE9AA520C6682100512610 /* MEDAddTreatmentRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddTreatmentRecordController.h; sourceTree = "<group>"; };
+		5DCE9AA620C6682100512610 /* MEDTreatmentRecordListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordListController.h; sourceTree = "<group>"; };
+		5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDAddTreatmentRecordController.m; sourceTree = "<group>"; };
+		5DCE9AA920C6682100512610 /* MEDTreatmentRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordModel.h; sourceTree = "<group>"; };
+		5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordModel.m; sourceTree = "<group>"; };
+		5DCE9AAC20C6682100512610 /* MEDTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTextField.m; sourceTree = "<group>"; };
+		5DCE9AAD20C6682100512610 /* MEDPersonalDatePickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPersonalDatePickView.m; sourceTree = "<group>"; };
+		5DCE9AAE20C6682100512610 /* MEDCommonAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDCommonAddCell.m; sourceTree = "<group>"; };
+		5DCE9AAF20C6682100512610 /* MZpopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZpopMenu.m; sourceTree = "<group>"; };
+		5DCE9AB020C6682100512610 /* MEDTreatmentRecordDescCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordDescCell.h; sourceTree = "<group>"; };
+		5DCE9AB120C6682100512610 /* MEDTreatmentRecordDescribeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordDescribeView.m; sourceTree = "<group>"; };
+		5DCE9AB220C6682100512610 /* MEDMedicalRecordCommonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDMedicalRecordCommonCell.xib; sourceTree = "<group>"; };
+		5DCE9AB320C6682100512610 /* MEDMedicalRecordCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMedicalRecordCommonCell.h; sourceTree = "<group>"; };
+		5DCE9AB420C6682100512610 /* MEDTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTextField.h; sourceTree = "<group>"; };
+		5DCE9AB520C6682100512610 /* MEDTreatmentRecordDescribeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDTreatmentRecordDescribeView.xib; sourceTree = "<group>"; };
+		5DCE9AB620C6682100512610 /* MEDCommonAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCommonAddCell.h; sourceTree = "<group>"; };
+		5DCE9AB720C6682100512610 /* MEDPersonalDatePickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDPersonalDatePickView.h; sourceTree = "<group>"; };
+		5DCE9AB820C6682100512610 /* MEDTreatmentRecordDescCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDTreatmentRecordDescCell.xib; sourceTree = "<group>"; };
+		5DCE9AB920C6682100512610 /* MEDTreatmentRecordDescribeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordDescribeView.h; sourceTree = "<group>"; };
+		5DCE9ABA20C6682100512610 /* MEDTreatmentRecordDescCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordDescCell.m; sourceTree = "<group>"; };
+		5DCE9ABB20C6682100512610 /* MZpopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZpopMenu.h; sourceTree = "<group>"; };
+		5DCE9ABC20C6682100512610 /* MEDMedicalRecordCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMedicalRecordCommonCell.m; sourceTree = "<group>"; };
+		5DCE9ABF20C6682100512610 /* MEDAddTestReportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDAddTestReportController.m; sourceTree = "<group>"; };
+		5DCE9AC020C6682100512610 /* MEDTestReportListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTestReportListController.m; sourceTree = "<group>"; };
+		5DCE9AC120C6682100512610 /* MEDEditTestReportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDEditTestReportController.m; sourceTree = "<group>"; };
+		5DCE9AC220C6682100512610 /* MEDTestReportListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTestReportListController.h; sourceTree = "<group>"; };
+		5DCE9AC320C6682100512610 /* MEDAddTestReportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddTestReportController.h; sourceTree = "<group>"; };
+		5DCE9AC420C6682100512610 /* MEDEditTestReportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDEditTestReportController.h; sourceTree = "<group>"; };
+		5DCE9AC620C6682100512610 /* MEDDetectionReportFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDDetectionReportFile.h; sourceTree = "<group>"; };
+		5DCE9AC720C6682100512610 /* MEDTestReportModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTestReportModel.h; sourceTree = "<group>"; };
+		5DCE9AC820C6682100512610 /* MEDDetectionReportFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDDetectionReportFile.m; sourceTree = "<group>"; };
+		5DCE9AC920C6682100512610 /* MEDTestReportModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTestReportModel.m; sourceTree = "<group>"; };
+		5DCE9ACB20C6682100512610 /* TZTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZTestCell.m; sourceTree = "<group>"; };
+		5DCE9ACD20C6682100512610 /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewCell.h; sourceTree = "<group>"; };
+		5DCE9ACE20C6682100512610 /* TZPhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPickerController.h; sourceTree = "<group>"; };
+		5DCE9ACF20C6682100512610 /* TZImageCropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageCropManager.m; sourceTree = "<group>"; };
+		5DCE9AD020C6682100512610 /* TZImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageManager.h; sourceTree = "<group>"; };
+		5DCE9AD120C6682100512610 /* TZAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetCell.m; sourceTree = "<group>"; };
+		5DCE9AD220C6682100512610 /* TZVideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZVideoPlayerController.m; sourceTree = "<group>"; };
+		5DCE9AD320C6682100512610 /* TZAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAssetModel.m; sourceTree = "<group>"; };
+		5DCE9AD420C6682100512610 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
+		5DCE9AD520C6682100512610 /* TZLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZLocationManager.h; sourceTree = "<group>"; };
+		5DCE9AD620C6682100512610 /* TZImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImagePickerController.h; sourceTree = "<group>"; };
+		5DCE9AD720C6682100512610 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		5DCE9AD820C6682100512610 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewController.m; sourceTree = "<group>"; };
+		5DCE9AD920C6682100512610 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
+		5DCE9ADA20C6682100512610 /* TZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZProgressView.m; sourceTree = "<group>"; };
+		5DCE9ADB20C6682100512610 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
+		5DCE9ADC20C6682100512610 /* TZAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetCell.h; sourceTree = "<group>"; };
+		5DCE9ADD20C6682100512610 /* TZImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImageManager.m; sourceTree = "<group>"; };
+		5DCE9ADE20C6682100512610 /* TZImageCropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZImageCropManager.h; sourceTree = "<group>"; };
+		5DCE9ADF20C6682100512610 /* TZPhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPickerController.m; sourceTree = "<group>"; };
+		5DCE9AE020C6682100512610 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZPhotoPreviewCell.m; sourceTree = "<group>"; };
+		5DCE9AE120C6682100512610 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
+		5DCE9AE220C6682100512610 /* TZAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAssetModel.h; sourceTree = "<group>"; };
+		5DCE9AE320C6682100512610 /* TZVideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZVideoPlayerController.h; sourceTree = "<group>"; };
+		5DCE9AE420C6682100512610 /* TZPhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZPhotoPreviewController.h; sourceTree = "<group>"; };
+		5DCE9AE520C6682100512610 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		5DCE9AE620C6682100512610 /* TZImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZImagePickerController.m; sourceTree = "<group>"; };
+		5DCE9AE720C6682100512610 /* TZLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZLocationManager.m; sourceTree = "<group>"; };
+		5DCE9AE820C6682100512610 /* TZGifPhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZGifPhotoPreviewController.m; sourceTree = "<group>"; };
+		5DCE9AE920C6682100512610 /* TZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZProgressView.h; sourceTree = "<group>"; };
+		5DCE9AEA20C6682100512610 /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
+		5DCE9AEB20C6682100512610 /* TZTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZTestCell.h; sourceTree = "<group>"; };
+		5DCE9AEC20C6682100512610 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		5DCE9AEE20C6682100512610 /* MEDMedicalRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMedicalRecordController.m; sourceTree = "<group>"; };
+		5DCE9AEF20C6682100512610 /* MEDMedicalRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMedicalRecordController.h; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -811,6 +920,8 @@
 				5D4E339920B3B50F0026B2C4 /* ChineseMedicineQuestionnaire */,
 				5D4E339D20B505AD0026B2C4 /* HealthDynamicQuestionnaire */,
 				5D4E33A120B534D20026B2C4 /* FollowUpQuestionnaire */,
+				5DCE9A9F20C6682100512610 /* MedicalRecord */,
+				5D9FAD2420BEAE140040571B /* NSOperationDemo */,
 				5D4E33A220B654A50026B2C4 /* GCDDemo */,
 			);
 			path = SubController;
@@ -954,6 +1065,16 @@
 			path = "MZMiddleButton(未使用)";
 			sourceTree = "<group>";
 		};
+		5D9FAD2420BEAE140040571B /* NSOperationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */,
+				5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */,
+				5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */,
+			);
+			path = NSOperationDemo;
+			sourceTree = "<group>";
+		};
 		5DBD2C6920A15199008F902E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1065,6 +1186,193 @@
 			path = HealthQuestionnaire;
 			sourceTree = "<group>";
 		};
+		5DCE9A9F20C6682100512610 /* MedicalRecord */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AA020C6682100512610 /* Controller */,
+				5DCE9AA120C6682100512610 /* SubViewController */,
+				5DCE9AF020C6682100512610 /* Model */,
+				5DCE9AF120C6682100512610 /* View */,
+			);
+			path = MedicalRecord;
+			sourceTree = "<group>";
+		};
+		5DCE9AA020C6682100512610 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AEF20C6682100512610 /* MEDMedicalRecordController.h */,
+				5DCE9AEE20C6682100512610 /* MEDMedicalRecordController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DCE9AA120C6682100512610 /* SubViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AA220C6682100512610 /* TreatmentRecord */,
+				5DCE9ABD20C6682100512610 /* TestReport */,
+			);
+			path = SubViewController;
+			sourceTree = "<group>";
+		};
+		5DCE9AA220C6682100512610 /* TreatmentRecord */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AA320C6682100512610 /* Controller */,
+				5DCE9AA820C6682100512610 /* Model */,
+				5DCE9AAB20C6682100512610 /* View */,
+			);
+			path = TreatmentRecord;
+			sourceTree = "<group>";
+		};
+		5DCE9AA320C6682100512610 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AA620C6682100512610 /* MEDTreatmentRecordListController.h */,
+				5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */,
+				5DCE9AA520C6682100512610 /* MEDAddTreatmentRecordController.h */,
+				5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DCE9AA820C6682100512610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AA920C6682100512610 /* MEDTreatmentRecordModel.h */,
+				5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DCE9AAB20C6682100512610 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AAC20C6682100512610 /* MEDTextField.m */,
+				5DCE9AAD20C6682100512610 /* MEDPersonalDatePickView.m */,
+				5DCE9AAE20C6682100512610 /* MEDCommonAddCell.m */,
+				5DCE9AAF20C6682100512610 /* MZpopMenu.m */,
+				5DCE9AB020C6682100512610 /* MEDTreatmentRecordDescCell.h */,
+				5DCE9AB120C6682100512610 /* MEDTreatmentRecordDescribeView.m */,
+				5DCE9AB220C6682100512610 /* MEDMedicalRecordCommonCell.xib */,
+				5DCE9AB320C6682100512610 /* MEDMedicalRecordCommonCell.h */,
+				5DCE9AB420C6682100512610 /* MEDTextField.h */,
+				5DCE9AB520C6682100512610 /* MEDTreatmentRecordDescribeView.xib */,
+				5DCE9AB620C6682100512610 /* MEDCommonAddCell.h */,
+				5DCE9AB720C6682100512610 /* MEDPersonalDatePickView.h */,
+				5DCE9AB820C6682100512610 /* MEDTreatmentRecordDescCell.xib */,
+				5DCE9AB920C6682100512610 /* MEDTreatmentRecordDescribeView.h */,
+				5DCE9ABA20C6682100512610 /* MEDTreatmentRecordDescCell.m */,
+				5DCE9ABB20C6682100512610 /* MZpopMenu.h */,
+				5DCE9ABC20C6682100512610 /* MEDMedicalRecordCommonCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DCE9ABD20C6682100512610 /* TestReport */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9ABE20C6682100512610 /* Controller */,
+				5DCE9AC520C6682100512610 /* Model */,
+				5DCE9ACA20C6682100512610 /* MEDPhotoView */,
+				5DCE9AED20C6682100512610 /* View */,
+			);
+			path = TestReport;
+			sourceTree = "<group>";
+		};
+		5DCE9ABE20C6682100512610 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9ABF20C6682100512610 /* MEDAddTestReportController.m */,
+				5DCE9AC020C6682100512610 /* MEDTestReportListController.m */,
+				5DCE9AC120C6682100512610 /* MEDEditTestReportController.m */,
+				5DCE9AC220C6682100512610 /* MEDTestReportListController.h */,
+				5DCE9AC320C6682100512610 /* MEDAddTestReportController.h */,
+				5DCE9AC420C6682100512610 /* MEDEditTestReportController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DCE9AC520C6682100512610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9AC620C6682100512610 /* MEDDetectionReportFile.h */,
+				5DCE9AC720C6682100512610 /* MEDTestReportModel.h */,
+				5DCE9AC820C6682100512610 /* MEDDetectionReportFile.m */,
+				5DCE9AC920C6682100512610 /* MEDTestReportModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DCE9ACA20C6682100512610 /* MEDPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9ACB20C6682100512610 /* TZTestCell.m */,
+				5DCE9ACC20C6682100512610 /* TZImagePickerController */,
+				5DCE9AEA20C6682100512610 /* LxGridViewFlowLayout.h */,
+				5DCE9AEB20C6682100512610 /* TZTestCell.h */,
+				5DCE9AEC20C6682100512610 /* LxGridViewFlowLayout.m */,
+			);
+			path = MEDPhotoView;
+			sourceTree = "<group>";
+		};
+		5DCE9ACC20C6682100512610 /* TZImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				5DCE9ACD20C6682100512610 /* TZPhotoPreviewCell.h */,
+				5DCE9ACE20C6682100512610 /* TZPhotoPickerController.h */,
+				5DCE9ACF20C6682100512610 /* TZImageCropManager.m */,
+				5DCE9AD020C6682100512610 /* TZImageManager.h */,
+				5DCE9AD120C6682100512610 /* TZAssetCell.m */,
+				5DCE9AD220C6682100512610 /* TZVideoPlayerController.m */,
+				5DCE9AD320C6682100512610 /* TZAssetModel.m */,
+				5DCE9AD420C6682100512610 /* NSBundle+TZImagePicker.m */,
+				5DCE9AD520C6682100512610 /* TZLocationManager.h */,
+				5DCE9AD620C6682100512610 /* TZImagePickerController.h */,
+				5DCE9AD720C6682100512610 /* UIView+Layout.m */,
+				5DCE9AD820C6682100512610 /* TZPhotoPreviewController.m */,
+				5DCE9AD920C6682100512610 /* TZImagePickerController.bundle */,
+				5DCE9ADA20C6682100512610 /* TZProgressView.m */,
+				5DCE9ADB20C6682100512610 /* TZGifPhotoPreviewController.h */,
+				5DCE9ADC20C6682100512610 /* TZAssetCell.h */,
+				5DCE9ADD20C6682100512610 /* TZImageManager.m */,
+				5DCE9ADE20C6682100512610 /* TZImageCropManager.h */,
+				5DCE9ADF20C6682100512610 /* TZPhotoPickerController.m */,
+				5DCE9AE020C6682100512610 /* TZPhotoPreviewCell.m */,
+				5DCE9AE120C6682100512610 /* NSBundle+TZImagePicker.h */,
+				5DCE9AE220C6682100512610 /* TZAssetModel.h */,
+				5DCE9AE320C6682100512610 /* TZVideoPlayerController.h */,
+				5DCE9AE420C6682100512610 /* TZPhotoPreviewController.h */,
+				5DCE9AE520C6682100512610 /* UIView+Layout.h */,
+				5DCE9AE620C6682100512610 /* TZImagePickerController.m */,
+				5DCE9AE720C6682100512610 /* TZLocationManager.m */,
+				5DCE9AE820C6682100512610 /* TZGifPhotoPreviewController.m */,
+				5DCE9AE920C6682100512610 /* TZProgressView.h */,
+			);
+			path = TZImagePickerController;
+			sourceTree = "<group>";
+		};
+		5DCE9AED20C6682100512610 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DCE9AF020C6682100512610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DCE9AF120C6682100512610 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1152,20 +1460,25 @@
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
 				5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */,
+				5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */,
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
 				5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */,
 				5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */,
+				5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */,
 				5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
 				5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */,
 				5D8208022099A50500B84C1E /* MEDHomeHabitSleepCell.xib in Resources */,
 				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
+				5DCE9B0C20C6682100512610 /* TZImagePickerController.bundle in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
 				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
 				5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */,
+				5DCE9AFB20C6682100512610 /* MEDTreatmentRecordDescribeView.xib in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
+				5DCE9AFC20C6682100512610 /* MEDTreatmentRecordDescCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1233,23 +1546,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
+				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
+				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
+				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
 				5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
+				5DCE9B0A20C6682100512610 /* UIView+Layout.m in Sources */,
+				5DCE9B0620C6682100512610 /* TZAssetCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
+				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
+				5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */,
+				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
+				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
+				5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */,
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
+				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
+				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
+				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
+				5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
+				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
+				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
+				5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */,
 				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
 				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
@@ -1259,8 +1589,14 @@
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
+				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
+				5DCE9AF820C6682100512610 /* MZpopMenu.m in Sources */,
+				5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */,
+				5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */,
+				5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
@@ -1268,8 +1604,11 @@
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
+				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
+				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
+				5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
@@ -1286,14 +1625,21 @@
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
 				5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */,
 				5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */,
+				5DCE9B0320C6682100512610 /* MEDTestReportModel.m in Sources */,
 				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
+				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,
+				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
+				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
+				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
 				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
+				5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */,
 				5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */,
+				5DCE9B0F20C6682100512610 /* TZPhotoPickerController.m in Sources */,
 				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);

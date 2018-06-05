@@ -128,7 +128,7 @@
 }
 
 - (void)planButtonClick:(UIButton *)button {
-    //MYLog(@"点击了按钮%ld",(long)button.tag);
+    //NSLog(@"点击了按钮%ld",(long)button.tag);
     //0为饮食，1为运动，2为睡眠，3为用药
     for (UIButton *btn in self.healthPlanView.subviews) {
         if ([btn isKindOfClass:[UIButton class]]) {
