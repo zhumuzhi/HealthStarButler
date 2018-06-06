@@ -22,10 +22,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     //设置中间按钮
@@ -38,7 +37,7 @@
     [self.window makeKeyAndVisible];
 
     return YES;
-    
+
 }
 
 /** 根据登录情况切换主页 */

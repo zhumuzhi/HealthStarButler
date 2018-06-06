@@ -11,6 +11,8 @@
 #import "MEDCompanyRankCell.h"
 #import "MEDCompanyRankHeadView.h"
 
+#import "TestTool.h" //测试单例
+
 #define pageNum 20
 
 @interface MEDCompanyRankingController ()<UITableViewDataSource, UITableViewDelegate>
@@ -86,7 +88,16 @@ static  NSString *cellIdentifier = @"CompanyRankingCell";
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [weakSelf getMoreData];
     }];
-    
+
+    TestTool *tool = [TestTool shareTool];
+    NSLog(@"tool:%@", tool);
+
+    TestTool *tool1 = [[TestTool alloc] copy];
+    NSLog(@"tool1:%@", tool1);
+
+    TestTool *tool2 = [tool mutableCopy];
+    NSLog(@"tool2:%@", tool2);
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{

@@ -230,7 +230,7 @@
         
         return cell;
         
-    } else if (indexPath.row==1){
+    } else if (indexPath.row == 1){
         NSString *text = self.treatmentModel.hospitalName;
         if (text == nil) {
             text = nil;
@@ -243,7 +243,7 @@
         }];
         return commonCell;
         
-    } else if (indexPath.row==2){ //就诊类别
+    } else if (indexPath.row == 2){ //就诊类别
         UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -308,6 +308,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 120;
 }
+
+#pragma mark - TableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];

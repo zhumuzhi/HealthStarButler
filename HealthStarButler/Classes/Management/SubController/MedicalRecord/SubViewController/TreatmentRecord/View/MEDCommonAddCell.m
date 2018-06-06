@@ -105,19 +105,14 @@
  * 页面自动适配
  */
 -(void) autoLayout{
-    
-    CGFloat titleLblW = 90;
-//    CGFloat titleLblX = 10;
-//    CGFloat titleLblY = 20;
-//    CGFloat titleLblH = 21;
-    //self.titleLabel.frame = CGRectMake(titleLblX, titleLblY, titleLblW, titleLblH);
-//    self.titleLabel.frame = self.textLabel.frame;
-    
-    CGFloat textFieldX = 100;
-    CGFloat textFieldY = 20;
-    CGFloat textFieldW = self.contentView.frame.size.width - titleLblW - 45;
-    CGFloat textFieldH = 20;
-    self.textField.frame = CGRectMake(textFieldX, textFieldY, textFieldW, textFieldH);
+
+    [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@(self.textLabel.right));
+        make.right.equalTo(@(self.detailTextLabel.right));
+        make.height.equalTo(@(60));
+//        make.top.equalTo(@(self.top));
+//        make.bottom.equalTo(@(self.bottom));
+    }];
 }
 
 - (void)dealloc{

@@ -70,7 +70,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = MEDRandomColor;
     [self setupNavigation]; //设置导航栏
     [self.view addSubview:self.tableView];
@@ -87,9 +87,9 @@
 //tableView_Lazy
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , 240 + 64) style:UITableViewStylePlain];
-        _tableView.contentInset = UIEdgeInsetsMake(64 , 0, 0, 0);
-        
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH , 240) style:UITableViewStylePlain];
+//        _tableView.contentInset = UIEdgeInsetsMake(64 , 0, 0, 0);
+
         _tableView.scrollEnabled =NO;
         _tableView.separatorColor = MEDLightGray;
         _tableView.backgroundColor = [UIColor brownColor];

@@ -11,6 +11,7 @@
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
+		5D3BCBA120C76A4600F09FB6 /* TestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BCBA020C76A4600F09FB6 /* TestTool.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -140,6 +141,8 @@
 		5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeFoodPlanCell.m; sourceTree = "<group>"; };
 		5D1AC634209BFA8800FB16C9 /* MEDHomeHealthPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeHealthPlanCell.h; sourceTree = "<group>"; };
 		5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHealthPlanCell.m; sourceTree = "<group>"; };
+		5D3BCB9F20C76A4600F09FB6 /* TestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTool.h; sourceTree = "<group>"; };
+		5D3BCBA020C76A4600F09FB6 /* TestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTool.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -156,7 +159,6 @@
 		5D4A481F2091AAFD007DAD29 /* MEDManageVerticalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDManageVerticalCell.m; sourceTree = "<group>"; };
 		5D4A48222091AB03007DAD29 /* MEDManageVerticalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageVerticalCell.xib; sourceTree = "<group>"; };
 		5D4A48232091AB03007DAD29 /* MEDManageHorizontalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDManageHorizontalCell.xib; sourceTree = "<group>"; };
-		5D4E339820B2A9D50026B2C4 /* MEDHomePageControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomePageControllerDelegate.h; sourceTree = "<group>"; };
 		5D4E339A20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDChineseMedicineQuestionnaireController.h; sourceTree = "<group>"; };
 		5D4E339B20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDChineseMedicineQuestionnaireController.m; sourceTree = "<group>"; };
 		5D4E339E20B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthDynamicQuestionnaireController.h; sourceTree = "<group>"; };
@@ -795,8 +797,8 @@
 		5D829A3C2085C8FD001993B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5DC39F862091CE31000D1B26 /* SubController */,
 				5D829A7C2085D9B0001993B6 /* Controller */,
+				5DC39F862091CE31000D1B26 /* SubController */,
 				5D829A7D2085D9B0001993B6 /* Model */,
 				5D829A7E2085D9B0001993B6 /* View */,
 			);
@@ -806,8 +808,8 @@
 		5D829A3D2085C904001993B6 /* Management */ = {
 			isa = PBXGroup;
 			children = (
-				5D829A6D2085D911001993B6 /* SubController */,
 				5D829A6A2085D8E4001993B6 /* Controller */,
+				5D829A6D2085D911001993B6 /* SubController */,
 				5D829A6C2085D8F4001993B6 /* View */,
 				5D829A6B2085D8EF001993B6 /* Model */,
 			);
@@ -955,7 +957,6 @@
 			children = (
 				5D829A882085DA07001993B6 /* MEDHomePageController.h */,
 				5D829A892085DA07001993B6 /* MEDHomePageController.m */,
-				5D4E339820B2A9D50026B2C4 /* MEDHomePageControllerDelegate.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1154,6 +1155,8 @@
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D3BCB9F20C76A4600F09FB6 /* TestTool.h */,
+				5D3BCBA020C76A4600F09FB6 /* TestTool.m */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -1248,23 +1251,23 @@
 		5DCE9AAB20C6682100512610 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5DCE9AAC20C6682100512610 /* MEDTextField.m */,
-				5DCE9AAD20C6682100512610 /* MEDPersonalDatePickView.m */,
-				5DCE9AAE20C6682100512610 /* MEDCommonAddCell.m */,
-				5DCE9AAF20C6682100512610 /* MZpopMenu.m */,
-				5DCE9AB020C6682100512610 /* MEDTreatmentRecordDescCell.h */,
-				5DCE9AB120C6682100512610 /* MEDTreatmentRecordDescribeView.m */,
-				5DCE9AB220C6682100512610 /* MEDMedicalRecordCommonCell.xib */,
-				5DCE9AB320C6682100512610 /* MEDMedicalRecordCommonCell.h */,
-				5DCE9AB420C6682100512610 /* MEDTextField.h */,
-				5DCE9AB520C6682100512610 /* MEDTreatmentRecordDescribeView.xib */,
-				5DCE9AB620C6682100512610 /* MEDCommonAddCell.h */,
 				5DCE9AB720C6682100512610 /* MEDPersonalDatePickView.h */,
-				5DCE9AB820C6682100512610 /* MEDTreatmentRecordDescCell.xib */,
-				5DCE9AB920C6682100512610 /* MEDTreatmentRecordDescribeView.h */,
+				5DCE9AAD20C6682100512610 /* MEDPersonalDatePickView.m */,
+				5DCE9AB620C6682100512610 /* MEDCommonAddCell.h */,
+				5DCE9AAE20C6682100512610 /* MEDCommonAddCell.m */,
+				5DCE9AB020C6682100512610 /* MEDTreatmentRecordDescCell.h */,
 				5DCE9ABA20C6682100512610 /* MEDTreatmentRecordDescCell.m */,
-				5DCE9ABB20C6682100512610 /* MZpopMenu.h */,
+				5DCE9AB820C6682100512610 /* MEDTreatmentRecordDescCell.xib */,
+				5DCE9AB320C6682100512610 /* MEDMedicalRecordCommonCell.h */,
 				5DCE9ABC20C6682100512610 /* MEDMedicalRecordCommonCell.m */,
+				5DCE9AB220C6682100512610 /* MEDMedicalRecordCommonCell.xib */,
+				5DCE9AB920C6682100512610 /* MEDTreatmentRecordDescribeView.h */,
+				5DCE9AB120C6682100512610 /* MEDTreatmentRecordDescribeView.m */,
+				5DCE9AB520C6682100512610 /* MEDTreatmentRecordDescribeView.xib */,
+				5DCE9AB420C6682100512610 /* MEDTextField.h */,
+				5DCE9AAC20C6682100512610 /* MEDTextField.m */,
+				5DCE9ABB20C6682100512610 /* MZpopMenu.h */,
+				5DCE9AAF20C6682100512610 /* MZpopMenu.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1283,12 +1286,12 @@
 		5DCE9ABE20C6682100512610 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5DCE9ABF20C6682100512610 /* MEDAddTestReportController.m */,
-				5DCE9AC020C6682100512610 /* MEDTestReportListController.m */,
-				5DCE9AC120C6682100512610 /* MEDEditTestReportController.m */,
 				5DCE9AC220C6682100512610 /* MEDTestReportListController.h */,
+				5DCE9AC020C6682100512610 /* MEDTestReportListController.m */,
 				5DCE9AC320C6682100512610 /* MEDAddTestReportController.h */,
+				5DCE9ABF20C6682100512610 /* MEDAddTestReportController.m */,
 				5DCE9AC420C6682100512610 /* MEDEditTestReportController.h */,
+				5DCE9AC120C6682100512610 /* MEDEditTestReportController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1562,6 +1565,7 @@
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
+				5D3BCBA120C76A4600F09FB6 /* TestTool.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,

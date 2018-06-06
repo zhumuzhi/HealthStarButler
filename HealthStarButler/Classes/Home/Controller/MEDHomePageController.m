@@ -24,8 +24,7 @@
 #import "MEDHomeHealthPlanCell.h"
 /** 资讯Cell */
 
-#import "TDTouchID.h"
-
+#import "TDTouchID.h" //指纹测试
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -52,16 +51,8 @@
     [self getUserInfo];
     
     [self configTableView];
-    
 }
 
-
-- (void)kovBase {
-    /*
-     */
-    
-    
-}
 
 
 - (void)kovTest {
@@ -360,10 +351,14 @@
 /** 跳转至监测cell相关Controller */
 -(void)pushToMonitorControllerWihtTag:(NSInteger)btnTag
 {
-    NSArray *controllers = @[[MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class],  [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class]];
-    Class controller = controllers[btnTag];
-    UIViewController *viewController = [[controller alloc] init];
-    [self.navigationController pushViewController:viewController animated:YES];
+    if (btnTag == 0) {
+        [self touchVerification];
+    }else {
+        NSArray *controllers = @[[MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class],  [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class]];
+        Class controller = controllers[btnTag];
+        UIViewController *viewController = [[controller alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 @end
