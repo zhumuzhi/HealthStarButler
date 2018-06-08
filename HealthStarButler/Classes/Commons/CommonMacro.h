@@ -52,6 +52,7 @@
 /** 二级页面Frame(由一级页面Push有Navigation) */
 #define SecondPageFrame CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height-MED_TabbarSafeBottomMargin)
 
+#define CELL_HEIGHT 44
 
 #pragma mark -------------------- Color --------------------
 

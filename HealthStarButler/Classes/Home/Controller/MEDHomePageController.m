@@ -24,7 +24,10 @@
 #import "MEDHomeHealthPlanCell.h"
 /** 资讯Cell */
 
+// 测试类
 #import "TDTouchID.h" //指纹测试
+#import "MEDTestTagController.h" //标签页面测试
+
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -296,6 +299,8 @@
         case 2:
         {
             NSLog(@"饮食日志Cell");
+            MEDTestTagController *tagV = [[MEDTestTagController alloc] init];
+            [self.navigationController pushViewController:tagV animated:YES];
         }
             break;
         case 3:

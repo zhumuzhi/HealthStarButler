@@ -11,7 +11,38 @@
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
-		5D3BCBA120C76A4600F09FB6 /* TestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3BCBA020C76A4600F09FB6 /* TestTool.m */; };
+		5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */; };
+		5D201DA320CA30D4009007D9 /* JFTagListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA120CA30D4009007D9 /* JFTagListView.m */; };
+		5D201DA620CA5A1E009007D9 /* MEDTagTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA520CA5A1E009007D9 /* MEDTagTool.m */; };
+		5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */; };
+		5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB320CA6D14009007D9 /* MEDDepartmentVC.m */; };
+		5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB520CA6D15009007D9 /* MEDSymptomVC.m */; };
+		5D201DBB20CA6D20009007D9 /* MEDAllBodyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DBA20CA6D20009007D9 /* MEDAllBodyModel.m */; };
+		5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DBC20CA6D2A009007D9 /* MEDSymptomTitleCell.m */; };
+		5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DBE20CA6D2B009007D9 /* MEDLeftTableViewCell.m */; };
+		5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DC020CA6D2B009007D9 /* MEDSymptomCell.m */; };
+		5D201DE520CA6D2C009007D9 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DC120CA6D2B009007D9 /* RFQuiltLayout.m */; };
+		5D201DE620CA6D2C009007D9 /* MEDSymptomTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DC220CA6D2B009007D9 /* MEDSymptomTitleCell.xib */; };
+		5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DC620CA6D2B009007D9 /* MEDRightTableViewCell.m */; };
+		5D201DE820CA6D2C009007D9 /* MEDGuideLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DCA20CA6D2B009007D9 /* MEDGuideLayout.m */; };
+		5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DCC20CA6D2B009007D9 /* KDBarGraph.m */; };
+		5D201DEA20CA6D2C009007D9 /* circle_outline_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DCE20CA6D2B009007D9 /* circle_outline_pressed@2x.png */; };
+		5D201DEB20CA6D2C009007D9 /* circle_ridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DCF20CA6D2B009007D9 /* circle_ridge.png */; };
+		5D201DEC20CA6D2C009007D9 /* circle_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD020CA6D2B009007D9 /* circle_thumb@2x.png */; };
+		5D201DED20CA6D2C009007D9 /* graph_year@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD120CA6D2B009007D9 /* graph_year@2x.png */; };
+		5D201DEE20CA6D2C009007D9 /* graph_year.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD220CA6D2B009007D9 /* graph_year.png */; };
+		5D201DEF20CA6D2C009007D9 /* circle_ridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD320CA6D2B009007D9 /* circle_ridge@2x.png */; };
+		5D201DF020CA6D2C009007D9 /* circle_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD420CA6D2B009007D9 /* circle_thumb.png */; };
+		5D201DF120CA6D2C009007D9 /* graph_week.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD520CA6D2B009007D9 /* graph_week.png */; };
+		5D201DF220CA6D2C009007D9 /* circle_outline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD620CA6D2B009007D9 /* circle_outline@2x.png */; };
+		5D201DF320CA6D2C009007D9 /* circle_outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD720CA6D2B009007D9 /* circle_outline.png */; };
+		5D201DF420CA6D2C009007D9 /* graph_week@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD820CA6D2B009007D9 /* graph_week@2x.png */; };
+		5D201DF520CA6D2C009007D9 /* mzan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DD920CA6D2B009007D9 /* mzan@2x.png */; };
+		5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D201DDA20CA6D2B009007D9 /* circle_outline_pressed.png */; };
+		5D201DF720CA6D2C009007D9 /* KDGoalBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DDE20CA6D2B009007D9 /* KDGoalBar.m */; };
+		5D201DF820CA6D2C009007D9 /* KDGoalBarPercentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DDF20CA6D2B009007D9 /* KDGoalBarPercentLayer.m */; };
+		5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */; };
+		5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DE120CA6D2C009007D9 /* MEDSuggestCell.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -141,8 +172,56 @@
 		5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeFoodPlanCell.m; sourceTree = "<group>"; };
 		5D1AC634209BFA8800FB16C9 /* MEDHomeHealthPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeHealthPlanCell.h; sourceTree = "<group>"; };
 		5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHealthPlanCell.m; sourceTree = "<group>"; };
-		5D3BCB9F20C76A4600F09FB6 /* TestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTool.h; sourceTree = "<group>"; };
-		5D3BCBA020C76A4600F09FB6 /* TestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTool.m; sourceTree = "<group>"; };
+		5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTestTagController.h; sourceTree = "<group>"; };
+		5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTestTagController.m; sourceTree = "<group>"; };
+		5D201DA120CA30D4009007D9 /* JFTagListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTagListView.m; sourceTree = "<group>"; };
+		5D201DA220CA30D4009007D9 /* JFTagListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTagListView.h; sourceTree = "<group>"; };
+		5D201DA420CA5A1E009007D9 /* MEDTagTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTagTool.h; sourceTree = "<group>"; };
+		5D201DA520CA5A1E009007D9 /* MEDTagTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTagTool.m; sourceTree = "<group>"; };
+		5D201DB020CA6D14009007D9 /* MEDDepartmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDDepartmentVC.h; sourceTree = "<group>"; };
+		5D201DB120CA6D14009007D9 /* MEDSymptomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSymptomVC.h; sourceTree = "<group>"; };
+		5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGuidanceVC.m; sourceTree = "<group>"; };
+		5D201DB320CA6D14009007D9 /* MEDDepartmentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDDepartmentVC.m; sourceTree = "<group>"; };
+		5D201DB420CA6D14009007D9 /* MEDGuidanceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGuidanceVC.h; sourceTree = "<group>"; };
+		5D201DB520CA6D15009007D9 /* MEDSymptomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSymptomVC.m; sourceTree = "<group>"; };
+		5D201DB920CA6D1F009007D9 /* MEDAllBodyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAllBodyModel.h; sourceTree = "<group>"; };
+		5D201DBA20CA6D20009007D9 /* MEDAllBodyModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDAllBodyModel.m; sourceTree = "<group>"; };
+		5D201DBC20CA6D2A009007D9 /* MEDSymptomTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSymptomTitleCell.m; sourceTree = "<group>"; };
+		5D201DBD20CA6D2B009007D9 /* MEDLeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDLeftTableViewCell.h; sourceTree = "<group>"; };
+		5D201DBE20CA6D2B009007D9 /* MEDLeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDLeftTableViewCell.m; sourceTree = "<group>"; };
+		5D201DBF20CA6D2B009007D9 /* MEDSuggestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSuggestCell.h; sourceTree = "<group>"; };
+		5D201DC020CA6D2B009007D9 /* MEDSymptomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSymptomCell.m; sourceTree = "<group>"; };
+		5D201DC120CA6D2B009007D9 /* RFQuiltLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFQuiltLayout.m; sourceTree = "<group>"; };
+		5D201DC220CA6D2B009007D9 /* MEDSymptomTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MEDSymptomTitleCell.xib; sourceTree = "<group>"; };
+		5D201DC320CA6D2B009007D9 /* RFQuiltLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFQuiltLayout.h; sourceTree = "<group>"; };
+		5D201DC420CA6D2B009007D9 /* MEDRightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDRightTableViewCell.h; sourceTree = "<group>"; };
+		5D201DC520CA6D2B009007D9 /* MEDSymptomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSymptomCell.h; sourceTree = "<group>"; };
+		5D201DC620CA6D2B009007D9 /* MEDRightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRightTableViewCell.m; sourceTree = "<group>"; };
+		5D201DC720CA6D2B009007D9 /* MEDSymptomTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDSymptomTitleCell.h; sourceTree = "<group>"; };
+		5D201DC820CA6D2B009007D9 /* MEDTwoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTwoTableView.h; sourceTree = "<group>"; };
+		5D201DC920CA6D2B009007D9 /* MEDGuideLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGuideLayout.h; sourceTree = "<group>"; };
+		5D201DCA20CA6D2B009007D9 /* MEDGuideLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGuideLayout.m; sourceTree = "<group>"; };
+		5D201DCC20CA6D2B009007D9 /* KDBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDBarGraph.m; sourceTree = "<group>"; };
+		5D201DCE20CA6D2B009007D9 /* circle_outline_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_outline_pressed@2x.png"; sourceTree = "<group>"; };
+		5D201DCF20CA6D2B009007D9 /* circle_ridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_ridge.png; sourceTree = "<group>"; };
+		5D201DD020CA6D2B009007D9 /* circle_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_thumb@2x.png"; sourceTree = "<group>"; };
+		5D201DD120CA6D2B009007D9 /* graph_year@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_year@2x.png"; sourceTree = "<group>"; };
+		5D201DD220CA6D2B009007D9 /* graph_year.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph_year.png; sourceTree = "<group>"; };
+		5D201DD320CA6D2B009007D9 /* circle_ridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_ridge@2x.png"; sourceTree = "<group>"; };
+		5D201DD420CA6D2B009007D9 /* circle_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_thumb.png; sourceTree = "<group>"; };
+		5D201DD520CA6D2B009007D9 /* graph_week.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph_week.png; sourceTree = "<group>"; };
+		5D201DD620CA6D2B009007D9 /* circle_outline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle_outline@2x.png"; sourceTree = "<group>"; };
+		5D201DD720CA6D2B009007D9 /* circle_outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_outline.png; sourceTree = "<group>"; };
+		5D201DD820CA6D2B009007D9 /* graph_week@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "graph_week@2x.png"; sourceTree = "<group>"; };
+		5D201DD920CA6D2B009007D9 /* mzan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mzan@2x.png"; sourceTree = "<group>"; };
+		5D201DDA20CA6D2B009007D9 /* circle_outline_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_outline_pressed.png; sourceTree = "<group>"; };
+		5D201DDB20CA6D2B009007D9 /* KDGoalBarPercentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDGoalBarPercentLayer.h; sourceTree = "<group>"; };
+		5D201DDC20CA6D2B009007D9 /* KDGoalBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDGoalBar.h; sourceTree = "<group>"; };
+		5D201DDD20CA6D2B009007D9 /* KDBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDBarGraph.h; sourceTree = "<group>"; };
+		5D201DDE20CA6D2B009007D9 /* KDGoalBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDGoalBar.m; sourceTree = "<group>"; };
+		5D201DDF20CA6D2B009007D9 /* KDGoalBarPercentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDGoalBarPercentLayer.m; sourceTree = "<group>"; };
+		5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTwoTableView.m; sourceTree = "<group>"; };
+		5D201DE120CA6D2C009007D9 /* MEDSuggestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSuggestCell.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -405,6 +484,40 @@
 				5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */,
 			);
 			path = HealthPlanCell;
+			sourceTree = "<group>";
+		};
+		5D201DCB20CA6D2B009007D9 /* KDCustom */ = {
+			isa = PBXGroup;
+			children = (
+				5D201DCC20CA6D2B009007D9 /* KDBarGraph.m */,
+				5D201DCD20CA6D2B009007D9 /* images */,
+				5D201DDB20CA6D2B009007D9 /* KDGoalBarPercentLayer.h */,
+				5D201DDC20CA6D2B009007D9 /* KDGoalBar.h */,
+				5D201DDD20CA6D2B009007D9 /* KDBarGraph.h */,
+				5D201DDE20CA6D2B009007D9 /* KDGoalBar.m */,
+				5D201DDF20CA6D2B009007D9 /* KDGoalBarPercentLayer.m */,
+			);
+			path = KDCustom;
+			sourceTree = "<group>";
+		};
+		5D201DCD20CA6D2B009007D9 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5D201DCE20CA6D2B009007D9 /* circle_outline_pressed@2x.png */,
+				5D201DCF20CA6D2B009007D9 /* circle_ridge.png */,
+				5D201DD020CA6D2B009007D9 /* circle_thumb@2x.png */,
+				5D201DD120CA6D2B009007D9 /* graph_year@2x.png */,
+				5D201DD220CA6D2B009007D9 /* graph_year.png */,
+				5D201DD320CA6D2B009007D9 /* circle_ridge@2x.png */,
+				5D201DD420CA6D2B009007D9 /* circle_thumb.png */,
+				5D201DD520CA6D2B009007D9 /* graph_week.png */,
+				5D201DD620CA6D2B009007D9 /* circle_outline@2x.png */,
+				5D201DD720CA6D2B009007D9 /* circle_outline.png */,
+				5D201DD820CA6D2B009007D9 /* graph_week@2x.png */,
+				5D201DD920CA6D2B009007D9 /* mzan@2x.png */,
+				5D201DDA20CA6D2B009007D9 /* circle_outline_pressed.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
@@ -1005,6 +1118,8 @@
 		5D829A822085D9D5001993B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D201DB920CA6D1F009007D9 /* MEDAllBodyModel.h */,
+				5D201DBA20CA6D20009007D9 /* MEDAllBodyModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1014,6 +1129,12 @@
 			children = (
 				5D829A8B2085DA21001993B6 /* MEDTreatmentGuideController.h */,
 				5D829A8C2085DA21001993B6 /* MEDTreatmentGuideController.m */,
+				5D201DB020CA6D14009007D9 /* MEDDepartmentVC.h */,
+				5D201DB320CA6D14009007D9 /* MEDDepartmentVC.m */,
+				5D201DB420CA6D14009007D9 /* MEDGuidanceVC.h */,
+				5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */,
+				5D201DB120CA6D14009007D9 /* MEDSymptomVC.h */,
+				5D201DB520CA6D15009007D9 /* MEDSymptomVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1021,6 +1142,24 @@
 		5D829A842085D9D5001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D201DCB20CA6D2B009007D9 /* KDCustom */,
+				5D201DC920CA6D2B009007D9 /* MEDGuideLayout.h */,
+				5D201DCA20CA6D2B009007D9 /* MEDGuideLayout.m */,
+				5D201DBD20CA6D2B009007D9 /* MEDLeftTableViewCell.h */,
+				5D201DBE20CA6D2B009007D9 /* MEDLeftTableViewCell.m */,
+				5D201DC420CA6D2B009007D9 /* MEDRightTableViewCell.h */,
+				5D201DC620CA6D2B009007D9 /* MEDRightTableViewCell.m */,
+				5D201DBF20CA6D2B009007D9 /* MEDSuggestCell.h */,
+				5D201DE120CA6D2C009007D9 /* MEDSuggestCell.m */,
+				5D201DC520CA6D2B009007D9 /* MEDSymptomCell.h */,
+				5D201DC020CA6D2B009007D9 /* MEDSymptomCell.m */,
+				5D201DC720CA6D2B009007D9 /* MEDSymptomTitleCell.h */,
+				5D201DBC20CA6D2A009007D9 /* MEDSymptomTitleCell.m */,
+				5D201DC220CA6D2B009007D9 /* MEDSymptomTitleCell.xib */,
+				5D201DC820CA6D2B009007D9 /* MEDTwoTableView.h */,
+				5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */,
+				5D201DC320CA6D2B009007D9 /* RFQuiltLayout.h */,
+				5D201DC120CA6D2B009007D9 /* RFQuiltLayout.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1155,8 +1294,12 @@
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
-				5D3BCB9F20C76A4600F09FB6 /* TestTool.h */,
-				5D3BCBA020C76A4600F09FB6 /* TestTool.m */,
+				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
+				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
+				5D201DA220CA30D4009007D9 /* JFTagListView.h */,
+				5D201DA120CA30D4009007D9 /* JFTagListView.m */,
+				5D201DA420CA5A1E009007D9 /* MEDTagTool.h */,
+				5D201DA520CA5A1E009007D9 /* MEDTagTool.m */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -1459,15 +1602,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D201DED20CA6D2C009007D9 /* graph_year@2x.png in Resources */,
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
+				5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
+				5D201DEA20CA6D2C009007D9 /* circle_outline_pressed@2x.png in Resources */,
 				5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */,
 				5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */,
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
+				5D201DF420CA6D2C009007D9 /* graph_week@2x.png in Resources */,
 				5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */,
 				5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */,
 				5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */,
+				5D201DE620CA6D2C009007D9 /* MEDSymptomTitleCell.xib in Resources */,
 				5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
@@ -1476,12 +1624,21 @@
 				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
 				5DCE9B0C20C6682100512610 /* TZImagePickerController.bundle in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
+				5D201DEC20CA6D2C009007D9 /* circle_thumb@2x.png in Resources */,
 				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
+				5D201DF020CA6D2C009007D9 /* circle_thumb.png in Resources */,
 				5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */,
+				5D201DF220CA6D2C009007D9 /* circle_outline@2x.png in Resources */,
 				5DCE9AFB20C6682100512610 /* MEDTreatmentRecordDescribeView.xib in Resources */,
+				5D201DEF20CA6D2C009007D9 /* circle_ridge@2x.png in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 				5DCE9AFC20C6682100512610 /* MEDTreatmentRecordDescCell.xib in Resources */,
+				5D201DEB20CA6D2C009007D9 /* circle_ridge.png in Resources */,
+				5D201DF120CA6D2C009007D9 /* graph_week.png in Resources */,
+				5D201DF320CA6D2C009007D9 /* circle_outline.png in Resources */,
+				5D201DF520CA6D2C009007D9 /* mzan@2x.png in Resources */,
+				5D201DEE20CA6D2C009007D9 /* graph_year.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1551,21 +1708,24 @@
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */,
+				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
+				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
 				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
 				5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
 				5DCE9B0A20C6682100512610 /* UIView+Layout.m in Sources */,
 				5DCE9B0620C6682100512610 /* TZAssetCell.m in Sources */,
+				5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
+				5D201DE520CA6D2C009007D9 /* RFQuiltLayout.m in Sources */,
 				5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */,
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
-				5D3BCBA120C76A4600F09FB6 /* TestTool.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
@@ -1575,6 +1735,7 @@
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
 				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
 				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
+				5D201DF820CA6D2C009007D9 /* KDGoalBarPercentLayer.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
 				5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */,
@@ -1584,17 +1745,23 @@
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */,
+				5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */,
 				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
 				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
 				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
+				5D201DE820CA6D2C009007D9 /* MEDGuideLayout.m in Sources */,
 				5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */,
 				5DBD2C7A20A1930E008F902E /* MEDFeedBackModel.m in Sources */,
 				5D829A752085D981001993B6 /* MEDConsultationController.m in Sources */,
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
+				5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
+				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
+				5D201DA620CA5A1E009007D9 /* MEDTagTool.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5DCE9AF820C6682100512610 /* MZpopMenu.m in Sources */,
@@ -1609,6 +1776,7 @@
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
+				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
@@ -1617,7 +1785,9 @@
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
 				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
+				5D201DF720CA6D2C009007D9 /* KDGoalBar.m in Sources */,
 				5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */,
+				5D201DBB20CA6D20009007D9 /* MEDAllBodyModel.m in Sources */,
 				5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */,
 				5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */,
 				5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */,
@@ -1625,6 +1795,8 @@
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
+				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
+				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
 				5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */,
@@ -1636,6 +1808,7 @@
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
+				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
@@ -1644,6 +1817,7 @@
 				5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */,
 				5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */,
 				5DCE9B0F20C6682100512610 /* TZPhotoPickerController.m in Sources */,
+				5D201DA320CA30D4009007D9 /* JFTagListView.m in Sources */,
 				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);

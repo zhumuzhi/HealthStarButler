@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MEDTwoTableView.h"
 @interface MEDTreatmentGuideController : MEDBaseViewController
+
+@property (nonatomic, strong) MEDTwoTableView *twoTable;
+
+- (void)reInitIntellectGuidance;
 
 @end
