@@ -814,13 +814,9 @@
 				5D829A3E2085C92F001993B6 /* Information */,
 				5D829A3F2085C93D001993B6 /* TreatmentGuide */,
 				5D829A422085CA5E001993B6 /* Mine */,
-				5D829A392085C8B9001993B6 /* BaseController */,
-				5D829A3A2085C8C4001993B6 /* BaseView */,
-				5D829A382085C8A4001993B6 /* Category */,
 				5D829A432085CB5B001993B6 /* Commons */,
-				5DBD2C6920A15199008F902E /* Utils */,
-				5D829A362085C88D001993B6 /* Appdelegate */,
 				5D829A3B2085C8CD001993B6 /* Third */,
+				5D829A362085C88D001993B6 /* Appdelegate */,
 				5D829A352085C884001993B6 /* Other */,
 				5D829A412085C9A5001993B6 /* Supporting Files */,
 			);
@@ -830,6 +826,10 @@
 		5D829A352085C884001993B6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5D829A392085C8B9001993B6 /* BaseController */,
+				5D829A3A2085C8C4001993B6 /* BaseView */,
+				5D829A382085C8A4001993B6 /* Category */,
+				5DBD2C6920A15199008F902E /* Utils */,
 			);
 			path = Other;
 			sourceTree = "<group>";
