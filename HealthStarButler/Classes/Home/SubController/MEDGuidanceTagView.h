@@ -1,15 +1,15 @@
 //
-//  JFTagListView.h
-//  JFTagListView
+//  MEDGuidanceTagView.h
+//  HealthStarButler
 //
-//  Created by 张剑锋 on 15/11/30.
-//  Copyright © 2015年 张剑锋. All rights reserved.
+//  Created by 朱慕之 on 2018/6/8.
+//  Copyright © 2018年 zhumuzhi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 
-@class JFTagListView;
+@class MEDGuidanceTagView;
 
 typedef enum{
     
@@ -25,7 +25,7 @@ typedef enum{
 }TagStateType;
 
 
-@protocol JFTagListDelegate <NSObject>
+@protocol MEDGuidanceTagDelegate <NSObject>
 
 @optional
 
@@ -35,7 +35,7 @@ typedef enum{
  *   taglist
  *   listHeight 高度
  */
--(void)tagList:(JFTagListView *)taglist heightForView:(float)listHeight;
+-(void)tagList:(MEDGuidanceTagView *)taglist heightForView:(float)listHeight;
 
 /**
  *  显示添加tag视图
@@ -50,12 +50,12 @@ typedef enum{
  *   taglist
  *   buttonIndex 点击按钮的Index
  */
--(void)tagList:(JFTagListView *)taglist clickedButtonAtIndex:(NSInteger)buttonIndex;
+-(void)tagList:(MEDGuidanceTagView *)taglist clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
 
 
-@interface JFTagListView : UIView
+@interface MEDGuidanceTagView : UIView
 
 
 /**
@@ -124,7 +124,7 @@ typedef enum{
 @property (nonatomic, strong) NSString *addTagStr;
 
 
-@property (nonatomic, strong) id<JFTagListDelegate>delegate;
+@property (nonatomic, strong) id<MEDGuidanceTagDelegate>delegate;
 
 /**
  *  初始话UI

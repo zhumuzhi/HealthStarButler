@@ -1,12 +1,12 @@
 //
-//  JFTagListView.m
-//  JFTagListView
+//  MEDGuidanceTagView.m
+//  HealthStarButler
 //
-//  Created by 张剑锋 on 15/11/30.
-//  Copyright © 2015年 张剑锋. All rights reserved.
+//  Created by 朱慕之 on 2018/6/8.
+//  Copyright © 2018年 zhumuzhi. All rights reserved.
 //
 
-#import "JFTagListView.h"
+#import "MEDGuidanceTagView.h"
 
 #define K_Tag_Title_H_Marin         10.0f
 #define K_Tag_Title_V_Marin         5.0f
@@ -26,7 +26,7 @@
 #define KTagFont           15.0f
 
 
-@interface JFTagListView ()
+@interface MEDGuidanceTagView ()
 {
 //    CGRect  _previousFrame ;
 //    float   tagView_height ;
@@ -37,7 +37,7 @@
 
 @end
 
-@implementation JFTagListView
+@implementation MEDGuidanceTagView
 
 - (id)initWithFrame:(CGRect)frame{
     
@@ -68,12 +68,12 @@
     UILabel*titleLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentLeft;
-    titleLabel.textColor = [UIColor lightGrayColor];
-    titleLabel.font = [UIFont systemFontOfSize:KTagFont];
+    titleLabel.textColor = MEDGrayColor(102);
+    titleLabel.font = [UIFont systemFontOfSize:18.0];
     titleLabel.text = @"您的症状:";
     CGRect titleRect = CGRectZero;
     titleRect.origin = CGPointMake(K_Tag_Right_Margin, K_Tag_Bottom_Margin);
-    NSDictionary *titleAttrs = @{NSFontAttributeName : [UIFont systemFontOfSize:KTagFont]};
+    NSDictionary *titleAttrs = @{NSFontAttributeName : [UIFont systemFontOfSize:18.0]};
     CGSize Size_title = [@"您的症状:" sizeWithAttributes:titleAttrs];
     Size_title.width += K_Tag_Title_H_Marin*2;
     Size_title.height += K_Tag_Title_V_Marin*2;
@@ -106,6 +106,8 @@
 
         //创建Label
         UILabel*tagLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+        tagLabel.textColor = MEDGrayColor(153);
+        tagLabel.backgroundColor = MEDGrayColor(246);
         [self creatTagUI:tagLabel];
         tagLabel.text = titleStr;
         tagLabel.tag = KTapLabelTag+idx;
@@ -146,7 +148,7 @@
                 //移除的图片
                 UIImageView *removeImage = [[UIImageView alloc] initWithFrame:CGRectMake(tagLabel.right-Image_Width*1.5, tagLabel.top+(tagLabel.height-Image_Height)/2, Image_Width, Image_Height)];
                 //删除图片可以换成自己的图片
-                removeImage.image = [UIImage imageNamed:@"btn_removeTag"];
+                removeImage.image = [UIImage imageNamed:@"delete"]; //delete btn_removeTag
                 [self addSubview:removeImage];
             }
         }
@@ -165,18 +167,22 @@
 //初始化Tag的UI
 -(void)creatTagUI:(UILabel *)tagLabel{
     
-    tagLabel.backgroundColor = self.tagBackgroundColor?self.tagBackgroundColor:[UIColor whiteColor];
-    
+//    tagLabel.backgroundColor = self.tagBackgroundColor?self.tagBackgroundColor:[UIColor whiteColor];
+
     tagLabel.textAlignment = self.tagStateType==1?NSTextAlignmentLeft:NSTextAlignmentCenter;
     
-    tagLabel.textColor = self.tagTextColor?self.tagTextColor:[UIColor lightGrayColor];
+    tagLabel.textColor = MEDGrayColor(153);
+
+    //self.tagTextColor?self.tagTextColor:[UIColor lightGrayColor];
     
     tagLabel.font = [UIFont systemFontOfSize:self.tagFont?self.tagFont:KTagFont];
     
     tagLabel.layer.cornerRadius = self.tagCornerRadius?self.tagCornerRadius:KTagCornerWidth;
     tagLabel.layer.masksToBounds = YES;
     
-    tagLabel.layer.borderColor = self.tagBorderColor?[self.tagBorderColor CGColor]:[[UIColor lightGrayColor] CGColor];
+    tagLabel.layer.borderColor = MEDGrayColor(246).CGColor;
+
+    //self.tagBorderColor?[self.tagBorderColor CGColor]:[[UIColor lightGrayColor] CGColor];
     
     tagLabel.layer.borderWidth = self.tagBorderWidth?self.tagBorderWidth:1;
     
@@ -189,7 +195,7 @@
 {
     [UIView animateWithDuration:0.0 animations:^{
         CGRect tempFrame = view.frame;
-        tempFrame.size.height = height;
+        tempFrame.size.height = height+10;
         view.frame = tempFrame;
         if ([self.delegate respondsToSelector:@selector(tagList:heightForView:)]) {
             [self.delegate tagList:self heightForView:height];
@@ -202,20 +208,20 @@
 //刷新数据（默认时间0.5秒）
 - (void)reloadData:(NSMutableArray *)newTagArr{
     
-    [self reloadData:newTagArr andTime:0.5];
+    [self reloadData:newTagArr andTime:0.0];
 }
 
 //刷新数据（时间为time）
 - (void)reloadData:(NSMutableArray *)newTagArr andTime:(float)time{
     
     [UIView animateWithDuration:time animations:^{
-        self.alpha = 0;
+//        self.alpha = 0;
     } completion:^(BOOL finished) {
         [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
         
         [UIView animateWithDuration:time animations:^{
-            self.alpha = 1;
-            
+//            self.alpha = 1;
+
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self creatUI:newTagArr];
             });
@@ -242,6 +248,8 @@
     }
     
     if (self.tagStateType == TagStateSelect) {
+        NSLog(@"选择类型的Tag");
+
         //选择tag
         if ([self.delegate respondsToSelector:@selector(tagList:clickedButtonAtIndex:)]) {
             [self.delegate tagList:self clickedButtonAtIndex:tagIndex];
@@ -251,22 +259,11 @@
     
     
     if (self.tagStateType == TagStateEdit) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"是否删除标签?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-//        [alert show];
-
+        NSLog(@"编辑类型的Tag");
         [self.delegate tagList:self clickedButtonAtIndex:tagIndex];
     }
 }
 
-//#pragma mark- AlertView 代理
-//
-//-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-//
-//    if (buttonIndex==1) {
-//        //删除tag
-//        [self.delegate tagList:self clickedButtonAtIndex:tagIndex];
-//    }
-//}
 
 - (CGSize)sizeFromText:(NSString *)text withFrontSize:(CGFloat) fontSize{
 

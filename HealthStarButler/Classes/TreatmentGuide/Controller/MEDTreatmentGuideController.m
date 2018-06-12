@@ -16,6 +16,7 @@
 #import "MEDAllBodyModel.h"
 #import "MEDTwoTableView.h"
 
+#import "MEDGuidanceTagView.h"
 
 #define Margin 5
 #define LeftTableHW 80
@@ -23,16 +24,19 @@
 #define collectionPad 30
 
 
-@interface MEDTreatmentGuideController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,RFQuiltLayoutDelegate>
+@interface MEDTreatmentGuideController ()<MEDGuidanceTagDelegate>
 {
     UITableView *_tableView;
     UIView *_symptomBackView;
     CGFloat _max_X, _max_Y, _max_width;
     CGFloat _maxHeight;
 }
-@property (strong, nonatomic)  UICollectionView *collectionView;
+//@property (strong, nonatomic)  UICollectionView *collectionView;
 @property (nonatomic) NSMutableArray* dataArray;
 @property (nonatomic) float height;
+
+@property (nonatomic, strong) MEDGuidanceTagView *tagListView;
+@property (assign, nonatomic) TagStateType     tagStateType; //标签的模式状态（显示、选择、编辑）
 
 @end
 
@@ -93,19 +97,19 @@
         NSMutableArray *arr = (NSMutableArray*)obj;
         _dataArray = arr;
     }
-    if (_collectionView.frame.size.height<=30) {
-        _height = 56;
-    } else {
-        if ((_maxHeight)>=30) {
-            _height = (_maxHeight+28) ;
-        }
-    }
-
-    if (_dataArray.count == 0) {
-        _height = 20;
-    }
-    [_collectionView removeFromSuperview];
-    //    _maxHeight = 0;
+//    if (_tagListView.frame.size.height<=30) {
+//        _height = 56;
+//    } else {
+//        if ((_maxHeight)>=30) {
+//            _height = (_maxHeight+28) ;
+//        }
+//    }
+//
+//    if (_dataArray.count == 0) {
+//        _height = 20;
+//    }
+//    [_tagListView reloadData:_dataArray];
+    [_tagListView removeFromSuperview];
     [self initConlectionView];
 }
 
@@ -123,134 +127,67 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:commitButton];
 }
 
-#pragma mark InitSymptomUI
-- (void)initSymptomUI
-{
-    UILabel *symptomTitle = [[UILabel alloc]initWithFrame:CGRectMake(15, Margin, 100, 21)];
-    symptomTitle.text = @"您的症状:";
-    symptomTitle.textColor = [UIColor blackColor];
-    symptomTitle.textAlignment = NSTextAlignmentLeft;
-    [_symptomBackView addSubview:symptomTitle];
-
-    UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(0, (CGRectGetMaxY(symptomTitle.frame) + Margin/2), SCREEN_WIDTH, 0.5)];
-    line.backgroundColor = MEDGrayColor(242);
-    [_symptomBackView addSubview:line];
-}
-
 #pragma mark ConfigChooseCollectionView
 - (void)initConlectionView
 {
-    //    [_symptomBackView removeFromSuperview];
-    ////    if (_dataArray.count != 0) {
-    //    _symptomBackView = [[UIView alloc]init];
-    //    _symptomBackView.frame = CGRectMake(0,Navigation_Height+Margin, SCREEN_WIDTH, symptomBackViewH);
-    //    _symptomBackView.backgroundColor = [UIColor whiteColor];
-    //    [self.view addSubview:_symptomBackView];
-    //    [self initSymptomUI];
-
-    RFQuiltLayout *layout = [[RFQuiltLayout alloc]init];
-    layout.direction = UICollectionViewScrollDirectionVertical;
-    layout.blockPixels = CGSizeMake(20, 28);
-    layout.delegate = self;
-
-    //    CGFloat collectionY = CGRectGetMaxY(_symptomBackView.frame);
     CGFloat collectionY = Navigation_Height+Margin;
 
-    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, collectionY, self.view.frame.size.width, 0) collectionViewLayout:layout];
+    self.tagStateType = TagStateEdit; //编辑模式
 
-    _collectionView.scrollEnabled = NO;
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
-    _collectionView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_collectionView];
+    _tagListView = [[MEDGuidanceTagView alloc] initWithFrame:CGRectMake(0, collectionY, SCREEN_WIDTH, 43)];
 
-    _collectionView.frame = CGRectMake(0, collectionY, self.view.frame.size.width, _height+collectionPad);
-    [_collectionView reloadData];
-    //    _twoTable.frame = CGRectMake(0, Navigation_Height+CGRectGetHeight(_collectionView.frame)+ CELL_HEIGHT+20, SCREEN_WIDTH, SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_collectionView.frame)-TabBar_Height+CELL_HEIGHT-CELL_HEIGHT);
-    _twoTable.frame = CGRectMake(0, CGRectGetMaxY(_collectionView.frame)+Margin, SCREEN_WIDTH, SCREEN_HEIGHT- Navigation_Height- CGRectGetMaxY(_collectionView.frame)-Margin);
+    self.tagListView.delegate = self;
+    [self.tagListView creatUI:_dataArray];   //传入Tag数组初始化界面
+    self.tagListView.tagArrkey = @"name";   //如果传的是字典的话，那么key为必传得
+    self.tagListView.is_can_addTag = NO;    //如果是要有最后一个按钮是添加按钮的情况，那么为Yes
+    self.tagListView.tagCornerRadius = 10;  //标签圆角的大小，默认10
+    self.tagListView.tagStateType = self.tagStateType;  //标签模式，默认显示模式
+    //刷新数据
+    [self.tagListView reloadData:_dataArray andTime:0];
 
-    _twoTable.leftTablew.frame = CGRectMake(0, 0, LeftTableHW , SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_collectionView.frame)-TabBar_Height-CELL_HEIGHT);
+    [self.view addSubview:_tagListView];
 
-    _twoTable.rightTablew.frame = CGRectMake(CGRectGetMaxX(_twoTable.leftTablew.frame),0,SCREEN_WIDTH-_twoTable.leftTablew.frame.size.width,SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_collectionView.frame)-TabBar_Height-CELL_HEIGHT);
+    _twoTable.frame = CGRectMake(0, CGRectGetMaxY(_tagListView.frame)+Margin, SCREEN_WIDTH, SCREEN_HEIGHT- Navigation_Height- CGRectGetMaxY(_tagListView.frame)-Margin);
+
+    _twoTable.leftTablew.frame = CGRectMake(0, 0, LeftTableHW , SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_tagListView.frame)-TabBar_Height-CELL_HEIGHT);
+
+    _twoTable.rightTablew.frame = CGRectMake(CGRectGetMaxX(_twoTable.leftTablew.frame),0,SCREEN_WIDTH-_twoTable.leftTablew.frame.size.width,SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_tagListView.frame)-TabBar_Height-CELL_HEIGHT);
     //此处将 twoTable 提到最前方
     [self.view bringSubviewToFront:_twoTable];
 }
 
 - (void)initTwoTableView
 {
-    _twoTable = [[MEDTwoTableView alloc] initWithFrame:CGRectMake(0, Navigation_Height+CGRectGetHeight(_collectionView.frame), SCREEN_WIDTH, SCREEN_HEIGHT) WithData:nil withSelectIndex:^(NSInteger left, NSInteger right,NSString *str) {
+    _twoTable = [[MEDTwoTableView alloc] initWithFrame:CGRectMake(0, Navigation_Height+CGRectGetHeight(_tagListView.frame), SCREEN_WIDTH, SCREEN_HEIGHT) WithData:nil withSelectIndex:^(NSInteger left, NSInteger right,NSString *str) {
         //  NSLog(@"点击的 菜单%@",info.meunName);
     }];
     [self.view addSubview:_twoTable];
 }
 
 
-#pragma mark - UICollectionView Datasource
-
-- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-
-    return self.dataArray.count;
-}
-
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-
-    NSString *identifier=[NSString stringWithFormat:@"%ld%ld",(long)indexPath.section,(long)indexPath.row];
-    [_collectionView registerClass:[MEDSymptomCell class] forCellWithReuseIdentifier:identifier];
-
-    [_collectionView registerNib:[UINib nibWithNibName:@"MEDSymptomTitleCell" bundle:nil]  forCellWithReuseIdentifier:@"MEDSymptomTitleCell"];
-
-    if (indexPath.row == 0) {
-        MEDSymptomTitleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MEDSymptomTitleCell" forIndexPath:indexPath];
-        return cell;
-    }else {
-
-        MEDSymptomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-        cell.titlesLab.textColor = [UIColor blackColor];
-
-        cell.titlesLab.text = [_dataArray objectAtIndex:indexPath.row];
-        cell.delimgv.image = [UIImage imageNamed:@"deletImg"];
-        cell.tag = indexPath.row;
-
-        _maxHeight = cell.frame.origin.y>_maxHeight?cell.frame.origin.y:0;
-        _max_Y = cell.frame.origin.y+30;
-
-        UITapGestureRecognizer *tapPress = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(removebtnClick:)];
-        tapPress.numberOfTapsRequired = 1;
-        cell.delimgv.userInteractionEnabled = YES;
-        [cell.delimgv addGestureRecognizer:tapPress];
-        return cell;
+#pragma mark- TagView 代理
+//标签的点击事件
+-(void)tagList:(MEDGuidanceTagView *)taglist clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (self.tagStateType == TagStateEdit) {//删除Tag
+        [self deleteTagRequest:buttonIndex];
+    }else if (self.tagStateType == TagStateSelect){ //选择tag
+        NSLog(@"选中类型的tag");
     }
-
 }
 
-#pragma mark RemoveChooseItem - 发送移除通知
--(void)removebtnClick:(UITapGestureRecognizer *)gestureRecognizer
-{
-    MEDSymptomCell *cell = (MEDSymptomCell *)gestureRecognizer.view;
+#pragma mark- 删除Tag
+-(void)deleteTagRequest:(NSInteger)index{
+    NSLog(@"tag代理点击事件，点击第%ld个",index);
     if (self.dataArray.count>0) {
-        NSString *removeCellStr = [self.dataArray objectAtIndex:cell.tag];
-        [self.dataArray removeObjectAtIndex:cell.tag];
+        NSString *removeCellStr = [self.dataArray objectAtIndex:index];
+        [self.dataArray removeObjectAtIndex:index];
+        [self.tagListView reloadData:self.dataArray andTime:0];
+        //刷新界面，删除选中View与table，根据dataArray数据重构页面
+        [self addCellText:nil];
+        // 通知Table根据疾病str移除对应选中cell
         [[NSNotificationCenter defaultCenter] postNotificationName:@"removeSymptomCell" object:removeCellStr];
-        [self addCellText:nil]; //刷新
     }
 }
-
-#pragma mark – RFQuiltLayoutDelegate
-
-- (CGSize) blockSizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *str = [_dataArray objectAtIndex:indexPath.row];
-    NSString *wordStr = [NSString stringWithFormat:@".%@.",str];
-    NSInteger w = wordStr.length;
-    return CGSizeMake(w, 1);
-}
-
-- (UIEdgeInsets)insetsForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return UIEdgeInsetsMake(2, 2, 2, 2);
-}
-
-
-
 
 #pragma mark - commitRequest
 
@@ -274,11 +211,12 @@
         [MEDProgressHUD dismissHUDErrorTitle:@"您还未选择任何症状"];
         return;
     }
+
     [MEDDataRequest POST:MED_INTELLECT baseURL:baseUrl params:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
 
         [MEDProgressHUD dismissHUD];
         NSLog(@"%@",responseObject[@"data"]);
-        NSArray *parameterArray = @[responseObject[@"data"],_dataArray];
+        NSArray *parameterArray = @[responseObject[@"data"],self->_dataArray];
 
         //        [[[NSNotificationCenter defaultCenter]postNotificationName:@"pushToGuidanceSuggest" object:parameterArray];
 

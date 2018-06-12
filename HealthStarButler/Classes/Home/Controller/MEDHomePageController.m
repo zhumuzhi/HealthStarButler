@@ -54,8 +54,31 @@
     [self getUserInfo];
     
     [self configTableView];
+
+    [self getVersionNum];
 }
 
+- (void)getVersionNum {
+
+    NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/健康之星管家/id988708407?mt=8"];
+
+    // 任务默认都是挂起的
+    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+
+        NSLog(@"response: %@",response);
+        NSLog(@"data: %@",data);
+
+//        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+
+//        NSLog(@"%@",json);
+
+//        NSArray *array = response[@"results"];
+//        NSDictionary *dict = [array lastObject];
+//        NSLog(@"当前版本为:%@", dict[@"version"]);
+
+    }] resume];
+
+}
 
 
 - (void)kovTest {

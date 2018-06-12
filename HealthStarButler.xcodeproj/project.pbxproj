@@ -12,7 +12,7 @@
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
 		5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */; };
-		5D201DA320CA30D4009007D9 /* JFTagListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA120CA30D4009007D9 /* JFTagListView.m */; };
+		5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */; };
 		5D201DA620CA5A1E009007D9 /* MEDTagTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA520CA5A1E009007D9 /* MEDTagTool.m */; };
 		5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */; };
 		5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB320CA6D14009007D9 /* MEDDepartmentVC.m */; };
@@ -174,8 +174,8 @@
 		5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHealthPlanCell.m; sourceTree = "<group>"; };
 		5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTestTagController.h; sourceTree = "<group>"; };
 		5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTestTagController.m; sourceTree = "<group>"; };
-		5D201DA120CA30D4009007D9 /* JFTagListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFTagListView.m; sourceTree = "<group>"; };
-		5D201DA220CA30D4009007D9 /* JFTagListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFTagListView.h; sourceTree = "<group>"; };
+		5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGuidanceTagView.m; sourceTree = "<group>"; };
+		5D201DA220CA30D4009007D9 /* MEDGuidanceTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDGuidanceTagView.h; sourceTree = "<group>"; };
 		5D201DA420CA5A1E009007D9 /* MEDTagTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTagTool.h; sourceTree = "<group>"; };
 		5D201DA520CA5A1E009007D9 /* MEDTagTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTagTool.m; sourceTree = "<group>"; };
 		5D201DB020CA6D14009007D9 /* MEDDepartmentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDDepartmentVC.h; sourceTree = "<group>"; };
@@ -1296,8 +1296,8 @@
 			children = (
 				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
 				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
-				5D201DA220CA30D4009007D9 /* JFTagListView.h */,
-				5D201DA120CA30D4009007D9 /* JFTagListView.m */,
+				5D201DA220CA30D4009007D9 /* MEDGuidanceTagView.h */,
+				5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */,
 				5D201DA420CA5A1E009007D9 /* MEDTagTool.h */,
 				5D201DA520CA5A1E009007D9 /* MEDTagTool.m */,
 			);
@@ -1817,7 +1817,7 @@
 				5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */,
 				5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */,
 				5DCE9B0F20C6682100512610 /* TZPhotoPickerController.m in Sources */,
-				5D201DA320CA30D4009007D9 /* JFTagListView.m in Sources */,
+				5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */,
 				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
 			);
