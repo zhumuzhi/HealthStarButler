@@ -38,10 +38,8 @@
 {
     self=[super initWithFrame:frame];
     if (self) {
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCellText:) name:@"removeSymptomCell" object:nil];
 
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(leftTableViewSelectWithIndex:) name:@"removeSelect" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(removeCellText:) name:@"removeSymptomCell" object:nil];
 
         _block = selectIndex;
         //左边选中文字颜色
@@ -165,7 +163,7 @@
     NSArray *rightArray5 = [NSArray arrayWithObjects:@"关节疼", @"皮肤黏膜出血", @"水肿", @"肿块", @"疼痛", @"感觉消退", nil];
     
     //    11111111111
-    NSIndexPath *path;
+    NSIndexPath *path; // 右侧table对应的cell IndexPath
     if ([cellTitle isEqualToString:rightArray1[0]]) {
         [MEDAllBodyModel sharedAllBodyModel].faRe = YES;
         path = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -285,7 +283,7 @@
     }
 
 
-    NSIndexPath *leftpath;
+    NSIndexPath *leftpath; // 左侧table对应的cell IndexPath
     if ([rightArray1 containsObject:cellTitle]) {
         leftpath = [NSIndexPath indexPathForRow:0 inSection:0];
     }else if ([rightArray2 containsObject:cellTitle]) {
@@ -297,27 +295,33 @@
     }else if ([rightArray5 containsObject:cellTitle]) {
         leftpath = [NSIndexPath indexPathForRow:4 inSection:0];
     }
+
+    // 左侧选择
     if ([_leftTablew.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
         [_leftTablew.delegate tableView:_leftTablew didSelectRowAtIndexPath:leftpath];
     }
 
-    MEDRightTableViewCell *cell = [_rightTablew dequeueReusableCellWithIdentifier:RIGHT_TABLE];
-    
-    [self selectTable:_rightTablew andCell:cell andIndexPath:path];
-    
-    NSArray *cellArr = [_rightTablew visibleCells];
+    if ([_rightTablew.delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+        [_rightTablew.delegate tableView:_rightTablew didSelectRowAtIndexPath:path];
+    }
 
-    NSInteger num = 0;
-    
-    for (MEDRightTableViewCell *cellcell in cellArr) {
-        if ([cellcell.title.text isEqualToString:cellTitle]) {
-            num++;
-        }
-    }
-    
-    if (num != 0) {
-        [_rightTablew reloadData];
-    }
+//    拿到右侧cell
+//    MEDRightTableViewCell *cell = [_rightTablew dequeueReusableCellWithIdentifier:RIGHT_TABLE];
+//    // 根据右侧cell让tableView选择cell
+//    [self selectTable:_rightTablew andCell:cell andIndexPath:path];  // 问题应该出在这里
+//    [_rightTablew reloadData];
+
+    // 拿到右侧的所有可见cell
+//    NSArray *cellArr = [_rightTablew visibleCells];
+//    NSInteger num = 0;
+//    for (MEDRightTableViewCell *cellcell in cellArr) {
+//        if ([cellcell.title.text isEqualToString:cellTitle]) {
+//            num++;
+//        }
+//    }
+//    if (num != 0) {
+//        [_rightTablew reloadData];
+//    }
 }
 
 #pragma mark - TableViewDataSource
@@ -830,7 +834,7 @@
         
          if (!cell.selectedImage.hidden) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"selectSymptomCell" object:selectedCell];
-//             MYLog(@"SymRTable-selectedCell--:%@",selectedCell);
+            NSLog(@"SymRTable-selectedCell--:%@",selectedCell);
          }
         [self.rightTablew reloadData];
     }
@@ -856,7 +860,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.faRe = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -869,7 +873,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.shiMian = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -882,7 +886,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.chouChu = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -895,7 +899,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.shiYuBuZhen = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -908,7 +912,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.faLiXuHan = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -921,7 +925,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _allBodyModel.huangDan = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -944,7 +948,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.touJingShuiZhong = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -957,7 +961,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.touTong = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -970,7 +974,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.keSuKeTan = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                         
@@ -984,7 +988,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.xuanYun = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -997,7 +1001,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.keXue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1010,7 +1014,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.yunJue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1023,7 +1027,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _headModel.faGan = YES;
-                            if (cell)
+                            ////if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1046,7 +1050,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.xiongTong = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1059,7 +1063,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.xiongBupiFuNianMoChuXue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1072,7 +1076,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.huxiKunNan = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1085,7 +1089,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.ouXue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1098,7 +1102,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.xinJi = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1111,7 +1115,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.xiongBuZhongKuai = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1124,7 +1128,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.eXinOuTu = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1137,7 +1141,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _chestModel.yaoBeiTeng = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1160,7 +1164,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.bianXue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1173,7 +1177,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.xueNiao = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1186,7 +1190,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.fuTeng = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1199,7 +1203,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.niaoPinNiaoJi = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1212,7 +1216,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.fuXie = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1225,7 +1229,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.shaoNiaoWuNiao = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1238,7 +1242,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.bianMi = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1251,7 +1255,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.duoNiao = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1264,7 +1268,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _bellyModel.fuBuZhongKuai = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1287,7 +1291,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.guanJieTeng = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1300,7 +1304,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.SiZhiPiFuNianMoChuXue = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1313,7 +1317,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.siZhishuiZhong = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1326,7 +1330,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.siZhiZhongKuai = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1339,7 +1343,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.siZhiTengTong = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }
@@ -1352,7 +1356,7 @@
                             [selectedCell removeObject:cell.title.text];
                         } else {
                             _limbsModel.ganJueXiaoTui = YES;
-                            if (cell)
+                            //if (cell)
                             [selectedCell addObject:cell.title.text];
                         }
                     }

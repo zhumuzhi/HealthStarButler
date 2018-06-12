@@ -23,7 +23,6 @@
 #define symptomBackViewH 30
 #define collectionPad 30
 
-
 @interface MEDTreatmentGuideController ()<MEDGuidanceTagDelegate>
 {
     UITableView *_tableView;
@@ -32,11 +31,10 @@
     CGFloat _maxHeight;
 }
 //@property (strong, nonatomic)  UICollectionView *collectionView;
-@property (nonatomic) NSMutableArray* dataArray;
 @property (nonatomic) float height;
-
-@property (nonatomic, strong) MEDGuidanceTagView *tagListView;
-@property (assign, nonatomic) TagStateType     tagStateType; //标签的模式状态（显示、选择、编辑）
+@property (nonatomic) NSMutableArray* dataArray; // 标签数组
+@property (nonatomic, strong) MEDGuidanceTagView  *tagListView; //标签页面
+@property (assign, nonatomic) TagStateType     tagStateType; //标签的模式状态(编辑)
 
 @end
 
@@ -51,13 +49,6 @@
     self.view.backgroundColor = MEDGrayColor(243);
     [self configNavigation];
 
-
-    [self initTwoTableView];
-    [_dataArray removeAllObjects];
-
-    [self initModel];
-    [self initConlectionView];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addCellText:) name:@"selectSymptomCell" object:nil];
 }
 
@@ -65,9 +56,9 @@
     for (UIView *subview in self.view.subviews) {
         [subview removeFromSuperview];
     }
-    _height = 20;
-    [self initTwoTableView];
+    self.twoTable = nil;
     [_dataArray removeAllObjects];
+    [self initTwoTableView];
     [self initModel];
     [self initConlectionView];
 }
@@ -97,17 +88,6 @@
         NSMutableArray *arr = (NSMutableArray*)obj;
         _dataArray = arr;
     }
-//    if (_tagListView.frame.size.height<=30) {
-//        _height = 56;
-//    } else {
-//        if ((_maxHeight)>=30) {
-//            _height = (_maxHeight+28) ;
-//        }
-//    }
-//
-//    if (_dataArray.count == 0) {
-//        _height = 20;
-//    }
 //    [_tagListView reloadData:_dataArray];
     [_tagListView removeFromSuperview];
     [self initConlectionView];
@@ -119,11 +99,8 @@
 - (void)configNavigation {
     UIButton *commitButton = [[UIButton alloc] init];
     commitButton.frame = CGRectMake(SCREEN_WIDTH - 60, 0, 44, 44);
-    //[addButton.titleLabel setFont:sysFont(14)];
     [commitButton setTitle:@"提交" forState:UIControlStateNormal];
     [commitButton addTarget:self action:@selector(commitClick) forControlEvents:UIControlEventTouchUpInside];
-
-//    [commitButton addClickAction:@selector(commitClick) WithTarget:self];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:commitButton];
 }
 
@@ -140,7 +117,7 @@
     [self.tagListView creatUI:_dataArray];   //传入Tag数组初始化界面
     self.tagListView.tagArrkey = @"name";   //如果传的是字典的话，那么key为必传得
     self.tagListView.is_can_addTag = NO;    //如果是要有最后一个按钮是添加按钮的情况，那么为Yes
-    self.tagListView.tagCornerRadius = 10;  //标签圆角的大小，默认10
+//    self.tagListView.tagCornerRadius = 10;  //标签圆角的大小，默认10
     self.tagListView.tagStateType = self.tagStateType;  //标签模式，默认显示模式
     //刷新数据
     [self.tagListView reloadData:_dataArray andTime:0];
@@ -177,16 +154,22 @@
 
 #pragma mark- 删除Tag
 -(void)deleteTagRequest:(NSInteger)index{
-    NSLog(@"tag代理点击事件，点击第%ld个",index);
+    NSMutableArray *tempArray = self.dataArray;
+    NSLog(@"删除前-标签数据:%@", tempArray);
+    NSLog(@"删除第%ld个",index);
+    NSString *removeCellStr;
     if (self.dataArray.count>0) {
-        NSString *removeCellStr = [self.dataArray objectAtIndex:index];
+        removeCellStr = [self.dataArray objectAtIndex:index];
         [self.dataArray removeObjectAtIndex:index];
         [self.tagListView reloadData:self.dataArray andTime:0];
         //刷新界面，删除选中View与table，根据dataArray数据重构页面
         [self addCellText:nil];
-        // 通知Table根据疾病str移除对应选中cell
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"removeSymptomCell" object:removeCellStr];
     }
+    NSLog(@"通知发送前-标签数据:%@", tempArray);
+    // 通知Table根据疾病str移除对应选中cell
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"removeSymptomCell" object:removeCellStr];
+    NSLog(@"通知发送后-标签数据:%@", tempArray);
+    NSLog(@"删除后-标签数据:%@", tempArray);
 }
 
 #pragma mark - commitRequest
@@ -212,14 +195,12 @@
         return;
     }
 
+    MEDWeakSelf(self);
     [MEDDataRequest POST:MED_INTELLECT baseURL:baseUrl params:parameter success:^(NSURLSessionDataTask *task, id responseObject) {
 
         [MEDProgressHUD dismissHUD];
         NSLog(@"%@",responseObject[@"data"]);
-        NSArray *parameterArray = @[responseObject[@"data"],self->_dataArray];
-
-        //        [[[NSNotificationCenter defaultCenter]postNotificationName:@"pushToGuidanceSuggest" object:parameterArray];
-
+        NSArray *parameterArray = @[responseObject[@"data"],weakself.dataArray];
         [self pushToGuidanceSuggest:parameterArray];
 
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
@@ -298,7 +279,7 @@
     limbsModel.siZhiTengTong = NO;
     limbsModel.ganJueXiaoTui = NO;
 
-    [_dataArray removeAllObjects];
+//    [_dataArray removeAllObjects];
     [_twoTable.rightTablew reloadData];
     [_twoTable.leftTablew reloadData];
 }

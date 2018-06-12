@@ -138,8 +138,7 @@
             [self setHight:self andHight:weakself.tagView_height+Size_str.height + K_Tag_Bottom_Margin];
         }
         [self addSubview:tagLabel];
-        
-        
+
         //新增删除、添加功能
         if (self.is_can_addTag&&idx==self.tagArr.count-1) {//能添加状态&&最后一个-->(进入添加tag界面不用显示删除图片)
             
@@ -257,13 +256,11 @@
         return;
     }
     
-    
     if (self.tagStateType == TagStateEdit) {
-        NSLog(@"编辑类型的Tag");
+        //NSLog(@"编辑类型的Tag");
         [self.delegate tagList:self clickedButtonAtIndex:tagIndex];
     }
 }
-
 
 - (CGSize)sizeFromText:(NSString *)text withFrontSize:(CGFloat) fontSize{
 

@@ -1142,9 +1142,10 @@
 		5D829A842085D9D5001993B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D201DCB20CA6D2B009007D9 /* KDCustom */,
-				5D201DC920CA6D2B009007D9 /* MEDGuideLayout.h */,
-				5D201DCA20CA6D2B009007D9 /* MEDGuideLayout.m */,
+				5D201DA220CA30D4009007D9 /* MEDGuidanceTagView.h */,
+				5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */,
+				5D201DC820CA6D2B009007D9 /* MEDTwoTableView.h */,
+				5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */,
 				5D201DBD20CA6D2B009007D9 /* MEDLeftTableViewCell.h */,
 				5D201DBE20CA6D2B009007D9 /* MEDLeftTableViewCell.m */,
 				5D201DC420CA6D2B009007D9 /* MEDRightTableViewCell.h */,
@@ -1156,10 +1157,11 @@
 				5D201DC720CA6D2B009007D9 /* MEDSymptomTitleCell.h */,
 				5D201DBC20CA6D2A009007D9 /* MEDSymptomTitleCell.m */,
 				5D201DC220CA6D2B009007D9 /* MEDSymptomTitleCell.xib */,
-				5D201DC820CA6D2B009007D9 /* MEDTwoTableView.h */,
-				5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */,
+				5D201DC920CA6D2B009007D9 /* MEDGuideLayout.h */,
+				5D201DCA20CA6D2B009007D9 /* MEDGuideLayout.m */,
 				5D201DC320CA6D2B009007D9 /* RFQuiltLayout.h */,
 				5D201DC120CA6D2B009007D9 /* RFQuiltLayout.m */,
+				5D201DCB20CA6D2B009007D9 /* KDCustom */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1296,8 +1298,6 @@
 			children = (
 				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
 				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
-				5D201DA220CA30D4009007D9 /* MEDGuidanceTagView.h */,
-				5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */,
 				5D201DA420CA5A1E009007D9 /* MEDTagTool.h */,
 				5D201DA520CA5A1E009007D9 /* MEDTagTool.m */,
 			);
