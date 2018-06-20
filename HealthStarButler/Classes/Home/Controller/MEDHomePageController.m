@@ -16,6 +16,8 @@
 #import "MEDHomeLifeHabitController.h"   //生活习惯
 /** 监测Cell */
 #import "MEDHomeMonitorCell.h"
+#import "MEDMonitorController.h"
+
 /** 饮食Cell */
 #import "MEDHomeFoodPlanCell.h"
 #import "MEDFeedBackModel.h"
@@ -27,6 +29,7 @@
 // 测试类
 #import "TDTouchID.h" //指纹测试
 #import "MEDTestTagController.h" //标签页面测试
+
 
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
@@ -67,15 +70,6 @@
 
         NSLog(@"response: %@",response);
         NSLog(@"data: %@",data);
-
-//        id json = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-
-//        NSLog(@"%@",json);
-
-//        NSArray *array = response[@"results"];
-//        NSDictionary *dict = [array lastObject];
-//        NSLog(@"当前版本为:%@", dict[@"version"]);
-
     }] resume];
 
 }
@@ -315,8 +309,8 @@
         {
             NSLog(@"监测Cell");
             /** 指纹验证测试 */
-            [self touchVerification];
-            
+//            [self touchVerification];
+
         }
             break;
         case 2:
@@ -379,10 +373,10 @@
 /** 跳转至监测cell相关Controller */
 -(void)pushToMonitorControllerWihtTag:(NSInteger)btnTag
 {
-    if (btnTag == 0) {
+    if (btnTag == 7) {
         [self touchVerification];
     }else {
-        NSArray *controllers = @[[MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class],  [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class], [MEDCompanyRankingController class]];
+        NSArray *controllers = @[[MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
         Class controller = controllers[btnTag];
         UIViewController *viewController = [[controller alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];

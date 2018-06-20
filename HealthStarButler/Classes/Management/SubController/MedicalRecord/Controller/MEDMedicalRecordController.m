@@ -233,7 +233,7 @@
 }
 
 - (void)addBtnClick {
-//    MEDLogFunc;
+//    NSLogFunc;
     if ([self.selectedSign integerValue] == 0) {      //诊疗记录
         NSLog(@"跳转到添加诊疗记录");
         

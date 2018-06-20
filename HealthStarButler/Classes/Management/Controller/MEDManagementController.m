@@ -122,7 +122,7 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 #pragma mark - UICollectionViewDataSource
 // 返回Section的个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    //    MEDLog(@"一共返回%ld组数据", self.collectionData.count);
+    //    NSLog(@"一共返回%ld组数据", self.collectionData.count);
     return self.collectionData.count;
 }
 

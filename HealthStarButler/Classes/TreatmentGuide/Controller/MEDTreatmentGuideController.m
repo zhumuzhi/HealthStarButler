@@ -8,15 +8,14 @@
 
 #import "MEDTreatmentGuideController.h"
 
-#import "MEDGuidanceVC.h"
-#import "RFQuiltLayout.h"
+//#import "RFQuiltLayout.h"
+//#import "MEDSymptomCell.h"
+//#import "MEDSymptomTitleCell.h"
 
-#import "MEDSymptomCell.h"
-#import "MEDSymptomTitleCell.h"
 #import "MEDAllBodyModel.h"
-#import "MEDTwoTableView.h"
-
 #import "MEDGuidanceTagView.h"
+#import "MEDGuidanceVC.h"
+
 
 #define Margin 5
 #define LeftTableHW 80
