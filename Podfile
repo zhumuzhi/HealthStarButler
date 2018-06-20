@@ -22,8 +22,12 @@ target 'HealthStarButler' do
  # HUD
  pod 'SVProgressHUD', '~> 2.2.5'
  
+ pod 'WebViewJavascriptBridge'
+ 
+ # 友盟
  pod 'UMCCommon'
  pod 'UMCAnalytics'
  pod 'UMCSecurityPlugins'
+
  
 end

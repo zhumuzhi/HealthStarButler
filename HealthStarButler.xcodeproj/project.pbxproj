@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
+		5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */; };
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
@@ -180,6 +181,8 @@
 /* Begin PBXFileReference section */
 		0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.debug.xcconfig"; sourceTree = "<group>"; };
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDWebTestController.h; sourceTree = "<group>"; };
+		5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDWebTestController.m; sourceTree = "<group>"; };
 		5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeMonitorCell.h; sourceTree = "<group>"; };
 		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeFoodPlanCell.h; sourceTree = "<group>"; };
@@ -495,6 +498,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D03A44820DA6B420072CEC7 /* WebTest */ = {
+			isa = PBXGroup;
+			children = (
+				5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */,
+				5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */,
+			);
+			path = WebTest;
+			sourceTree = "<group>";
+		};
 		5D1AC62B209AB9D500FB16C9 /* MonitorCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1417,6 +1429,7 @@
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D03A44820DA6B420072CEC7 /* WebTest */,
 				5D69056720D9FB12002BBD69 /* MEDMonitorController */,
 				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
 				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
@@ -1670,7 +1683,6 @@
 				5D829A172085C7D1001993B6 /* Sources */,
 				5D829A182085C7D1001993B6 /* Frameworks */,
 				5D829A192085C7D1001993B6 /* Resources */,
-				68C15FD6DDB7DB2E9F430D81 /* [CP] Embed Pods Frameworks */,
 				27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1787,21 +1799,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68C15FD6DDB7DB2E9F430D81 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE589E07E4F36B2C354A5F3F /* [CP] Check Pods Manifest.lock */ = {
@@ -1934,6 +1931,7 @@
 				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
+				5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
 				5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */,
 				5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */,

@@ -16,7 +16,8 @@
 #import "MEDHomeLifeHabitController.h"   //生活习惯
 /** 监测Cell */
 #import "MEDHomeMonitorCell.h"
-#import "MEDMonitorController.h"
+#import "MEDMonitorController.h" //监测图表
+#import "MEDWebTestController.h"
 
 /** 饮食Cell */
 #import "MEDHomeFoodPlanCell.h"
@@ -376,7 +377,7 @@
     if (btnTag == 7) {
         [self touchVerification];
     }else {
-        NSArray *controllers = @[[MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
+        NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDMonitorController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
         Class controller = controllers[btnTag];
         UIViewController *viewController = [[controller alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];

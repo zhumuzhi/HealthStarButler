@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CDA53DBF78E4362A86B6679C3077C317"
-               BlueprintName = "Pods-HealthStarButler"
+               BlueprintIdentifier = "CC6FD962C5081B1AA5ADEAE568F9EF7C"
+               BlueprintName = "WebViewJavascriptBridge"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-HealthStarButler.a">
+               BuildableName = "libWebViewJavascriptBridge.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

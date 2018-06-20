@@ -26,6 +26,7 @@ PODS:
     - UMCCommon
   - UMCCommon (1.5.0)
   - UMCSecurityPlugins (1.0.6)
+  - WebViewJavascriptBridge (6.0.3)
   - WRNavigationBar (1.2.0)
 
 DEPENDENCIES:
@@ -39,7 +40,23 @@ DEPENDENCIES:
   - UMCAnalytics
   - UMCCommon
   - UMCSecurityPlugins
+  - WebViewJavascriptBridge
   - WRNavigationBar (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CYLTabBarController
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - UMCAnalytics
+    - UMCCommon
+    - UMCSecurityPlugins
+    - WebViewJavascriptBridge
+    - WRNavigationBar
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -52,8 +69,9 @@ SPEC CHECKSUMS:
   UMCAnalytics: 4667788559a72f2fa5077117d1b8802a3b6eb6bb
   UMCCommon: 82d21f4bb9532a5472cc533bbd8ed48aff376a14
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
 
-PODFILE CHECKSUM: 74561c9a70cdd5368253c0e08bdc81108d58409e
+PODFILE CHECKSUM: 4213398462bd99e7503df760213c0997953c357a
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
