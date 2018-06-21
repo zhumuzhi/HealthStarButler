@@ -47,6 +47,13 @@
 		5D27454620DB460A00844B6E /* ShowDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454520DB460A00844B6E /* ShowDemoController.m */; };
 		5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */; };
 		5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */; };
+		5D27456E20DB985F00844B6E /* MEDChangeNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27455A20DB985F00844B6E /* MEDChangeNameController.m */; };
+		5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27455B20DB985F00844B6E /* MEDPersonalData.m */; };
+		5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456120DB985F00844B6E /* MEDTPersonaliconCell.m */; };
+		5D27457220DB985F00844B6E /* MEDPersonalDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456420DB985F00844B6E /* MEDPersonalDataModel.m */; };
+		5D27457320DB985F00844B6E /* MEDInputAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456620DB985F00844B6E /* MEDInputAlertView.m */; };
+		5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456920DB985F00844B6E /* ValuePickerView.m */; };
+		5D27457620DB985F00844B6E /* MEDPersonalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456A20DB985F00844B6E /* MEDPersonalPickerView.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -248,6 +255,20 @@
 		5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDMineHeadView.m; sourceTree = "<group>"; };
 		5D27454A20DB76BF00844B6E /* MEDClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDClearCacheCell.h; sourceTree = "<group>"; };
 		5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDClearCacheCell.m; sourceTree = "<group>"; };
+		5D27455A20DB985F00844B6E /* MEDChangeNameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDChangeNameController.m; sourceTree = "<group>"; };
+		5D27455B20DB985F00844B6E /* MEDPersonalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPersonalData.m; sourceTree = "<group>"; };
+		5D27455D20DB985F00844B6E /* MEDChangeNameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDChangeNameController.h; sourceTree = "<group>"; };
+		5D27455E20DB985F00844B6E /* MEDPersonalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDPersonalData.h; sourceTree = "<group>"; };
+		5D27456020DB985F00844B6E /* MEDTPersonaliconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTPersonaliconCell.h; sourceTree = "<group>"; };
+		5D27456120DB985F00844B6E /* MEDTPersonaliconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTPersonaliconCell.m; sourceTree = "<group>"; };
+		5D27456320DB985F00844B6E /* MEDPersonalDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDPersonalDataModel.h; sourceTree = "<group>"; };
+		5D27456420DB985F00844B6E /* MEDPersonalDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPersonalDataModel.m; sourceTree = "<group>"; };
+		5D27456620DB985F00844B6E /* MEDInputAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDInputAlertView.m; sourceTree = "<group>"; };
+		5D27456720DB985F00844B6E /* MEDPersonalPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDPersonalPickerView.h; sourceTree = "<group>"; };
+		5D27456920DB985F00844B6E /* ValuePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValuePickerView.m; sourceTree = "<group>"; };
+		5D27456A20DB985F00844B6E /* MEDPersonalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPersonalPickerView.m; sourceTree = "<group>"; };
+		5D27456B20DB985F00844B6E /* MEDInputAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDInputAlertView.h; sourceTree = "<group>"; };
+		5D27456D20DB985F00844B6E /* ValuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuePickerView.h; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -579,6 +600,59 @@
 				5D201DDA20CA6D2B009007D9 /* circle_outline_pressed.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		5D27455720DB985F00844B6E /* MEDPersonalData */ = {
+			isa = PBXGroup;
+			children = (
+				5D27455820DB985F00844B6E /* Controller */,
+				5D27455F20DB985F00844B6E /* Cell */,
+				5D27456220DB985F00844B6E /* Model */,
+				5D27456520DB985F00844B6E /* View */,
+			);
+			path = MEDPersonalData;
+			sourceTree = "<group>";
+		};
+		5D27455820DB985F00844B6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D27455E20DB985F00844B6E /* MEDPersonalData.h */,
+				5D27455B20DB985F00844B6E /* MEDPersonalData.m */,
+				5D27455D20DB985F00844B6E /* MEDChangeNameController.h */,
+				5D27455A20DB985F00844B6E /* MEDChangeNameController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D27455F20DB985F00844B6E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5D27456020DB985F00844B6E /* MEDTPersonaliconCell.h */,
+				5D27456120DB985F00844B6E /* MEDTPersonaliconCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5D27456220DB985F00844B6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D27456320DB985F00844B6E /* MEDPersonalDataModel.h */,
+				5D27456420DB985F00844B6E /* MEDPersonalDataModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D27456520DB985F00844B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D27456720DB985F00844B6E /* MEDPersonalPickerView.h */,
+				5D27456A20DB985F00844B6E /* MEDPersonalPickerView.m */,
+				5D27456D20DB985F00844B6E /* ValuePickerView.h */,
+				5D27456920DB985F00844B6E /* ValuePickerView.m */,
+				5D27456B20DB985F00844B6E /* MEDInputAlertView.h */,
+				5D27456620DB985F00844B6E /* MEDInputAlertView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D4A47F6208F0457007DAD29 /* UserLogin */ = {
@@ -1401,6 +1475,7 @@
 		5DBD2C9820A2E429008F902E /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D27455720DB985F00844B6E /* MEDPersonalData */,
 				5D27454420DB460A00844B6E /* ShowDemoController.h */,
 				5D27454520DB460A00844B6E /* ShowDemoController.m */,
 				5DBD2C9920A2E437008F902E /* healtKit */,
@@ -1849,6 +1924,7 @@
 				5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */,
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
 				5D69059620D9FB12002BBD69 /* MEDLineChartData.m in Sources */,
+				5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
@@ -1883,12 +1959,14 @@
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
 				5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */,
+				5D27457220DB985F00844B6E /* MEDPersonalDataModel.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
+				5D27457320DB985F00844B6E /* MEDInputAlertView.m in Sources */,
 				5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */,
 				5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */,
 				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
@@ -1924,6 +2002,7 @@
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
+				5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */,
 				5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */,
 				5D69059920D9FB12002BBD69 /* MEDMonitorHeaderView.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
@@ -1933,6 +2012,7 @@
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
 				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
+				5D27457620DB985F00844B6E /* MEDPersonalPickerView.m in Sources */,
 				5D201DF720CA6D2C009007D9 /* KDGoalBar.m in Sources */,
 				5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */,
 				5D201DBB20CA6D20009007D9 /* MEDAllBodyModel.m in Sources */,
@@ -1942,8 +2022,10 @@
 				5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
+				5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
+				5D27456E20DB985F00844B6E /* MEDChangeNameController.m in Sources */,
 				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,

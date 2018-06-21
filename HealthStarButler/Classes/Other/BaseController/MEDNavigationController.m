@@ -14,16 +14,6 @@
 
 @implementation MEDNavigationController
 
-//+ (void)initialize
-//{
-//    UINavigationBar *bar = [UINavigationBar appearance];
-//
-//    //修改标题字体颜色及大小
-//    [bar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:16],NSForegroundColorAttributeName:[UIColor colorWithRed:25 / 255.0 green:153 / 255.0 blue:24 / 255.0 alpha:1.0]}];
-//    //[bar setBackgroundImage:[UIImage imageNamed:@"home_nav"] forBarMetrics:0];
-//    //[bar setBarTintColor:[UIColor orangeColor]];
-//}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     

@@ -11,6 +11,8 @@
 #import "MEDMineHeadView.h"
 #import "MEDClearCacheCell.h"
 
+#import "MEDPersonalData.h" // 个人资料
+
 @interface MEDMineController ()<UITableViewDelegate , UITableViewDataSource>
 
 @property (nonatomic, weak) MEDMineHeadView *headView;
@@ -27,7 +29,11 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
 
 - (NSArray *)dataArray {
     if (!_dataArray) {
-        _dataArray = @[@"个人资料",@"我的设备",@"重置密码",@"清除缓存",@"意见反馈",@"关于"];
+        NSArray *tempArr1 = @[@"个人资料"];
+        NSArray *tempArr2 = @[@"我的设备"];
+        NSArray *tempArr3 = @[@"重置密码"];
+        NSArray *tempArr4 = @[@"清除缓存", @"意见反馈", @"关于"];
+        _dataArray = @[tempArr1,tempArr2,tempArr3,tempArr4];
     }
     return _dataArray;
 }
@@ -37,7 +43,7 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self navigationConfig];
+    [self configNavigation];
 
     [self getUserInfon];
 
@@ -45,20 +51,9 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
 
 #pragma mark - configUI
 /** Navigation */
-- (void)navigationConfig
+- (void)configNavigation
 {
-
-    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    rightButton.frame = CGRectMake(0, 0, 60, 44);
-    [rightButton setTitle:@"退出" forState:UIControlStateNormal];
-    [rightButton addTarget:self action:@selector(clickQuitButton) forControlEvents:UIControlEventTouchUpInside];
-
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
-    self.navigationItem.rightBarButtonItem = rightItem;
-
-    // 隐藏导航栏
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];//清空导航条的阴影线
+    [self wr_setNavBarBackgroundAlpha:0];
 }
 
 - (void)configUIWithModel:(MEDUserModel *)model {
@@ -77,43 +72,84 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.rowHeight = 50;
-    tableView.tableFooterView = [UIView new];
+
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - CGRectGetMaxY(self.tableView.frame))];
+    footerView.backgroundColor = MEDGrayColor(240);
+    // 退出按钮
+    UIButton *quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    quitButton.frame = CGRectMake(10, 20, SCREEN_WIDTH-20, 40);
+    quitButton.layer.masksToBounds = YES;
+    quitButton.layer.cornerRadius = 5;
+    quitButton.backgroundColor = MEDRGB(254, 86, 101);
+    quitButton.titleLabel.font = MEDSYSFont(18);
+    [quitButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [quitButton setTitle:@"退出登录" forState:UIControlStateNormal];
+    [quitButton addTarget:self action:@selector(clickQuitButton) forControlEvents:UIControlEventTouchUpInside];
+
+    [footerView addSubview:quitButton];
+
+    tableView.tableFooterView = footerView;
     [self.view addSubview:tableView];
     self.tableView = tableView;
 }
 
-
-
 #pragma mark --UITableViewDelegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataArray.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *rows = self.dataArray[section];
+    return rows.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == 3) {
-        return [tableView dequeueReusableCellWithIdentifier:MEDClearCacheCellId];
-    }else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"minecell"];
-        if (!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"minecell"];
-        }
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.font = MEDSYSFont(16);
-        cell.textLabel.textColor = MEDGrayColor(40);
-        cell.textLabel.textAlignment = NSTextAlignmentLeft;
-        cell.textLabel.text = self.dataArray[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"minecell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"minecell"];
+    }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.font = MEDSYSFont(16);
+    cell.textLabel.textColor = MEDGrayColor(40);
+    cell.textLabel.textAlignment = NSTextAlignmentLeft;
+    NSArray *rows = self.dataArray[indexPath.section];
 
+    if (indexPath.section == 3) {
+        if (indexPath.row == 0) { //缓存cell
+            return [tableView dequeueReusableCellWithIdentifier:MEDClearCacheCellId];
+        }else {
+
+            cell.textLabel.text = rows[indexPath.row];
+            return cell;
+        }
+    }else {
+        cell.textLabel.text = rows[indexPath.row];
         return cell;
     }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    if (indexPath.section == 0) {
+        MEDPersonalData *personal = [[MEDPersonalData alloc] init];
+        [self.navigationController pushViewController:personal animated:YES];
+    }
+
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headLine = [[UIView alloc] init];
+    headLine.backgroundColor = MEDGrayColor(240);
+    return headLine;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
 
 #pragma mark - 网络请求
 - (void)getUserInfon    {
