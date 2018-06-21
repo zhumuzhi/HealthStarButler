@@ -8,23 +8,14 @@
 
 #import "MEDMineController.h"
 #import "AppDelegate.h"
-#import "MEDHealthKitListController.h"
 
 @interface MEDMineController ()<UITableViewDelegate , UITableViewDataSource>
-/** 功能列表 */
-@property (nonatomic , strong)NSArray *nameList;
 
 @end
 
 @implementation MEDMineController
 
 #pragma mark - Lazy
--(NSArray *)nameList{
-    if (!_nameList) {
-        _nameList = @[@"HealtKitDemo展示"];
-    }
-    return _nameList;
-}
 
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
@@ -64,27 +55,23 @@
 
 
 #pragma mark --UITableViewDelegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.nameList.count;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    cell.textLabel.text = self.nameList[indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.row == 0) {
-        MEDHealthKitListController *list = [[MEDHealthKitListController alloc] init];
-        [self.navigationController pushViewController:list animated:YES];
-    }
-}
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//
+//}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+//    if (!cell) {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+//    }
+////    cell.textLabel.text = self.nameList[indexPath.row];
+//    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+//    return cell;
+//}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//
+//}
 
 #pragma mark - Event
 /** 点击退出 */
