@@ -60,6 +60,14 @@
     [self configTableView];
 
     [self getVersionNum];
+    
+    
+    NSArray *stringArray = [[NSArray alloc]initWithObjects:@"beijing",@"shanghai",@"guangzou",@"wuhan", nil];
+    NSString *string = @"ang";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",string];
+    NSLog(@"%@",[stringArray filteredArrayUsingPredicate:pred]);
+    
+    
 }
 
 - (void)getVersionNum {
@@ -135,8 +143,6 @@
     [self getPersonalScoreRank];
     /** 是否填写饮食日志 */
     [self isWriteFoodDateRequest];
-    
-    
 }
 
 /** 获取排名分数信息 */

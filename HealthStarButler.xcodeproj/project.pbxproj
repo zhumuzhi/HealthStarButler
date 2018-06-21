@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */; };
+		5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */; };
+		5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */; };
+		5D09A87020DBF17E0059FDD8 /* MEDShopCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */; };
+		5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */; };
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
@@ -193,6 +197,13 @@
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDWebTestController.h; sourceTree = "<group>"; };
 		5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDWebTestController.m; sourceTree = "<group>"; };
+		5D09A86620DBEC350059FDD8 /* MEDShopingCartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopingCartController.h; sourceTree = "<group>"; };
+		5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopingCartController.m; sourceTree = "<group>"; };
+		5D09A86C20DBF17E0059FDD8 /* MEDShopCartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopCartCell.h; sourceTree = "<group>"; };
+		5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopCartCell.m; sourceTree = "<group>"; };
+		5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MEDShopCartCell.xib; sourceTree = "<group>"; };
+		5D09A87120DBF8FD0059FDD8 /* MEDCircleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDCircleButton.h; sourceTree = "<group>"; };
+		5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDCircleButton.m; sourceTree = "<group>"; };
 		5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeMonitorCell.h; sourceTree = "<group>"; };
 		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeFoodPlanCell.h; sourceTree = "<group>"; };
@@ -535,6 +546,44 @@
 				5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */,
 			);
 			path = WebTest;
+			sourceTree = "<group>";
+		};
+		5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A86920DBF1390059FDD8 /* Controller */,
+				5D09A86B20DBF14B0059FDD8 /* Model */,
+				5D09A86A20DBF1440059FDD8 /* View */,
+			);
+			path = MEDshoppingCart;
+			sourceTree = "<group>";
+		};
+		5D09A86920DBF1390059FDD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A86620DBEC350059FDD8 /* MEDShopingCartController.h */,
+				5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D09A86A20DBF1440059FDD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D09A86C20DBF17E0059FDD8 /* MEDShopCartCell.h */,
+				5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */,
+				5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */,
+				5D09A87120DBF8FD0059FDD8 /* MEDCircleButton.h */,
+				5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D09A86B20DBF14B0059FDD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5D1AC62B209AB9D500FB16C9 /* MonitorCell */ = {
@@ -1475,6 +1524,7 @@
 		5DBD2C9820A2E429008F902E /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart */,
 				5D27455720DB985F00844B6E /* MEDPersonalData */,
 				5D27454420DB460A00844B6E /* ShowDemoController.h */,
 				5D27454520DB460A00844B6E /* ShowDemoController.m */,
@@ -1856,6 +1906,7 @@
 				5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */,
 				5D201DF220CA6D2C009007D9 /* circle_outline@2x.png in Resources */,
 				5DCE9AFB20C6682100512610 /* MEDTreatmentRecordDescribeView.xib in Resources */,
+				5D09A87020DBF17E0059FDD8 /* MEDShopCartCell.xib in Resources */,
 				5D201DEF20CA6D2C009007D9 /* circle_ridge@2x.png in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
@@ -1930,6 +1981,7 @@
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
+				5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */,
 				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
 				5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */,
 				5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */,
@@ -1981,6 +2033,7 @@
 				5D69059520D9FB12002BBD69 /* ITDatePickerController.m in Sources */,
 				5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
 				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
@@ -2021,6 +2074,7 @@
 				5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */,
 				5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
+				5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */,
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,

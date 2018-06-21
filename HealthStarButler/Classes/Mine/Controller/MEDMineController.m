@@ -12,6 +12,8 @@
 #import "MEDClearCacheCell.h"
 
 #import "MEDPersonalData.h" // 个人资料
+#import "MEDShopingCartController.h" // 购物车测试
+
 
 @interface MEDMineController ()<UITableViewDelegate , UITableViewDataSource>
 
@@ -69,6 +71,7 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
     CGFloat tableVieH = CGRectGetMaxY(headView.frame);
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, tableVieH, SCREEN_WIDTH, SCREEN_HEIGHT - tableVieH) style:UITableViewStylePlain];
     [tableView registerClass:[MEDClearCacheCell class] forCellReuseIdentifier:MEDClearCacheCellId];
+    tableView.scrollEnabled = NO;
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.rowHeight = 50;
@@ -137,6 +140,9 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
     if (indexPath.section == 0) {
         MEDPersonalData *personal = [[MEDPersonalData alloc] init];
         [self.navigationController pushViewController:personal animated:YES];
+    }else {
+        MEDShopingCartController *CarVC = [[MEDShopingCartController alloc] init];
+        [self.navigationController pushViewController:CarVC animated:YES];
     }
 
 }
