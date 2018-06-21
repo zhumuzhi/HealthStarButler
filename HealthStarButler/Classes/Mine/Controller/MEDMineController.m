@@ -11,11 +11,57 @@
 
 @interface MEDMineController ()<UITableViewDelegate , UITableViewDataSource>
 
+{
+    /** 用户名 */
+    NSString *_userNameStr;
+    /** 用户头像url */
+    NSString *_photoUrlStr;
+    /** 用户性别标识 */
+    NSNumber *_personSex;
+}
+
+@property (nonatomic, weak) UIView *headView;
+@property (nonatomic, strong) UITableView *tableView;
+
 @end
 
 @implementation MEDMineController
 
 #pragma mark - Lazy
+
+- (UIView *)headView {
+
+    if (!_headView) {
+
+        //HeadView
+        UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/3)];
+        self.headView = headView;
+        //背景
+        UIImageView *backImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/3)];
+        backImage.image = [UIImage imageNamed:@"mine_Head"];
+        [self.headView addSubview:backImage];
+
+        // 头像
+        CGFloat iconW = 70;
+        CGFloat iconX = backImage.size.width - (iconW*0.5);
+        CGFloat iconY = backImage.size.height - (iconW*0.5);
+        UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(iconX, iconY, iconW, iconW)];
+        [backImage addSubview:icon];
+
+        // 用户名
+        CGSize userNameSize = [@"超长的以防不够用的用户名标题占位计算字符串" sizeWithFont:[UIFont systemFontOfSize:14]];
+
+        CGFloat userNameX = SCREEN_WIDTH/2 - userNameSize.width/2;
+        CGFloat userNameY = CGRectGetMaxY(icon.frame) + 10;
+        CGFloat usernameW = userNameSize.width;
+        CGFloat usernameH = userNameSize.height;
+
+        UILabel *userName = [[UILabel alloc] initWithFrame:CGRectMake(userNameX, userNameY, usernameW, usernameH)];
+        [backImage addSubview:userName];
+
+    }
+    return _headView;
+}
 
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
@@ -40,7 +86,6 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightItem;
 }
-
 
 - (void)setupUI {
     UITableView *tableView = [[UITableView alloc] init];
@@ -72,6 +117,63 @@
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 //
 //}
+
+#pragma mark - 网络请求
+- (void)getUserInfon    {
+    NSMutableDictionary * params =[NSMutableDictionary dictionary];
+    MEDUserModel *userModel = [MEDUserModel sharedUserModel];
+    if (userModel.uid != nil) {
+        [params setValue:userModel.uid forKey:@"uid"];
+    }
+
+    NSLog(@"个人中心网络请求的参数:%@",params);
+
+    [MEDDataRequest GET:MED_GET_USERINFO params:params success:^(NSURLSessionDataTask *task, id responseObject) {
+        //MYLog(@"个人中心-GET个人信息-返回数据:%@",responseObject);
+
+        if ([responseObject[@"status"] integerValue] == Status_OK) {
+            //            dispatch_async(dispatch_get_main_queue(), ^{
+            NSDictionary *dict = responseObject[@"data"];
+
+            NSLog(@"个人中心--生日信息:%@", dict[@"birthday"]);
+
+            //根据网络请求重新为用户名赋值
+            _userNameStr = [dict objectForKey:@"user_name"];
+            CGSize userNameLabelSize = [_userNameStr sizeWithFont:MEDSYSFont(14)];
+            CGFloat userNameLabelX = SCREEN_WIDTH/2 - userNameLabelSize.width/2;
+//            _userNameLable.text = _userNameStr;
+
+            //根据网络请求重新为用户头像赋值
+            _photoUrlStr = dict[@"userPhoto"];
+            NSString *photoStr = [NSString stringWithFormat:@"%@", _photoUrlStr];
+            NSString *_placeholdStr;
+            switch ([_personSex intValue]) {
+                case 1:
+                    _placeholdStr = @"txm";
+                    break;
+                case 2:
+                    _placeholdStr = @"txw";
+                    break;
+                default:
+                    _placeholdStr = @"tx1";
+                    break;
+            }
+//            [self.headBtn setBackgroundImage:[UIImage imageNamed:_photoUrlStr] forState:UIControlStateNormal];
+//
+//            if(![[photoStr class] isKindOfClass:[NSNull class]]){
+//                [self.headBtn sd_setImageWithURL:[NSURL URLWithString:photoStr] forState:UIControlStateNormal];
+//                [MEDUserModel sharedUserModel].userPhoto = photoStr;
+//            }
+
+            //            }
+            //            });
+        }
+    } fail:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"获取个人信息失败:%@",error);
+    }];
+}
+
+
 
 #pragma mark - Event
 /** 点击退出 */
