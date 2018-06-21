@@ -30,4 +30,54 @@
 }
 
 
+/** 判断字符串是否为空 */
++ (BOOL)isBlankString:(NSString *)string {
+
+    if (string == nil || string == NULL) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSDictionary class]]) {
+        return YES;
+    }
+    if ([string isKindOfClass:[NSString class]] == NO) {
+        return YES;
+    }
+    if ([[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
+        return YES;
+    }
+    if ([string isEqualToString:@""]) {
+        return YES;
+    }
+    if ([string isEqualToString:@"<null>"]) {
+        return YES;
+    }
+    return NO;
+}
+
+/** 计算文件大小 */
+- (unsigned long long)fileSize
+{
+    unsigned long long size = 0;
+    NSFileManager *mgr = [NSFileManager defaultManager];
+    BOOL isDirectory = NO;
+    BOOL exists = [mgr fileExistsAtPath:self isDirectory:&isDirectory];
+    if (!exists) return size;
+    if (isDirectory) {
+        NSDirectoryEnumerator *enumerator = [mgr enumeratorAtPath:self];
+        for (NSString *subpath in enumerator) {
+            NSString *fullSubpath = [self stringByAppendingPathComponent:subpath];
+            size += [mgr attributesOfItemAtPath:fullSubpath error:nil].fileSize;
+        }
+    } else {
+        size = [mgr attributesOfItemAtPath:self error:nil].fileSize;
+    }
+    return size;
+}
+
+
+
+
 @end

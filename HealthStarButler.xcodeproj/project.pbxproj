@@ -46,6 +46,7 @@
 		5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D25987F20D3892F001225C2 /* MEDSomeTool.m */; };
 		5D27454620DB460A00844B6E /* ShowDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454520DB460A00844B6E /* ShowDemoController.m */; };
 		5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */; };
+		5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -245,6 +246,8 @@
 		5D27454520DB460A00844B6E /* ShowDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowDemoController.m; sourceTree = "<group>"; };
 		5D27454720DB4DCE00844B6E /* MEDMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDMineHeadView.h; sourceTree = "<group>"; };
 		5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDMineHeadView.m; sourceTree = "<group>"; };
+		5D27454A20DB76BF00844B6E /* MEDClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDClearCacheCell.h; sourceTree = "<group>"; };
+		5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDClearCacheCell.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -1317,6 +1320,8 @@
 			children = (
 				5D27454720DB4DCE00844B6E /* MEDMineHeadView.h */,
 				5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */,
+				5D27454A20DB76BF00844B6E /* MEDClearCacheCell.h */,
+				5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1841,6 +1846,7 @@
 				5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */,
 				5D69058F20D9FB12002BBD69 /* MEDBloodPressureCell.m in Sources */,
 				5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */,
+				5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */,
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
 				5D69059620D9FB12002BBD69 /* MEDLineChartData.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,

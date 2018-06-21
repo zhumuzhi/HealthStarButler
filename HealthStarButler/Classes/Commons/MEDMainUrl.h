@@ -14,19 +14,19 @@
 //------------ @@@@@  ------------
 //测试环境
 //http://10.1.1.19/
-//#define MED_DOMAIN_REQUEST @"http://10.1.1.19/app/"
-//#define MED_EASYMOBE_REQUEST @"http://10.1.1.19/app/"
-//#define MED_BASE_REQUEST  @"http://10.1.1.19/"
-//#define MED_WEBSOCKET_Service @"ws://10.1.1.19/app/"
-//#define MED_CHAT_REQUEST @"http://10.1.1.19" //聊天查看图片专用
+#define MED_DOMAIN_REQUEST @"http://10.1.1.19/app/"
+#define MED_EASYMOBE_REQUEST @"http://10.1.1.19/app/"
+#define MED_BASE_REQUEST  @"http://10.1.1.19/"
+#define MED_WEBSOCKET_Service @"ws://10.1.1.19/app/"
+#define MED_CHAT_REQUEST @"http://10.1.1.19" //聊天查看图片专用
 
 //正式环境
-#define MED_DOMAIN_REQUEST @"http://api.mmednet.com/app/"
-#define MED_EASYMOBE_REQUEST @"http://api.mmednet.com/app/"
-#define MED_BASE_REQUEST  @"http://api.mmednet.com/"
-#define MED_WEBSOCKET_Service @"ws://api.mmednet.com/app/"
-//#define MED_CHAT_REQUEST @"http://api.mmednet.com" //聊天图片
-#define MED_CHAT_REQUEST @"http://res.mmednet.com" //聊天图片
+//#define MED_DOMAIN_REQUEST @"http://api.mmednet.com/app/"
+//#define MED_EASYMOBE_REQUEST @"http://api.mmednet.com/app/"
+//#define MED_BASE_REQUEST  @"http://api.mmednet.com/"
+//#define MED_WEBSOCKET_Service @"ws://api.mmednet.com/app/"
+////#define MED_CHAT_REQUEST @"http://api.mmednet.com" //聊天图片
+//#define MED_CHAT_REQUEST @"http://res.mmednet.com" //聊天图片
 
 //演示环境
 //#define MED_DOMAIN_REQUEST @"http://gz.service.mmednet.com/app/"
