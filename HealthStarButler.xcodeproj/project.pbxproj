@@ -48,6 +48,31 @@
 		5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DE020CA6D2C009007D9 /* MEDTwoTableView.m */; };
 		5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DE120CA6D2C009007D9 /* MEDSuggestCell.m */; };
 		5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D25987F20D3892F001225C2 /* MEDSomeTool.m */; };
+		5D267FBC20DD40E6006A42E2 /* drinks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FBB20DD40E5006A42E2 /* drinks.plist */; };
+		5D267FD520DD4106006A42E2 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FBE20DD4106006A42E2 /* 1.jpg */; };
+		5D267FD620DD4106006A42E2 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FBF20DD4106006A42E2 /* 10.jpg */; };
+		5D267FD720DD4106006A42E2 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC020DD4106006A42E2 /* 11.jpg */; };
+		5D267FD820DD4106006A42E2 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC120DD4106006A42E2 /* 12.jpg */; };
+		5D267FD920DD4106006A42E2 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC220DD4106006A42E2 /* 13.jpg */; };
+		5D267FDA20DD4106006A42E2 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC320DD4106006A42E2 /* 14.jpg */; };
+		5D267FDB20DD4106006A42E2 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC420DD4106006A42E2 /* 15.jpg */; };
+		5D267FDC20DD4106006A42E2 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC520DD4106006A42E2 /* 16.jpg */; };
+		5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC620DD4106006A42E2 /* 17.jpg */; };
+		5D267FDE20DD4106006A42E2 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC720DD4106006A42E2 /* 18.jpg */; };
+		5D267FDF20DD4106006A42E2 /* 19.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC820DD4106006A42E2 /* 19.png */; };
+		5D267FE020DD4106006A42E2 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FC920DD4106006A42E2 /* 2.jpg */; };
+		5D267FE120DD4106006A42E2 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCA20DD4106006A42E2 /* 20.jpg */; };
+		5D267FE220DD4106006A42E2 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCB20DD4106006A42E2 /* 21.jpg */; };
+		5D267FE320DD4106006A42E2 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCC20DD4106006A42E2 /* 22.jpg */; };
+		5D267FE420DD4106006A42E2 /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCD20DD4106006A42E2 /* 23.jpg */; };
+		5D267FE520DD4106006A42E2 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCE20DD4106006A42E2 /* 3.jpg */; };
+		5D267FE620DD4106006A42E2 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FCF20DD4106006A42E2 /* 4.jpg */; };
+		5D267FE720DD4106006A42E2 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD020DD4106006A42E2 /* 5.jpg */; };
+		5D267FE820DD4106006A42E2 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD120DD4106006A42E2 /* 6.jpg */; };
+		5D267FE920DD4106006A42E2 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD220DD4106006A42E2 /* 7.jpg */; };
+		5D267FEA20DD4106006A42E2 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD320DD4106006A42E2 /* 8.jpg */; };
+		5D267FEB20DD4106006A42E2 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD420DD4106006A42E2 /* 9.jpg */; };
+		5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D267FF020DD41C3006A42E2 /* MEDShopCartModel.m */; };
 		5D27454620DB460A00844B6E /* ShowDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454520DB460A00844B6E /* ShowDemoController.m */; };
 		5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */; };
 		5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */; };
@@ -260,6 +285,32 @@
 		5D201DE120CA6D2C009007D9 /* MEDSuggestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDSuggestCell.m; sourceTree = "<group>"; };
 		5D25987E20D3892F001225C2 /* MEDSomeTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDSomeTool.h; sourceTree = "<group>"; };
 		5D25987F20D3892F001225C2 /* MEDSomeTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDSomeTool.m; sourceTree = "<group>"; };
+		5D267FBB20DD40E5006A42E2 /* drinks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = drinks.plist; sourceTree = "<group>"; };
+		5D267FBE20DD4106006A42E2 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		5D267FBF20DD4106006A42E2 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		5D267FC020DD4106006A42E2 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		5D267FC120DD4106006A42E2 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		5D267FC220DD4106006A42E2 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		5D267FC320DD4106006A42E2 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		5D267FC420DD4106006A42E2 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		5D267FC520DD4106006A42E2 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		5D267FC620DD4106006A42E2 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		5D267FC720DD4106006A42E2 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		5D267FC820DD4106006A42E2 /* 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 19.png; sourceTree = "<group>"; };
+		5D267FC920DD4106006A42E2 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		5D267FCA20DD4106006A42E2 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		5D267FCB20DD4106006A42E2 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		5D267FCC20DD4106006A42E2 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		5D267FCD20DD4106006A42E2 /* 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23.jpg; sourceTree = "<group>"; };
+		5D267FCE20DD4106006A42E2 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		5D267FCF20DD4106006A42E2 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		5D267FD020DD4106006A42E2 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		5D267FD120DD4106006A42E2 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		5D267FD220DD4106006A42E2 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		5D267FD320DD4106006A42E2 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		5D267FD420DD4106006A42E2 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		5D267FEF20DD41C3006A42E2 /* MEDShopCartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopCartModel.h; sourceTree = "<group>"; };
+		5D267FF020DD41C3006A42E2 /* MEDShopCartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopCartModel.m; sourceTree = "<group>"; };
 		5D27454420DB460A00844B6E /* ShowDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowDemoController.h; sourceTree = "<group>"; };
 		5D27454520DB460A00844B6E /* ShowDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowDemoController.m; sourceTree = "<group>"; };
 		5D27454720DB4DCE00844B6E /* MEDMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDMineHeadView.h; sourceTree = "<group>"; };
@@ -582,6 +633,10 @@
 		5D09A86B20DBF14B0059FDD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5D267FEF20DD41C3006A42E2 /* MEDShopCartModel.h */,
+				5D267FF020DD41C3006A42E2 /* MEDShopCartModel.m */,
+				5D267FBD20DD4106006A42E2 /* shopCartSource */,
+				5D267FBB20DD40E5006A42E2 /* drinks.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -649,6 +704,36 @@
 				5D201DDA20CA6D2B009007D9 /* circle_outline_pressed.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		5D267FBD20DD4106006A42E2 /* shopCartSource */ = {
+			isa = PBXGroup;
+			children = (
+				5D267FBE20DD4106006A42E2 /* 1.jpg */,
+				5D267FBF20DD4106006A42E2 /* 10.jpg */,
+				5D267FC020DD4106006A42E2 /* 11.jpg */,
+				5D267FC120DD4106006A42E2 /* 12.jpg */,
+				5D267FC220DD4106006A42E2 /* 13.jpg */,
+				5D267FC320DD4106006A42E2 /* 14.jpg */,
+				5D267FC420DD4106006A42E2 /* 15.jpg */,
+				5D267FC520DD4106006A42E2 /* 16.jpg */,
+				5D267FC620DD4106006A42E2 /* 17.jpg */,
+				5D267FC720DD4106006A42E2 /* 18.jpg */,
+				5D267FC820DD4106006A42E2 /* 19.png */,
+				5D267FC920DD4106006A42E2 /* 2.jpg */,
+				5D267FCA20DD4106006A42E2 /* 20.jpg */,
+				5D267FCB20DD4106006A42E2 /* 21.jpg */,
+				5D267FCC20DD4106006A42E2 /* 22.jpg */,
+				5D267FCD20DD4106006A42E2 /* 23.jpg */,
+				5D267FCE20DD4106006A42E2 /* 3.jpg */,
+				5D267FCF20DD4106006A42E2 /* 4.jpg */,
+				5D267FD020DD4106006A42E2 /* 5.jpg */,
+				5D267FD120DD4106006A42E2 /* 6.jpg */,
+				5D267FD220DD4106006A42E2 /* 7.jpg */,
+				5D267FD320DD4106006A42E2 /* 8.jpg */,
+				5D267FD420DD4106006A42E2 /* 9.jpg */,
+			);
+			path = shopCartSource;
 			sourceTree = "<group>";
 		};
 		5D27455720DB985F00844B6E /* MEDPersonalData */ = {
@@ -1877,45 +1962,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */,
+				5D267FE820DD4106006A42E2 /* 6.jpg in Resources */,
+				5D267FE520DD4106006A42E2 /* 3.jpg in Resources */,
+				5D267FE320DD4106006A42E2 /* 22.jpg in Resources */,
 				5D201DED20CA6D2C009007D9 /* graph_year@2x.png in Resources */,
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
 				5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */,
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
+				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
 				5D201DEA20CA6D2C009007D9 /* circle_outline_pressed@2x.png in Resources */,
 				5D8207EE2099A50500B84C1E /* MEDCompanyRankCell.xib in Resources */,
+				5D267FE220DD4106006A42E2 /* 21.jpg in Resources */,
 				5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */,
 				5D829A2B2085C7D1001993B6 /* LaunchScreen.storyboard in Resources */,
+				5D267FE020DD4106006A42E2 /* 2.jpg in Resources */,
+				5D267FEB20DD4106006A42E2 /* 9.jpg in Resources */,
+				5D267FDB20DD4106006A42E2 /* 15.jpg in Resources */,
+				5D267FD720DD4106006A42E2 /* 11.jpg in Resources */,
 				5D201DF420CA6D2C009007D9 /* graph_week@2x.png in Resources */,
 				5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */,
 				5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */,
+				5D267FE720DD4106006A42E2 /* 5.jpg in Resources */,
 				5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */,
 				5D201DE620CA6D2C009007D9 /* MEDSymptomTitleCell.xib in Resources */,
 				5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */,
+				5D267FE620DD4106006A42E2 /* 4.jpg in Resources */,
+				5D267FDE20DD4106006A42E2 /* 18.jpg in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
+				5D267FD820DD4106006A42E2 /* 12.jpg in Resources */,
 				5D4A48252091AB03007DAD29 /* MEDManageHorizontalCell.xib in Resources */,
 				5D8208022099A50500B84C1E /* MEDHomeHabitSleepCell.xib in Resources */,
+				5D267FE420DD4106006A42E2 /* 23.jpg in Resources */,
 				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
 				5DCE9B0C20C6682100512610 /* TZImagePickerController.bundle in Resources */,
+				5D267FD620DD4106006A42E2 /* 10.jpg in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
+				5D267FBC20DD40E6006A42E2 /* drinks.plist in Resources */,
 				5D201DEC20CA6D2C009007D9 /* circle_thumb@2x.png in Resources */,
 				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
+				5D267FD520DD4106006A42E2 /* 1.jpg in Resources */,
 				5D201DF020CA6D2C009007D9 /* circle_thumb.png in Resources */,
 				5DBD2CA520A2E5A6008F902E /* HealthKitDetailViewController.xib in Resources */,
 				5D201DF220CA6D2C009007D9 /* circle_outline@2x.png in Resources */,
 				5DCE9AFB20C6682100512610 /* MEDTreatmentRecordDescribeView.xib in Resources */,
 				5D09A87020DBF17E0059FDD8 /* MEDShopCartCell.xib in Resources */,
+				5D267FE920DD4106006A42E2 /* 7.jpg in Resources */,
+				5D267FEA20DD4106006A42E2 /* 8.jpg in Resources */,
+				5D267FDF20DD4106006A42E2 /* 19.png in Resources */,
 				5D201DEF20CA6D2C009007D9 /* circle_ridge@2x.png in Resources */,
+				5D267FD920DD4106006A42E2 /* 13.jpg in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
+				5D267FDA20DD4106006A42E2 /* 14.jpg in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 				5DCE9AFC20C6682100512610 /* MEDTreatmentRecordDescCell.xib in Resources */,
 				5D201DEB20CA6D2C009007D9 /* circle_ridge.png in Resources */,
 				5D201DF120CA6D2C009007D9 /* graph_week.png in Resources */,
 				5D201DF320CA6D2C009007D9 /* circle_outline.png in Resources */,
+				5D267FDC20DD4106006A42E2 /* 16.jpg in Resources */,
 				5D201DF520CA6D2C009007D9 /* mzan@2x.png in Resources */,
 				5D201DEE20CA6D2C009007D9 /* graph_year.png in Resources */,
+				5D267FE120DD4106006A42E2 /* 20.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2045,6 +2154,7 @@
 				5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */,
 				5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */,
 				5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */,
+				5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,

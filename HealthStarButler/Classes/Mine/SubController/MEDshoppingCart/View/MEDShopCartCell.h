@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class MEDShopCartModel;
+
 @interface MEDShopCartCell : UITableViewCell
+
+@property (nonatomic, strong) MEDShopCartModel *goods;
+
 
 @end

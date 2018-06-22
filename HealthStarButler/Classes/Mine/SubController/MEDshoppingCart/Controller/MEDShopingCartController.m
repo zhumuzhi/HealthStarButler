@@ -8,6 +8,7 @@
 
 #import "MEDShopingCartController.h"
 #import "MEDShopCartCell.h"
+#import "MEDShopCartModel.h"
 
 static CGFloat toolBarH = 50;
 static NSString *cellID = @"wine";
@@ -16,12 +17,25 @@ static NSString *cellID = @"wine";
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) NSArray *goodArray;
+
 @end
 
 @implementation MEDShopingCartController
 
 
 #pragma mark - Lazy
+
+- (NSArray *)goodArray {
+    if (!_goodArray) {
+        //不好使-待查明
+//        _goodArray = [MEDShopCartModel mj_objectArrayWithFile:@"drinks.plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"drinks.plist" ofType:nil];
+        NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
+        _goodArray = [MEDShopCartModel mj_objectArrayWithKeyValuesArray:tempArray];
+    }
+    return _goodArray;
+}
 
 - (UITableView *)tableView
 {
@@ -55,17 +69,19 @@ static NSString *cellID = @"wine";
     UIView *toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - toolBarH - MED_TabbarSafeBottomMargin, SCREEN_WIDTH, toolBarH)];
     toolBar.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:toolBar];
+    
 }
 
 #pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.goodArray.count;
 }
 
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    MEDShopCartCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    cell.goods = self.goodArray[indexPath.row];
     return cell;
     
 }

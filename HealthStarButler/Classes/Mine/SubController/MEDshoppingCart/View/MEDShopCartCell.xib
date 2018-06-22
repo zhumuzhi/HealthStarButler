@@ -25,7 +25,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvE-9P-zwJ">
-                        <rect key="frame" x="60" y="10" width="35.5" height="17"/>
+                        <rect key="frame" x="60" y="10" width="135" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -74,6 +74,7 @@
                     <constraint firstItem="Zqe-u6-rUk" firstAttribute="bottom" secondItem="pmS-Ez-iQ8" secondAttribute="bottom" id="PwX-zZ-Udm"/>
                     <constraint firstItem="wRF-Bp-GWh" firstAttribute="leading" secondItem="rzj-Dk-vPd" secondAttribute="trailing" constant="10" id="QX3-0k-GnC"/>
                     <constraint firstItem="Zqe-u6-rUk" firstAttribute="top" secondItem="pmS-Ez-iQ8" secondAttribute="top" id="Ue4-bE-gri"/>
+                    <constraint firstItem="vrz-w3-Gzh" firstAttribute="leading" secondItem="TvE-9P-zwJ" secondAttribute="trailing" id="V1E-9C-QpL"/>
                     <constraint firstItem="TvE-9P-zwJ" firstAttribute="top" secondItem="rzj-Dk-vPd" secondAttribute="top" id="WNf-fZ-nLz"/>
                     <constraint firstAttribute="bottom" secondItem="rzj-Dk-vPd" secondAttribute="bottom" constant="10" id="Yzw-nM-2ga"/>
                     <constraint firstItem="vrz-w3-Gzh" firstAttribute="top" secondItem="pmS-Ez-iQ8" secondAttribute="top" id="ZfL-zT-jBH"/>
@@ -83,7 +84,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="goodImageView" destination="rzj-Dk-vPd" id="mWw-au-WDj"/>
                 <outlet property="minusButton" destination="vrz-w3-Gzh" id="c7F-Ji-IBw"/>
+                <outlet property="moneyLabel" destination="wRF-Bp-GWh" id="t0K-d3-b7o"/>
+                <outlet property="nameLabel" destination="TvE-9P-zwJ" id="IZR-KM-8yd"/>
                 <outlet property="plusButton" destination="pmS-Ez-iQ8" id="BRI-cC-5i0"/>
             </connections>
             <point key="canvasLocation" x="-179" y="-724"/>

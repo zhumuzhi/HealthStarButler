@@ -7,8 +7,13 @@
 //
 
 #import "MEDShopCartCell.h"
+#import "MEDShopCartModel.h"
 
 @interface MEDShopCartCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *goodImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moneyLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *plusButton;
 @property (weak, nonatomic) IBOutlet UIButton *minusButton;
@@ -16,6 +21,13 @@
 @end
 
 @implementation MEDShopCartCell
+
+- (void)setGoods:(MEDShopCartModel *)goods {
+    _goods = goods;
+    self.goodImageView.image = [UIImage imageNamed:goods.image];
+    self.nameLabel.text = goods.name;
+    self.moneyLabel.text = [NSString stringWithFormat:@"￥%@", goods.money];
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
