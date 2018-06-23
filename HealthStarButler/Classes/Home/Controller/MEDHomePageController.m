@@ -30,8 +30,7 @@
 // 测试类
 #import "TDTouchID.h" //指纹测试
 #import "MEDTestTagController.h" //标签页面测试
-
-
+#import "MEDShopingCartController.h" // 购物车测试
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -383,7 +382,7 @@
     if (btnTag == 7) {
         [self touchVerification];
     }else {
-        NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDMonitorController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
+        NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDShopingCartController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
         Class controller = controllers[btnTag];
         UIViewController *viewController = [[controller alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];

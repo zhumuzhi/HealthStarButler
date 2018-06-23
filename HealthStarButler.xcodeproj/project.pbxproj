@@ -73,6 +73,7 @@
 		5D267FEA20DD4106006A42E2 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD320DD4106006A42E2 /* 8.jpg */; };
 		5D267FEB20DD4106006A42E2 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D267FD420DD4106006A42E2 /* 9.jpg */; };
 		5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D267FF020DD41C3006A42E2 /* MEDShopCartModel.m */; };
+		5D267FF420DDD44C006A42E2 /* MEDShopCartToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D267FF320DDD44C006A42E2 /* MEDShopCartToolBar.m */; };
 		5D27454620DB460A00844B6E /* ShowDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454520DB460A00844B6E /* ShowDemoController.m */; };
 		5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454820DB4DCE00844B6E /* MEDMineHeadView.m */; };
 		5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27454B20DB76BF00844B6E /* MEDClearCacheCell.m */; };
@@ -311,6 +312,8 @@
 		5D267FD420DD4106006A42E2 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		5D267FEF20DD41C3006A42E2 /* MEDShopCartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopCartModel.h; sourceTree = "<group>"; };
 		5D267FF020DD41C3006A42E2 /* MEDShopCartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopCartModel.m; sourceTree = "<group>"; };
+		5D267FF220DDD44C006A42E2 /* MEDShopCartToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopCartToolBar.h; sourceTree = "<group>"; };
+		5D267FF320DDD44C006A42E2 /* MEDShopCartToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopCartToolBar.m; sourceTree = "<group>"; };
 		5D27454420DB460A00844B6E /* ShowDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowDemoController.h; sourceTree = "<group>"; };
 		5D27454520DB460A00844B6E /* ShowDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowDemoController.m; sourceTree = "<group>"; };
 		5D27454720DB4DCE00844B6E /* MEDMineHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDMineHeadView.h; sourceTree = "<group>"; };
@@ -624,6 +627,8 @@
 				5D09A86C20DBF17E0059FDD8 /* MEDShopCartCell.h */,
 				5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */,
 				5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */,
+				5D267FF220DDD44C006A42E2 /* MEDShopCartToolBar.h */,
+				5D267FF320DDD44C006A42E2 /* MEDShopCartToolBar.m */,
 				5D09A87120DBF8FD0059FDD8 /* MEDCircleButton.h */,
 				5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */,
 			);
@@ -734,6 +739,17 @@
 				5D267FD420DD4106006A42E2 /* 9.jpg */,
 			);
 			path = shopCartSource;
+			sourceTree = "<group>";
+		};
+		5D267FF520DE130A006A42E2 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
+				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
+				5D25987E20D3892F001225C2 /* MEDSomeTool.h */,
+				5D25987F20D3892F001225C2 /* MEDSomeTool.m */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 		5D27455720DB985F00844B6E /* MEDPersonalData */ = {
@@ -1260,8 +1276,8 @@
 		5D829A3C2085C8FD001993B6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5D829A7C2085D9B0001993B6 /* Controller */,
 				5DC39F862091CE31000D1B26 /* SubController */,
+				5D829A7C2085D9B0001993B6 /* Controller */,
 				5D829A7D2085D9B0001993B6 /* Model */,
 				5D829A7E2085D9B0001993B6 /* View */,
 			);
@@ -1654,12 +1670,9 @@
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D267FF520DE130A006A42E2 /* Others */,
 				5D03A44820DA6B420072CEC7 /* WebTest */,
 				5D69056720D9FB12002BBD69 /* MEDMonitorController */,
-				5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */,
-				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
-				5D25987E20D3892F001225C2 /* MEDSomeTool.h */,
-				5D25987F20D3892F001225C2 /* MEDSomeTool.m */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -2106,6 +2119,7 @@
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
+				5D267FF420DDD44C006A42E2 /* MEDShopCartToolBar.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,

@@ -14,4 +14,6 @@
 @property (nonatomic, copy) NSString *image;
 @property (nonatomic, copy) NSString *name;
 
+@property (nonatomic, assign) int count;
+
 @end

@@ -9,6 +9,8 @@
 #import "MEDShopingCartController.h"
 #import "MEDShopCartCell.h"
 #import "MEDShopCartModel.h"
+#import "MEDShopCartToolBar.h"
+
 
 static CGFloat toolBarH = 50;
 static NSString *cellID = @"wine";
@@ -18,6 +20,8 @@ static NSString *cellID = @"wine";
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *goodArray;
+@property (nonatomic, strong) MEDShopCartToolBar *toolBar;
+
 
 @end
 
@@ -44,6 +48,10 @@ static NSString *cellID = @"wine";
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH ,tableH) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        // 性能优化
+        _tableView.layer.shouldRasterize = true;   // 栅格化cell，滚动时只显示图片
+        _tableView.layer.rasterizationScale = [UIScreen mainScreen].scale;   // 默认缩放比例是1，要适配当前屏幕
+        _tableView.layer.drawsAsynchronously = YES; // 开启异步绘制
     }
     return _tableView;
 }
@@ -53,7 +61,62 @@ static NSString *cellID = @"wine";
     [super viewDidLoad];
     
     [self configUI];
+    
+    // 监听通知
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center addObserver:self selector:@selector(plusClick:) name:@"plusClickNotification" object:nil];
+    [center addObserver:self selector:@selector(minusClick:) name:@"minusClickNotification" object:nil];
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 通知的监听方法
+
+- (void)plusClick:(NSNotification *)note {
+    NSLog(@"监听到加号按钮点击");
+    
+    MEDShopCartCell *cell = note.object;
+    // 计算总价
+    int totalPrice = self.toolBar.totalPriceLabel.text.intValue + cell.goods.money.intValue;
+    // 设置总价
+    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+    // 控制购买按钮状态
+    self.toolBar.buyButton.enabled = YES;
+}
+
+- (void)minusClick:(NSNotification *)note {
+    NSLog(@"监听到减号按钮点击");
+    
+    MEDShopCartCell *cell = note.object;
+    // 计算总价
+    int totalPrice = self.toolBar.totalPriceLabel.text.intValue - cell.goods.money.intValue;
+    // 设置总价
+    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+    // 控制购买按钮状态
+    self.toolBar.buyButton.enabled = totalPrice > 0;
+}
+
+- (void)clearClick {
+    // NSLog(@"控制器清空购物车");
+    self.toolBar.totalPriceLabel.text = @"0";
+    for (MEDShopCartModel *good in self.goodArray) {
+        good.count = 0;
+    }
+    [self.tableView reloadData];
+    
+    self.toolBar.buyButton.enabled = NO; // 禁用购买按钮
+}
+
+- (void)buyClick {
+    NSLog(@"控制器购买商品-跳转至结算页面");
+    
+    
+    
+    
+}
+
 
 #pragma mark - Config UI
 
@@ -61,22 +124,27 @@ static NSString *cellID = @"wine";
     
     //BaseSet
     self.navigationItem.title = @"购物车";
-    self.view.backgroundColor = MEDGrayColor(240);
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     [self.tableView registerNib:[UINib nibWithNibName:@"MEDShopCartCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
     // ToolBar
-    UIView *toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - toolBarH - MED_TabbarSafeBottomMargin, SCREEN_WIDTH, toolBarH)];
-    toolBar.backgroundColor = [UIColor orangeColor];
+    MEDShopCartToolBar *toolBar = [[MEDShopCartToolBar alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - toolBarH - MED_TabbarSafeBottomMargin, SCREEN_WIDTH, toolBarH)];
     [self.view addSubview:toolBar];
-    
+    self.toolBar = toolBar;
+    toolBar.buttonBlock = ^(UIButton *button) {
+        if (button.tag == 6181) {
+            [self clearClick];
+        }else if (button.tag == 6182){
+            [self buyClick];
+        }
+    };
 }
 
 #pragma mark - TableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.goodArray.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
