@@ -51,6 +51,12 @@
     
     // 发送通知
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"plusClickNotification" object:self];
+    
+    // 代理方法
+    if ([self.delegate respondsToSelector:@selector(shopCartCellDidClickPlusButton:)]) {
+        [self.delegate shopCartCellDidClickPlusButton:self];
+    }
+    
 }
 
 
@@ -63,6 +69,12 @@
     }
     // 发送通知
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"minusClickNotification" object:self];
+    
+    // 代理方法
+    if ([self.delegate respondsToSelector:@selector(shopCartCellDidClickMinusButton:)]) {
+        [self.delegate shopCartCellDidClickMinusButton:self];
+    }
+    
 }
 
 

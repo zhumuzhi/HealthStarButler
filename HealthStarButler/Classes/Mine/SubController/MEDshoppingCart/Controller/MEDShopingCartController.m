@@ -15,7 +15,7 @@
 static CGFloat toolBarH = 50;
 static NSString *cellID = @"wine";
 
-@interface MEDShopingCartController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MEDShopingCartController ()<UITableViewDataSource, UITableViewDelegate, MEDShopCartDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -40,9 +40,12 @@ static NSString *cellID = @"wine";
         _goodArray = [MEDShopCartModel mj_objectArrayWithKeyValuesArray:tempArray];
         
         // 为每个商品模型添加KVO监听
-        for (MEDShopCartModel *shopCartModel in _goodArray) {
-            [shopCartModel addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew context:nil];
-        }
+//        for (MEDShopCartModel *shopCartModel in _goodArray) {
+//            [shopCartModel addObserver:self forKeyPath:@"count" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionNew context:nil];
+//            // 查看kVO生成的子类(派生类)
+//            NSLog(@"%@", [shopCartModel valueForKeyPath:@"isa"] );
+//        }
+        
     }
     return _goodArray;
 }
@@ -80,42 +83,68 @@ static NSString *cellID = @"wine";
 - (void)dealloc {
 //    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    // 移除KVO监听
-    for (MEDShopCartModel *shopCartModel in _goodArray) {
-        [shopCartModel removeObserver:self forKeyPath:@"count"];
-    }
+//    // 移除KVO监听
+//    for (MEDShopCartModel *shopCartModel in _goodArray) {
+//        [shopCartModel removeObserver:self forKeyPath:@"count"];
+//    }
 }
 
 
 #pragma mark - KVO 监听
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+//    
+////    NSLog(@"observeValueForKeyPath");
+//    
+//    MEDShopCartModel *shopCartModel = object;
+//    
+//    int new = [change[NSKeyValueChangeNewKey] intValue];
+//    int old = [change[NSKeyValueChangeOldKey] intValue];
+//    
+//    if (new > old) { // 点击了加号
+//        // 计算总价
+//        int totalPrice = self.toolBar.totalPriceLabel.text.intValue + shopCartModel.money.intValue;
+//        // 设置总价
+//        self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+//        // 控制购买按钮状态
+//        self.toolBar.buyButton.enabled = YES;
+//        
+//    }else {          // 点击了减号
+//        
+//        // 计算总价
+//        int totalPrice = self.toolBar.totalPriceLabel.text.intValue - shopCartModel.money.intValue;
+//        // 设置总价
+//        self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+//        // 控制购买按钮状态
+//        self.toolBar.buyButton.enabled = totalPrice > 0;
+//    }
+//    
+//}
+
+#pragma mark - Delegate 监听
+
+- (void)shopCartCellDidClickPlusButton:(MEDShopCartCell *)cell {
     
-//    NSLog(@"observeValueForKeyPath");
-    
-    MEDShopCartModel *shopCartModel = object;
-    
-    int new = [change[NSKeyValueChangeNewKey] intValue];
-    int old = [change[NSKeyValueChangeOldKey] intValue];
-    
-    if (new > old) { // 点击了加号
-        // 计算总价
-        int totalPrice = self.toolBar.totalPriceLabel.text.intValue + shopCartModel.money.intValue;
-        // 设置总价
-        self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
-        // 控制购买按钮状态
-        self.toolBar.buyButton.enabled = YES;
-        
-    }else {          // 点击了减号
-        
-        // 计算总价
-        int totalPrice = self.toolBar.totalPriceLabel.text.intValue - shopCartModel.money.intValue;
-        // 设置总价
-        self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
-        // 控制购买按钮状态
-        self.toolBar.buyButton.enabled = totalPrice > 0;
-    }
+    // 计算总价
+    int totalPrice = self.toolBar.totalPriceLabel.text.intValue + cell.goods.money.intValue;
+    // 设置总价
+    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+    // 控制购买按钮状态
+    self.toolBar.buyButton.enabled = YES;
     
 }
+
+- (void)shopCartCellDidClickMinusButton:(MEDShopCartCell *)cell {
+    
+    // 计算总价
+    int totalPrice = self.toolBar.totalPriceLabel.text.intValue - cell.goods.money.intValue;
+    // 设置总价
+    self.toolBar.totalPriceLabel.text = [NSString stringWithFormat:@"%d",totalPrice];
+    // 控制购买按钮状态
+    self.toolBar.buyButton.enabled = totalPrice > 0;
+    
+}
+
+
 
 
 
@@ -169,17 +198,21 @@ static NSString *cellID = @"wine";
 
 #pragma mark - event
 
+// 清空购物车
 - (void)clearClick {
     // NSLog(@"控制器清空购物车");
-    self.toolBar.totalPriceLabel.text = @"0";
+
     for (MEDShopCartModel *good in self.goodArray) {
         good.count = 0;
     }
     [self.tableView reloadData];
     
+    self.toolBar.totalPriceLabel.text = @"0";
+    
     self.toolBar.buyButton.enabled = NO; // 禁用购买按钮
 }
 
+// 购买--结算
 - (void)buyClick {
     NSLog(@"控制器购买商品-跳转至结算页面");
     
@@ -195,6 +228,7 @@ static NSString *cellID = @"wine";
 
     MEDShopCartCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     cell.goods = self.goodArray[indexPath.row];
+    cell.delegate = self;
     return cell;
     
 }
