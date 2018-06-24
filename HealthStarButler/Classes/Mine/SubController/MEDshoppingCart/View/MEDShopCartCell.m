@@ -48,8 +48,9 @@
 //    self.goods = self.goods;
     self.countLabel.text = [NSString stringWithFormat:@"%d",self.goods.count];
     self.minusButton.enabled = YES;
+    
     // 发送通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"plusClickNotification" object:self];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"plusClickNotification" object:self];
 }
 
 
@@ -61,7 +62,7 @@
         self.minusButton.enabled = NO;
     }
     // 发送通知
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"minusClickNotification" object:self];
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"minusClickNotification" object:self];
 }
 
 
