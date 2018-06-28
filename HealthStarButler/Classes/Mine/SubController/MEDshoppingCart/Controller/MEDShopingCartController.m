@@ -22,6 +22,10 @@ static NSString *cellID = @"wine";
 @property (nonatomic, strong) NSArray *goodArray;
 @property (nonatomic, strong) MEDShopCartToolBar *toolBar;
 
+/** 购物车数组 */
+@property (nonatomic, strong) NSMutableArray *shopCar;
+
+
 
 @end
 
@@ -45,10 +49,17 @@ static NSString *cellID = @"wine";
 //            // 查看kVO生成的子类(派生类)
 //            NSLog(@"%@", [shopCartModel valueForKeyPath:@"isa"] );
 //        }
-        
     }
     return _goodArray;
 }
+
+- (NSMutableArray *)shopCar {
+    if (!_shopCar) {
+        _shopCar = [NSMutableArray array];
+    }
+    return _shopCar;
+}
+
 
 - (UITableView *)tableView
 {
@@ -131,6 +142,10 @@ static NSString *cellID = @"wine";
     // 控制购买按钮状态
     self.toolBar.buyButton.enabled = YES;
     
+    if (![self.shopCar containsObject:cell.goods]) {
+        [self.shopCar addObject:cell.goods]; // 将选中的商品加入购物车数组
+    }
+    
 }
 
 - (void)shopCartCellDidClickMinusButton:(MEDShopCartCell *)cell {
@@ -142,11 +157,11 @@ static NSString *cellID = @"wine";
     // 控制购买按钮状态
     self.toolBar.buyButton.enabled = totalPrice > 0;
     
+    // 移除用户不再购买的商品
+    if (cell.goods.count <= 0) {
+         [self.shopCar removeObject:cell.goods]; // 将选中的商品移除购物车数组
+    }
 }
-
-
-
-
 
 #pragma mark - 通知的监听方法
 //- (void)plusClick:(NSNotification *)note {
@@ -210,11 +225,17 @@ static NSString *cellID = @"wine";
     self.toolBar.totalPriceLabel.text = @"0";
     
     self.toolBar.buyButton.enabled = NO; // 禁用购买按钮
+    
+    [self.shopCar removeAllObjects];
+    
 }
 
 // 购买--结算
 - (void)buyClick {
     NSLog(@"控制器购买商品-跳转至结算页面");
+    for (MEDShopCartModel *good in self.shopCar) {
+        NSLog(@"购买了%d件%@", good.count, good.name);
+    }
     
 }
 
