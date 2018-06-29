@@ -31,6 +31,8 @@
 #import "TDTouchID.h" //指纹测试
 #import "MEDTestTagController.h" //标签页面测试
 #import "MEDShopingCartController.h" // 购物车测试
+#import "MEDPerson.h"  // KVC测试
+#import "MEDDog.h"
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -66,7 +68,22 @@
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",string];
     NSLog(@"%@",[stringArray filteredArrayUsingPredicate:pred]);
     
+}
+
+/**
+ 使用KVO监听的某个对象的属性值发生改变会自动调用这个方法 - 系统方法
+ @param keyPath 哪一个属性值被改了
+ @param object 哪一个对象的属性被改了
+ @param change 改成了什么样了
+ @param context 传递了什么参数
+ */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
+{
+    NSLog(@"%@-%@-%@-%@",keyPath, object, change, context);
     
+    NSLog(@"%@-%@",change[@"old"], change[@"new"]);
+    
+    NSLog(@"%@-%@",change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]);
 }
 
 - (void)getVersionNum {
@@ -93,10 +110,7 @@
     NSLog(@"4");
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    NSLog(@"%@-%@-%@",keyPath, object, change);
-}
+
 
 #pragma mark - 指纹测试
 /**

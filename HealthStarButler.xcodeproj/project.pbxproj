@@ -13,6 +13,10 @@
 		5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */; };
 		5D09A87020DBF17E0059FDD8 /* MEDShopCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */; };
 		5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */; };
+		5D0ABE4320E4CF7E0088D0D4 /* MEDReszingImageTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4220E4CF7E0088D0D4 /* MEDReszingImageTool.m */; };
+		5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */; };
+		5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4820E4D8620088D0D4 /* MEDPerson.m */; };
+		5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4B20E506860088D0D4 /* MEDDog.m */; };
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
@@ -230,6 +234,14 @@
 		5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MEDShopCartCell.xib; sourceTree = "<group>"; };
 		5D09A87120DBF8FD0059FDD8 /* MEDCircleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDCircleButton.h; sourceTree = "<group>"; };
 		5D09A87220DBF8FD0059FDD8 /* MEDCircleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDCircleButton.m; sourceTree = "<group>"; };
+		5D0ABE4120E4CF7E0088D0D4 /* MEDReszingImageTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDReszingImageTool.h; sourceTree = "<group>"; };
+		5D0ABE4220E4CF7E0088D0D4 /* MEDReszingImageTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDReszingImageTool.m; sourceTree = "<group>"; };
+		5D0ABE4420E4CFDA0088D0D4 /* UIButton+ReszingImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ReszingImage.h"; sourceTree = "<group>"; };
+		5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ReszingImage.m"; sourceTree = "<group>"; };
+		5D0ABE4720E4D8620088D0D4 /* MEDPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDPerson.h; sourceTree = "<group>"; };
+		5D0ABE4820E4D8620088D0D4 /* MEDPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDPerson.m; sourceTree = "<group>"; };
+		5D0ABE4A20E506860088D0D4 /* MEDDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDog.h; sourceTree = "<group>"; };
+		5D0ABE4B20E506860088D0D4 /* MEDDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDDog.m; sourceTree = "<group>"; };
 		5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeMonitorCell.h; sourceTree = "<group>"; };
 		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeFoodPlanCell.h; sourceTree = "<group>"; };
@@ -646,6 +658,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5D0ABE4020E4CEFB0088D0D4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */,
+				5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */,
+				5D0ABE4120E4CF7E0088D0D4 /* MEDReszingImageTool.h */,
+				5D0ABE4220E4CF7E0088D0D4 /* MEDReszingImageTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		5D1AC62B209AB9D500FB16C9 /* MonitorCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -748,6 +771,10 @@
 				5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */,
 				5D25987E20D3892F001225C2 /* MEDSomeTool.h */,
 				5D25987F20D3892F001225C2 /* MEDSomeTool.m */,
+				5D0ABE4720E4D8620088D0D4 /* MEDPerson.h */,
+				5D0ABE4820E4D8620088D0D4 /* MEDPerson.m */,
+				5D0ABE4A20E506860088D0D4 /* MEDDog.h */,
+				5D0ABE4B20E506860088D0D4 /* MEDDog.m */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -1195,7 +1222,7 @@
 				5D829A392085C8B9001993B6 /* BaseController */,
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 				5D829A382085C8A4001993B6 /* Category */,
-				5DBD2C6920A15199008F902E /* Utils */,
+				5D0ABE4020E4CEFB0088D0D4 /* Tools */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1232,6 +1259,8 @@
 				5DBD2C66209FFCBB008F902E /* NSString+MED.h */,
 				5DBD2C67209FFCBB008F902E /* NSString+MED.m */,
 				5D829A4C2085D5DF001993B6 /* Third */,
+				5D0ABE4420E4CFDA0088D0D4 /* UIButton+ReszingImage.h */,
+				5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1585,15 +1614,6 @@
 				5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */,
 			);
 			path = NSOperationDemo;
-			sourceTree = "<group>";
-		};
-		5DBD2C6920A15199008F902E /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */,
-				5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		5DBD2C7720A192F1008F902E /* Model */ = {
@@ -2138,6 +2158,7 @@
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
+				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
@@ -2161,6 +2182,7 @@
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
 				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
+				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
@@ -2178,6 +2200,7 @@
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
+				5D0ABE4320E4CF7E0088D0D4 /* MEDReszingImageTool.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */,
 				5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */,
@@ -2216,6 +2239,7 @@
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
+				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
