@@ -33,6 +33,7 @@
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
     _tabBarController = tabBarController;
+    
     [self mainTabBarSwitch];
     [self.window makeKeyAndVisible];
 
@@ -52,6 +53,7 @@
         _tabBarController.delegate = self;
         // 设置TabBar
         [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
+        [_tabBarController setSelectedIndex:3]; // 方便使用
     }
 }
 

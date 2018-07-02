@@ -83,7 +83,7 @@
     
     NSLog(@"%@-%@",change[@"old"], change[@"new"]);
     
-    NSLog(@"%@-%@",change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]);
+    NSLog(@"%@-%@",change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]); //系统提供的常量
 }
 
 - (void)getVersionNum {
