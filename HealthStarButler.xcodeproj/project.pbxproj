@@ -101,6 +101,8 @@
 		5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E339F20B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m */; };
 		5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E33A420B654DE0026B2C4 /* GDDExhibitionController.m */; };
 		5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4E33A620B683F50026B2C4 /* GDDExhibitionController.storyboard */; };
+		5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */; };
+		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
 		5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D69057120D9FB12002BBD69 /* MEDBloodPressureCell.xib */; };
@@ -369,6 +371,10 @@
 		5D4E33A320B654DE0026B2C4 /* GDDExhibitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GDDExhibitionController.h; sourceTree = "<group>"; };
 		5D4E33A420B654DE0026B2C4 /* GDDExhibitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GDDExhibitionController.m; sourceTree = "<group>"; };
 		5D4E33A620B683F50026B2C4 /* GDDExhibitionController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GDDExhibitionController.storyboard; sourceTree = "<group>"; };
+		5D4F726120EB9BDE0049C92A /* MZScrollTopButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZScrollTopButton.h; sourceTree = "<group>"; };
+		5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZScrollTopButton.m; sourceTree = "<group>"; };
+		5D4F726420EBBA770049C92A /* UIScrollView+ScrollToTopBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScrollToTopBtn.h"; sourceTree = "<group>"; };
+		5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollToTopBtn.m"; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
 		5D69056D20D9FB12002BBD69 /* MEDMonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorController.h; sourceTree = "<group>"; };
 		5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHistoryController.m; sourceTree = "<group>"; };
@@ -922,6 +928,23 @@
 			path = GCDDemo;
 			sourceTree = "<group>";
 		};
+		5D4F725F20EB99340049C92A /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				5D4F726020EB99480049C92A /* ScrollToTopButton */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5D4F726020EB99480049C92A /* ScrollToTopButton */ = {
+			isa = PBXGroup;
+			children = (
+				5D4F726120EB9BDE0049C92A /* MZScrollTopButton.h */,
+				5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */,
+			);
+			path = ScrollToTopButton;
+			sourceTree = "<group>";
+		};
 		5D69056720D9FB12002BBD69 /* MEDMonitorController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1261,6 +1284,8 @@
 				5D829A4C2085D5DF001993B6 /* Third */,
 				5D0ABE4420E4CFDA0088D0D4 /* UIButton+ReszingImage.h */,
 				5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */,
+				5D4F726420EBBA770049C92A /* UIScrollView+ScrollToTopBtn.h */,
+				5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1327,6 +1352,7 @@
 		5D829A3E2085C92F001993B6 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				5D4F725F20EB99340049C92A /* SubController */,
 				5D829A802085D9BD001993B6 /* Controller */,
 				5D829A812085D9BD001993B6 /* Model */,
 				5D829A7F2085D9BD001993B6 /* View */,
@@ -2192,6 +2218,7 @@
 				5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */,
 				5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
+				5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
 				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
@@ -2256,6 +2283,7 @@
 				5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */,
 				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
+				5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

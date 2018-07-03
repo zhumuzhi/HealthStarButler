@@ -8,9 +8,11 @@
 
 #import "MEDInformationController.h"
 
-@interface MEDInformationController ()<UIScrollViewDelegate>
+@interface MEDInformationController ()<UITableViewDelegate>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -30,13 +32,50 @@
     // Do any additional setup after loading the view.
     
     [self setupNavigation];
-    [self configScrollView];
+    
+//    [self configTestScrollView]; // 测试的ScrollView
+    
+    //UIScrollView+ScrollToTopBtn
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"go_top"] forState:UIControlStateNormal];
+    //    [btn setTitle:@"go" forState:UIControlStateNormal];
+    //    [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height) style:UITableViewStylePlain];
+    self.tableView = tableView;
+    [self.view addSubview:self.tableView];
+    self.tableView.scrollToTopBtnFrame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 100, 100, 100);
+    self.tableView.scrollToTopBtnShowOffset = 700.f;
+    self.tableView.scrollToTopBtn = btn;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 60;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+//    NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
+    NSString *identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.textLabel.text = [NSString stringWithFormat:@"CELL NO.%zi", indexPath.row];
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+    }
+    return cell;
+}
+
 
 #pragma mark - ConfigUI
 
@@ -54,7 +93,7 @@
     return button;
 }
 
-- (void)configScrollView {
+- (void)configTestScrollView {
     
     // 1.创建ScrollView
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, (SCREEN_HEIGHT-Navigation_Height)/4, SCREEN_WIDTH/2, (SCREEN_HEIGHT-Navigation_Height)/2)];
@@ -260,5 +299,7 @@ CGFloat stepW = 100.0;
 //    NSLog(@"contentSize:%@", NSStringFromCGSize(scrollView.contentSize));
     NSLog(@"contentOffset:%@", NSStringFromCGPoint(scrollView.contentOffset));
 }
+
+
 
 @end

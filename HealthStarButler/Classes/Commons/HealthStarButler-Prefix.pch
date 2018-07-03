@@ -37,6 +37,7 @@
 #import "UIView+MED.h"
 #import "NSString+MED.h"
 #import "UIButton+ReszingImage.h"
+#import "UIScrollView+ScrollToTopBtn.h"
 
 #pragma mark -------------------- 工具类 --------------------
 #import "MEDDateUtils.h"
