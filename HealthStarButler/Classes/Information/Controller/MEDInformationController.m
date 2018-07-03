@@ -8,11 +8,11 @@
 
 #import "MEDInformationController.h"
 
-@interface MEDInformationController ()<UITableViewDelegate>
+@interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, weak) UITableView *tableView;
 
 @end
 
@@ -39,14 +39,14 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"go_top"] forState:UIControlStateNormal];
-    //    [btn setTitle:@"go" forState:UIControlStateNormal];
-    //    [btn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height) style:UITableViewStylePlain];
     self.tableView = tableView;
+    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-    self.tableView.scrollToTopBtnFrame = CGRectMake(self.view.bounds.size.width - 100, self.view.bounds.size.height - 100, 100, 100);
-    self.tableView.scrollToTopBtnShowOffset = 700.f;
+    
+    self.tableView.scrollToTopBtnFrame = CGRectMake(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 100 - Navigation_Height, 100, 100);
+    self.tableView.scrollToTopBtnShowOffset = 0.f;
     self.tableView.scrollToTopBtn = btn;
     
 }
@@ -56,17 +56,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UITableView DataSource
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 60;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
-    NSString *identifier = @"cell";
+    NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
@@ -74,6 +73,12 @@
         cell.textLabel.textColor = [UIColor lightGrayColor];
     }
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
 }
 
 
