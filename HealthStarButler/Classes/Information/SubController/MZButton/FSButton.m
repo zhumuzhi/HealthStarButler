@@ -22,7 +22,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.titleLabel.font = titleFont;
-        self.buttonStyle = imageLeft;
+        self.buttonStyle = FSButtonImaegTypeLeft;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
 
@@ -33,7 +33,7 @@
     self = [super init];
     if (self) {
         self.titleLabel.font = titleFont;
-        self.buttonStyle = imageLeft;
+        self.buttonStyle = FSButtonImaegTypeLeft;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
 
@@ -41,13 +41,13 @@
 }
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect{
-    if (self.buttonStyle == imageRight) {
+    if (self.buttonStyle == FSButtonImaegTypeRight) {
         return [self imageRectWithImageRightForContentTect:contentRect];
     }
-    else if (self.buttonStyle == imageTop){
+    else if (self.buttonStyle == FSButtonImaegTypeTop){
         return [self imageRectWithImageTopForContentTect:contentRect];
     }
-    else if (self.buttonStyle == imageBottom){
+    else if (self.buttonStyle == FSButtonImaegTypeDown){
         return [self imageRectWithImageBottomForContentTect:contentRect];
     }
     else {
@@ -57,13 +57,13 @@
 }
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect{
-    if (self.buttonStyle == imageRight) {
+    if (self.buttonStyle == FSButtonImaegTypeRight) {
         return [self titleRectWithImageRightForContentTect:contentRect];
     }
-    else if (self.buttonStyle == imageTop){
+    else if (self.buttonStyle == FSButtonImaegTypeTop){
         return [self titleRectWithImageTopForContentTect:contentRect];
     }
-    else if (self.buttonStyle == imageBottom){
+    else if (self.buttonStyle == FSButtonImaegTypeDown){
         return [self titleRectWithImageBottomForContentTect:contentRect];
     }
     else {

@@ -103,6 +103,7 @@
 		5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4E33A620B683F50026B2C4 /* GDDExhibitionController.storyboard */; };
 		5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */; };
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
+		5D4F726920ECEE550049C92A /* FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726820ECEE550049C92A /* FSCustomButton.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
 		5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D69057120D9FB12002BBD69 /* MEDBloodPressureCell.xib */; };
@@ -376,6 +377,8 @@
 		5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZScrollTopButton.m; sourceTree = "<group>"; };
 		5D4F726420EBBA770049C92A /* UIScrollView+ScrollToTopBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScrollToTopBtn.h"; sourceTree = "<group>"; };
 		5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollToTopBtn.m"; sourceTree = "<group>"; };
+		5D4F726720ECEE550049C92A /* FSCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCustomButton.h; sourceTree = "<group>"; };
+		5D4F726820ECEE550049C92A /* FSCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCustomButton.m; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
 		5D69056D20D9FB12002BBD69 /* MEDMonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorController.h; sourceTree = "<group>"; };
 		5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHistoryController.m; sourceTree = "<group>"; };
@@ -1947,6 +1950,8 @@
 			children = (
 				5DE1F57820ECBE2B005FCCD5 /* FSButton.h */,
 				5DE1F57920ECBE2B005FCCD5 /* FSButton.m */,
+				5D4F726720ECEE550049C92A /* FSCustomButton.h */,
+				5D4F726820ECEE550049C92A /* FSCustomButton.m */,
 			);
 			path = MZButton;
 			sourceTree = "<group>";
@@ -2237,6 +2242,7 @@
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
 				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
+				5D4F726920ECEE550049C92A /* FSCustomButton.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,

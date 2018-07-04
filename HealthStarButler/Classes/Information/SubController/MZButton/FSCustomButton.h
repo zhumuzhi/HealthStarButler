@@ -1,5 +1,5 @@
 //
-//  FSButton.h
+//  FSCustomButton.h
 //  HealthStarButler
 //
 //  Created by 朱慕之 on 2018/7/4.
@@ -15,14 +15,13 @@ typedef NS_ENUM(NSUInteger, FSButtonImageType) {
     /* 图片在右*/
     FSButtonImaegTypeRight,
     /* 图片在上*/
-    FSButtonImaegTypeTop,
+    FSButtonImaegTypeUp,
     /* 图片在下*/
     FSButtonImaegTypeDown
 };
 
+@interface FSCustomButton : UIButton
 
-@interface FSButton : UIButton
-
-@property (nonatomic, assign, readwrite) FSButtonImageType buttonStyle;
+@property (nonatomic, assign) FSButtonImageType imageType;
 
 @end
