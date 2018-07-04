@@ -53,7 +53,7 @@
         _tabBarController.delegate = self;
         // 设置TabBar
         [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
-        [_tabBarController setSelectedIndex:3]; // 方便使用
+        [_tabBarController setSelectedIndex:1]; // 方便使用
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "MEDConsultationController.h"
+#import "FSButton.h"
 
 @interface MEDConsultationController ()
 
@@ -25,6 +26,16 @@
     
     self.navigationItem.title = @"咨询";
     [self setupPersonNavigationItem];
+
+    FSButton *button = [[FSButton alloc] initWithFrame:CGRectMake(50, Navigation_Height+50, 100, 50)];
+    button.buttonStyle = imageLeft;
+    button.titleLabel.font = [UIFont systemFontOfSize:15.0];
+    [button setTitle:@"测试按钮" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"点评_icon_评论"] forState:UIControlStateNormal];
+
+    [self.view addSubview:button];
     
 }
 

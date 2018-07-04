@@ -222,6 +222,7 @@
 		5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AE820C6682100512610 /* TZGifPhotoPreviewController.m */; };
 		5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AEC20C6682100512610 /* LxGridViewFlowLayout.m */; };
 		5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AEE20C6682100512610 /* MEDMedicalRecordController.m */; };
+		5DE1F57A20ECBE2B005FCCD5 /* FSButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F57920ECBE2B005FCCD5 /* FSButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -595,6 +596,8 @@
 		5DCE9AEC20C6682100512610 /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
 		5DCE9AEE20C6682100512610 /* MEDMedicalRecordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMedicalRecordController.m; sourceTree = "<group>"; };
 		5DCE9AEF20C6682100512610 /* MEDMedicalRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMedicalRecordController.h; sourceTree = "<group>"; };
+		5DE1F57820ECBE2B005FCCD5 /* FSButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSButton.h; sourceTree = "<group>"; };
+		5DE1F57920ECBE2B005FCCD5 /* FSButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSButton.m; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -931,6 +934,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DE1F57720ECBC6A005FCCD5 /* MZButton */,
 				5D4F726020EB99480049C92A /* ScrollToTopButton */,
 			);
 			path = SubController;
@@ -1938,6 +1942,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DE1F57720ECBC6A005FCCD5 /* MZButton */ = {
+			isa = PBXGroup;
+			children = (
+				5DE1F57820ECBE2B005FCCD5 /* FSButton.h */,
+				5DE1F57920ECBE2B005FCCD5 /* FSButton.m */,
+			);
+			path = MZButton;
+			sourceTree = "<group>";
+		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2143,6 +2156,7 @@
 				5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */,
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
 				5D69059620D9FB12002BBD69 /* MEDLineChartData.m in Sources */,
+				5DE1F57A20ECBE2B005FCCD5 /* FSButton.m in Sources */,
 				5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,

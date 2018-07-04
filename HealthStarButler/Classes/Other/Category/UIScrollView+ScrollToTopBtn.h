@@ -11,17 +11,17 @@
 @interface UIScrollView (ScrollToTopBtn)
 
 /**
- *  customization for scrollToTop button, you can custom its image、title、backgroundImage or other properties as usually
+ *  定制scrollToTop按钮,可以自定义样式,通常标题、分辨率或其他属性
  */
 @property (nonatomic, strong, nullable) UIButton *scrollToTopBtn;
 
 /**
- *  frame for scrollToTop button, include the origin position and size. default size: 44.f(side length) and its margin 12.f
+ *  scrollToTop按钮的Frame,包括原点位置和大小。默认大小:44(side length)、间距12. f
  */
 @property (nonatomic, assign) CGRect scrollToTopBtnFrame;
 
 /**
- *  offset for show/hidden the scrollToTop button, default value:[UIScreen mainScreen].bounds.size.height
+ *  显示/隐藏scrollToTop按钮的offset，默认值为:[UIScreen mainScreen].bounds.size.height
  */
 @property (nonatomic, assign) CGFloat scrollToTopBtnShowOffset;
 
