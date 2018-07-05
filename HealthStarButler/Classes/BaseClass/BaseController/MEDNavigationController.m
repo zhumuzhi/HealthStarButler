@@ -120,5 +120,13 @@
     return self.childViewControllers.count > 1;
 }
 
+// 重写系统方法设置StatusBarStyle
+- (UIViewController *)childViewControllerForStatusBarStyle{
+    return self.topViewController;
+}
+- (UIViewController *)childViewControllerForStatusBarHidden {
+    return self.topViewController;
+}
+
 
 @end
