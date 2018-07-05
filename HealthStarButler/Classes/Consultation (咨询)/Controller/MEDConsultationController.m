@@ -8,12 +8,23 @@
 
 #import "MEDConsultationController.h"
 #import "FSButton.h"
+#import "HYEdgeInsetsButton.h"
+
+#import "MEDStatusController.h"
+
 
 @interface MEDConsultationController ()
 
 @end
 
 @implementation MEDConsultationController
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setNeedsStatusBarAppearanceUpdate];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,10 +40,32 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self configButton];
+//    [self configTestButton];
+    [self configEdgeButton];
 }
 
-- (void)configButton {
+- (void)configEdgeButton
+{
+    HYEdgeInsetsButton *edgeBtn = [[HYEdgeInsetsButton alloc] init];
+    [self.view addSubview:edgeBtn];
+    [edgeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.centerX.equalTo(self.view);
+        make.height.equalTo(@49);
+        make.width.equalTo(@(SCREEN_WIDTH/2));
+    }];
+    edgeBtn.titleLabel.font = [UIFont systemFontOfSize:20.0];
+    edgeBtn.edgeInsetsStyle = HYButtonEdgeInsetsStyleImageLeft;
+    edgeBtn.imageTitleSpace = 5;
+    [edgeBtn setBackgroundColor:[UIColor lightGrayColor]];
+    [edgeBtn setTitle:@"首页" forState:UIControlStateNormal];
+    [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
+}
+
+
+/*测试布局按钮*/
+- (void)configTestButton {
     
     FSButton *leftButton = [[FSButton alloc] init];
     [self.view addSubview:leftButton];
@@ -49,6 +82,8 @@
     //    [button setBackgroundColor:[UIColor lightGrayColor]];
     [leftButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [leftButton setImage:[UIImage imageNamed:@"区域"] forState:UIControlStateNormal];
+
+    [leftButton addTarget:self action:@selector(pushToNextView) forControlEvents:UIControlEventTouchUpInside];
     
     FSButton *rightButton = [[FSButton alloc] init];
     [self.view addSubview:rightButton];
@@ -97,11 +132,9 @@
     
 }
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushToNextView {
+    MEDStatusController *statusTest = [[MEDStatusController alloc] init];
+    [self.navigationController pushViewController:statusTest animated:YES];
 }
 
 /*
