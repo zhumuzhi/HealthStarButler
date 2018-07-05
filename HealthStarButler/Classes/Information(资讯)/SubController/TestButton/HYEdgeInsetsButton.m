@@ -55,7 +55,7 @@
             imageInsetsLeft = labelWidth + space;
             imageInsetsRight = -imageInsetsLeft;
             
-            titleInsetsLeft = - (imageViewWidth + space);
+            titleInsetsLeft = -(imageViewWidth + space);
             titleInsetsRight = -titleInsetsLeft;
         }
             break;

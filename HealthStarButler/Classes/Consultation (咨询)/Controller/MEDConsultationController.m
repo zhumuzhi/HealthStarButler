@@ -61,6 +61,28 @@
     [edgeBtn setTitle:@"首页" forState:UIControlStateNormal];
     [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
+    
+    
+    HYEdgeInsetsButton *edgeBtnOne = [[HYEdgeInsetsButton alloc] init];
+    [self.view addSubview:edgeBtnOne];
+    [edgeBtnOne mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(edgeBtn.mas_bottom).offset(50);
+        make.centerX.equalTo(self.view);
+        make.height.equalTo(@20);
+        make.width.equalTo(@50);
+    }];
+    edgeBtnOne.titleLabel.font = [UIFont systemFontOfSize:12.0];
+    edgeBtnOne.edgeInsetsStyle = HYButtonEdgeInsetsStyleImageLeft;
+    edgeBtnOne.imageTitleSpace = 5;
+    [edgeBtnOne setBackgroundColor:[UIColor lightGrayColor]];
+    [edgeBtnOne setTitle:@"北京" forState:UIControlStateNormal];
+    [edgeBtnOne setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [edgeBtnOne setImage:[UIImage imageNamed:@"区域"] forState:UIControlStateNormal];
+    
+    
+    
+    
+    
 }
 
 

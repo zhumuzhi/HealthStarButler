@@ -17,11 +17,14 @@ typedef NS_ENUM(NSUInteger, HYButtonEdgeInsetsStyle) {
 
 IB_DESIGNABLE
 @interface HYEdgeInsetsButton : UIButton
+
 #if TARGET_INTERFACE_BUILDER
 @property (nonatomic) IBInspectable NSUInteger edgeInsetsStyle;
 #else
 @property (nonatomic) HYButtonEdgeInsetsStyle edgeInsetsStyle;
 #endif
+
+/* 图片与标题的间距*/
 @property (nonatomic) IBInspectable CGFloat imageTitleSpace;
 
 @end

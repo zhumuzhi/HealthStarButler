@@ -28,6 +28,7 @@ PODS:
   - UMCSecurityPlugins (1.0.6)
   - WebViewJavascriptBridge (6.0.3)
   - WRNavigationBar (1.2.0)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - UMCSecurityPlugins
   - WebViewJavascriptBridge
   - WRNavigationBar (~> 1.2.0)
+  - YYText
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -57,6 +59,7 @@ SPEC REPOS:
     - UMCSecurityPlugins
     - WebViewJavascriptBridge
     - WRNavigationBar
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -71,7 +74,8 @@ SPEC CHECKSUMS:
   UMCSecurityPlugins: 0831a08f3988f3cea9f1d3a7626cd9bee4fef150
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 4213398462bd99e7503df760213c0997953c357a
+PODFILE CHECKSUM: a620e13a0c54382ff8f70f0f112f076802712822
 
 COCOAPODS: 1.5.3
