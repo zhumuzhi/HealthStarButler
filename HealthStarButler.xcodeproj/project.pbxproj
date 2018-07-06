@@ -227,6 +227,12 @@
 		5DE1F58120EDA5B2005FCCD5 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F57F20EDA5B1005FCCD5 /* HYEdgeInsetsButton.m */; };
 		5DE1F58420EDE3BC005FCCD5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */; };
 		5DE1F58820EDE4B1005FCCD5 /* MEDStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */; };
+		5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */; };
+		5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14B20EF1DAB009A8E51 /* GHFromModel.m */; };
+		5DF1F14F20EF1FA6009A8E51 /* GHFromCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14E20EF1FA6009A8E51 /* GHFromCell.m */; };
+		5DF1F15220EF3095009A8E51 /* GHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F15120EF3095009A8E51 /* GHTextField.m */; };
+		5DF1F15B20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F15A20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m */; };
+		5DF1F15E20EF5522009A8E51 /* FSPriceAttributedStringTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F15D20EF5522009A8E51 /* FSPriceAttributedStringTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -610,6 +616,18 @@
 		5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDStatusController.h; sourceTree = "<group>"; };
 		5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDStatusController.m; sourceTree = "<group>"; };
+		5DF1F14420EF1C9F009A8E51 /* MEDPersonModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDPersonModelController.h; sourceTree = "<group>"; };
+		5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDPersonModelController.m; sourceTree = "<group>"; };
+		5DF1F14A20EF1DAB009A8E51 /* GHFromModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHFromModel.h; sourceTree = "<group>"; };
+		5DF1F14B20EF1DAB009A8E51 /* GHFromModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFromModel.m; sourceTree = "<group>"; };
+		5DF1F14D20EF1FA6009A8E51 /* GHFromCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHFromCell.h; sourceTree = "<group>"; };
+		5DF1F14E20EF1FA6009A8E51 /* GHFromCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHFromCell.m; sourceTree = "<group>"; };
+		5DF1F15020EF3095009A8E51 /* GHTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHTextField.h; sourceTree = "<group>"; };
+		5DF1F15120EF3095009A8E51 /* GHTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHTextField.m; sourceTree = "<group>"; };
+		5DF1F15920EF4BB0009A8E51 /* NSMutableAttributedString+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Add.h"; sourceTree = "<group>"; };
+		5DF1F15A20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Add.m"; sourceTree = "<group>"; };
+		5DF1F15C20EF5522009A8E51 /* FSPriceAttributedStringTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPriceAttributedStringTool.h; sourceTree = "<group>"; };
+		5DF1F15D20EF5522009A8E51 /* FSPriceAttributedStringTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPriceAttributedStringTool.m; sourceTree = "<group>"; };
 		C5E2A29150B0069B66E3449E /* Pods-HealthStarButler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.release.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -686,6 +704,8 @@
 				5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */,
 				5D0ABE4120E4CF7E0088D0D4 /* MEDReszingImageTool.h */,
 				5D0ABE4220E4CF7E0088D0D4 /* MEDReszingImageTool.m */,
+				5DF1F15C20EF5522009A8E51 /* FSPriceAttributedStringTool.h */,
+				5DF1F15D20EF5522009A8E51 /* FSPriceAttributedStringTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1300,8 +1320,12 @@
 				5D829A4C2085D5DF001993B6 /* Third */,
 				5D0ABE4420E4CFDA0088D0D4 /* UIButton+ReszingImage.h */,
 				5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */,
+				5DE1F57C20EDA5B1005FCCD5 /* UIButton+EdgeInsets.h */,
+				5DE1F57E20EDA5B1005FCCD5 /* UIButton+EdgeInsets.m */,
 				5D4F726420EBBA770049C92A /* UIScrollView+ScrollToTopBtn.h */,
 				5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */,
+				5DF1F15920EF4BB0009A8E51 /* NSMutableAttributedString+Add.h */,
+				5DF1F15A20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1971,8 +1995,6 @@
 			children = (
 				5DE1F57D20EDA5B1005FCCD5 /* HYEdgeInsetsButton.h */,
 				5DE1F57F20EDA5B1005FCCD5 /* HYEdgeInsetsButton.m */,
-				5DE1F57C20EDA5B1005FCCD5 /* UIButton+EdgeInsets.h */,
-				5DE1F57E20EDA5B1005FCCD5 /* UIButton+EdgeInsets.m */,
 			);
 			path = TestButton;
 			sourceTree = "<group>";
@@ -1980,8 +2002,8 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
-				5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */,
-				5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */,
+				5DF1F14320EF1C70009A8E51 /* PersonSetTest */,
+				5DF1F14220EF1C5F009A8E51 /* StatusBarTest */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -1993,6 +2015,54 @@
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 			);
 			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		5DF1F14220EF1C5F009A8E51 /* StatusBarTest */ = {
+			isa = PBXGroup;
+			children = (
+				5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */,
+				5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */,
+			);
+			path = StatusBarTest;
+			sourceTree = "<group>";
+		};
+		5DF1F14320EF1C70009A8E51 /* PersonSetTest */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1F14720EF1D6B009A8E51 /* Controller */,
+				5DF1F14820EF1D74009A8E51 /* Model */,
+				5DF1F14920EF1D78009A8E51 /* View */,
+			);
+			path = PersonSetTest;
+			sourceTree = "<group>";
+		};
+		5DF1F14720EF1D6B009A8E51 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1F14420EF1C9F009A8E51 /* MEDPersonModelController.h */,
+				5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DF1F14820EF1D74009A8E51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1F14A20EF1DAB009A8E51 /* GHFromModel.h */,
+				5DF1F14B20EF1DAB009A8E51 /* GHFromModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DF1F14920EF1D78009A8E51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DF1F14D20EF1FA6009A8E51 /* GHFromCell.h */,
+				5DF1F14E20EF1FA6009A8E51 /* GHFromCell.m */,
+				5DF1F15020EF3095009A8E51 /* GHTextField.h */,
+				5DF1F15120EF3095009A8E51 /* GHTextField.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B57C64CA421B6D48070A8489 /* Pods */ = {
@@ -2201,6 +2271,7 @@
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
 				5D69059620D9FB12002BBD69 /* MEDLineChartData.m in Sources */,
 				5DE1F57A20ECBE2B005FCCD5 /* FSButton.m in Sources */,
+				5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */,
 				5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
@@ -2219,6 +2290,7 @@
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
+				5DF1F15220EF3095009A8E51 /* GHTextField.m in Sources */,
 				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
 				5D201DE520CA6D2C009007D9 /* RFQuiltLayout.m in Sources */,
 				5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */,
@@ -2237,6 +2309,7 @@
 				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
 				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
 				5D201DF820CA6D2C009007D9 /* KDGoalBarPercentLayer.m in Sources */,
+				5DF1F15B20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
 				5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */,
@@ -2267,6 +2340,7 @@
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
 				5DE1F58020EDA5B2005FCCD5 /* UIButton+EdgeInsets.m in Sources */,
+				5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */,
 				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
 				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
@@ -2313,6 +2387,7 @@
 				5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */,
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */,
+				5DF1F14F20EF1FA6009A8E51 /* GHFromCell.m in Sources */,
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
 				5D27456E20DB985F00844B6E /* MEDChangeNameController.m in Sources */,
@@ -2332,6 +2407,7 @@
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
+				5DF1F15E20EF5522009A8E51 /* FSPriceAttributedStringTool.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,

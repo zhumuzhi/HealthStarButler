@@ -11,9 +11,11 @@
 #import "HYEdgeInsetsButton.h"
 
 #import "MEDStatusController.h"
-
+#import "FSPriceAttributedStringTool.h"
 
 @interface MEDConsultationController ()
+
+
 
 @end
 
@@ -38,12 +40,98 @@
     self.navigationItem.title = @"咨询";
     [self setupPersonNavigationItem];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-//    [self configTestButton];
-    [self configEdgeButton];
+    //self.view.backgroundColor = [UIColor grayColor];
+
+//    [self testRichtext];
+    [self testYYText];
+
 }
 
+- (void)testYYText {
+
+    UILabel *label = [UILabel new];
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.centerX.equalTo(self.view);
+        make.height.equalTo(@30);
+        make.width.equalTo(@(SCREEN_WIDTH));
+    }];
+    label.textColor = [UIColor orangeColor];
+
+    // 富文本操作
+//    NSString *pricrStr  = @"¥13.02~¥34.41";
+//    NSString *pricrStr  = @"¥1233.02";
+    NSString *pricrStr  = @"¥";
+    label.attributedText = [FSPriceAttributedStringTool priceAttributedStringWithString:pricrStr];
+
+}
+
+- (NSMutableAttributedString *)priceAttributedStringWith:(NSString *)string
+{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, 1)];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(string.length-2, 2)];
+    return attributedString;
+}
+
+
+
+- (void)testRichtext
+{
+
+    UILabel *richTextLabel = [[UILabel alloc] init];
+    [self.view addSubview:richTextLabel];
+
+    [richTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.centerX.equalTo(self.view);
+        make.height.equalTo(@30);
+        make.width.equalTo(@(SCREEN_WIDTH));
+    }];
+
+
+    NSString *richText = @"¥13.02~¥34.41";
+
+    NSMutableAttributedString * attriStr = [[NSMutableAttributedString alloc] initWithString:richText];
+
+    [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 1)];
+    [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, 1)];
+
+    [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(5, 6)];
+    [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, 1)];
+
+    [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, 6)];
+    [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12    ] range:NSMakeRange(6, 7)];
+    richTextLabel.attributedText = attriStr;
+
+
+}
+
+
+
+/*测试分类方式设置按钮*/
+- (void)configCategoryButton
+{
+    UIButton *edgeBtn = [[HYEdgeInsetsButton alloc] init];
+    [self.view addSubview:edgeBtn];
+    [edgeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.centerX.equalTo(self.view);
+        make.height.equalTo(@49);
+        make.width.equalTo(@(SCREEN_WIDTH/2));
+    }];
+    edgeBtn.titleLabel.font = [UIFont systemFontOfSize:20.0];
+    [edgeBtn setBackgroundColor:[UIColor whiteColor]];
+    [edgeBtn setTitle:@"首页" forState:UIControlStateNormal];
+    [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
+
+    [edgeBtn layoutButtonWithEdgeInsetsStyle:ButtonEdgeInsetsStyleImageLeft imageTitlespace:5];
+}
+
+
+/* 另一种自定义Button */
 - (void)configEdgeButton
 {
     HYEdgeInsetsButton *edgeBtn = [[HYEdgeInsetsButton alloc] init];
@@ -54,10 +142,11 @@
         make.height.equalTo(@49);
         make.width.equalTo(@(SCREEN_WIDTH/2));
     }];
-    edgeBtn.titleLabel.font = [UIFont systemFontOfSize:20.0];
+    edgeBtn.scaleClose = YES;
+    edgeBtn.titleLabel.font = [UIFont systemFontOfSize:50.0];
     edgeBtn.edgeInsetsStyle = HYButtonEdgeInsetsStyleImageLeft;
     edgeBtn.imageTitleSpace = 5;
-    [edgeBtn setBackgroundColor:[UIColor lightGrayColor]];
+    [edgeBtn setBackgroundColor:[UIColor whiteColor]];
     [edgeBtn setTitle:@"首页" forState:UIControlStateNormal];
     [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
@@ -65,24 +154,21 @@
     
     HYEdgeInsetsButton *edgeBtnOne = [[HYEdgeInsetsButton alloc] init];
     [self.view addSubview:edgeBtnOne];
+    edgeBtnOne.scaleClose = YES;
     [edgeBtnOne mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(edgeBtn.mas_bottom).offset(50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@20);
         make.width.equalTo(@50);
     }];
-    edgeBtnOne.titleLabel.font = [UIFont systemFontOfSize:12.0];
+    edgeBtnOne.titleLabel.font = [UIFont systemFontOfSize:15.0];
     edgeBtnOne.edgeInsetsStyle = HYButtonEdgeInsetsStyleImageLeft;
     edgeBtnOne.imageTitleSpace = 5;
-    [edgeBtnOne setBackgroundColor:[UIColor lightGrayColor]];
+    [edgeBtnOne setBackgroundColor:[UIColor whiteColor]];
     [edgeBtnOne setTitle:@"北京" forState:UIControlStateNormal];
     [edgeBtnOne setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtnOne setImage:[UIImage imageNamed:@"区域"] forState:UIControlStateNormal];
-    
-    
-    
-    
-    
+
 }
 
 

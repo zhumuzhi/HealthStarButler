@@ -10,11 +10,13 @@
 
 @implementation HYEdgeInsetsButton
 
+// 设置按钮图片
 - (void)setImage:(UIImage *)image forState:(UIControlState)state {
     [super setImage:image forState:state];
     [self setEdgeInsetsStyle:_edgeInsetsStyle];
 }
 
+// 设置按钮标题
 - (void)setTitle:(NSString *)title forState:(UIControlState)state {
     [super setTitle:title forState:state];
     [self setEdgeInsetsStyle:_edgeInsetsStyle];
@@ -28,10 +30,17 @@
     [self layoutIfNeeded];
     
     _edgeInsetsStyle = edgeInsetsStyle;
+
+    // 拿到外部设置的间距
+    /*设置间距*/
     CGFloat space = self.imageTitleSpace;
+
+    // 拿到图片的宽度
     CGFloat imageViewWidth = CGRectGetWidth(self.imageView.frame);
+    // 拿到标题的宽度
     CGFloat labelWidth = CGRectGetWidth(self.titleLabel.frame);
-    
+
+    // 如果没有根据文字计算宽度
     if (labelWidth == 0) {
         CGSize titleSize = [self.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:self.titleLabel.font}];
         labelWidth  = titleSize.width;

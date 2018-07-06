@@ -38,6 +38,9 @@
 #import "NSString+MED.h"
 #import "UIButton+ReszingImage.h"
 #import "UIScrollView+ScrollToTopBtn.h"
+#import "UIButton+EdgeInsets.h"
+// 富文本拼接
+#import "NSMutableAttributedString+Add.h"
 
 #pragma mark -------------------- 工具类 --------------------
 #import "MEDDateUtils.h"
@@ -53,6 +56,8 @@
 #import "MJExtension.h"
 
 #import "WRNavigationBar.h"
+
+#import <YYText/YYText.h>
 
 #pragma mark -------------------- 网络工具 --------------------
 #import "MEDNetClient.h"

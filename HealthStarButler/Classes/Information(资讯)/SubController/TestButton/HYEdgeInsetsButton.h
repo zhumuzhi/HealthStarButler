@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+
+
 typedef NS_ENUM(NSUInteger, HYButtonEdgeInsetsStyle) {
     HYButtonEdgeInsetsStyleImageLeft,
     HYButtonEdgeInsetsStyleImageRight,
@@ -26,5 +28,8 @@ IB_DESIGNABLE
 
 /* 图片与标题的间距*/
 @property (nonatomic) IBInspectable CGFloat imageTitleSpace;
+
+
+@property (nonatomic, assign) BOOL scaleClose;
 
 @end
