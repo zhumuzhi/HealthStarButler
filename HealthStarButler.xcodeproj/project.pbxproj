@@ -17,6 +17,10 @@
 		5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4520E4CFDA0088D0D4 /* UIButton+ReszingImage.m */; };
 		5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4820E4D8620088D0D4 /* MEDPerson.m */; };
 		5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0ABE4B20E506860088D0D4 /* MEDDog.m */; };
+		5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12B20A20F2EB3000ECE416 /* MZModelTypeLoginController.m */; };
+		5D12B20F20F2EE5300ECE416 /* MZDataModelHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12B20E20F2EE5300ECE416 /* MZDataModelHelper.m */; };
+		5D12B21220F2EE6200ECE416 /* MZDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12B21120F2EE6200ECE416 /* MZDataModel.m */; };
+		5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12B21420F2EFC300ECE416 /* MZLoginButton.m */; };
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
@@ -104,6 +108,8 @@
 		5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */; };
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
 		5D4F726920ECEE550049C92A /* FSCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726820ECEE550049C92A /* FSCustomButton.m */; };
+		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
+		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
 		5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D69057120D9FB12002BBD69 /* MEDBloodPressureCell.xib */; };
@@ -255,6 +261,14 @@
 		5D0ABE4820E4D8620088D0D4 /* MEDPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDPerson.m; sourceTree = "<group>"; };
 		5D0ABE4A20E506860088D0D4 /* MEDDog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDog.h; sourceTree = "<group>"; };
 		5D0ABE4B20E506860088D0D4 /* MEDDog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDDog.m; sourceTree = "<group>"; };
+		5D12B20920F2EB3000ECE416 /* MZModelTypeLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZModelTypeLoginController.h; sourceTree = "<group>"; };
+		5D12B20A20F2EB3000ECE416 /* MZModelTypeLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZModelTypeLoginController.m; sourceTree = "<group>"; };
+		5D12B20D20F2EE5300ECE416 /* MZDataModelHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDataModelHelper.h; sourceTree = "<group>"; };
+		5D12B20E20F2EE5300ECE416 /* MZDataModelHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDataModelHelper.m; sourceTree = "<group>"; };
+		5D12B21020F2EE6200ECE416 /* MZDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZDataModel.h; sourceTree = "<group>"; };
+		5D12B21120F2EE6200ECE416 /* MZDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZDataModel.m; sourceTree = "<group>"; };
+		5D12B21320F2EFC300ECE416 /* MZLoginButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginButton.h; sourceTree = "<group>"; };
+		5D12B21420F2EFC300ECE416 /* MZLoginButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginButton.m; sourceTree = "<group>"; };
 		5D1AC62C209ABA3B00FB16C9 /* MEDHomeMonitorCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeMonitorCell.h; sourceTree = "<group>"; };
 		5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeMonitorCell.m; sourceTree = "<group>"; };
 		5D1AC630209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeFoodPlanCell.h; sourceTree = "<group>"; };
@@ -388,6 +402,10 @@
 		5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollToTopBtn.m"; sourceTree = "<group>"; };
 		5D4F726720ECEE550049C92A /* FSCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCustomButton.h; sourceTree = "<group>"; };
 		5D4F726820ECEE550049C92A /* FSCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCustomButton.m; sourceTree = "<group>"; };
+		5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginHeaderView.h; sourceTree = "<group>"; };
+		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
+		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
+		5D5E0FF520F30108003148A1 /* MZLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginCell.m; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
 		5D69056D20D9FB12002BBD69 /* MEDMonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorController.h; sourceTree = "<group>"; };
 		5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHistoryController.m; sourceTree = "<group>"; };
@@ -710,6 +728,57 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		5D12B20420F2EA7E00ECE416 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				5D12B20520F2EA8B00ECE416 /* ModelTypeLogin */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5D12B20520F2EA8B00ECE416 /* ModelTypeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				5D12B20620F2EAD400ECE416 /* Controller */,
+				5D12B20820F2EAE700ECE416 /* Model */,
+				5D12B20720F2EAE000ECE416 /* View */,
+			);
+			path = ModelTypeLogin;
+			sourceTree = "<group>";
+		};
+		5D12B20620F2EAD400ECE416 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D12B20920F2EB3000ECE416 /* MZModelTypeLoginController.h */,
+				5D12B20A20F2EB3000ECE416 /* MZModelTypeLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D12B20720F2EAE000ECE416 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D12B21320F2EFC300ECE416 /* MZLoginButton.h */,
+				5D12B21420F2EFC300ECE416 /* MZLoginButton.m */,
+				5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */,
+				5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */,
+				5D5E0FF420F30108003148A1 /* MZLoginCell.h */,
+				5D5E0FF520F30108003148A1 /* MZLoginCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D12B20820F2EAE700ECE416 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D12B21020F2EE6200ECE416 /* MZDataModel.h */,
+				5D12B21120F2EE6200ECE416 /* MZDataModel.m */,
+				5D12B20D20F2EE5300ECE416 /* MZDataModelHelper.h */,
+				5D12B20E20F2EE5300ECE416 /* MZDataModelHelper.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5D1AC62B209AB9D500FB16C9 /* MonitorCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -876,6 +945,7 @@
 		5D4A47F6208F0457007DAD29 /* UserLogin(登录) */ = {
 			isa = PBXGroup;
 			children = (
+				5D12B20420F2EA7E00ECE416 /* SubController */,
 				5D4A47F7208F08CD007DAD29 /* Controller */,
 				5D4A47F8208F08D5007DAD29 /* Model */,
 				5D4A47F9208F08DA007DAD29 /* View */,
@@ -2322,6 +2392,7 @@
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
 				5D27457320DB985F00844B6E /* MEDInputAlertView.m in Sources */,
+				5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */,
 				5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */,
 				5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */,
 				5D8207F12099A50500B84C1E /* MEDCompanyRankCell.m in Sources */,
@@ -2336,6 +2407,7 @@
 				5D69059520D9FB12002BBD69 /* ITDatePickerController.m in Sources */,
 				5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
+				5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */,
 				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
@@ -2351,7 +2423,9 @@
 				5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */,
 				5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */,
 				5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */,
+				5D12B21220F2EE6200ECE416 /* MZDataModel.m in Sources */,
 				5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */,
+				5D12B20F20F2EE5300ECE416 /* MZDataModelHelper.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
@@ -2362,6 +2436,7 @@
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
+				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D0ABE4320E4CF7E0088D0D4 /* MEDReszingImageTool.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
@@ -2371,6 +2446,7 @@
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
 				5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */,
+				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
