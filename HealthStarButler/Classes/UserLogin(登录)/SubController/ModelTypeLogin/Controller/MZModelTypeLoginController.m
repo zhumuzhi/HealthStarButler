@@ -7,13 +7,20 @@
 //
 
 #import "MZModelTypeLoginController.h"
+#import "MZDataModel.h"
+#import "MZDataModelHelper.h"
+#import "MZLoginHeaderView.h"
+#import "MZLoginCell.h"
+
 
 static NSString *MZLoginCellID = @"MZLoginCellID";
 
-@interface MZModelTypeLoginController ()<UITableViewDataSource, UITableViewDelegate>
+@interface MZModelTypeLoginController ()<UITableViewDataSource, UITableViewDelegate, MZLoginCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic , strong) MZLoginHeaderView *headerView;
+
 
 @property (nonatomic , copy) NSString *emailAccount;
 @property (nonatomic , copy) NSString *userCode;
@@ -32,7 +39,7 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
     // Do any additional setup after loading the view.
 
     self.view.backgroundColor = [UIColor whiteColor];
-
+    self.navigationItem.title = @"模型登录页面";
 }
 
 #pragma mark - ConfigUI
@@ -40,15 +47,15 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
 {
     [self.view addSubview:self.backImageView];
     [self.backImageView addSubview:self.tableView];
-//    self.tableView.tableHeaderView = self.headerView;
+    self.tableView.tableHeaderView = self.headerView;
 
 }
 
 #pragma mark - RequestData
 
 - (void)loadData {
-//    NSArray *tempArray= [[GHDataModelHelper dataModelHepler] creatLoginDataArray];
-//    self.dataArray = [GHDataModel mj_objectArrayWithKeyValuesArray:tempArray];
+    NSArray *tempArray= [[MZDataModelHelper dataModelHepler] creatLoginDataArray];
+    self.dataArray = [MZDataModel mj_objectArrayWithKeyValuesArray:tempArray];
 }
 
 
@@ -67,14 +74,14 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    GHDataModel *dataModel = self.dataArray[indexPath.row];
-//    GHLoginCell *cell = [tableView dequeueReusableCellWithIdentifier:GHLoginCellID];
-//    cell.dataModel = dataModel;
-//    dataModel.indexPath = indexPath;
-//    cell.delegate = self;
-//    return cell;
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MZLoginCellID];
+    MZDataModel *dataModel = self.dataArray[indexPath.row];
+    MZLoginCell *cell = [tableView dequeueReusableCellWithIdentifier:MZLoginCellID];
+    cell.dataModel = dataModel;
+    dataModel.indexPath = indexPath;
+    cell.delegate = self;
     return cell;
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MZLoginCellID];
+//    return cell;
 }
 
 #pragma mark - LazyGet
@@ -92,7 +99,7 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height - 64) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-//        [_tableView registerClass:[GHLoginCell class] forCellReuseIdentifier:GHLoginCellID];
+        [_tableView registerClass:[MZLoginCell class] forCellReuseIdentifier:MZLoginCellID];
         _tableView.tableFooterView = [[UIView alloc]init];
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.showsHorizontalScrollIndicator = NO;
@@ -112,12 +119,12 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
     return _dataArray;
 }
 
-//- (GHLoginHeaderView *)headerView {
-//    if (_headerView == nil) {
-//        _headerView = [[GHLoginHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 140)];
-//    }
-//    return _headerView;
-//}
+- (MZLoginHeaderView *)headerView {
+    if (_headerView == nil) {
+        _headerView = [[MZLoginHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 140)];
+    }
+    return _headerView;
+}
 
 
 

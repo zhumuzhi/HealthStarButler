@@ -66,13 +66,13 @@
     CGFloat marginTop = 19.0f; // 第一行的View距离顶部的距离
     CGFloat monitorVH = backViewH*2 + marginTop*2; //188
     UIView *monitorView = [[UIView alloc] init];
-    monitorView.frame = CGRectMake(0, 0, SCREEN_WIDTH, monitorVH);
+    monitorView.frame = CGRectMake(0, 0, kScreenWidth, monitorVH);
     monitorView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:monitorView];
     
     
     int columns = 4; // 每一行btn的个数
-    CGFloat marginX = (SCREEN_WIDTH - backViewW * columns) / (columns + 1);
+    CGFloat marginX = (kScreenWidth - backViewW * columns) / (columns + 1);
     CGFloat marginY = MARGIN;
     for (int i = 0; i <self.titleArray.count; i++) {
         //背景

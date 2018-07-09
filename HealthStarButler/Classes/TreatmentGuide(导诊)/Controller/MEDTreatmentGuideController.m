@@ -97,7 +97,7 @@
 #pragma mark  CofigNavigation
 - (void)configNavigation {
     UIButton *commitButton = [[UIButton alloc] init];
-    commitButton.frame = CGRectMake(SCREEN_WIDTH - 60, 0, 44, 44);
+    commitButton.frame = CGRectMake(kScreenWidth - 60, 0, 44, 44);
     [commitButton setTitle:@"提交" forState:UIControlStateNormal];
     [commitButton addTarget:self action:@selector(commitClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:commitButton];
@@ -106,11 +106,11 @@
 #pragma mark ConfigChooseCollectionView
 - (void)initConlectionView
 {
-    CGFloat collectionY = Navigation_Height+Margin;
+    CGFloat collectionY = kNavigationHeight+Margin;
 
     self.tagStateType = TagStateEdit; //编辑模式
 
-    _tagListView = [[MEDGuidanceTagView alloc] initWithFrame:CGRectMake(0, collectionY, SCREEN_WIDTH, 43)];
+    _tagListView = [[MEDGuidanceTagView alloc] initWithFrame:CGRectMake(0, collectionY, kScreenWidth, 43)];
 
     self.tagListView.delegate = self;
     [self.tagListView creatUI:_dataArray];   //传入Tag数组初始化界面
@@ -123,18 +123,18 @@
 
     [self.view addSubview:_tagListView];
 
-    _twoTable.frame = CGRectMake(0, CGRectGetMaxY(_tagListView.frame)+Margin, SCREEN_WIDTH, SCREEN_HEIGHT- Navigation_Height- CGRectGetMaxY(_tagListView.frame)-Margin);
+    _twoTable.frame = CGRectMake(0, CGRectGetMaxY(_tagListView.frame)+Margin, kScreenWidth, kScreenHeight- kNavigationHeight- CGRectGetMaxY(_tagListView.frame)-Margin);
 
-    _twoTable.leftTablew.frame = CGRectMake(0, 0, LeftTableHW , SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_tagListView.frame)-TabBar_Height-CELL_HEIGHT);
+    _twoTable.leftTablew.frame = CGRectMake(0, 0, LeftTableHW , kScreenHeight- kNavigationHeight- CGRectGetHeight(_tagListView.frame)-kTabBarHeight-CELL_HEIGHT);
 
-    _twoTable.rightTablew.frame = CGRectMake(CGRectGetMaxX(_twoTable.leftTablew.frame),0,SCREEN_WIDTH-_twoTable.leftTablew.frame.size.width,SCREEN_HEIGHT- Navigation_Height- CGRectGetHeight(_tagListView.frame)-TabBar_Height-CELL_HEIGHT);
+    _twoTable.rightTablew.frame = CGRectMake(CGRectGetMaxX(_twoTable.leftTablew.frame),0,kScreenWidth-_twoTable.leftTablew.frame.size.width,kScreenHeight- kNavigationHeight- CGRectGetHeight(_tagListView.frame)-kTabBarHeight-CELL_HEIGHT);
     //此处将 twoTable 提到最前方
     [self.view bringSubviewToFront:_twoTable];
 }
 
 - (void)initTwoTableView
 {
-    _twoTable = [[MEDTwoTableView alloc] initWithFrame:CGRectMake(0, Navigation_Height+CGRectGetHeight(_tagListView.frame), SCREEN_WIDTH, SCREEN_HEIGHT) WithData:nil withSelectIndex:^(NSInteger left, NSInteger right,NSString *str) {
+    _twoTable = [[MEDTwoTableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight+CGRectGetHeight(_tagListView.frame), kScreenWidth, kScreenHeight) WithData:nil withSelectIndex:^(NSInteger left, NSInteger right,NSString *str) {
         //  NSLog(@"点击的 菜单%@",info.meunName);
     }];
     [self.view addSubview:_twoTable];

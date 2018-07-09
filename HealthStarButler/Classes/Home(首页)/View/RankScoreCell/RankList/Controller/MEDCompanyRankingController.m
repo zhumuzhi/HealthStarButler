@@ -53,7 +53,7 @@ static  NSString *cellIdentifier = @"CompanyRankingCell";
 #pragma mark TabelView
 -(UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, StatusBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT-StatusBarHeight) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, KStatusBarHeight, kScreenWidth, kScreenHeight-KStatusBarHeight) style:UITableViewStyleGrouped];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         

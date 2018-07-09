@@ -45,12 +45,12 @@
         numLbl.textColor = MEDGrayColor(40);
         numLbl.textAlignment = NSTextAlignmentRight;
         numLbl.frame = CGRectMake(0, 0, self.width/3, self.height);
-        numLbl.right = SCREEN_WIDTH - 20;
+        numLbl.right = kScreenWidth - 20;
         
         self.numLbl = numLbl;
         [self.contentView addSubview:numLbl];
         
-        //MYLog(@"测试*SCREEN_WIDTH:%f *self.width/3:%f", SCREEN_WIDTH , self.contentView.right);
+        //MYLog(@"测试*kScreenWidth:%f *self.width/3:%f", kScreenWidth , self.contentView.right);
         
         self.userInteractionEnabled = NO;
         

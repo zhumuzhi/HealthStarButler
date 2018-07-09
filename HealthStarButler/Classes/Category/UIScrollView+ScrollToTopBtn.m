@@ -79,7 +79,7 @@ static CGFloat const kScrollToTopBtnMargin     = 12.f;
 - (CGFloat)scrollToTopBtnShowOffset
 {
     id offset = objc_getAssociatedObject(self, @selector(scrollToTopBtnShowOffset));
-    return offset > 0 ? [offset floatValue]:SCREEN_HEIGHT;
+    return offset > 0 ? [offset floatValue]:kScreenHeight;
 }
 
 - (void)setScrollToTopBtnShowOffset:(CGFloat)scrollToTopBtnShowOffset

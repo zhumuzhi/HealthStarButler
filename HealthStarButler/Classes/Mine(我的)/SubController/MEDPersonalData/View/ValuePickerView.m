@@ -28,7 +28,7 @@
 
 - (instancetype)init
 {
-    if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)]) {
+    if (self = [super initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)]) {
         self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
         self.userInteractionEnabled = YES;
         [self addSubview:self.maskView];
@@ -90,22 +90,22 @@
 - (void)layoutSelfSubviews
 {
     //底层视图
-    self.bottomView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, self.pickerHeight);
+    self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, self.pickerHeight);
     
     //选择器
-    self.statePicker.frame = CGRectMake(0, 40, SCREEN_WIDTH, self.pickerHeight - 40);
+    self.statePicker.frame = CGRectMake(0, 40, kScreenWidth, self.pickerHeight - 40);
     
     //控制栏
-    self.controllerToolBar.frame = CGRectMake(0, 0, SCREEN_WIDTH, 40);
+    self.controllerToolBar.frame = CGRectMake(0, 0, kScreenWidth, 40);
     
     //完成按钮
-    self.finishBtn.frame = CGRectMake(SCREEN_WIDTH - 70, 5, 70, 30);
+    self.finishBtn.frame = CGRectMake(kScreenWidth - 70, 5, 70, 30);
     
     //取消按钮
     self.cancelBtn.frame = CGRectMake(0, 5, 70, 30);
     
     //标题
-    self.titleLabel.frame = CGRectMake(70, 5, SCREEN_WIDTH - 140, 30);
+    self.titleLabel.frame = CGRectMake(70, 5, kScreenWidth - 140, 30);
 }
 
 #pragma mark - set相关
@@ -212,7 +212,7 @@
     
     //动画出现
     CGRect frame = self.bottomView.frame;
-    if (frame.origin.y == SCREEN_HEIGHT) {
+    if (frame.origin.y == kScreenHeight) {
         frame.origin.y -= self.pickerHeight;
         [UIView animateWithDuration:0.3 animations:^{
             self.bottomView.frame = frame;
@@ -224,7 +224,7 @@
 - (void)removeSelfFromSupView
 {
     CGRect selfFrame = self.bottomView.frame;
-    if (selfFrame.origin.y == SCREEN_HEIGHT - self.pickerHeight) {
+    if (selfFrame.origin.y == kScreenHeight - self.pickerHeight) {
         selfFrame.origin.y += self.pickerHeight;
         [UIView animateWithDuration:0.3 animations:^{
             self.bottomView.frame = selfFrame;

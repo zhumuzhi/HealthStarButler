@@ -29,7 +29,7 @@
 - (void)configUI {
     self.navigationItem.title = @"网页测试";
     self.view.backgroundColor = [UIColor whiteColor];
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height)];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight)];
     self.webView = webView;
     webView.delegate = self;
     [self.view addSubview:webView];

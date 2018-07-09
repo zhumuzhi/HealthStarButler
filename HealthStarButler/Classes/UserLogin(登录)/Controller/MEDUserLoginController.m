@@ -39,8 +39,8 @@
 {
     //头像
     CGFloat headImageW = 70.0f;
-    CGFloat headImageX = (SCREEN_WIDTH*0.5)-(headImageW*0.5);
-    CGFloat headImageY = SCREEN_HEIGHT/8;
+    CGFloat headImageX = (kScreenWidth*0.5)-(headImageW*0.5);
+    CGFloat headImageY = kScreenHeight/8;
     UIImageView *headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(headImageX, headImageY, headImageW, headImageW)];
     _headImageView = headImageView;
     
@@ -65,7 +65,7 @@
     //手机号/用户名
     CGFloat UserNameX = EdgePadding;
     CGFloat UserNameY = CGRectGetMaxY(_headImageView.frame) + 75.0f;
-    CGFloat UserNameW = SCREEN_WIDTH - (EdgePadding * 2);
+    CGFloat UserNameW = kScreenWidth - (EdgePadding * 2);
     CGFloat UserNameH = 39.0f;
     UITextField *userName = [[UITextField alloc] initWithFrame:CGRectMake(UserNameX, UserNameY, UserNameW, UserNameH)];
     _userName = userName;
@@ -88,7 +88,7 @@
     //密码
     CGFloat PassWordX = EdgePadding;
     CGFloat PassWordY = CGRectGetMaxY(_userName.frame)+12.0f;
-    CGFloat PassWordW = SCREEN_WIDTH - (EdgePadding*2);
+    CGFloat PassWordW = kScreenWidth - (EdgePadding*2);
     CGFloat PassWordH = UserNameH;
     _passWord = [[UITextField alloc]initWithFrame:CGRectMake(PassWordX, PassWordY, PassWordW, PassWordH)];
     _passWord.layer.cornerRadius = TextFieldCornerR;
@@ -121,7 +121,7 @@
     //忘记密码
     UIButton *forgetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     CGSize forgetBtnSize =   [@"忘记密码?" sizeWithAttributes:@{NSFontAttributeName : MEDSYSFont(20)                                                                   }];
-    CGFloat ForgetBtnX = SCREEN_WIDTH - forgetBtnSize.width - EdgePadding;
+    CGFloat ForgetBtnX = kScreenWidth - forgetBtnSize.width - EdgePadding;
     CGFloat ForgetBtnY = CGRectGetMaxY(loginBtn.frame)+12;
     CGFloat ForgetBtnW = forgetBtnSize.width;
     CGFloat ForgetBtnH = 30;

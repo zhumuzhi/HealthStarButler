@@ -80,7 +80,7 @@ static NSString *const cellID = @"LifeHabitCell";
 //指示View
 - (void)setupIntroductionsView {
     UIView *introductionsView = [[UIView alloc] init];
-    introductionsView.frame = CGRectMake(0, StatusBarHeight, SCREEN_WIDTH, 40);
+    introductionsView.frame = CGRectMake(0, KStatusBarHeight, kScreenWidth, 40);
     introductionsView.backgroundColor = MEDRGB(234, 245, 248);
     [self.view addSubview:introductionsView];
     
@@ -88,14 +88,14 @@ static NSString *const cellID = @"LifeHabitCell";
     IntroductionsLabel.text = @"生活习惯是计算分数的重要依据...";
     IntroductionsLabel.font = [UIFont systemFontOfSize:14];
     IntroductionsLabel.textColor = MEDRGB(153, 153, 153);
-    IntroductionsLabel.frame = CGRectMake(10, 10, SCREEN_WIDTH - 20, 20);
+    IntroductionsLabel.frame = CGRectMake(10, 10, kScreenWidth - 20, 20);
     IntroductionsLabel.textAlignment = NSTextAlignmentLeft;
     [introductionsView addSubview:IntroductionsLabel];
 }
 
 -(UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (StatusBarHeight+50), SCREEN_WIDTH, SCREEN_HEIGHT-(StatusBarHeight+50)) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, (KStatusBarHeight+50), kScreenWidth, kScreenHeight-(KStatusBarHeight+50)) style:UITableViewStylePlain];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.dataSource = self;
         _tableView.delegate = self;

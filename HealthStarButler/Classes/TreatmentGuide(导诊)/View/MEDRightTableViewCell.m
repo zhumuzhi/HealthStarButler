@@ -25,7 +25,7 @@
 -(void)initUI
 {
     //调整位置，影响字的位置
-    _title = [[UILabel alloc]initWithFrame:CGRectMake(30, 0, (SCREEN_WIDTH-94*2) , 40)];
+    _title = [[UILabel alloc]initWithFrame:CGRectMake(30, 0, (kScreenWidth-94*2) , 40)];
     _title.textColor = MEDGrayColor(102);
     // _title.backgroundColor = THEMEREDCOLOR;
     //_title.font = [MEDResource getSmallFont];
@@ -46,7 +46,7 @@
     _title.text = textStr;
     
     //    _title.textAlignment = NSTextAlignmentLeft;
-    _selectedImage.frame = CGRectMake(SCREEN_WIDTH-90-20, 10, 20, 20);
+    _selectedImage.frame = CGRectMake(kScreenWidth-90-20, 10, 20, 20);
 }
 
 - (void)awakeFromNib {

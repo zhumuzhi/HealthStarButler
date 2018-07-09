@@ -30,27 +30,27 @@
 
 #pragma mark -------------------- Frame --------------------
 // 屏幕宽度
-#define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
+#define kScreenWidth    ([UIScreen mainScreen].bounds.size.width)
 // 屏幕高度
-#define SCREEN_HEIGHT   ([UIScreen mainScreen].bounds.size.height)
+#define kScreenHeight   ([UIScreen mainScreen].bounds.size.height)
 
 // 是否iPhone X
-#define  MED_iPhoneX        (SCREEN_WIDTH == 375.f && SCREEN_HEIGHT == 812.f ? YES : NO)
+#define  MED_iPhoneX        (kScreenWidth == 375.f && kScreenHeight == 812.f ? YES : NO)
 
 // 状态栏Height
-#define StatusBarHeight     (MED_iPhoneX ? 44.f : 20.f )
+#define KStatusBarHeight     (MED_iPhoneX ? 44.f : 20.f )
 // 导航栏Height
-#define Navigation_Height   (StatusBarHeight + 44.f)
+#define kNavigationHeight   (KStatusBarHeight + 44.f)
 // TabBar距离底部
-#define MED_TabbarSafeBottomMargin  (MED_iPhoneX ? 34.f : 0.0f)
+#define kTabbarSafeBottomMargin  (MED_iPhoneX ? 34.f : 0.0f)
 // TabBarHeight
-#define TabBar_Height       (MED_TabbarSafeBottomMargin + 49.f)
+#define kTabBarHeight       (kTabbarSafeBottomMargin + 49.f)
 
 // TabBar一级页面Frame
-#define NormalFrame CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height-TabBar_Height)
+#define NormalFrame CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight-kTabBarHeight)
 
 /** 二级页面Frame(由一级页面Push有Navigation) */
-#define SecondPageFrame CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height-MED_TabbarSafeBottomMargin)
+#define SecondPageFrame CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight-kTabbarSafeBottomMargin)
 
 #define CELL_HEIGHT 44
 

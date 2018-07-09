@@ -72,7 +72,7 @@
 
 #pragma mark - UI
 - (void)setupUI {
-    _personalTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height)];
+    _personalTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight)];
     _personalTableView.delegate = self;
     _personalTableView.dataSource = self;
     _personalTableView.tableFooterView = [UIView new];

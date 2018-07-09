@@ -34,7 +34,7 @@
 - (void)initUI {
     
     //背景
-    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, Navigation_Height+20, SCREEN_WIDTH, 50)];
+    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, kNavigationHeight+20, kScreenWidth, 50)];
     _backView.backgroundColor = [UIColor whiteColor];
     
     //标题Label
@@ -48,7 +48,7 @@
     //线条
     UIView *line1 = [[UIView alloc] init];
     line1.backgroundColor = MEDGrayColor(243);
-    line1.frame = CGRectMake(0, CGRectGetMaxY(lable.frame), SCREEN_WIDTH, 1);
+    line1.frame = CGRectMake(0, CGRectGetMaxY(lable.frame), kScreenWidth, 1);
     [_backView addSubview:line1];
 
 //上个版本的类型标签
@@ -83,19 +83,19 @@
     detialLable.frame = CGRectMake(20, CGRectGetMaxY(lable.frame)+10, contentW,contentH);
     [_backView addSubview:detialLable];
     
-    _backView.frame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH, contentH + 44+40+5);
+    _backView.frame = CGRectMake(0, kNavigationHeight, kScreenWidth, contentH + 44+40+5);
     [self.view addSubview:_backView];
 
     UIView *line = [[UIView alloc] init];
     line.backgroundColor = MEDGrayColor(243);
-    line.frame = CGRectMake(0, CGRectGetMaxY(detialLable.frame)+10, SCREEN_WIDTH, 1);
+    line.frame = CGRectMake(0, CGRectGetMaxY(detialLable.frame)+10, kScreenWidth, 1);
     [_backView addSubview:line];
     
 //    UIImageView *greenPoint = [[UIImageView alloc]initWithFrame:CGRectMake(20, CGRectGetMaxY(line.frame)+10, 5, 5)];
 //    greenPoint.image = [UIImage imageNamed:@"13-13"];
 //    [_backView addSubview:greenPoint];
     
-    UILabel *tips= [[UILabel alloc]initWithFrame:CGRectMake(20, CGRectGetMaxY(line.frame)-10, SCREEN_WIDTH-45, 44)];
+    UILabel *tips= [[UILabel alloc]initWithFrame:CGRectMake(20, CGRectGetMaxY(line.frame)-10, kScreenWidth-45, 44)];
     tips.text = _diseaseName;
     tips.textAlignment = NSTextAlignmentLeft;
     tips.text = @"本系统仅作为选择就诊科室参考，不能代替临床诊断";

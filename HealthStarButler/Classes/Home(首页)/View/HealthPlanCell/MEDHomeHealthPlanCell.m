@@ -49,7 +49,7 @@
     CGFloat MARGIN = 10.0f;
     //背景
     UIView *healthPlanView = [[UIView alloc] init];
-    healthPlanView.frame = CGRectMake(0, MARGIN, SCREEN_WIDTH, 130);
+    healthPlanView.frame = CGRectMake(0, MARGIN, kScreenWidth, 130);
     healthPlanView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:healthPlanView];
     
@@ -112,7 +112,7 @@
     UITextView *planDetails = [[UITextView alloc] init];
     planDetails.scrollEnabled = NO;
     planDetails.editable = NO;
-    planDetails.frame = CGRectMake(CGRectGetMaxX(healthPlanImage.frame) + MARGIN*2, 50, SCREEN_WIDTH - healthPlanImage.frame.size.width - MARGIN*3, 80);
+    planDetails.frame = CGRectMake(CGRectGetMaxX(healthPlanImage.frame) + MARGIN*2, 50, kScreenWidth - healthPlanImage.frame.size.width - MARGIN*3, 80);
     
     planDetails.textColor = MEDGrayColor(102);
     planDetails.font = [UIFont systemFontOfSize:13];

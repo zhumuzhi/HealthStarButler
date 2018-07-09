@@ -46,7 +46,7 @@
     //backView
     CGFloat MARGIN = 10.0f;
     UIView *foodDiaryView = [[UIView alloc] init];
-    foodDiaryView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 120);
+    foodDiaryView.frame = CGRectMake(0, 0, kScreenWidth, 120);
     foodDiaryView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:foodDiaryView];
     
@@ -66,7 +66,7 @@
     //记录标题
     UILabel *isRecordLabel = [[UILabel alloc] init];
     CGSize recordLabelSize = [@"今日未记录" sizeWithFont:[UIFont systemFontOfSize:13]];
-    isRecordLabel.frame = CGRectMake(SCREEN_WIDTH - MARGIN - recordLabelSize.width, MARGIN, recordLabelSize.width, recordLabelSize.height);
+    isRecordLabel.frame = CGRectMake(kScreenWidth - MARGIN - recordLabelSize.width, MARGIN, recordLabelSize.width, recordLabelSize.height);
     isRecordLabel.textAlignment = NSTextAlignmentRight;
     //    if (_isWriteFoodDate) {
     //        _isRecordLabel.text = @"已记录";
@@ -96,7 +96,7 @@
     
     //合理建议标签
     UILabel *descTitle = [[UILabel alloc] init];
-    descTitle.frame = CGRectMake(CGRectGetMaxX(diaryImage.frame)+MARGIN, CGRectGetMaxY(subTitle.frame)+ MARGIN, SCREEN_WIDTH - diaryImage.frame.size.width - 3*MARGIN  , diaryImage.frame.size.height - subTitle.frame.size.height-MARGIN/2);
+    descTitle.frame = CGRectMake(CGRectGetMaxX(diaryImage.frame)+MARGIN, CGRectGetMaxY(subTitle.frame)+ MARGIN, kScreenWidth - diaryImage.frame.size.width - 3*MARGIN  , diaryImage.frame.size.height - subTitle.frame.size.height-MARGIN/2);
     descTitle.text = @"合理规划健康饮食，良好的生活习惯，拥有健康的身体";
     descTitle.numberOfLines = 0;
     descTitle.textColor = MEDGrayColor(102);

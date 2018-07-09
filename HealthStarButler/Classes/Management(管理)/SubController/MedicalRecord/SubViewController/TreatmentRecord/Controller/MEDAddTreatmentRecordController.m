@@ -57,7 +57,7 @@
 
 -(UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH , SCREEN_HEIGHT) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth , kScreenHeight) style:UITableViewStylePlain];
 //        _tableView.contentInset = UIEdgeInsetsMake(64 , 0, 0, 0);
         _tableView.separatorColor = MEDLightGray;
         _tableView.dataSource = self;
@@ -391,7 +391,7 @@
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     CGRect rect = [targetView.superview convertRect:targetView.frame toView:window];
-    popView.x = SCREEN_WIDTH - popViewWith - 20;
+    popView.x = kScreenWidth - popViewWith - 20;
     popView.y = CGRectGetMaxY(rect);
     [window addSubview:coverButton];
 }

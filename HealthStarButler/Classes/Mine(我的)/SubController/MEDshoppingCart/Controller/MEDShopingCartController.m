@@ -64,8 +64,8 @@ static NSString *cellID = @"wine";
 - (UITableView *)tableView
 {
     if(!_tableView) {
-        CGFloat tableH = SCREEN_HEIGHT - Navigation_Height - toolBarH - MED_TabbarSafeBottomMargin;
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH ,tableH) style:UITableViewStylePlain];
+        CGFloat tableH = kScreenHeight - kNavigationHeight - toolBarH - kTabbarSafeBottomMargin;
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth ,tableH) style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.allowsSelection = NO;
@@ -199,7 +199,7 @@ static NSString *cellID = @"wine";
     [self.tableView registerNib:[UINib nibWithNibName:@"MEDShopCartCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cellID];
     
     // ToolBar
-    MEDShopCartToolBar *toolBar = [[MEDShopCartToolBar alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - toolBarH - MED_TabbarSafeBottomMargin, SCREEN_WIDTH, toolBarH)];
+    MEDShopCartToolBar *toolBar = [[MEDShopCartToolBar alloc] initWithFrame:CGRectMake(0, kScreenHeight - toolBarH - kTabbarSafeBottomMargin, kScreenWidth, toolBarH)];
     [self.view addSubview:toolBar];
     self.toolBar = toolBar;
     toolBar.buttonBlock = ^(UIButton *button) {

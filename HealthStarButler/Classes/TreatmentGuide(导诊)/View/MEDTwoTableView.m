@@ -94,7 +94,7 @@
         /**
          左边的视图
          */
-        self.leftTablew = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LeftTableHW, frame.size.height-TabBar_Height-Navigation_Height)];
+        self.leftTablew = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, LeftTableHW, frame.size.height-kTabBarHeight-kNavigationHeight)];
         //self.leftTablew.scrollEnabled = NO;
         
         self.leftTablew.showsVerticalScrollIndicator = NO;
@@ -121,8 +121,8 @@
         /**
          右边的视图
          */
-        //self.rightTablew = [[UITableView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftTablew.frame),0,SCREEN_WIDTH-kLeftWidth,frame.size.height-TabBar_HEIGHT-NavigationBar_HEIGHT)];
-        self.rightTablew = [[UITableView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftTablew.frame),0,SCREEN_WIDTH-CGRectGetMaxX(_leftTablew.frame),frame.size.height-TabBar_Height-Navigation_Height)];
+        //self.rightTablew = [[UITableView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftTablew.frame),0,kScreenWidth-kLeftWidth,frame.size.height-TabBar_HEIGHT-NavigationBar_HEIGHT)];
+        self.rightTablew = [[UITableView alloc] initWithFrame:CGRectMake(CGRectGetMaxX(_leftTablew.frame),0,kScreenWidth-CGRectGetMaxX(_leftTablew.frame),frame.size.height-kTabBarHeight-kNavigationHeight)];
         
         self.rightTablew.separatorStyle = UITableViewCellSelectionStyleNone;
         self.rightTablew.dataSource = self;

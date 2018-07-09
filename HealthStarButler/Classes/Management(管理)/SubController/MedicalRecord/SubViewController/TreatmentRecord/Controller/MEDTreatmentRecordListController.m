@@ -44,7 +44,7 @@
 - (UITableView *)tableView {
     if (_tableView == nil) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        _tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        _tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         _tableView.contentInset = UIEdgeInsetsMake(64 , 0, 0, 0);
         
         _tableView.dataSource = self;

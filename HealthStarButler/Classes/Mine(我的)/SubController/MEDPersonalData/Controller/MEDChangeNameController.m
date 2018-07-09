@@ -30,10 +30,10 @@
     //UI
     UIView *fieldBackView = [[UIView alloc] init];
     fieldBackView.backgroundColor = [UIColor whiteColor];
-    fieldBackView.frame = CGRectMake(0, 64, SCREEN_WIDTH, 44);
+    fieldBackView.frame = CGRectMake(0, 64, kScreenWidth, 44);
     [self.view addSubview:fieldBackView];
 
-    UITextField  *nameTextField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, SCREEN_WIDTH-30, 44)];
+    UITextField  *nameTextField = [[UITextField alloc]initWithFrame:CGRectMake(20, 0, kScreenWidth-30, 44)];
     nameTextField.delegate = self;
     nameTextField.text = self.currentName;
     nameTextField.textColor = MEDGray;

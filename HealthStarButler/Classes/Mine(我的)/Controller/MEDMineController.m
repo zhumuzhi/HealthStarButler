@@ -62,25 +62,25 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
 
     // headView
     MEDMineHeadView *headView = [[MEDMineHeadView alloc] init];
-    headView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/3);
+    headView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight/3);
     headView.userModel = model;
     [self.view addSubview:headView];
     self.headView = headView;
 
     // tableView
     CGFloat tableVieH = CGRectGetMaxY(headView.frame);
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, tableVieH, SCREEN_WIDTH, SCREEN_HEIGHT - tableVieH) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, tableVieH, kScreenWidth, kScreenHeight - tableVieH) style:UITableViewStylePlain];
     [tableView registerClass:[MEDClearCacheCell class] forCellReuseIdentifier:MEDClearCacheCellId];
     tableView.scrollEnabled = NO;
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.rowHeight = 50;
 
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - CGRectGetMaxY(self.tableView.frame))];
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - CGRectGetMaxY(self.tableView.frame))];
     footerView.backgroundColor = MEDGrayColor(240);
     // 退出按钮
     UIButton *quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    quitButton.frame = CGRectMake(10, 20, SCREEN_WIDTH-20, 40);
+    quitButton.frame = CGRectMake(10, 20, kScreenWidth-20, 40);
     quitButton.layer.masksToBounds = YES;
     quitButton.layer.cornerRadius = 5;
     quitButton.backgroundColor = MEDRGB(254, 86, 101);

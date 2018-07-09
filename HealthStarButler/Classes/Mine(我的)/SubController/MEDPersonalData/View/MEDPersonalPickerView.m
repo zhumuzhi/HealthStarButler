@@ -28,11 +28,11 @@
     if (self = [super initWithFrame:frame]) {
         self.array = [NSMutableArray array];
         
-        self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
         self.backgroundColor = MEDRGBA(51, 51, 51, 0.8);
         
         //大背景
-        self.backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, 260*hScale)];
+        self.backgroudView = [[UIView alloc]initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, 260*hScale)];
         self.backgroudView.backgroundColor = [UIColor whiteColor];
         [self addSubview:self.backgroudView];
         [self showAnimation];
@@ -40,7 +40,7 @@
         //灰色按钮条
         UIView *titleBackView = [[UIView alloc] init];
         titleBackView.backgroundColor = [UIColor lightGrayColor];
-        titleBackView.frame  = CGRectMake(0, 0, SCREEN_WIDTH, 44);
+        titleBackView.frame  = CGRectMake(0, 0, kScreenWidth, 44);
         [self.backgroudView addSubview:titleBackView];
         
         //取消按钮
@@ -54,7 +54,7 @@
         
         //保存按钮
         self.saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.saveButton.frame = CGRectMake(SCREEN_WIDTH - self.cancelButton.frame.size.width, 0, 50, 44);
+        self.saveButton.frame = CGRectMake(kScreenWidth - self.cancelButton.frame.size.width, 0, 50, 44);
         [titleBackView addSubview:self.saveButton];
         self.saveButton.titleLabel.font = [UIFont systemFontOfSize:kfont];
         [self.saveButton setTitle:@"保存" forState:UIControlStateNormal];
@@ -63,7 +63,7 @@
         
         //选择器
         self.pickerView = [UIPickerView new];
-        self.pickerView.frame = CGRectMake(0, 40, SCREEN_WIDTH, 260*hScale - titleBackView.frame.size.height);
+        self.pickerView.frame = CGRectMake(0, 40, kScreenWidth, 260*hScale - titleBackView.frame.size.height);
         [self.backgroudView addSubview:self.pickerView];
         self.pickerView.delegate = self;
         self.pickerView.dataSource = self;
@@ -75,7 +75,7 @@
 - (void)hideAnimation{
     [UIView animateWithDuration:0.5 animations:^{
         CGRect frame = self.backgroudView.frame;
-        frame.origin.y = SCREEN_HEIGHT;
+        frame.origin.y = kScreenHeight;
         self.backgroudView.frame = frame;
     } completion:^(BOOL finished) {
         [self.backgroudView removeFromSuperview];
@@ -87,7 +87,7 @@
 - (void)showAnimation{
     [UIView animateWithDuration:0.5 animations:^{
         CGRect frame = self.backgroudView.frame;
-        frame.origin.y = SCREEN_HEIGHT-260*hScale;
+        frame.origin.y = kScreenHeight-260*hScale;
         self.backgroudView.frame = frame;
     }];
 }

@@ -114,12 +114,12 @@
     //进度页面frame
     CGFloat progressX = padding*2;
     CGFloat progressY = CGRectGetMaxY(self.scoreLabel.frame)+10;
-    CGFloat progressRPadding = SCREEN_WIDTH-(progressX*2);
+    CGFloat progressRPadding = kScreenWidth-(progressX*2);
     self.scoreProgressBar.frame = CGRectMake(progressX, progressY, progressRPadding, 10);
     
     //操作页面
     CGFloat operationVY = CGRectGetMaxY(self.scoreProgressBar.frame) + 10;
-    self.operationView.frame = CGRectMake(0, operationVY, SCREEN_WIDTH, 50);
+    self.operationView.frame = CGRectMake(0, operationVY, kScreenWidth, 50);
 }
 
 #pragma mark - setData

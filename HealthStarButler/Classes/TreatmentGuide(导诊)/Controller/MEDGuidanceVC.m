@@ -46,7 +46,7 @@
     
     self.view.backgroundColor = MEDGrayColor(243);
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_symptomView.frame)+10, SCREEN_WIDTH, SCREEN_HEIGHT-Navigation_Height - 10) ];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_symptomView.frame)+10, kScreenWidth, kScreenHeight-kNavigationHeight - 10) ];
     _tableView.dataSource = self;
     _tableView.delegate = self;
     
@@ -57,7 +57,7 @@
     
 //最新版本去掉了问医生按钮，暂时保留
 //    UIButton *asdDoc = [UIButton buttonWithType:UIButtonTypeCustom];
-//    asdDoc.frame = CGRectMake(0, SCREEN_HEIGHT-TabBar_HEIGHT, SCREEN_WIDTH, TabBar_HEIGHT);
+//    asdDoc.frame = CGRectMake(0, kScreenHeight-TabBar_HEIGHT, kScreenWidth, TabBar_HEIGHT);
 //    [asdDoc setBackgroundImage:[UIImage imageNamed:@"bj"] forState:UIControlStateNormal];
 //    [asdDoc setTitle:@"问医生" forState:UIControlStateNormal];
 //    [asdDoc setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -70,7 +70,7 @@
 - (void)initSymptom {
     
     //症状标题
-    _symptomTitle = [[UIView alloc] initWithFrame:CGRectMake(0, Navigation_Height+10, SCREEN_WIDTH, CELL_HEIGHT )];
+    _symptomTitle = [[UIView alloc] initWithFrame:CGRectMake(0, kNavigationHeight+10, kScreenWidth, CELL_HEIGHT )];
     _symptomTitle.backgroundColor = [UIColor whiteColor];
     UILabel *lable= [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 100, CELL_HEIGHT)];
     lable.text = @"您的症状:";
@@ -80,7 +80,7 @@
     [self.view addSubview:_symptomTitle];
     
     //症状背景:
-    _symptomView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_symptomTitle.frame)+1, SCREEN_WIDTH, CELL_HEIGHT )];
+    _symptomView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_symptomTitle.frame)+1, kScreenWidth, CELL_HEIGHT )];
     _symptomView.backgroundColor = [UIColor whiteColor];
     
     //选择症状标题
@@ -96,14 +96,14 @@
     detialLable.numberOfLines = 0;
     detialLable.lineBreakMode = NSLineBreakByWordWrapping;
     // iOS7中用以下方法替代过时的iOS6中的sizeWithFont:constrainedToSize:lineBreakMode:方法
-    CGRect tmpRect = [detialLable.text boundingRectWithSize:CGSizeMake(SCREEN_WIDTH-CGRectGetMaxX(lable.frame)-20, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObjectsAndKeys:fnt,NSFontAttributeName, nil] context:nil];
+    CGRect tmpRect = [detialLable.text boundingRectWithSize:CGSizeMake(kScreenWidth-CGRectGetMaxX(lable.frame)-20, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObjectsAndKeys:fnt,NSFontAttributeName, nil] context:nil];
     
     // 高度H
     CGFloat contentH = tmpRect.size.height;
     //MYLog(@"调整后的显示宽度:%f,显示高度:%f",contentW,contentH);
-    detialLable.frame = CGRectMake(20, 10, SCREEN_WIDTH-20,contentH - 5);
+    detialLable.frame = CGRectMake(20, 10, kScreenWidth-20,contentH - 5);
     
-    _symptomView.frame = CGRectMake(0, CGRectGetMaxY(_symptomTitle.frame)+1, SCREEN_WIDTH,(contentH+20));
+    _symptomView.frame = CGRectMake(0, CGRectGetMaxY(_symptomTitle.frame)+1, kScreenWidth,(contentH+20));
     [_symptomView addSubview:detialLable];
     
     [self.view addSubview:_symptomView];
@@ -181,9 +181,9 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *head = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CELL_HEIGHT)];
+    UIView *head = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, CELL_HEIGHT)];
     
-    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH, CELL_HEIGHT)];
+    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, kScreenWidth, CELL_HEIGHT)];
     title.text = @"相匹配的科室:";
     title.textColor = MEDGrayColor(153);
 //    title.font = sysFont(14);
@@ -191,7 +191,7 @@
     [head addSubview:title];
     
     UIView *lineView = [[UIView alloc] init];
-    lineView.frame = CGRectMake(0, (CELL_HEIGHT-0.5) , SCREEN_WIDTH, 1);
+    lineView.frame = CGRectMake(0, (CELL_HEIGHT-0.5) , kScreenWidth, 1);
     lineView.backgroundColor = MEDGrayColor(243);
     [head addSubview:lineView];
     

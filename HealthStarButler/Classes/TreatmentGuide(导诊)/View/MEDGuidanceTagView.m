@@ -120,7 +120,7 @@
         
         CGRect newRect = CGRectZero;
         
-        if (weakself.previousFrame.origin.x + weakself.previousFrame.size.width + Size_str.width + K_Tag_Right_Margin > SCREEN_WIDTH) {
+        if (weakself.previousFrame.origin.x + weakself.previousFrame.size.width + Size_str.width + K_Tag_Right_Margin > kScreenWidth) {
             
             newRect.origin = CGPointMake(10, weakself.previousFrame.origin.y + Size_str.height + K_Tag_Bottom_Margin);
             weakself.tagView_height += Size_str.height + K_Tag_Bottom_Margin;

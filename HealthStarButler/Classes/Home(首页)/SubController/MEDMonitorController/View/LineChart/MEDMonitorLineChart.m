@@ -65,10 +65,10 @@
     //XLabelPointX(i) (self.xLabelsWidth/2+self.xLabelsWidth*i + Gap*(i+1))
     CGFloat chartScreenW = self.width-self.yLabelWidth-Gap*2;
     CGFloat xLabelsWHalf = ((chartScreenW-(Gap*3))/7)*0.5;
-    // CGFloat ChartLeftGap = SCREEN_WIDTH - (self.xLabelsWidth+ Gap);
+    // CGFloat ChartLeftGap = kScreenWidth - (self.xLabelsWidth+ Gap);
     self.xLabelsWidth  = (chartScreenW-xLabelsWHalf)/7;
     
-    NSLog(@"SCREEN_WIDTH:%f", SCREEN_WIDTH);
+    NSLog(@"kScreenWidth:%f", kScreenWidth);
     NSLog(@"self.xLabelsWidth:%f", self.xLabelsWidth);
     
     self.yLablesColor = MEDRGB(158, 163, 171);
@@ -152,7 +152,7 @@
     for (int i = 0; i < self.xLabels.count; i ++) {
         /*
           Gap 10.f
-          self.xLabelsWidth = (SCREEN_WIDTH - Gap*5)/2
+          self.xLabelsWidth = (kScreenWidth - Gap*5)/2
           XLabelPointX(i) (self.xLabelsWidth/2+self.xLabelsWidth*i + Gap*(i+1))
          */
         //x点坐标
@@ -500,7 +500,7 @@
 /** 设置图例 */
 - (void)setupLegendWithlegends:(NSArray *)legends{
     
-    UIView *legendView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-25, SCREEN_WIDTH, 20)];
+    UIView *legendView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-25, kScreenWidth, 20)];
     legendView.backgroundColor = [UIColor whiteColor];
     [self addSubview:legendView];
     

@@ -104,7 +104,7 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
         _manageCollectionView.collectionViewLayout = layout;
         
         _manageCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:layout];
-        _manageCollectionView.frame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height - TabBar_Height);
+        _manageCollectionView.frame = CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight - kNavigationHeight - kTabBarHeight);
         _manageCollectionView.backgroundColor = MEDGrayColor(243);
         _manageCollectionView.showsVerticalScrollIndicator = NO;
         _manageCollectionView.delegate = self;
@@ -212,18 +212,18 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 //动态设置每个Item的尺寸大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 2) {
-        return CGSizeMake(SCREEN_WIDTH/2, SCREEN_WIDTH/2*0.5);
+        return CGSizeMake(kScreenWidth/2, kScreenWidth/2*0.5);
     } else if(indexPath.section == 1) {
-        return CGSizeMake(SCREEN_WIDTH/3, SCREEN_WIDTH/3);
+        return CGSizeMake(kScreenWidth/3, kScreenWidth/3);
     }else{
         if (self.isHaveDisease == YES) {
             if (indexPath.row==0||indexPath.row==1) {
-                return CGSizeMake(SCREEN_WIDTH/2, SCREEN_WIDTH/2*0.5);
+                return CGSizeMake(kScreenWidth/2, kScreenWidth/2*0.5);
             }else{
-                return CGSizeMake(SCREEN_WIDTH/3, SCREEN_WIDTH/3);
+                return CGSizeMake(kScreenWidth/3, kScreenWidth/3);
             }
         }else{
-            return CGSizeMake(SCREEN_WIDTH/2, SCREEN_WIDTH/3);
+            return CGSizeMake(kScreenWidth/2, kScreenWidth/3);
         }
     }
 }
@@ -245,12 +245,12 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 
 //动态设置某个分区HeaderView大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(SCREEN_WIDTH, 10);
+    return CGSizeMake(kScreenWidth, 10);
 }
 
 //动态设置某个分区FooterView大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
-    return CGSizeMake(SCREEN_WIDTH, 0);
+    return CGSizeMake(kScreenWidth, 0);
 }
 
 

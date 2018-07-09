@@ -37,7 +37,7 @@
     self.tagStateType = TagStateEdit; //编辑模式
 
     //TagView
-    self.tagList = [[MEDGuidanceTagView alloc] initWithFrame:CGRectMake(0, Navigation_Height+5, SCREEN_WIDTH, 100)];
+    self.tagList = [[MEDGuidanceTagView alloc] initWithFrame:CGRectMake(0, kNavigationHeight+5, kScreenWidth, 100)];
     self.tagList.delegate = self;
     [self.tagList creatUI:_tagArray];   //传入Tag数组初始化界面
     [self.view addSubview:self.tagList];

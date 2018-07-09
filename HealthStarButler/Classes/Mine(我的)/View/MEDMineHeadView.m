@@ -89,8 +89,8 @@
 
     //头像
     CGFloat iconW = 70;
-    CGFloat iconX = SCREEN_WIDTH/2 - (iconW*0.5);
-    CGFloat iconY = (SCREEN_HEIGHT/3)/2 - (iconW*0.5);
+    CGFloat iconX = kScreenWidth/2 - (iconW*0.5);
+    CGFloat iconY = (kScreenHeight/3)/2 - (iconW*0.5);
     self.icon.frame = CGRectMake(iconX, iconY, iconW, iconW);
 
     // 用户名

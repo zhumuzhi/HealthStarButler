@@ -97,12 +97,12 @@
 /** 添加子控制器 */
 - (void)setupChildViewControllers {
     MEDTreatmentRecordListController *treatmentRecord = [[MEDTreatmentRecordListController alloc] init];
-    //treatmentRecord.view.frame =  CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    //treatmentRecord.view.frame =  CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
     treatmentRecord.title = @"诊疗记录";
     [self addChildViewController:treatmentRecord];
     
     MEDTestReportListController *testReport = [[MEDTestReportListController alloc] init];
-    //testReport.view.frame =  CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    //testReport.view.frame =  CGRectMake(0, 64, kScreenWidth, kScreenHeight - 64);
     //testReport.contentInset = UIEdgeInsetsMake(64 + 35, 0, 49, 0);
     
     testReport.title = @"检测报告";

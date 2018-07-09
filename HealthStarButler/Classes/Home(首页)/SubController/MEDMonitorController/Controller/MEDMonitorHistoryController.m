@@ -88,7 +88,7 @@
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        CGRect tableFrame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height);
+        CGRect tableFrame = CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight - kNavigationHeight);
         _tableView = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
@@ -143,7 +143,7 @@
     
     UIButton *dateButton = [[UIButton alloc] init];
     self.dateButton = dateButton;
-    dateButton.frame = CGRectMake(SCREEN_WIDTH - 60, 0, 44, 44);
+    dateButton.frame = CGRectMake(kScreenWidth - 60, 0, 44, 44);
     //[addButton.titleLabel setFont:sysFont(14)];
     [dateButton addTarget:self action:@selector(dateButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [dateButton setTitle:@"切换" forState:UIControlStateNormal];

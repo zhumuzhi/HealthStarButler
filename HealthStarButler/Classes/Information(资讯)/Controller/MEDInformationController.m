@@ -40,12 +40,12 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"go_top"] forState:UIControlStateNormal];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, SCREEN_HEIGHT - Navigation_Height) style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight - kNavigationHeight) style:UITableViewStylePlain];
     self.tableView = tableView;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    self.tableView.scrollToTopBtnFrame = CGRectMake(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 100 - Navigation_Height, 100, 100);
+    self.tableView.scrollToTopBtnFrame = CGRectMake(kScreenWidth - 100, kScreenHeight - 100 - kNavigationHeight, 100, 100);
     self.tableView.scrollToTopBtnShowOffset = 0.f;
     self.tableView.scrollToTopBtn = btn;
     
@@ -101,7 +101,7 @@
 - (void)configTestScrollView {
     
     // 1.创建ScrollView
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH/4, (SCREEN_HEIGHT-Navigation_Height)/4, SCREEN_WIDTH/2, (SCREEN_HEIGHT-Navigation_Height)/2)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(kScreenWidth/4, (kScreenHeight-kNavigationHeight)/4, kScreenWidth/2, (kScreenHeight-kNavigationHeight)/2)];
     self.scrollView = scrollView;
     scrollView.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.scrollView];

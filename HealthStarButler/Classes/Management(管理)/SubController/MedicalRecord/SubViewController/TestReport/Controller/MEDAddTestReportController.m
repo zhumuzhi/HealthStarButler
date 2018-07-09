@@ -87,7 +87,7 @@
 //tableView_Lazy
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH , 240) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth , 240) style:UITableViewStylePlain];
 //        _tableView.contentInset = UIEdgeInsetsMake(64 , 0, 0, 0);
 
         _tableView.scrollEnabled =NO;
@@ -388,7 +388,7 @@
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     CGRect rect = [targetView.superview convertRect:targetView.frame toView:window];
-    popView.x = SCREEN_WIDTH - popViewWith - 20;
+    popView.x = kScreenWidth - popViewWith - 20;
     popView.y = CGRectGetMaxY(rect);
     [window addSubview:coverButton];
 }

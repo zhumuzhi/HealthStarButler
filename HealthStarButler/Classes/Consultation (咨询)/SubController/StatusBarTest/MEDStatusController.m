@@ -38,7 +38,7 @@
     [self.view addSubview:segment1];
 
     [segment1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
     }];
     [segment1 addTarget:self action:@selector(changeStyle:) forControlEvents:UIControlEventValueChanged];

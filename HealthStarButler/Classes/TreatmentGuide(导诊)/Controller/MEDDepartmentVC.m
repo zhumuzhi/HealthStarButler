@@ -89,11 +89,11 @@
 
 - (void)initUI {
     
-    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, Navigation_Height+10, SCREEN_WIDTH, 50)];
+    _backView = [[UIView alloc]initWithFrame:CGRectMake(0, kNavigationHeight+10, kScreenWidth, 50)];
     _backView.backgroundColor = [UIColor whiteColor];
     
     //科室标题
-    UILabel *lable= [[UILabel alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH-20, CELL_HEIGHT )];
+    UILabel *lable= [[UILabel alloc]initWithFrame:CGRectMake(10, 0, kScreenWidth-20, CELL_HEIGHT )];
     lable.text = _name;
     lable.textAlignment = NSTextAlignmentLeft;
     lable.textColor = MEDGrayColor(102);
@@ -101,7 +101,7 @@
     [_backView addSubview:lable];
     //线条
     UIView *line = [[UIView alloc] init];
-    line.frame = CGRectMake(0, CGRectGetMaxY(lable.frame), SCREEN_WIDTH, 1 );
+    line.frame = CGRectMake(0, CGRectGetMaxY(lable.frame), kScreenWidth, 1 );
     line.backgroundColor = MEDGrayColor(243);
     [_backView addSubview:line];
     
@@ -126,7 +126,7 @@
     detialLable.frame = CGRectMake(20, CGRectGetMaxY(lable.frame)+10, contentW,contentH);
     [_backView addSubview:detialLable];
     
-    _backView.frame = CGRectMake(0, Navigation_Height, SCREEN_WIDTH,(contentH+CELL_HEIGHT+20));
+    _backView.frame = CGRectMake(0, kNavigationHeight, kScreenWidth,(contentH+CELL_HEIGHT+20));
     [self.view addSubview:_backView];
     
 }
@@ -134,11 +134,11 @@
 
 - (void)initConllectionView {
     
-    _collectionViewTitle = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_backView.frame) + 10, SCREEN_WIDTH, 45)];
+    _collectionViewTitle = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_backView.frame) + 10, kScreenWidth, 45)];
     _collectionViewTitle.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_collectionViewTitle];
     
-    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, SCREEN_WIDTH, CELL_HEIGHT)];
+    UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, kScreenWidth, CELL_HEIGHT)];
     title.text = @"常见疾病";
     title.textColor = MEDGrayColor(153);
     //    title.font = sysFont(14);
@@ -146,7 +146,7 @@
     [_collectionViewTitle addSubview:title];
     
     UIView *lineView = [[UIView alloc] init];
-    lineView.frame = CGRectMake(0, (CELL_HEIGHT-0.5) , SCREEN_WIDTH, 1);
+    lineView.frame = CGRectMake(0, (CELL_HEIGHT-0.5) , kScreenWidth, 1);
     lineView.backgroundColor = MEDGrayColor(243);
     [_collectionViewTitle addSubview:lineView];
     
@@ -159,7 +159,7 @@
     //    layout.direction = UICollectionViewScrollDirectionVertical;
     //    layout.blockPixels = CGSizeMake(20, 50);
     
-    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_collectionViewTitle.frame), SCREEN_WIDTH, SCREEN_HEIGHT- CGRectGetMaxY(_collectionViewTitle.frame)) collectionViewLayout:flow];
+    _collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_collectionViewTitle.frame), kScreenWidth, kScreenHeight- CGRectGetMaxY(_collectionViewTitle.frame)) collectionViewLayout:flow];
     _collectionView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
     _collectionView.backgroundColor = [UIColor whiteColor];
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];

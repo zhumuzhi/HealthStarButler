@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface MZDataModelHelper : NSObject
-
++ (instancetype)dataModelHepler;
+- (NSArray *)creatLoginDataArray;
 @end

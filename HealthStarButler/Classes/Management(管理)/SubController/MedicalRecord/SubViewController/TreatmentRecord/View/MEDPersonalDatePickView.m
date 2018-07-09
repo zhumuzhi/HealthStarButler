@@ -35,7 +35,7 @@
     [self addSubview:dateBgView];
     
     //titleView
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     titleView.backgroundColor = MEDRGBA(170, 170, 170, 1);
     [dateBgView addSubview:titleView];
     

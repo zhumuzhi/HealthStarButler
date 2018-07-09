@@ -161,7 +161,7 @@
 
 #pragma mark 日期选择
 - (void)setupDatePickView {
-    MEDMonitorDateView *datePickView = [[MEDMonitorDateView alloc] initWithFrame:CGRectMake(0, Navigation_Height, SCREEN_WIDTH, 30) textColor:MEDRGB(40, 40, 40) textFont:[UIFont systemFontOfSize:18] previousButton:@"mointor_date_left" NextButon:@"mointor_date_right"];
+    MEDMonitorDateView *datePickView = [[MEDMonitorDateView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, 30) textColor:MEDRGB(40, 40, 40) textFont:[UIFont systemFontOfSize:18] previousButton:@"mointor_date_left" NextButon:@"mointor_date_right"];
     [self.view addSubview:datePickView];
     self.datePick = datePickView;
     
@@ -190,8 +190,8 @@
     self.lineChart = nil;
     
     // ******************* init&set *******************
-    CGFloat chartH = (SCREEN_HEIGHT-self.datePick.height)*0.4;
-    MEDMonitorLineChart *lineChart = [[MEDMonitorLineChart alloc] initWithFrame: CGRectMake(0, self.datePick.bottom, SCREEN_WIDTH, chartH)];
+    CGFloat chartH = (kScreenHeight-self.datePick.height)*0.4;
+    MEDMonitorLineChart *lineChart = [[MEDMonitorLineChart alloc] initWithFrame: CGRectMake(0, self.datePick.bottom, kScreenWidth, chartH)];
     self.lineChart = lineChart;
     lineChart.chartBackgroundColor = MEDGrayColor(255);
     [self.view addSubview:lineChart];
@@ -202,7 +202,7 @@
     /*这样计算出的横线有7个，每格为40<>280/7*/
     lineChart.yMaxValue = 280;               //y轴最大值
     lineChart.ySepLabelCount = 14;            //Y坐标Label个数
-    //lineChart.xLabelsWidth = SCREEN_WIDTH/7; //可以在此为每格宽度赋值
+    //lineChart.xLabelsWidth = kScreenWidth/7; //可以在此为每格宽度赋值
     // ******************* setData *******************
     // Value
     self.lineChart.yValueLabels = valueArray;
@@ -285,7 +285,7 @@
 
 - (UITableView *)historyTable {
     if (_historyTable == nil) {
-        CGRect tableFrame = CGRectMake(0, self.lineChart.bottom+5, SCREEN_WIDTH, SCREEN_HEIGHT-self.lineChart.bottom-5);
+        CGRect tableFrame = CGRectMake(0, self.lineChart.bottom+5, kScreenWidth, kScreenHeight-self.lineChart.bottom-5);
         _historyTable = [[UITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
         _historyTable.dataSource = self;
         _historyTable.delegate = self;

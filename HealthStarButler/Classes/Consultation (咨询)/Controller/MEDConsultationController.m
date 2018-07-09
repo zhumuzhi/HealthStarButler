@@ -12,15 +12,21 @@
 
 #import "MEDStatusController.h"
 #import "FSPriceAttributedStringTool.h"
+#import "MZModelTypeLoginController.h"
 
 @interface MEDConsultationController ()
-
-
 
 @end
 
 @implementation MEDConsultationController
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    MZModelTypeLoginController *modelLogin = [[MZModelTypeLoginController alloc] init];;
+    [self.navigationController pushViewController:modelLogin animated:YES];
+}
+
+#pragma mark - LifeCycle
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -34,6 +40,8 @@
     
     [self setupNavigation];
 }
+
+#pragma mark - UI
 
 - (void)setupNavigation {
     
@@ -52,10 +60,10 @@
     UILabel *label = [UILabel new];
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@30);
-        make.width.equalTo(@(SCREEN_WIDTH));
+        make.width.equalTo(@(kScreenWidth));
     }];
     label.textColor = [UIColor orangeColor];
 
@@ -84,10 +92,10 @@
     [self.view addSubview:richTextLabel];
 
     [richTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@30);
-        make.width.equalTo(@(SCREEN_WIDTH));
+        make.width.equalTo(@(kScreenWidth));
     }];
 
 
@@ -116,10 +124,10 @@
     UIButton *edgeBtn = [[HYEdgeInsetsButton alloc] init];
     [self.view addSubview:edgeBtn];
     [edgeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@49);
-        make.width.equalTo(@(SCREEN_WIDTH/2));
+        make.width.equalTo(@(kScreenWidth/2));
     }];
     edgeBtn.titleLabel.font = [UIFont systemFontOfSize:20.0];
     [edgeBtn setBackgroundColor:[UIColor whiteColor]];
@@ -137,10 +145,10 @@
     HYEdgeInsetsButton *edgeBtn = [[HYEdgeInsetsButton alloc] init];
     [self.view addSubview:edgeBtn];
     [edgeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@49);
-        make.width.equalTo(@(SCREEN_WIDTH/2));
+        make.width.equalTo(@(kScreenWidth/2));
     }];
     edgeBtn.scaleClose = YES;
     edgeBtn.titleLabel.font = [UIFont systemFontOfSize:50.0];
@@ -179,7 +187,7 @@
     [self.view addSubview:leftButton];
     
     [leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(Navigation_Height+50);
+        make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@20);
         make.width.equalTo(@60);
