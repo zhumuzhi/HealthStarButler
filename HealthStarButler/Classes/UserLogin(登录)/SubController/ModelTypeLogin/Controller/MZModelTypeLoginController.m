@@ -7,10 +7,13 @@
 //
 
 #import "MZModelTypeLoginController.h"
+// Model
 #import "MZDataModel.h"
 #import "MZDataModelHelper.h"
+// View
 #import "MZLoginHeaderView.h"
 #import "MZLoginCell.h"
+#import "MZLoginButton.h"
 
 
 static NSString *MZLoginCellID = @"MZLoginCellID";
@@ -40,6 +43,10 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
 
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"模型登录页面";
+    
+    [self setupUI];
+    [self loadData];
+    
 }
 
 #pragma mark - ConfigUI
@@ -52,23 +59,50 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
 }
 
 #pragma mark - RequestData
-
 - (void)loadData {
     NSArray *tempArray= [[MZDataModelHelper dataModelHepler] creatLoginDataArray];
     self.dataArray = [MZDataModel mj_objectArrayWithKeyValuesArray:tempArray];
 }
 
+#pragma mark - EventDelegate
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-
-    return 0.01f;
+#pragma mark 验证码 代理方法
+- (void)loginCell:(MZLoginCell *)loginCell button:(UIButton *)button {
+    if (button.tag == 1) {
+        
+        MZLoginButton *sendButton = (MZLoginButton *)button;
+        [sendButton startCountDownWithSecond:120];
+        [sendButton countDownChanging:^NSString *(MZLoginButton *countDownButton,NSUInteger second) {
+            NSString *title = [NSString stringWithFormat:@"已发送 %zd s",second];
+            sendButton.userInteractionEnabled = NO;
+            return title;
+        }];
+        
+        [sendButton countDownFinished:^NSString *(MZLoginButton *countDownButton, NSUInteger second) {
+            sendButton.userInteractionEnabled = YES;
+            return @"获取验证码";
+        }];
+    } else if (button.tag == 4) {
+        
+    }
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
 
-    return 0.01f;
+#pragma mark - cell 输入框 代理方法
+- (void)loginCell:(MZLoginButton *)loginCell textField:(UITextField *)textField {
+    if (textField.tag == 0) {
+        /// 获得用户名
+        self.emailAccount = textField.text;
+    } else if (textField.tag == 1) {
+        /// 获得验证码
+        self.userCode = textField.text;
+        
+    } else if (textField.tag == 2) {
+        
+        self.password = textField.text;
+    }
 }
-#pragma mark - UITableViewDelegate
+
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataArray.count ;
 }
@@ -82,6 +116,16 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
     return cell;
 //    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MZLoginCellID];
 //    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 0.01f;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 0.01f;
 }
 
 #pragma mark - LazyGet
@@ -112,13 +156,6 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
     return _tableView;
 }
 
-- (NSArray *)dataArray {
-    if (_dataArray == nil) {
-        _dataArray = [NSArray array];
-    }
-    return _dataArray;
-}
-
 - (MZLoginHeaderView *)headerView {
     if (_headerView == nil) {
         _headerView = [[MZLoginHeaderView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 140)];
@@ -126,6 +163,11 @@ static NSString *MZLoginCellID = @"MZLoginCellID";
     return _headerView;
 }
 
-
+- (NSArray *)dataArray {
+    if (_dataArray == nil) {
+        _dataArray = [NSArray array];
+    }
+    return _dataArray;
+}
 
 @end

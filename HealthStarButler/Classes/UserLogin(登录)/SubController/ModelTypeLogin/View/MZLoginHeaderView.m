@@ -25,12 +25,14 @@
     [self addSubview:self.logo];
     [self.logo mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self);
+        make.width.equalTo(@100);
+        make.height.equalTo(@60);
     }];
 }
 
 - (UIImageView *)logo {
     if (_logo == nil) {
-        _logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo.png"]];
+        _logo = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"logo1"]];
         _logo.layer.masksToBounds = YES;
         _logo.layer.cornerRadius = 5;
         [_logo sizeToFit];
