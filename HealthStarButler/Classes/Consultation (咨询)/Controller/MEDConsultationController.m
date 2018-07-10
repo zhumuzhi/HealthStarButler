@@ -16,6 +16,9 @@
 
 @interface MEDConsultationController ()
 
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation MEDConsultationController
@@ -24,6 +27,26 @@
 {
     MZModelTypeLoginController *modelLogin = [[MZModelTypeLoginController alloc] init];;
     [self.navigationController pushViewController:modelLogin animated:YES];
+}
+
+
+#pragma mark - LazyGet
+- (NSMutableArray *)dataArray
+{
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray arrayWithArray:@[@"下拉刷新",@"状态栏测试"]];
+    }
+    return _dataArray;
+}
+
+- (UITableView *)tableView
+{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc] initWithFrame:SecondPageFrame style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+    }
+    return _tableView;
 }
 
 #pragma mark - LifeCycle
