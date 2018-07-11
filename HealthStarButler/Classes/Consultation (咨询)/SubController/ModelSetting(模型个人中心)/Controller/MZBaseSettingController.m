@@ -27,22 +27,108 @@
 {
     /** 只有文字*/
     MZSettingItem *title = [MZSettingItem itemWithImage:nil title:@"只有文字" type:MZSettingItemTypeNone desc:nil];
-
     /** 点击对应的行调整（其他可能只是在内部做一些事情，请自行操作） */
     title.operation = ^{
-        UIViewController *view = [[UIViewController alloc] init];
-        [self.navigationController pushViewController:view animated:YES];
+        UIViewController *viewController = [[UIViewController alloc] init];
+        viewController.view.backgroundColor = [UIColor whiteColor];
+        [self.navigationController pushViewController:viewController animated:YES];
     };
-
     /** 只有文字和左边的图片 */
     MZSettingItem *titleAndImage = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"只有文字和图片" type:MZSettingItemTypeNone desc:nil];
-    titleAndImage.operation = ^{
-    };
+//    titleAndImage.operation = ^{
+//        
+//    };
     //分组
     MZSettingGroup *group = [[MZSettingGroup alloc] init];
     group.items = @[title, titleAndImage];
     [self.allGroups addObject:group];
 }
+
+- (void)add1SectionItems
+{
+    /** 文字和右边剪头 */
+    MZSettingItem *arrow= [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边剪头" type:MZSettingItemTypeArrow desc:nil];
+    arrow.operation = ^{
+        
+    };
+    
+    /** 文字和右边图片）*/
+    MZSettingItem *image = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边图片）" type:MZSettingItemTypeNone image:[UIImage imageNamed:@"02.png"]];
+    image.operation = ^{
+        
+    };
+    
+    /** 文字和右边图片 */
+    MZSettingItem *desc = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边图片" type:MZSettingItemTypeArrow desc:@"描述文字"];
+    desc.operation = ^{
+        
+    };
+    /** 文字和右边图片 */
+    MZSettingItem *placeholder = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边图片" type:MZSettingItemTypeArrow desc:@"颜色占位" detailLabelColor:[UIColor redColor]];
+    placeholder.operation = ^{
+        
+    };
+    //分组
+    MZSettingGroup *group = [[MZSettingGroup alloc] init];
+    group.items = @[arrow, image, desc, placeholder];
+    [self.allGroups addObject:group];
+}
+
+- (void)add2SectionItems
+{
+    /** Switch控件 */
+    MZSettingItem *documents = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"Switch控件" type:MZSettingItemTypeSwitch desc:nil];
+    documents.operation = ^{
+        
+    };
+    //分组
+    MZSettingGroup *group = [[MZSettingGroup alloc] init];
+    group.items = @[documents];
+    [self.allGroups addObject:group];
+}
+
+- (void)add3SectionItems
+{
+    /** 点击可输入文字 */
+    MZSettingItem *documents = [MZSettingItem itemWithImage:nil title:@"点击可输入文字" type:MZSettingItemTypeTextField desc:nil];
+    documents.operation = ^{
+        
+    };
+    /** 文本占位（可输入） */
+    MZSettingItem *arrow= [MZSettingItem itemWithTitle:@"文本占位（可输入）" type:MZSettingItemTypeTextField placeHolder:@"请输入您的手机号"];
+    arrow.operation = ^{
+        
+    };
+    //分组
+    MZSettingGroup *group = [[MZSettingGroup alloc] init];
+    group.items = @[documents, arrow];
+    [self.allGroups addObject:group];
+}
+
+
+- (double)rowHeight
+{
+    return 60;
+}
+
+/** 多余行数据 */
+- (void)add4SectionItems
+{
+    /** 我的订单 */
+    MZSettingItem *dd0 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd1 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd2 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd3 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd4 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd5 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    MZSettingItem *dd6 = [MZSettingItem itemWithImage:nil title:nil type:MZSettingItemTypeTextField desc:nil];
+    //分组
+    MZSettingGroup *group = [[MZSettingGroup alloc] init];
+    group.items = @[dd0, dd1, dd2, dd3, dd4, dd5, dd6];
+    [self.allGroups addObject:group];
+}
+
+
 
 #pragma mark - LazyGet
 
@@ -78,6 +164,12 @@
     self.navigationItem.title = @"模型个人中心";
 
     [self add0SectionItems];
+    [self add1SectionItems];
+    [self add2SectionItems];
+    [self add3SectionItems];
+    /** 多余数据行 */
+    [self add4SectionItems];
+    
     self.view = self.tableView;
 }
 
@@ -96,10 +188,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 1.创建一个iCocosSettingCell
+    // 1.创建一个MZSettingCell
     MZSettingCell *cell = [MZSettingCell settingCellWithTableView:tableView];
 
-    // 2.取出这行对应的模型（iCocosSettingItem）
+    // 2.取出这行对应的模型（MZSettingItem）
     MZSettingGroup *group = _allGroups[indexPath.section];
     cell.item = group.items[indexPath.row];
     return cell;

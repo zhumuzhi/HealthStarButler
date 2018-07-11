@@ -17,7 +17,6 @@ typedef NS_ENUM(NSInteger, MZSettingItemType) {
     MZSettingItemTypeTextField  // 文本
 };
 
-
 @interface MZSettingItem : NSObject
 
 /** 图片  */
@@ -26,7 +25,7 @@ typedef NS_ENUM(NSInteger, MZSettingItemType) {
 @property (nonatomic, copy) NSString *title;
 /** 描述 */
 @property (nonatomic, copy) NSString *desc;
-/** 占为文字 */
+/** 占位文字 */
 @property (nonatomic, copy) NSString *placeHolder;
 /** 图片 */
 @property (nonatomic, weak) UIImage *image;
@@ -37,24 +36,16 @@ typedef NS_ENUM(NSInteger, MZSettingItemType) {
 /** 点击Cell的操作 */
 @property (nonatomic, copy) void (^operation)(void) ; // 点击cell后要执行的操作
 
-/**
- *  初始化Cell
- */
+/** 初始化Cell 图片+标题+CellType */
++ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)image;
+
+/** 初始化Cell 图片+标题+CellType+描述文字 */
 + (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc;
 
-/**
- *  初始化Cell（设置描述文字颜色）
- */
+/** 初始化Cell 图片+标题+CellType+描述文字+描述文字颜色 */
 + (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc detailLabelColor:(UIColor *)detailLabelColor;
 
-/**
- *  初始化Cell（设置描述文字颜色）
- */
+/** 初始化Cell 标题+CellType+占位文字 */
 + (id)itemWithTitle:(NSString *)title type:(MZSettingItemType)type placeHolder:(NSString *)placeHolder;
-
-/**
- *  初始化Cell
- */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)image;
 
 @end
