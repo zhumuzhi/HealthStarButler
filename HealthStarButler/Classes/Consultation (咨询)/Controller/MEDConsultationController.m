@@ -7,36 +7,40 @@
 //
 
 #import "MEDConsultationController.h"
+
+// 自定义按钮
 #import "FSButton.h"
 #import "HYEdgeInsetsButton.h"
 
-#import "MEDStatusController.h"
-#import "FSPriceAttributedStringTool.h"
-#import "MZModelTypeLoginController.h"
+#import "FSPriceAttributedStringTool.h"  // 富文本
 
-@interface MEDConsultationController ()
+
+#import "MEDStatusController.h"          // 状态栏
+#import "MEDRefreshListController.h"     // 刷新测试
+#import "MZModelTypeLoginController.h"   // 模型登录
+
+#import "MZBaseSettingController.h"      // 模型个人中心
+#import "MZSettingItem.h"
+#import "MZSettingGroup.h"
+
+
+
+@interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
-
+@property (nonatomic, strong) NSMutableArray *namesArray;
 @end
 
 @implementation MEDConsultationController
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
-    MZModelTypeLoginController *modelLogin = [[MZModelTypeLoginController alloc] init];;
-    [self.navigationController pushViewController:modelLogin animated:YES];
-}
-
 
 #pragma mark - LazyGet
-- (NSMutableArray *)dataArray
+- (NSMutableArray *)namesArray
 {
-    if (_dataArray == nil) {
-        _dataArray = [NSMutableArray arrayWithArray:@[@"下拉刷新",@"状态栏测试"]];
+    if (_namesArray == nil) {
+        _namesArray = [NSMutableArray arrayWithArray:@[@"状态栏测试", @"下拉刷新", @"模型登录", @"模型个人中心"]];
     }
-    return _dataArray;
+    return _namesArray;
 }
 
 - (UITableView *)tableView
@@ -45,6 +49,7 @@
         _tableView = [[UITableView alloc] initWithFrame:SecondPageFrame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.tableFooterView = [UIView new];
     }
     return _tableView;
 }
@@ -57,29 +62,57 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     [self setupNavigation];
 }
 
 #pragma mark - UI
 
 - (void)setupNavigation {
-    
     self.navigationItem.title = @"咨询";
     [self setupPersonNavigationItem];
-    
     //self.view.backgroundColor = [UIColor grayColor];
-
-//    [self testRichtext];
-    [self testYYText];
-
+    [self.view addSubview:self.tableView];
 }
 
-- (void)testYYText {
+#pragma mark - UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.namesArray.count;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    cell.textLabel.text = self.namesArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    // @"状态栏测试", @"下拉刷新",@"模型登录", @"模型个人中心"
+    NSArray *controllers = @[[MEDStatusController class], [MEDRefreshListController class], [MZModelTypeLoginController class], [MZBaseSettingController class]];
+    Class controller = controllers[indexPath.row];
+    UIViewController *viewController = [[controller alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+
+
+- (void)testYYText {
+    
     UILabel *label = [UILabel new];
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -89,13 +122,13 @@
         make.width.equalTo(@(kScreenWidth));
     }];
     label.textColor = [UIColor orangeColor];
-
+    
     // 富文本操作
-//    NSString *pricrStr  = @"¥13.02~¥34.41";
-//    NSString *pricrStr  = @"¥1233.02";
+    //    NSString *pricrStr  = @"¥13.02~¥34.41";
+    //    NSString *pricrStr  = @"¥1233.02";
     NSString *pricrStr  = @"¥";
     label.attributedText = [FSPriceAttributedStringTool priceAttributedStringWithString:pricrStr];
-
+    
 }
 
 - (NSMutableAttributedString *)priceAttributedStringWith:(NSString *)string
@@ -106,40 +139,34 @@
     return attributedString;
 }
 
-
-
 - (void)testRichtext
 {
-
+    
     UILabel *richTextLabel = [[UILabel alloc] init];
     [self.view addSubview:richTextLabel];
-
+    
     [richTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(kNavigationHeight+50);
         make.centerX.equalTo(self.view);
         make.height.equalTo(@30);
         make.width.equalTo(@(kScreenWidth));
     }];
-
-
+    
+    
     NSString *richText = @"¥13.02~¥34.41";
-
+    
     NSMutableAttributedString * attriStr = [[NSMutableAttributedString alloc] initWithString:richText];
-
+    
     [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(0, 1)];
     [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, 1)];
-
+    
     [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor] range:NSMakeRange(5, 6)];
     [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(0, 1)];
-
+    
     [attriStr addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, 6)];
     [attriStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12    ] range:NSMakeRange(6, 7)];
     richTextLabel.attributedText = attriStr;
-
-
 }
-
-
 
 /*测试分类方式设置按钮*/
 - (void)configCategoryButton
@@ -157,10 +184,9 @@
     [edgeBtn setTitle:@"首页" forState:UIControlStateNormal];
     [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
-
+    
     [edgeBtn layoutButtonWithEdgeInsetsStyle:ButtonEdgeInsetsStyleImageLeft imageTitlespace:5];
 }
-
 
 /* 另一种自定义Button */
 - (void)configEdgeButton
@@ -182,7 +208,6 @@
     [edgeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtn setImage:[UIImage imageNamed:@"首页-2"] forState:UIControlStateNormal];
     
-    
     HYEdgeInsetsButton *edgeBtnOne = [[HYEdgeInsetsButton alloc] init];
     [self.view addSubview:edgeBtnOne];
     edgeBtnOne.scaleClose = YES;
@@ -199,7 +224,7 @@
     [edgeBtnOne setTitle:@"北京" forState:UIControlStateNormal];
     [edgeBtnOne setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [edgeBtnOne setImage:[UIImage imageNamed:@"区域"] forState:UIControlStateNormal];
-
+    
 }
 
 
@@ -221,7 +246,7 @@
     //    [button setBackgroundColor:[UIColor lightGrayColor]];
     [leftButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [leftButton setImage:[UIImage imageNamed:@"区域"] forState:UIControlStateNormal];
-
+    
     [leftButton addTarget:self action:@selector(pushToNextView) forControlEvents:UIControlEventTouchUpInside];
     
     FSButton *rightButton = [[FSButton alloc] init];
@@ -275,15 +300,5 @@
     MEDStatusController *statusTest = [[MEDStatusController alloc] init];
     [self.navigationController pushViewController:statusTest animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

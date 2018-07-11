@@ -214,6 +214,10 @@
 		5DA70AC920F4B83E00D9AF1D /* dropdown_anim__00019@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA70AA220F4B83D00D9AF1D /* dropdown_anim__00019@2x.png */; };
 		5DA70ACA20F4B83E00D9AF1D /* dropdown_anim__00015@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA70AA320F4B83D00D9AF1D /* dropdown_anim__00015@2x.png */; };
 		5DA70ACB20F4B83E00D9AF1D /* dropdown_anim__00023@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DA70AA420F4B83D00D9AF1D /* dropdown_anim__00023@2x.png */; };
+		5DA8C04720F6316700AF5C74 /* MZBaseSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C03E20F6316700AF5C74 /* MZBaseSettingController.m */; };
+		5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */; };
+		5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04320F6316700AF5C74 /* MZSettingItem.m */; };
+		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
 		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
 		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
 		5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */; };
@@ -608,6 +612,14 @@
 		5DA70AA220F4B83D00D9AF1D /* dropdown_anim__00019@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00019@2x.png"; sourceTree = "<group>"; };
 		5DA70AA320F4B83D00D9AF1D /* dropdown_anim__00015@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00015@2x.png"; sourceTree = "<group>"; };
 		5DA70AA420F4B83D00D9AF1D /* dropdown_anim__00023@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dropdown_anim__00023@2x.png"; sourceTree = "<group>"; };
+		5DA8C03D20F6316700AF5C74 /* MZBaseSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZBaseSettingController.h; sourceTree = "<group>"; };
+		5DA8C03E20F6316700AF5C74 /* MZBaseSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZBaseSettingController.m; sourceTree = "<group>"; };
+		5DA8C04020F6316700AF5C74 /* MZSettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSettingGroup.h; sourceTree = "<group>"; };
+		5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingGroup.m; sourceTree = "<group>"; };
+		5DA8C04220F6316700AF5C74 /* MZSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSettingItem.h; sourceTree = "<group>"; };
+		5DA8C04320F6316700AF5C74 /* MZSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingItem.m; sourceTree = "<group>"; };
+		5DA8C04520F6316700AF5C74 /* MZSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZSettingCell.h; sourceTree = "<group>"; };
+		5DA8C04620F6316700AF5C74 /* MZSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingCell.m; sourceTree = "<group>"; };
 		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
 		5DBD2C67209FFCBB008F902E /* NSString+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MED.m"; sourceTree = "<group>"; };
 		5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDateUtils.h; sourceTree = "<group>"; };
@@ -1937,6 +1949,45 @@
 			path = EatBaozi;
 			sourceTree = "<group>";
 		};
+		5DA8C03B20F6316700AF5C74 /* ModelSetting(模型个人中心) */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8C03C20F6316700AF5C74 /* Controller */,
+				5DA8C03F20F6316700AF5C74 /* Model */,
+				5DA8C04420F6316700AF5C74 /* View */,
+			);
+			path = "ModelSetting(模型个人中心)";
+			sourceTree = "<group>";
+		};
+		5DA8C03C20F6316700AF5C74 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8C03D20F6316700AF5C74 /* MZBaseSettingController.h */,
+				5DA8C03E20F6316700AF5C74 /* MZBaseSettingController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DA8C03F20F6316700AF5C74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8C04020F6316700AF5C74 /* MZSettingGroup.h */,
+				5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */,
+				5DA8C04220F6316700AF5C74 /* MZSettingItem.h */,
+				5DA8C04320F6316700AF5C74 /* MZSettingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DA8C04420F6316700AF5C74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DA8C04520F6316700AF5C74 /* MZSettingCell.h */,
+				5DA8C04620F6316700AF5C74 /* MZSettingCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5DBD2C7720A192F1008F902E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -2257,6 +2308,7 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DA8C03B20F6316700AF5C74 /* ModelSetting(模型个人中心) */,
 				5DF1F14320EF1C70009A8E51 /* PersonSetTest */,
 				5DF1F14220EF1C5F009A8E51 /* StatusBarTest */,
 			);
@@ -2551,6 +2603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
+				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */,
 				5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */,
@@ -2563,6 +2616,7 @@
 				5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */,
 				5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
+				5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */,
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
@@ -2595,6 +2649,7 @@
 				5D69059020D9FB12002BBD69 /* MEDBloodPressureFrame.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
 				5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */,
+				5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */,
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
 				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
 				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
@@ -2657,6 +2712,7 @@
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
+				5DA8C04720F6316700AF5C74 /* MZBaseSettingController.m in Sources */,
 				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D0ABE4320E4CF7E0088D0D4 /* MEDReszingImageTool.m in Sources */,
