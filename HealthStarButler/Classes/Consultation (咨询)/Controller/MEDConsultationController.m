@@ -90,6 +90,7 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     cell.textLabel.text = self.namesArray[indexPath.row];
+    cell.textLabel.textColor = MEDCommonBlue;
     return cell;
 }
 

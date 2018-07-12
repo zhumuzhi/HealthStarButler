@@ -81,7 +81,8 @@
 //    [button addTarget:button action:@selector(clickPublish) forControlEvents:UIControlEventTouchUpInside];
     
     /** 设置按钮默认选中 */
-    [button setSelected:YES];
+    [button setSelected:NO];
+
     return button;
 }
 

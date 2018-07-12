@@ -29,7 +29,9 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     //设置中间按钮
     [MEDTabBarMidButton registerPlusButton];
-    [MEDTabBarMidButton.plusButton setSelected:YES];
+    // 开启后默认选中首页 搜索 『设置按钮默认选中』 设置
+    [MEDTabBarMidButton.plusButton setSelected:NO];
+
     MEDTabBarControllerConfig *tabBarControllerConfig = [[MEDTabBarControllerConfig alloc] init];
     CYLTabBarController *tabBarController = tabBarControllerConfig.tabBarController;
     _tabBarController = tabBarController;
@@ -43,18 +45,28 @@
 
 /** 根据登录情况切换主页 */
 - (void)mainTabBarSwitch {
-    NSString *loginStr = [kUserDefaults objectForKey:Login];
-    if (kStringIsEmpty(loginStr)||([loginStr isEqualToString:LoginFailed])){
-        MEDUserLoginController *loginController = [[MEDUserLoginController alloc]init];
-        MEDNavigationController *loginNavC = [[MEDNavigationController alloc]initWithRootViewController:loginController];
-        self.window.rootViewController = loginNavC;
-    } else {
-        self.window.rootViewController = _tabBarController;
-        _tabBarController.delegate = self;
-        // 设置TabBar
-        [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
-        [_tabBarController setSelectedIndex:1]; // 方便使用
-    }
+
+    self.window.rootViewController = _tabBarController;
+    _tabBarController.delegate = self;
+    // 设置TabBar
+    [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
+    [_tabBarController setSelectedIndex:1]; // 方便使用
+
+/** 根据登录情况切换主页 */
+//    NSString *loginStr = [kUserDefaults objectForKey:Login];
+//    if (kStringIsEmpty(loginStr)||([loginStr isEqualToString:LoginFailed])){
+//        MEDUserLoginController *loginController = [[MEDUserLoginController alloc]init];
+//        MEDNavigationController *loginNavC = [[MEDNavigationController alloc]initWithRootViewController:loginController];
+//        self.window.rootViewController = loginNavC;
+//    } else {
+//        self.window.rootViewController = _tabBarController;
+//        _tabBarController.delegate = self;
+//        // 设置TabBar
+//        [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
+//        [_tabBarController setSelectedIndex:1]; // 方便使用
+//    }
+/** 根据登录情况切换主页 */
+
 }
 
 #pragma mark - UITabBarControllerDelegate
