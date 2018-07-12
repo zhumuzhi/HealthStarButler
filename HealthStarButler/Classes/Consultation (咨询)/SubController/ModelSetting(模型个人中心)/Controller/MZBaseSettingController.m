@@ -29,15 +29,15 @@
     MZSettingItem *title = [MZSettingItem itemWithImage:nil title:@"只有文字" type:MZSettingItemTypeNone desc:nil];
     /** 点击对应的行调整（其他可能只是在内部做一些事情，请自行操作） */
     title.operation = ^{
+        NSLog(@"我是伪装成SectionHeader的Cell");
+    };
+    /** 只有文字和左边的图片 */
+    MZSettingItem *titleAndImage = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"只有文字和图片" type:MZSettingItemTypeNone desc:nil];
+    titleAndImage.operation = ^{
         UIViewController *viewController = [[UIViewController alloc] init];
         viewController.view.backgroundColor = [UIColor whiteColor];
         [self.navigationController pushViewController:viewController animated:YES];
     };
-    /** 只有文字和左边的图片 */
-    MZSettingItem *titleAndImage = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"只有文字和图片" type:MZSettingItemTypeNone desc:nil];
-//    titleAndImage.operation = ^{
-//        
-//    };
     //分组
     MZSettingGroup *group = [[MZSettingGroup alloc] init];
     group.items = @[title, titleAndImage];
@@ -47,13 +47,13 @@
 - (void)add1SectionItems
 {
     /** 文字和右边剪头 */
-    MZSettingItem *arrow= [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边剪头" type:MZSettingItemTypeArrow desc:nil];
+    MZSettingItem *arrow= [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边箭头" type:MZSettingItemTypeArrow desc:nil];
     arrow.operation = ^{
         
     };
     
     /** 文字和右边图片）*/
-    MZSettingItem *image = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边图片）" type:MZSettingItemTypeNone image:[UIImage imageNamed:@"02.png"]];
+    MZSettingItem *image = [MZSettingItem itemWithImage:[UIImage imageNamed:@"01.png"] title:@"文字和右边图片）" type:MZSettingItemTypeImage image:[UIImage imageNamed:@"02.png"]];
     image.operation = ^{
         
     };
@@ -192,7 +192,7 @@
     MZSettingCell *cell = [MZSettingCell settingCellWithTableView:tableView];
 
     // 2.取出这行对应的模型（MZSettingItem）
-    MZSettingGroup *group = _allGroups[indexPath.section];
+    MZSettingGroup *group = self.allGroups[indexPath.section];
     cell.item = group.items[indexPath.row];
     return cell;
 }
@@ -202,8 +202,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     // 0.取出这行对应的模型
-    MZSettingGroup *group = _allGroups[indexPath.section];
+    MZSettingGroup *group = self.allGroups[indexPath.section];
     MZSettingItem *item = group.items[indexPath.row];
 
     // 1.取出这行对应模型中的block代码
@@ -216,15 +219,13 @@
 // 返回每一组的header标题
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    MZSettingGroup *group = _allGroups[section];
-
+    MZSettingGroup *group = self.allGroups[section];
     return group.header;
 }
 // 返回每一组的footer标题
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
-    MZSettingGroup *group = _allGroups[section];
-
+    MZSettingGroup *group = self.allGroups[section];
     return group.footer;
 }
 
@@ -232,14 +233,14 @@
 // 返回每一组的footer高度
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    MZSettingGroup *group = _allGroups[section];
+    MZSettingGroup *group = self.allGroups[section];
     return group.footerHeight;
 }
 
 // 返回每一组的header高度
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    MZSettingGroup *group = _allGroups[section];
+    MZSettingGroup *group = self.allGroups[section];
     return group.headerHeight;
 }
 

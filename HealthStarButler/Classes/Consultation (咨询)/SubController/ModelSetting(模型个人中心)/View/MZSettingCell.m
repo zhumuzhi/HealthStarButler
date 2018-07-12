@@ -7,15 +7,19 @@
 //
 
 #import "MZSettingCell.h"
-#import "MZSettingItem.h"
+
+#import "MZSettingItem.h"  // 模型
 
 @interface MZSettingCell()<UITextFieldDelegate>
 {
-    UIImageView *_arrow;
-    UISwitch *_switch;
-    UITextField *_textField;
-    UIImageView *_imageView;
+
+    UIImageView *_arrow;      // 箭头
+    UISwitch *_switch;        // 切换按钮
+    UITextField *_textField;  // 输入框
+    UIImageView *_imageView;  // 图片
 }
+
+/** 分割线 */
 @property (nonatomic, weak) UIView *sepView;
 
 @end
@@ -24,7 +28,7 @@
 
 #pragma mark - init
 
-+ (id)settingCellWithTableView:(UITableView *)tableView
++ (instancetype)settingCellWithTableView:(UITableView *)tableView
 {
     // 0.用static修饰的局部变量，只会初始化一次
     static NSString *ID = @"Cell";
@@ -39,12 +43,11 @@
     return cell;
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-
         UIView *sepView = [[UIView alloc] init];
         sepView.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1.0];
         self.sepView = sepView;
@@ -66,7 +69,6 @@
 
     // 设置数据
     self.imageView.image = item.icon;
-
     self.textLabel.text = item.title;
     self.textLabel.font = [UIFont systemFontOfSize:13];
     self.detailTextLabel.text = item.desc;
@@ -109,9 +111,8 @@
             _textField.delegate = self;
 
             _textField.textAlignment = NSTextAlignmentRight;
-
         }
-
+        
         // 右边显示开关
         self.accessoryView = _textField;
         // 禁止选中
@@ -119,7 +120,7 @@
 
     } else if (item.type == MZSettingItemTypeImage) {
 
-        if (_textField == nil) {
+        if (_imageView == nil) {
             _imageView = [[UIImageView alloc] init];
             _imageView.image = item.image;
             _imageView.width = 100;

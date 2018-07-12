@@ -12,9 +12,9 @@
 
 @property (nonatomic, copy) NSString *header; // 头部标题
 @property (nonatomic, copy) NSString *footer; // 尾部标题
-@property (nonatomic, strong) NSArray *items; // 中间的条目
+@property (nonatomic, strong) NSArray *items; // 每组cell数组
 
-@property (nonatomic, assign) CGFloat headerHeight; // 头部标题
-@property (nonatomic, assign) CGFloat footerHeight; // 尾部标题
+@property (nonatomic, assign) CGFloat headerHeight; // 头部标题高度
+@property (nonatomic, assign) CGFloat footerHeight; // 尾部标题高度
 
 @end

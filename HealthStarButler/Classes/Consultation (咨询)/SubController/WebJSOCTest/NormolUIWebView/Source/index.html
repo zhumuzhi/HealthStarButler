@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<title>骚栋的世界</title>
+
+	</head>
+
+	<body background="img/53ada3ab8c252.jpg">
+
+		<div id="firstDiv">
+			<p style="color: darkgoldenrod;">点击下面的按钮会调用OC中的block函数完成pop动作</p>
+			<br/>
+			<button onclick="myAction();" style="">点击按钮返回上一个页面</button>
+			<br/>
+
+		</div>
+
+		<div id="secondDiv">
+			<p style="color: darkgoldenrod; ">下面主要完成的是参数传值,我们从网页中获取到html元素的值,然后在OC中对这个值进行处理</p>
+			<input type="text" name="输入框" id="textField" placeholder="请输入要打印的信息" />
+			<br/>
+			<button onclick="log(document.getElementById('textField').value);">打印输入框信息</button>
+			<p style="color: darkgoldenrod; ">下面主要完成的是调用OC中JSExport协议方法</p>
+
+			<button onclick="native.myLog();">调用OC中myLog方法</button>
+
+		</div>
+		<div id="thirdDiv">
+			<br/>
+			<b id="label"></b>
+		</div>
+
+	</body>
+
+	<script type="text/javascript">
+		var myObject = "myObject";
+
+		function labelAction(obj) {
+
+			document.getElementById('label').innerHTML = obj;
+
+		}
+	</script>
+
+</html>

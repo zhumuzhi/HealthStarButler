@@ -13,31 +13,31 @@
 
 /**
  *  初始化Cell 图片+标题+CellType
- *  @param icon  图片
+ *  @param image  图片
  *  @param title 标题
  *  @param type  CellType
  */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)image
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)imaged
 {
     MZSettingItem *item = [[self alloc] init];
-    item.icon = icon;
+    item.icon = image;
     item.title = title;
     item.type = type;
-    item.image = image;
+    item.image = imaged;
     return item;
 }
 
 /**
  *  初始化Cell 图片+标题+CellType+描述文字
- *  @param icon  图片
+ *  @param image  图片
  *  @param title 标题
  *  @param type  CellType
  *  @param desc  描述文字
  */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc
 {
     MZSettingItem *item = [[self alloc] init];
-    item.icon = icon;
+    item.icon = image;
     item.title = title;
     item.type = type;
     item.desc = desc;
@@ -46,16 +46,16 @@
 
 /**
  *  初始化Cell 图片+标题+CellType+描述文字+描述文字颜色
- *  @param icon             图片
+ *  @param image            图片
  *  @param title            标题
  *  @param type             CellType
  *  @param desc             描述文字
  *  @param detailLabelColor 描述文字颜色
  */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc detailLabelColor:(UIColor *)detailLabelColor
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc detailLabelColor:(UIColor *)detailLabelColor
 {
     MZSettingItem *item = [[self alloc] init];
-    item.icon = icon;
+    item.icon = image;
     item.title = title;
     item.type = type;
     item.desc = desc;

@@ -92,6 +92,11 @@
 		5D27457320DB985F00844B6E /* MEDInputAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456620DB985F00844B6E /* MEDInputAlertView.m */; };
 		5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456920DB985F00844B6E /* ValuePickerView.m */; };
 		5D27457620DB985F00844B6E /* MEDPersonalPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D27456A20DB985F00844B6E /* MEDPersonalPickerView.m */; };
+		5D2EF8EC20F72AA400699AA2 /* MZJSBridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF8EB20F72AA400699AA2 /* MZJSBridgeController.m */; };
+		5D2EF8F620F747C400699AA2 /* 53ada3ab8c252.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F220F747C400699AA2 /* 53ada3ab8c252.jpg */; };
+		5D2EF8F720F747C400699AA2 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F320F747C400699AA2 /* favicon.ico */; };
+		5D2EF8F820F747C400699AA2 /* ocCallJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F420F747C400699AA2 /* ocCallJS.html */; };
+		5D2EF8F920F747C400699AA2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F520F747C400699AA2 /* index.html */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -416,6 +421,12 @@
 		5D27456A20DB985F00844B6E /* MEDPersonalPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPersonalPickerView.m; sourceTree = "<group>"; };
 		5D27456B20DB985F00844B6E /* MEDInputAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDInputAlertView.h; sourceTree = "<group>"; };
 		5D27456D20DB985F00844B6E /* ValuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuePickerView.h; sourceTree = "<group>"; };
+		5D2EF8EA20F72AA400699AA2 /* MZJSBridgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZJSBridgeController.h; sourceTree = "<group>"; };
+		5D2EF8EB20F72AA400699AA2 /* MZJSBridgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZJSBridgeController.m; sourceTree = "<group>"; };
+		5D2EF8F220F747C400699AA2 /* 53ada3ab8c252.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 53ada3ab8c252.jpg; sourceTree = "<group>"; };
+		5D2EF8F320F747C400699AA2 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
+		5D2EF8F420F747C400699AA2 /* ocCallJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ocCallJS.html; sourceTree = "<group>"; };
+		5D2EF8F520F747C400699AA2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -758,13 +769,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D03A44820DA6B420072CEC7 /* WebTest */ = {
+		5D03A44820DA6B420072CEC7 /* WebJSOCTest */ = {
 			isa = PBXGroup;
 			children = (
-				5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */,
-				5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */,
+				5D2EF8EF20F7479500699AA2 /* NormolUIWebView */,
+				5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */,
 			);
-			path = WebTest;
+			path = WebJSOCTest;
 			sourceTree = "<group>";
 		};
 		5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart(购物车) */ = {
@@ -1036,6 +1047,60 @@
 				5D27456620DB985F00844B6E /* MEDInputAlertView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5D2EF8EF20F7479500699AA2 /* NormolUIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF8F020F747A400699AA2 /* Source */,
+				5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */,
+				5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */,
+			);
+			path = NormolUIWebView;
+			sourceTree = "<group>";
+		};
+		5D2EF8F020F747A400699AA2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF8FB20F749E300699AA2 /* css */,
+				5D2EF8FA20F749E300699AA2 /* js */,
+				5D2EF8F120F747C400699AA2 /* img */,
+				5D2EF8F320F747C400699AA2 /* favicon.ico */,
+				5D2EF8F520F747C400699AA2 /* index.html */,
+				5D2EF8F420F747C400699AA2 /* ocCallJS.html */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		5D2EF8F120F747C400699AA2 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF8F220F747C400699AA2 /* 53ada3ab8c252.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		5D2EF8FA20F749E300699AA2 /* js */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		5D2EF8FB20F749E300699AA2 /* css */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF8EA20F72AA400699AA2 /* MZJSBridgeController.h */,
+				5D2EF8EB20F72AA400699AA2 /* MZJSBridgeController.m */,
+			);
+			path = JSBridgeWebView;
 			sourceTree = "<group>";
 		};
 		5D4A47F6208F0457007DAD29 /* UserLogin(登录) */ = {
@@ -2064,7 +2129,6 @@
 			isa = PBXGroup;
 			children = (
 				5D267FF520DE130A006A42E2 /* Others */,
-				5D03A44820DA6B420072CEC7 /* WebTest */,
 				5D69056720D9FB12002BBD69 /* MEDMonitorController */,
 			);
 			path = SubController;
@@ -2308,6 +2372,7 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D03A44820DA6B420072CEC7 /* WebJSOCTest */,
 				5DA8C03B20F6316700AF5C74 /* ModelSetting(模型个人中心) */,
 				5DF1F14320EF1C70009A8E51 /* PersonSetTest */,
 				5DF1F14220EF1C5F009A8E51 /* StatusBarTest */,
@@ -2478,14 +2543,17 @@
 				5D267FEB20DD4106006A42E2 /* 9.jpg in Resources */,
 				5D267FDB20DD4106006A42E2 /* 15.jpg in Resources */,
 				5DA70ABE20F4B83E00D9AF1D /* dropdown_anim__0004@2x.png in Resources */,
+				5D2EF8F920F747C400699AA2 /* index.html in Resources */,
 				5D267FD720DD4106006A42E2 /* 11.jpg in Resources */,
 				5D201DF420CA6D2C009007D9 /* graph_week@2x.png in Resources */,
 				5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */,
 				5D8207F82099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.xib in Resources */,
 				5DA70ABD20F4B83E00D9AF1D /* dropdown_anim__00027@2x.png in Resources */,
+				5D2EF8F720F747C400699AA2 /* favicon.ico in Resources */,
 				5DA70ABC20F4B83E00D9AF1D /* dropdown_anim__00014@2x.png in Resources */,
 				5D267FE720DD4106006A42E2 /* 5.jpg in Resources */,
 				5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */,
+				5D2EF8F620F747C400699AA2 /* 53ada3ab8c252.jpg in Resources */,
 				5D201DE620CA6D2C009007D9 /* MEDSymptomTitleCell.xib in Resources */,
 				5DA70AAF20F4B83E00D9AF1D /* dropdown_anim__00026@2x.png in Resources */,
 				5DA70AC220F4B83E00D9AF1D /* dropdown_loading_01@2x.png in Resources */,
@@ -2507,6 +2575,7 @@
 				5D267FD620DD4106006A42E2 /* 10.jpg in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
 				5D267FBC20DD40E6006A42E2 /* drinks.plist in Resources */,
+				5D2EF8F820F747C400699AA2 /* ocCallJS.html in Resources */,
 				5D201DEC20CA6D2C009007D9 /* circle_thumb@2x.png in Resources */,
 				5DA70AC120F4B83E00D9AF1D /* dropdown_loading_03@2x.png in Resources */,
 				5D8208012099A50500B84C1E /* MEDHomeHabitFoodCell.xib in Resources */,
@@ -2665,6 +2734,7 @@
 				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
+				5D2EF8EC20F72AA400699AA2 /* MZJSBridgeController.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
 				5D27457320DB985F00844B6E /* MEDInputAlertView.m in Sources */,
 				5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */,

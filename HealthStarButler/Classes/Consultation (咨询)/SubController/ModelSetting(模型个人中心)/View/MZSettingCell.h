@@ -13,7 +13,7 @@
 @interface MZSettingCell : UITableViewCell
 
 @property (nonatomic, strong) MZSettingItem *item;
-
-+ (id)settingCellWithTableView:(UITableView *)tableView;
+/** 便利构造方法*/
++ (instancetype)settingCellWithTableView:(UITableView *)tableView;
 
 @end

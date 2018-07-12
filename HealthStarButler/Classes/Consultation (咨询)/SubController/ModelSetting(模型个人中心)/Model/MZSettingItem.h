@@ -21,14 +21,15 @@ typedef NS_ENUM(NSInteger, MZSettingItemType) {
 
 /** 图片  */
 @property (nonatomic, copy) UIImage *icon;
+/** 图片 */
+@property (nonatomic, weak) UIImage *image;
 /** 标题 */
 @property (nonatomic, copy) NSString *title;
 /** 描述 */
 @property (nonatomic, copy) NSString *desc;
 /** 占位文字 */
 @property (nonatomic, copy) NSString *placeHolder;
-/** 图片 */
-@property (nonatomic, weak) UIImage *image;
+
 /** 描述文字颜色 */
 @property (nonatomic , strong) UIColor *detailLabelColor;
 /** 类型 */
@@ -37,13 +38,13 @@ typedef NS_ENUM(NSInteger, MZSettingItemType) {
 @property (nonatomic, copy) void (^operation)(void) ; // 点击cell后要执行的操作
 
 /** 初始化Cell 图片+标题+CellType */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)image;
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type image:(UIImage *)imaged;
 
 /** 初始化Cell 图片+标题+CellType+描述文字 */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc;
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc;
 
 /** 初始化Cell 图片+标题+CellType+描述文字+描述文字颜色 */
-+ (id)itemWithImage:(UIImage *)icon title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc detailLabelColor:(UIColor *)detailLabelColor;
++ (id)itemWithImage:(UIImage *)image title:(NSString *)title type:(MZSettingItemType)type desc:(NSString *)desc detailLabelColor:(UIColor *)detailLabelColor;
 
 /** 初始化Cell 标题+CellType+占位文字 */
 + (id)itemWithTitle:(NSString *)title type:(MZSettingItemType)type placeHolder:(NSString *)placeHolder;
