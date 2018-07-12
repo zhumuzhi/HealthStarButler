@@ -97,6 +97,22 @@
 		5D2EF8F720F747C400699AA2 /* favicon.ico in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F320F747C400699AA2 /* favicon.ico */; };
 		5D2EF8F820F747C400699AA2 /* ocCallJS.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F420F747C400699AA2 /* ocCallJS.html */; };
 		5D2EF8F920F747C400699AA2 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF8F520F747C400699AA2 /* index.html */; };
+		5D2EF91C20F7581D00699AA2 /* SCLTimerDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90320F7581D00699AA2 /* SCLTimerDisplay.m */; };
+		5D2EF91D20F7581D00699AA2 /* SCLAlertViewStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90520F7581D00699AA2 /* SCLAlertViewStyleKit.m */; };
+		5D2EF91E20F7581D00699AA2 /* SCLAlertViewResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90920F7581D00699AA2 /* SCLAlertViewResponder.m */; };
+		5D2EF91F20F7581D00699AA2 /* SCLTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90A20F7581D00699AA2 /* SCLTextView.m */; };
+		5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90B20F7581D00699AA2 /* SCLSwitchView.m */; };
+		5D2EF92120F7581D00699AA2 /* SCLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90D20F7581D00699AA2 /* SCLButton.m */; };
+		5D2EF92220F7581D00699AA2 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF90F20F7581D00699AA2 /* UIImage+ImageEffects.m */; };
+		5D2EF92320F7581D00699AA2 /* SCLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF91220F7581D00699AA2 /* SCLAlertView.m */; };
+		5D2EF92420F7581D00699AA2 /* MEDPopViewListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF91420F7581D00699AA2 /* MEDPopViewListController.m */; };
+		5D2EF92520F7581D00699AA2 /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF91820F7581D00699AA2 /* PopView.m */; };
+		5D2EF92620F7581D00699AA2 /* PopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D2EF91A20F7581D00699AA2 /* PopView.xib */; };
+		5D2EF94420F759DB00699AA2 /* FFToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF93920F759DB00699AA2 /* FFToast.m */; };
+		5D2EF94520F759DB00699AA2 /* NSString+FFToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF93C20F759DB00699AA2 /* NSString+FFToast.m */; };
+		5D2EF94620F759DB00699AA2 /* UIImage+FFToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF93D20F759DB00699AA2 /* UIImage+FFToast.m */; };
+		5D2EF94720F759DB00699AA2 /* FFCentreToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF93E20F759DB00699AA2 /* FFCentreToastView.m */; };
+		5D2EF94820F759DB00699AA2 /* FFBaseToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF94120F759DB00699AA2 /* FFBaseToastView.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -427,6 +443,39 @@
 		5D2EF8F320F747C400699AA2 /* favicon.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = favicon.ico; sourceTree = "<group>"; };
 		5D2EF8F420F747C400699AA2 /* ocCallJS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ocCallJS.html; sourceTree = "<group>"; };
 		5D2EF8F520F747C400699AA2 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		5D2EF90220F7581D00699AA2 /* SCLSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLSwitchView.h; sourceTree = "<group>"; };
+		5D2EF90320F7581D00699AA2 /* SCLTimerDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTimerDisplay.m; sourceTree = "<group>"; };
+		5D2EF90420F7581D00699AA2 /* SCLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButton.h; sourceTree = "<group>"; };
+		5D2EF90520F7581D00699AA2 /* SCLAlertViewStyleKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewStyleKit.m; sourceTree = "<group>"; };
+		5D2EF90620F7581D00699AA2 /* SCLMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLMacros.h; sourceTree = "<group>"; };
+		5D2EF90720F7581D00699AA2 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		5D2EF90820F7581D00699AA2 /* SCLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertView.h; sourceTree = "<group>"; };
+		5D2EF90920F7581D00699AA2 /* SCLAlertViewResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertViewResponder.m; sourceTree = "<group>"; };
+		5D2EF90A20F7581D00699AA2 /* SCLTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLTextView.m; sourceTree = "<group>"; };
+		5D2EF90B20F7581D00699AA2 /* SCLSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLSwitchView.m; sourceTree = "<group>"; };
+		5D2EF90C20F7581D00699AA2 /* SCLAlertViewStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewStyleKit.h; sourceTree = "<group>"; };
+		5D2EF90D20F7581D00699AA2 /* SCLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButton.m; sourceTree = "<group>"; };
+		5D2EF90E20F7581D00699AA2 /* SCLTimerDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTimerDisplay.h; sourceTree = "<group>"; };
+		5D2EF90F20F7581D00699AA2 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		5D2EF91020F7581D00699AA2 /* SCLTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLTextView.h; sourceTree = "<group>"; };
+		5D2EF91120F7581D00699AA2 /* SCLAlertViewResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLAlertViewResponder.h; sourceTree = "<group>"; };
+		5D2EF91220F7581D00699AA2 /* SCLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLAlertView.m; sourceTree = "<group>"; };
+		5D2EF91420F7581D00699AA2 /* MEDPopViewListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDPopViewListController.m; sourceTree = "<group>"; };
+		5D2EF91520F7581D00699AA2 /* MEDPopViewListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDPopViewListController.h; sourceTree = "<group>"; };
+		5D2EF91820F7581D00699AA2 /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
+		5D2EF91920F7581D00699AA2 /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
+		5D2EF91A20F7581D00699AA2 /* PopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopView.xib; sourceTree = "<group>"; };
+		5D2EF93920F759DB00699AA2 /* FFToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFToast.m; sourceTree = "<group>"; };
+		5D2EF93A20F759DB00699AA2 /* FFCentreToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCentreToastView.h; sourceTree = "<group>"; };
+		5D2EF93B20F759DB00699AA2 /* FFBaseToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBaseToastView.h; sourceTree = "<group>"; };
+		5D2EF93C20F759DB00699AA2 /* NSString+FFToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FFToast.m"; sourceTree = "<group>"; };
+		5D2EF93D20F759DB00699AA2 /* UIImage+FFToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FFToast.m"; sourceTree = "<group>"; };
+		5D2EF93E20F759DB00699AA2 /* FFCentreToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCentreToastView.m; sourceTree = "<group>"; };
+		5D2EF93F20F759DB00699AA2 /* FFToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFToast.h; sourceTree = "<group>"; };
+		5D2EF94020F759DB00699AA2 /* FFConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfig.h; sourceTree = "<group>"; };
+		5D2EF94120F759DB00699AA2 /* FFBaseToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBaseToastView.m; sourceTree = "<group>"; };
+		5D2EF94220F759DB00699AA2 /* UIImage+FFToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FFToast.h"; sourceTree = "<group>"; };
+		5D2EF94320F759DB00699AA2 /* NSString+FFToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FFToast.h"; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -769,13 +818,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D03A44820DA6B420072CEC7 /* WebJSOCTest */ = {
+		5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JSjiaohu) */ = {
 			isa = PBXGroup;
 			children = (
 				5D2EF8EF20F7479500699AA2 /* NormolUIWebView */,
 				5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */,
 			);
-			path = WebJSOCTest;
+			path = "WebJSOCTest(OC&JSjiaohu)";
 			sourceTree = "<group>";
 		};
 		5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart(购物车) */ = {
@@ -1062,8 +1111,6 @@
 		5D2EF8F020F747A400699AA2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5D2EF8FB20F749E300699AA2 /* css */,
-				5D2EF8FA20F749E300699AA2 /* js */,
 				5D2EF8F120F747C400699AA2 /* img */,
 				5D2EF8F320F747C400699AA2 /* favicon.ico */,
 				5D2EF8F520F747C400699AA2 /* index.html */,
@@ -1080,20 +1127,6 @@
 			path = img;
 			sourceTree = "<group>";
 		};
-		5D2EF8FA20F749E300699AA2 /* js */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = js;
-			sourceTree = "<group>";
-		};
-		5D2EF8FB20F749E300699AA2 /* css */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = css;
-			sourceTree = "<group>";
-		};
 		5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1101,6 +1134,94 @@
 				5D2EF8EB20F72AA400699AA2 /* MZJSBridgeController.m */,
 			);
 			path = JSBridgeWebView;
+			sourceTree = "<group>";
+		};
+		5D2EF8FD20F7581D00699AA2 /* Alert&ActionSheet&Dialog(弹出视图) */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF8FE20F7581D00699AA2 /* subControllers */,
+				5D2EF91320F7581D00699AA2 /* Controller */,
+				5D2EF91620F7581D00699AA2 /* Model */,
+				5D2EF91720F7581D00699AA2 /* View */,
+			);
+			path = "Alert&ActionSheet&Dialog(弹出视图)";
+			sourceTree = "<group>";
+		};
+		5D2EF8FE20F7581D00699AA2 /* subControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF93820F759DB00699AA2 /* FFToast */,
+				5D2EF90120F7581D00699AA2 /* SCLAlertView */,
+			);
+			path = subControllers;
+			sourceTree = "<group>";
+		};
+		5D2EF90120F7581D00699AA2 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF90420F7581D00699AA2 /* SCLButton.h */,
+				5D2EF90220F7581D00699AA2 /* SCLSwitchView.h */,
+				5D2EF90320F7581D00699AA2 /* SCLTimerDisplay.m */,
+				5D2EF90520F7581D00699AA2 /* SCLAlertViewStyleKit.m */,
+				5D2EF90620F7581D00699AA2 /* SCLMacros.h */,
+				5D2EF90720F7581D00699AA2 /* UIImage+ImageEffects.h */,
+				5D2EF90820F7581D00699AA2 /* SCLAlertView.h */,
+				5D2EF90920F7581D00699AA2 /* SCLAlertViewResponder.m */,
+				5D2EF90A20F7581D00699AA2 /* SCLTextView.m */,
+				5D2EF90B20F7581D00699AA2 /* SCLSwitchView.m */,
+				5D2EF90C20F7581D00699AA2 /* SCLAlertViewStyleKit.h */,
+				5D2EF90D20F7581D00699AA2 /* SCLButton.m */,
+				5D2EF90E20F7581D00699AA2 /* SCLTimerDisplay.h */,
+				5D2EF90F20F7581D00699AA2 /* UIImage+ImageEffects.m */,
+				5D2EF91020F7581D00699AA2 /* SCLTextView.h */,
+				5D2EF91120F7581D00699AA2 /* SCLAlertViewResponder.h */,
+				5D2EF91220F7581D00699AA2 /* SCLAlertView.m */,
+			);
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		5D2EF91320F7581D00699AA2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF91520F7581D00699AA2 /* MEDPopViewListController.h */,
+				5D2EF91420F7581D00699AA2 /* MEDPopViewListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D2EF91620F7581D00699AA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D2EF91720F7581D00699AA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF91820F7581D00699AA2 /* PopView.m */,
+				5D2EF91920F7581D00699AA2 /* PopView.h */,
+				5D2EF91A20F7581D00699AA2 /* PopView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D2EF93820F759DB00699AA2 /* FFToast */ = {
+			isa = PBXGroup;
+			children = (
+				5D2EF93920F759DB00699AA2 /* FFToast.m */,
+				5D2EF93A20F759DB00699AA2 /* FFCentreToastView.h */,
+				5D2EF93B20F759DB00699AA2 /* FFBaseToastView.h */,
+				5D2EF93C20F759DB00699AA2 /* NSString+FFToast.m */,
+				5D2EF93D20F759DB00699AA2 /* UIImage+FFToast.m */,
+				5D2EF93E20F759DB00699AA2 /* FFCentreToastView.m */,
+				5D2EF93F20F759DB00699AA2 /* FFToast.h */,
+				5D2EF94020F759DB00699AA2 /* FFConfig.h */,
+				5D2EF94120F759DB00699AA2 /* FFBaseToastView.m */,
+				5D2EF94220F759DB00699AA2 /* UIImage+FFToast.h */,
+				5D2EF94320F759DB00699AA2 /* NSString+FFToast.h */,
+			);
+			path = FFToast;
 			sourceTree = "<group>";
 		};
 		5D4A47F6208F0457007DAD29 /* UserLogin(登录) */ = {
@@ -2372,10 +2493,11 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
-				5D03A44820DA6B420072CEC7 /* WebJSOCTest */,
+				5D2EF8FD20F7581D00699AA2 /* Alert&ActionSheet&Dialog(弹出视图) */,
+				5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JSjiaohu) */,
 				5DA8C03B20F6316700AF5C74 /* ModelSetting(模型个人中心) */,
 				5DF1F14320EF1C70009A8E51 /* PersonSetTest */,
-				5DF1F14220EF1C5F009A8E51 /* StatusBarTest */,
+				5DF1F14220EF1C5F009A8E51 /* StatusBarTest(状态栏设置) */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -2389,13 +2511,13 @@
 			path = BaseClass;
 			sourceTree = "<group>";
 		};
-		5DF1F14220EF1C5F009A8E51 /* StatusBarTest */ = {
+		5DF1F14220EF1C5F009A8E51 /* StatusBarTest(状态栏设置) */ = {
 			isa = PBXGroup;
 			children = (
 				5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */,
 				5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */,
 			);
-			path = StatusBarTest;
+			path = "StatusBarTest(状态栏设置)";
 			sourceTree = "<group>";
 		};
 		5DF1F14320EF1C70009A8E51 /* PersonSetTest */ = {
@@ -2553,6 +2675,7 @@
 				5DA70ABC20F4B83E00D9AF1D /* dropdown_anim__00014@2x.png in Resources */,
 				5D267FE720DD4106006A42E2 /* 5.jpg in Resources */,
 				5DCE9AFA20C6682100512610 /* MEDMedicalRecordCommonCell.xib in Resources */,
+				5D2EF92620F7581D00699AA2 /* PopView.xib in Resources */,
 				5D2EF8F620F747C400699AA2 /* 53ada3ab8c252.jpg in Resources */,
 				5D201DE620CA6D2C009007D9 /* MEDSymptomTitleCell.xib in Resources */,
 				5DA70AAF20F4B83E00D9AF1D /* dropdown_anim__00026@2x.png in Resources */,
@@ -2672,11 +2795,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
+				5D2EF94820F759DB00699AA2 /* FFBaseToastView.m in Sources */,
+				5D2EF94620F759DB00699AA2 /* UIImage+FFToast.m in Sources */,
 				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */,
 				5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */,
+				5D2EF94520F759DB00699AA2 /* NSString+FFToast.m in Sources */,
 				5D69058F20D9FB12002BBD69 /* MEDBloodPressureCell.m in Sources */,
+				5D2EF92420F7581D00699AA2 /* MEDPopViewListController.m in Sources */,
 				5DBD2C9220A2D373008F902E /* TDTouchID.m in Sources */,
 				5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */,
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
@@ -2700,6 +2827,7 @@
 				5DCE9B0620C6682100512610 /* TZAssetCell.m in Sources */,
 				5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
+				5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
 				5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */,
@@ -2720,7 +2848,9 @@
 				5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */,
 				5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */,
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
+				5D2EF91C20F7581D00699AA2 /* SCLTimerDisplay.m in Sources */,
 				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
+				5D2EF92120F7581D00699AA2 /* SCLButton.m in Sources */,
 				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
 				5D201DF820CA6D2C009007D9 /* KDGoalBarPercentLayer.m in Sources */,
 				5DF1F15B20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m in Sources */,
@@ -2730,9 +2860,11 @@
 				5D27457220DB985F00844B6E /* MEDPersonalDataModel.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
+				5D2EF94720F759DB00699AA2 /* FFCentreToastView.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
 				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
+				5D2EF91E20F7581D00699AA2 /* SCLAlertViewResponder.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D2EF8EC20F72AA400699AA2 /* MZJSBridgeController.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
@@ -2763,8 +2895,11 @@
 				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5DA70AA920F4B83E00D9AF1D /* MEDEatBaoziFooter.m in Sources */,
+				5D2EF92220F7581D00699AA2 /* UIImage+ImageEffects.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
+				5D2EF91F20F7581D00699AA2 /* SCLTextView.m in Sources */,
+				5D2EF91D20F7581D00699AA2 /* SCLAlertViewStyleKit.m in Sources */,
 				5DCE9AF820C6682100512610 /* MZpopMenu.m in Sources */,
 				5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */,
 				5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */,
@@ -2785,6 +2920,7 @@
 				5DA8C04720F6316700AF5C74 /* MZBaseSettingController.m in Sources */,
 				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
+				5D2EF92320F7581D00699AA2 /* SCLAlertView.m in Sources */,
 				5D0ABE4320E4CF7E0088D0D4 /* MEDReszingImageTool.m in Sources */,
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */,
@@ -2831,6 +2967,7 @@
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5DA70AA720F4B83E00D9AF1D /* MEDDIYHeader.m in Sources */,
+				5D2EF94420F759DB00699AA2 /* FFToast.m in Sources */,
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
 				5DF1F15E20EF5522009A8E51 /* FSPriceAttributedStringTool.m in Sources */,
@@ -2847,6 +2984,7 @@
 				5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */,
 				5DBD2C9C20A2E463008F902E /* MEDHealthMananger.m in Sources */,
 				5D829A662085D7E2001993B6 /* MEDTabBarMidButton.m in Sources */,
+				5D2EF92520F7581D00699AA2 /* PopView.m in Sources */,
 				5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
