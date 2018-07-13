@@ -27,6 +27,7 @@
 #import "MEDWebTestController.h"         // 网页测试
 #import "MEDPopViewListController.h"     // 弹窗测试
 #import "MEDSelectionListController.h"   // 单多选
+#import "MZFromController.h"             // 模型From
 
 
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
@@ -50,8 +51,9 @@
                         @{@"name":@"Bridge网页测试", @"className":@"MEDWebTestController"},
                         @{@"name":@"网页测试", @"className":@"MEDWebTestController"},
                         @{@"name":@"弹窗测试", @"className":@"MEDPopViewListController"},
-                        @{@"name":@"单多选", @"className":@"MEDSelectionListController"}
-                        ]];
+                        @{@"name":@"单多选", @"className":@"MEDSelectionListController"},
+                        @{@"name":@"模型From", @"className":@"MZFromController"}]
+                       ];
     }
     return _datasArray;
 }
