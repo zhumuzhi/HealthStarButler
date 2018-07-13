@@ -39,6 +39,8 @@
 #import "UIButton+ReszingImage.h"
 #import "UIScrollView+ScrollToTopBtn.h"
 #import "UIButton+EdgeInsets.h"
+#import "UIColor+Category.h"
+
 // 富文本拼接
 #import "NSMutableAttributedString+Add.h"
 

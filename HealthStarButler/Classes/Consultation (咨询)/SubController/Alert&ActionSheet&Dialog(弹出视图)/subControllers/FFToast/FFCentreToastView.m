@@ -191,7 +191,7 @@ static NSMutableArray* toastArray = nil;
     
     self.toastViewFrame = [self toastViewFrame];
     
-    self.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    self.frame = CGRectMake(0, 0, kScreenWidth, SCREEN_HEIGHT);
     
     //设置动画起始Frame
     CGFloat toastViewW = _toastViewFrame.size.width/2;
@@ -250,10 +250,10 @@ static NSMutableArray* toastArray = nil;
     
     if(_isCustomToastView == NO){
         
-        toastViewW = SCREEN_WIDTH - 2 * HORIZONTAL_SPACE_TO_SCREEN;
-        toastViewX = (SCREEN_WIDTH - toastViewW)/2;
+        toastViewW = kScreenWidth - 2 * HORIZONTAL_SPACE_TO_SCREEN;
+        toastViewX = (kScreenWidth - toastViewW)/2;
         
-        CGFloat textMaxWidth = SCREEN_WIDTH - 2 * (HORIZONTAL_SPACE_TO_SCREEN + HORIZONTAL_SPACE_TO_TOASTVIEW);
+        CGFloat textMaxWidth = kScreenWidth - 2 * (HORIZONTAL_SPACE_TO_SCREEN + HORIZONTAL_SPACE_TO_TOASTVIEW);
 
         self.titleLabelSize = [NSString sizeForString:_titleString font:_titleFont maxWidth:textMaxWidth];
         self.messageLabelSize = [NSString sizeForString:_messageString font:_messageFont maxWidth:textMaxWidth];
@@ -271,7 +271,7 @@ static NSMutableArray* toastArray = nil;
     }else{
         toastViewW = _toastView.frame.size.width;
         toastViewH = _toastView.frame.size.height;
-        toastViewX = (SCREEN_WIDTH - toastViewW)/2;
+        toastViewX = (kScreenWidth - toastViewW)/2;
         toastViewY = (SCREEN_HEIGHT - toastViewH)/2;
     }
     

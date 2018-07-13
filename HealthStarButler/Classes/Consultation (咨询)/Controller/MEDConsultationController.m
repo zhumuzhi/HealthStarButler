@@ -26,6 +26,8 @@
 #import "MZJSBridgeController.h"         // Bridge网页测试
 #import "MEDWebTestController.h"         // 网页测试
 #import "MEDPopViewListController.h"     // 弹窗测试
+#import "MEDSelectionListController.h"   // 单多选
+
 
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -40,7 +42,9 @@
 - (NSMutableArray *)namesArray
 {
     if (_namesArray == nil) {
-        _namesArray = [NSMutableArray arrayWithArray:@[@"状态栏测试", @"下拉刷新", @"模型登录", @"模型个人中心", @"Bridge网页测试", @"网页测试", @"弹窗测试"]];
+        _namesArray = [NSMutableArray arrayWithArray:@[@"状态栏测试", @"下拉刷新", @"模型登录", @"模型个人中心", @"Bridge网页测试", @"网页测试", @"弹窗测试", @"单多选"]];
+//        NSArray *dataArray = @[@{@name:@"状态栏"}];
+
     }
     return _namesArray;
 }
@@ -105,8 +109,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    // @"状态栏测试", @"下拉刷新",@"模型登录", @"模型个人中心", @"WebBrige测试", @"普通WebView测试", @"弹出测试"
-    NSArray *controllers = @[[MEDStatusController class], [MEDRefreshListController class], [MZModelTypeLoginController class], [MZBaseSettingController class], [MZJSBridgeController class], [MEDWebTestController class],[MEDPopViewListController class]];
+    // @"状态栏测试", @"下拉刷新",@"模型登录", @"模型个人中心", @"WebBrige测试", @"普通WebView测试", @"弹出测试, @"单多选""
+    NSArray *controllers = @[[MEDStatusController class], [MEDRefreshListController class], [MZModelTypeLoginController class], [MZBaseSettingController class], [MZJSBridgeController class], [MEDWebTestController class], [MEDPopViewListController class], [MEDSelectionListController class]];
     Class controller = controllers[indexPath.row];
     UIViewController *viewController = [[controller alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
