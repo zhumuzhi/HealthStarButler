@@ -78,9 +78,16 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     [self tableView:tableView didDeselectRowAtIndexPath:indexPath];
-}
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
+    if (indexPath.row == 0) {
+
+    }else if(indexPath.row == 1){
+
+    }else if(indexPath.row == 2){
+
+    }
+}
 
 #pragma mark - ConfigUI
 

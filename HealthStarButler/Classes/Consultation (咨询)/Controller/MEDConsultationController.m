@@ -32,21 +32,28 @@
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *namesArray;
+@property (nonatomic, strong) NSMutableArray *datasArray;
 @end
 
 @implementation MEDConsultationController
 
 
 #pragma mark - LazyGet
-- (NSMutableArray *)namesArray
+- (NSMutableArray *)datasArray
 {
-    if (_namesArray == nil) {
-        _namesArray = [NSMutableArray arrayWithArray:@[@"状态栏测试", @"下拉刷新", @"模型登录", @"模型个人中心", @"Bridge网页测试", @"网页测试", @"弹窗测试", @"单多选"]];
-//        NSArray *dataArray = @[@{@name:@"状态栏"}];
-
+    if (_datasArray == nil) {
+        _datasArray = [NSMutableArray arrayWithArray:@[
+                        @{@"name":@"状态栏", @"className":@"MEDStatusController"},
+                        @{@"name":@"下拉刷新", @"className":@"MEDRefreshListController"},
+                        @{@"name":@"模型登录", @"className":@"MZModelTypeLoginController"},
+                        @{@"name":@"模型个人中心", @"className":@"MZJSBridgeController"},
+                        @{@"name":@"Bridge网页测试", @"className":@"MEDWebTestController"},
+                        @{@"name":@"网页测试", @"className":@"MEDWebTestController"},
+                        @{@"name":@"弹窗测试", @"className":@"MEDPopViewListController"},
+                        @{@"name":@"单多选", @"className":@"MEDSelectionListController"}
+                        ]];
     }
-    return _namesArray;
+    return _datasArray;
 }
 
 - (UITableView *)tableView
@@ -87,13 +94,14 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.namesArray.count;
+    return self.datasArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    cell.textLabel.text = self.namesArray[indexPath.row];
+    NSDictionary *dict = self.datasArray[indexPath.row];
+    cell.textLabel.text = dict[@"name"];
     cell.textLabel.textColor = MEDCommonBlue;
     return cell;
 }
@@ -108,14 +116,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    // @"状态栏测试", @"下拉刷新",@"模型登录", @"模型个人中心", @"WebBrige测试", @"普通WebView测试", @"弹出测试, @"单多选""
-    NSArray *controllers = @[[MEDStatusController class], [MEDRefreshListController class], [MZModelTypeLoginController class], [MZBaseSettingController class], [MZJSBridgeController class], [MEDWebTestController class], [MEDPopViewListController class], [MEDSelectionListController class]];
-    Class controller = controllers[indexPath.row];
+    NSDictionary *dict = self.datasArray[indexPath.row];
+    Class controller = NSClassFromString(dict[@"className"]);
     UIViewController *viewController = [[controller alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
 }
-
 
 
 - (void)testYYText {

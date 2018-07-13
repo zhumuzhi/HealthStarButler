@@ -95,13 +95,13 @@ typedef NS_ENUM(NSInteger, MZWebCallType) {
 {
 //===== 网络数据 =====
 //  NSURL *url = [NSURL URLWithString:@"https://kefu.huayunworld.com/H5/index.html#/chat?skillGroupld=1&ecterpriseld=1"];
-//    NSURL *url = [NSURL URLWithString:@"https://kefu.huayunworld.com/H5/index.html#/chat?skillGroupld=43&ecterpriseld=9"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURL *url = [NSURL URLWithString:@"https://kefu.huayunworld.com/H5/index.html#/chat?skillGroupId=43&enterpriseId=9"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
 //===== 网络数据 =====
 
 //===== 本地数据 =====
-    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"index.html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+//    NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"index.html"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
 //===== 本地数据 =====
 
     [self.webView loadRequest:request];
