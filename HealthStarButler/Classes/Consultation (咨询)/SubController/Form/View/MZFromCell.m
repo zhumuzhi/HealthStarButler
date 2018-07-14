@@ -12,7 +12,7 @@
 #import "MZFromModel.h"
 //#import "GGSwitch.h"
 
-@interface MZFromCell()<MZFormTextFieldDelegate,UITextViewDelegate>
+@interface MZFromCell()<MZFormTextFieldDelegate, UITextViewDelegate>
 
 @property (nonatomic , strong) MZFormTextField *leftTitle;
 @property (nonatomic , strong) MZFormTextField *rightDetails;
@@ -68,6 +68,7 @@
     [self addSubview:self.line];
     
 }
+#pragma mark - MZFormTextFieldDelegate
 
 - (void)textField:(GHTextField *)textField image:(UIImage *)image{
     NSLog(@"%@",image);
@@ -79,6 +80,7 @@
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
+    
     CGRect frame = textView.frame;
     NSString *text = textView.text;
     CGSize size = [self sizeWithText:text font:[UIFont systemFontOfSize:14] maxSize:CGSizeMake(frame.size.width, MAXFLOAT)];
@@ -97,6 +99,7 @@
     return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
 }
 
+#pragma mark - LazyGet
 - (UIView *)line {
     if (_line == nil) {
         _line = [[UIView alloc]initWithFrame:CGRectMake(15, self.frame.size.height, [UIScreen mainScreen].bounds.size.width - 30, 0.5)];
@@ -127,7 +130,7 @@
     return _rightTextView;
 }
 
-#pragma mark - TextField
+#pragma mark TextField
 - (MZFormTextField *)leftTitle {
     if (_leftTitle == nil) {
         _leftTitle = [[MZFormTextField alloc]initWithFrame:CGRectMake(15, (self.frame.size.height - 30 ) * 0.5, 120, 30 )];
