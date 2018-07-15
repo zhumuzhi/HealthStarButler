@@ -36,6 +36,7 @@
 
 // 是否iPhone X
 #define  MED_iPhoneX        (kScreenWidth == 375.f && kScreenHeight == 812.f ? YES : NO)
+#define iPhoneX (kScreenWidth == 375.f && kScreenHeight == 812.f ? YES : NO)
 
 // 状态栏Height
 #define KStatusBarHeight     (MED_iPhoneX ? 44.f : 20.f )
@@ -46,6 +47,9 @@
 // TabBarHeight
 #define kTabBarHeight       (kTabbarSafeBottomMargin + 49.f)
 
+// StatusbarH + NavigationH
+#define kSafeAreaTopHeight (iPhoneX ? 88.f : 64.f)
+
 // TabBar一级页面Frame
 #define NormalFrame CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight-kTabBarHeight)
 
@@ -53,6 +57,36 @@
 #define SecondPageFrame CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight-kTabbarSafeBottomMargin)
 
 #define CELL_HEIGHT 44
+
+// Rete
+#define kScreenWidthRete   kScreenWidth / 375.0 //比率
+#define kScreenHeightRete  kScreenWidth / 667.0 //比率
+// AutoSize
+#define kAutoWithSize(r) r*kScreenWidth / 375.0
+#define kAutoHeightSize(r) r*kScreenHeight / 667.0
+
+// Margin
+#define kMargin2 2
+#define kMargin5 5
+#define kMargin6 6
+
+#define kMargin10 10
+#define kMargin12 12
+#define kMargin13 13
+
+#define kMargin15 15
+#define kMargin24 24
+
+#define kMargin32 32
+#define kMargin40 40
+#define kMargin44 44
+
+#define kMargin43 43
+
+#define kMargin50 50
+#define kMargin76 76
+#define kFont(size) kAutoWithSize(size)
+
 
 #pragma mark -------------------- Color --------------------
 

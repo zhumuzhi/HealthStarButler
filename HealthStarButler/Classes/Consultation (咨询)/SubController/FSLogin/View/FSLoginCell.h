@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSLoginCell : UITableViewCell
+@class FSLoginMData;
+@class FSLoginCell;
 
+@protocol FSLoginCellDelegate <NSObject>
+@optional
+- (void)FSLoginCellDelegateDidClick:(FSLoginCell *)loginCell;
+@end
+
+@interface FSLoginCell : UITableViewCell
+@property (nonatomic, strong) FSLoginMData *rowMData;
+@property(nonatomic, weak) id<FSLoginCellDelegate> delegate;
 @end

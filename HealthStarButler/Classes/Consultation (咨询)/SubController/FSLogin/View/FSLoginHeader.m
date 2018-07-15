@@ -8,14 +8,41 @@
 
 #import "FSLoginHeader.h"
 
+@interface FSLoginHeader ()
+
+@property (nonatomic, strong) UIImageView *logo;
+
+@end
+
+
 @implementation FSLoginHeader
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self == [super initWithFrame:frame]) {
+        [self configUI];
+    }
+    return self;
 }
-*/
+
+- (void)configUI {
+    [self addSubview:self.logo];
+    
+    [self.logo mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self);
+        make.height.width.equalTo(@(100));
+    }];
+}
+
+#pragma mark - LazyGet
+- (UIImageView *)logo {
+    if (_logo == nil) {
+        _logo = [[UIImageView alloc] init];
+        _logo.image = [UIImage imageNamed:@"logo"];
+        _logo.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return _logo;
+}
+
+
 
 @end

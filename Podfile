@@ -22,6 +22,8 @@ target 'HealthStarButler' do
  pod 'WebViewJavascriptBridge'
  # 富文本
  pod 'YYText'
+ # 提示Toast
+ pod 'Toast'
  
  
  # 友盟

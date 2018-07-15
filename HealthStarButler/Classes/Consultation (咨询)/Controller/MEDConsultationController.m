@@ -28,6 +28,7 @@
 #import "MEDPopViewListController.h"     // 弹窗测试
 #import "MEDSelectionListController.h"   // 单多选
 #import "MZFromController.h"             // 模型From
+#import "FSLoginViewController.h"        // FS登录
 
 
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
@@ -52,8 +53,10 @@
                         @{@"name":@"网页测试", @"className":@"MEDWebTestController"},
                         @{@"name":@"弹窗测试", @"className":@"MEDPopViewListController"},
                         @{@"name":@"单多选", @"className":@"MEDSelectionListController"},
-                        @{@"name":@"模型From", @"className":@"MZFromController"}]
+                        @{@"name":@"模型From", @"className":@"MZFromController"},
+                        @{@"name":@"FS登录", @"className":@"FSLoginViewController"}]
                        ];
+        //FSLoginViewController
     }
     return _datasArray;
 }

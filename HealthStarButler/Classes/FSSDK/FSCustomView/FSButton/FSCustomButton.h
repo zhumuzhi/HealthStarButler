@@ -9,19 +9,20 @@
 #import <UIKit/UIKit.h>
 
 /* 按钮图片位置枚举*/
-typedef NS_ENUM(NSUInteger, FSButtonImageType) {
+typedef NS_ENUM(NSUInteger, FSCustomButtonImageType) {
     /* 图片在按钮左侧*/
-    FSButtonImaegTypeLeft,
+    FSCustomButtonImageTypeLeft,
     /* 图片在右*/
-    FSButtonImaegTypeRight,
+    FSCustomButtonImageTypeRight,
     /* 图片在上*/
-    FSButtonImaegTypeUp,
+    FSCustomButtonImageTypeTop,
     /* 图片在下*/
-    FSButtonImaegTypeDown
+    FSCustomButtonImageTypeDown
 };
+
 
 @interface FSCustomButton : UIButton
 
-@property (nonatomic, assign) FSButtonImageType imageType;
+@property (nonatomic, assign, readwrite) FSCustomButtonImageType buttonStyle;
 
 @end
