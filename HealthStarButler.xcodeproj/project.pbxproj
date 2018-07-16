@@ -206,6 +206,8 @@
 		5D4E33A720B683F50026B2C4 /* GDDExhibitionController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4E33A620B683F50026B2C4 /* GDDExhibitionController.storyboard */; };
 		5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */; };
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
+		5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6120FC263700483971 /* FSBase64Tool.m */; };
+		5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
@@ -316,6 +318,8 @@
 		5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */; };
 		5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04320F6316700AF5C74 /* MZSettingItem.m */; };
 		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
+		5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */; };
+		5DBC06DD20FC6EED0078E9B6 /* FSCheckCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */; };
 		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
 		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
 		5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */; };
@@ -735,6 +739,12 @@
 		5D4F726220EB9BDE0049C92A /* MZScrollTopButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZScrollTopButton.m; sourceTree = "<group>"; };
 		5D4F726420EBBA770049C92A /* UIScrollView+ScrollToTopBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+ScrollToTopBtn.h"; sourceTree = "<group>"; };
 		5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+ScrollToTopBtn.m"; sourceTree = "<group>"; };
+		5D510A6020FC263700483971 /* FSBase64Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBase64Tool.h; sourceTree = "<group>"; };
+		5D510A6120FC263700483971 /* FSBase64Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSBase64Tool.m; sourceTree = "<group>"; };
+		5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeSlider.m; sourceTree = "<group>"; };
+		5D510A6D20FC339400483971 /* FSCheckCodeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeSlider.h; sourceTree = "<group>"; };
+		5D510A6F20FC340400483971 /* FSCheckSliderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckSliderController.h; sourceTree = "<group>"; };
+		5D510A7020FC340400483971 /* FSCheckSliderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckSliderController.m; sourceTree = "<group>"; };
 		5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginHeaderView.h; sourceTree = "<group>"; };
 		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
 		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
@@ -912,6 +922,10 @@
 		5DA8C04620F6316700AF5C74 /* MZSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingCell.m; sourceTree = "<group>"; };
 		5DB1B64820F9F83A00C01FF0 /* FSLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLoginViewController.h; sourceTree = "<group>"; };
 		5DB1B64920F9F83A00C01FF0 /* FSLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLoginViewController.m; sourceTree = "<group>"; };
+		5DBC06D720FC6D010078E9B6 /* FSCheckCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeController.h; sourceTree = "<group>"; };
+		5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeController.m; sourceTree = "<group>"; };
+		5DBC06DA20FC6D8A0078E9B6 /* FSCheckCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeView.h; sourceTree = "<group>"; };
+		5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeView.m; sourceTree = "<group>"; };
 		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
 		5DBD2C67209FFCBB008F902E /* NSString+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MED.m"; sourceTree = "<group>"; };
 		5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDateUtils.h; sourceTree = "<group>"; };
@@ -1104,6 +1118,7 @@
 		5D0ABE4020E4CEFB0088D0D4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5D510A5F20FC260E00483971 /* FSBase64Tool */,
 				5D829A372085C89A001993B6 /* Network */,
 				5D2EF94C20F75D8800699AA2 /* RichText */,
 				5D2EF94B20F75D8000699AA2 /* UI */,
@@ -2184,6 +2199,26 @@
 			path = ScrollToTopButton;
 			sourceTree = "<group>";
 		};
+		5D510A5F20FC260E00483971 /* FSBase64Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5D510A6020FC263700483971 /* FSBase64Tool.h */,
+				5D510A6120FC263700483971 /* FSBase64Tool.m */,
+			);
+			path = FSBase64Tool;
+			sourceTree = "<group>";
+		};
+		5D510A6B20FC339400483971 /* FSCheckCodeSlider(滑动解锁) */ = {
+			isa = PBXGroup;
+			children = (
+				5D510A6F20FC340400483971 /* FSCheckSliderController.h */,
+				5D510A7020FC340400483971 /* FSCheckSliderController.m */,
+				5D510A6D20FC339400483971 /* FSCheckCodeSlider.h */,
+				5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */,
+			);
+			path = "FSCheckCodeSlider(滑动解锁)";
+			sourceTree = "<group>";
+		};
 		5D69056720D9FB12002BBD69 /* MEDMonitorController */ = {
 			isa = PBXGroup;
 			children = (
@@ -3052,6 +3087,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DBC06D620FC6CD80078E9B6 /* CheckCode(验证码) */ = {
+			isa = PBXGroup;
+			children = (
+				5DBC06D720FC6D010078E9B6 /* FSCheckCodeController.h */,
+				5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */,
+				5DBC06DA20FC6D8A0078E9B6 /* FSCheckCodeView.h */,
+				5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */,
+			);
+			path = "CheckCode(验证码)";
+			sourceTree = "<group>";
+		};
 		5DBD2C7720A192F1008F902E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3360,6 +3406,8 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DBC06D620FC6CD80078E9B6 /* CheckCode(验证码) */,
+				5D510A6B20FC339400483971 /* FSCheckCodeSlider(滑动解锁) */,
 				5DB1B64420F9F80600C01FF0 /* FSLogin */,
 				5D4279F920F8E93200FB9C65 /* Form */,
 				5D2EF94D20F82DFC00699AA2 /* Selection(单多选) */,
@@ -3668,6 +3716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DBC06DD20FC6EED0078E9B6 /* FSCheckCodeController.m in Sources */,
 				5D3E501920FB5D8C008FBF42 /* ReachStateWWAN.m in Sources */,
 				5D3E4F3420FB5A4F008FBF42 /* FSLoginCell.m in Sources */,
 				5D3E4F3320FB5A42008FBF42 /* FSLoginViewController.m in Sources */,
@@ -3738,6 +3787,7 @@
 				5D267FF420DDD44C006A42E2 /* MEDShopCartToolBar.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
 				5D3E4FEF20FB5D8C008FBF42 /* NSString+Util.m in Sources */,
+				5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */,
@@ -3770,6 +3820,7 @@
 				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5D2EF91E20F7581D00699AA2 /* SCLAlertViewResponder.m in Sources */,
+				5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D2EF8EC20F72AA400699AA2 /* MZJSBridgeController.m in Sources */,
 				5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */,
@@ -3902,6 +3953,7 @@
 				5D3E4FF720FB5D8C008FBF42 /* UIView+Extension.m in Sources */,
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
+				5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */,
 				5D3E502420FB5D8C008FBF42 /* GCDTimer.m in Sources */,
 				5D3E500520FB5D8C008FBF42 /* GHTagItem.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,

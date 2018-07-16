@@ -29,7 +29,8 @@
 #import "MEDSelectionListController.h"   // 单多选
 #import "MZFromController.h"             // 模型From
 #import "FSLoginViewController.h"        // FS登录
-
+#import "FSCheckSliderController.h"      // FS滑动验证条
+#import "FSCheckCodeController.h"        // FS验证码
 
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -54,9 +55,10 @@
                         @{@"name":@"弹窗测试", @"className":@"MEDPopViewListController"},
                         @{@"name":@"单多选", @"className":@"MEDSelectionListController"},
                         @{@"name":@"模型From", @"className":@"MZFromController"},
-                        @{@"name":@"FS登录", @"className":@"FSLoginViewController"}]
+                        @{@"name":@"FS登录", @"className":@"FSLoginViewController"},
+                        @{@"name":@"FS滑动验证条", @"className":@"FSCheckSliderController"},
+                        @{@"name":@"验证码", @"className":@"FSCheckCodeController"}]
                        ];
-        //FSLoginViewController
     }
     return _datasArray;
 }

@@ -76,14 +76,21 @@
 - (void)FSLoginCellDelegateDidClick:(FSLoginCell *)loginCell {
     
     if(loginCell.rowMData.loginCellType == FSLoginCellTypeUserAcount){
-        [self.view makeToast:@"验证码输入错误"
-                    duration:2.0
-                    position:CSToastPositionCenter];
+
+        [self.view hideAllToasts];
+        CSToastStyle *style = [[CSToastStyle alloc] initWithDefaultStyle];
+        style.horizontalPadding = 50.0;
+        style.verticalPadding = 30.0;
+        [self.view makeToast:@"验证码输入错误" duration:2.0 position:CSToastPositionCenter style:style];
+
     }else if (loginCell.rowMData.loginCellType == FSLoginCellTypePassword) {
+        [self.view hideAllToasts];
         [self.view makeToast:@"用户名密码错误，请重新输入"
                     duration:2.0
                     position:CSToastPositionCenter];
+
     }else if (loginCell.rowMData.loginCellType == FSLoginCellTypeCode) {
+        [self.view hideAllToasts];
         [self.view makeToast:@"两次密码不一样，请重新输入"
                     duration:2.0
                     position:CSToastPositionCenter];

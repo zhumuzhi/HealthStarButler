@@ -37,6 +37,8 @@
 #import "NSObject+MED.h"
 #import "UIView+MED.h"
 #import "NSString+MED.h"
+#import "NSString+Arc4random.h" // 随机数
+#import "NSString+Random.h"
 #import "UIButton+ReszingImage.h"
 #import "UIButton+BackGroundColor.h"
 #import "UIScrollView+ScrollToTopBtn.h"
