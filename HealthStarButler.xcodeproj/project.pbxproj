@@ -191,6 +191,9 @@
 		5D427A0620F8E9DF00FB9C65 /* MZFromCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D427A0520F8E9DF00FB9C65 /* MZFromCell.m */; };
 		5D427A0D20F8F38500FB9C65 /* MZFormTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D427A0920F8F38500FB9C65 /* MZFormTextField.m */; };
 		5D427A0E20F8F38500FB9C65 /* GGSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D427A0C20F8F38500FB9C65 /* GGSwitch.m */; };
+		5D454FE120FF71010041A924 /* FSMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D454FE020FF71010041A924 /* FSMineController.m */; };
+		5D454FE720FF757B0041A924 /* FSMineMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D454FE620FF757B0041A924 /* FSMineMData.m */; };
+		5D454FEA20FF7C160041A924 /* FSMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D454FE920FF7C160041A924 /* FSMineCell.m */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -715,6 +718,12 @@
 		5D427A0920F8F38500FB9C65 /* MZFormTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormTextField.m; sourceTree = "<group>"; };
 		5D427A0B20F8F38500FB9C65 /* GGSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGSwitch.h; sourceTree = "<group>"; };
 		5D427A0C20F8F38500FB9C65 /* GGSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGSwitch.m; sourceTree = "<group>"; };
+		5D454FDF20FF71010041A924 /* FSMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineController.h; sourceTree = "<group>"; };
+		5D454FE020FF71010041A924 /* FSMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineController.m; sourceTree = "<group>"; };
+		5D454FE520FF757B0041A924 /* FSMineMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineMData.h; sourceTree = "<group>"; };
+		5D454FE620FF757B0041A924 /* FSMineMData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineMData.m; sourceTree = "<group>"; };
+		5D454FE820FF7C160041A924 /* FSMineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineCell.h; sourceTree = "<group>"; };
+		5D454FE920FF7C160041A924 /* FSMineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineCell.m; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -2100,6 +2109,43 @@
 			path = GGSwitch;
 			sourceTree = "<group>";
 		};
+		5D454FDE20FF70CD0041A924 /* FSMine(我的方盛) */ = {
+			isa = PBXGroup;
+			children = (
+				5D454FE220FF71050041A924 /* Controller */,
+				5D454FE320FF710E0041A924 /* Model */,
+				5D454FE420FF71130041A924 /* View */,
+			);
+			path = "FSMine(我的方盛)";
+			sourceTree = "<group>";
+		};
+		5D454FE220FF71050041A924 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D454FDF20FF71010041A924 /* FSMineController.h */,
+				5D454FE020FF71010041A924 /* FSMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D454FE320FF710E0041A924 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D454FE520FF757B0041A924 /* FSMineMData.h */,
+				5D454FE620FF757B0041A924 /* FSMineMData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D454FE420FF71130041A924 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D454FE820FF7C160041A924 /* FSMineCell.h */,
+				5D454FE920FF7C160041A924 /* FSMineCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5D4A47F6208F0457007DAD29 /* UserLogin(登录) */ = {
 			isa = PBXGroup;
 			children = (
@@ -3437,6 +3483,7 @@
 		5DE1F58520EDE484005FCCD5 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D454FDE20FF70CD0041A924 /* FSMine(我的方盛) */,
 				5DBC06D620FC6CD80078E9B6 /* CheckCode(验证码) */,
 				5D510A6B20FC339400483971 /* FSCheckCodeSlider(滑动解锁) */,
 				5DB1B64420F9F80600C01FF0 /* FSLogin */,
@@ -3753,6 +3800,7 @@
 				5D3E4F3320FB5A42008FBF42 /* FSLoginViewController.m in Sources */,
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
 				5D2EF94820F759DB00699AA2 /* FFBaseToastView.m in Sources */,
+				5D454FE720FF757B0041A924 /* FSMineMData.m in Sources */,
 				5D3E4FF620FB5D8C008FBF42 /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D2EF94620F759DB00699AA2 /* UIImage+FFToast.m in Sources */,
 				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
@@ -3886,6 +3934,7 @@
 				5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */,
 				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
 				5D3E500C20FB5D8C008FBF42 /* DHGuidePageHUD.m in Sources */,
+				5D454FE120FF71010041A924 /* FSMineController.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
 				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
@@ -3930,6 +3979,7 @@
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */,
 				5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */,
+				5D454FEA20FF7C160041A924 /* FSMineCell.m in Sources */,
 				5D69059920D9FB12002BBD69 /* MEDMonitorHeaderView.m in Sources */,
 				5D3E4FEE20FB5D8C008FBF42 /* NSString+unicode.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,

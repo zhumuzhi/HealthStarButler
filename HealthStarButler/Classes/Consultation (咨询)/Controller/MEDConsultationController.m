@@ -32,6 +32,8 @@
 #import "FSCheckSliderController.h"      // FS滑动验证条
 #import "FSCheckCodeController.h"        // FS验证码
 
+#import "FSMineController.h"             // 我的方盛
+
 @interface MEDConsultationController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -57,7 +59,8 @@
                         @{@"name":@"模型From", @"className":@"MZFromController"},
                         @{@"name":@"FS登录", @"className":@"FSLoginViewController"},
                         @{@"name":@"FS滑动验证条", @"className":@"FSCheckSliderController"},
-                        @{@"name":@"验证码", @"className":@"FSCheckCodeController"}]
+                        @{@"name":@"验证码", @"className":@"FSCheckCodeController"},
+                        @{@"name":@"我的方盛", @"className":@"FSMineController"}]
                        ];
     }
     return _datasArray;
