@@ -320,6 +320,9 @@
 		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
 		5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */; };
 		5DBC06DD20FC6EED0078E9B6 /* FSCheckCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */; };
+		5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC070820FF33020078E9B6 /* NSObject+WYCoding.m */; };
+		5DBC070F20FF33020078E9B6 /* WYFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC070920FF33020078E9B6 /* WYFileManager.m */; };
+		5DBC071020FF33020078E9B6 /* WYProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC070D20FF33020078E9B6 /* WYProperty.m */; };
 		5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C67209FFCBB008F902E /* NSString+MED.m */; };
 		5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C6B20A151B4008F902E /* MEDDateUtils.m */; };
 		5DBD2C7520A18D65008F902E /* MEDFoodDateFeedbackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD2C7320A18D65008F902E /* MEDFoodDateFeedbackCell.m */; };
@@ -926,6 +929,12 @@
 		5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeController.m; sourceTree = "<group>"; };
 		5DBC06DA20FC6D8A0078E9B6 /* FSCheckCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeView.h; sourceTree = "<group>"; };
 		5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeView.m; sourceTree = "<group>"; };
+		5DBC070820FF33020078E9B6 /* NSObject+WYCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WYCoding.m"; sourceTree = "<group>"; };
+		5DBC070920FF33020078E9B6 /* WYFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYFileManager.m; sourceTree = "<group>"; };
+		5DBC070A20FF33020078E9B6 /* WYProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYProperty.h; sourceTree = "<group>"; };
+		5DBC070B20FF33020078E9B6 /* WYFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYFileManager.h; sourceTree = "<group>"; };
+		5DBC070C20FF33020078E9B6 /* NSObject+WYCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WYCoding.h"; sourceTree = "<group>"; };
+		5DBC070D20FF33020078E9B6 /* WYProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYProperty.m; sourceTree = "<group>"; };
 		5DBD2C66209FFCBB008F902E /* NSString+MED.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MED.h"; sourceTree = "<group>"; };
 		5DBD2C67209FFCBB008F902E /* NSString+MED.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MED.m"; sourceTree = "<group>"; };
 		5DBD2C6A20A151B4008F902E /* MEDDateUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDDateUtils.h; sourceTree = "<group>"; };
@@ -1118,6 +1127,7 @@
 		5D0ABE4020E4CEFB0088D0D4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5DBC071120FF33100078E9B6 /* Coding */,
 				5D510A5F20FC260E00483971 /* FSBase64Tool */,
 				5D829A372085C89A001993B6 /* Network */,
 				5D2EF94C20F75D8800699AA2 /* RichText */,
@@ -3098,6 +3108,27 @@
 			path = "CheckCode(验证码)";
 			sourceTree = "<group>";
 		};
+		5DBC070720FF33020078E9B6 /* WYCoding */ = {
+			isa = PBXGroup;
+			children = (
+				5DBC070A20FF33020078E9B6 /* WYProperty.h */,
+				5DBC070D20FF33020078E9B6 /* WYProperty.m */,
+				5DBC070C20FF33020078E9B6 /* NSObject+WYCoding.h */,
+				5DBC070820FF33020078E9B6 /* NSObject+WYCoding.m */,
+				5DBC070B20FF33020078E9B6 /* WYFileManager.h */,
+				5DBC070920FF33020078E9B6 /* WYFileManager.m */,
+			);
+			path = WYCoding;
+			sourceTree = "<group>";
+		};
+		5DBC071120FF33100078E9B6 /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				5DBC070720FF33020078E9B6 /* WYCoding */,
+			);
+			path = Coding;
+			sourceTree = "<group>";
+		};
 		5DBD2C7720A192F1008F902E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -3862,8 +3893,10 @@
 				5D2EF92220F7581D00699AA2 /* UIImage+ImageEffects.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
+				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
 				5D3E4FFA20FB5D8C008FBF42 /* FSCustomButton.m in Sources */,
 				5D3E4FE820FB5D8C008FBF42 /* NSString+Arc4random.m in Sources */,
+				5DBC070F20FF33020078E9B6 /* WYFileManager.m in Sources */,
 				5D2EF91F20F7581D00699AA2 /* SCLTextView.m in Sources */,
 				5D2EF91D20F7581D00699AA2 /* SCLAlertViewStyleKit.m in Sources */,
 				5DCE9AF820C6682100512610 /* MZpopMenu.m in Sources */,
@@ -3935,6 +3968,7 @@
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
 				5D27456E20DB985F00844B6E /* MEDChangeNameController.m in Sources */,
 				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
+				5DBC071020FF33020078E9B6 /* WYProperty.m in Sources */,
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
 				5D3E4F3220FA4734008FBF42 /* NSString+unicode.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,

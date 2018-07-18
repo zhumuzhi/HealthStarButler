@@ -30,8 +30,9 @@
 - (void)createSlider{
     _slider = [[FSCheckCodeSlider alloc]initWithFrame:CGRectMake(0, 0, SliderWidth, SliderHeight)];
     _slider.center = self.view.center;
+    // 远程控制打字测试
 
-//    _slider.minimumValue = 9;// 设置最小值
+    //    _slider.minimumValue = 9;// 设置最小值
 //    _slider.maximumValue = 11;// 设置最大值
 //    _slider.value = (slider.minimumValue + slider.maximumValue) / 2;// 设置初始值
 
