@@ -43,16 +43,13 @@
 #pragma mark - configNavigation
 - (void)configNavigation {
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.navigationItem.title = @"我的方盛";
-    // 一行代码搞定导航栏颜色
-//    [self wr_setNavBarBarTintColor:[UIColor whiteColor]];
-    // 一行代码搞定导航栏透明度
-    [self wr_setNavBarBackgroundAlpha:0];
-    [self wr_setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.navigationItem.title = @"我的方盛";
 }
 
 #pragma mark - RequestData
 - (void)loadData {
+//    FSMineMData *mineData = [[FSMineMData alloc] init];
+//    self.dataArray = [NSMutableArray arrayWithArray:mineData.items];
     self.dataArray = [FSMineMData creatMineMData];
 }
 
@@ -61,13 +58,13 @@
 
 
 #pragma mark - LazyGet
-static NSString *identify = @"cellIdentify";
-static NSString *FSMineAcountCellID = @"FSMineAcountCellID";
+
 static NSString *FSMineNormalCellID = @"FSMineNormalCellID";
+static NSString *identify = @"cellIdentify";
 
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, -kNavigationHeight, kScreenWidth, kScreenHeight-kTabbarSafeBottomMargin) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:SecondPageFrame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag; // 滚动隐藏键盘
@@ -78,7 +75,6 @@ static NSString *FSMineNormalCellID = @"FSMineNormalCellID";
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
         _tableView.showsHorizontalScrollIndicator = NO; //关闭水平指示条
 
-        [_tableView registerClass:[FSMineAcountCell class] forCellReuseIdentifier:FSMineAcountCellID];
         [_tableView registerClass:[FSMineNormalCell class] forCellReuseIdentifier:FSMineNormalCellID];
 
     }
@@ -107,8 +103,11 @@ static NSString *FSMineNormalCellID = @"FSMineNormalCellID";
     
     if (indexPath.section == 0) {
 
-        FSMineAcountCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineAcountCellID];
-        cell.mineMData = rowMData;
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if(!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        cell.textLabel.text = rowMData.title;
         return cell;
     }else {
         FSMineNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineNormalCellID];
@@ -123,16 +122,6 @@ static NSString *FSMineNormalCellID = @"FSMineNormalCellID";
     FSMineMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
     return sectionMData.sectionHeaderHeight;
 }
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 0) {
-        return 200;
-    }else {
-        return 44;
-    }
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 

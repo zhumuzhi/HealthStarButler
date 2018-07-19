@@ -10,8 +10,6 @@
 
 @interface FSMineAcountCell ()
 
-/** 背景图片 */
-@property (nonatomic, strong) UIImageView *backImage;
 /** 头像 */
 @property (nonatomic, strong) UIImageView *icon;
 /** 用户名 */
@@ -43,33 +41,28 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 
 - (void)configUI {
 
-    /** 背景图*/
-    [self.contentView addSubview:self.backImage];
-    [self.backImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.bottom.equalTo(self);
-    }];
-    
     /** 头像 */
     [self.contentView addSubview:self.icon];
     [self.icon mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.mas_centerY);
+        make.top.equalTo(self).offset(Margin);
         make.left.equalTo(self).offset(Margin);
         make.width.height.equalTo(@(iconW));
     }];
+
 
     /** 用户名 */
     [self.contentView addSubview:self.acountName];
     [self.acountName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.icon.mas_top);
         make.left.equalTo(self.icon.mas_right).offset(Margin);
-        make.right.equalTo(self).offset(-kAutoWithSize(Margin));
-//        make.width.equalTo(@(200));
+        make.width.equalTo(@(200));
     }];
+
 
     /** 账号类型 */
     [self.contentView addSubview:self.acountType];
     [self.acountType mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.acountName.mas_bottom).offset(Margin);
+        make.top.equalTo(self.acountName).offset(Margin);
         make.left.equalTo(self.acountName);
         make.width.equalTo(self.acountName);
     }];
@@ -104,14 +97,6 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 
 #pragma mark - LazySet
 
--(UIImageView *)backImage {
-    if (_backImage == nil) {
-        _backImage = [[UIImageView alloc] init];
-        _backImage.image = [UIImage imageNamed:@"mine_Head"];
-    }
-    return _backImage;
-}
-
 - (UIImageView *)icon {
     if (_icon == nil) {
         _icon = [[UIImageView alloc] init];
@@ -125,7 +110,7 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UILabel *)acountName {
     if (_acountName == nil) {
         _acountName = [[UILabel alloc] init];
-        _acountName.font = [UIFont fontWithName:@"-apple-Bold" size:18];
+        _acountName.font = [UIFont fontWithName:@"-apple-system" size:14];
         _acountName.textColor = [UIColor colorWithHexString:@"#101010"];
     }
     return _acountName;
@@ -134,7 +119,7 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UILabel *)acountType {
     if (_acountType == nil) {
         _acountType = [[UILabel alloc] init];
-        _acountType.font = [UIFont fontWithName:@"-apple-system" size:12];
+        _acountType.font = [UIFont fontWithName:@"-apple-system" size:14];
         _acountType.textColor = [UIColor colorWithHexString:@"#101010"];
     }
     return _acountType;
