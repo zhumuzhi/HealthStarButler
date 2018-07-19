@@ -25,7 +25,7 @@ typedef NS_ENUM (NSUInteger,FSMineCellType) {
 @interface FSMineMData : FSBaseMData
 
 @property (nonatomic, assign) FSMineCellType cellType;
-/** 创建本地数据 */
+///** 创建本地数据 */
 + (NSMutableArray *)creatMineMData;
 
 @end

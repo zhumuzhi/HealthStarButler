@@ -10,21 +10,32 @@
 
 @implementation FSMineMData
 
+///** 创建本地数据 */
 + (NSMutableArray *)creatMineMData {
-    NSArray *titles = @[@"账户设置",@"我的订单",@"设置",@"客服电话",@"清除缓存"];
+    NSMutableArray *dataArray = [NSMutableArray array];
+    [dataArray addObject:[[FSMineMData alloc] creatMineFirstSectionData]];
+    [dataArray addObject:[[FSMineMData alloc] creatMineSecondSectionData]];
+    return dataArray;
+}
+
+- (FSMineMData *)creatMineFirstSectionData {
+
+    FSMineMData *sectionMData = [[FSMineMData alloc]init];
+    sectionMData.sectionHeaderHeight = 0.1f;
+    sectionMData.sectionFooterHeight = 0.1f;
+//    NSArray *sectionDatas = @[
+//                              @{
+//                                  },
+//                              @{
+//                                  }
+//                              ];
+    NSArray *titles = @[@"账户设置",@"我的订单"];
     NSArray *cellTypes = @[
-                      /** 账户设置 */
-                      @(FSMineCellTypeAcount),
-                      /** 我的订单 */
-                      @(FSMineCellTypeOrder),
-                      /** 设置 */
-                      @(FSMineCellTypeSetting),
-                      /** 客服电话 */
-                      @(FSMineCellTypeServicePhone),
-                      /** 清除缓存 */
-                      @(FSMineCellTypeClearCache)
-                      ];
-    
+                           /** 账户设置 */
+                           @(FSMineCellTypeAcount),
+                           /** 我的订单 */
+                           @(FSMineCellTypeOrder),
+                           ];
     NSMutableArray *dataArray = [NSMutableArray array];
     for (NSInteger index = 0; index < titles.count; index++) {
         FSMineMData *mineMData = [[FSMineMData alloc] init];
@@ -33,9 +44,37 @@
         mineMData.cellType = typeNum.integerValue;
         [dataArray addObject:mineMData];
     }
-    return dataArray;
+    sectionMData.items = dataArray.mutableCopy;
+    return sectionMData;
 }
 
+- (FSMineMData *)creatMineSecondSectionData {
 
+    FSMineMData *sectionMData = [[FSMineMData alloc]init];
+    sectionMData.sectionHeaderHeight = 10.0f;
+    sectionMData.sectionFooterHeight = 0.1f;
+
+    NSArray *titles = @[@"设置",@"客服电话",@"清除缓存"];
+    NSArray *cellTypes = @[
+                           /** 设置 */
+                           @(FSMineCellTypeSetting),
+                           /** 客服电话 */
+                           @(FSMineCellTypeServicePhone),
+                           /** 清除缓存 */
+                           @(FSMineCellTypeClearCache)
+                           ];
+    NSArray *subTitles = @[@"",@"400-680-9666",@"0M"];
+    NSMutableArray *dataArray = [NSMutableArray array];
+    for (NSInteger index = 0; index < titles.count; index++) {
+        FSMineMData *mineMData = [[FSMineMData alloc] init];
+        mineMData.title = [titles by_ObjectAtIndex:index];
+        NSNumber *typeNum = [cellTypes by_ObjectAtIndex:index];
+        mineMData.cellType = typeNum.integerValue;
+        mineMData.details = [subTitles by_ObjectAtIndex:index];
+        [dataArray addObject:mineMData];
+    }
+    sectionMData.items = dataArray.mutableCopy;
+    return sectionMData;
+}
 
 @end
