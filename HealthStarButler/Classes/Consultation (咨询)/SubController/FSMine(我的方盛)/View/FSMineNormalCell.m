@@ -73,7 +73,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     [self.contentView addSubview:self.subTitle];
     [self.subTitle mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.right.equalTo(self).offset(-kAutoWithSize((margin*2)-arrowW));
+        make.right.equalTo(self.arrow).offset(-kAutoWithSize(margin));
         make.width.equalTo(@(kAutoWithSize(labelW)));
     }];
 
@@ -88,9 +88,9 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     _mineMData = mineMData;
 
     self.title.text = mineMData.title;
-    if (mineMData.cellType == FSMineCellTypeServicePhone) {
-        self.arrow.hidden = YES;
-    }
+//    if (mineMData.cellType == FSMineCellTypeServicePhone) {
+//        self.arrow.hidden = YES;
+//    }
     self.subTitle.text = mineMData.details;
 }
 
@@ -127,9 +127,9 @@ static CGFloat arrowW = 6.0;  //指示View宽度
 - (UILabel *)subTitle {
     if (_subTitle == nil) {
         _subTitle = [[UILabel alloc] init];
-        _subTitle.textColor = [UIColor colorWithHexString:@"#333333"];
+        _subTitle.textColor = [UIColor colorWithHexString:@"#999999"];
         _subTitle.textAlignment = NSTextAlignmentRight;
-        _subTitle.font = [UIFont fontWithName:@"-apple-system" size:14.0];
+        _subTitle.font = [UIFont fontWithName:@"-apple-system" size:12.0];
     }
     return _subTitle;
 }
