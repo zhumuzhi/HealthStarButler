@@ -31,22 +31,22 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self configUI];
         [self configuration];
-//        self.backgroundColor = [UIColor lightGrayColor];
+        //        self.backgroundColor = [UIColor lightGrayColor];
     }
     return self;
 }
 
-static CGFloat margin = 12.0; //边距
+static CGFloat Margin = 12.0; //边距
 static CGFloat arrowW = 6.0;  //指示View宽度
 
 #pragma mark - ConfigUI
 - (void)configUI {
-    CGFloat labelW = ((self.contentView.width-(margin*3)-arrowW)*0.5);  //title宽度
+    CGFloat labelW = ((self.contentView.width-(Margin*3)-arrowW)*0.5);  //title宽度
     // 标题
     [self.contentView addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.left.equalTo(self).offset(kAutoWithSize(margin));
+        make.left.equalTo(self).offset(kAutoWithSize(Margin));
         //make.height.equalTo(@(kAutoWithSize(kMargin24)));
         make.width.equalTo(@(kAutoWithSize(labelW)));
     }];
@@ -55,7 +55,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     [self.contentView addSubview:self.arrow];
     [self.arrow mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.right.equalTo(self).offset(-kAutoWithSize(margin));
+        make.right.equalTo(self).offset(-kAutoWithSize(Margin));
         make.width.equalTo(@(kAutoWithSize(arrowW)));
         make.height.equalTo(@(kAutoHeightSize(kMargin10)));
     }];
@@ -63,8 +63,8 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     // 线条
     [self.contentView addSubview:self.line];
     [self.line mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self).offset(kAutoWithSize(margin));
-        make.right.equalTo(self).offset(-kAutoWithSize(margin));
+        make.left.equalTo(self).offset(kAutoWithSize(Margin));
+        make.right.equalTo(self).offset(-kAutoWithSize(Margin));
         make.height.equalTo(@(kAutoHeightSize(0.5)));
         make.bottom.equalTo(self).offset(kAutoHeightSize(0.5));
     }];
@@ -73,7 +73,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     [self.contentView addSubview:self.subTitle];
     [self.subTitle mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
-        make.right.equalTo(self).offset(-kAutoWithSize((margin*2)-arrowW));
+        make.right.equalTo(self.arrow).offset(-kAutoWithSize(Margin));
         make.width.equalTo(@(kAutoWithSize(labelW)));
     }];
 
@@ -88,9 +88,9 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     _mineMData = mineMData;
 
     self.title.text = mineMData.title;
-    if (mineMData.cellType == FSMineCellTypeServicePhone) {
-        self.arrow.hidden = YES;
-    }
+    //    if (mineMData.cellType == FSMineCellTypeServicePhone) {
+    //        self.arrow.hidden = YES;
+    //    }
     self.subTitle.text = mineMData.details;
 }
 
@@ -127,9 +127,9 @@ static CGFloat arrowW = 6.0;  //指示View宽度
 - (UILabel *)subTitle {
     if (_subTitle == nil) {
         _subTitle = [[UILabel alloc] init];
-        _subTitle.textColor = [UIColor colorWithHexString:@"#333333"];
+        _subTitle.textColor = [UIColor colorWithHexString:@"#999999"];
         _subTitle.textAlignment = NSTextAlignmentRight;
-        _subTitle.font = [UIFont fontWithName:@"-apple-system" size:14.0];
+        _subTitle.font = [UIFont fontWithName:@"-apple-system" size:12.0];
     }
     return _subTitle;
 }

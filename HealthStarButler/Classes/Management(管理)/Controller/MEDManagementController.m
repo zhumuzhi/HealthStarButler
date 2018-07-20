@@ -50,7 +50,7 @@ NSString *const kManageCollectionFooterVID = @"manageCollectionFooterVID";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self isShowDiseaseQuestionnaire];
+//    [self isShowDiseaseQuestionnaire];
 }
 
 

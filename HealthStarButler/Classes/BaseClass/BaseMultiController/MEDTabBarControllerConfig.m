@@ -10,10 +10,12 @@
 //NavigationController
 #import "MEDNavigationController.h"
 //引入各个模块
-#import "MEDManagementController.h"
-#import "MEDConsultationController.h"
-#import "MEDTreatmentGuideController.h"
-#import "MEDInformationController.h"
+#import "MEDManagementController.h"      // 管理
+#import "MEDConsultationController.h"    // 资讯
+#import "MEDInformationController.h"     // 资讯
+//#import "MEDTreatmentGuideController.h"  // 导诊
+
+#import "FSMineController.h"             // 我的方盛
 
 //static CGFloat const MEDTabBarControllerHeight = 40.f;
 @interface MEDTabBarControllerConfig()<UITabBarControllerDelegate>
@@ -90,10 +92,14 @@
     
     MEDInformationController *informationController = [[MEDInformationController alloc] init];
     UIViewController *fourthNavigationController = [[MEDNavigationController alloc] initWithRootViewController: informationController];
-    
-    MEDTreatmentGuideController *guideController = [[MEDTreatmentGuideController alloc] init];
-    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:guideController];
-    
+
+    // 替换导诊
+//    MEDTreatmentGuideController *guideController = [[MEDTreatmentGuideController alloc] init];
+//    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:guideController];
+
+    FSMineController *mineController = [[FSMineController alloc] init];
+    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:mineController];
+
     NSArray *viewControllers = @[
                                  firstNavigationController,
                                  secondNavigationController,

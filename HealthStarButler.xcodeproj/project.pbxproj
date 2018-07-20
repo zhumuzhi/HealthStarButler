@@ -344,6 +344,8 @@
 		5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */; };
 		5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */; };
 		5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */; };
+		5DCC6DB821018775000DDFD9 /* FSMineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */; };
+		5DCC6DBE2101AD51000DDFD9 /* FSMineAllOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */; };
 		5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */; };
 		5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */; };
 		5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */; };
@@ -981,6 +983,10 @@
 		5DCC6DB221001CBD000DDFD9 /* FSMineConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineConfiguration.h; sourceTree = "<group>"; };
 		5DCC6DB3210074DB000DDFD9 /* FSMineAcountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineAcountCell.h; sourceTree = "<group>"; };
 		5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineAcountCell.m; sourceTree = "<group>"; };
+		5DCC6DB621018775000DDFD9 /* FSMineOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineOrderCell.h; sourceTree = "<group>"; };
+		5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineOrderCell.m; sourceTree = "<group>"; };
+		5DCC6DBC2101AD51000DDFD9 /* FSMineAllOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineAllOrderView.h; sourceTree = "<group>"; };
+		5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineAllOrderView.m; sourceTree = "<group>"; };
 		5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordListController.m; sourceTree = "<group>"; };
 		5DCE9AA520C6682100512610 /* MEDAddTreatmentRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddTreatmentRecordController.h; sourceTree = "<group>"; };
 		5DCE9AA620C6682100512610 /* MEDTreatmentRecordListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordListController.h; sourceTree = "<group>"; };
@@ -2148,6 +2154,10 @@
 			children = (
 				5DCC6DB3210074DB000DDFD9 /* FSMineAcountCell.h */,
 				5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */,
+				5DCC6DB621018775000DDFD9 /* FSMineOrderCell.h */,
+				5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */,
+				5DCC6DBC2101AD51000DDFD9 /* FSMineAllOrderView.h */,
+				5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */,
 				5D454FE820FF7C160041A924 /* FSMineNormalCell.h */,
 				5D454FE920FF7C160041A924 /* FSMineNormalCell.m */,
 			);
@@ -3841,6 +3851,7 @@
 				5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */,
 				5D3E4F1F20FA4233008FBF42 /* FSBaseMData.m in Sources */,
 				5D27457520DB985F00844B6E /* ValuePickerView.m in Sources */,
+				5DCC6DB821018775000DDFD9 /* FSMineOrderCell.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
 				5D2EF96920F82EC400699AA2 /* UIColor+Category.m in Sources */,
 				5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */,
@@ -3874,6 +3885,7 @@
 				5D3E500020FB5D8C008FBF42 /* FSTextFieldItem.m in Sources */,
 				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
 				5D201DE520CA6D2C009007D9 /* RFQuiltLayout.m in Sources */,
+				5DCC6DBE2101AD51000DDFD9 /* FSMineAllOrderView.m in Sources */,
 				5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */,
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,

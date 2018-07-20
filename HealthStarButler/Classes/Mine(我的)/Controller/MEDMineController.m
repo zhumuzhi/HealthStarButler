@@ -171,14 +171,13 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
             NSDictionary *dict = responseObject[@"data"];
             MEDUserModel *userModel = [MEDUserModel mj_objectWithKeyValues:dict];
             [self configUIWithModel:userModel];
-
         }
+        [MEDProgressHUD dismissHUD];
     } fail:^(NSURLSessionDataTask *task, NSError *error) {
+        [MEDProgressHUD dismissHUD];
         NSLog(@"获取个人信息失败:%@",error);
     }];
 }
-
-
 
 #pragma mark - Event
 /** 点击退出 */
@@ -200,13 +199,10 @@ static NSString * const MEDClearCacheCellId = @"MEDClearCacheCellId";
 }
 
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
     NSLog(@"个人中心收到内存警告");
     
 }
-
 
 @end
