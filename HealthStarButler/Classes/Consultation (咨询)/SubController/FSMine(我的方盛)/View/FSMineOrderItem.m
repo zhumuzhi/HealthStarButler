@@ -49,6 +49,7 @@
 - (UIImageView *)itemImage {
     if (_itemImage == nil) {
         _itemImage = [[UIImageView alloc] init];
+        _itemImage.contentMode = UIViewContentModeCenter;
     }
     return _itemImage;
 }

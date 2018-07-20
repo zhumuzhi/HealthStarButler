@@ -77,13 +77,13 @@ static CGFloat Margin = 12.0;
     CGFloat itemW = (kScreenWidth-(itemMargin*2))/4;
     CGFloat itemH = (120);
     NSArray *itemTitles = @[@"全部订单", @"代付款", @"代发货", @"待收货"];
-//    NSArray *itemImages = @[@"home_m_icon0",@"home_m_icon1",@"home_m_icon2",@"home_m_icon0"];
+    NSArray *itemImages = @[@"home_m_icon0",@"home_m_icon1",@"home_m_icon2",@"home_m_icon0"];
     for (int i=0; i<itemTitles.count; i++) {
         FSMineOrderItem  *item = [[FSMineOrderItem alloc] init];
         [self.orderContentView addSubview:item];
         item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
         item.itemTitle.text = itemTitles[i];
-//        item.itemImage.image = [UIImage imageNamed:itemImages[i]];
+        item.itemImage.image = [UIImage imageNamed:itemImages[i]];
     }
     
     //    for (int i=0; i<itemTitles.count; i++) {
