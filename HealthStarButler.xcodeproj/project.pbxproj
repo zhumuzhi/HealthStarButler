@@ -227,6 +227,7 @@
 		5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69058720D9FB12002BBD69 /* MEDMonitorLineChart.m */; };
 		5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69058920D9FB12002BBD69 /* MEDMonitorDateTool.m */; };
 		5D69059920D9FB12002BBD69 /* MEDMonitorHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69058A20D9FB12002BBD69 /* MEDMonitorHeaderView.m */; };
+		5D7D1AD921022E4D0092F7FB /* FSMineOrderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7D1AD721022E4D0092F7FB /* FSMineOrderItem.m */; };
 		5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */; };
 		5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B32099A50500B84C1E /* MEDCompanyRankingController.m */; };
 		5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8207B52099A50500B84C1E /* MEDCompanyRankModel.m */; };
@@ -790,6 +791,8 @@
 		5D69058820D9FB12002BBD69 /* MEDLineChartData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDLineChartData.h; sourceTree = "<group>"; };
 		5D69058920D9FB12002BBD69 /* MEDMonitorDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorDateTool.m; sourceTree = "<group>"; };
 		5D69058A20D9FB12002BBD69 /* MEDMonitorHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHeaderView.m; sourceTree = "<group>"; };
+		5D7D1AD721022E4D0092F7FB /* FSMineOrderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSMineOrderItem.m; sourceTree = "<group>"; };
+		5D7D1AD821022E4D0092F7FB /* FSMineOrderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSMineOrderItem.h; sourceTree = "<group>"; };
 		5D8207AD2099536C00B84C1E /* MEDScoreOperationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDScoreOperationView.h; sourceTree = "<group>"; };
 		5D8207AE2099536C00B84C1E /* MEDScoreOperationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDScoreOperationView.m; sourceTree = "<group>"; };
 		5D8207B22099A50500B84C1E /* MEDCompanyRankingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDCompanyRankingController.h; sourceTree = "<group>"; };
@@ -2156,6 +2159,8 @@
 				5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */,
 				5DCC6DB621018775000DDFD9 /* FSMineOrderCell.h */,
 				5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */,
+				5D7D1AD821022E4D0092F7FB /* FSMineOrderItem.h */,
+				5D7D1AD721022E4D0092F7FB /* FSMineOrderItem.m */,
 				5DCC6DBC2101AD51000DDFD9 /* FSMineAllOrderView.h */,
 				5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */,
 				5D454FE820FF7C160041A924 /* FSMineNormalCell.h */,
@@ -3916,6 +3921,7 @@
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5D2EF96520F82DFC00699AA2 /* MEDTableChooseCell.m in Sources */,
 				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
+				5D7D1AD921022E4D0092F7FB /* FSMineOrderItem.m in Sources */,
 				5DCE9AFF20C6682100512610 /* MEDAddTestReportController.m in Sources */,
 				5D3E4FF120FB5D8C008FBF42 /* UIButton+Clicks.m in Sources */,
 				5D27457220DB985F00844B6E /* MEDPersonalDataModel.m in Sources */,

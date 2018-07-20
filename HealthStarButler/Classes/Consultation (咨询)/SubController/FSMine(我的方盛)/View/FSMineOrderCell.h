@@ -12,7 +12,8 @@
 
 @protocol FSMineOrderCellDelegate <NSObject>
 @optional
-//-(void)<#MethodName#>:(<#Class#> *)<#obj#>;
+- (void)mineOrderCelldidClickAllOrder:(FSMineOrderCell *)mineOrderCell;
+
 @end
 
 @interface FSMineOrderCell : UITableViewCell

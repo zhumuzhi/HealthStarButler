@@ -10,6 +10,10 @@
 #import "FSMineMData.h"
 
 #import "FSMineAllOrderView.h" // 全部订单
+// 订单按钮
+#import "FSMineOrderItem.h"
+//#import "FSMineOrderButton.h"
+
 
 @interface FSMineOrderCell ()
 
@@ -46,7 +50,7 @@ static CGFloat Margin = 12.0;
         make.left.equalTo(self).offset(Margin);
         make.width.equalTo(@(260));
     }];
-
+    
     /** 全部订单 */
     [self.contentView addSubview:self.allOrderView];
     [self.allOrderView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,7 +58,7 @@ static CGFloat Margin = 12.0;
         make.right.equalTo(self).offset(-Margin);
         make.width.equalTo(@(150));
     }];
-
+    
     /** 按钮ContentView */
     [self.contentView addSubview:self.orderContentView];
     [self.orderContentView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,6 +67,39 @@ static CGFloat Margin = 12.0;
         make.right.equalTo(self);
         make.bottom.equalTo(self);
     }];
+    
+    
+//    CGFloat itemMargin = Margin;
+//    CGFloat itemW = (self.orderContentView.width-(itemMargin*2))/4;
+//    CGFloat itemH = (self.orderContentView.height);
+    
+    CGFloat itemMargin = Margin;
+    CGFloat itemW = (kScreenWidth-(itemMargin*2))/4;
+    CGFloat itemH = (120);
+    NSArray *itemTitles = @[@"全部订单", @"代付款", @"代发货", @"待收货"];
+//    NSArray *itemImages = @[@"home_m_icon0",@"home_m_icon1",@"home_m_icon2",@"home_m_icon0"];
+    for (int i=0; i<itemTitles.count; i++) {
+        FSMineOrderItem  *item = [[FSMineOrderItem alloc] init];
+        [self.orderContentView addSubview:item];
+        item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
+        item.itemTitle.text = itemTitles[i];
+//        item.itemImage.image = [UIImage imageNamed:itemImages[i]];
+    }
+    
+    //    for (int i=0; i<itemTitles.count; i++) {
+    //        FSMineOrderButton *button = [[FSMineOrderButton alloc] init];
+    //        [self.orderContentView addSubview:button];
+    //        button.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
+    //        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    //        [button setTitle:itemTitles[i] forState:UIControlStateNormal];
+    //    }
+    
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    
 }
 
 - (void)configuration {
@@ -71,8 +108,9 @@ static CGFloat Margin = 12.0;
 
 #pragma mark - SetData
 - (void)setMineMData:(FSMineMData *)mineMData {
+    
 
-
+    
 }
 
 #pragma mark - LazySet
@@ -90,6 +128,8 @@ static CGFloat Margin = 12.0;
 - (FSMineAllOrderView *)allOrderView {
     if (_allOrderView == nil) {
         _allOrderView = [[FSMineAllOrderView alloc] init];
+        UITapGestureRecognizer *allOrderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(allOrderClick)];
+        [_allOrderView addGestureRecognizer:allOrderTap];
     }
     return _allOrderView;
 }
@@ -97,9 +137,6 @@ static CGFloat Margin = 12.0;
 - (UIView *)orderContentView {
     if (_orderContentView == nil) {
         _orderContentView = [[UIView alloc] init];
-
-        UITapGestureRecognizer *allOrderTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(allOrderClick)];
-        [_orderContentView addGestureRecognizer:allOrderTap];
     }
     return _orderContentView;
 }
@@ -107,9 +144,10 @@ static CGFloat Margin = 12.0;
 #pragma mark - Event
 
 - (void)allOrderClick {
-    NSLog(@"点击了全部订单");
+    //NSLog(@"点击了全部订单");
+    if ([self.delegate respondsToSelector:@selector(mineOrderCelldidClickAllOrder:)]) {
+        [self.delegate mineOrderCelldidClickAllOrder:self];
+    }
 }
-
-
 
 @end

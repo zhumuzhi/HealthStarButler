@@ -128,7 +128,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     if (_subTitle == nil) {
         _subTitle = [[UILabel alloc] init];
         _subTitle.textColor = [UIColor colorWithHexString:@"#999999"];
-        _subTitle.textAlignment = NSTextAlignmentRight;
+        _subTitle.textAlignment = NSTextAlignmentCenter;
         _subTitle.font = [UIFont fontWithName:@"-apple-system" size:12.0];
     }
     return _subTitle;
