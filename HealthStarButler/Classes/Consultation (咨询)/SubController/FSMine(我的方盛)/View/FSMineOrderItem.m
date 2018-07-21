@@ -16,8 +16,7 @@
 @implementation FSMineOrderItem
 
 #pragma mark - Init
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self configUI];
     }
@@ -27,7 +26,6 @@
 #pragma mark - ConfigUI
 
 - (void)configUI {
-
     /** item标题 */
     [self addSubview:self.itemTitle];
     [self.itemTitle mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -41,11 +39,8 @@
         make.top.left.right.equalTo(self);
         make.bottom.equalTo(self.itemTitle.mas_top);
     }];
-
 }
-
 #pragma mark - LazySet
-
 - (UIImageView *)itemImage {
     if (_itemImage == nil) {
         _itemImage = [[UIImageView alloc] init];
@@ -64,12 +59,8 @@
     return _itemTitle;
 }
 
-
-
 #pragma mark - SetData
 
-
 #pragma mark - Event
-
 
 @end

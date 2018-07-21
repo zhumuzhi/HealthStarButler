@@ -13,7 +13,7 @@
 ///** 创建本地数据 */
 + (NSMutableArray *)creatMineMData {
     NSMutableArray *dataArray = [NSMutableArray array];
-    [dataArray addObject:[[FSMineMData alloc] creatMineFirstSectionData]];
+//    [dataArray addObject:[[FSMineMData alloc] creatMineFirstSectionData]];
     [dataArray addObject:[[FSMineMData alloc] creatMineSecondSectionData]];
     [dataArray addObject:[[FSMineMData alloc] creatMineThirdSectionData]];
     return dataArray;

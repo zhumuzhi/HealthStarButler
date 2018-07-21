@@ -17,6 +17,8 @@
 
 @interface FSMineOrderCell ()
 
+/** 背景View */
+@property (nonatomic, strong) UIView *backView;
 /** 标题 */
 @property (nonatomic, strong) UILabel *title;
 /** 全部订单 */
@@ -31,8 +33,10 @@
 #pragma mark - Init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
         [self configUI];
         [self configuration];
+
     }
     return self;
 }
@@ -40,43 +44,53 @@
 #pragma mark - ConfigUI
 
 static CGFloat MarginTop = 20.0;
-static CGFloat Margin = 12.0;
+static CGFloat Margin = 10.0;
 
 - (void)configUI {
+
+
+    /** 背景图 */
+    [self.contentView addSubview:self.backView];
+    [self.backView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.equalTo(self);
+        make.left.equalTo(self).offset(Margin);
+        make.right.equalTo(self).offset(-Margin);
+    }];
+
     /** 订单标题 */
-    [self.contentView addSubview:self.title];
+    [self.backView addSubview:self.title];
     CGSize titleSize = [@"我的订单" sizeWithFont:[UIFont systemFontOfSize:14.0]];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self).offset(MarginTop);
-        make.left.equalTo(self).offset(Margin);
+        make.top.equalTo(self.backView).offset(MarginTop);
+        make.left.equalTo(self.backView).offset(Margin);
         make.width.equalTo(@(titleSize.width));
     }];
     
     /** 全部订单 */
-    [self.contentView addSubview:self.allOrderView];
+    [self.backView addSubview:self.allOrderView];
     [self.allOrderView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.title.mas_centerY);
-        make.right.equalTo(self).offset(-Margin);
+        make.right.equalTo(self.backView).offset(-Margin);
         make.width.equalTo(@(100));
     }];
     
     /** 按钮ContentView */
-    [self.contentView addSubview:self.orderContentView];
+    [self.backView addSubview:self.orderContentView];
     [self.orderContentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.title.mas_bottom).offset(Margin);
-        make.left.equalTo(self);
-        make.right.equalTo(self);
-        make.bottom.equalTo(self);
+        make.left.equalTo(self.backView);
+        make.right.equalTo(self.backView);
+        make.bottom.equalTo(self.backView);
     }];
     
     CGFloat itemMargin = Margin;
-    CGFloat itemW = (kScreenWidth-(itemMargin*2))/4;
+    CGFloat itemW = (kScreenWidth-(itemMargin*4))/4;
     CGFloat itemH = (60);
     NSArray *itemTitles = @[@"全部订单", @"代付款", @"代发货", @"待收货"];
     NSArray *itemImages = @[@"mine_waitExamine",@"mine_waitPay",@"mine_waitReceiv",@"mine_waitSend"];
     for (int i=0; i<itemTitles.count; i++) {
         FSMineOrderItem *item = [[FSMineOrderItem alloc] init];
-        item.backgroundColor = MEDGrayColor(250);
+//        item.backgroundColor = MEDGrayColor(250);
         [self.orderContentView addSubview:item];
         item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
         item.itemTitle.text = itemTitles[i];
@@ -111,6 +125,15 @@ static CGFloat Margin = 12.0;
 }
 
 #pragma mark - LazySet
+
+- (UIView *)backView {
+    if (_backView == nil) {
+        _backView = [[UIView alloc] init];
+        _backView.backgroundColor = [UIColor colorWithHexString:@"#FFFFFF"];
+        _backView.layer.cornerRadius = 6.0;
+    }
+    return _backView;
+}
 
 - (UILabel *)title {
     if (_title == nil) {

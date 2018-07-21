@@ -11,23 +11,23 @@
 //Model
 #import "FSMineMData.h"
 //View
-#import "FSMineAcountCell.h" // 账户设置Cell
+#import "FSMineHeader.h" // 账户Header
 #import "FSMineOrderCell.h"  // 我的订单Cell
 #import "FSMineNormalCell.h" // 设置/客服电话/清除缓存Cell
 
 @interface FSMineController ()<UITableViewDataSource, UITableViewDelegate,
-FSMineOrderCellDelegate //我的订单
->
-
+                            FSMineHeaderDelegate,   // 账号信息
+                            FSMineOrderCellDelegate // 我的订单
+                            >
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) FSMineHeader *mineHeader;
 
 @end
 
 @implementation FSMineController
 
 #pragma mark - LifeCycle
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadData];
@@ -38,11 +38,13 @@ FSMineOrderCellDelegate //我的订单
 - (void)configUI {
     [self configNavigation];
     [self.view addSubview:self.tableView];
+    self.tableView.tableHeaderView = self.mineHeader;
 }
 
 #pragma mark - configNavigation
 - (void)configNavigation {
-    self.view.backgroundColor = [UIColor whiteColor];
+    // 设置背景色
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
     // 一行代码搞定导航栏透明度
     [self wr_setNavBarBackgroundAlpha:0];
     [self wr_setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -53,15 +55,17 @@ FSMineOrderCellDelegate //我的订单
     self.dataArray = [FSMineMData creatMineMData];
 }
 
-
-#pragma mark - Event
-
-
 #pragma mark - CustomDelegate
+
+#pragma mark 账户信息
+- (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel type:(FSMineHeaderType)type {
+    NSLog(@"跳转到我的信息");
+}
+
+#pragma mark 我的订单
 - (void)mineOrderCelldidClickAllOrder:(FSMineOrderCell *)mineOrderCell {
     NSLog(@"跳转到全部订单页面");
 }
-
 
 #pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,12 +81,8 @@ FSMineOrderCellDelegate //我的订单
     
     FSMineMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
     FSMineMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
-    
+
     if (indexPath.section == 0) {
-        FSMineAcountCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineAcountCellID];
-        cell.mineMData = rowMData;
-        return cell;
-    }else if (indexPath.section == 1) {
         FSMineOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineOrderCellID];
         cell.delegate = self;
         FSMineMData *mineData = [[FSMineMData alloc] init];
@@ -99,8 +99,8 @@ FSMineOrderCellDelegate //我的订单
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        NSLog(@"跳转至账号信息页面-待优化");
-    } else if (indexPath.section == 2) {
+//        NSLog(@"跳转至账号信息页面-待优化");
+    } else if (indexPath.section == 1) {
         if (indexPath.row == 2) {
             NSLog(@"打电话弹窗");
             [self makePhoneCall];
@@ -110,19 +110,58 @@ FSMineOrderCellDelegate //我的订单
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+
+    UIView *header = [[UIView alloc] init];
+    header.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+    return header;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     FSMineMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
     return sectionMData.sectionHeaderHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.section == 0) {
-        return 174;
-    }else if(indexPath.section == 1){
+    if(indexPath.section == 0){
         return 128;
     }else {
         return 50;
+    }
+}
+
+/** 设置圆角 */
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section != 0) {
+        CGFloat cornerRadius = 6.f;
+        cell.backgroundColor = UIColor.clearColor;
+        CAShapeLayer *layer = [[CAShapeLayer alloc] init];
+        CAShapeLayer *backgroundLayer = [[CAShapeLayer alloc] init]; //显示选中
+        CGMutablePathRef pathRef = CGPathCreateMutable();
+        CGRect bounds = CGRectInset(cell.bounds, 10, 0);
+        if (indexPath.row == 0) {
+            CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds));
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMidX(bounds), CGRectGetMinY(bounds), cornerRadius);
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+            CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds));
+        } else if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
+            CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds));
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMidX(bounds), CGRectGetMaxY(bounds), cornerRadius);
+            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
+            CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds));
+        } else {
+            CGPathAddRect(pathRef, nil, bounds);
+        }
+        layer.path = pathRef;
+        backgroundLayer.path = pathRef;
+        CFRelease(pathRef);
+        layer.fillColor = [UIColor whiteColor].CGColor;
+
+        UIView *roundView = [[UIView alloc] initWithFrame:bounds];
+        [roundView.layer insertSublayer:layer atIndex:0];
+        roundView.backgroundColor = UIColor.clearColor;
+        cell.backgroundView = roundView;
     }
 }
 
@@ -145,8 +184,6 @@ FSMineOrderCellDelegate //我的订单
     //    }];
 }
 
-
-
 #pragma mark - LazyGet
 static NSString *identify = @"cellIdentify";
 static NSString *FSMineAcountCellID = @"FSMineAcountCellID";
@@ -159,16 +196,13 @@ static NSString *FSMineOrderCellID = @"FSMineOrderCellID";
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag; // 滚动隐藏键盘
+        _tableView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
+        _tableView.showsHorizontalScrollIndicator = NO; //关闭水平指示条
+
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.1, 0.1, 0.1, 0.1)];  // tableFooterView设置
         _tableView.sectionHeaderHeight = 0.01;
         _tableView.sectionFooterHeight = 0.01;
-        
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
-        _tableView.showsHorizontalScrollIndicator = NO; //关闭水平指示条
-        // 指示线颜色
-        _tableView.separatorColor = [UIColor colorWithHexString:@"#F5F5F5"];
-
-        [_tableView registerClass:[FSMineAcountCell class] forCellReuseIdentifier:FSMineAcountCellID];
         [_tableView registerClass:[FSMineNormalCell class] forCellReuseIdentifier:FSMineNormalCellID];
         [_tableView registerClass:[FSMineOrderCell class] forCellReuseIdentifier:FSMineOrderCellID];
     }
@@ -180,6 +214,16 @@ static NSString *FSMineOrderCellID = @"FSMineOrderCellID";
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
+}
+
+- (FSMineHeader *)mineHeader {
+    if (_mineHeader == nil) {
+        CGFloat statusBarH = [[UIApplication sharedApplication] statusBarFrame].size.height;
+        _mineHeader = [[FSMineHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kAutoWithSize(174 + statusBarH))];
+        _mineHeader.delegate = self;
+    }
+    return _mineHeader;
+
 }
 
 @end

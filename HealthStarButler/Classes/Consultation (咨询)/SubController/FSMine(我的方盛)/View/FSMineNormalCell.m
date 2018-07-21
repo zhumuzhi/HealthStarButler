@@ -12,6 +12,7 @@
 
 @interface FSMineNormalCell ()
 
+
 /** 标题*/
 @property (nonatomic, strong) UILabel *title;
 /** 箭头*/
@@ -36,7 +37,7 @@
     return self;
 }
 
-static CGFloat Margin = 12.0; //边距
+static CGFloat Margin = 10.0 + 10.0; //边距
 static CGFloat arrowW = 6.0;  //指示View宽度
 
 #pragma mark - ConfigUI
@@ -118,7 +119,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
 - (UIView *)line {
     if (_line == nil) {
         _line = [[UIView alloc] init];
-        _line.backgroundColor = [UIColor colorWithHexString:@"#DDDDDD"];
+        _line.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
     }
     return _line;
 }

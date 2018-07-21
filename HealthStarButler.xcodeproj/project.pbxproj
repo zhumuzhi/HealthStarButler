@@ -276,6 +276,7 @@
 		5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A952085DAC3001993B6 /* MEDManagementController.m */; };
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
+		5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8837EF2102FA780087DA22 /* FSMineHeader.m */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
 		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
 		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
@@ -880,6 +881,8 @@
 		5D829A992085DCC6001993B6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		5D829A9B2085E36B001993B6 /* MEDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDBaseViewController.h; sourceTree = "<group>"; };
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
+		5D8837EE2102FA780087DA22 /* FSMineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineHeader.h; sourceTree = "<group>"; };
+		5D8837EF2102FA780087DA22 /* FSMineHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineHeader.m; sourceTree = "<group>"; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
 		5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
@@ -2155,8 +2158,8 @@
 		5D454FE420FF71130041A924 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5DCC6DB3210074DB000DDFD9 /* FSMineAcountCell.h */,
-				5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */,
+				5D8837EE2102FA780087DA22 /* FSMineHeader.h */,
+				5D8837EF2102FA780087DA22 /* FSMineHeader.m */,
 				5DCC6DB621018775000DDFD9 /* FSMineOrderCell.h */,
 				5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */,
 				5D7D1AD821022E4D0092F7FB /* FSMineOrderItem.h */,
@@ -2165,6 +2168,7 @@
 				5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */,
 				5D454FE820FF7C160041A924 /* FSMineNormalCell.h */,
 				5D454FE920FF7C160041A924 /* FSMineNormalCell.m */,
+				5D8837F1210301190087DA22 /* 备用 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2964,6 +2968,15 @@
 				5D829A992085DCC6001993B6 /* Reachability.h */,
 			);
 			path = Reachability;
+			sourceTree = "<group>";
+		};
+		5D8837F1210301190087DA22 /* 备用 */ = {
+			isa = PBXGroup;
+			children = (
+				5DCC6DB3210074DB000DDFD9 /* FSMineAcountCell.h */,
+				5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */,
+			);
+			path = "备用";
 			sourceTree = "<group>";
 		};
 		5D97AE862089C206007D586A /* MZMiddleButton(未使用) */ = {
@@ -4072,6 +4085,7 @@
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */,
+				5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */,
 				5D3E502420FB5D8C008FBF42 /* GCDTimer.m in Sources */,
 				5D3E500520FB5D8C008FBF42 /* GHTagItem.m in Sources */,
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
