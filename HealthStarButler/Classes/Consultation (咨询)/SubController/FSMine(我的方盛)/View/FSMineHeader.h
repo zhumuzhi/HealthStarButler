@@ -22,9 +22,9 @@ typedef NS_ENUM (NSUInteger, FSMineHeaderType) {
  个人中心Header代理方法 MineHeaderViewDelegate Method
  @param mineHeader 个人中心Header
  @param mineModel 个人中心Header模型
- @param type 点击控件类型
+ @param eventType 点击控件类型
  */
-- (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel type:(FSMineHeaderType)type;
+- (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel eventType:(FSMineHeaderType)eventType;
 @end
 
 

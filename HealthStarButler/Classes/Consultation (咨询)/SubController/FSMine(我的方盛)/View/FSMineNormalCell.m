@@ -8,10 +8,9 @@
 
 #import "FSMineNormalCell.h"
 // Model
-#import "FSMineMData.h"
+//#import "FSMineMData.h"
 
 @interface FSMineNormalCell ()
-
 
 /** 标题*/
 @property (nonatomic, strong) UILabel *title;
@@ -22,19 +21,26 @@
 /** 右标题 */
 @property (nonatomic, strong) UILabel *subTitle;
 
-
 @end
 
 @implementation FSMineNormalCell
-
 #pragma mark - Init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self configUI];
         [self configuration];
-        //        self.backgroundColor = [UIColor lightGrayColor];
+        // 添加点击手势触犯代理方法
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickNormal)];
+        [self addGestureRecognizer:tap];
     }
     return self;
+}
+
+#pragma mark - Event
+- (void)didClickNormal {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mineNormalCell:mineModel:cellType:)]) {
+        [self.delegate mineNormalCell:self mineModel:self.mineMData cellType:self.mineMData.cellType];
+    }
 }
 
 static CGFloat Margin = 10.0 + 10.0; //边距
@@ -95,15 +101,13 @@ static CGFloat arrowW = 6.0;  //指示View宽度
     self.subTitle.text = mineMData.details;
 }
 
-#pragma mark - Event
-
 #pragma mark - LazySet
 
 - (UILabel *)title {
     if (_title == nil) {
         _title = [[UILabel alloc] init];
         _title.textColor = [UIColor colorWithHexString:@"#333333"];
-        _title.font = [UIFont fontWithName:@"-apple-system" size:14.0];
+        _title.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14.0];
     }
     return _title;
 }
@@ -129,10 +133,9 @@ static CGFloat arrowW = 6.0;  //指示View宽度
         _subTitle = [[UILabel alloc] init];
         _subTitle.textColor = [UIColor colorWithHexString:@"#999999"];
         _subTitle.textAlignment = NSTextAlignmentRight;
-        _subTitle.font = [UIFont fontWithName:@"-apple-system" size:12.0];
+        _subTitle.font = [UIFont fontWithName:@"PingFangSC-Regular" size:12.0];
     }
     return _subTitle;
 }
-
 
 @end

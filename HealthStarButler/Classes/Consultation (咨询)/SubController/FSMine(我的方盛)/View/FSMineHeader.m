@@ -39,9 +39,8 @@
 }
 
 - (void)didClickHeader {
-
-    if (self.delegate && [self.delegate respondsToSelector:@selector(mineHeader:mineModel:type:)]) {
-        [self.delegate mineHeader:self mineModel:self.mineMData type:FSMineHeaderTypeHeader];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mineHeader:mineModel:eventType:)]) {
+        [self.delegate mineHeader:self mineModel:self.mineMData eventType:FSMineHeaderTypeHeader];
     }
 }
 

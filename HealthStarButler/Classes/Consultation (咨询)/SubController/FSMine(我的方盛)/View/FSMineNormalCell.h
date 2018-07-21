@@ -7,11 +7,25 @@
 //  设置/客服/缓存Cell
 
 #import <UIKit/UIKit.h>
+#import "FSMineMData.h"
 
-@class FSMineNormalCell, FSMineMData;
+//typedef NS_ENUM (NSUInteger,FSMineNormalCellType) {
+//    /** 我的优惠卷 */
+//    FSMineNormalCellTypeTicket = 1,
+//    /** 我的地址 */
+//    FSMineNormalCellTypeAddress,
+//    /** 客服电话 */
+//    FSMineNormalCellTypeServicePhone,
+//    /** 清除缓存 */
+//    FSMineNormalCellTypeClearCache,
+//    /** 设置 */
+//    FSMineNormalCellTypeSetting
+//};
+
+@class FSMineNormalCell;
 @protocol FSMineNormalCellDelegate <NSObject>
 @optional
-//- (void)<#loginViewControllerDidSuccess#>:(<#Class#> *)<#obj#>;
+- (void)mineNormalCell:(FSMineNormalCell *)mineNormalCell mineModel:(FSMineMData *)mineModel cellType:(FSMineCellType)cellType;
 
 @end
 

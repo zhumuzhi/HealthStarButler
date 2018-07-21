@@ -65,7 +65,6 @@
     return sectionMData;
 }
 
-
 - (FSMineMData *)creatMineThirdSectionData {
 
     FSMineMData *sectionMData = [[FSMineMData alloc]init];
@@ -75,9 +74,9 @@
     NSArray *titles = @[@"我的优惠券",@"我的地址",@"客服电话",@"清除缓存",@"设置"];
     NSArray *cellTypes = @[
                            /** 我的优惠券 */
-                           @(FSMineCellTypeSetting),
+                           @(FSMineCellTypeTicket),
                            /** 我的地址 */
-                           @(FSMineCellTypeSetting),
+                           @(FSMineCellTypeAddress),
                            /** 客服电话 */
                            @(FSMineCellTypeServicePhone),
                            /** 清除缓存 */
@@ -99,14 +98,11 @@
     return sectionMData;
 }
 
-
 //    NSArray *sectionDatas = @[
 //                              @{
 //                                  },
 //                              @{
 //                                  }
 //                              ];
-
-
 
 @end

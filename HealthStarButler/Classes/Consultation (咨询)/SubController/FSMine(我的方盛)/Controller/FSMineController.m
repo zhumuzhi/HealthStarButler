@@ -11,13 +11,14 @@
 //Model
 #import "FSMineMData.h"
 //View
-#import "FSMineHeader.h" // 账户Header
+#import "FSMineHeader.h"     // 账户Header
 #import "FSMineOrderCell.h"  // 我的订单Cell
-#import "FSMineNormalCell.h" // 设置/客服电话/清除缓存Cell
+#import "FSMineNormalCell.h" // 优惠卷/地址/设置/客服电话/清除缓存Cell
 
 @interface FSMineController ()<UITableViewDataSource, UITableViewDelegate,
-                            FSMineHeaderDelegate,   // 账号信息
-                            FSMineOrderCellDelegate // 我的订单
+                            FSMineHeaderDelegate,    // 账号信息
+                            FSMineOrderCellDelegate, // 我的订单
+                            FSMineNormalCellDelegate // 其他Cell
                             >
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -58,13 +59,27 @@
 #pragma mark - CustomDelegate
 
 #pragma mark 账户信息
-- (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel type:(FSMineHeaderType)type {
+- (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel eventType:(FSMineHeaderType)eventType {
     NSLog(@"跳转到我的信息");
 }
-
 #pragma mark 我的订单
-- (void)mineOrderCelldidClickAllOrder:(FSMineOrderCell *)mineOrderCell {
+- (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel eventType:(FSMineOrderCellType)eventType {
     NSLog(@"跳转到全部订单页面");
+}
+#pragma mark 优惠卷/地址/电话/清除缓存/设置
+- (void)mineNormalCell:(FSMineNormalCell *)mineNormalCell mineModel:(FSMineMData *)mineModel cellType:(FSMineCellType)cellType {
+    FSMineCellType type = cellType;
+    if (type == FSMineCellTypeTicket) {
+        NSLog(@"我的优惠卷");
+    }else if (type == FSMineCellTypeAddress) {
+        NSLog(@"我的地址");
+    }else if (type == FSMineCellTypeServicePhone) {
+        NSLog(@"弹出客服电话");
+    }else if (type == FSMineCellTypeClearCache) {
+        NSLog(@"清除缓存");
+    }else if (type == FSMineCellTypeSetting) {
+        NSLog(@"跳转至设置页面");
+    }
 }
 
 #pragma mark - UITableViewDataSource
@@ -90,26 +105,13 @@
         return cell;
     }else {
         FSMineNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineNormalCellID];
+        cell.delegate = self;
         cell.mineMData = rowMData;
         return cell;
     }
 }
 
 #pragma mark - UITableViewDelegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-//        NSLog(@"跳转至账号信息页面-待优化");
-    } else if (indexPath.section == 1) {
-        if (indexPath.row == 2) {
-            NSLog(@"打电话弹窗");
-            [self makePhoneCall];
-        }else if( indexPath.row == 2) {
-            
-        }
-    }
-}
-
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 
     UIView *header = [[UIView alloc] init];

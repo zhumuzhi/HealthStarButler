@@ -120,7 +120,6 @@ static CGFloat Margin = 10.0;
 #pragma mark - SetData
 - (void)setMineMData:(FSMineMData *)mineMData {
     
-
     
 }
 
@@ -165,8 +164,8 @@ static CGFloat Margin = 10.0;
 
 - (void)allOrderClick {
     //NSLog(@"点击了全部订单");
-    if ([self.delegate respondsToSelector:@selector(mineOrderCelldidClickAllOrder:)]) {
-        [self.delegate mineOrderCelldidClickAllOrder:self];
+    if ([self.delegate respondsToSelector:@selector(mineOrderCell:mineModel:eventType:)]) {
+        [self.delegate mineOrderCell:self mineModel:self.mineMData eventType:self.eventType];
     }
 }
 

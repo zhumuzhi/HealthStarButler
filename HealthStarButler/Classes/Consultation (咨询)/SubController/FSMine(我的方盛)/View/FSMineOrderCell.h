@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@class FSMineOrderCell, FSMineMData;
+typedef NS_ENUM (NSUInteger,FSMineOrderCellType) {
+    FSMineOrderCellTypeAllOrder = 1,
+    FSMineOrderCellTypeOrderBtn
+};
 
+
+@class FSMineOrderCell, FSMineMData;
 @protocol FSMineOrderCellDelegate <NSObject>
 @optional
-- (void)mineOrderCelldidClickAllOrder:(FSMineOrderCell *)mineOrderCell;
+- (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel eventType:(FSMineOrderCellType)eventType;
 
 @end
 
@@ -22,5 +27,6 @@
 
 @property (nonatomic, strong) FSMineMData *mineMData;
 
+@property (nonatomic, assign) FSMineOrderCellType eventType;
 
 @end
