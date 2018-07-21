@@ -58,8 +58,8 @@
     if (_itemTitle == nil) {
         _itemTitle = [[UILabel alloc] init];
         _itemTitle.textAlignment = NSTextAlignmentCenter;
-        _itemTitle.font = [UIFont systemFontOfSize:14];
-        _itemTitle.textColor = [UIColor colorWithHexString:@"#3D3D3D"];
+        _itemTitle.font = [UIFont fontWithName:@"PingFangSC-Regular" size:14];
+        _itemTitle.textColor = [UIColor colorWithHexString:@"#333333"];
     }
     return _itemTitle;
 }

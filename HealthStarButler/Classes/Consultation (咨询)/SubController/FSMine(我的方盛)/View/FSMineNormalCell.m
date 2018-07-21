@@ -110,8 +110,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
 - (UIImageView *)arrow {
     if (_arrow == nil) {
         _arrow = [[UIImageView alloc] init];
-        _arrow.image = [UIImage imageNamed:@"detail_good_right"];
-
+        _arrow.image = [UIImage imageNamed:@"mine_cellArrow"];
     }
     return _arrow;
 }

@@ -45,10 +45,11 @@ static CGFloat Margin = 12.0;
 - (void)configUI {
     /** 订单标题 */
     [self.contentView addSubview:self.title];
+    CGSize titleSize = [@"我的订单" sizeWithFont:[UIFont systemFontOfSize:14.0]];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self).offset(MarginTop);
         make.left.equalTo(self).offset(Margin);
-        make.width.equalTo(@(260));
+        make.width.equalTo(@(titleSize.width));
     }];
     
     /** 全部订单 */
@@ -56,30 +57,26 @@ static CGFloat Margin = 12.0;
     [self.allOrderView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.title.mas_centerY);
         make.right.equalTo(self).offset(-Margin);
-        make.width.equalTo(@(150));
+        make.width.equalTo(@(100));
     }];
     
     /** 按钮ContentView */
     [self.contentView addSubview:self.orderContentView];
     [self.orderContentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.title).offset(Margin);
+        make.top.equalTo(self.title.mas_bottom).offset(Margin);
         make.left.equalTo(self);
         make.right.equalTo(self);
         make.bottom.equalTo(self);
     }];
     
-    
-//    CGFloat itemMargin = Margin;
-//    CGFloat itemW = (self.orderContentView.width-(itemMargin*2))/4;
-//    CGFloat itemH = (self.orderContentView.height);
-    
     CGFloat itemMargin = Margin;
     CGFloat itemW = (kScreenWidth-(itemMargin*2))/4;
-    CGFloat itemH = (120);
+    CGFloat itemH = (60);
     NSArray *itemTitles = @[@"全部订单", @"代付款", @"代发货", @"待收货"];
-    NSArray *itemImages = @[@"home_m_icon0",@"home_m_icon1",@"home_m_icon2",@"home_m_icon0"];
+    NSArray *itemImages = @[@"mine_waitExamine",@"mine_waitPay",@"mine_waitReceiv",@"mine_waitSend"];
     for (int i=0; i<itemTitles.count; i++) {
-        FSMineOrderItem  *item = [[FSMineOrderItem alloc] init];
+        FSMineOrderItem *item = [[FSMineOrderItem alloc] init];
+        item.backgroundColor = MEDGrayColor(250);
         [self.orderContentView addSubview:item];
         item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
         item.itemTitle.text = itemTitles[i];
@@ -119,7 +116,7 @@ static CGFloat Margin = 12.0;
     if (_title == nil) {
         _title = [[UILabel alloc] init];
         _title.textColor = [UIColor colorWithHexString:@"#333333"];
-        _title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:16.0];
+        _title.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:14.0];
         _title.text = @"我的订单";
     }
     return _title;

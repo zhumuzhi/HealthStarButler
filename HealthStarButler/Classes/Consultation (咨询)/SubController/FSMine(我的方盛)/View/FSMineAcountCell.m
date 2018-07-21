@@ -39,7 +39,7 @@
 
 static CGFloat Margin = 12.0; // 边距
 static CGFloat iconW = 80.0;  // 头像宽高
-static CGFloat arrowW = 6.0;  // 指示View宽度
+static CGFloat arrowW = 20.0;  // 指示View宽度
 
 - (void)configUI {
     
@@ -79,8 +79,8 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
     [self.arrow mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self);
         make.right.equalTo(self).offset(-kAutoWithSize(Margin));
-        make.width.equalTo(@(kAutoWithSize(arrowW)));
-        make.height.equalTo(@(kAutoHeightSize(kMargin10)));
+        make.width.equalTo(@(kAutoWithSize(kMargin10)));
+        make.height.equalTo(@(kAutoHeightSize(arrowW)));
     }];
 }
 
@@ -92,8 +92,8 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (void)setMineMData:(FSMineMData *)mineMData {
     _mineMData = mineMData;
     
-    self.acountName.text = @"子账号: Miss001";
-    self.acountType.text = @"账号类型: 子账号(下单账号)";
+    self.acountName.text = @"账号：MEID123";
+    self.acountType.text = @"权限: 下单 结算 审批";
 }
 
 #pragma mark - Event
@@ -113,7 +113,8 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UIImageView *)icon {
     if (_icon == nil) {
         _icon = [[UIImageView alloc] init];
-        _icon.image = [UIImage imageNamed:@"logo0"];
+        _icon.image = [UIImage imageNamed:@"list_denglutouxiang"];
+        _icon.contentMode = UIViewContentModeCenter;
         _icon.layer.cornerRadius = iconW*0.5;
         _icon.layer.masksToBounds = YES;
     }
@@ -123,7 +124,7 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UILabel *)acountName {
     if (_acountName == nil) {
         _acountName = [[UILabel alloc] init];
-        _acountName.font = [UIFont boldSystemFontOfSize:18];
+        _acountName.font = [UIFont boldSystemFontOfSize:18]; //PingFangSC-Semibold
         _acountName.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
     }
     return _acountName;
@@ -132,7 +133,7 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UILabel *)acountType {
     if (_acountType == nil) {
         _acountType = [[UILabel alloc] init];
-        _acountType.font = [UIFont systemFontOfSize:14];
+        _acountType.font = [UIFont systemFontOfSize:12]; //PingFangSC-Regular
         _acountType.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
     }
     return _acountType;
@@ -141,8 +142,8 @@ static CGFloat arrowW = 6.0;  // 指示View宽度
 - (UIImageView *)arrow {
     if (_arrow == nil) {
         _arrow = [[UIImageView alloc] init];
-        _arrow.image = [UIImage imageNamed:@"detail_good_right"];
-        
+        _arrow.image = [UIImage imageNamed:@"mine_cellArrowWhite"];
+        _arrow.contentMode = UIViewContentModeCenter;
     }
     return _arrow;
 }

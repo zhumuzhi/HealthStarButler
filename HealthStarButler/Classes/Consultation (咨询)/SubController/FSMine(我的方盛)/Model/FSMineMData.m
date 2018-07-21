@@ -45,7 +45,7 @@
 - (FSMineMData *)creatMineSecondSectionData {
 
     FSMineMData *sectionMData = [[FSMineMData alloc]init];
-    sectionMData.sectionHeaderHeight = 10.0f;
+    sectionMData.sectionHeaderHeight = 15.0f;
     sectionMData.sectionFooterHeight = 0.1f;
 
     NSArray *titles = @[@"我的订单"];
@@ -69,7 +69,7 @@
 - (FSMineMData *)creatMineThirdSectionData {
 
     FSMineMData *sectionMData = [[FSMineMData alloc]init];
-    sectionMData.sectionHeaderHeight = 10.0f;
+    sectionMData.sectionHeaderHeight = 15.0f;
     sectionMData.sectionFooterHeight = 0.1f;
 
     NSArray *titles = @[@"我的优惠券",@"我的地址",@"客服电话",@"清除缓存",@"设置"];

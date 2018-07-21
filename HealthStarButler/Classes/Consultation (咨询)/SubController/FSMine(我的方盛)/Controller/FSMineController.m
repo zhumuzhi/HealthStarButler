@@ -99,11 +99,13 @@ FSMineOrderCellDelegate //我的订单
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        NSLog(@"跳转至账号信息页面");
+        NSLog(@"跳转至账号信息页面-待优化");
     } else if (indexPath.section == 2) {
         if (indexPath.row == 2) {
             NSLog(@"打电话弹窗");
             [self makePhoneCall];
+        }else if( indexPath.row == 2) {
+            
         }
     }
 }
@@ -116,11 +118,11 @@ FSMineOrderCellDelegate //我的订单
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 200;
+        return 174;
     }else if(indexPath.section == 1){
-        return 180;
+        return 128;
     }else {
-        return 44;
+        return 50;
     }
 }
 
@@ -163,7 +165,9 @@ static NSString *FSMineOrderCellID = @"FSMineOrderCellID";
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
         _tableView.showsHorizontalScrollIndicator = NO; //关闭水平指示条
-        
+        // 指示线颜色
+        _tableView.separatorColor = [UIColor colorWithHexString:@"#F5F5F5"];
+
         [_tableView registerClass:[FSMineAcountCell class] forCellReuseIdentifier:FSMineAcountCellID];
         [_tableView registerClass:[FSMineNormalCell class] forCellReuseIdentifier:FSMineNormalCellID];
         [_tableView registerClass:[FSMineOrderCell class] forCellReuseIdentifier:FSMineOrderCellID];

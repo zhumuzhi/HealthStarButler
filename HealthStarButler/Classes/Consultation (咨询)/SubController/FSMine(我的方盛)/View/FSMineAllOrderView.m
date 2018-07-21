@@ -53,7 +53,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
         _orderLabel = [[UILabel alloc] init];
         _orderLabel.textAlignment = NSTextAlignmentRight;
         _orderLabel.textColor = [UIColor colorWithHexString:@"#999999"];
-        _orderLabel.font = [UIFont systemFontOfSize:14.0];
+        _orderLabel.font = [UIFont systemFontOfSize:12.0];
         _orderLabel.text = @"全部订单";
     }
     return _orderLabel;
@@ -62,7 +62,7 @@ static CGFloat arrowW = 6.0;  //指示View宽度
 - (UIImageView *)arrowImage {
     if (_arrowImage == nil) {
         _arrowImage = [[UIImageView alloc] init];
-        _arrowImage.image = [UIImage imageNamed:@"detail_good_right"];
+        _arrowImage.image = [UIImage imageNamed:@"mine_cellArrow"];
     }
     return _arrowImage;
 }
