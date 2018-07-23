@@ -19,6 +19,50 @@
     return dataArray;
 }
 
+
++ (NSMutableArray *)creatMineOrderMDataWithDataType:(FSMineOrderDataType)dataType {
+    
+    NSMutableArray *dataArray;
+    if (dataType == FSMineOrderDataTypeOne) {
+        NSArray *dictArrayOne = @[
+                                  @{@"title":@"全部订单", @"image":@"mine_waitReceiv", @"type":@(FSMineOrderCellBtnTypeExamine)},
+                                  @{@"title":@"待付款", @"image":@"mine_waitPay", @"type":@(FSMineOrderCellBtnTypePay)},
+                                  @{@"title":@"待发货", @"image":@"mine_waitSend", @"type":@(FSMineOrderCellBtnTypeReceiv)},
+                                  @{@"title":@"待收货", @"image":@"mine_waitReceiv", @"type":@(FSMineOrderCellBtnTypeSend)},
+                                  ];
+        NSMutableArray *tempArray = [NSMutableArray array];
+        for (NSDictionary *dict in dictArrayOne) {
+            FSMineMData *mineData = [[FSMineMData alloc] init];
+            mineData.orderTitle = dict[@"title"];
+            mineData.orderImage = dict[@"image"];
+            NSNumber *typeNum = dict[@"type"];
+            mineData.ordertype = typeNum.integerValue;
+            [tempArray addObject:mineData];
+        }
+        dataArray = [NSMutableArray arrayWithArray:tempArray];
+    }else if(dataType == FSMineOrderDataTypeTwo) {
+        NSArray *dictArrayTwo = @[
+                                  @{@"title":@"待审批", @"image":@"mine_waitExamine", @"type":@(FSMineOrderCellBtnTypeExamine)},
+                                  @{@"title":@"待付款", @"image":@"mine_waitPay", @"type":@(FSMineOrderCellBtnTypePay)},
+                                  @{@"title":@"待发货", @"image":@"mine_waitSend", @"type":@(FSMineOrderCellBtnTypeReceiv)},
+                                  @{@"title":@"待收货", @"image":@"mine_waitReceiv", @"type":@(FSMineOrderCellBtnTypeSend)},
+                                  ];
+        
+        NSMutableArray *tempArray = [NSMutableArray array];
+        for (NSDictionary *dict in dictArrayTwo) {
+            FSMineMData *mineData = [[FSMineMData alloc] init];
+            mineData.orderTitle = dict[@"title"];
+            mineData.orderImage = dict[@"image"];
+            NSNumber *typeNum = dict[@"type"];
+            mineData.ordertype = typeNum.integerValue;
+            [tempArray addObject:mineData];
+        }
+        dataArray = [NSMutableArray arrayWithArray:tempArray];
+    }
+    return dataArray;
+}
+
+
 - (FSMineMData *)creatMineSecondSectionData {
 
     FSMineMData *sectionMData = [[FSMineMData alloc]init];

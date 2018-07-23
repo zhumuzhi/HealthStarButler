@@ -22,6 +22,8 @@
 @property (nonatomic, strong) FSMineAllOrderView *allOrderView;
 /** 按钮ContentView */
 @property (nonatomic, strong) UIView *orderContentView;
+/** 订单控件 */
+@property (nonatomic, strong) NSMutableArray *items;
 
 @end
 
@@ -99,10 +101,6 @@ static CGFloat Margin = 10.0;
     // ----- 阴影 -----
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-
-}
 
 - (void)configuration {
     self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -110,55 +108,39 @@ static CGFloat Margin = 10.0;
 
 #pragma mark - SetData
 - (void)setMineMData:(FSMineMData *)mineMData {
-
-    CGFloat itemMargin = Margin;
-    CGFloat itemW = (kScreenWidth-(itemMargin*4))/4;
-    CGFloat itemH = (60);
-
-    NSMutableArray *itemTitles;
-    NSMutableArray *itemImages;
-    NSMutableArray *itemTypes;
-    
-//    FSMineOrderCellBtnType
-//    if（ mineMData。typr = FSMineOrderCellBtnType） {
-//        array = mineMData.array
-//    } esle {
-//    }
-
-/* FIXME:1.数据创建写入模型*/
-/* FIXME:2.增加动态数组，动态添加Frame计算在Layout中进行*/
-
-    if (self.orderType == 1) {
-
-        NSArray *tempTitles = @[@"全部订单", @"代付款", @"代发货", @"待收货"];
-        NSArray *tempImages = @[@"mine_waitExamine", @"mine_waitPay", @"mine_waitSend", @"mine_waitReceiv"];
-        NSArray *tempTypes = @[@(FSMineOrderCellBtnTypeAllOrder), @(FSMineOrderCellBtnTypePay), @(FSMineOrderCellBtnTypeReceiv), @(FSMineOrderCellBtnTypeSend)];
-        itemTitles = [NSMutableArray arrayWithArray:tempTitles];
-        itemImages = [NSMutableArray arrayWithArray:tempImages];
-        itemTypes = [NSMutableArray arrayWithArray:tempTypes];
-
+    NSMutableArray *dataArray;
+    if (self.orderType == FSMineOrderDataTypeOne) {
+        dataArray = [FSMineMData creatMineOrderMDataWithDataType:FSMineOrderDataTypeOne];
     }else if (self.orderType == 2) {
-
-        NSArray *tempTitles = @[@"待审批", @"代付款", @"代发货", @"待收货"];
-        NSArray *tempImages = @[@"mine_waitSend", @"mine_waitPay", @"mine_waitSend", @"mine_waitReceiv"];
-        NSArray *tempTypes = @[@(FSMineOrderCellBtnTypeExamine), @(FSMineOrderCellBtnTypePay), @(FSMineOrderCellBtnTypeReceiv), @(FSMineOrderCellBtnTypeSend)];
-        itemTitles = [NSMutableArray arrayWithArray:tempTitles];
-        itemImages = [NSMutableArray arrayWithArray:tempImages];
-        itemTypes = [NSMutableArray arrayWithArray:tempTypes];
+        dataArray = [FSMineMData creatMineOrderMDataWithDataType:FSMineOrderDataTypeTwo];
     }
 
-    for (int i=0; i<itemTitles.count; i++) {
+    NSMutableArray *tempItems = [NSMutableArray array];
+    for (int i=0; i<dataArray.count; i++) {
         FSMineOrderItem *item = [[FSMineOrderItem alloc] init];
-        // item.backgroundColor = MEDGrayColor(250);
+        [tempItems addObject:item];
         [self.orderContentView addSubview:item];
-        item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
-        item.itemTitle.text = itemTitles[i];
-        item.itemImage.image = [UIImage imageNamed:itemImages[i]];
-        NSNumber *typeNum = [itemTypes by_ObjectAtIndex:i];
-        item.itemType = typeNum.integerValue;
+        
+        FSMineMData *mineData = [dataArray by_ObjectAtIndex:i];
+        item.itemTitle.text = mineData.orderTitle;
+        item.itemImage.image = [UIImage imageNamed:mineData.orderImage];
+        item.itemType = mineData.ordertype;
+        
         // 添加点击手势触发理方法
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didClickItem:)];
         [item addGestureRecognizer:tap];
+    }
+    self.items = tempItems;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGFloat itemMargin = Margin;
+    CGFloat itemW = (kScreenWidth-(itemMargin*4))/4;
+    CGFloat itemH = (60);
+    for (int i=0; i<self.items.count; i++) {
+        FSMineOrderItem *item = [self.items by_ObjectAtIndex:i];
+        item.frame = CGRectMake(itemMargin+itemW*i, 0, itemW, itemH);
     }
 }
 

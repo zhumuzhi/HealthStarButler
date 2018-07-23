@@ -120,7 +120,7 @@
         FSMineOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineOrderCellID];
         cell.delegate = self;
         /* FIXME:订单类型调整*/
-        cell.orderType = 2;
+        cell.orderType = 1;
         FSMineMData *mineData = [[FSMineMData alloc] init];
         cell.mineMData = mineData;
         return cell;

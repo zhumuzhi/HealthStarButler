@@ -41,6 +41,11 @@ typedef NS_ENUM (NSUInteger,FSMineOrderCellBtnType) {
     FSMineOrderCellBtnTypeSend
 };
 
+typedef NS_ENUM (NSUInteger,FSMineOrderDataType) {
+    FSMineOrderDataTypeOne = 1,
+    FSMineOrderDataTypeTwo
+};
+
 @interface FSMineMData : FSBaseMData
 
 /** 我的cell类型 */
@@ -57,7 +62,9 @@ typedef NS_ENUM (NSUInteger,FSMineOrderCellBtnType) {
 
 //---- OrderCell ----
 @property (nonatomic, strong) NSArray *orderItems;
-
+@property (nonatomic, copy) NSString *orderTitle;
+@property (nonatomic, copy) NSString *orderImage;
+@property (nonatomic, assign) FSMineOrderCellBtnType ordertype;
 
 /* FIXME:增加Cell类型Type Enum用来判断*/
 
@@ -66,5 +73,8 @@ typedef NS_ENUM (NSUInteger,FSMineOrderCellBtnType) {
 //- (FSMineMData *)creatMineHeaderData;
 //** 创建Cell本地数据 */
 + (NSMutableArray *)creatMineMData;
+
+/** 根据类型创建Order数组 */
++ (NSMutableArray *)creatMineOrderMDataWithDataType:(FSMineOrderDataType)dataType;
 
 @end
