@@ -101,10 +101,16 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
 - (void)setMineMData:(FSMineMData *)mineMData {
     _mineMData = mineMData;
 
-    self.acountName.text = @"账号：MEID123";
-    self.acountType.text = @"权限: 下单 结算 审批";
-}
+    // 真实赋值
+    self.acountName.text = mineMData.acountName;
+    self.acountType.text = mineMData.permission;
+    self.icon.image = [UIImage imageNamed:mineMData.iconUrl];
 
+    // 暂时赋值
+//    self.acountName.text = @"账号：MEID123";
+//    self.acountType.text = @"权限: 下单 结算 审批";
+
+}
 
 #pragma mark - LazySet
 -(UIImageView *)backImage {
@@ -118,7 +124,7 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
 - (UIImageView *)icon {
     if (_icon == nil) {
         _icon = [[UIImageView alloc] init];
-        _icon.image = [UIImage imageNamed:@"list_denglutouxiang"];
+//        _icon.image = [UIImage imageNamed:@"list_denglutouxiang"];
         _icon.contentMode = UIViewContentModeCenter;
         _icon.layer.cornerRadius = iconW*0.5;
         _icon.layer.masksToBounds = YES;
@@ -131,7 +137,7 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
         _acountName = [[UILabel alloc] init];
         _acountName.font = [UIFont boldSystemFontOfSize:18]; //PingFangSC-Semibold
         _acountName.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-        _acountName.text = @"账号：MEID123";
+//        _acountName.text = @"账号：MEID123";
     }
     return _acountName;
 }
@@ -141,7 +147,7 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
         _acountType = [[UILabel alloc] init];
         _acountType.font = [UIFont systemFontOfSize:12]; //PingFangSC-Regular
         _acountType.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-        _acountType.text = @"权限: 下单 结算 审批";
+//        _acountType.text = @"权限: 下单 结算 审批";
     }
     return _acountType;
 }

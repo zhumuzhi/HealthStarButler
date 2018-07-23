@@ -7,7 +7,7 @@
 //  设置/客服/缓存Cell
 
 #import <UIKit/UIKit.h>
-#import "FSMineMData.h"
+#import "FSMineMData.h"  //Model
 
 //typedef NS_ENUM (NSUInteger,FSMineNormalCellType) {
 //    /** 我的优惠卷 */
@@ -34,5 +34,7 @@
 @property(nonatomic, weak) id<FSMineNormalCellDelegate> delegate;
 
 @property (nonatomic, strong) FSMineMData *mineMData;
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier cellForRowAtIndexPath:(NSIndexPath *)indexPath withTable:(UITableView *)tableView;
 
 @end

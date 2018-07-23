@@ -8,6 +8,8 @@
 
 #import "FSBaseMData.h"
 
+
+/** 我的方盛cell类型 */
 typedef NS_ENUM (NSUInteger,FSMineCellType) {
     /** 账户信息 */
     FSMineCellTypeAcount = 1,
@@ -25,10 +27,44 @@ typedef NS_ENUM (NSUInteger,FSMineCellType) {
     FSMineCellTypeSetting
 };
 
+/** 订单cell按钮类型 */
+typedef NS_ENUM (NSUInteger,FSMineOrderCellBtnType) {
+    /** 全部订单 */
+    FSMineOrderCellBtnTypeAllOrder = 1,
+    /** 待审核 */
+    FSMineOrderCellBtnTypeExamine,
+    /** 待付款 */
+    FSMineOrderCellBtnTypePay,
+    /** 待收货 */
+    FSMineOrderCellBtnTypeReceiv,
+    /** 待发货 */
+    FSMineOrderCellBtnTypeSend
+};
+
 @interface FSMineMData : FSBaseMData
 
+/** 我的cell类型 */
 @property (nonatomic, assign) FSMineCellType cellType;
-//** 创建本地数据 */
+
+
+//---- Headr ----
+/** 头像URL */
+@property (nonatomic, copy) NSString *iconUrl;
+/** 账号名 */
+@property (nonatomic, copy) NSString *acountName;
+/** 权限 */
+@property (nonatomic, copy) NSString *permission;
+
+//---- OrderCell ----
+@property (nonatomic, strong) NSArray *orderItems;
+
+
+/* FIXME:增加Cell类型Type Enum用来判断*/
+
+//---- OtherCell ----
+//** 创建Header本地数据 */
+//- (FSMineMData *)creatMineHeaderData;
+//** 创建Cell本地数据 */
 + (NSMutableArray *)creatMineMData;
 
 @end

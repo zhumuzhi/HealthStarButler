@@ -54,6 +54,13 @@
 #pragma mark - RequestData
 - (void)loadData {
     self.dataArray = [FSMineMData creatMineMData];
+
+    /* FIXME:网络请求后为Header赋值*/
+    FSMineMData *mineData = [[FSMineMData alloc] init];
+    mineData.acountName = @"账号：MEID123";
+    mineData.permission = @"权限: 下单 结算 审批";
+    mineData.iconUrl = @"list_denglutouxiang";
+    self.mineHeader.mineMData = mineData;
 }
 
 #pragma mark - CustomDelegate
@@ -63,8 +70,19 @@
     NSLog(@"跳转到我的信息");
 }
 #pragma mark 我的订单
-- (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel eventType:(FSMineOrderCellType)eventType {
-    NSLog(@"跳转到全部订单页面");
+- (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel orderBtnType:(FSMineOrderCellBtnType)orderBtnType {
+    if (orderBtnType == FSMineOrderCellBtnTypeAllOrder) {
+        NSLog(@"跳转到全部订单页面");
+    }else if (orderBtnType == FSMineOrderCellBtnTypeExamine) {
+        NSLog(@"跳转到待审核");
+    }else if (orderBtnType == FSMineOrderCellBtnTypePay) {
+        NSLog(@"跳转到待付款");
+    }else if (orderBtnType == FSMineOrderCellBtnTypeReceiv) {
+        NSLog(@"跳转到待发货");
+    }else if (orderBtnType == FSMineOrderCellBtnTypeSend) {
+        NSLog(@"跳转到代收货");
+    }
+
 }
 #pragma mark 优惠卷/地址/电话/清除缓存/设置
 - (void)mineNormalCell:(FSMineNormalCell *)mineNormalCell mineModel:(FSMineMData *)mineModel cellType:(FSMineCellType)cellType {
@@ -75,6 +93,7 @@
         NSLog(@"我的地址");
     }else if (type == FSMineCellTypeServicePhone) {
         NSLog(@"弹出客服电话");
+        [self makePhoneCall];
     }else if (type == FSMineCellTypeClearCache) {
         NSLog(@"清除缓存");
     }else if (type == FSMineCellTypeSetting) {
@@ -97,14 +116,16 @@
     FSMineMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
     FSMineMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
 
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0) {  //订单cell
         FSMineOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineOrderCellID];
         cell.delegate = self;
+        /* FIXME:订单类型调整*/
+        cell.orderType = 2;
         FSMineMData *mineData = [[FSMineMData alloc] init];
         cell.mineMData = mineData;
         return cell;
-    }else {
-        FSMineNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:FSMineNormalCellID];
+    }else { //优惠卷/地址/设置/客服电话/清除缓存Cell
+        FSMineNormalCell *cell = [[FSMineNormalCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FSMineNormalCellID cellForRowAtIndexPath:indexPath withTable:tableView];
         cell.delegate = self;
         cell.mineMData = rowMData;
         return cell;
@@ -132,41 +153,6 @@
     }
 }
 
-/** 设置圆角 */
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(indexPath.section != 0) {
-        CGFloat cornerRadius = 6.f;
-        cell.backgroundColor = UIColor.clearColor;
-        CAShapeLayer *layer = [[CAShapeLayer alloc] init];
-        CAShapeLayer *backgroundLayer = [[CAShapeLayer alloc] init]; //显示选中
-        CGMutablePathRef pathRef = CGPathCreateMutable();
-        CGRect bounds = CGRectInset(cell.bounds, 10, 0);
-        if (indexPath.row == 0) {
-            CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds));
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds), CGRectGetMidX(bounds), CGRectGetMinY(bounds), cornerRadius);
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
-            CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds));
-        } else if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section]-1) {
-            CGPathMoveToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMinY(bounds));
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMinX(bounds), CGRectGetMaxY(bounds), CGRectGetMidX(bounds), CGRectGetMaxY(bounds), cornerRadius);
-            CGPathAddArcToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMaxY(bounds), CGRectGetMaxX(bounds), CGRectGetMidY(bounds), cornerRadius);
-            CGPathAddLineToPoint(pathRef, nil, CGRectGetMaxX(bounds), CGRectGetMinY(bounds));
-        } else {
-            CGPathAddRect(pathRef, nil, bounds);
-        }
-        layer.path = pathRef;
-        backgroundLayer.path = pathRef;
-        CFRelease(pathRef);
-        layer.fillColor = [UIColor whiteColor].CGColor;
-
-        UIView *roundView = [[UIView alloc] initWithFrame:bounds];
-        [roundView.layer insertSublayer:layer atIndex:0];
-        roundView.backgroundColor = UIColor.clearColor;
-        cell.backgroundView = roundView;
-    }
-}
-
 #pragma mark - Private Methods
 //*拨打客服电话*/
 - (void)makePhoneCall {
@@ -178,7 +164,7 @@
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
     }
     
-    ////    [MEDAlertMananger presentAlertWithTitle:@"客服电话" message:@"400-680-9666\n周一至周日:8:00~20:00" actionTitle:@[@"呼叫"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
+    //    [MEDAlertMananger presentAlertWithTitle:@"客服电话" message:@"400-680-9666\n周一至周日:8:00~20:00" actionTitle:@[@"呼叫"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
     //    [MEDAlertMananger presentAlertWithTitle:@"400-680-9666" message:@"周一至周日:8:00~20:00" actionTitle:@[@"呼叫"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
     //
     //        if (buttonIndex == 1) {
@@ -201,6 +187,7 @@ static NSString *FSMineOrderCellID = @"FSMineOrderCellID";
         _tableView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
         _tableView.showsHorizontalScrollIndicator = NO; //关闭水平指示条
+        _tableView.layer.drawsAsynchronously = true;//异步绘制cell的layer
 
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.1, 0.1, 0.1, 0.1)];  // tableFooterView设置
         _tableView.sectionHeaderHeight = 0.01;
@@ -225,7 +212,6 @@ static NSString *FSMineOrderCellID = @"FSMineOrderCellID";
         _mineHeader.delegate = self;
     }
     return _mineHeader;
-
 }
 
 @end

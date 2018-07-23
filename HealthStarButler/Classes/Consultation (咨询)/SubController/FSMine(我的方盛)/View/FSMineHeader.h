@@ -27,7 +27,6 @@ typedef NS_ENUM (NSUInteger, FSMineHeaderType) {
 - (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel eventType:(FSMineHeaderType)eventType;
 @end
 
-
 @interface FSMineHeader : UIView
 
 @property (nonatomic, strong) FSMineMData *mineMData;

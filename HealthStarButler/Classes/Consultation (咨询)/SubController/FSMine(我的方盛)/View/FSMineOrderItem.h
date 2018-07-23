@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FSMineMData.h"
+
 @interface FSMineOrderItem : UIView
 
 /** item图片 */
 @property (nonatomic, strong) UIImageView *itemImage;
 /** item标题 */
 @property (nonatomic, strong) UILabel *itemTitle;
+
+/** itemType */
+@property (nonatomic, assign) FSMineOrderCellBtnType itemType;
 
 @end

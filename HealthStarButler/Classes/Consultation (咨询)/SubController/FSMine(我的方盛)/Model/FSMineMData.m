@@ -19,29 +19,6 @@
     return dataArray;
 }
 
-- (FSMineMData *)creatMineFirstSectionData {
-
-    FSMineMData *sectionMData = [[FSMineMData alloc]init];
-    sectionMData.sectionHeaderHeight = 0.1f;
-    sectionMData.sectionFooterHeight = 0.1f;
-
-    NSArray *titles = @[@"账户设置"];
-    NSArray *cellTypes = @[
-                           /** 账户设置 */
-                           @(FSMineCellTypeAcount),
-                           ];
-    NSMutableArray *dataArray = [NSMutableArray array];
-    for (NSInteger index = 0; index < titles.count; index++) {
-        FSMineMData *mineMData = [[FSMineMData alloc] init];
-        mineMData.title = [titles by_ObjectAtIndex:index];
-        NSNumber *typeNum = [cellTypes by_ObjectAtIndex:index];
-        mineMData.cellType = typeNum.integerValue;
-        [dataArray addObject:mineMData];
-    }
-    sectionMData.items = dataArray.mutableCopy;
-    return sectionMData;
-}
-
 - (FSMineMData *)creatMineSecondSectionData {
 
     FSMineMData *sectionMData = [[FSMineMData alloc]init];
@@ -98,11 +75,26 @@
     return sectionMData;
 }
 
-//    NSArray *sectionDatas = @[
-//                              @{
-//                                  },
-//                              @{
-//                                  }
-//                              ];
+//- (FSMineMData *)creatMineHeaderData {
+//    FSMineMData *sectionMData = [[FSMineMData alloc]init];
+//    sectionMData.sectionHeaderHeight = 0.1f;
+//    sectionMData.sectionFooterHeight = 0.1f;
+//
+//    NSArray *titles = @[@"账户设置"];
+//    NSArray *cellTypes = @[
+//                           /** 账户设置 */
+//                           @(FSMineCellTypeAcount),
+//                           ];
+//    NSMutableArray *dataArray = [NSMutableArray array];
+//    for (NSInteger index = 0; index < titles.count; index++) {
+//        FSMineMData *mineMData = [[FSMineMData alloc] init];
+//        mineMData.title = [titles by_ObjectAtIndex:index];
+//        NSNumber *typeNum = [cellTypes by_ObjectAtIndex:index];
+//        mineMData.cellType = typeNum.integerValue;
+//        [dataArray addObject:mineMData];
+//    }
+//    sectionMData.items = dataArray.mutableCopy;
+//    return sectionMData;
+//}
 
 @end
