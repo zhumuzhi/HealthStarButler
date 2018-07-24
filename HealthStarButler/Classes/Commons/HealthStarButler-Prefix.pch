@@ -22,6 +22,9 @@
 #pragma mark -------------------- Model --------------------
 #import "MEDUserModel.h"
 
+#pragma mark -------------------- BaseModel --------------------
+#import "FSBaseMData.h"
+
 #pragma mark -------------------- BaseController --------------------
 #import "MEDBaseViewController.h"   //BaseController
 #import "MEDMineController.h"       //个人中心
@@ -32,6 +35,7 @@
 #import "MEDAlertMananger.h"
 #import "FSTextFieldItem.h"
 #import "FSButton.h"
+#import "FSSpaceCell.h"
 
 #pragma mark -------------------- 分类 --------------------
 #import "NSObject+MED.h"

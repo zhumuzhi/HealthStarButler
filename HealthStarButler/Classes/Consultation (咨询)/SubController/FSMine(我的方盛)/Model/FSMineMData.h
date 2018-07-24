@@ -6,9 +6,6 @@
 //  Copyright © 2018年 zhumuzhi. All rights reserved.
 //
 
-#import "FSBaseMData.h"
-
-
 /** 我的方盛cell类型 */
 typedef NS_ENUM (NSUInteger,FSMineCellType) {
     /** 账户信息 */
@@ -41,8 +38,11 @@ typedef NS_ENUM (NSUInteger,FSMineOrderCellBtnType) {
     FSMineOrderCellBtnTypeSend
 };
 
+/** OrderCell数据类型 */
 typedef NS_ENUM (NSUInteger,FSMineOrderDataType) {
+    /** 类型1-全部订单 */
     FSMineOrderDataTypeOne = 1,
+    /** 类型2-待审核 */
     FSMineOrderDataTypeTwo
 };
 

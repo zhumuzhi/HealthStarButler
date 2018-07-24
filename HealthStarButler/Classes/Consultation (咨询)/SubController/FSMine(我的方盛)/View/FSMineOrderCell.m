@@ -83,7 +83,10 @@ static CGFloat Margin = 10.0;
         make.right.equalTo(self.backView);
         make.bottom.equalTo(self.backView);
     }];
+}
 
+- (void)configuration {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 - (void)configShadow {
@@ -101,10 +104,6 @@ static CGFloat Margin = 10.0;
     // ----- 阴影 -----
 }
 
-
-- (void)configuration {
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-}
 
 #pragma mark - SetData
 - (void)setMineMData:(FSMineMData *)mineMData {

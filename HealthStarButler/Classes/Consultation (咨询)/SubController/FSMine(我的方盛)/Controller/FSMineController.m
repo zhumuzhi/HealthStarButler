@@ -15,6 +15,8 @@
 #import "FSMineOrderCell.h"  // 我的订单Cell
 #import "FSMineNormalCell.h" // 优惠卷/地址/设置/客服电话/清除缓存Cell
 
+#import "FSAccountSetController.h" // 账号设置
+
 @interface FSMineController ()<UITableViewDataSource, UITableViewDelegate,
                             FSMineHeaderDelegate,    // 账号信息
                             FSMineOrderCellDelegate, // 我的订单
@@ -68,6 +70,8 @@
 #pragma mark 账户信息
 - (void)mineHeader:(FSMineHeader *)mineHeader mineModel:(FSMineMData *)mineModel eventType:(FSMineHeaderType)eventType {
     NSLog(@"跳转到我的信息");
+    FSAccountSetController *accountSet = [[FSAccountSetController alloc] init];
+    [self.navigationController pushViewController:accountSet animated:YES];
 }
 #pragma mark 我的订单
 - (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel orderBtnType:(FSMineOrderCellBtnType)orderBtnType {
