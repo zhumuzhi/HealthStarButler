@@ -277,6 +277,17 @@
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8837EF2102FA780087DA22 /* FSMineHeader.m */; };
+		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
+		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
+		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
+		5D970D7321071A5500F19D3D /* FSWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6521071A5500F19D3D /* FSWebView.m */; };
+		5D970D7421071A5500F19D3D /* FSImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6921071A5500F19D3D /* FSImageView.m */; };
+		5D970D7521071A5500F19D3D /* FSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6A21071A5500F19D3D /* FSTableView.m */; };
+		5D970D7721071A5500F19D3D /* FSSpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6D21071A5500F19D3D /* FSSpaceCell.m */; };
+		5D970D7821071A5500F19D3D /* FSVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6E21071A5500F19D3D /* FSVIew.m */; };
+		5D970D7921071A5500F19D3D /* FSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6F21071A5500F19D3D /* FSCollectionView.m */; };
+		5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D7021071A5500F19D3D /* FSBaseTableViewCell.m */; };
+		5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D7121071A5500F19D3D /* FSCollectionViewCell.m */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
 		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
 		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
@@ -883,6 +894,28 @@
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
 		5D8837EE2102FA780087DA22 /* FSMineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineHeader.h; sourceTree = "<group>"; };
 		5D8837EF2102FA780087DA22 /* FSMineHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineHeader.m; sourceTree = "<group>"; };
+		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
+		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
+		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
+		5D970D5B210716B400F19D3D /* FSAccountSetMData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetMData.m; sourceTree = "<group>"; };
+		5D970D5E21071A5500F19D3D /* FSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTableView.h; sourceTree = "<group>"; };
+		5D970D5F21071A5500F19D3D /* FSImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSImageView.h; sourceTree = "<group>"; };
+		5D970D6021071A5500F19D3D /* FSNavBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSNavBarView.m; sourceTree = "<group>"; };
+		5D970D6221071A5500F19D3D /* FSCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCollectionView.h; sourceTree = "<group>"; };
+		5D970D6321071A5500F19D3D /* FSVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVIew.h; sourceTree = "<group>"; };
+		5D970D6421071A5500F19D3D /* FSSpaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSpaceCell.h; sourceTree = "<group>"; };
+		5D970D6521071A5500F19D3D /* FSWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebView.m; sourceTree = "<group>"; };
+		5D970D6621071A5500F19D3D /* FSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCollectionViewCell.h; sourceTree = "<group>"; };
+		5D970D6721071A5500F19D3D /* FSBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSBaseTableViewCell.h; sourceTree = "<group>"; };
+		5D970D6821071A5500F19D3D /* FSNavBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSNavBarView.h; sourceTree = "<group>"; };
+		5D970D6921071A5500F19D3D /* FSImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSImageView.m; sourceTree = "<group>"; };
+		5D970D6A21071A5500F19D3D /* FSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTableView.m; sourceTree = "<group>"; };
+		5D970D6C21071A5500F19D3D /* FSWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebView.h; sourceTree = "<group>"; };
+		5D970D6D21071A5500F19D3D /* FSSpaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSpaceCell.m; sourceTree = "<group>"; };
+		5D970D6E21071A5500F19D3D /* FSVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVIew.m; sourceTree = "<group>"; };
+		5D970D6F21071A5500F19D3D /* FSCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCollectionView.m; sourceTree = "<group>"; };
+		5D970D7021071A5500F19D3D /* FSBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSBaseTableViewCell.m; sourceTree = "<group>"; };
+		5D970D7121071A5500F19D3D /* FSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCollectionViewCell.m; sourceTree = "<group>"; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
 		5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
@@ -2128,6 +2161,7 @@
 		5D454FDE20FF70CD0041A924 /* FSMine(我的方盛) */ = {
 			isa = PBXGroup;
 			children = (
+				5D8A552C210704F100DE8657 /* SubController */,
 				5DCC6DB121001C87000DDFD9 /* Other */,
 				5D454FE220FF71050041A924 /* Controller */,
 				5D454FE320FF710E0041A924 /* Model */,
@@ -2802,10 +2836,10 @@
 				5DC39FA32093280B000D1B26 /* HealthQuestionnaire */,
 				5D4E339920B3B50F0026B2C4 /* ChineseMedicineQuestionnaire */,
 				5D4E339D20B505AD0026B2C4 /* HealthDynamicQuestionnaire */,
-				5D4E33A120B534D20026B2C4 /* FollowUpQuestionnaire */,
 				5DCE9A9F20C6682100512610 /* MedicalRecord */,
 				5D9FAD2420BEAE140040571B /* NSOperationDemo */,
 				5D4E33A220B654A50026B2C4 /* GCDDemo */,
+				5D4E33A120B534D20026B2C4 /* FollowUpQuestionnaire */,
 			);
 			path = SubController;
 			sourceTree = "<group>";
@@ -2977,6 +3011,74 @@
 				5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */,
 			);
 			path = "备用";
+			sourceTree = "<group>";
+		};
+		5D8A552C210704F100DE8657 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A552D2107052200DE8657 /* FSAccountSetController */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5D8A552D2107052200DE8657 /* FSAccountSetController */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A552E2107053800DE8657 /* Controller */,
+				5D970D592107167C00F19D3D /* Model */,
+				5D8A552F2107053D00DE8657 /* View */,
+			);
+			path = FSAccountSetController;
+			sourceTree = "<group>";
+		};
+		5D8A552E2107053800DE8657 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D970D562107129D00F19D3D /* FSAccountSetController.h */,
+				5D970D572107129D00F19D3D /* FSAccountSetController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D8A552F2107053D00DE8657 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D970D592107167C00F19D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D970D5A210716B400F19D3D /* FSAccountSetMData.h */,
+				5D970D5B210716B400F19D3D /* FSAccountSetMData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D970D5D21071A5500F19D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D970D6321071A5500F19D3D /* FSVIew.h */,
+				5D970D6E21071A5500F19D3D /* FSVIew.m */,
+				5D970D5F21071A5500F19D3D /* FSImageView.h */,
+				5D970D6921071A5500F19D3D /* FSImageView.m */,
+				5D970D5E21071A5500F19D3D /* FSTableView.h */,
+				5D970D6A21071A5500F19D3D /* FSTableView.m */,
+				5D970D6221071A5500F19D3D /* FSCollectionView.h */,
+				5D970D6F21071A5500F19D3D /* FSCollectionView.m */,
+				5D970D6721071A5500F19D3D /* FSBaseTableViewCell.h */,
+				5D970D7021071A5500F19D3D /* FSBaseTableViewCell.m */,
+				5D970D6621071A5500F19D3D /* FSCollectionViewCell.h */,
+				5D970D7121071A5500F19D3D /* FSCollectionViewCell.m */,
+				5D970D6421071A5500F19D3D /* FSSpaceCell.h */,
+				5D970D6D21071A5500F19D3D /* FSSpaceCell.m */,
+				5D970D6C21071A5500F19D3D /* FSWebView.h */,
+				5D970D6521071A5500F19D3D /* FSWebView.m */,
+				5D970D6821071A5500F19D3D /* FSNavBarView.h */,
+				5D970D6021071A5500F19D3D /* FSNavBarView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D97AE862089C206007D586A /* MZMiddleButton(未使用) */ = {
@@ -3544,6 +3646,7 @@
 		5DE1F58920EDE854005FCCD5 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				5D970D5D21071A5500F19D3D /* View */,
 				5D3E4F1A20FA4222008FBF42 /* Model */,
 				5D2EF94920F75D2900699AA2 /* BaseMultiController */,
 				5D829A392085C8B9001993B6 /* BaseController */,
@@ -3840,6 +3943,7 @@
 				5DBC06DD20FC6EED0078E9B6 /* FSCheckCodeController.m in Sources */,
 				5D3E501920FB5D8C008FBF42 /* ReachStateWWAN.m in Sources */,
 				5D3E4F3420FB5A4F008FBF42 /* FSLoginCell.m in Sources */,
+				5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */,
 				5D3E4F3320FB5A42008FBF42 /* FSLoginViewController.m in Sources */,
 				5D4E33A020B506410026B2C4 /* MEDHealthDynamicQuestionnaireController.m in Sources */,
 				5D2EF94820F759DB00699AA2 /* FFBaseToastView.m in Sources */,
@@ -3879,6 +3983,7 @@
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
 				5D3E4FE520FB5D8C008FBF42 /* NSArray+Log.m in Sources */,
+				5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */,
 				5D3E4FF220FB5D8C008FBF42 /* UIButton+EdgeInsets.m in Sources */,
 				5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */,
 				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
@@ -3894,8 +3999,10 @@
 				5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */,
 				5D3E501420FB5D8C008FBF42 /* ReachState.m in Sources */,
 				5D3E4FF920FB5D8C008FBF42 /* FSButton.m in Sources */,
+				5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
 				5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */,
+				5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
 				5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */,
@@ -3990,6 +4097,7 @@
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
 				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
+				5D970D7321071A5500F19D3D /* FSWebView.m in Sources */,
 				5D3E4FFA20FB5D8C008FBF42 /* FSCustomButton.m in Sources */,
 				5D3E4FE820FB5D8C008FBF42 /* NSString+Arc4random.m in Sources */,
 				5DBC070F20FF33020078E9B6 /* WYFileManager.m in Sources */,
@@ -4008,6 +4116,7 @@
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D3E502320FB5D8C008FBF42 /* GCDSemaphore.m in Sources */,
 				5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */,
+				5D970D7921071A5500F19D3D /* FSCollectionView.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
 				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
@@ -4019,6 +4128,7 @@
 				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D3E4F2020FA4233008FBF42 /* FSBaseNData.m in Sources */,
+				5D970D7721071A5500F19D3D /* FSSpaceCell.m in Sources */,
 				5D4279FC20F8E97200FB9C65 /* MZFromController.m in Sources */,
 				5D3E502520FB5D8C008FBF42 /* GHCornerHelper.m in Sources */,
 				5D2EF92320F7581D00699AA2 /* SCLAlertView.m in Sources */,
@@ -4032,6 +4142,7 @@
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
 				5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */,
+				5D970D7421071A5500F19D3D /* FSImageView.m in Sources */,
 				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D3E500920FB5D8C008FBF42 /* BAGridView.m in Sources */,
@@ -4064,9 +4175,11 @@
 				5D829A4B2085D5DB001993B6 /* UIView+MED.m in Sources */,
 				5D8207FA2099A50500B84C1E /* MEDHomePhysiologyBloodGlucoseCell.m in Sources */,
 				5D27456E20DB985F00844B6E /* MEDChangeNameController.m in Sources */,
+				5D970D7521071A5500F19D3D /* FSTableView.m in Sources */,
 				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
 				5DBC071020FF33020078E9B6 /* WYProperty.m in Sources */,
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
+				5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */,
 				5D3E4F3220FA4734008FBF42 /* NSString+unicode.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
 				5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */,
@@ -4118,6 +4231,7 @@
 				5D4F726320EB9BDE0049C92A /* MZScrollTopButton.m in Sources */,
 				5D3E4F2720FA4483008FBF42 /* NSArray+Log.m in Sources */,
 				5D3E4FF820FB5D8C008FBF42 /* UIViewController+Log.m in Sources */,
+				5D970D7821071A5500F19D3D /* FSVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
