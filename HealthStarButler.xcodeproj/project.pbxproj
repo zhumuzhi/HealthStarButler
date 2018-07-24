@@ -291,6 +291,7 @@
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
 		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
 		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
+		5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */; };
 		5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7420F4B83D00D9AF1D /* MEDRefreshDetailsController.m */; };
 		5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7620F4B83D00D9AF1D /* MEDRefreshListController.m */; };
 		5DA70AA720F4B83E00D9AF1D /* MEDDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7E20F4B83D00D9AF1D /* MEDDIYHeader.m */; };
@@ -921,6 +922,8 @@
 		5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
 		5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationDemoController.m; sourceTree = "<group>"; };
 		5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSOperationDemoController.xib; sourceTree = "<group>"; };
+		5DA3551D21076470008B6642 /* FSAccountSetHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetHeadCell.h; sourceTree = "<group>"; };
+		5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetHeadCell.m; sourceTree = "<group>"; };
 		5DA70A7320F4B83D00D9AF1D /* MEDRefreshDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDRefreshDetailsController.h; sourceTree = "<group>"; };
 		5DA70A7420F4B83D00D9AF1D /* MEDRefreshDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRefreshDetailsController.m; sourceTree = "<group>"; };
 		5DA70A7620F4B83D00D9AF1D /* MEDRefreshListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRefreshListController.m; sourceTree = "<group>"; };
@@ -3026,7 +3029,7 @@
 			children = (
 				5D8A552E2107053800DE8657 /* Controller */,
 				5D970D592107167C00F19D3D /* Model */,
-				5D8A552F2107053D00DE8657 /* View */,
+				5DA3551C2107644D008B6642 /* View */,
 			);
 			path = FSAccountSetController;
 			sourceTree = "<group>";
@@ -3038,13 +3041,6 @@
 				5D970D572107129D00F19D3D /* FSAccountSetController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5D8A552F2107053D00DE8657 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -3098,6 +3094,15 @@
 				5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */,
 			);
 			path = NSOperationDemo;
+			sourceTree = "<group>";
+		};
+		5DA3551C2107644D008B6642 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DA3551D21076470008B6642 /* FSAccountSetHeadCell.h */,
+				5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5DA70A7120F4B83D00D9AF1D /* Refresh(下拉刷新上拉加载) */ = {
@@ -4112,6 +4117,7 @@
 				5D12B21220F2EE6200ECE416 /* MZDataModel.m in Sources */,
 				5D3E500720FB5D8C008FBF42 /* BAGridCollectionCell.m in Sources */,
 				5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */,
+				5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */,
 				5D12B20F20F2EE5300ECE416 /* MZDataModelHelper.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
 				5D3E502320FB5D8C008FBF42 /* GCDSemaphore.m in Sources */,
