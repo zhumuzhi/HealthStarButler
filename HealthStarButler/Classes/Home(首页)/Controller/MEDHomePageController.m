@@ -34,6 +34,10 @@
 #import "MEDPerson.h"  // KVC测试
 #import "MEDDog.h"
 
+#import "MEDCollectionLinkController.h" // C联动
+#import "MEDTableViewLinkController.h"  // T联动
+
+
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *homeTableView;
@@ -396,7 +400,8 @@
     if (btnTag == 7) {
         [self touchVerification];
     }else {
-        NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDShopingCartController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class], [MEDMonitorController class]];
+
+        NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDShopingCartController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDTableViewLinkController class], [MEDCollectionLinkController class], [MEDMonitorController class]];
         Class controller = controllers[btnTag];
         UIViewController *viewController = [[controller alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];

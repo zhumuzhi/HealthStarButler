@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class FSAccountSetMData;
 @interface FSAccountSetHeadCell : UITableViewCell
+
+@property (nonatomic, strong) FSAccountSetMData *accountData;
 
 @end

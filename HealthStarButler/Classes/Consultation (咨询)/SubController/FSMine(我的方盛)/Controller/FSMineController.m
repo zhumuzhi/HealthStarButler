@@ -36,6 +36,12 @@
     [self loadData];
     [self configUI];
 }
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"----");
+    [self loadData];
+    [self.tableView reloadData];
+}
 
 #pragma mark - configUI
 - (void)configUI {
@@ -57,11 +63,7 @@
 - (void)loadData {
     self.dataArray = [FSMineMData creatMineMData];
 
-    /* FIXME:网络请求后为Header赋值*/
-    FSMineMData *mineData = [[FSMineMData alloc] init];
-    mineData.acountName = @"账号：MEID123";
-    mineData.permission = @"权限: 下单 结算 审批";
-    mineData.iconUrl = @"list_denglutouxiang";
+    FSMineMData *mineData = [FSMineMData creatMineHeaderData];
     self.mineHeader.mineMData = mineData;
 }
 
@@ -96,10 +98,11 @@
     }else if (type == FSMineCellTypeAddress) {
         NSLog(@"我的地址");
     }else if (type == FSMineCellTypeServicePhone) {
-        NSLog(@"弹出客服电话");
+//        NSLog(@"弹出客服电话");
         [self makePhoneCall];
     }else if (type == FSMineCellTypeClearCache) {
-        NSLog(@"清除缓存");
+//        NSLog(@"清除缓存");
+        [self clearCache];
     }else if (type == FSMineCellTypeSetting) {
         NSLog(@"跳转至设置页面");
     }
@@ -160,21 +163,24 @@
 #pragma mark - Private Methods
 //*拨打客服电话*/
 - (void)makePhoneCall {
-    
     NSString *callPhone = [NSString stringWithFormat:@"telprompt://%@",@"4006809666"];
     if (@available(iOS 10.0, *)) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone] options:@{} completionHandler:nil];
     } else {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
     }
-    
-    //    [MEDAlertMananger presentAlertWithTitle:@"客服电话" message:@"400-680-9666\n周一至周日:8:00~20:00" actionTitle:@[@"呼叫"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
-    //    [MEDAlertMananger presentAlertWithTitle:@"400-680-9666" message:@"周一至周日:8:00~20:00" actionTitle:@[@"呼叫"] preferredStyle:UIAlertControllerStyleAlert handler:^(NSUInteger buttonIndex, NSString *buttonTitle) {
-    //
-    //        if (buttonIndex == 1) {
-    //        }
-    //    }];
 }
+
+/** 清除缓存SD */
+- (void)clearCache {
+    [FSToastTool makeToast:@"正在清除缓存" targetView:self.view];
+    [[CacheHelper sharedManager] sdClearCache:^{
+        [FSToastTool hideToast:self.view];
+    }];
+    [self loadData];
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - LazyGet
 static NSString *identify = @"cellIdentify";

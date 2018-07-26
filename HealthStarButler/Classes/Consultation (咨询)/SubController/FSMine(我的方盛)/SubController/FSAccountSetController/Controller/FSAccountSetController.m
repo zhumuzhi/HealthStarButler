@@ -8,8 +8,10 @@
 
 #import "FSAccountSetController.h"
 #import "FSAccountSetMData.h"
+#import "FSAccountSetHeadCell.h"
+#import "FSAccountSetNormalCell.h"
 
-@interface FSAccountSetController ()<UITableViewDataSource, UITableViewDelegate>
+@interface FSAccountSetController ()<UITableViewDataSource, UITableViewDelegate, FSAccountSetNormalCellDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
@@ -24,13 +26,17 @@
 
     [self loadData];
     [self setupUI];
+
 }
 
 #pragma mark - configUI
 - (void)setupUI {
     self.navigationItem.title = @"账号设置";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
     [self.view addSubview:self.tableView];
+//    UIView *view = [UIView new];
+//    view.height = 0.1;
+//    self.tableView.tableFooterView = view;
 }
 
 #pragma mark - RequestData
@@ -46,15 +52,20 @@
 
     FSAccountSetMData *account = [self.dataArray by_ObjectAtIndex:indexPath.row];
     
-    if (account.cellType == FSAcountSetTypeSpace) {
-        FSSpaceCell *cell = [tableView dequeueReusableCellWithIdentifier:FSSpaceCellID];
-        cell.backgroundColor = [UIColor lightGrayColor];
+    if (account.cellType == FSAcountSetTypeAcount) {
+        FSAccountSetHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:FSAccountSetHeadCellID];
+        FSAccountSetMData *accountData = [self.dataArray by_ObjectAtIndex:indexPath.row];
+        cell.accountData = accountData;
         return cell;
-    }else {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-        cell.textLabel.textColor = [UIColor colorWithHexString:@"#333333"];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textLabel.text = account.title;
+    }else if (account.cellType == FSAcountSetTypeSpace){
+        FSSpaceCell *cell = [tableView dequeueReusableCellWithIdentifier:FSSpaceCellID];
+        cell.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
+        return cell;
+    }else{
+        FSAccountSetNormalCell *cell = [tableView dequeueReusableCellWithIdentifier:FSAccountSetNormalCellID];
+        cell.delegate = self;
+        FSAccountSetMData *accoutSetMData = [self.dataArray by_ObjectAtIndex:indexPath.row];
+        cell.accoutSetMData = accoutSetMData;
         return cell;
     }
 }
@@ -70,7 +81,21 @@
 }
 
 #pragma mark - CustomDelegate
+//FSAccountSetNormalCellDelegate
+- (void)accountSetNormalCell:(FSAccountSetNormalCell *)accountCell dataModel:(FSAccountSetMData *)dataModel acountSetType:(FSAcountSetType)acountSetType {
 
+    if (acountSetType == FSAcountSetTypeInfo) {
+        NSLog(@"跳转到账号信息");
+    }else if (acountSetType == FSAcountSetTypeAddress) {
+        NSLog(@"跳转到账号地址");
+    }else if (acountSetType == FSAcountSetTypeLoginWord) {
+        NSLog(@"跳转到登录密码");
+    }else if (acountSetType == FSAcountSetTypePayWord) {
+        NSLog(@"跳转到支付密码");
+    }else if (acountSetType == FSAcountSetTypeQuit) {
+        NSLog(@"退出登录");
+    }
+}
 
 #pragma mark - LazyGet
 - (NSMutableArray *)dataArray {
@@ -80,25 +105,23 @@
     return _dataArray;
 }
 
+static NSString *FSAccountSetHeadCellID = @"FSAccountSetHeadCellID";
 static NSString *FSSpaceCellID = @"FSSpaceCellID";
-static NSString *identify = @"cellIdentify";
+static NSString *FSAccountSetNormalCellID = @"FSAccountSetNormalCellID";
+
 - (UITableView *)tableView {
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, kScreenWidth, kScreenHeight-64) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight-kTabbarSafeBottomMargin) style:UITableViewStylePlain];
+        self.tableView.backgroundColor = [UIColor colorWithHexString:@"#EEEEEE"];
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag; // 滚动隐藏键盘
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //隐藏自带分割线
         _tableView.showsHorizontalScrollIndicator = NO;                 //关闭水平指示条
-        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.1f, 0.1f, 0.1f, 0.1f)];  // tableFooterView设置
-
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identify];
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.01, 0.01, 0.01, 0.01)];  // tableFooterView设置
+        [_tableView registerClass:[FSAccountSetHeadCell class] forCellReuseIdentifier:FSAccountSetHeadCellID];
         [_tableView registerClass:[FSSpaceCell class] forCellReuseIdentifier:FSSpaceCellID];
-
-        // MJFooter设置
-        //MJRefreshAutoStateFooter *footer = [MJRefreshAutoStateFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
-        //[footer setTitle:@"到底了" forState:MJRefreshStateNoMoreData];
-        //_tableView.mj_footer = footer;
+        [_tableView registerClass:[FSAccountSetNormalCell class] forCellReuseIdentifier:FSAccountSetNormalCellID];
     }
     return _tableView;
 }

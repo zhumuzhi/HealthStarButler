@@ -70,10 +70,9 @@ typedef NS_ENUM (NSUInteger,FSMineOrderDataType) {
 
 //---- OtherCell ----
 //** 创建Header本地数据 */
-//- (FSMineMData *)creatMineHeaderData;
++ (FSMineMData *)creatMineHeaderData;
 //** 创建Cell本地数据 */
 + (NSMutableArray *)creatMineMData;
-
 /** 根据类型创建Order数组 */
 + (NSMutableArray *)creatMineOrderMDataWithDataType:(FSMineOrderDataType)dataType;
 

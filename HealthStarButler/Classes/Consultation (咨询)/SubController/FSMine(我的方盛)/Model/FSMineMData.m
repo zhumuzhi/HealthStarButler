@@ -105,7 +105,9 @@
                            /** 设置 */
                            @(FSMineCellTypeSetting),
                            ];
-    NSArray *subTitles = @[@"",@"",@"400-680-9666",@"0M",@""];
+    CGFloat cache = [[CacheHelper sharedManager] sdGetCacheSize];
+    NSString *cacheStr = [NSString stringWithFormat:@"%.fM",cache];
+    NSArray *subTitles = @[@"",@"",@"400-680-9666",cacheStr,@""];
     NSMutableArray *dataArray = [NSMutableArray array];
     for (NSInteger index = 0; index < titles.count; index++) {
         FSMineMData *mineMData = [[FSMineMData alloc] init];
@@ -119,26 +121,12 @@
     return sectionMData;
 }
 
-//- (FSMineMData *)creatMineHeaderData {
-//    FSMineMData *sectionMData = [[FSMineMData alloc]init];
-//    sectionMData.sectionHeaderHeight = 0.1f;
-//    sectionMData.sectionFooterHeight = 0.1f;
-//
-//    NSArray *titles = @[@"账户设置"];
-//    NSArray *cellTypes = @[
-//                           /** 账户设置 */
-//                           @(FSMineCellTypeAcount),
-//                           ];
-//    NSMutableArray *dataArray = [NSMutableArray array];
-//    for (NSInteger index = 0; index < titles.count; index++) {
-//        FSMineMData *mineMData = [[FSMineMData alloc] init];
-//        mineMData.title = [titles by_ObjectAtIndex:index];
-//        NSNumber *typeNum = [cellTypes by_ObjectAtIndex:index];
-//        mineMData.cellType = typeNum.integerValue;
-//        [dataArray addObject:mineMData];
-//    }
-//    sectionMData.items = dataArray.mutableCopy;
-//    return sectionMData;
-//}
++ (FSMineMData *)creatMineHeaderData {
+    FSMineMData *mineHeadData = [[FSMineMData alloc]init];
+    mineHeadData.acountName = @"账号：MEID123";
+    mineHeadData.permission = @"权限: 下单 结算 审批";
+    mineHeadData.iconUrl = @"list_denglutouxiang";
+    return mineHeadData;
+}
 
 @end

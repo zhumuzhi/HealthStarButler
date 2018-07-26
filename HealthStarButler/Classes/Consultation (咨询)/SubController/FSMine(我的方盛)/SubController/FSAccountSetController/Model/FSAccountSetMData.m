@@ -48,7 +48,7 @@
     FSAccountSetMData  *headData = [[FSAccountSetMData alloc] init];
     headData.cellType = FSAcountSetTypeAcount;
     headData.companyName = @"北京华海中一节能科技股份有限公司";
-    headData.iconUrl = @"someName";
+    headData.iconUrl = @"list_denglutouxiang";
     headData.acountName = @"账号：MEID123";
     headData.permission = @"权限：下单 结算 审批";
     return headData;

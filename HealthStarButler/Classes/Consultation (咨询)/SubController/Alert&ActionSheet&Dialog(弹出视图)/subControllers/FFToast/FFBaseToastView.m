@@ -282,7 +282,7 @@ static NSMutableArray* toastArray = nil;
             }
             
             toastViewX = (SCREEN_WIDTH - toastViewW)/2;
-            toastViewY = SCREEN_HEIGHT - toastViewH - BOTTOM_SPACE;
+            toastViewY = kScreenHeight - toastViewH - BOTTOM_SPACE;
             
             
             break;
@@ -305,7 +305,7 @@ static NSMutableArray* toastArray = nil;
             }
             
             toastViewX = (SCREEN_WIDTH - toastViewW)/2;
-            toastViewY = SCREEN_HEIGHT - toastViewH - BOTTOM_SPACE;
+            toastViewY = kScreenHeight - toastViewH - BOTTOM_SPACE;
             
             if (self.toastCornerRadius == 0) {
                 self.toastCornerRadius = 5.f;

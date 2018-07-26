@@ -7,6 +7,7 @@
 //
 
 #import "FSAccountSetHeadCell.h"
+#import "FSAccountSetMData.h"
 
 @interface FSAccountSetHeadCell()
 
@@ -23,12 +24,9 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if(self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self setupUI];
-        
     }
     return self;
 }
-
-
 
 #pragma mark - configUI
 
@@ -36,6 +34,8 @@ static CGFloat Margin = 10;
 static CGFloat IconW = 60;
 
 - (void)setupUI {
+
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 
     /** 头像 */
     [self.contentView addSubview:self.iconView];
@@ -48,12 +48,11 @@ static CGFloat IconW = 60;
     /** 公司 */
     [self.contentView addSubview:self.companyName];
     [self.companyName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
-        make.left.equalTo(self.iconView.mas_right).offset(Margin);
+        make.top.equalTo(self.iconView.mas_top);
+        make.left.equalTo(self.iconView.mas_right).offset(Margin*2);
         make.right.equalTo(self);
         make.height.equalTo(@(Margin*2));
     }];
-
 
     CGFloat subTitleH = 17.0;
 
@@ -70,13 +69,20 @@ static CGFloat IconW = 60;
     [self.contentView addSubview:self.accoutName];
     [self.accoutName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.accoutType.mas_top);
-
+        make.left.equalTo(self.accoutType.mas_left);
+        make.height.equalTo(self.accoutType.mas_height);
     }];
-
-
 }
 
 #pragma mark - SetData
+
+- (void)setAccountData:(FSAccountSetMData *)accountData {
+    _accountData = accountData;
+    self.companyName.text = accountData.companyName;
+    self.accoutName.text = accountData.acountName;
+    self.accoutType.text = accountData.permission;
+    self.imageView.image = [UIImage imageNamed:accountData.iconUrl];
+}
 
 #pragma mark - Event
 
@@ -96,8 +102,8 @@ static CGFloat IconW = 60;
 - (UILabel *)companyName {
     if (_companyName == nil) {
         _companyName = [[UILabel alloc] init];
-        _accoutName.font = [UIFont fontWithName:@"PingFangSC-Medium" size:12.0];
-        _accoutName.textColor = [UIColor colorWithHexString:@"#333333"];
+        _companyName.font = [UIFont fontWithName:@"PingFangSC-Medium" size:14.0];
+        _companyName.textColor = [UIColor colorWithHexString:@"#333333"];
     }
     return _companyName;
 }
@@ -119,8 +125,6 @@ static CGFloat IconW = 60;
     }
     return _accoutType;
 }
-
-
 
 
 @end

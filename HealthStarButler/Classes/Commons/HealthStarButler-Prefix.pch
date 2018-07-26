@@ -39,6 +39,7 @@
 
 #pragma mark -------------------- 分类 --------------------
 #import "NSObject+MED.h"
+#import "NSObject+MEDProperty.h"
 #import "UIView+MED.h"
 #import "NSString+MED.h"
 #import "NSString+Arc4random.h" // 随机数
@@ -57,6 +58,8 @@
 #pragma mark -------------------- 工具类 --------------------
 #import "MEDDateUtils.h"
 #import "MEDReszingImageTool.h"
+#import "CacheHelper.h"
+#import "FSToastTool.h"
 
 #pragma mark -------------------- 第三方 --------------------
 #import "AFNetworking.h"      //网络

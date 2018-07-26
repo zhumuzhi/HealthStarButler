@@ -28,6 +28,7 @@
 - (void)setGoods:(MEDShopCartModel *)goods {
     _goods = goods;
     self.goodImageView.image = [UIImage imageNamed:goods.image];
+
     self.nameLabel.text = goods.name;
     self.moneyLabel.text = [NSString stringWithFormat:@"%@", goods.money];
     

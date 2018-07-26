@@ -191,7 +191,7 @@ static NSMutableArray* toastArray = nil;
     
     self.toastViewFrame = [self toastViewFrame];
     
-    self.frame = CGRectMake(0, 0, kScreenWidth, SCREEN_HEIGHT);
+    self.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
     
     //设置动画起始Frame
     CGFloat toastViewW = _toastViewFrame.size.width/2;
@@ -266,13 +266,13 @@ static NSMutableArray* toastArray = nil;
             toastViewH = _titleLabelSize.height + _messageLabelSize.height + 3 * TOP_SPACE_TO_TOASTVIEW;
         }
         
-        toastViewY = (SCREEN_HEIGHT - toastViewH)/2;
+        toastViewY = (kScreenHeight - toastViewH)/2;
         
     }else{
         toastViewW = _toastView.frame.size.width;
         toastViewH = _toastView.frame.size.height;
         toastViewX = (kScreenWidth - toastViewW)/2;
-        toastViewY = (SCREEN_HEIGHT - toastViewH)/2;
+        toastViewY = (kScreenHeight - toastViewH)/2;
     }
     
     return CGRectMake(toastViewX, toastViewY, toastViewW, toastViewH);

@@ -135,9 +135,8 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
 - (UILabel *)acountName {
     if (_acountName == nil) {
         _acountName = [[UILabel alloc] init];
-        _acountName.font = [UIFont boldSystemFontOfSize:18]; //PingFangSC-Semibold
+        _acountName.font = [UIFont fontWithName:@"PingFangSC-Semibold" size:18.0];
         _acountName.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-//        _acountName.text = @"账号：MEID123";
     }
     return _acountName;
 }
@@ -145,9 +144,9 @@ static CGFloat arrowW = 20.0;  // 指示View宽度
 - (UILabel *)acountType {
     if (_acountType == nil) {
         _acountType = [[UILabel alloc] init];
-        _acountType.font = [UIFont systemFontOfSize:12]; //PingFangSC-Regular
+        _acountType.font = [UIFont systemFontOfSize:12];
+        _acountType.font = [UIFont fontWithName:@"PingFangSC-Regular" size:12.0];
         _acountType.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-//        _acountType.text = @"权限: 下单 结算 审批";
     }
     return _acountType;
 }

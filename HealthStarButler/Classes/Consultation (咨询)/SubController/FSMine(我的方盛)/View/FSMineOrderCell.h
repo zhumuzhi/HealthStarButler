@@ -14,7 +14,6 @@ typedef NS_ENUM (NSUInteger,FSMineOrderCellType) {
     FSMineOrderCellTypeOrderBtn
 };
 
-
 @class FSMineOrderCell, FSMineMData;
 @protocol FSMineOrderCellDelegate <NSObject>
 @optional

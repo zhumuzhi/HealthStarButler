@@ -183,7 +183,7 @@ BAKit_Color_RGB(u_char r,u_char g, u_char b) {
  */
 #define BAKit_SCREEN_WIDTH ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.width : [[UIScreen mainScreen] bounds].size.height)
 
-#define BAKit_SCREEN_HEIGHT ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
+#define BAKit_kScreenHeight ((([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) || ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortraitUpsideDown)) ? [[UIScreen mainScreen] bounds].size.height : [[UIScreen mainScreen] bounds].size.width)
 
 #define BAKit_BaseScreenWidth   320.0f
 #define BAKit_BaseScreenHeight  568.0f
@@ -193,7 +193,7 @@ BAKit_Color_RGB(u_char r,u_char g, u_char b) {
 //376/320 =
 //667/568 =
 #define BAKit_ScaleXAndWidth    BAKit_SCREEN_WIDTH/BAKit_BaseScreenWidth
-#define BAKit_ScaleYAndHeight   BAKit_SCREEN_HEIGHT/BAKit_BaseScreenHeight
+#define BAKit_ScaleYAndHeight   BAKit_kScreenHeight/BAKit_BaseScreenHeight
 
 #define BAKit_ScreenScale ([[UIScreen mainScreen] scale])
 
