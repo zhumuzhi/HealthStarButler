@@ -17,6 +17,8 @@
 
 #import "FSAccountSetController.h" // 账号设置
 
+#import "FSShopCartController.h"
+
 @interface FSMineController ()<UITableViewDataSource, UITableViewDelegate,
                             FSMineHeaderDelegate,    // 账号信息
                             FSMineOrderCellDelegate, // 我的订单
@@ -79,6 +81,8 @@
 - (void)mineOrderCell:(FSMineOrderCell *)mineOrderCell mineModel:(FSMineMData *)mineModel orderBtnType:(FSMineOrderCellBtnType)orderBtnType {
     if (orderBtnType == FSMineOrderCellBtnTypeAllOrder) {
         NSLog(@"跳转到全部订单页面");
+        FSShopCartController *shopCart = [[FSShopCartController alloc] init];
+        [self.navigationController pushViewController:shopCart animated:YES];
     }else if (orderBtnType == FSMineOrderCellBtnTypeExamine) {
         NSLog(@"跳转到待审核");
     }else if (orderBtnType == FSMineOrderCellBtnTypePay) {

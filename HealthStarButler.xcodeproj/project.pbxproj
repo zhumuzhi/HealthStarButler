@@ -309,6 +309,10 @@
 		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
 		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
 		5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */; };
+		5DA3552C210DC65F008B6642 /* FSShopCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA35524210DC65F008B6642 /* FSShopCartController.m */; };
+		5DA3552D210DC65F008B6642 /* FSShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA35527210DC65F008B6642 /* FSShopCartCell.m */; };
+		5DA3552E210DC65F008B6642 /* FSShopCartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA35529210DC65F008B6642 /* FSShopCartHeaderView.m */; };
+		5DA3552F210DC65F008B6642 /* FSShopCartToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3552B210DC65F008B6642 /* FSShopCartToolBar.m */; };
 		5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7420F4B83D00D9AF1D /* MEDRefreshDetailsController.m */; };
 		5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7620F4B83D00D9AF1D /* MEDRefreshListController.m */; };
 		5DA70AA720F4B83E00D9AF1D /* MEDDIYHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA70A7E20F4B83D00D9AF1D /* MEDDIYHeader.m */; };
@@ -973,6 +977,14 @@
 		5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSOperationDemoController.xib; sourceTree = "<group>"; };
 		5DA3551D21076470008B6642 /* FSAccountSetHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetHeadCell.h; sourceTree = "<group>"; };
 		5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetHeadCell.m; sourceTree = "<group>"; };
+		5DA35523210DC65F008B6642 /* FSShopCartController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopCartController.h; sourceTree = "<group>"; };
+		5DA35524210DC65F008B6642 /* FSShopCartController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopCartController.m; sourceTree = "<group>"; };
+		5DA35526210DC65F008B6642 /* FSShopCartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopCartCell.h; sourceTree = "<group>"; };
+		5DA35527210DC65F008B6642 /* FSShopCartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopCartCell.m; sourceTree = "<group>"; };
+		5DA35528210DC65F008B6642 /* FSShopCartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopCartHeaderView.h; sourceTree = "<group>"; };
+		5DA35529210DC65F008B6642 /* FSShopCartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopCartHeaderView.m; sourceTree = "<group>"; };
+		5DA3552A210DC65F008B6642 /* FSShopCartToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShopCartToolBar.h; sourceTree = "<group>"; };
+		5DA3552B210DC65F008B6642 /* FSShopCartToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShopCartToolBar.m; sourceTree = "<group>"; };
 		5DA70A7320F4B83D00D9AF1D /* MEDRefreshDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDRefreshDetailsController.h; sourceTree = "<group>"; };
 		5DA70A7420F4B83D00D9AF1D /* MEDRefreshDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRefreshDetailsController.m; sourceTree = "<group>"; };
 		5DA70A7620F4B83D00D9AF1D /* MEDRefreshListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDRefreshListController.m; sourceTree = "<group>"; };
@@ -3256,6 +3268,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DA35520210DC65F008B6642 /* FSShopCart(购物车) */ = {
+			isa = PBXGroup;
+			children = (
+				5DA35521210DC65F008B6642 /* FSShopCart */,
+			);
+			path = "FSShopCart(购物车)";
+			sourceTree = "<group>";
+		};
+		5DA35521210DC65F008B6642 /* FSShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				5DA35522210DC65F008B6642 /* Controller */,
+				5DA35525210DC65F008B6642 /* View */,
+			);
+			path = FSShopCart;
+			sourceTree = "<group>";
+		};
+		5DA35522210DC65F008B6642 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DA35523210DC65F008B6642 /* FSShopCartController.h */,
+				5DA35524210DC65F008B6642 /* FSShopCartController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DA35525210DC65F008B6642 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DA35526210DC65F008B6642 /* FSShopCartCell.h */,
+				5DA35527210DC65F008B6642 /* FSShopCartCell.m */,
+				5DA35528210DC65F008B6642 /* FSShopCartHeaderView.h */,
+				5DA35529210DC65F008B6642 /* FSShopCartHeaderView.m */,
+				5DA3552A210DC65F008B6642 /* FSShopCartToolBar.h */,
+				5DA3552B210DC65F008B6642 /* FSShopCartToolBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5DA70A7120F4B83D00D9AF1D /* Refresh(下拉刷新上拉加载) */ = {
 			isa = PBXGroup;
 			children = (
@@ -3786,6 +3837,7 @@
 			children = (
 				5D6CC9242109C1D900235B9C /* CollectionView联动 */,
 				5D6CC9152109C1D900235B9C /* TableView联动 */,
+				5DA35520210DC65F008B6642 /* FSShopCart(购物车) */,
 				5D454FDE20FF70CD0041A924 /* FSMine(我的方盛) */,
 				5DBC06D620FC6CD80078E9B6 /* CheckCode(验证码) */,
 				5D510A6B20FC339400483971 /* FSCheckCodeSlider(滑动解锁) */,
@@ -4176,6 +4228,7 @@
 				5DCC6DBE2101AD51000DDFD9 /* FSMineAllOrderView.m in Sources */,
 				5DCE9B1020C6682100512610 /* TZPhotoPreviewCell.m in Sources */,
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
+				5DA3552D210DC65F008B6642 /* FSShopCartCell.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
 				5D267FF420DDD44C006A42E2 /* MEDShopCartToolBar.m in Sources */,
@@ -4309,6 +4362,7 @@
 				5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */,
 				5D454FEA20FF7C160041A924 /* FSMineNormalCell.m in Sources */,
 				5D69059920D9FB12002BBD69 /* MEDMonitorHeaderView.m in Sources */,
+				5DA3552C210DC65F008B6642 /* FSShopCartController.m in Sources */,
 				5D3E4FEE20FB5D8C008FBF42 /* NSString+unicode.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
@@ -4368,6 +4422,7 @@
 				5D3E4FE920FB5D8C008FBF42 /* NSString+EmptyString.m in Sources */,
 				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,
 				5D3E4FF720FB5D8C008FBF42 /* UIView+Extension.m in Sources */,
+				5DA3552F210DC65F008B6642 /* FSShopCartToolBar.m in Sources */,
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */,
@@ -4383,6 +4438,7 @@
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D2EF96120F82DFC00699AA2 /* MEDMultiSelectController.m in Sources */,
 				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
+				5DA3552E210DC65F008B6642 /* FSShopCartHeaderView.m in Sources */,
 				5DF1F15E20EF5522009A8E51 /* FSPriceAttributedStringTool.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,
 				5D3E502220FB5D8C008FBF42 /* GCDQueue.m in Sources */,
