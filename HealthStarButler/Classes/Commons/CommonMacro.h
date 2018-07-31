@@ -65,6 +65,11 @@
 #define kAutoWithSize(r) r*kScreenWidth / 375.0
 #define kAutoHeightSize(r) r*kScreenHeight / 667.0
 
+//比例 以iPhone6 为基准
+#define kRatio kScreenWidth/375
+//按比例适配
+#define kFit(num)       kRatio * (num)
+
 // Margin
 #define kMargin2 2
 #define kMargin5 5
@@ -190,6 +195,10 @@
 //获取一段时间间隔
 #define kStartTime CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
 #define kEndTime   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
+
+//系统版本号
+#define kSystemCurrentDevice             [[UIDevice currentDevice] systemVersion];
+#define IOS_FSystenVersion              ([[[UIDevice currentDevice] systemVersion] floatValue])
 
 //判断是真机还是模拟器
 #if TARGET_OS_IPHONE
