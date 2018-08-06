@@ -25,7 +25,7 @@
     FSCornerRadiusCell *cell = [tableView dequeueReusableCellWithIdentifier:FSCornerRadiusCellID];
     if (cell == nil) {
         cell = [[FSCornerRadiusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FSCornerRadiusCellID];
-        cell.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+        cell.backgroundColor = [UIColor whiteColor];
     }
     [cell cellViewMakeRadiusLayerWithTableView:tableView indexPath:indexPath];
     return cell;
@@ -47,44 +47,43 @@
         [self configShadow];
         [self configCornerBottom];
     }else {
-        [self configShadow];
+//        [self configShadow];
     }
 }
 
 #pragma mark - ConfigShadow&&Corner
 
 - (void)configShadow {
-    self.layer.shadowOffset = CGSizeZero;
-    self.layer.shadowOpacity = 0.8f;
-    self.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.shadowView.layer.shadowOffset = CGSizeMake(0, 0);
+    self.shadowView.layer.shadowOpacity = 0.5f;
+    self.shadowView.layer.shadowColor = [UIColor blackColor].CGColor;
 }
 
-static CGFloat corner = 8.f;
+static CGFloat Corner = 20.f;
 
 - (void)configCornerTop {
     CGPathRef path = [UIBezierPath bezierPathWithRoundedRect:self.cornerView.bounds
-                                           byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(corner, corner)].CGPath;
+                                           byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(Corner, Corner)].CGPath;
     CAShapeLayer *lay = [CAShapeLayer layer];
     lay.path = path;
     self.cornerView.layer.mask = lay;
 }
 - (void)configCornerBottom {
     CGPathRef path = [UIBezierPath bezierPathWithRoundedRect:self.cornerView.bounds
-                                           byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(corner, corner)].CGPath;
+                                           byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight cornerRadii:CGSizeMake(Corner, Corner)].CGPath;
     CAShapeLayer *lay = [CAShapeLayer layer];
     lay.path = path;
     self.cornerView.layer.mask = lay;
 }
 
-
 #pragma mark - configUI
 - (void)setupUI {
 //   self.backgroundColor = [UIColor orangeColor];
-//   [self.contentView addSubview:self.backgroundView];
 //   [self configShadow];
+    [self.contentView addSubview:self.shadowView];
+    [self.contentView addSubview:self.cornerView];
+
 }
-
-
 - (void)setFrame:(CGRect)frame {
     static CGFloat margin = 10;
     frame.origin.x = margin;
@@ -96,12 +95,30 @@ static CGFloat corner = 8.f;
 - (UIView *)shadowView {
     if (_shadowView == nil) {
         _shadowView = [[UIView alloc] init];
-        _shadowView.backgroundColor = nil;
-        /* FIXME:设置圆角*/
+        _shadowView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+//        _shadowView.backgroundColor = [UIColor whiteColor];
         _shadowView.layer.cornerRadius = 8.0f;
-        _shadowView.layer.masksToBounds = YES;
+        _shadowView.layer.masksToBounds = NO;
     }
     return _shadowView;
+}
+
+- (UIView *)cornerView {
+    if (_cornerView == nil) {
+        _cornerView = [[UIView alloc] init];
+        _cornerView.backgroundColor = [UIColor whiteColor];
+//        _shadowView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+        _cornerView.layer.cornerRadius = 8.0f;
+        _cornerView.layer.masksToBounds = NO;
+//        _cornerView.layer.shadowColor = UIColor.greenColor.CGColor;
+//        _cornerView.layer.borderColor = _shadowView.layer.shadowColor; // 边框颜色建议和阴影颜色一致
+//        _cornerView.layer.borderWidth = 0.000001; // 只要不为0就行
+//        _cornerView.layer.cornerRadius = 40;
+//        _cornerView.layer.shadowOpacity = 1;
+//        _cornerView.layer.shadowRadius = 20;
+//        _cornerView.layer.shadowOffset = CGSizeZero;
+    }
+    return _cornerView;
 }
 
 #pragma mark - SetData
