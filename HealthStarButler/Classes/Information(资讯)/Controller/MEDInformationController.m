@@ -8,6 +8,9 @@
 
 #import "MEDInformationController.h"
 
+#import "FSCornerRadiusController.h"  //圆角阴影
+
+
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -43,6 +46,7 @@
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight - kNavigationHeight) style:UITableViewStylePlain];
     self.tableView = tableView;
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     
     self.tableView.scrollToTopBtnFrame = CGRectMake(kScreenWidth - 100, kScreenHeight - 100 - kNavigationHeight, 100, 100);
@@ -51,20 +55,11 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 50;
 }
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
@@ -76,12 +71,11 @@
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     if (indexPath.row == 0) {
-
+        FSCornerRadiusController *corRad = [[FSCornerRadiusController alloc] init];
+        [self.navigationController pushViewController:corRad animated:YES];
     }else if(indexPath.row == 1){
 
     }else if(indexPath.row == 2){

@@ -378,6 +378,8 @@
 		5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */; };
 		5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */; };
 		5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */; };
+		5DCC2E38211860DB001B60C5 /* FSCornerRadiusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC2E37211860DB001B60C5 /* FSCornerRadiusController.m */; };
+		5DCC2E3D21186256001B60C5 /* FSCornerRadiusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC2E3C21186256001B60C5 /* FSCornerRadiusCell.m */; };
 		5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */; };
 		5DCC6DB821018775000DDFD9 /* FSMineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */; };
 		5DCC6DBE2101AD51000DDFD9 /* FSMineAllOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */; };
@@ -1083,6 +1085,10 @@
 		5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseWebViewController.m; sourceTree = "<group>"; };
 		5DC39FA42093289A000D1B26 /* MEDHealthQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthQuestionnaireController.h; sourceTree = "<group>"; };
 		5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthQuestionnaireController.m; sourceTree = "<group>"; };
+		5DCC2E36211860DB001B60C5 /* FSCornerRadiusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCornerRadiusController.h; sourceTree = "<group>"; };
+		5DCC2E37211860DB001B60C5 /* FSCornerRadiusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCornerRadiusController.m; sourceTree = "<group>"; };
+		5DCC2E3B21186256001B60C5 /* FSCornerRadiusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCornerRadiusCell.h; sourceTree = "<group>"; };
+		5DCC2E3C21186256001B60C5 /* FSCornerRadiusCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCornerRadiusCell.m; sourceTree = "<group>"; };
 		5DCC6DB221001CBD000DDFD9 /* FSMineConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineConfiguration.h; sourceTree = "<group>"; };
 		5DCC6DB3210074DB000DDFD9 /* FSMineAcountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineAcountCell.h; sourceTree = "<group>"; };
 		5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineAcountCell.m; sourceTree = "<group>"; };
@@ -2363,6 +2369,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DCC2E35211860B1001B60C5 /* CornerRadius */,
 				5DE1F57B20EDA5A1005FCCD5 /* TestButton */,
 				5D4F726020EB99480049C92A /* ScrollToTopButton */,
 			);
@@ -3629,6 +3636,33 @@
 			path = HealthQuestionnaire;
 			sourceTree = "<group>";
 		};
+		5DCC2E35211860B1001B60C5 /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				5DCC2E3921186229001B60C5 /* Controller */,
+				5DCC2E3A21186235001B60C5 /* View */,
+			);
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
+		5DCC2E3921186229001B60C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DCC2E36211860DB001B60C5 /* FSCornerRadiusController.h */,
+				5DCC2E37211860DB001B60C5 /* FSCornerRadiusController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DCC2E3A21186235001B60C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DCC2E3B21186256001B60C5 /* FSCornerRadiusCell.h */,
+				5DCC2E3C21186256001B60C5 /* FSCornerRadiusCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5DCC6DB121001C87000DDFD9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -4298,6 +4332,7 @@
 				5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */,
 				5D69059520D9FB12002BBD69 /* ITDatePickerController.m in Sources */,
 				5D201DFA20CA6D2C009007D9 /* MEDSuggestCell.m in Sources */,
+				5DCC2E38211860DB001B60C5 /* FSCornerRadiusController.m in Sources */,
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
 				5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */,
 				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
@@ -4372,6 +4407,7 @@
 				5D6CC93B2109C1D900235B9C /* MEDCollectionCategoryModel.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5D6CC90A210894A300235B9C /* FSAccountSetNormalCell.m in Sources */,
+				5DCC2E3D21186256001B60C5 /* FSCornerRadiusCell.m in Sources */,
 				5D3E500920FB5D8C008FBF42 /* BAGridView.m in Sources */,
 				5D427A0D20F8F38500FB9C65 /* MZFormTextField.m in Sources */,
 				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,

@@ -10,15 +10,38 @@
 
 @interface MEDHealthQuestionnaireController ()
 
+@property (nonatomic, strong) UILabel *titleLab;
+
+
 @end
 
 @implementation MEDHealthQuestionnaireController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 
-    
+    NSString *str = @"<font color='red'>赫里斯</font> HELISI 架子工 <font color='red'>扳手</font>";
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[str dataUsingEncoding:NSUnicodeStringEncoding] options:@{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType } documentAttributes:nil error:nil];
+
+    [self.view addSubview:self.titleLab];
+    self.titleLab.attributedText = attrStr;
+
+//        [self.titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.centerY.centerX.equalTo(self);
+//            make.width.equalTo(@(300));
+//            make.height.equalTo(@(30));
+//        }];
+
+}
+
+- (UILabel *)titleLab {
+    if (_titleLab == nil) {
+        _titleLab = [[UILabel alloc] init];
+        CGRect titleFrame = CGRectMake(50, 300, kScreenWidth-100, 30);
+        _titleLab.frame = titleFrame;
+        _titleLab.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleLab;
 }
 
 

@@ -134,7 +134,6 @@ static NSString *cellID = @"wine";
 #pragma mark - Delegate 监听
 
 - (void)shopCartCellDidClickPlusButton:(MEDShopCartCell *)cell {
-    
     // 计算总价
     int totalPrice = self.toolBar.totalPriceLabel.text.intValue + cell.goods.money.intValue;
     // 设置总价
@@ -145,7 +144,6 @@ static NSString *cellID = @"wine";
     if (![self.shopCar containsObject:cell.goods]) {
         [self.shopCar addObject:cell.goods]; // 将选中的商品加入购物车数组
     }
-    
 }
 
 - (void)shopCartCellDidClickMinusButton:(MEDShopCartCell *)cell {
