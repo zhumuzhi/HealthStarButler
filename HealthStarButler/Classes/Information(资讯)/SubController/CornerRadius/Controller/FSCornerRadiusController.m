@@ -64,7 +64,13 @@ static NSString *FSCornerRadiusCellID = @"FSCornerRadiusCellID";
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10.f;
 }
-
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [UIView new];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.1f;
+}
 
 #pragma mark - LazyGet
 - (UITableView *)tableView {
@@ -81,14 +87,5 @@ static NSString *FSCornerRadiusCellID = @"FSCornerRadiusCellID";
     }
     return _tableView;
 }
-
-
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    cell.backgroundColor = [UIColor clearColor];
-//    FSCornerRadiusCell *myCell = (FSCornerRadiusCell*)cell;
-//    myCell.backgroundView.backgroundColor = [UIColor whiteColor];
-//}
-
 
 @end
