@@ -198,11 +198,6 @@ Copyright 2011 - 2018 umeng.com. All rights reserved.
 Copyright 2011 - 2018 umeng.com. All rights reserved.
 
 
-## UMCSecurityPlugins
-
-Copyright 2011 - 2018 umeng.com. All rights reserved.
-
-
 ## WRNavigationBar
 
 MIT License

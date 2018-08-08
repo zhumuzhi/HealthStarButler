@@ -356,6 +356,24 @@
 		5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */; };
 		5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04320F6316700AF5C74 /* MZSettingItem.m */; };
 		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
+		5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */; };
+		5DB9C4902119810200B4D4C0 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C48F2119810200B4D4C0 /* JStoOC.html */; };
+		5DB9C4952119822500B4D4C0 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */; };
+		5DB9C4962119822500B4D4C0 /* backbutton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4922119822500B4D4C0 /* backbutton@3x.png */; };
+		5DB9C4972119822500B4D4C0 /* backbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4932119822500B4D4C0 /* backbutton@2x.png */; };
+		5DB9C4982119822500B4D4C0 /* webRefreshButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4942119822500B4D4C0 /* webRefreshButton@3x.png */; };
+		5DB9C49C21199EAE00B4D4C0 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C49A21199EAE00B4D4C0 /* AlipaySDK.bundle */; };
+		5DB9C49D21199EAE00B4D4C0 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C49B21199EAE00B4D4C0 /* AlipaySDK.framework */; };
+		5DB9C49F21199F0400B4D4C0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C49E21199F0400B4D4C0 /* libc++.tbd */; };
+		5DB9C4A121199F2600B4D4C0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4A021199F2600B4D4C0 /* libz.tbd */; };
+		5DB9C4A321199F4700B4D4C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4A221199F4700B4D4C0 /* SystemConfiguration.framework */; };
+		5DB9C4A521199F6100B4D4C0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4A421199F6100B4D4C0 /* CoreTelephony.framework */; };
+		5DB9C4A721199F9A00B4D4C0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4A621199F9A00B4D4C0 /* QuartzCore.framework */; };
+		5DB9C4A921199FAD00B4D4C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4A821199FAD00B4D4C0 /* UIKit.framework */; };
+		5DB9C4AB2119A01C00B4D4C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4AA2119A01C00B4D4C0 /* Foundation.framework */; };
+		5DB9C4AD2119A02400B4D4C0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4AC2119A02300B4D4C0 /* CFNetwork.framework */; };
+		5DB9C4AF2119A02F00B4D4C0 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DB9C4AE2119A02F00B4D4C0 /* CoreMotion.framework */; };
+		5DB9C4B32119A10300B4D4C0 /* FSAliPayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9C4B22119A10300B4D4C0 /* FSAliPayController.m */; };
 		5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06DB20FC6D8A0078E9B6 /* FSCheckCodeView.m */; };
 		5DBC06DD20FC6EED0078E9B6 /* FSCheckCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */; };
 		5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC070820FF33020078E9B6 /* NSObject+WYCoding.m */; };
@@ -1042,6 +1060,26 @@
 		5DA8C04620F6316700AF5C74 /* MZSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingCell.m; sourceTree = "<group>"; };
 		5DB1B64820F9F83A00C01FF0 /* FSLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLoginViewController.h; sourceTree = "<group>"; };
 		5DB1B64920F9F83A00C01FF0 /* FSLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLoginViewController.m; sourceTree = "<group>"; };
+		5DB9C48A21197CAC00B4D4C0 /* FSWKWebJSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWKWebJSController.h; sourceTree = "<group>"; };
+		5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSWKWebJSController.m; sourceTree = "<group>"; };
+		5DB9C48F2119810200B4D4C0 /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
+		5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@2x.png"; sourceTree = "<group>"; };
+		5DB9C4922119822500B4D4C0 /* backbutton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@3x.png"; sourceTree = "<group>"; };
+		5DB9C4932119822500B4D4C0 /* backbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbutton@2x.png"; sourceTree = "<group>"; };
+		5DB9C4942119822500B4D4C0 /* webRefreshButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "webRefreshButton@3x.png"; sourceTree = "<group>"; };
+		5DB9C49A21199EAE00B4D4C0 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		5DB9C49B21199EAE00B4D4C0 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		5DB9C49E21199F0400B4D4C0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5DB9C4A021199F2600B4D4C0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5DB9C4A221199F4700B4D4C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5DB9C4A421199F6100B4D4C0 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		5DB9C4A621199F9A00B4D4C0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5DB9C4A821199FAD00B4D4C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DB9C4AA2119A01C00B4D4C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5DB9C4AC2119A02300B4D4C0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5DB9C4AE2119A02F00B4D4C0 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		5DB9C4B12119A10300B4D4C0 /* FSAliPayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAliPayController.h; sourceTree = "<group>"; };
+		5DB9C4B22119A10300B4D4C0 /* FSAliPayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAliPayController.m; sourceTree = "<group>"; };
 		5DBC06D720FC6D010078E9B6 /* FSCheckCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeController.h; sourceTree = "<group>"; };
 		5DBC06D820FC6D010078E9B6 /* FSCheckCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckCodeController.m; sourceTree = "<group>"; };
 		5DBC06DA20FC6D8A0078E9B6 /* FSCheckCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeView.h; sourceTree = "<group>"; };
@@ -1191,8 +1229,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DB9C4AF2119A02F00B4D4C0 /* CoreMotion.framework in Frameworks */,
+				5DB9C4AD2119A02400B4D4C0 /* CFNetwork.framework in Frameworks */,
+				5DB9C4AB2119A01C00B4D4C0 /* Foundation.framework in Frameworks */,
+				5DB9C4A921199FAD00B4D4C0 /* UIKit.framework in Frameworks */,
+				5DB9C4A721199F9A00B4D4C0 /* QuartzCore.framework in Frameworks */,
+				5DB9C4A521199F6100B4D4C0 /* CoreTelephony.framework in Frameworks */,
+				5DB9C4A321199F4700B4D4C0 /* SystemConfiguration.framework in Frameworks */,
+				5DB9C4A121199F2600B4D4C0 /* libz.tbd in Frameworks */,
+				5DB9C49F21199F0400B4D4C0 /* libc++.tbd in Frameworks */,
 				07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */,
 				5DE1F58420EDE3BC005FCCD5 /* HealthKit.framework in Frameworks */,
+				5DB9C49D21199EAE00B4D4C0 /* AlipaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1990,6 +2038,7 @@
 		5D3E4F9020FB5D8C008FBF42 /* FSLib */ = {
 			isa = PBXGroup;
 			children = (
+				5DB9C49921199EAE00B4D4C0 /* AlipaySDK */,
 				5D3E4F9120FB5D8C008FBF42 /* BAGridView */,
 				5D3E4F9C20FB5D8C008FBF42 /* DHGuidePageHUD */,
 			);
@@ -2369,6 +2418,8 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
+				5DB9C48921197C7700B4D4C0 /* WKWeb-JS */,
 				5DCC2E35211860B1001B60C5 /* CornerRadius */,
 				5DE1F57B20EDA5A1005FCCD5 /* TestButton */,
 				5D4F726020EB99480049C92A /* ScrollToTopButton */,
@@ -3495,6 +3546,70 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DB9C48921197C7700B4D4C0 /* WKWeb-JS */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C48D211980E600B4D4C0 /* Controller */,
+				5DB9C48E211980F500B4D4C0 /* Other */,
+			);
+			path = "WKWeb-JS";
+			sourceTree = "<group>";
+		};
+		5DB9C48D211980E600B4D4C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C48A21197CAC00B4D4C0 /* FSWKWebJSController.h */,
+				5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB9C48E211980F500B4D4C0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C48F2119810200B4D4C0 /* JStoOC.html */,
+				5DB9C4932119822500B4D4C0 /* backbutton@2x.png */,
+				5DB9C4922119822500B4D4C0 /* backbutton@3x.png */,
+				5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */,
+				5DB9C4942119822500B4D4C0 /* webRefreshButton@3x.png */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5DB9C49921199EAE00B4D4C0 /* AlipaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C49A21199EAE00B4D4C0 /* AlipaySDK.bundle */,
+				5DB9C49B21199EAE00B4D4C0 /* AlipaySDK.framework */,
+			);
+			path = AlipaySDK;
+			sourceTree = "<group>";
+		};
+		5DB9C4B02119A0E800B4D4C0 /* AliPayTest */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C4B52119B7DD00B4D4C0 /* Model */,
+				5DB9C4B42119B7D100B4D4C0 /* Controller */,
+			);
+			path = AliPayTest;
+			sourceTree = "<group>";
+		};
+		5DB9C4B42119B7D100B4D4C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB9C4B12119A10300B4D4C0 /* FSAliPayController.h */,
+				5DB9C4B22119A10300B4D4C0 /* FSAliPayController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB9C4B52119B7DD00B4D4C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5DBC06D620FC6CD80078E9B6 /* CheckCode(验证码) */ = {
 			isa = PBXGroup;
 			children = (
@@ -3959,6 +4074,15 @@
 		C304EF3E1EAF2A12195628D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DB9C4AE2119A02F00B4D4C0 /* CoreMotion.framework */,
+				5DB9C4AC2119A02300B4D4C0 /* CFNetwork.framework */,
+				5DB9C4AA2119A01C00B4D4C0 /* Foundation.framework */,
+				5DB9C4A821199FAD00B4D4C0 /* UIKit.framework */,
+				5DB9C4A621199F9A00B4D4C0 /* QuartzCore.framework */,
+				5DB9C4A421199F6100B4D4C0 /* CoreTelephony.framework */,
+				5DB9C4A221199F4700B4D4C0 /* SystemConfiguration.framework */,
+				5DB9C4A021199F2600B4D4C0 /* libz.tbd */,
+				5DB9C49E21199F0400B4D4C0 /* libc++.tbd */,
 				5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */,
 				2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */,
 			);
@@ -3977,6 +4101,7 @@
 				5D829A182085C7D1001993B6 /* Frameworks */,
 				5D829A192085C7D1001993B6 /* Resources */,
 				27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */,
+				00B7534735523FBBBD9BC8E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -4070,6 +4195,8 @@
 				5DA70AAF20F4B83E00D9AF1D /* dropdown_anim__00026@2x.png in Resources */,
 				5DA70AC220F4B83E00D9AF1D /* dropdown_loading_01@2x.png in Resources */,
 				5D3E500D20FB5D8C008FBF42 /* GuideImage.bundle in Resources */,
+				5DB9C4972119822500B4D4C0 /* backbutton@2x.png in Resources */,
+				5DB9C4952119822500B4D4C0 /* webRefreshButton@2x.png in Resources */,
 				5D8208052099A50500B84C1E /* MEDHomeComplianceCell.xib in Resources */,
 				5D267FE620DD4106006A42E2 /* 4.jpg in Resources */,
 				5DA70ABA20F4B83E00D9AF1D /* dropdown_anim__00018@2x.png in Resources */,
@@ -4085,6 +4212,7 @@
 				5D267FE420DD4106006A42E2 /* 23.jpg in Resources */,
 				5D8207F62099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.xib in Resources */,
 				5DCE9B0C20C6682100512610 /* TZImagePickerController.bundle in Resources */,
+				5DB9C49C21199EAE00B4D4C0 /* AlipaySDK.bundle in Resources */,
 				5D267FD620DD4106006A42E2 /* 10.jpg in Resources */,
 				5D8207EF2099A50500B84C1E /* MEDCompanyRankHeadView.xib in Resources */,
 				5D267FBC20DD40E6006A42E2 /* drinks.plist in Resources */,
@@ -4104,10 +4232,12 @@
 				5D267FE920DD4106006A42E2 /* 7.jpg in Resources */,
 				5D267FEA20DD4106006A42E2 /* 8.jpg in Resources */,
 				5DA70AC520F4B83E00D9AF1D /* dropdown_anim__00013@2x.png in Resources */,
+				5DB9C4902119810200B4D4C0 /* JStoOC.html in Resources */,
 				5DA70ABB20F4B83E00D9AF1D /* dropdown_anim__0001@2x.png in Resources */,
 				5D267FDF20DD4106006A42E2 /* 19.png in Resources */,
 				5D201DEF20CA6D2C009007D9 /* circle_ridge@2x.png in Resources */,
 				5DA70AB620F4B83E00D9AF1D /* dropdown_anim__00016@2x.png in Resources */,
+				5DB9C4982119822500B4D4C0 /* webRefreshButton@3x.png in Resources */,
 				5D6CC9352109C1D900235B9C /* meituan.json in Resources */,
 				5D267FD920DD4106006A42E2 /* 13.jpg in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
@@ -4117,6 +4247,7 @@
 				5DA70AB420F4B83E00D9AF1D /* dropdown_anim__00020@2x.png in Resources */,
 				5D4A48242091AB03007DAD29 /* MEDManageVerticalCell.xib in Resources */,
 				5DA70AAD20F4B83E00D9AF1D /* dropdown_anim__0005@2x.png in Resources */,
+				5DB9C4962119822500B4D4C0 /* backbutton@3x.png in Resources */,
 				5DCE9AFC20C6682100512610 /* MEDTreatmentRecordDescCell.xib in Resources */,
 				5D6CC93A2109C1D900235B9C /* liwushuo.json in Resources */,
 				5DA70AAE20F4B83E00D9AF1D /* dropdown_anim__0009@2x.png in Resources */,
@@ -4141,6 +4272,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00B7534735523FBBBD9BC8E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -4455,6 +4601,7 @@
 				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5D3E500820FB5D8C008FBF42 /* BAGridItemModel.m in Sources */,
+				5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */,
 				5D3E4FE920FB5D8C008FBF42 /* NSString+EmptyString.m in Sources */,
 				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,
 				5D3E4FF720FB5D8C008FBF42 /* UIView+Extension.m in Sources */,
@@ -4481,6 +4628,7 @@
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
+				5DB9C4B32119A10300B4D4C0 /* FSAliPayController.m in Sources */,
 				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
 				5D3E4F2620FA4483008FBF42 /* NSArray+Bounds.m in Sources */,
 				5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */,
@@ -4644,6 +4792,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HealthStarButler/Classes/FSSDK/FSLib/AlipaySDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4666,6 +4818,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GFW576JD52;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HealthStarButler/Classes/FSSDK/FSLib/AlipaySDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HealthStarButler/Classes/Commons/HealthStarButler-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/HealthStarButler/Classes/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

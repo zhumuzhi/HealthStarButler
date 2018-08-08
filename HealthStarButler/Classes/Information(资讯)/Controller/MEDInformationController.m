@@ -9,6 +9,8 @@
 #import "MEDInformationController.h"
 
 #import "FSCornerRadiusController.h"  //圆角阴影
+#import "FSWKWebJSController.h" // WKWeb_JS交互
+#import "FSAliPayController.h"  // 支付宝测试
 
 
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
@@ -17,17 +19,26 @@
 
 @property (nonatomic, weak) UITableView *tableView;
 
+@property (nonatomic, strong) NSMutableArray *datasArray;
+
+
 @end
 
 @implementation MEDInformationController
 
 #pragma mark - Lazy
-//- (UIScrollView *)scrollView {
-//    if(!_scrollView){
-//        _scrollView = [[UIScrollView alloc] init];
-//    }
-//    return _scrollView;
-//}
+- (NSMutableArray *)datasArray
+{
+    if (_datasArray == nil) {
+        _datasArray = [NSMutableArray arrayWithArray:@[
+                                                       @{@"name":@"圆角阴影", @"className":@"FSCornerRadiusController"},
+                                                       @{@"name":@"WKWeb-JS", @"className":@"FSWKWebJSController"},
+                                                       @{@"name":@"支付宝测试", @"className":@"FSAliPayController"}
+                                                       ]
+                       ];
+    }
+    return _datasArray;
+}
 
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
@@ -57,14 +68,15 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 50;
+    return self.datasArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.textLabel.text = [NSString stringWithFormat:@"CELL NO.%zi", indexPath.row];
+        NSDictionary *dict = self.datasArray[indexPath.row];
+        cell.textLabel.text = dict[@"name"];
         cell.textLabel.textColor = [UIColor lightGrayColor];
     }
     return cell;
@@ -73,14 +85,11 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    if (indexPath.row == 0) {
-        FSCornerRadiusController *corRad = [[FSCornerRadiusController alloc] init];
-        [self.navigationController pushViewController:corRad animated:YES];
-    }else if(indexPath.row == 1){
-
-    }else if(indexPath.row == 2){
-
-    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSDictionary *dict = self.datasArray[indexPath.row];
+    Class controller = NSClassFromString(dict[@"className"]);
+    UIViewController *viewController = [[controller alloc] init];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - ConfigUI
