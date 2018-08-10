@@ -212,6 +212,12 @@
 		5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
+		5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D861211AE48100A58D76 /* FSPassWordController.m */; };
+		5D62D879211AF0AF00A58D76 /* HHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D870211AF0AF00A58D76 /* HHTextField.m */; };
+		5D62D87A211AF0AF00A58D76 /* HHPasswordErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D871211AF0AF00A58D76 /* HHPasswordErrorView.m */; };
+		5D62D87B211AF0AF00A58D76 /* HHPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D872211AF0AF00A58D76 /* HHPayPasswordView.m */; };
+		5D62D87C211AF0AF00A58D76 /* FSPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */; };
+		5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
 		5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D69057120D9FB12002BBD69 /* MEDBloodPressureCell.xib */; };
@@ -356,6 +362,8 @@
 		5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04120F6316700AF5C74 /* MZSettingGroup.m */; };
 		5DA8C04920F6316700AF5C74 /* MZSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04320F6316700AF5C74 /* MZSettingItem.m */; };
 		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
+		5DB7872D211C2D3000661CDD /* FSPayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7872B211C2D3000661CDD /* FSPayTextField.m */; };
+		5DB7872E211C2D3000661CDD /* FSPayPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7872C211C2D3000661CDD /* FSPayPopMenu.m */; };
 		5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */; };
 		5DB9C4902119810200B4D4C0 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C48F2119810200B4D4C0 /* JStoOC.html */; };
 		5DB9C4952119822500B4D4C0 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */; };
@@ -818,6 +826,18 @@
 		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
 		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
 		5D5E0FF520F30108003148A1 /* MZLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginCell.m; sourceTree = "<group>"; };
+		5D62D860211AE48100A58D76 /* FSPassWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPassWordController.h; sourceTree = "<group>"; };
+		5D62D861211AE48100A58D76 /* FSPassWordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPassWordController.m; sourceTree = "<group>"; };
+		5D62D86D211AF0AF00A58D76 /* HHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTextField.h; sourceTree = "<group>"; };
+		5D62D86E211AF0AF00A58D76 /* HHPasswordErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHPasswordErrorView.h; sourceTree = "<group>"; };
+		5D62D86F211AF0AF00A58D76 /* HHPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHPayPasswordView.h; sourceTree = "<group>"; };
+		5D62D870211AF0AF00A58D76 /* HHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTextField.m; sourceTree = "<group>"; };
+		5D62D871211AF0AF00A58D76 /* HHPasswordErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHPasswordErrorView.m; sourceTree = "<group>"; };
+		5D62D872211AF0AF00A58D76 /* HHPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHPayPasswordView.m; sourceTree = "<group>"; };
+		5D62D874211AF0AF00A58D76 /* FSPayPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayPasswordView.h; sourceTree = "<group>"; };
+		5D62D875211AF0AF00A58D76 /* FSPayPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayPopupView.h; sourceTree = "<group>"; };
+		5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPasswordView.m; sourceTree = "<group>"; };
+		5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPopupView.m; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
 		5D69056D20D9FB12002BBD69 /* MEDMonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorController.h; sourceTree = "<group>"; };
 		5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHistoryController.m; sourceTree = "<group>"; };
@@ -1060,6 +1080,10 @@
 		5DA8C04620F6316700AF5C74 /* MZSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZSettingCell.m; sourceTree = "<group>"; };
 		5DB1B64820F9F83A00C01FF0 /* FSLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLoginViewController.h; sourceTree = "<group>"; };
 		5DB1B64920F9F83A00C01FF0 /* FSLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLoginViewController.m; sourceTree = "<group>"; };
+		5DB78729211C2D2F00661CDD /* FSPayPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayPopMenu.h; sourceTree = "<group>"; };
+		5DB7872A211C2D2F00661CDD /* FSPayTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayTextField.h; sourceTree = "<group>"; };
+		5DB7872B211C2D3000661CDD /* FSPayTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayTextField.m; sourceTree = "<group>"; };
+		5DB7872C211C2D3000661CDD /* FSPayPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPopMenu.m; sourceTree = "<group>"; };
 		5DB9C48A21197CAC00B4D4C0 /* FSWKWebJSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWKWebJSController.h; sourceTree = "<group>"; };
 		5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSWKWebJSController.m; sourceTree = "<group>"; };
 		5DB9C48F2119810200B4D4C0 /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
@@ -2418,6 +2442,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D62D85D211AE44A00A58D76 /* PassWordTest */,
 				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
 				5DB9C48921197C7700B4D4C0 /* WKWeb-JS */,
 				5DCC2E35211860B1001B60C5 /* CornerRadius */,
@@ -2454,6 +2479,66 @@
 				5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */,
 			);
 			path = "FSCheckCodeSlider(滑动解锁)";
+			sourceTree = "<group>";
+		};
+		5D62D85D211AE44A00A58D76 /* PassWordTest */ = {
+			isa = PBXGroup;
+			children = (
+				5D62D863211AE4B100A58D76 /* Other */,
+				5D62D85E211AE45C00A58D76 /* Controller */,
+				5D62D85F211AE46700A58D76 /* View */,
+			);
+			path = PassWordTest;
+			sourceTree = "<group>";
+		};
+		5D62D85E211AE45C00A58D76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D62D860211AE48100A58D76 /* FSPassWordController.h */,
+				5D62D861211AE48100A58D76 /* FSPassWordController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D62D85F211AE46700A58D76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D62D863211AE4B100A58D76 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5DB78728211C2D0A00661CDD /* alipayTextField */,
+				5D62D86C211AF0AF00A58D76 /* HHPayPasswordView */,
+				5D62D873211AF0AF00A58D76 /* ZJPayPassword */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5D62D86C211AF0AF00A58D76 /* HHPayPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				5D62D86F211AF0AF00A58D76 /* HHPayPasswordView.h */,
+				5D62D872211AF0AF00A58D76 /* HHPayPasswordView.m */,
+				5D62D86E211AF0AF00A58D76 /* HHPasswordErrorView.h */,
+				5D62D871211AF0AF00A58D76 /* HHPasswordErrorView.m */,
+				5D62D86D211AF0AF00A58D76 /* HHTextField.h */,
+				5D62D870211AF0AF00A58D76 /* HHTextField.m */,
+			);
+			path = HHPayPasswordView;
+			sourceTree = "<group>";
+		};
+		5D62D873211AF0AF00A58D76 /* ZJPayPassword */ = {
+			isa = PBXGroup;
+			children = (
+				5D62D875211AF0AF00A58D76 /* FSPayPopupView.h */,
+				5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */,
+				5D62D874211AF0AF00A58D76 /* FSPayPasswordView.h */,
+				5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */,
+			);
+			path = ZJPayPassword;
 			sourceTree = "<group>";
 		};
 		5D69056720D9FB12002BBD69 /* MEDMonitorController */ = {
@@ -3546,6 +3631,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DB78728211C2D0A00661CDD /* alipayTextField */ = {
+			isa = PBXGroup;
+			children = (
+				5DB78729211C2D2F00661CDD /* FSPayPopMenu.h */,
+				5DB7872C211C2D3000661CDD /* FSPayPopMenu.m */,
+				5DB7872A211C2D2F00661CDD /* FSPayTextField.h */,
+				5DB7872B211C2D3000661CDD /* FSPayTextField.m */,
+			);
+			path = alipayTextField;
+			sourceTree = "<group>";
+		};
 		5DB9C48921197C7700B4D4C0 /* WKWeb-JS */ = {
 			isa = PBXGroup;
 			children = (
@@ -4348,6 +4444,7 @@
 				5D3E4FF520FB5D8C008FBF42 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				5D3E501320FB5D8C008FBF42 /* FSMStateUtil.m in Sources */,
 				5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */,
+				5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */,
 				5D3E501A20FB5D8C008FBF42 /* GHHTTPManager.m in Sources */,
 				5D3E4FE420FB5D8C008FBF42 /* NSArray+Bounds.m in Sources */,
 				5D2EF94520F759DB00699AA2 /* NSString+FFToast.m in Sources */,
@@ -4378,6 +4475,7 @@
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
 				5D3E4FE520FB5D8C008FBF42 /* NSArray+Log.m in Sources */,
 				5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */,
+				5D62D87A211AF0AF00A58D76 /* HHPasswordErrorView.m in Sources */,
 				5D3E4FF220FB5D8C008FBF42 /* UIButton+EdgeInsets.m in Sources */,
 				5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */,
 				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
@@ -4392,6 +4490,7 @@
 				5DCE9B0620C6682100512610 /* TZAssetCell.m in Sources */,
 				5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */,
 				5D3E501420FB5D8C008FBF42 /* ReachState.m in Sources */,
+				5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */,
 				5D3E4FF920FB5D8C008FBF42 /* FSButton.m in Sources */,
 				5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
@@ -4416,6 +4515,7 @@
 				5D3E4FEF20FB5D8C008FBF42 /* NSString+Util.m in Sources */,
 				5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */,
 				5D8208032099A50500B84C1E /* MEDHomeComplianceController.m in Sources */,
+				5D62D87B211AF0AF00A58D76 /* HHPayPasswordView.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */,
 				5D69059020D9FB12002BBD69 /* MEDBloodPressureFrame.m in Sources */,
@@ -4482,6 +4582,7 @@
 				5D829A202085C7D1001993B6 /* AppDelegate.m in Sources */,
 				5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */,
 				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
+				5D62D879211AF0AF00A58D76 /* HHTextField.m in Sources */,
 				5D6CC9332109C1D900235B9C /* MEDTableViewLinkController.m in Sources */,
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
@@ -4577,7 +4678,9 @@
 				5D2EF96220F82DFC00699AA2 /* MEDNormalChooseController.m in Sources */,
 				5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */,
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
+				5DB7872D211C2D3000661CDD /* FSPayTextField.m in Sources */,
 				5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */,
+				5DB7872E211C2D3000661CDD /* FSPayPopMenu.m in Sources */,
 				5D427A0320F8E9C100FB9C65 /* MZFromModel.m in Sources */,
 				5D3E4FE620FB5D8C008FBF42 /* NSDictionary+Log.m in Sources */,
 				5DF1F14F20EF1FA6009A8E51 /* GHFromCell.m in Sources */,
@@ -4601,6 +4704,7 @@
 				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5D3E500820FB5D8C008FBF42 /* BAGridItemModel.m in Sources */,
+				5D62D87C211AF0AF00A58D76 /* FSPayPasswordView.m in Sources */,
 				5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */,
 				5D3E4FE920FB5D8C008FBF42 /* NSString+EmptyString.m in Sources */,
 				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,

@@ -8,10 +8,10 @@
 
 #import "MEDInformationController.h"
 
-#import "FSCornerRadiusController.h"  //圆角阴影
-#import "FSWKWebJSController.h" // WKWeb_JS交互
-#import "FSAliPayController.h"  // 支付宝测试
-
+#import "FSCornerRadiusController.h"     // 圆角阴影
+#import "FSWKWebJSController.h"          // WKWeb_JS交互
+#import "FSAliPayController.h"           // 支付宝测试
+#import "FSPassWordController.h"         // 支付弹窗
 
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -33,7 +33,8 @@
         _datasArray = [NSMutableArray arrayWithArray:@[
                                                        @{@"name":@"圆角阴影", @"className":@"FSCornerRadiusController"},
                                                        @{@"name":@"WKWeb-JS", @"className":@"FSWKWebJSController"},
-                                                       @{@"name":@"支付宝测试", @"className":@"FSAliPayController"}
+                                                       @{@"name":@"支付宝测试", @"className":@"FSAliPayController"},
+                                                       @{@"name":@"支付弹窗", @"className":@"FSPassWordController"}
                                                        ]
                        ];
     }
