@@ -4,7 +4,7 @@
 //
 //  Created by 朱慕之 on 2018/8/8.
 //  Copyright © 2018年 zhumuzhi. All rights reserved.
-//  
+//  需要解决密文显示问题
 
 #import "FSPayPopupView.h"
 #import "FSPayPasswordView.h"
@@ -23,6 +23,9 @@
 @property (nonatomic, strong) FSPayPasswordView *payPasswordView;
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) UITextField *textField;
+
+/** 点-数组 */
+@property (nonatomic, strong) NSMutableArray *passwordDotsArray;
 
 @end
 
@@ -90,6 +93,31 @@
     }];
 }
 
+static NSInteger const kDotsNumber = 6;
+static CGFloat const kDotWith_height = 10;
+
+/** 添加密码黑点 */
+- (void)addDotsViews {
+    //密码输入框的宽度
+    CGFloat passwordFieldWidth = CGRectGetWidth(self.textField.frame);
+    //六等分 每等分的宽度
+    CGFloat password_width = passwordFieldWidth / kDotsNumber;
+    //密码输入框的高度
+    CGFloat password_height = CGRectGetHeight(self.textField.frame);
+
+    for (int i = 0; i < kDotsNumber; i ++) {
+        //假密码点的x坐标
+        CGFloat dotViewX = (i + 1)*password_width - password_width / 2.0 - kDotWith_height / 2.0;
+        CGFloat dotViewY = (password_height - kDotWith_height) / 2.0;
+        UIView *dotView = [[UIView alloc] initWithFrame:CGRectMake(dotViewX, dotViewY, kDotWith_height, kDotWith_height)];
+        dotView.backgroundColor = [UIColor blackColor];
+        dotView.layer.cornerRadius = kDotWith_height/2.0;
+        dotView.hidden = NO;
+        [self.textField addSubview:dotView];
+        [self.passwordDotsArray addObject:dotView];
+    }
+}
+
 #pragma mark - Private
 #pragma mark - 隐藏支付窗口
 - (void)forgetPasswordAction {
@@ -128,6 +156,14 @@
 }
 
 #pragma mark - Setter/Getter
+
+- (NSMutableArray *)passwordDotsArray{
+    if (_passwordDotsArray == nil){
+        _passwordDotsArray = [[NSMutableArray alloc] initWithCapacity:kDotsNumber];
+    }
+    return _passwordDotsArray;
+}
+
 - (FSPayPasswordView *)payPasswordView {
     if (!_payPasswordView) {
         _payPasswordView = [[FSPayPasswordView alloc] init];

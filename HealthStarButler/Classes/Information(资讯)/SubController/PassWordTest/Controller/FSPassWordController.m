@@ -8,14 +8,17 @@
 
 #import "FSPassWordController.h"
 
-#pragma mark ZJPayPasswordView
+#pragma mark FSPayPopupView
 #import "FSPayPopupView.h"
 
-#pragma mark HHPayPasswordView
+#pragma mark HHPayPass
 #import "HHPayPasswordView.h"
 
-#pragma mark JHCoverView
+#pragma mark FSPayPopMenu
 #import "FSPayPopMenu.h"
+
+#pragma mark CYPasswordView
+#import "CYPasswordView.h"
 
 @interface FSPassWordController ()<
                                     FSPayPopupViewDelegate,
@@ -24,6 +27,7 @@
                                     >
 @property (nonatomic, strong) FSPayPopupView *payPopupView;
 @property (nonatomic, strong) FSPayPopMenu *coverView;
+@property (nonatomic, strong) CYPasswordView *passwordView;
 
 @end
 
@@ -36,14 +40,29 @@
     [self configUI];
 }
 
+#pragma mark - NotifocationSet
+- (void)configNotification {
+    /** 注册取消按钮点击的通知 */
+    [CYNotificationCenter addObserver:self selector:@selector(cancel) name:CYPasswordViewCancleButtonClickNotification object:nil];
+    [CYNotificationCenter addObserver:self selector:@selector(forgetPWD) name:CYPasswordViewForgetPWDButtonClickNotification object:nil];
+}
+
+- (void)cancel {
+    NSLog(@"关闭密码框");
+}
+
+- (void)forgetPWD {
+    NSLog(@"忘记密码");
+}
+
 #pragma mark - configUI
 - (void)configUI {
     self.view.backgroundColor = [UIColor whiteColor];
 
-    UIButton *ZJPayPass = [self createBtnTitle:@"ZJPayPass" Selector:@selector(buttonAction:)];
-    ZJPayPass.tag = 0;
-    [self.view addSubview:ZJPayPass];
-    [ZJPayPass mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIButton *PayPopupView = [self createBtnTitle:@"FSPayPopupView" Selector:@selector(buttonAction:)];
+    PayPopupView.tag = 0;
+    [self.view addSubview:PayPopupView];
+    [PayPopupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view.mas_left).offset(20);
         make.right.equalTo(self.view.mas_right).offset(-20);
         make.top.equalTo(self.view.mas_top).offset(100);
@@ -54,19 +73,32 @@
     HHPayPass.tag = 1;
     [self.view addSubview:HHPayPass];
     [HHPayPass mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(ZJPayPass.mas_left);
-        make.right.equalTo(ZJPayPass.mas_right);
-        make.top.equalTo(ZJPayPass.mas_bottom).offset(20);
+        make.left.equalTo(PayPopupView.mas_left);
+        make.right.equalTo(PayPopupView.mas_right);
+        make.top.equalTo(PayPopupView.mas_bottom).offset(20);
         make.height.mas_equalTo(50);
     }];
 
-    UIButton *JHCoverbtn = [self createBtnTitle:@"JHCoverView" Selector:@selector(buttonAction:)];
-    JHCoverbtn.tag = 2;
-    [self.view addSubview:JHCoverbtn];
-    [JHCoverbtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    UIButton *FSPayPopMenu = [self createBtnTitle:@"FSPayPopMenu" Selector:@selector(buttonAction:)];
+    FSPayPopMenu.tag = 2;
+    [self.view addSubview:FSPayPopMenu];
+    [FSPayPopMenu mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(HHPayPass.mas_left);
         make.right.equalTo(HHPayPass.mas_right);
         make.top.equalTo(HHPayPass.mas_bottom).offset(20);
+        make.height.mas_equalTo(50);
+    }];
+
+    [self.view addSubview:self.coverView];
+    self.coverView.frame = self.view.bounds;
+
+    UIButton *CYPassWordBtn = [self createBtnTitle:@"CYPassWord" Selector:@selector(buttonAction:)];
+    CYPassWordBtn.tag = 3;
+    [self.view addSubview:CYPassWordBtn];
+    [CYPassWordBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(FSPayPopMenu.mas_left);
+        make.right.equalTo(FSPayPopMenu.mas_right);
+        make.top.equalTo(FSPayPopMenu.mas_bottom).offset(20);
         make.height.mas_equalTo(50);
     }];
 
@@ -98,8 +130,28 @@
     }else if (button.tag == 2) {
         self.coverView.hidden = NO;
         [self.coverView.payTextField becomeFirstResponder];
-
+    }else if (button.tag == 3) {
+        NSLog(@"CYPassWord");
+        [self showCYPassWord];
     }
+}
+
+#pragma mark - CommonDelegate
+#pragma mark ---------------- FSPayPopupViewDelegate ----------------
+// 输入结束
+- (void)payPopupViewPasswordInputFinished:(NSString *)password {
+    if ([password isEqualToString:@"111111"]) {
+        NSLog(@"输入的密码正确");
+
+    }else {
+        NSLog(@"输入错误:%@",password);
+        //        [self.payPopupView hidePayPopView];
+        [self.payPopupView didInputPayPasswordError];
+    }
+}
+// 忘记密码
+- (void)payPopupViewDidClickForgetPasswordButton:(FSPayPopupView *)payPopupView {
+    NSLog(@"点击了忘记密码");
 }
 
 - (FSPayPopMenu *)coverView {
@@ -112,7 +164,27 @@
     return _coverView;
 }
 
-#pragma mark - CommonDelegate
+#pragma mark ---------------- HHPayPasswordViewDelegate ----------------
+
+- (void)passwordView:(HHPayPasswordView *)passwordView didFinishInputPayPassword:(NSString *)password{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if ([password isEqualToString:@"000000"]) {
+            [passwordView paySuccess];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [passwordView hide];
+                NSLog(@"支付成功控制器");
+                //                PaySuccessViewController *paySuccessVC = [[PaySuccessViewController alloc] init];
+                //                [self.navigationController pushViewController:paySuccessVC animated:YES];
+            });
+        }else{
+            [passwordView payFailureWithPasswordError:YES withErrorLimit:3];
+        }
+    });
+}
+- (void)forgetPayPassword{
+    NSLog(@"HH忘记密码");
+}
+
 
 #pragma mark ---------------- FSPayPopMenuDelegate ----------------
 
@@ -144,44 +216,47 @@
     NSLog(@"跳转至成功");
 }
 
+#pragma mark ---------------- CYPasswordView ----------------
 
-#pragma mark ---------------- FSPayPopupViewDelegate ----------------
-// 输入结束
-- (void)payPopupViewPasswordInputFinished:(NSString *)password {
-    if ([password isEqualToString:@"111111"]) {
-        NSLog(@"输入的密码正确");
-        
-    }else {
-        NSLog(@"输入错误:%@",password);
-//        [self.payPopupView hidePayPopView];
-        [self.payPopupView didInputPayPasswordError];
-    }
-}
-// 忘记密码
-- (void)payPopupViewDidClickForgetPasswordButton:(FSPayPopupView *)payPopupView {
-    NSLog(@"点击了忘记密码");
-}
+#define kRequestTime 3.0f
+#define kDelay 1.0f
 
+static BOOL flag = NO;
 
-#pragma mark ---------------- HHPayPasswordViewDelegate ----------------
-- (void)passwordView:(HHPayPasswordView *)passwordView didFinishInputPayPassword:(NSString *)password{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if ([password isEqualToString:@"000000"]) {
-            [passwordView paySuccess];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [passwordView hide];
-                NSLog(@"支付成功控制器");
-//                PaySuccessViewController *paySuccessVC = [[PaySuccessViewController alloc] init];
-//                [self.navigationController pushViewController:paySuccessVC animated:YES];
-            });
-        }else{
-            [passwordView payFailureWithPasswordError:YES withErrorLimit:3];
-        }
-    });
-}
+- (void)showCYPassWord {
 
-- (void)forgetPayPassword{
-    NSLog(@"HH忘记密码");
+    MEDWeakSelf(self);
+    self.passwordView = [[CYPasswordView alloc] init];
+    self.passwordView.title = @"输入交易密码";
+    self.passwordView.loadingText = @"提交中...";
+    [self.passwordView showInView:self.view.window];
+    //    inputNumArray
+
+    self.passwordView.finish = ^(NSString *password) {
+        [weakself.passwordView hideKeyboard];
+        [weakself.passwordView startLoading];
+        CYLog(@"cy ========= 发送网络请求  pwd=%@", password);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kRequestTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            flag = !flag;
+            if (flag) {
+                CYLog(@"申购成功，跳转到成功页");
+                //                [MBProgressHUD showSuccess:@"申购成功，做一些处理"];
+                [weakself.passwordView requestComplete:YES message:@"申购成功，做一些处理"];
+                [weakself.passwordView stopLoading];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakself.passwordView hide];
+                });
+            } else {
+                CYLog(@"申购失败，跳转到失败页");
+                //                [MBProgressHUD showError:@"申购失败，做一些处理"];
+                [weakself.passwordView requestComplete:NO message:@"申购失败，做一些处理"];
+                [weakself.passwordView stopLoading];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [weakself.passwordView hide];
+                });
+            }
+        });
+    };
 }
 
 #pragma mark - LazyGet

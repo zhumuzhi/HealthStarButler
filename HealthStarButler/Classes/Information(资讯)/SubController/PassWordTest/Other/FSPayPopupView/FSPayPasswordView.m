@@ -15,7 +15,8 @@
 #define kPasswordBoxMargin kAutoWithSize((kScreenWidth-(kPasswordBoxWidth*kPasswordBoxNumber))/2) //输入框边Margin
 @interface FSPayPasswordView ()<UITextFieldDelegate>
 
-@property (nonatomic, strong) NSMutableArray <UILabel*> *labelBoxArray;
+//@property (nonatomic, strong) NSMutableArray <UILabel*> *labelBoxArray;
+@property (nonatomic, strong) NSMutableArray *labelBoxArray;
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) UITextField *textField;
 @property (nonatomic, strong) NSString *currentText;
@@ -38,16 +39,18 @@
     self.currentText = @"";
     for (int i = 0; i < kPasswordBoxNumber; i ++) {
         CGFloat X = ((kScreenWidth-(kPasswordBoxWidth*kPasswordBoxNumber))/2);
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(X + i * (kPasswordBoxWidth + kPasswordBoxSpace), 0, kPasswordBoxWidth, kPasswordBoxWidth)];
-        label.textColor = [UIColor colorWithHexString:@"#444444"];
-        label.layer.borderWidth = 0.5f;
-        label.layer.borderColor = [UIColor colorWithHexString:@"#CCCCCC"].CGColor;
+        UIView *dotView = [[UIView alloc] initWithFrame:CGRectMake(X + i * (kPasswordBoxWidth + kPasswordBoxSpace), 0, kPasswordBoxWidth, kPasswordBoxWidth)];
+        dotView.layer.borderWidth = 0.5f;
+        dotView.layer.borderColor = [UIColor colorWithHexString:@"#CCCCCC"].CGColor;
+        dotView.layer.masksToBounds = YES;
+        dotView.backgroundColor = [UIColor blackColor];
+        dotView.layer.cornerRadius = 10/2.0;
 //      label.layer.cornerRadius = kAutoWithSize(2);
-        label.layer.masksToBounds = YES;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = [UIFont fontWithName:@"PingFangSC-Regular" size:30] ;
-        [self addSubview:label];
-        [self.labelBoxArray addObject:label];
+//        dotView.textColor = [UIColor colorWithHexString:@"#444444"];
+//        dotView.textAlignment = NSTextAlignmentCenter;
+//        dotView.font = [UIFont fontWithName:@"PingFangSC-Regular" size:30] ;
+        [self addSubview:dotView];
+        [self.labelBoxArray addObject:dotView];
     }
 }
 
@@ -59,18 +62,6 @@
     [self.layer addAnimation:shake forKey:@"shake"];
 }
 
-- (void)textDidChanged:(UITextField *)textField {
-    if (textField.text.length > kPasswordBoxNumber) {
-        textField.text = [textField.text substringToIndex:kPasswordBoxNumber];
-    }
-    
-    [self updateLabelBoxWithText:textField.text];
-    if (textField.text.length == kPasswordBoxNumber) {
-        if (self.completionBlock) {
-            self.completionBlock(self.textField.text);
-        }
-    }
-}
 
 static NSString *symbol = @"•";       // ・ • ● • •
 static CGFloat BaselineOffset = 0;
@@ -140,6 +131,19 @@ static CGFloat BaselineOffset = 0;
 }
 
 #pragma mark - UITextFieldDelegate
+- (void)textDidChanged:(UITextField *)textField {
+    if (textField.text.length > kPasswordBoxNumber) {
+        textField.text = [textField.text substringToIndex:kPasswordBoxNumber];
+    }
+    [self updateLabelBoxWithText:textField.text];
+    if (textField.text.length == kPasswordBoxNumber) {
+        if (self.completionBlock) {
+            self.completionBlock(self.textField.text);
+        }
+    }
+    NSLog(@"textField:%@", self.textField.text);
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     return YES;
 }

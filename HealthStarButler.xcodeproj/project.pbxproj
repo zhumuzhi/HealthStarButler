@@ -364,6 +364,12 @@
 		5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA8C04620F6316700AF5C74 /* MZSettingCell.m */; };
 		5DB7872D211C2D3000661CDD /* FSPayTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7872B211C2D3000661CDD /* FSPayTextField.m */; };
 		5DB7872E211C2D3000661CDD /* FSPayPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7872C211C2D3000661CDD /* FSPayPopMenu.m */; };
+		5DB78742211D25CD00661CDD /* CYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB78737211D25CC00661CDD /* CYConst.m */; };
+		5DB78743211D25CD00661CDD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7873A211D25CC00661CDD /* UIView+Extension.m */; };
+		5DB78744211D25CD00661CDD /* CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7873C211D25CD00661CDD /* CYPasswordView.m */; };
+		5DB78745211D25CD00661CDD /* NSBundle+CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7873D211D25CD00661CDD /* NSBundle+CYPasswordView.m */; };
+		5DB78746211D25CD00661CDD /* CYPasswordView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7873E211D25CD00661CDD /* CYPasswordView.bundle */; };
+		5DB78747211D25CD00661CDD /* CYPasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB78740211D25CD00661CDD /* CYPasswordInputView.m */; };
 		5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */; };
 		5DB9C4902119810200B4D4C0 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C48F2119810200B4D4C0 /* JStoOC.html */; };
 		5DB9C4952119822500B4D4C0 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */; };
@@ -1084,6 +1090,17 @@
 		5DB7872A211C2D2F00661CDD /* FSPayTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayTextField.h; sourceTree = "<group>"; };
 		5DB7872B211C2D3000661CDD /* FSPayTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayTextField.m; sourceTree = "<group>"; };
 		5DB7872C211C2D3000661CDD /* FSPayPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPopMenu.m; sourceTree = "<group>"; };
+		5DB78737211D25CC00661CDD /* CYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYConst.m; sourceTree = "<group>"; };
+		5DB78738211D25CC00661CDD /* CYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPasswordView.h; sourceTree = "<group>"; };
+		5DB78739211D25CC00661CDD /* NSBundle+CYPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CYPasswordView.h"; sourceTree = "<group>"; };
+		5DB7873A211D25CC00661CDD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		5DB7873B211D25CD00661CDD /* CYPasswordInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYPasswordInputView.h; sourceTree = "<group>"; };
+		5DB7873C211D25CD00661CDD /* CYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPasswordView.m; sourceTree = "<group>"; };
+		5DB7873D211D25CD00661CDD /* NSBundle+CYPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CYPasswordView.m"; sourceTree = "<group>"; };
+		5DB7873E211D25CD00661CDD /* CYPasswordView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CYPasswordView.bundle; sourceTree = "<group>"; };
+		5DB7873F211D25CD00661CDD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		5DB78740211D25CD00661CDD /* CYPasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPasswordInputView.m; sourceTree = "<group>"; };
+		5DB78741211D25CD00661CDD /* CYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYConst.h; sourceTree = "<group>"; };
 		5DB9C48A21197CAC00B4D4C0 /* FSWKWebJSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWKWebJSController.h; sourceTree = "<group>"; };
 		5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSWKWebJSController.m; sourceTree = "<group>"; };
 		5DB9C48F2119810200B4D4C0 /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
@@ -2510,9 +2527,10 @@
 		5D62D863211AE4B100A58D76 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				5DB78728211C2D0A00661CDD /* alipayTextField */,
+				5D62D873211AF0AF00A58D76 /* FSPayPopupView */,
 				5D62D86C211AF0AF00A58D76 /* HHPayPasswordView */,
-				5D62D873211AF0AF00A58D76 /* ZJPayPassword */,
+				5DB78728211C2D0A00661CDD /* FSPayPopMenu */,
+				5DB78736211D25AA00661CDD /* CYPassWordView */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -2530,7 +2548,7 @@
 			path = HHPayPasswordView;
 			sourceTree = "<group>";
 		};
-		5D62D873211AF0AF00A58D76 /* ZJPayPassword */ = {
+		5D62D873211AF0AF00A58D76 /* FSPayPopupView */ = {
 			isa = PBXGroup;
 			children = (
 				5D62D875211AF0AF00A58D76 /* FSPayPopupView.h */,
@@ -2538,7 +2556,7 @@
 				5D62D874211AF0AF00A58D76 /* FSPayPasswordView.h */,
 				5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */,
 			);
-			path = ZJPayPassword;
+			path = FSPayPopupView;
 			sourceTree = "<group>";
 		};
 		5D69056720D9FB12002BBD69 /* MEDMonitorController */ = {
@@ -3631,7 +3649,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		5DB78728211C2D0A00661CDD /* alipayTextField */ = {
+		5DB78728211C2D0A00661CDD /* FSPayPopMenu */ = {
 			isa = PBXGroup;
 			children = (
 				5DB78729211C2D2F00661CDD /* FSPayPopMenu.h */,
@@ -3639,7 +3657,25 @@
 				5DB7872A211C2D2F00661CDD /* FSPayTextField.h */,
 				5DB7872B211C2D3000661CDD /* FSPayTextField.m */,
 			);
-			path = alipayTextField;
+			path = FSPayPopMenu;
+			sourceTree = "<group>";
+		};
+		5DB78736211D25AA00661CDD /* CYPassWordView */ = {
+			isa = PBXGroup;
+			children = (
+				5DB78741211D25CD00661CDD /* CYConst.h */,
+				5DB78737211D25CC00661CDD /* CYConst.m */,
+				5DB78738211D25CC00661CDD /* CYPasswordView.h */,
+				5DB7873C211D25CD00661CDD /* CYPasswordView.m */,
+				5DB7873B211D25CD00661CDD /* CYPasswordInputView.h */,
+				5DB78740211D25CD00661CDD /* CYPasswordInputView.m */,
+				5DB78739211D25CC00661CDD /* NSBundle+CYPasswordView.h */,
+				5DB7873D211D25CD00661CDD /* NSBundle+CYPasswordView.m */,
+				5DB7873F211D25CD00661CDD /* UIView+Extension.h */,
+				5DB7873A211D25CC00661CDD /* UIView+Extension.m */,
+				5DB7873E211D25CD00661CDD /* CYPasswordView.bundle */,
+			);
+			path = CYPassWordView;
 			sourceTree = "<group>";
 		};
 		5DB9C48921197C7700B4D4C0 /* WKWeb-JS */ = {
@@ -4261,6 +4297,7 @@
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
 				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
+				5DB78746211D25CD00661CDD /* CYPasswordView.bundle in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
 				5D201DEA20CA6D2C009007D9 /* circle_outline_pressed@2x.png in Resources */,
 				5DA70AAC20F4B83E00D9AF1D /* dropdown_anim__00010@2x.png in Resources */,
@@ -4474,6 +4511,7 @@
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
 				5D3E4FE520FB5D8C008FBF42 /* NSArray+Log.m in Sources */,
+				5DB78743211D25CD00661CDD /* UIView+Extension.m in Sources */,
 				5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */,
 				5D62D87A211AF0AF00A58D76 /* HHPasswordErrorView.m in Sources */,
 				5D3E4FF220FB5D8C008FBF42 /* UIButton+EdgeInsets.m in Sources */,
@@ -4518,6 +4556,7 @@
 				5D62D87B211AF0AF00A58D76 /* HHPayPasswordView.m in Sources */,
 				5D829A2E2085C7D1001993B6 /* main.m in Sources */,
 				5D8207F72099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.m in Sources */,
+				5DB78747211D25CD00661CDD /* CYPasswordInputView.m in Sources */,
 				5D69059020D9FB12002BBD69 /* MEDBloodPressureFrame.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
 				5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */,
@@ -4590,6 +4629,7 @@
 				5DE1F58020EDA5B2005FCCD5 /* UIButton+EdgeInsets.m in Sources */,
 				5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */,
 				5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */,
+				5DB78744211D25CD00661CDD /* CYPasswordView.m in Sources */,
 				5D3E500C20FB5D8C008FBF42 /* DHGuidePageHUD.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
 				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
@@ -4598,6 +4638,7 @@
 				5DA70AA920F4B83E00D9AF1D /* MEDEatBaoziFooter.m in Sources */,
 				5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */,
 				5D2EF92220F7581D00699AA2 /* UIImage+ImageEffects.m in Sources */,
+				5DB78745211D25CD00661CDD /* NSBundle+CYPasswordView.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
 				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
@@ -4694,6 +4735,7 @@
 				5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */,
 				5D3E4F3220FA4734008FBF42 /* NSString+unicode.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
+				5DB78742211D25CD00661CDD /* CYConst.m in Sources */,
 				5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */,
 				5D829A8A2085DA07001993B6 /* MEDHomePageController.m in Sources */,
 				5DBD2CA020A2E4E4008F902E /* NSDate+TFDate.m in Sources */,
