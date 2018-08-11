@@ -193,6 +193,8 @@
 		5D427A0E20F8F38500FB9C65 /* GGSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D427A0C20F8F38500FB9C65 /* GGSwitch.m */; };
 		5D454FE720FF757B0041A924 /* FSMineMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D454FE620FF757B0041A924 /* FSMineMData.m */; };
 		5D454FEA20FF7C160041A924 /* FSMineNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D454FE920FF7C160041A924 /* FSMineNormalCell.m */; };
+		5D49B26F211EDACF00EDA0FF /* FSJavascriptBridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D49B26E211EDACF00EDA0FF /* FSJavascriptBridgeController.m */; };
+		5D49B272211EDBDD00EDA0FF /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D49B271211EDBDD00EDA0FF /* ExampleApp.html */; };
 		5D4A47FC208F092A007DAD29 /* MEDUserLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */; };
 		5D4A47FF208F0BC5007DAD29 /* MEDUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A47FE208F0BC5007DAD29 /* MEDUserModel.m */; };
 		5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A480920906142007DAD29 /* MEDMobileNumberTool.m */; };
@@ -795,6 +797,9 @@
 		5D454FE620FF757B0041A924 /* FSMineMData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineMData.m; sourceTree = "<group>"; };
 		5D454FE820FF7C160041A924 /* FSMineNormalCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineNormalCell.h; sourceTree = "<group>"; };
 		5D454FE920FF7C160041A924 /* FSMineNormalCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineNormalCell.m; sourceTree = "<group>"; };
+		5D49B26D211EDACF00EDA0FF /* FSJavascriptBridgeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSJavascriptBridgeController.h; sourceTree = "<group>"; };
+		5D49B26E211EDACF00EDA0FF /* FSJavascriptBridgeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSJavascriptBridgeController.m; sourceTree = "<group>"; };
+		5D49B271211EDBDD00EDA0FF /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = "<group>"; };
 		5D4A47FA208F092A007DAD29 /* MEDUserLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserLoginController.h; sourceTree = "<group>"; };
 		5D4A47FB208F092A007DAD29 /* MEDUserLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDUserLoginController.m; sourceTree = "<group>"; };
 		5D4A47FD208F0BC5007DAD29 /* MEDUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDUserModel.h; sourceTree = "<group>"; };
@@ -2365,6 +2370,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */ = {
+			isa = PBXGroup;
+			children = (
+				5D49B270211EDBAC00EDA0FF /* Source */,
+				5D49B26D211EDACF00EDA0FF /* FSJavascriptBridgeController.h */,
+				5D49B26E211EDACF00EDA0FF /* FSJavascriptBridgeController.m */,
+			);
+			path = JavascriptBridgeTest;
+			sourceTree = "<group>";
+		};
+		5D49B270211EDBAC00EDA0FF /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				5D49B271211EDBDD00EDA0FF /* ExampleApp.html */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		5D4A47F6208F0457007DAD29 /* UserLogin(登录) */ = {
 			isa = PBXGroup;
 			children = (
@@ -2459,6 +2482,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */,
 				5D62D85D211AE44A00A58D76 /* PassWordTest */,
 				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
 				5DB9C48921197C7700B4D4C0 /* WKWeb-JS */,
@@ -4297,6 +4321,7 @@
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
 				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
+				5D49B272211EDBDD00EDA0FF /* ExampleApp.html in Resources */,
 				5DB78746211D25CD00661CDD /* CYPasswordView.bundle in Resources */,
 				5D8208002099A50500B84C1E /* MEDHomeHabitSportCell.xib in Resources */,
 				5D201DEA20CA6D2C009007D9 /* circle_outline_pressed@2x.png in Resources */,
@@ -4529,6 +4554,7 @@
 				5D201DE320CA6D2C009007D9 /* MEDLeftTableViewCell.m in Sources */,
 				5D3E501420FB5D8C008FBF42 /* ReachState.m in Sources */,
 				5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */,
+				5D49B26F211EDACF00EDA0FF /* FSJavascriptBridgeController.m in Sources */,
 				5D3E4FF920FB5D8C008FBF42 /* FSButton.m in Sources */,
 				5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
