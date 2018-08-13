@@ -1293,13 +1293,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JSjiaohu) */ = {
+		5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JS) */ = {
 			isa = PBXGroup;
 			children = (
 				5D2EF8EF20F7479500699AA2 /* NormolUIWebView */,
 				5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */,
 			);
-			path = "WebJSOCTest(OC&JSjiaohu)";
+			path = "WebJSOCTest(OC&JS)";
 			sourceTree = "<group>";
 		};
 		5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart(购物车) */ = {
@@ -4150,7 +4150,7 @@
 				5D4279F920F8E93200FB9C65 /* Form */,
 				5D2EF94D20F82DFC00699AA2 /* Selection(单多选) */,
 				5D2EF8FD20F7581D00699AA2 /* Alert&ActionSheet&Dialog(弹出视图) */,
-				5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JSjiaohu) */,
+				5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JS) */,
 				5DA8C03B20F6316700AF5C74 /* ModelSetting(模型个人中心) */,
 				5DF1F14320EF1C70009A8E51 /* PersonSetTest */,
 				5DF1F14220EF1C5F009A8E51 /* StatusBarTest(状态栏设置) */,

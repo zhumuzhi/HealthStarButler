@@ -54,6 +54,16 @@
 				log('JS got response', response)
 			})
 		}
+        var pushButton = document.getElementById('buttons').appendChild(document.createElement('button'))
+        pushButton.innerHTML = 'pushButton'
+        pushButton.onclick = function(e) {
+            e.preventDefault()
+            log('JS calling handler "pushButton"')
+            bridge.callHandler('pushButton', {'foo': 'bar'}, function(response) {
+                log('JS got response', response)
+            })
+        }
+
 	})
 	</script>
 	<div id='buttons'></div> <div id='log'></div>

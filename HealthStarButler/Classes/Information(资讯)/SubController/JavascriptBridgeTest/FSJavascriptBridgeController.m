@@ -8,6 +8,7 @@
 
 #import "FSJavascriptBridgeController.h"
 #import "WebViewJavascriptBridge.h"
+#import "FSPassWordController.h"
 
 @interface FSJavascriptBridgeController ()
 
@@ -30,9 +31,18 @@
     _bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
     [_bridge setWebViewDelegate:self];
 
+    MEDWeakSelf(self);
     [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"testObjcCallback called: %@", data);
         responseCallback(@"OC返回的结果");
+        [weakself.navigationController popViewControllerAnimated:YES];
+    }];
+
+    [_bridge registerHandler:@"pushButton" handler:^(id data, WVJBResponseCallback responseCallback) {
+        //NSLog(@"pushButton called: %@", data);
+        responseCallback(@"OC返回的结果");
+        FSPassWordController *pass = [[FSPassWordController alloc] init];
+        [weakself.navigationController pushViewController:pass animated:YES];
     }];
 
     [_bridge callHandler:@"testJavascriptHandler" data:@{ @"foo":@"before ready" }];
@@ -61,10 +71,17 @@
 }
 
 - (void)loadExamplePage:(WKWebView*)webView {
+    //本地
     NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
     NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
     [webView loadHTMLString:appHtml baseURL:baseURL];
+
+    //网络
+    //http://192.168.65.123:8000
+//    NSURL *baseURL = [NSURL URLWithString:@"http://192.168.65.123:8000"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
+//    [webView loadRequest:request];
 }
 
 - (void)renderButtons:(WKWebView*)webView {
