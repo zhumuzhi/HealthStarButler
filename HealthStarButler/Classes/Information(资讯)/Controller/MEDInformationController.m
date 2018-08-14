@@ -13,6 +13,8 @@
 #import "FSAliPayController.h"           // 支付宝测试
 #import "FSPassWordController.h"         // 支付弹窗
 #import "FSJavascriptBridgeController.h" // JSBridge框架
+#import "FSChoseZoneViewController.h"    // 地址选择
+
 
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -36,10 +38,11 @@
                                                        @{@"name":@"WKWeb-JS", @"className":@"FSWKWebJSController"},
                                                        @{@"name":@"支付宝测试", @"className":@"FSAliPayController"},
                                                        @{@"name":@"支付弹窗", @"className":@"FSPassWordController"},
-                                                       @{@"name":@"JSBridge测试", @"className":@"FSJavascriptBridgeController"}
+                                                       @{@"name":@"JSBridge测试", @"className":@"FSJavascriptBridgeController"},
+                                                       @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"}
                                                        ]
                        ];
-    }
+    }// FSChoseZoneViewController
     return _datasArray;
 }
 

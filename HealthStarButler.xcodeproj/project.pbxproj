@@ -212,7 +212,7 @@
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
 		5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6120FC263700483971 /* FSBase64Tool.m */; };
 		5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */; };
-		5D586A5A2122BA750093CEE9 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D586A592122BA750093CEE9 /* cities.plist */; };
+		5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D586A7D2122FD710093CEE9 /* NSString+Size.m */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
 		5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D861211AE48100A58D76 /* FSPassWordController.m */; };
@@ -418,6 +418,14 @@
 		5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */; };
 		5DCC6DB821018775000DDFD9 /* FSMineOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */; };
 		5DCC6DBE2101AD51000DDFD9 /* FSMineAllOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */; };
+		5DCD9AA3212303A500467294 /* FSLocationChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9A9B212303A500467294 /* FSLocationChangeView.m */; };
+		5DCD9AA4212303A500467294 /* FSSearchBarChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9A9D212303A500467294 /* FSSearchBarChangeView.m */; };
+		5DCD9AA5212303A500467294 /* FSSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9A9E212303A500467294 /* FSSearchBarView.m */; };
+		5DCD9AA6212303A500467294 /* FSLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AA0212303A500467294 /* FSLocationView.m */; };
+		5DCD9AB4212303F200467294 /* FSChoseZoneSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AA8212303F100467294 /* FSChoseZoneSectionHeader.m */; };
+		5DCD9AB5212303F200467294 /* FSChoseZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AAD212303F200467294 /* FSChoseZoneViewController.m */; };
+		5DCD9AB6212303F200467294 /* FSChoseZoneMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AB1212303F200467294 /* FSChoseZoneMData.m */; };
+		5DCD9AB82123043E00467294 /* FSChoseZoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */; };
 		5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */; };
 		5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */; };
 		5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */; };
@@ -834,7 +842,8 @@
 		5D510A6D20FC339400483971 /* FSCheckCodeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeSlider.h; sourceTree = "<group>"; };
 		5D510A6F20FC340400483971 /* FSCheckSliderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckSliderController.h; sourceTree = "<group>"; };
 		5D510A7020FC340400483971 /* FSCheckSliderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckSliderController.m; sourceTree = "<group>"; };
-		5D586A592122BA750093CEE9 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		5D586A7C2122FD710093CEE9 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		5D586A7D2122FD710093CEE9 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginHeaderView.h; sourceTree = "<group>"; };
 		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
 		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
@@ -1182,6 +1191,22 @@
 		5DCC6DB721018775000DDFD9 /* FSMineOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineOrderCell.m; sourceTree = "<group>"; };
 		5DCC6DBC2101AD51000DDFD9 /* FSMineAllOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineAllOrderView.h; sourceTree = "<group>"; };
 		5DCC6DBD2101AD51000DDFD9 /* FSMineAllOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineAllOrderView.m; sourceTree = "<group>"; };
+		5DCD9A9B212303A500467294 /* FSLocationChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationChangeView.m; sourceTree = "<group>"; };
+		5DCD9A9C212303A500467294 /* FSLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocationView.h; sourceTree = "<group>"; };
+		5DCD9A9D212303A500467294 /* FSSearchBarChangeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchBarChangeView.m; sourceTree = "<group>"; };
+		5DCD9A9E212303A500467294 /* FSSearchBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSSearchBarView.m; sourceTree = "<group>"; };
+		5DCD9A9F212303A500467294 /* FSLocationChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocationChangeView.h; sourceTree = "<group>"; };
+		5DCD9AA0212303A500467294 /* FSLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocationView.m; sourceTree = "<group>"; };
+		5DCD9AA1212303A500467294 /* FSSearchBarChangeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchBarChangeView.h; sourceTree = "<group>"; };
+		5DCD9AA2212303A500467294 /* FSSearchBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSSearchBarView.h; sourceTree = "<group>"; };
+		5DCD9AA8212303F100467294 /* FSChoseZoneSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneSectionHeader.m; sourceTree = "<group>"; };
+		5DCD9AAA212303F100467294 /* FSChoseZoneSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneSectionHeader.h; sourceTree = "<group>"; };
+		5DCD9AAB212303F100467294 /* FSChoseZoneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneCell.h; sourceTree = "<group>"; };
+		5DCD9AAD212303F200467294 /* FSChoseZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneViewController.m; sourceTree = "<group>"; };
+		5DCD9AAE212303F200467294 /* FSChoseZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneViewController.h; sourceTree = "<group>"; };
+		5DCD9AB1212303F200467294 /* FSChoseZoneMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneMData.m; sourceTree = "<group>"; };
+		5DCD9AB2212303F200467294 /* FSChoseZoneMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneMData.h; sourceTree = "<group>"; };
+		5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneCell.m; sourceTree = "<group>"; };
 		5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordListController.m; sourceTree = "<group>"; };
 		5DCE9AA520C6682100512610 /* MEDAddTreatmentRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddTreatmentRecordController.h; sourceTree = "<group>"; };
 		5DCE9AA620C6682100512610 /* MEDTreatmentRecordListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordListController.h; sourceTree = "<group>"; };
@@ -1844,6 +1869,8 @@
 		5D3E4F2A20FA44AE008FBF42 /* NSString+Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D586A7C2122FD710093CEE9 /* NSString+Size.h */,
+				5D586A7D2122FD710093CEE9 /* NSString+Size.m */,
 				5DBD2C66209FFCBB008F902E /* NSString+MED.h */,
 				5DBD2C67209FFCBB008F902E /* NSString+MED.m */,
 				5D3E4F3020FA4734008FBF42 /* NSString+unicode.h */,
@@ -2035,6 +2062,7 @@
 		5D3E4F6B20FB5D8C008FBF42 /* FSCustomView */ = {
 			isa = PBXGroup;
 			children = (
+				5DCD9A9A212303A500467294 /* FSSearchBarView */,
 				5D3E4F6C20FB5D8C008FBF42 /* FSButton */,
 				5D3E4F7C20FB5D8C008FBF42 /* FSTextFieldItem */,
 				5D3E4F8A20FB5D8C008FBF42 /* GHTagView */,
@@ -2484,7 +2512,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
-				5D586A582122BA4E0093CEE9 /* CitySelect */,
+				5D586A582122BA4E0093CEE9 /* ChooseZone */,
 				5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */,
 				5D62D85D211AE44A00A58D76 /* PassWordTest */,
 				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
@@ -2525,12 +2553,15 @@
 			path = "FSCheckCodeSlider(滑动解锁)";
 			sourceTree = "<group>";
 		};
-		5D586A582122BA4E0093CEE9 /* CitySelect */ = {
+		5D586A582122BA4E0093CEE9 /* ChooseZone */ = {
 			isa = PBXGroup;
 			children = (
-				5D586A592122BA750093CEE9 /* cities.plist */,
+				5DCD9AAC212303F200467294 /* Controller */,
+				5DCD9AAF212303F200467294 /* Model */,
+				5DCD9AB3212303F200467294 /* Other */,
+				5DCD9AA7212303F100467294 /* View */,
 			);
-			path = CitySelect;
+			path = ChooseZone;
 			sourceTree = "<group>";
 		};
 		5D62D85D211AE44A00A58D76 /* PassWordTest */ = {
@@ -3952,6 +3983,65 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		5DCD9A9A212303A500467294 /* FSSearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9A9B212303A500467294 /* FSLocationChangeView.m */,
+				5DCD9A9C212303A500467294 /* FSLocationView.h */,
+				5DCD9A9D212303A500467294 /* FSSearchBarChangeView.m */,
+				5DCD9A9E212303A500467294 /* FSSearchBarView.m */,
+				5DCD9A9F212303A500467294 /* FSLocationChangeView.h */,
+				5DCD9AA0212303A500467294 /* FSLocationView.m */,
+				5DCD9AA1212303A500467294 /* FSSearchBarChangeView.h */,
+				5DCD9AA2212303A500467294 /* FSSearchBarView.h */,
+			);
+			path = FSSearchBarView;
+			sourceTree = "<group>";
+		};
+		5DCD9AA7212303F100467294 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AAB212303F100467294 /* FSChoseZoneCell.h */,
+				5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */,
+				5DCD9AAA212303F100467294 /* FSChoseZoneSectionHeader.h */,
+				5DCD9AA8212303F100467294 /* FSChoseZoneSectionHeader.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DCD9AAC212303F200467294 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AAE212303F200467294 /* FSChoseZoneViewController.h */,
+				5DCD9AAD212303F200467294 /* FSChoseZoneViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DCD9AAF212303F200467294 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AB0212303F200467294 /* FSChoseZoneMData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5DCD9AB0212303F200467294 /* FSChoseZoneMData */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AB2212303F200467294 /* FSChoseZoneMData.h */,
+				5DCD9AB1212303F200467294 /* FSChoseZoneMData.m */,
+			);
+			path = FSChoseZoneMData;
+			sourceTree = "<group>";
+		};
+		5DCD9AB3212303F200467294 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		5DCE9A9F20C6682100512610 /* MedicalRecord */ = {
 			isa = PBXGroup;
 			children = (
@@ -4329,7 +4419,6 @@
 				5DA70AB320F4B83E00D9AF1D /* dropdown_anim__00028@2x.png in Resources */,
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
 				5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */,
-				5D586A5A2122BA750093CEE9 /* cities.plist in Resources */,
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
 				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
@@ -4513,6 +4602,7 @@
 				5D3E4FF620FB5D8C008FBF42 /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D2EF94620F759DB00699AA2 /* UIImage+FFToast.m in Sources */,
 				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
+				5DCD9AA6212303A500467294 /* FSLocationView.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */,
 				5D3E4FF520FB5D8C008FBF42 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
@@ -4544,6 +4634,7 @@
 				5D6CC93E2109C1D900235B9C /* MEDCollectionViewCell.m in Sources */,
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
 				5D3E501120FB5D8C008FBF42 /* LocalConnection.m in Sources */,
+				5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
@@ -4575,6 +4666,7 @@
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
 				5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */,
+				5DCD9AB5212303F200467294 /* FSChoseZoneViewController.m in Sources */,
 				5DF1F15220EF3095009A8E51 /* GHTextField.m in Sources */,
 				5D3E500020FB5D8C008FBF42 /* FSTextFieldItem.m in Sources */,
 				5D8207FD2099A50500B84C1E /* MEDHomeHabitSportCell.m in Sources */,
@@ -4608,8 +4700,10 @@
 				5D3E4FED20FB5D8C008FBF42 /* NSString+Timestamp.m in Sources */,
 				5DCE9B0020C6682100512610 /* MEDTestReportListController.m in Sources */,
 				5D2EF92120F7581D00699AA2 /* SCLButton.m in Sources */,
+				5DCD9AB82123043E00467294 /* FSChoseZoneCell.m in Sources */,
 				5DCE9B0520C6682100512610 /* TZImageCropManager.m in Sources */,
 				5D3E4FF420FB5D8C008FBF42 /* UIImage+ImageEffects.m in Sources */,
+				5DCD9AA4212303A500467294 /* FSSearchBarChangeView.m in Sources */,
 				5D201DF820CA6D2C009007D9 /* KDGoalBarPercentLayer.m in Sources */,
 				5DF1F15B20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
@@ -4627,6 +4721,7 @@
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
 				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
+				5DCD9AB6212303F200467294 /* FSChoseZoneMData.m in Sources */,
 				5D2EF91E20F7581D00699AA2 /* SCLAlertViewResponder.m in Sources */,
 				5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
@@ -4647,6 +4742,7 @@
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
 				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
 				5D3E500620FB5D8C008FBF42 /* GHTagView.m in Sources */,
+				5DCD9AA5212303A500467294 /* FSSearchBarView.m in Sources */,
 				5D201DE820CA6D2C009007D9 /* MEDGuideLayout.m in Sources */,
 				5D6CC9142109BE0C00235B9C /* CacheHelper.m in Sources */,
 				5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */,
@@ -4732,6 +4828,7 @@
 				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
 				5D6CC93B2109C1D900235B9C /* MEDCollectionCategoryModel.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
+				5DCD9AB4212303F200467294 /* FSChoseZoneSectionHeader.m in Sources */,
 				5D6CC90A210894A300235B9C /* FSAccountSetNormalCell.m in Sources */,
 				5DCC2E3D21186256001B60C5 /* FSCornerRadiusCell.m in Sources */,
 				5D3E500920FB5D8C008FBF42 /* BAGridView.m in Sources */,
@@ -4753,6 +4850,7 @@
 				5D427A0620F8E9DF00FB9C65 /* MZFromCell.m in Sources */,
 				5D3E4FEB20FB5D8C008FBF42 /* NSString+Random.m in Sources */,
 				5D3E501E20FB5D8C008FBF42 /* RealReachability.m in Sources */,
+				5DCD9AA3212303A500467294 /* FSLocationChangeView.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
 				5D2EF96220F82DFC00699AA2 /* MEDNormalChooseController.m in Sources */,
 				5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */,
