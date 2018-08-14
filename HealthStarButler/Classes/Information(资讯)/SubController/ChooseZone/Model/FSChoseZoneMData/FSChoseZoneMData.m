@@ -9,6 +9,7 @@
 #import "FSChoseZoneMData.h"
 
 @implementation FSChoseZoneMData
+
 - (FSChoseZoneMData *)choseZoneDataWithType: (FSChoseZoneDataType)type {
     FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
     choseZoneMData.choseZoneDataType = type;
@@ -19,12 +20,26 @@
     }
     return choseZoneMData;
 }
-- (NSMutableArray *)choseCityWithCity: (NSString *)city {
 
+- (NSMutableArray *)choseCityWithCity: (NSString *)city {
     NSMutableArray *dataArray = [NSMutableArray array];
     [dataArray addObject:[self creatlocationWithCity:city]];
     [dataArray addObject:[self creatCityList]];
     return dataArray;
+}
+
+#pragma mark - 创建当前定位城市数据
+- (FSChoseZoneMData *)creatlocationWithCity:(NSString *)city {
+    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
+    sectionMData.sectionHeaderTitle = @"当前定位城市";
+    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
+    rowMData.title = city.length > 0? city:@"正在定位中...";
+    rowMData.isComplete = city.length > 0 ? YES:NO;
+    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
+    rowMData.choseZoneCellType = FSChoseZoneCellTypePosition;
+
+    sectionMData.items = @[rowMData];
+    return sectionMData;
 }
 
 - (FSChoseZoneMData *)creatCityList{
@@ -43,18 +58,6 @@
     return sectionMData;
 }
 
-- (FSChoseZoneMData *)creatlocationWithCity: (NSString *)city {
-    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
-    sectionMData.sectionHeaderTitle = @"当前定位城市";
-    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
-    rowMData.title = city.length > 0? city:@"正在定位中...";
-    rowMData.isComplete = city.length > 0 ? YES:NO;
-    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
-    rowMData.choseZoneCellType = FSChoseZoneCellTypePosition;
-
-    sectionMData.items = @[rowMData];
-    return sectionMData;
-}
 - (NSMutableArray *)searchCity {
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *path = [bundle pathForResource:@"cities" ofType:@"plist"];
@@ -70,7 +73,6 @@
 }
 
 #pragma mark - 分组城市测试
-
 
 - (NSMutableArray *)choseGroupCityWithCity: (NSString *)city {
     NSMutableArray *dataArray = [NSMutableArray array];

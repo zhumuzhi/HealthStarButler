@@ -42,7 +42,7 @@
                                                        @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"}
                                                        ]
                        ];
-    }// FSChoseZoneViewController
+    }
     return _datasArray;
 }
 
