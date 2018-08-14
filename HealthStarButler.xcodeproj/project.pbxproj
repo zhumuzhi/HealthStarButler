@@ -212,6 +212,7 @@
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
 		5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6120FC263700483971 /* FSBase64Tool.m */; };
 		5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */; };
+		5D586A5A2122BA750093CEE9 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D586A592122BA750093CEE9 /* cities.plist */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
 		5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D861211AE48100A58D76 /* FSPassWordController.m */; };
@@ -833,6 +834,7 @@
 		5D510A6D20FC339400483971 /* FSCheckCodeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeSlider.h; sourceTree = "<group>"; };
 		5D510A6F20FC340400483971 /* FSCheckSliderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckSliderController.h; sourceTree = "<group>"; };
 		5D510A7020FC340400483971 /* FSCheckSliderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckSliderController.m; sourceTree = "<group>"; };
+		5D586A592122BA750093CEE9 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
 		5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginHeaderView.h; sourceTree = "<group>"; };
 		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
 		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
@@ -2482,6 +2484,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D586A582122BA4E0093CEE9 /* CitySelect */,
 				5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */,
 				5D62D85D211AE44A00A58D76 /* PassWordTest */,
 				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
@@ -2520,6 +2523,14 @@
 				5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */,
 			);
 			path = "FSCheckCodeSlider(滑动解锁)";
+			sourceTree = "<group>";
+		};
+		5D586A582122BA4E0093CEE9 /* CitySelect */ = {
+			isa = PBXGroup;
+			children = (
+				5D586A592122BA750093CEE9 /* cities.plist */,
+			);
+			path = CitySelect;
 			sourceTree = "<group>";
 		};
 		5D62D85D211AE44A00A58D76 /* PassWordTest */ = {
@@ -4318,6 +4329,7 @@
 				5DA70AB320F4B83E00D9AF1D /* dropdown_anim__00028@2x.png in Resources */,
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
 				5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */,
+				5D586A5A2122BA750093CEE9 /* cities.plist in Resources */,
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
 				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
