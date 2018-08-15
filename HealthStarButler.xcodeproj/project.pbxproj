@@ -212,6 +212,7 @@
 		5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F726520EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m */; };
 		5D510A6220FC263700483971 /* FSBase64Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6120FC263700483971 /* FSBase64Tool.m */; };
 		5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D510A6C20FC339400483971 /* FSCheckCodeSlider.m */; };
+		5D51FDE62124497C00A6FD8C /* cityData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D51FDE52124497C00A6FD8C /* cityData.json */; };
 		5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D586A7D2122FD710093CEE9 /* NSString+Size.m */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
@@ -426,6 +427,24 @@
 		5DCD9AB5212303F200467294 /* FSChoseZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AAD212303F200467294 /* FSChoseZoneViewController.m */; };
 		5DCD9AB6212303F200467294 /* FSChoseZoneMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AB1212303F200467294 /* FSChoseZoneMData.m */; };
 		5DCD9AB82123043E00467294 /* FSChoseZoneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */; };
+		5DCD9ABC2123B5FE00467294 /* NSString+Pinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ABB2123B5FE00467294 /* NSString+Pinyin.m */; };
+		5DCD9AC02123B65700467294 /* ContactDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ABE2123B65600467294 /* ContactDataHelper.m */; };
+		5DCD9AC42123B89000467294 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCD9AC22123B89000467294 /* cities.plist */; };
+		5DCD9AC52123B89000467294 /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCD9AC32123B89000467294 /* cityGroups.plist */; };
+		5DCD9AC82123BC3F00467294 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AC62123BC3F00467294 /* ContactModel.m */; };
+		5DCD9AE32123BC6200467294 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ACB2123BC6200467294 /* NSArray+JSONModel.m */; };
+		5DCD9AE42123BC6200467294 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ACE2123BC6200467294 /* JSONValueTransformer.m */; };
+		5DCD9AE52123BC6200467294 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AD12123BC6200467294 /* JSONKeyMapper.m */; };
+		5DCD9AE62123BC6200467294 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AD32123BC6200467294 /* JSONModel.m */; };
+		5DCD9AE72123BC6200467294 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AD52123BC6200467294 /* JSONModelError.m */; };
+		5DCD9AE82123BC6200467294 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AD82123BC6200467294 /* JSONModelArray.m */; };
+		5DCD9AE92123BC6200467294 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AD92123BC6200467294 /* JSONModelClassProperty.m */; };
+		5DCD9AEA2123BC6200467294 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ADD2123BC6200467294 /* JSONHTTPClient.m */; };
+		5DCD9AEB2123BC6200467294 /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9ADE2123BC6200467294 /* JSONAPI.m */; };
+		5DCD9AEC2123BC6200467294 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AE22123BC6200467294 /* JSONModel+networking.m */; };
+		5DCD9AF02123F32000467294 /* FSChoseZoneLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AEF2123F32000467294 /* FSChoseZoneLocationCell.m */; };
+		5DCD9AF32123F35B00467294 /* FSChoseZoneHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AF22123F35B00467294 /* FSChoseZoneHistoryCell.m */; };
+		5DCD9AF62123F43200467294 /* FSChoseZoneListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCD9AF52123F43200467294 /* FSChoseZoneListCell.m */; };
 		5DCE9AF220C6682100512610 /* MEDTreatmentRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */; };
 		5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AA720C6682100512610 /* MEDAddTreatmentRecordController.m */; };
 		5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCE9AAA20C6682100512610 /* MEDTreatmentRecordModel.m */; };
@@ -842,6 +861,7 @@
 		5D510A6D20FC339400483971 /* FSCheckCodeSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckCodeSlider.h; sourceTree = "<group>"; };
 		5D510A6F20FC340400483971 /* FSCheckSliderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCheckSliderController.h; sourceTree = "<group>"; };
 		5D510A7020FC340400483971 /* FSCheckSliderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCheckSliderController.m; sourceTree = "<group>"; };
+		5D51FDE52124497C00A6FD8C /* cityData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cityData.json; sourceTree = "<group>"; };
 		5D586A7C2122FD710093CEE9 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		5D586A7D2122FD710093CEE9 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
 		5D5E0FF120F300E3003148A1 /* MZLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginHeaderView.h; sourceTree = "<group>"; };
@@ -1207,6 +1227,41 @@
 		5DCD9AB1212303F200467294 /* FSChoseZoneMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneMData.m; sourceTree = "<group>"; };
 		5DCD9AB2212303F200467294 /* FSChoseZoneMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneMData.h; sourceTree = "<group>"; };
 		5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneCell.m; sourceTree = "<group>"; };
+		5DCD9ABA2123B5FE00467294 /* NSString+Pinyin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Pinyin.h"; sourceTree = "<group>"; };
+		5DCD9ABB2123B5FE00467294 /* NSString+Pinyin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Pinyin.m"; sourceTree = "<group>"; };
+		5DCD9ABE2123B65600467294 /* ContactDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDataHelper.m; sourceTree = "<group>"; };
+		5DCD9ABF2123B65700467294 /* ContactDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDataHelper.h; sourceTree = "<group>"; };
+		5DCD9AC22123B89000467294 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		5DCD9AC32123B89000467294 /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		5DCD9AC62123BC3F00467294 /* ContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactModel.m; sourceTree = "<group>"; };
+		5DCD9AC72123BC3F00467294 /* ContactModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactModel.h; sourceTree = "<group>"; };
+		5DCD9ACB2123BC6200467294 /* NSArray+JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+JSONModel.m"; sourceTree = "<group>"; };
+		5DCD9ACC2123BC6200467294 /* NSArray+JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+JSONModel.h"; sourceTree = "<group>"; };
+		5DCD9ACE2123BC6200467294 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		5DCD9ACF2123BC6200467294 /* JSONKeyMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKeyMapper.h; sourceTree = "<group>"; };
+		5DCD9AD02123BC6200467294 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
+		5DCD9AD12123BC6200467294 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
+		5DCD9AD32123BC6200467294 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
+		5DCD9AD42123BC6200467294 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
+		5DCD9AD52123BC6200467294 /* JSONModelError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelError.m; sourceTree = "<group>"; };
+		5DCD9AD62123BC6200467294 /* JSONModelClassProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelClassProperty.h; sourceTree = "<group>"; };
+		5DCD9AD72123BC6200467294 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
+		5DCD9AD82123BC6200467294 /* JSONModelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelArray.m; sourceTree = "<group>"; };
+		5DCD9AD92123BC6200467294 /* JSONModelClassProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModelClassProperty.m; sourceTree = "<group>"; };
+		5DCD9ADA2123BC6200467294 /* JSONModelError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelError.h; sourceTree = "<group>"; };
+		5DCD9ADB2123BC6200467294 /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelLib.h; sourceTree = "<group>"; };
+		5DCD9ADD2123BC6200467294 /* JSONHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONHTTPClient.m; sourceTree = "<group>"; };
+		5DCD9ADE2123BC6200467294 /* JSONAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONAPI.m; sourceTree = "<group>"; };
+		5DCD9ADF2123BC6200467294 /* JSONModel+networking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONModel+networking.h"; sourceTree = "<group>"; };
+		5DCD9AE02123BC6200467294 /* JSONHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONHTTPClient.h; sourceTree = "<group>"; };
+		5DCD9AE12123BC6200467294 /* JSONAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONAPI.h; sourceTree = "<group>"; };
+		5DCD9AE22123BC6200467294 /* JSONModel+networking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+networking.m"; sourceTree = "<group>"; };
+		5DCD9AEE2123F32000467294 /* FSChoseZoneLocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneLocationCell.h; sourceTree = "<group>"; };
+		5DCD9AEF2123F32000467294 /* FSChoseZoneLocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneLocationCell.m; sourceTree = "<group>"; };
+		5DCD9AF12123F35B00467294 /* FSChoseZoneHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneHistoryCell.h; sourceTree = "<group>"; };
+		5DCD9AF22123F35B00467294 /* FSChoseZoneHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneHistoryCell.m; sourceTree = "<group>"; };
+		5DCD9AF42123F43200467294 /* FSChoseZoneListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneListCell.h; sourceTree = "<group>"; };
+		5DCD9AF52123F43200467294 /* FSChoseZoneListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneListCell.m; sourceTree = "<group>"; };
 		5DCE9AA420C6682100512610 /* MEDTreatmentRecordListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDTreatmentRecordListController.m; sourceTree = "<group>"; };
 		5DCE9AA520C6682100512610 /* MEDAddTreatmentRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDAddTreatmentRecordController.h; sourceTree = "<group>"; };
 		5DCE9AA620C6682100512610 /* MEDTreatmentRecordListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTreatmentRecordListController.h; sourceTree = "<group>"; };
@@ -1875,6 +1930,8 @@
 				5DBD2C67209FFCBB008F902E /* NSString+MED.m */,
 				5D3E4F3020FA4734008FBF42 /* NSString+unicode.h */,
 				5D3E4F3120FA4734008FBF42 /* NSString+unicode.m */,
+				5DCD9ABA2123B5FE00467294 /* NSString+Pinyin.h */,
+				5DCD9ABB2123B5FE00467294 /* NSString+Pinyin.m */,
 			);
 			path = "NSString+Category";
 			sourceTree = "<group>";
@@ -2512,7 +2569,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
-				5D586A582122BA4E0093CEE9 /* ChooseZone */,
+				5D586A582122BA4E0093CEE9 /* ChooseZone(区域选择) */,
 				5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */,
 				5D62D85D211AE44A00A58D76 /* PassWordTest */,
 				5DB9C4B02119A0E800B4D4C0 /* AliPayTest */,
@@ -2553,15 +2610,15 @@
 			path = "FSCheckCodeSlider(滑动解锁)";
 			sourceTree = "<group>";
 		};
-		5D586A582122BA4E0093CEE9 /* ChooseZone */ = {
+		5D586A582122BA4E0093CEE9 /* ChooseZone(区域选择) */ = {
 			isa = PBXGroup;
 			children = (
 				5DCD9AAC212303F200467294 /* Controller */,
 				5DCD9AAF212303F200467294 /* Model */,
-				5DCD9AB3212303F200467294 /* Other */,
 				5DCD9AA7212303F100467294 /* View */,
+				5DCD9AB3212303F200467294 /* Other */,
 			);
-			path = ChooseZone;
+			path = "ChooseZone(区域选择)";
 			sourceTree = "<group>";
 		};
 		5D62D85D211AE44A00A58D76 /* PassWordTest */ = {
@@ -4003,8 +4060,10 @@
 			children = (
 				5DCD9AAB212303F100467294 /* FSChoseZoneCell.h */,
 				5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */,
-				5DCD9AAA212303F100467294 /* FSChoseZoneSectionHeader.h */,
-				5DCD9AA8212303F100467294 /* FSChoseZoneSectionHeader.m */,
+				5DCD9AF12123F35B00467294 /* FSChoseZoneHistoryCell.h */,
+				5DCD9AF22123F35B00467294 /* FSChoseZoneHistoryCell.m */,
+				5DCD9AF72124412F00467294 /* 待删 */,
+				5DCD9AED2123F2CA00467294 /* Before */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4038,8 +4097,112 @@
 		5DCD9AB3212303F200467294 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5DCD9AC12123B6CC00467294 /* Sourcce */,
+				5DCD9ABD2123B63A00467294 /* DataHelper(接口改后不用) */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		5DCD9ABD2123B63A00467294 /* DataHelper(接口改后不用) */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AC92123BC6200467294 /* JSONModel */,
+				5DCD9AC72123BC3F00467294 /* ContactModel.h */,
+				5DCD9AC62123BC3F00467294 /* ContactModel.m */,
+				5DCD9ABF2123B65700467294 /* ContactDataHelper.h */,
+				5DCD9ABE2123B65600467294 /* ContactDataHelper.m */,
+			);
+			path = "DataHelper(接口改后不用)";
+			sourceTree = "<group>";
+		};
+		5DCD9AC12123B6CC00467294 /* Sourcce */ = {
+			isa = PBXGroup;
+			children = (
+				5D51FDE52124497C00A6FD8C /* cityData.json */,
+				5DCD9AC22123B89000467294 /* cities.plist */,
+				5DCD9AC32123B89000467294 /* cityGroups.plist */,
+			);
+			path = Sourcce;
+			sourceTree = "<group>";
+		};
+		5DCD9AC92123BC6200467294 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9ACA2123BC6200467294 /* JSONModelCategories */,
+				5DCD9ACD2123BC6200467294 /* JSONModelTransformations */,
+				5DCD9AD22123BC6200467294 /* JSONModel */,
+				5DCD9ADB2123BC6200467294 /* JSONModelLib.h */,
+				5DCD9ADC2123BC6200467294 /* JSONModelNetworking */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		5DCD9ACA2123BC6200467294 /* JSONModelCategories */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9ACB2123BC6200467294 /* NSArray+JSONModel.m */,
+				5DCD9ACC2123BC6200467294 /* NSArray+JSONModel.h */,
+			);
+			path = JSONModelCategories;
+			sourceTree = "<group>";
+		};
+		5DCD9ACD2123BC6200467294 /* JSONModelTransformations */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9ACE2123BC6200467294 /* JSONValueTransformer.m */,
+				5DCD9ACF2123BC6200467294 /* JSONKeyMapper.h */,
+				5DCD9AD02123BC6200467294 /* JSONValueTransformer.h */,
+				5DCD9AD12123BC6200467294 /* JSONKeyMapper.m */,
+			);
+			path = JSONModelTransformations;
+			sourceTree = "<group>";
+		};
+		5DCD9AD22123BC6200467294 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AD32123BC6200467294 /* JSONModel.m */,
+				5DCD9AD42123BC6200467294 /* JSONModelArray.h */,
+				5DCD9AD52123BC6200467294 /* JSONModelError.m */,
+				5DCD9AD62123BC6200467294 /* JSONModelClassProperty.h */,
+				5DCD9AD72123BC6200467294 /* JSONModel.h */,
+				5DCD9AD82123BC6200467294 /* JSONModelArray.m */,
+				5DCD9AD92123BC6200467294 /* JSONModelClassProperty.m */,
+				5DCD9ADA2123BC6200467294 /* JSONModelError.h */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		5DCD9ADC2123BC6200467294 /* JSONModelNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9ADD2123BC6200467294 /* JSONHTTPClient.m */,
+				5DCD9ADE2123BC6200467294 /* JSONAPI.m */,
+				5DCD9ADF2123BC6200467294 /* JSONModel+networking.h */,
+				5DCD9AE02123BC6200467294 /* JSONHTTPClient.h */,
+				5DCD9AE12123BC6200467294 /* JSONAPI.h */,
+				5DCD9AE22123BC6200467294 /* JSONModel+networking.m */,
+			);
+			path = JSONModelNetworking;
+			sourceTree = "<group>";
+		};
+		5DCD9AED2123F2CA00467294 /* Before */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AAA212303F100467294 /* FSChoseZoneSectionHeader.h */,
+				5DCD9AA8212303F100467294 /* FSChoseZoneSectionHeader.m */,
+			);
+			path = Before;
+			sourceTree = "<group>";
+		};
+		5DCD9AF72124412F00467294 /* 待删 */ = {
+			isa = PBXGroup;
+			children = (
+				5DCD9AEE2123F32000467294 /* FSChoseZoneLocationCell.h */,
+				5DCD9AEF2123F32000467294 /* FSChoseZoneLocationCell.m */,
+				5DCD9AF42123F43200467294 /* FSChoseZoneListCell.h */,
+				5DCD9AF52123F43200467294 /* FSChoseZoneListCell.m */,
+			);
+			path = "待删";
 			sourceTree = "<group>";
 		};
 		5DCE9A9F20C6682100512610 /* MedicalRecord */ = {
@@ -4419,6 +4582,7 @@
 				5DA70AB320F4B83E00D9AF1D /* dropdown_anim__00028@2x.png in Resources */,
 				5D8207F92099A50500B84C1E /* MEDHomePhysiologyweightCell.xib in Resources */,
 				5D201DF620CA6D2C009007D9 /* circle_outline_pressed.png in Resources */,
+				5DCD9AC42123B89000467294 /* cities.plist in Resources */,
 				5D69059420D9FB12002BBD69 /* MEDMonitorHeaderView.xib in Resources */,
 				5D267FDD20DD4106006A42E2 /* 17.jpg in Resources */,
 				5DBD2C7620A18D65008F902E /* MEDFoodDateFeedbackCell.xib in Resources */,
@@ -4437,6 +4601,7 @@
 				5D267FEB20DD4106006A42E2 /* 9.jpg in Resources */,
 				5D267FDB20DD4106006A42E2 /* 15.jpg in Resources */,
 				5DA70ABE20F4B83E00D9AF1D /* dropdown_anim__0004@2x.png in Resources */,
+				5DCD9AC52123B89000467294 /* cityGroups.plist in Resources */,
 				5D2EF8F920F747C400699AA2 /* index.html in Resources */,
 				5D267FD720DD4106006A42E2 /* 11.jpg in Resources */,
 				5D201DF420CA6D2C009007D9 /* graph_week@2x.png in Resources */,
@@ -4498,6 +4663,7 @@
 				5DA70AB620F4B83E00D9AF1D /* dropdown_anim__00016@2x.png in Resources */,
 				5DB9C4982119822500B4D4C0 /* webRefreshButton@3x.png in Resources */,
 				5D6CC9352109C1D900235B9C /* meituan.json in Resources */,
+				5D51FDE62124497C00A6FD8C /* cityData.json in Resources */,
 				5D267FD920DD4106006A42E2 /* 13.jpg in Resources */,
 				5D8207F42099A50500B84C1E /* MEDHomePhysiologyBloodPressureCell.xib in Resources */,
 				5DA70AC920F4B83E00D9AF1D /* dropdown_anim__00019@2x.png in Resources */,
@@ -4606,11 +4772,14 @@
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */,
 				5D3E4FF520FB5D8C008FBF42 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
+				5DCD9AE32123BC6200467294 /* NSArray+JSONModel.m in Sources */,
 				5D3E501320FB5D8C008FBF42 /* FSMStateUtil.m in Sources */,
 				5D25988020D3892F001225C2 /* MEDSomeTool.m in Sources */,
 				5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */,
 				5D3E501A20FB5D8C008FBF42 /* GHHTTPManager.m in Sources */,
+				5DCD9AEB2123BC6200467294 /* JSONAPI.m in Sources */,
 				5D3E4FE420FB5D8C008FBF42 /* NSArray+Bounds.m in Sources */,
+				5DCD9AE82123BC6200467294 /* JSONModelArray.m in Sources */,
 				5D2EF94520F759DB00699AA2 /* NSString+FFToast.m in Sources */,
 				5D3E501B20FB5D8C008FBF42 /* PingFoundation.m in Sources */,
 				5D69058F20D9FB12002BBD69 /* MEDBloodPressureCell.m in Sources */,
@@ -4659,6 +4828,7 @@
 				5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */,
 				5D49B26F211EDACF00EDA0FF /* FSJavascriptBridgeController.m in Sources */,
 				5D3E4FF920FB5D8C008FBF42 /* FSButton.m in Sources */,
+				5DCD9AEA2123BC6200467294 /* JSONHTTPClient.m in Sources */,
 				5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */,
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
 				5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */,
@@ -4689,6 +4859,7 @@
 				5DB78747211D25CD00661CDD /* CYPasswordInputView.m in Sources */,
 				5D69059020D9FB12002BBD69 /* MEDBloodPressureFrame.m in Sources */,
 				5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */,
+				5DCD9AF32123F35B00467294 /* FSChoseZoneHistoryCell.m in Sources */,
 				5DCE9B1320C6682100512610 /* TZGifPhotoPreviewController.m in Sources */,
 				5D2EF96620F82DFC00699AA2 /* MEDCollectionChooseCell.m in Sources */,
 				5D2EF96320F82DFC00699AA2 /* MEDCollectionChooseController.m in Sources */,
@@ -4756,6 +4927,7 @@
 				5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */,
 				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
 				5D62D879211AF0AF00A58D76 /* HHTextField.m in Sources */,
+				5DCD9AF02123F32000467294 /* FSChoseZoneLocationCell.m in Sources */,
 				5D6CC9332109C1D900235B9C /* MEDTableViewLinkController.m in Sources */,
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,
 				5DCE9B1420C6682100512610 /* LxGridViewFlowLayout.m in Sources */,
@@ -4766,6 +4938,7 @@
 				5DB78744211D25CD00661CDD /* CYPasswordView.m in Sources */,
 				5D3E500C20FB5D8C008FBF42 /* DHGuidePageHUD.m in Sources */,
 				5D8207FB2099A50500B84C1E /* MEDHomePhysiologyweightCell.m in Sources */,
+				5DCD9AE92123BC6200467294 /* JSONModelClassProperty.m in Sources */,
 				5D0ABE4920E4D8620088D0D4 /* MEDPerson.m in Sources */,
 				5D4A480D2090672E007DAD29 /* NSObject+MED.m in Sources */,
 				5D6CC9382109C1D900235B9C /* MEDTableViewLHeaderView.m in Sources */,
@@ -4801,6 +4974,7 @@
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
 				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
+				5DCD9AE42123BC6200467294 /* JSONValueTransformer.m in Sources */,
 				5D6CC93D2109C1D900235B9C /* MEDCollectionViewHeaderView.m in Sources */,
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
@@ -4823,6 +4997,7 @@
 				5D3E4FEE20FB5D8C008FBF42 /* NSString+unicode.m in Sources */,
 				5DBD2CAA20A2E65D008F902E /* MEDHealthKitListController.m in Sources */,
 				5DCE9B1520C6682100512610 /* MEDMedicalRecordController.m in Sources */,
+				5DCD9AE52123BC6200467294 /* JSONKeyMapper.m in Sources */,
 				5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */,
 				5D970D7421071A5500F19D3D /* FSImageView.m in Sources */,
 				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
@@ -4837,10 +5012,12 @@
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
 				5DA70AAA20F4B83E00D9AF1D /* MEDDIYBackFooter.m in Sources */,
 				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
+				5DCD9AC82123BC3F00467294 /* ContactModel.m in Sources */,
 				5D27457620DB985F00844B6E /* MEDPersonalPickerView.m in Sources */,
 				5D3E501520FB5D8C008FBF42 /* ReachStateLoading.m in Sources */,
 				5D201DF720CA6D2C009007D9 /* KDGoalBar.m in Sources */,
 				5DBD2CA420A2E5A6008F902E /* HealthKitDetailViewController.m in Sources */,
+				5DCD9ABC2123B5FE00467294 /* NSString+Pinyin.m in Sources */,
 				5D201DBB20CA6D20009007D9 /* MEDAllBodyModel.m in Sources */,
 				5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */,
 				5DA70AA820F4B83E00D9AF1D /* MEDEatBaoziHeader.m in Sources */,
@@ -4857,7 +5034,9 @@
 				5D8208062099A50500B84C1E /* MEDHomeComplianceCell.m in Sources */,
 				5DB7872D211C2D3000661CDD /* FSPayTextField.m in Sources */,
 				5D27456F20DB985F00844B6E /* MEDPersonalData.m in Sources */,
+				5DCD9AE62123BC6200467294 /* JSONModel.m in Sources */,
 				5DB7872E211C2D3000661CDD /* FSPayPopMenu.m in Sources */,
+				5DCD9AE72123BC6200467294 /* JSONModelError.m in Sources */,
 				5D427A0320F8E9C100FB9C65 /* MZFromModel.m in Sources */,
 				5D3E4FE620FB5D8C008FBF42 /* NSDictionary+Log.m in Sources */,
 				5DF1F14F20EF1FA6009A8E51 /* GHFromCell.m in Sources */,
@@ -4870,6 +5049,7 @@
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
 				5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */,
 				5D3E4F3220FA4734008FBF42 /* NSString+unicode.m in Sources */,
+				5DCD9AF62123F43200467294 /* FSChoseZoneListCell.m in Sources */,
 				5D8207FE2099A50500B84C1E /* MEDHomeHabitFoodCell.m in Sources */,
 				5DB78742211D25CD00661CDD /* CYConst.m in Sources */,
 				5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */,
@@ -4883,6 +5063,7 @@
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5D3E500820FB5D8C008FBF42 /* BAGridItemModel.m in Sources */,
 				5D62D87C211AF0AF00A58D76 /* FSPayPasswordView.m in Sources */,
+				5DCD9AEC2123BC6200467294 /* JSONModel+networking.m in Sources */,
 				5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */,
 				5D3E4FE920FB5D8C008FBF42 /* NSString+EmptyString.m in Sources */,
 				5DCE9B1220C6682100512610 /* TZLocationManager.m in Sources */,
@@ -4911,6 +5092,7 @@
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
 				5DB9C4B32119A10300B4D4C0 /* FSAliPayController.m in Sources */,
+				5DCD9AC02123B65700467294 /* ContactDataHelper.m in Sources */,
 				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
 				5D3E4F2620FA4483008FBF42 /* NSArray+Bounds.m in Sources */,
 				5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */,

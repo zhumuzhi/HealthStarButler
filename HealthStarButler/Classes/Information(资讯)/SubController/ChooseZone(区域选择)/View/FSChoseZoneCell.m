@@ -7,9 +7,10 @@
 //
 
 #import "FSChoseZoneCell.h"
-#import "FSChoseZoneMData.h"
 
+#import "FSChoseZoneMData.h"
 #define kLocationIcon @"common_zone"
+
 @interface FSChoseZoneCell()<UITextFieldDelegate>
 /** 标题 */
 @property (nonatomic , strong) UILabel *title;
@@ -20,12 +21,28 @@
 /** 定位图标 */
 @property (nonatomic , strong) UITextField *textField;
 @end
+
 @implementation FSChoseZoneCell
+#pragma mark - Init
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self setupUI];
+        [self configuration];
+    }
+    return self;
+}
+
+#pragma mark - Configuration
+- (void)configuration {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
 
 #pragma mark - set
 - (void)setRowMData:(FSChoseZoneMData *)rowMData {
     _rowMData = rowMData;
-    self.textField.text = rowMData.title;
+    self.textField.text = rowMData.cityName;
+//    self.title.text = rowMData.cityName;
 /** 定位 */
     if (rowMData.choseZoneCellType == FSChoseZoneCellTypePosition) {
         self.icon.hidden = YES;
@@ -41,8 +58,8 @@
 
         self.textField.leftViewMode = UITextFieldViewModeNever;
     }
-    
 }
+
 - (void)setupUI {
 
     [self addSubview:self.textField];

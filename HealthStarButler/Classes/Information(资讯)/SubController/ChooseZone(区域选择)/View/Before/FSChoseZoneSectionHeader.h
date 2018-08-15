@@ -7,8 +7,11 @@
 //
 
 #import "FSVIew.h"
+
 @class FSChoseZoneMData;
+
 @interface FSChoseZoneSectionHeader : FSView
+
 @property (nonatomic , strong) FSChoseZoneMData *sectionMData;
 
 @end

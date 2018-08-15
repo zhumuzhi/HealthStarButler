@@ -10,9 +10,11 @@
 #import "FSChoseZoneMData.h"
 
 @interface FSChoseZoneSectionHeader()
+
 @property (nonatomic , strong) UILabel *title;
 
 @end
+
 @implementation FSChoseZoneSectionHeader
 
 - (void)setSectionMData:(FSChoseZoneMData *)sectionMData {

@@ -7,10 +7,12 @@
 //
 
 //#import "FSBaseTableViewCell.h"
+
 @class FSChoseZoneMData,FSChoseZoneCell;
 @protocol FSChoseZoneCellDelegate <NSObject>
 - (void)choseZoneCell: (FSChoseZoneCell *)cell choseZoneMData: (FSChoseZoneMData *)choseZoneMData;
 @end
+
 @interface FSChoseZoneCell : UITableViewCell
 @property (nonatomic , strong) FSChoseZoneMData *rowMData;
 @property (nonatomic , weak) id <FSChoseZoneCellDelegate> delegate;
