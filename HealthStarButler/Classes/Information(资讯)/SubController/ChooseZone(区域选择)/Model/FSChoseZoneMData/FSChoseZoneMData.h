@@ -53,10 +53,11 @@ typedef NS_ENUM (NSUInteger,FSChoseZoneDataType) {
 
 #pragma mark -------------------- 方法 --------------------
 - (NSMutableArray *)searchCity;
-- (NSMutableArray *)choseCityWithCity: (NSString *)city;
-- (FSChoseZoneMData *)choseZoneDataWithType: (FSChoseZoneDataType)type;
-- (NSMutableArray *)choseGroupCityWithCity: (NSString *)city;
 
-- (NSMutableArray *)choseCityWithCity: (NSString *)city cites:(NSArray *)cites;
+- (NSMutableArray *)choseCityWithCity: (NSString *)city;
+
+- (FSChoseZoneMData *)choseZoneDataWithType: (FSChoseZoneDataType)type;
+
+- (NSMutableArray *)choseCityWithCity:(NSString *)city cites:(NSArray *)cites;
 
 @end

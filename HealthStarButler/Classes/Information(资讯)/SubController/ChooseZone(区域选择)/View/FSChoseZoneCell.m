@@ -12,6 +12,7 @@
 #define kLocationIcon @"common_zone"
 
 @interface FSChoseZoneCell()<UITextFieldDelegate>
+
 /** 标题 */
 @property (nonatomic , strong) UILabel *title;
 /** 线 */
@@ -20,9 +21,11 @@
 @property (nonatomic , strong) UIImageView *icon;
 /** 定位图标 */
 @property (nonatomic , strong) UITextField *textField;
+
 @end
 
 @implementation FSChoseZoneCell
+
 #pragma mark - Init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self == [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -37,8 +40,7 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-
-#pragma mark - set
+#pragma mark - SetData
 - (void)setRowMData:(FSChoseZoneMData *)rowMData {
     _rowMData = rowMData;
     self.textField.text = rowMData.cityName;
@@ -60,13 +62,14 @@
     }
 }
 
+#pragma mark - ConfigUI
 - (void)setupUI {
 
     [self addSubview:self.textField];
     [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(kMargin10 * 2);
         make.right.equalTo(self).offset(-kMargin10 * 2);
-        make.top.bottom.right.equalTo(self);
+        make.top.bottom.equalTo(self);
     }];
     
     [self addSubview:self.line];
@@ -85,6 +88,7 @@
     }];
 }
 
+#pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (self.rowMData.choseZoneCellType == FSChoseZoneCellTypePosition) {
         if (self.rowMData.isComplete == NO) {
@@ -97,7 +101,8 @@
     }
     return NO;
 }
-#pragma mark - get
+
+#pragma mark - LazyGet
 - (UITextField *)textField {
     if (_textField == nil) {
         _textField = [[UITextField alloc]init];
@@ -114,6 +119,7 @@
     }
     return _textField;
 }
+
 - (UIImageView *)icon {
     if (_icon == nil) {
         _icon = [[UIImageView alloc]init];
@@ -121,6 +127,7 @@
     }
     return _icon;
 }
+
 - (UILabel *)title {
     if (_title == nil) {
         _title = [[UILabel alloc]init];
@@ -129,6 +136,7 @@
     }
     return _title;
 }
+
 - (UIView *)line {
     if (_line == nil) {
         _line = [[UIView alloc]init];
@@ -136,4 +144,5 @@
     }
     return _line;
 }
+
 @end

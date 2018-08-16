@@ -92,6 +92,9 @@
 #define kMargin76 76
 #define kFont(size) kAutoWithSize(size)
 
+#define kCityData     @"kCityData"
+#define kHistoyCites  @"kHistoyCites"
+
 
 #pragma mark -------------------- Color --------------------
 

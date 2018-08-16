@@ -1844,10 +1844,10 @@
 				5D2EF94F20F82DFC00699AA2 /* MEDSingleChooseController.m */,
 				5D2EF95020F82DFC00699AA2 /* MEDMultiSelectController.m */,
 				5D2EF95120F82DFC00699AA2 /* MEDNormalChooseController.h */,
-				5D2EF95220F82DFC00699AA2 /* MEDCollectionChooseController.h */,
 				5D2EF95320F82DFC00699AA2 /* MEDSingleChooseController.h */,
 				5D2EF95420F82DFC00699AA2 /* MEDMultiSelectController.h */,
 				5D2EF95520F82DFC00699AA2 /* MEDNormalChooseController.m */,
+				5D2EF95220F82DFC00699AA2 /* MEDCollectionChooseController.h */,
 				5D2EF95620F82DFC00699AA2 /* MEDCollectionChooseController.m */,
 			);
 			path = SubViewController;
@@ -1872,10 +1872,10 @@
 		5D2EF95B20F82DFC00699AA2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D2EF95C20F82DFC00699AA2 /* MEDTableChooseCell.m */,
-				5D2EF95D20F82DFC00699AA2 /* MEDCollectionChooseCell.m */,
-				5D2EF95E20F82DFC00699AA2 /* MEDCollectionChooseCell.h */,
 				5D2EF95F20F82DFC00699AA2 /* MEDTableChooseCell.h */,
+				5D2EF95C20F82DFC00699AA2 /* MEDTableChooseCell.m */,
+				5D2EF95E20F82DFC00699AA2 /* MEDCollectionChooseCell.h */,
+				5D2EF95D20F82DFC00699AA2 /* MEDCollectionChooseCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3204,10 +3204,10 @@
 		5D829A402085C976001993B6 /* Consultation (咨询) */ = {
 			isa = PBXGroup;
 			children = (
+				5DE1F58520EDE484005FCCD5 /* SubController */,
 				5D829A7A2085D9A3001993B6 /* Controller */,
 				5D829A792085D9A3001993B6 /* Model */,
 				5D829A7B2085D9A3001993B6 /* View */,
-				5DE1F58520EDE484005FCCD5 /* SubController */,
 			);
 			path = "Consultation (咨询)";
 			sourceTree = "<group>";

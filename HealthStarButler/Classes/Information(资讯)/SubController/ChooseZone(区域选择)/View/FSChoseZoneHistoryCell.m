@@ -31,8 +31,10 @@
 
 #pragma mark - ConfigUI
 - (void)configUI {
-
-
+    [self.contentView addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.bottom.equalTo(self);
+    }];
 }
 
 #pragma mark - Configuration
@@ -40,9 +42,9 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-#pragma mark - LazyGet
 static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
 
+#pragma mark - LazyGet
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
         UICollectionViewLayout *flowLayout = [[UICollectionViewLayout alloc] init];
@@ -55,31 +57,29 @@ static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
     return _collectionView;
 }
 
+#pragma mark - Event
+
+
 #pragma mark - SetData
 - (void)setDataArray:(NSArray *)dataArray {
     _dataArray = dataArray;
-
 }
 
-#pragma mark - Event
+- (void)setChoseZoneData:(FSChoseZoneMData *)choseZoneData {
+    _choseZoneData = choseZoneData;
+}
 
 #pragma mark - UICollectionViewDataSource
-
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView {
-    return 1;
-}
-
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 3;
+    return self.choseZoneData.items.count;
 }
 
 - (__kindof UICollectionViewCell*)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath*)indexPath {
 
     FSChoseZoneCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FSChoseZoneCollectionCellID forIndexPath:indexPath];
-    FSChoseZoneMData *choseZoneGroup = [self.dataArray by_ObjectAtIndex:indexPath.section];
-    FSChoseZoneMData *choseZone = [choseZoneGroup.items by_ObjectAtIndex:indexPath.row];
+    FSChoseZoneMData *choseZone = [self.choseZoneData.items by_ObjectAtIndex:indexPath.row];
     NSLog(@"显示的数信息:%@", choseZone);
-
+    
     return cell;
 }
 
@@ -88,6 +88,7 @@ static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
 }
 
 - (void)collectionView:(UICollectionView*)collectionView didSelectItemAtIndexPath:(NSIndexPath*)indexPath {
+
 }
 
 @end

@@ -27,18 +27,22 @@
                         UITableViewDelegate
                         >
 
-/** TableView */
-@property (nonatomic, strong) UITableView *tableView;
-/** 页面结构数组 */
-@property (nonatomic, strong) NSMutableArray *dataArray;
-/** 右侧索引 */
-@property (nonatomic, strong) NSArray *sectionIndexs;
+// ---------- View ----------
 /** 搜索Header */
 @property (nonatomic , strong) FSSearchBarView *searchBar;
+/** TableView */
+@property (nonatomic, strong) UITableView *tableView;
+
+// ---------- Model ----------
+/** 页面结构数组 */
+@property (nonatomic, strong) NSMutableArray *dataArray;
+/** 历史数组 */
+@property (nonatomic, strong) NSMutableArray *historyArray;
+/** 右侧索引标题数组 */
+@property (nonatomic, strong) NSMutableArray *sectionIndexs;
 /** 选择数据类型 */
 @property (nonatomic , assign) FSChoseZoneDataType choseZoneDataType;
-/** 城市数据组 */
-@property (nonatomic, strong) NSMutableArray *cityArray;
+
 /** CLLocationManager */
 @property (nonatomic , strong) CLLocationManager *locationManager;
 
@@ -74,10 +78,10 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 #pragma mark - Configuration
 - (void)configuration {
     self.navigationItem.title = @"区域选择";
+
     [self.tableView registerClass:[FSChoseZoneCell class] forCellReuseIdentifier:FSChoseZoneCellID];
 
     [self.tableView registerClass:[FSChoseZoneHistoryCell class] forCellReuseIdentifier:FSChoseZoneHistoryCellID];
-//    [self.tableView registerClass:[FSChoseZoneListCell class] forCellReuseIdentifier:FSChoseZoneListCellID];
 
     self.tableView.mj_footer.hidden = YES;
 }
@@ -105,8 +109,7 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
             [self.locationManager startUpdatingLocation];
         }
     });
-//    FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
-//    self.dataArray = [choseZoneMData choseCityWithCity:nil];
+
     // ----------- 本地假数据 -----------
     NSString *path = [[NSBundle mainBundle] pathForResource:@"cityData" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
@@ -117,6 +120,7 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     //NSLog(@"dataArray:%@", self.dataArray);
     // ----------- 本地假数据 -----------
 
+    // ----------- 索引数据 -----------
     NSMutableArray *tempIndexs = [NSMutableArray array];
     for (FSChoseZoneMData *choseZoneMData in self.dataArray) {
         NSString *indexStr = choseZoneMData.sectionHeaderTitle;
@@ -129,6 +133,8 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
         [tempIndexs addObject:indexStr];
     }
     self.sectionIndexs = tempIndexs;
+    // ----------- 索引数据 -----------
+
 
     self.choseZoneDataType = FSChoseZoneDataTypePosition;
 }
@@ -172,6 +178,7 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 }
 
 #pragma mark - CustomDelegate
+
 #pragma mark FSSearchBarViewDelegate
 - (void)searchBarViewDidClick: (FSSearchBarView *)searchBarView
                          type: (FSSearchBarButtonType)type {
@@ -184,7 +191,6 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 
 - (void)searchBarView:(FSSearchBarView *)searchBarView userInput: (NSString *)text {
     FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
-
     if (text.length) {
         self.choseZoneDataType = FSChoseZoneDataTypeSearchList;
         NSMutableArray *array = [choseZoneMData searchCity];
@@ -198,7 +204,16 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
         self.dataArray = dataArray;
     } else {
         self.choseZoneDataType = FSChoseZoneDataTypePosition;
-        self.dataArray = [choseZoneMData choseGroupCityWithCity:nil];;
+        // ----------- 本地假数据 -----------
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"cityData" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        NSDictionary *summary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSArray *cites = summary[@"data"];
+        FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
+        self.dataArray = [choseZoneMData choseCityWithCity:nil cites:cites];
+        //NSLog(@"dataArray:%@", self.dataArray);
+        // ----------- 本地假数据 -----------
+        self.dataArray = [choseZoneMData choseCityWithCity:nil cites:cites];
     }
     [self.tableView reloadData];
 }
@@ -208,10 +223,29 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     if (self.delegate && [self.delegate respondsToSelector:@selector(choseZoneViewController:locationCity:)]) {
         [self.delegate choseZoneViewController:self locationCity:choseZoneMData.title];
     }
-    [self.navigationController popViewControllerAnimated:YES];
+
+    // -------- 全局城市数据 --------
+    // 存储全局城市数据
+    [[CacheHelper sharedManager] saveDataWithObject:choseZoneMData key:kCityData cacheCallBack:nil];
+    // 获取全局历城市
+    //NSArFSChoseZoneMDataray *cityData = [[CacheHelper sharedManager] readDataWithKey:kCityData];
+
+    // -------- 历史城市数据 --------
+    if (![self.historyArray containsObject:choseZoneMData]) {
+        if (self.historyArray.count >= 6) {
+            [self.historyArray removeLastObject];
+        }
+        [self.historyArray insertObject:choseZoneMData atIndex:0];
+    }
+    //存储历史选中城市信息
+    [[CacheHelper sharedManager] saveDataWithObject:self.historyArray key:kHistoyCites cacheCallBack:^(BOOL result) {
+        NSLog(@"历史城市:%@", self.historyArray);
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    // -------- 历史城市数据 --------
 }
 
-#pragma mark TableViewDataSource
+#pragma mark - TableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
         return self.dataArray.count;
@@ -238,10 +272,14 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
         FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
         FSChoseZoneMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
-        if (indexPath.section == 1) {
-            historyCell.textLabel.text = rowMData.cityName;
+        if (indexPath.section == 1) { // 历史
+//            historyCell.textLabel.text = rowMData.cityName;
+            FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
+
+//            historyCell.dataArray =
+
             return historyCell;
-        }else {
+        }else { // 定位与其他
             zoneCell.rowMData = rowMData;
             return zoneCell;
         }
@@ -252,10 +290,15 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     }
 }
 
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return self.sectionIndexs;
+}
+
 CGFloat SearchH = 56.0f;
 CGFloat NomalCellH = 44.0f;
 CGFloat HistoryCellH = 60.0f;
 
+#pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat CellH = 0;
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
@@ -268,10 +311,6 @@ CGFloat HistoryCellH = 60.0f;
          CellH = NomalCellH;
     }
     return CellH;
-}
-
--(NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return self.sectionIndexs;
 }
 
 #pragma mark - UITableViewDelegate
@@ -312,23 +351,26 @@ CGFloat HeaderH = 19.0f;
     }
     return _searchBar;
 }
+
 - (NSMutableArray *)dataArray {
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
 }
-- (NSMutableArray *)cityArray {
-    if (_cityArray == nil) {
-        _cityArray = [NSMutableArray array];
-    }
-    return _cityArray;
-}
-- (NSArray *)sectionIndexs {
+
+- (NSMutableArray *)sectionIndexs {
     if (_sectionIndexs == nil) {
         _sectionIndexs = [NSMutableArray array];
     }
     return _sectionIndexs;
+}
+
+- (NSMutableArray *)historyArray {
+    if (_historyArray == nil) {
+        _historyArray = [NSMutableArray array];
+    }
+    return _historyArray;
 }
 
 - (UITableView *)tableView {
@@ -340,7 +382,6 @@ CGFloat HeaderH = 19.0f;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;//隐藏自带分割线
         _tableView.showsHorizontalScrollIndicator = NO;//关闭水平指示条
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0.1f, 0.1f, 0.1f, 0.1f)];// tableFooterView设置
-
         _tableView.sectionIndexColor = [UIColor colorWithHexString:@"#007AFF"];//修改右边索引字体的颜色
     }
     return _tableView;

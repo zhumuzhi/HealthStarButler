@@ -10,6 +10,8 @@
 
 @implementation FSChoseZoneMData
 
+WYCodingImplementation
+
 - (FSChoseZoneMData *)choseZoneDataWithType: (FSChoseZoneDataType)type {
     FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
     choseZoneMData.choseZoneDataType = type;
@@ -121,21 +123,19 @@
 - (FSChoseZoneMData *)creatHistoryCity{
     FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
     sectionMData.sectionHeaderTitle = @"历史选择";
-    /* FIXME:怎样设置历史数据*/
-    //    NSArray *historys = @[@"北京",@"天津",@"河北"];
-    //    NSMutableArray *tempRows = [NSMutableArray array];
-    //    for (NSString *cityName in historys) {
-    //        FSChoseZoneMData *rowData = [[FSChoseZoneMData alloc] init];
-    //        rowData.cityName = cityName;
-    //        [tempRows addObject:rowData];
-    //    }
 
-    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc] init];
-    rowMData.cityName = @"北京                            上海                            广州";
-    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
-    rowMData.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
-    //    sectionMData.items = tempRows;
-    sectionMData.items = @[rowMData];
+    NSArray *citysArray = [[CacheHelper sharedManager] readDataWithKey:kHistoyCites];
+    if (citysArray == nil) {
+        citysArray = [NSMutableArray array];
+    }
+//    NSLog(@"历史城市:%@", citysArray);
+    if (citysArray.count>0) {
+        for (FSChoseZoneMData *rowMData in citysArray) {
+            rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
+            rowMData.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
+        }
+    }
+    sectionMData.items = citysArray;
     return sectionMData;
 }
 

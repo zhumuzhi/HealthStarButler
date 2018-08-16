@@ -52,6 +52,9 @@
 #import "NSArray+Bounds.h"
 #import "NSArray+Log.h"
 
+#import "NSObject+WYCoding.h"
+
+
 // 富文本拼接
 #import "NSMutableAttributedString+Add.h"
 
