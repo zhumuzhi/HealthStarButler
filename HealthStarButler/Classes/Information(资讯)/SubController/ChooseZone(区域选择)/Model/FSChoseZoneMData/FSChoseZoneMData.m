@@ -28,66 +28,6 @@
     return dataArray;
 }
 
-#pragma mark - 拼接数据
-- (NSMutableArray *)choseCityWithCity: (NSString *)city cites:(NSArray *)cites {
-    NSMutableArray *dataArray = [NSMutableArray array];
-    // ------ 定位 ------
-    [dataArray addObject:[self creatlocationWithCity:city]];
-    // ------ 历史 ------
-    [dataArray addObject:[self creatHistoryCity]];
-    // ------ 列表 ------
-    for (NSDictionary *dict in cites) {
-        FSChoseZoneMData *choseZoneGroup = [[FSChoseZoneMData alloc] init];
-        choseZoneGroup.sectionHeaderTitle = dict[@"item"];
-        NSMutableArray *tempGroup = [NSMutableArray array];
-        NSArray *tempCitys = dict[@"list"];
-        for (NSDictionary *cityDict in tempCitys) {
-            FSChoseZoneMData *choseZone = [[FSChoseZoneMData alloc] init];
-            choseZone.cityName = cityDict[@"name"];
-            choseZone.code = cityDict[@"code"];
-            [tempGroup addObject:choseZone];
-        }
-        choseZoneGroup.items = tempGroup;
-        [dataArray addObject:choseZoneGroup];
-    }
-    return dataArray;
-}
-
-#pragma mark - 创建当前定位城市数据
-- (FSChoseZoneMData *)creatlocationWithCity:(NSString *)city {
-    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
-    sectionMData.sectionHeaderTitle = @"当前定位城市";
-    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
-    rowMData.title = city.length > 0? city:@"正在定位中...";
-    rowMData.isComplete = city.length > 0 ? YES:NO;
-    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
-    rowMData.choseZoneCellType = FSChoseZoneCellTypePosition;
-    sectionMData.items = @[rowMData];
-    return sectionMData;
-}
-
-#pragma mark - 创建历史选择城市数据
-- (FSChoseZoneMData *)creatHistoryCity{
-    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
-    sectionMData.sectionHeaderTitle = @"历史选择";
-    /* FIXME:怎样设置历史数据*/
-//    NSArray *historys = @[@"北京",@"天津",@"河北"];
-//    NSMutableArray *tempRows = [NSMutableArray array];
-//    for (NSString *cityName in historys) {
-//        FSChoseZoneMData *rowData = [[FSChoseZoneMData alloc] init];
-//        rowData.cityName = cityName;
-//        [tempRows addObject:rowData];
-//    }
-
-    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc] init];
-    rowMData.cityName = @"北京                            上海                            广州";
-    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
-    rowMData.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
-//    sectionMData.items = tempRows;
-    sectionMData.items = @[rowMData];
-    return sectionMData;
-}
-
 - (FSChoseZoneMData *)creatCityList{
     FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc] init];
 //    sectionMData.sectionHeaderTitle = @"选择配送位置";
@@ -137,53 +77,66 @@
     return dataArray;
 }
 
-#pragma mark - 分组城市测试
+#pragma mark --------------- 分组城市测试 ---------------
 
-- (NSMutableArray *)choseGroupCityWithCity: (NSString *)city {
+#pragma mark - 拼接数据
+- (NSMutableArray *)choseCityWithCity: (NSString *)city cites:(NSArray *)cites {
     NSMutableArray *dataArray = [NSMutableArray array];
+    // ------ 定位 ------
     [dataArray addObject:[self creatlocationWithCity:city]];
-    [dataArray addObject:[self creatCityGroupList]];
+    // ------ 历史 ------
+    [dataArray addObject:[self creatHistoryCity]];
+    // ------ 列表 ------
+    for (NSDictionary *dict in cites) {
+        FSChoseZoneMData *choseZoneGroup = [[FSChoseZoneMData alloc] init];
+        choseZoneGroup.sectionHeaderTitle = dict[@"item"];
+        NSMutableArray *tempGroup = [NSMutableArray array];
+        NSArray *tempCitys = dict[@"list"];
+        for (NSDictionary *cityDict in tempCitys) {
+            FSChoseZoneMData *choseZone = [[FSChoseZoneMData alloc] init];
+            choseZone.cityName = cityDict[@"name"];
+            choseZone.code = cityDict[@"code"];
+            [tempGroup addObject:choseZone];
+        }
+        choseZoneGroup.items = tempGroup;
+        [dataArray addObject:choseZoneGroup];
+    }
     return dataArray;
 }
 
-- (FSChoseZoneMData *)creatCityGroupList {
-    FSChoseZoneMData *cityGroup = [[FSChoseZoneMData alloc] init];
-    cityGroup.sectionHeaderTitle = @"选择配送位置";
-    NSArray *cityGroups = @[
-                            @{
-                                @"title" : @"A",
-                                @"citys" : @[@"阿克苏", @"阿拉善", @"安庆", @"安阳"]
-                                },
-                            @{
-                                @"title" : @"B",
-                                @"citys" : @[@"白银", @"保定", @"巴中", @"北海", @"北京"]
-                                },
-                            @{
-                                @"title" : @"C",
-                                @"citys" : @[@"沧州", @"常州", @"成都", @"赤峰", @"潮州"]
-                                },
-                            @{
-                                @"title" : @"D",
-                                @"citys" : @[@"大理", @"大连", @"大庆", @"德州", @"东莞"]
-                                }
-                            ];
-    NSMutableArray *tempItems = [NSMutableArray array];
-    for (NSDictionary *dict in cityGroups) {
-        cityGroup.title = dict[@"title"];
-        cityGroup.choseZoneDataType = FSChoseZoneDataTypePosition;
-        cityGroup.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
-        NSArray *citys = dict[@"citys"];
-        for (NSString *cityName in citys) {
-            FSChoseZoneMData *city = [[FSChoseZoneMData alloc] init];
-            city.cityName = cityName;
-            city.choseZoneDataType = FSChoseZoneDataTypePosition;
-            city.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
-            [tempItems addObject:city];
-        }
-        cityGroup.items = tempItems.mutableCopy;
-    }
-    return cityGroup;
+#pragma mark - 创建当前定位城市数据
+- (FSChoseZoneMData *)creatlocationWithCity:(NSString *)city {
+    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
+    sectionMData.sectionHeaderTitle = @"当前定位城市";
+    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
+    rowMData.title = city.length > 0? city:@"正在定位中...";
+    rowMData.isComplete = city.length > 0 ? YES:NO;
+    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
+    rowMData.choseZoneCellType = FSChoseZoneCellTypePosition;
+    sectionMData.items = @[rowMData];
+    return sectionMData;
 }
 
+#pragma mark - 创建历史选择城市数据
+- (FSChoseZoneMData *)creatHistoryCity{
+    FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
+    sectionMData.sectionHeaderTitle = @"历史选择";
+    /* FIXME:怎样设置历史数据*/
+    //    NSArray *historys = @[@"北京",@"天津",@"河北"];
+    //    NSMutableArray *tempRows = [NSMutableArray array];
+    //    for (NSString *cityName in historys) {
+    //        FSChoseZoneMData *rowData = [[FSChoseZoneMData alloc] init];
+    //        rowData.cityName = cityName;
+    //        [tempRows addObject:rowData];
+    //    }
+
+    FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc] init];
+    rowMData.cityName = @"北京                            上海                            广州";
+    rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
+    rowMData.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
+    //    sectionMData.items = tempRows;
+    sectionMData.items = @[rowMData];
+    return sectionMData;
+}
 
 @end

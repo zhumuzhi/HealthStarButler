@@ -45,6 +45,13 @@
         [weakself.navigationController pushViewController:pass animated:YES];
     }];
 
+    [_bridge registerHandler:@"comment" handler:^(id data, WVJBResponseCallback responseCallback) {
+        NSLog(@"传递参数: %@", data);
+        responseCallback(@"OC返回的结果");
+        FSPassWordController *pass = [[FSPassWordController alloc] init];
+        [weakself.navigationController pushViewController:pass animated:YES];
+    }];
+
     [_bridge callHandler:@"testJavascriptHandler" data:@{ @"foo":@"before ready" }];
 
     [self renderButtons:webView];
@@ -71,18 +78,45 @@
 }
 
 - (void)loadExamplePage:(WKWebView*)webView {
-    //本地
-    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
-    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
-    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
-    [webView loadHTMLString:appHtml baseURL:baseURL];
+    // -------- 本地 --------
+//    NSString* htmlPath = [[NSBundle mainBundle] pathForResource:@"ExampleApp" ofType:@"html"];
+//    NSString* appHtml = [NSString stringWithContentsOfFile:htmlPath encoding:NSUTF8StringEncoding error:nil];
+//    NSURL *baseURL = [NSURL fileURLWithPath:htmlPath];
+//    [webView loadHTMLString:appHtml baseURL:baseURL];
+    // -------- 本地 --------
 
-    //网络
+    // -------- 网络 --------
     //http://192.168.65.123:8000
 //    NSURL *baseURL = [NSURL URLWithString:@"http://192.168.65.123:8000"];
 //    NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
 //    [webView loadRequest:request];
+
+    NSString *login_account = @"xian0002";
+    NSString *member_id = @"10301";
+    NSString *token = @"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MzQzODU5MDMsInN1YiI6IntcImxvZ2luQWNjb3VudFwiOlwieGlhbjAwMDJcIixcImxvZ2luRmxhZ1wiOnRydWUsXCJtZW1iZXJJZFwiOlwiMTAzMDFcIn0iLCJleHAiOjE1MzQzODk1MDN9.pBq0ozzxs-lIqwlzJmcF5i2h1JG3LX_2p9BqZrAcm34";
+    NSString *tab_order_status = @"";
+    NSString *mark = @"true";
+    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?login_account=%@&member_id=%@&token=%@&tab_order_status=%@&mark=%@",login_account, member_id, token, tab_order_status, mark];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
+        // -------- 网络 --------
 }
+
+//===== 参数 =====
+/*
+ 全部 ""
+ 待审批 9
+ 待付款 10
+ 待发货 50
+ 待收货 60
+ 已收货待结算 70
+ 订单成功 80
+ 取消 100
+ 订单关闭 110
+ */
+//===== 参数 =====
+
 
 - (void)renderButtons:(WKWebView*)webView {
     UIFont* font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];

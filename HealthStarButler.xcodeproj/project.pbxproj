@@ -485,6 +485,7 @@
 		5DE1F58120EDA5B2005FCCD5 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F57F20EDA5B1005FCCD5 /* HYEdgeInsetsButton.m */; };
 		5DE1F58420EDE3BC005FCCD5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */; };
 		5DE1F58820EDE4B1005FCCD5 /* MEDStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */; };
+		5DF1781C21251492009F59E3 /* FSChoseZoneCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1781B21251492009F59E3 /* FSChoseZoneCollectionCell.m */; };
 		5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */; };
 		5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14B20EF1DAB009A8E51 /* GHFromModel.m */; };
 		5DF1F14F20EF1FA6009A8E51 /* GHFromCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14E20EF1FA6009A8E51 /* GHFromCell.m */; };
@@ -1337,6 +1338,8 @@
 		5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDStatusController.h; sourceTree = "<group>"; };
 		5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDStatusController.m; sourceTree = "<group>"; };
+		5DF1781A21251492009F59E3 /* FSChoseZoneCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneCollectionCell.h; sourceTree = "<group>"; };
+		5DF1781B21251492009F59E3 /* FSChoseZoneCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneCollectionCell.m; sourceTree = "<group>"; };
 		5DF1F14420EF1C9F009A8E51 /* MEDPersonModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDPersonModelController.h; sourceTree = "<group>"; };
 		5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDPersonModelController.m; sourceTree = "<group>"; };
 		5DF1F14A20EF1DAB009A8E51 /* GHFromModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHFromModel.h; sourceTree = "<group>"; };
@@ -4062,6 +4065,8 @@
 				5DCD9AB72123043E00467294 /* FSChoseZoneCell.m */,
 				5DCD9AF12123F35B00467294 /* FSChoseZoneHistoryCell.h */,
 				5DCD9AF22123F35B00467294 /* FSChoseZoneHistoryCell.m */,
+				5DF1781A21251492009F59E3 /* FSChoseZoneCollectionCell.h */,
+				5DF1781B21251492009F59E3 /* FSChoseZoneCollectionCell.m */,
 				5DCD9AF72124412F00467294 /* 待删 */,
 				5DCD9AED2123F2CA00467294 /* Before */,
 			);
@@ -4866,6 +4871,7 @@
 				5D3E500A20FB5D8C008FBF42 /* BAGridViewTypeTitleDescCell.m in Sources */,
 				5DA8C04A20F6316700AF5C74 /* MZSettingCell.m in Sources */,
 				5DC39F902091D56F000D1B26 /* MEDHomeRankScoreCell.m in Sources */,
+				5DF1781C21251492009F59E3 /* FSChoseZoneCollectionCell.m in Sources */,
 				5D6CC9482109C89F00235B9C /* FSToastTool.m in Sources */,
 				5D2EF91C20F7581D00699AA2 /* SCLTimerDisplay.m in Sources */,
 				5D3E4FED20FB5D8C008FBF42 /* NSString+Timestamp.m in Sources */,
