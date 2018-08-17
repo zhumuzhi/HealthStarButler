@@ -91,16 +91,44 @@
 //    NSURLRequest *request = [NSURLRequest requestWithURL:baseURL];
 //    [webView loadRequest:request];
 
-    NSString *login_account = @"xian0002";
-    NSString *member_id = @"10301";
-    NSString *token = @"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MzQzODU5MDMsInN1YiI6IntcImxvZ2luQWNjb3VudFwiOlwieGlhbjAwMDJcIixcImxvZ2luRmxhZ1wiOnRydWUsXCJtZW1iZXJJZFwiOlwiMTAzMDFcIn0iLCJleHAiOjE1MzQzODk1MDN9.pBq0ozzxs-lIqwlzJmcF5i2h1JG3LX_2p9BqZrAcm34";
-    NSString *tab_order_status = @"";
-    NSString *mark = @"true";
-    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?login_account=%@&member_id=%@&token=%@&tab_order_status=%@&mark=%@",login_account, member_id, token, tab_order_status, mark];
+//    NSString *login_account = @"xian0002";
+//    NSString *member_id = @"10301";
+//    NSString *token = @"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MzQzODU5MDMsInN1YiI6IntcImxvZ2luQWNjb3VudFwiOlwieGlhbjAwMDJcIixcImxvZ2luRmxhZ1wiOnRydWUsXCJtZW1iZXJJZFwiOlwiMTAzMDFcIn0iLCJleHAiOjE1MzQzODk1MDN9.pBq0ozzxs-lIqwlzJmcF5i2h1JG3LX_2p9BqZrAcm34";
+//    NSString *tab_order_status = @"";
+//    NSString *mark = @"true";
+
+//    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?login_account=%@&member_id=%@&token=%@&tab_order_status=%@&mark=%@",login_account, member_id, token, tab_order_status, mark];
+
+    NSDictionary *dictData = @{
+                               @"token":@"eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJqd3QiLCJpYXQiOjE1MzQzMDMxNTcsInN1YiI6IntcImxvZ2luQWNjb3VudFwiOlwieGlhbjAwMDJcIixcImxvZ2luRmxhZ1wiOnRydWUsXCJtZW1iZXJJZFwiOlwiMTAzMDFcIn0iLCJleHAiOjE1MzQzMDY3NTd9.bp3A-gnk0-w7nQmJXSYEWkxDUAv0b-ITUadhGNvXnOI",
+                               @"customerId":@"CN00000388",
+                            @"warehouseId":@1,
+                               @"memberId":@10301,
+                               @"timeSort":@1,
+                               @"catSort":@0,
+                               @"platformType":@1,
+                               @"cityId":@1,
+                               @"currentPage":@1
+                               };
+
+    NSString *dataStr = [self jsonStringWithDict:dictData];
+    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?data=%@]", dataStr];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
         // -------- 网络 --------
+}
+
+- (NSString *)jsonStringWithDict:(NSDictionary *)dict {
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:&error];
+    NSString *jsonString;
+    if (!jsonData) {
+        NSLog(@"%@",error);
+    }else{
+        jsonString = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    return jsonString;
 }
 
 //===== 参数 =====

@@ -15,7 +15,6 @@
 
 #import "FSChoseZoneCell.h"           /* 定位Cell/列表Cell/搜索列表Cell*/
 #import "FSChoseZoneHistoryCell.h"    /* 选择历史*/
-//#import "FSChoseZoneListCell.h"       /* 展示列表*/
 
 #import <CoreLocation/CoreLocation.h>
 
@@ -115,9 +114,9 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *summary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     NSArray *cites = summary[@"data"];
-    FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc]init];
+    FSChoseZoneMData *choseZoneMData = [[FSChoseZoneMData alloc] init];
     self.dataArray = [choseZoneMData choseCityWithCity:nil cites:cites];
-    //NSLog(@"dataArray:%@", self.dataArray);
+    // NSLog(@"dataArray:%@", self.dataArray);
     // ----------- 本地假数据 -----------
 
     // ----------- 索引数据 -----------
@@ -134,7 +133,6 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     }
     self.sectionIndexs = tempIndexs;
     // ----------- 索引数据 -----------
-
 
     self.choseZoneDataType = FSChoseZoneDataTypePosition;
 }
@@ -224,26 +222,57 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
         [self.delegate choseZoneViewController:self locationCity:choseZoneMData.title];
     }
 
+    // 先从缓存中获取历史数据
+    NSMutableArray *citysArray = [[CacheHelper sharedManager] readDataWithKey:kHistoyCites];
+    if (citysArray == nil) {
+        citysArray = [NSMutableArray array];
+    }
+    self.historyArray = citysArray;
+    // -------- 历史城市数据 --------
+    // 判断是否包含
+    if ([self isContainCity:citysArray choseZone:choseZoneMData] == NO) {
+        if (self.historyArray.count >= 6) {
+            [self.historyArray removeLastObject];
+        }
+        [self.historyArray insertObject:choseZoneMData atIndex:0];
+//        [self.historyArray addObject:choseZoneMData];
+    }
+//    NSLog(@"选择后的历史城市:%@", self.historyArray);
+
+    //存储历史选中城市信息
+    [[CacheHelper sharedManager] saveDataWithObject:self.historyArray key:kHistoyCites cacheCallBack:^(BOOL result) {
+        //NSLog(@"存储后的历史城市:%@", self.historyArray);
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    // -------- 历史城市数据 --------
+
     // -------- 全局城市数据 --------
     // 存储全局城市数据
     [[CacheHelper sharedManager] saveDataWithObject:choseZoneMData key:kCityData cacheCallBack:nil];
     // 获取全局历城市
     //NSArFSChoseZoneMDataray *cityData = [[CacheHelper sharedManager] readDataWithKey:kCityData];
-
-    // -------- 历史城市数据 --------
-    if (![self.historyArray containsObject:choseZoneMData]) {
-        if (self.historyArray.count >= 6) {
-            [self.historyArray removeLastObject];
-        }
-        [self.historyArray insertObject:choseZoneMData atIndex:0];
-    }
-    //存储历史选中城市信息
-    [[CacheHelper sharedManager] saveDataWithObject:self.historyArray key:kHistoyCites cacheCallBack:^(BOOL result) {
-        NSLog(@"历史城市:%@", self.historyArray);
-        [self.navigationController popViewControllerAnimated:YES];
-    }];
-    // -------- 历史城市数据 --------
 }
+
+/** 判断是否包含城市 */
+- (BOOL)isContainCity:(NSMutableArray *)citesArray choseZone:(FSChoseZoneMData *)choseCity  {
+
+    BOOL isContain = NO;
+
+    for (FSChoseZoneMData *choseZone in citesArray) {
+        if ([choseZone.cityName isEqualToString:choseCity.cityName]) {
+            isContain = YES;
+            return isContain;
+        }else if (choseCity.cityName.length<=0) {
+            isContain = YES;
+            return isContain;
+        }else {
+            isContain = NO;
+            return isContain;
+        }
+    }
+    return isContain;
+}
+
 
 #pragma mark - TableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -256,8 +285,12 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
-        FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
-        return sectionMData.items.count;
+        if (section == 1) {
+            return 1;
+        }else {
+            FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
+            return sectionMData.items.count;
+        }
     } else {
         return 1;
     }
@@ -272,12 +305,14 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
         FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
         FSChoseZoneMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
+
         if (indexPath.section == 1) { // 历史
 //            historyCell.textLabel.text = rowMData.cityName;
-            FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
-
-//            historyCell.dataArray =
-
+            /* FIXME:给历史Cell赋值*/
+            //NSLog(@"历史cell数据:%@", sectionMData);
+            //NSLog(@"items:%@", sectionMData.items);
+            NSLog(@"为历史Cell赋值，内容为:%@", sectionMData);
+            historyCell.choseZoneData = sectionMData;
             return historyCell;
         }else { // 定位与其他
             zoneCell.rowMData = rowMData;
@@ -296,21 +331,27 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 
 CGFloat SearchH = 56.0f;
 CGFloat NomalCellH = 44.0f;
-CGFloat HistoryCellH = 60.0f;
+CGFloat HistoryCellOneH = 60.0f;
+CGFloat HistoryCellTwoH = 105.0f;
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat CellH = 0;
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
         if(indexPath.section == 1) {
-            CellH = HistoryCellH;
+        FSChoseZoneMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
+            if (sectionMData.items.count>=4) {
+                CellH = kAutoWithSize(HistoryCellTwoH);
+            }else {
+                CellH = kAutoWithSize(HistoryCellOneH);
+            }
         }else {
-            CellH = NomalCellH;
+            CellH = kAutoWithSize(NomalCellH);
         }
     }else {
-         CellH = NomalCellH;
+         CellH = kAutoWithSize(NomalCellH);
     }
-    return CellH;
+    return kAutoWithSize(CellH);
 }
 
 #pragma mark - UITableViewDelegate

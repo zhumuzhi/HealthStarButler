@@ -128,7 +128,7 @@ WYCodingImplementation
     if (citysArray == nil) {
         citysArray = [NSMutableArray array];
     }
-//    NSLog(@"历史城市:%@", citysArray);
+    NSLog(@"读取的本地存储的历史城市:%@", citysArray);
     if (citysArray.count>0) {
         for (FSChoseZoneMData *rowMData in citysArray) {
             rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;

@@ -12,10 +12,6 @@
 
 @interface FSChoseZoneHistoryCell : UITableViewCell
 
-@property (nonatomic, strong) NSArray *dataArray;
-
 @property (nonatomic, strong) FSChoseZoneMData *choseZoneData;
-
-
 
 @end

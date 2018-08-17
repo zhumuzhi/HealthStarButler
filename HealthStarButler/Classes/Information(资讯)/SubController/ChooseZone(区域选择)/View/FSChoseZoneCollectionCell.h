@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class FSChoseZoneMData;
+
 @interface FSChoseZoneCollectionCell : UICollectionViewCell
+
+@property (nonatomic, strong) FSChoseZoneMData *choseZoneMData;
 
 @end

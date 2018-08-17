@@ -42,35 +42,23 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
-static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
-
-#pragma mark - LazyGet
-- (UICollectionView *)collectionView {
-    if (!_collectionView) {
-        UICollectionViewLayout *flowLayout = [[UICollectionViewLayout alloc] init];
-        UICollectionView*collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-        collectionView.dataSource = self;
-        collectionView.delegate = self;
-        collectionView.backgroundColor = [UIColor lightGrayColor];
-        [collectionView registerClass:[FSChoseZoneCollectionCell class] forCellWithReuseIdentifier:FSChoseZoneCollectionCellID];
-    }
-    return _collectionView;
-}
-
 #pragma mark - Event
 
-
 #pragma mark - SetData
-- (void)setDataArray:(NSArray *)dataArray {
-    _dataArray = dataArray;
-}
 
 - (void)setChoseZoneData:(FSChoseZoneMData *)choseZoneData {
     _choseZoneData = choseZoneData;
+    [self.collectionView reloadData];
 }
 
 #pragma mark - UICollectionViewDataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
 - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
+    NSLog(@"每组返回%zd个数据", self.choseZoneData.items.count);
     return self.choseZoneData.items.count;
 }
 
@@ -79,16 +67,33 @@ static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
     FSChoseZoneCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:FSChoseZoneCollectionCellID forIndexPath:indexPath];
     FSChoseZoneMData *choseZone = [self.choseZoneData.items by_ObjectAtIndex:indexPath.row];
     NSLog(@"显示的数信息:%@", choseZone);
-    
+    cell.choseZoneMData = choseZone;
+
     return cell;
 }
 
-- (CGSize)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath*)indexPath {
-    return CGSizeMake(100, 100);
+- (void)collectionView:(UICollectionView*)collectionView didSelectItemAtIndexPath:(NSIndexPath*)indexPath {
+    NSLog(@"点击了:%ld", (long)indexPath.row);
 }
 
-- (void)collectionView:(UICollectionView*)collectionView didSelectItemAtIndexPath:(NSIndexPath*)indexPath {
+static NSString *FSChoseZoneCollectionCellID = @"FSChoseZoneCollectionCellID";
 
+#pragma mark - LazyGet
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.itemSize = CGSizeMake(kAutoWithSize(100), kAutoWithSize(30));
+        flowLayout.sectionInset = UIEdgeInsetsMake(15, 10, 15, 10);
+        flowLayout.minimumInteritemSpacing = 10;
+        flowLayout.minimumLineSpacing = 10;
+
+        _collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        [_collectionView registerClass:[FSChoseZoneCollectionCell class] forCellWithReuseIdentifier:FSChoseZoneCollectionCellID];
+    }
+    return _collectionView;
 }
 
 @end
