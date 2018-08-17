@@ -266,7 +266,6 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
     return isContain;
 }
 
-
 #pragma mark - TableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if (self.choseZoneDataType == FSChoseZoneDataTypePosition) {
