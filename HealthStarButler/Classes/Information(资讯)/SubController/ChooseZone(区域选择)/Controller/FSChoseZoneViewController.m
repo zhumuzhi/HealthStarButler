@@ -235,10 +235,8 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
             [self.historyArray removeLastObject];
         }
         [self.historyArray insertObject:choseZoneMData atIndex:0];
-//        [self.historyArray addObject:choseZoneMData];
     }
 //    NSLog(@"选择后的历史城市:%@", self.historyArray);
-
     //存储历史选中城市信息
     [[CacheHelper sharedManager] saveDataWithObject:self.historyArray key:kHistoyCites cacheCallBack:^(BOOL result) {
         //NSLog(@"存储后的历史城市:%@", self.historyArray);
@@ -255,20 +253,15 @@ static  NSString *FSChoseZoneListCellID = @"FSChoseZoneListCellID";
 
 /** 判断是否包含城市 */
 - (BOOL)isContainCity:(NSMutableArray *)citesArray choseZone:(FSChoseZoneMData *)choseCity  {
-
     BOOL isContain = NO;
-
+    NSMutableArray *citesNames = [NSMutableArray array];
     for (FSChoseZoneMData *choseZone in citesArray) {
-        if ([choseZone.cityName isEqualToString:choseCity.cityName]) {
-            isContain = YES;
-            return isContain;
-        }else if (choseCity.cityName.length<=0) {
-            isContain = YES;
-            return isContain;
-        }else {
-            isContain = NO;
-            return isContain;
-        }
+        [citesNames addObject:choseZone.cityName];
+    }
+    if (![citesNames containsObject:choseCity.cityName]) {
+        isContain = NO;
+    }else {
+        isContain = YES;
     }
     return isContain;
 }
