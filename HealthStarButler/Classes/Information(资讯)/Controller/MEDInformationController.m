@@ -14,6 +14,7 @@
 #import "FSPassWordController.h"         // 支付弹窗
 #import "FSJavascriptBridgeController.h" // JSBridge框架
 #import "FSChoseZoneViewController.h"    // 地址选择
+#import "WKWebViewDemoController.h"      // WKDomeController
 
 
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
@@ -39,7 +40,8 @@
                                                        @{@"name":@"支付宝测试", @"className":@"FSAliPayController"},
                                                        @{@"name":@"支付弹窗", @"className":@"FSPassWordController"},
                                                        @{@"name":@"JSBridge测试", @"className":@"FSJavascriptBridgeController"},
-                                                       @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"}
+                                                       @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"},
+                                                       @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"}
                                                        ]
                        ];
     }
@@ -95,6 +97,13 @@
     NSDictionary *dict = self.datasArray[indexPath.row];
     Class controller = NSClassFromString(dict[@"className"]);
     UIViewController *viewController = [[controller alloc] init];
+
+//    if (controller == [FSChoseZoneViewController class]) {
+//        [self presentViewController:viewController animated:YES completion:nil];
+//    } else {
+//        [self.navigationController pushViewController:viewController animated:YES];
+//    }
+
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

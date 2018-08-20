@@ -32,17 +32,6 @@ WYCodingImplementation
 
 - (FSChoseZoneMData *)creatCityList{
     FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc] init];
-//    sectionMData.sectionHeaderTitle = @"选择配送位置";
-//    NSArray *titles = @[@"北京",@"天津",@"河北"];
-//    NSMutableArray *dataArray = [NSMutableArray array];
-//    for (NSInteger index = 0; index < titles.count; index++) {
-//        FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
-//        rowMData.title = [titles by_ObjectAtIndex:index];
-//        rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
-//        rowMData.choseZoneCellType = FSChoseZoneCellTypeChoseCity;
-//        [dataArray addObject:rowMData];
-//    }
-//    sectionMData.items = dataArray.mutableCopy;
 
     NSString *path = [[NSBundle mainBundle] pathForResource:@"cityGroups.plist" ofType:nil];
     NSArray *tempArray = [NSArray arrayWithContentsOfFile:path];
@@ -87,7 +76,12 @@ WYCodingImplementation
     // ------ 定位 ------
     [dataArray addObject:[self creatlocationWithCity:city]];
     // ------ 历史 ------
-    [dataArray addObject:[self creatHistoryCity]];
+    FSChoseZoneMData *historyCity = [self creatHistoryCity];
+    if (historyCity.items.count>0) {
+        [dataArray addObject:historyCity];
+    }
+//[dataArray addObject:historyCity];
+
     // ------ 列表 ------
     for (NSDictionary *dict in cites) {
         FSChoseZoneMData *choseZoneGroup = [[FSChoseZoneMData alloc] init];
@@ -111,7 +105,7 @@ WYCodingImplementation
     FSChoseZoneMData *sectionMData = [[FSChoseZoneMData alloc]init];
     sectionMData.sectionHeaderTitle = @"当前定位城市";
     FSChoseZoneMData *rowMData = [[FSChoseZoneMData alloc]init];
-    rowMData.title = city.length > 0? city:@"正在定位中...";
+    rowMData.cityName = city.length > 0? city:@"正在定位中...";
     rowMData.isComplete = city.length > 0 ? YES:NO;
     rowMData.choseZoneDataType = FSChoseZoneDataTypePosition;
     rowMData.choseZoneCellType = FSChoseZoneCellTypePosition;

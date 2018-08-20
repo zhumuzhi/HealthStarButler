@@ -222,6 +222,9 @@
 		5D62D87B211AF0AF00A58D76 /* HHPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D872211AF0AF00A58D76 /* HHPayPasswordView.m */; };
 		5D62D87C211AF0AF00A58D76 /* FSPayPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */; };
 		5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */; };
+		5D662B53212A9FE6009455D5 /* WKWebViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D662B52212A9FE6009455D5 /* WKWebViewDemoController.m */; };
+		5D662B55212AA042009455D5 /* WKWebViewText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D662B54212AA042009455D5 /* WKWebViewText.html */; };
+		5D68DA9F2127AF2F0043AEFD /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D68DA9E2127AF2E0043AEFD /* FSLocation.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
 		5D69058E20D9FB12002BBD69 /* MEDBloodPressureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D69057120D9FB12002BBD69 /* MEDBloodPressureCell.xib */; };
@@ -881,6 +884,11 @@
 		5D62D875211AF0AF00A58D76 /* FSPayPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPayPopupView.h; sourceTree = "<group>"; };
 		5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPasswordView.m; sourceTree = "<group>"; };
 		5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPayPopupView.m; sourceTree = "<group>"; };
+		5D662B51212A9FE6009455D5 /* WKWebViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoController.h; sourceTree = "<group>"; };
+		5D662B52212A9FE6009455D5 /* WKWebViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoController.m; sourceTree = "<group>"; };
+		5D662B54212AA042009455D5 /* WKWebViewText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKWebViewText.html; sourceTree = "<group>"; };
+		5D68DA9D2127AF2E0043AEFD /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
+		5D68DA9E2127AF2E0043AEFD /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
 		5D69056D20D9FB12002BBD69 /* MEDMonitorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorController.h; sourceTree = "<group>"; };
 		5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDMonitorHistoryController.m; sourceTree = "<group>"; };
@@ -1434,6 +1442,7 @@
 		5D0ABE4020E4CEFB0088D0D4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5D68DA9C2127AF2E0043AEFD /* Location */,
 				5D6CC9452109C89F00235B9C /* FSToastTool */,
 				5DBC071120FF33100078E9B6 /* Coding */,
 				5D510A5F20FC260E00483971 /* FSBase64Tool */,
@@ -2572,6 +2581,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D662B50212A9FBE009455D5 /* WKWenDemo */,
 				5D586A582122BA4E0093CEE9 /* ChooseZone(区域选择) */,
 				5D49B26C211EDAAD00EDA0FF /* JavascriptBridgeTest */,
 				5D62D85D211AE44A00A58D76 /* PassWordTest */,
@@ -2683,6 +2693,25 @@
 				5D62D876211AF0AF00A58D76 /* FSPayPasswordView.m */,
 			);
 			path = FSPayPopupView;
+			sourceTree = "<group>";
+		};
+		5D662B50212A9FBE009455D5 /* WKWenDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5D662B54212AA042009455D5 /* WKWebViewText.html */,
+				5D662B51212A9FE6009455D5 /* WKWebViewDemoController.h */,
+				5D662B52212A9FE6009455D5 /* WKWebViewDemoController.m */,
+			);
+			path = WKWenDemo;
+			sourceTree = "<group>";
+		};
+		5D68DA9C2127AF2E0043AEFD /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5D68DA9D2127AF2E0043AEFD /* FSLocation.h */,
+				5D68DA9E2127AF2E0043AEFD /* FSLocation.m */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		5D69056720D9FB12002BBD69 /* MEDMonitorController */ = {
@@ -4630,6 +4659,7 @@
 				5D267FE620DD4106006A42E2 /* 4.jpg in Resources */,
 				5DA70ABA20F4B83E00D9AF1D /* dropdown_anim__00018@2x.png in Resources */,
 				5D267FDE20DD4106006A42E2 /* 18.jpg in Resources */,
+				5D662B55212AA042009455D5 /* WKWebViewText.html in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
 				5DA70AB120F4B83E00D9AF1D /* dropdown_anim__0007@2x.png in Resources */,
@@ -4918,6 +4948,7 @@
 				5DC39F992092BFF9000D1B26 /* MEDScoreProgressBar.m in Sources */,
 				5D8207ED2099A50500B84C1E /* MEDCompanyRankModel.m in Sources */,
 				5D8208042099A50500B84C1E /* MEDHomeComplianceModel.m in Sources */,
+				5D662B53212A9FE6009455D5 /* WKWebViewDemoController.m in Sources */,
 				5D3E500620FB5D8C008FBF42 /* GHTagView.m in Sources */,
 				5DCD9AA5212303A500467294 /* FSSearchBarView.m in Sources */,
 				5D201DE820CA6D2C009007D9 /* MEDGuideLayout.m in Sources */,
@@ -5007,6 +5038,7 @@
 				5DCE9B0D20C6682100512610 /* TZProgressView.m in Sources */,
 				5D970D7421071A5500F19D3D /* FSImageView.m in Sources */,
 				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
+				5D68DA9F2127AF2F0043AEFD /* FSLocation.m in Sources */,
 				5D6CC93B2109C1D900235B9C /* MEDCollectionCategoryModel.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5DCD9AB4212303F200467294 /* FSChoseZoneSectionHeader.m in Sources */,

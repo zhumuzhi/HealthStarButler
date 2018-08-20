@@ -63,6 +63,7 @@
 #import "MEDReszingImageTool.h"
 #import "CacheHelper.h"
 #import "FSToastTool.h"
+#import "GHHTTPManager.h"
 
 #pragma mark -------------------- 第三方 --------------------
 #import "AFNetworking.h"      //网络
