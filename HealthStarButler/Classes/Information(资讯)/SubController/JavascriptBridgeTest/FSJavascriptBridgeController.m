@@ -111,8 +111,11 @@
                                @"currentPage":@1
                                };
 
-    NSString *dataStr = [self jsonStringWithDict:dictData];
-    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?data=%@]", dataStr];
+//    NSString *dataStr = [self jsonStringWithDict:dictData];
+//    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?data=%@]", dataStr];
+
+//    http://192.168.65.54:3000/order-detail/orderdel-index.html
+    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.54:3000/order-detail/orderdel-index.html"];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
