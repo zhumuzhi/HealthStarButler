@@ -8,7 +8,7 @@
 
 #import "FSGoTopButtonView.h"
 
-@interface FSGoTopButtonView ()<UIScrollViewDelegate>
+@interface FSGoTopButtonView ()
 
 @property (nonatomic, strong) UIButton *goTopButton;
 @property (nonatomic, strong) UIScrollView *targetScrollView;
@@ -23,10 +23,28 @@
         [self configUI];
         [self configuration];
         self.targetScrollView = targetScrollView;
-        self.targetScrollView.delegate = self;
+        [self.targetScrollView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+
     }
     return self;
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"contentOffset"]) {
+        NSValue *newvalue = change[NSKeyValueChangeNewKey];
+        CGFloat newoffset_y = newvalue.UIOffsetValue.vertical;
+        if (newoffset_y > kScreenHeight) {
+            self.hidden = NO; //NSLog(@"显示");
+        }else {
+            self.hidden = YES; //NSLog(@"隐藏");
+        }
+    }
+}
+
+- (void)dealloc {
+    [self.targetScrollView removeObserver:self forKeyPath:@"contentOffset"];
+}
+
 #pragma mark - ConfigUI
 - (void)configUI {
     [self addSubview:self.goTopButton];
@@ -53,17 +71,5 @@
     [self.targetScrollView setContentOffset:CGPointMake(0, 0) animated :YES];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    //NSLog(@"goTop-OffSet:%f", scrollView.contentOffset.y);
-    if (scrollView == self.targetScrollView) {
-        if (scrollView.contentOffset.y>kScreenHeight) {
-            //NSLog(@"显示");
-            self.hidden = NO;
-        }else {
-            //NSLog(@"隐藏");
-            self.hidden = YES;
-        }
-    }
-}
 
 @end
