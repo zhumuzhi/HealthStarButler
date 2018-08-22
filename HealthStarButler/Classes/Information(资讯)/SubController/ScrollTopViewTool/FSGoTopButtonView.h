@@ -1,5 +1,5 @@
 //
-//  FSGoTopTool.h
+//  FSGoTopButtonView.h
 //  HealthStarButler
 //
 //  Created by 朱慕之 on 2018/8/21.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FSGoTopTool : UIView
+@interface FSGoTopButtonView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame targetScroll:(UIScrollView *)targetScrollView;
 

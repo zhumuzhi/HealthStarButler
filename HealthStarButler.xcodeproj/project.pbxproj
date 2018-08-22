@@ -224,7 +224,7 @@
 		5D62D87D211AF0AF00A58D76 /* FSPayPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D877211AF0AF00A58D76 /* FSPayPopupView.m */; };
 		5D662B53212A9FE6009455D5 /* WKWebViewDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D662B52212A9FE6009455D5 /* WKWebViewDemoController.m */; };
 		5D662B55212AA042009455D5 /* WKWebViewText.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D662B54212AA042009455D5 /* WKWebViewText.html */; };
-		5D662B71212C0D7E009455D5 /* FSGoTopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D662B70212C0D7E009455D5 /* FSGoTopTool.m */; };
+		5D662B71212C0D7E009455D5 /* FSGoTopButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D662B70212C0D7E009455D5 /* FSGoTopButtonView.m */; };
 		5D68DA9F2127AF2F0043AEFD /* FSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D68DA9E2127AF2E0043AEFD /* FSLocation.m */; };
 		5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056E20D9FB12002BBD69 /* MEDMonitorHistoryController.m */; };
 		5D69058D20D9FB12002BBD69 /* MEDMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D69056F20D9FB12002BBD69 /* MEDMonitorController.m */; };
@@ -888,8 +888,8 @@
 		5D662B51212A9FE6009455D5 /* WKWebViewDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKWebViewDemoController.h; sourceTree = "<group>"; };
 		5D662B52212A9FE6009455D5 /* WKWebViewDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDemoController.m; sourceTree = "<group>"; };
 		5D662B54212AA042009455D5 /* WKWebViewText.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WKWebViewText.html; sourceTree = "<group>"; };
-		5D662B6F212C0D7E009455D5 /* FSGoTopTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGoTopTool.h; sourceTree = "<group>"; };
-		5D662B70212C0D7E009455D5 /* FSGoTopTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGoTopTool.m; sourceTree = "<group>"; };
+		5D662B6F212C0D7E009455D5 /* FSGoTopButtonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGoTopButtonView.h; sourceTree = "<group>"; };
+		5D662B70212C0D7E009455D5 /* FSGoTopButtonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGoTopButtonView.m; sourceTree = "<group>"; };
 		5D68DA9D2127AF2E0043AEFD /* FSLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSLocation.h; sourceTree = "<group>"; };
 		5D68DA9E2127AF2E0043AEFD /* FSLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSLocation.m; sourceTree = "<group>"; };
 		5D69056C20D9FB12002BBD69 /* MEDMonitorHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDMonitorHistoryController.h; sourceTree = "<group>"; };
@@ -2712,8 +2712,8 @@
 		5D662B6E212C0D50009455D5 /* ScrollTopViewTool */ = {
 			isa = PBXGroup;
 			children = (
-				5D662B6F212C0D7E009455D5 /* FSGoTopTool.h */,
-				5D662B70212C0D7E009455D5 /* FSGoTopTool.m */,
+				5D662B6F212C0D7E009455D5 /* FSGoTopButtonView.h */,
+				5D662B70212C0D7E009455D5 /* FSGoTopButtonView.m */,
 			);
 			path = ScrollTopViewTool;
 			sourceTree = "<group>";
@@ -5121,7 +5121,7 @@
 				5D3E4FF720FB5D8C008FBF42 /* UIView+Extension.m in Sources */,
 				5DA3552F210DC65F008B6642 /* FSShopCartToolBar.m in Sources */,
 				5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */,
-				5D662B71212C0D7E009455D5 /* FSGoTopTool.m in Sources */,
+				5D662B71212C0D7E009455D5 /* FSGoTopButtonView.m in Sources */,
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */,
 				5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */,
