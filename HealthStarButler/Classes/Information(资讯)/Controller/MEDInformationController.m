@@ -79,19 +79,19 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.datasArray.count;
-    return 80;
+    return self.datasArray.count;
+//    return 80;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-//        NSDictionary *dict = self.datasArray[indexPath.row];
-//        cell.textLabel.text = dict[@"name"];
+        NSDictionary *dict = self.datasArray[indexPath.row];
+        cell.textLabel.text = dict[@"name"];
         cell.textLabel.textColor = [UIColor lightGrayColor];
     }
-    cell.textLabel.text = identifier;
+//    cell.textLabel.text = identifier;
     return cell;
 }
 
@@ -101,6 +101,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *dict = self.datasArray[indexPath.row];
     Class controller = NSClassFromString(dict[@"className"]);
+    NSLog(@"跳转到:%@", NSClassFromString(dict[@"className"]));
     UIViewController *viewController = [[controller alloc] init];
 
 //    if (controller == [FSChoseZoneViewController class]) {

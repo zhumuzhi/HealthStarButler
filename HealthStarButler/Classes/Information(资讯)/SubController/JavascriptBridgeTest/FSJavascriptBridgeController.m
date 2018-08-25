@@ -115,6 +115,7 @@
 //    NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.123:8000?data=%@]", dataStr];
 
 //    http://192.168.65.54:3000/order-detail/orderdel-index.html
+//    http://192.168.65.123:8000/upMember.html  升级会员介绍
     NSString *urlStr = [NSString stringWithFormat:@"http://192.168.65.54:3000/order-detail/orderdel-index.html"];
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
