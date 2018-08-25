@@ -24,7 +24,7 @@ target 'HealthStarButler' do
  pod 'YYText'
  # 提示Toast
  pod 'Toast'
- 
+ pod 'MBProgressHUD'
  
  # 友盟
  pod 'UMCCommon'

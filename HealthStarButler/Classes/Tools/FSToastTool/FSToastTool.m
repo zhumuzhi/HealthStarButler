@@ -53,5 +53,56 @@ static NSTimeInterval FSDefaultDuration = 2.0;
     [targetView hideToast];
 }
 
+/* 登录页面样式*/
++ (void)makeMBToast:(NSString *)message targetView:(UIView *)targetView {
+
+    if (targetView == nil) targetView = [[UIApplication sharedApplication].windows lastObject];
+    // 快速显示一个提示信息
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:targetView animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = message;
+    hud.label.textColor = [UIColor whiteColor];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.color = [UIColor colorWithHexString:@"#333333" alpha:0.7];
+
+    // 隐藏时候从父控件中移除
+    hud.removeFromSuperViewOnHide = YES;
+    // 2秒之后再消失
+    [hud hideAnimated:YES afterDelay:FSDefaultDuration];
+}
+
++ (void)makeMBToast:(NSString *)message targetView:(UIView *)targetView completionBlock:(nullable MBProgressHUDCompletionBlock)completion {
+    //MBProgressHUDCompletionBlock completionBlock
+    if (targetView == nil) targetView = [[UIApplication sharedApplication].windows lastObject];
+    // 快速显示一个提示信息
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:targetView animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = message;
+    hud.label.textColor = [UIColor whiteColor];
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.color = [UIColor colorWithHexString:@"#333333" alpha:0.7];
+    // 隐藏时候从父控件中移除
+    hud.removeFromSuperViewOnHide = YES;
+    hud.completionBlock = completion;
+    // 2秒之后再消失
+    [hud hideAnimated:YES afterDelay:FSDefaultDuration];
+}
+
++ (void)hideMBToast:(UIView *)targetView {
+    [MBProgressHUD hideHUDForView:targetView animated:YES];
+}
+
++ (void)makeMBToastActivity:(UIView *)targetView {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:targetView animated:YES];
+    hud.mode = MBProgressHUDModeIndeterminate;
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.color = [UIColor colorWithHexString:@"#333333" alpha:0.7];
+    hud.contentColor = [UIColor whiteColor];
+    hud.bezelView.backgroundColor = [UIColor blackColor];
+}
+
++ (void)hideMBToastActivity:(UIView *)targetView {
+    [MBProgressHUD hideHUDForView:targetView animated:YES];
+}
 
 @end
