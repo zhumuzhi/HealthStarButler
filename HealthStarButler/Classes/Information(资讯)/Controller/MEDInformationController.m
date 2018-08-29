@@ -15,6 +15,7 @@
 #import "FSJavascriptBridgeController.h" // JSBridge框架
 #import "FSChoseZoneViewController.h"    // 地址选择
 #import "WKWebViewDemoController.h"      // WKDomeController
+#import "FSCountDownTestController.h"    // 倒计时测试
 
 #import "FSGoTopButtonView.h"
 
@@ -44,10 +45,11 @@
                                                        @{@"name":@"支付弹窗", @"className":@"FSPassWordController"},
                                                        @{@"name":@"JSBridge测试", @"className":@"FSJavascriptBridgeController"},
                                                        @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"},
-                                                       @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"}
+                                                       @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"},
+                                                       @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"}
                                                        ]
                        ];
-    }
+    } 
     return _datasArray;
 }
 
