@@ -42,8 +42,6 @@
     NSString *timeStr = [NSString timestampSwitchTime:1535359120 andFormatter:@"yyyy-MM-dd HH:mm:ss"];
     NSLog(@"计算的时间戳时间为:%@", timeStr);
 
-    
-
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     //然后创建日期对象

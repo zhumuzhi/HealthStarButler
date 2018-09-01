@@ -2979,6 +2979,8 @@
 			children = (
 				5D6CEB5021351CE40001041A /* FSCountDownTestController.h */,
 				5D6CEB5121351CE40001041A /* FSCountDownTestController.m */,
+				5D6CEB5721351E7C0001041A /* OYSingleTableVC.h */,
+				5D6CEB5621351E7C0001041A /* OYSingleTableVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2993,8 +2995,6 @@
 		5D6CEB5521351CFA0001041A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5D6CEB5721351E7C0001041A /* OYSingleTableVC.h */,
-				5D6CEB5621351E7C0001041A /* OYSingleTableVC.m */,
 				5D6CEB5F21351EDF0001041A /* OYModel.h */,
 				5D6CEB6121351EDF0001041A /* OYModel.m */,
 				5D6CEB6021351EDF0001041A /* OYTableViewCell.h */,
