@@ -37,6 +37,7 @@
 #import "MEDCollectionLinkController.h" // C联动
 #import "MEDTableViewLinkController.h"  // T联动
 
+#import "FSModelUIListController.h"     // ModelUITest
 
 @interface MEDHomePageController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -67,54 +68,18 @@
     [self getVersionNum];
     
     
-    NSArray *stringArray = [[NSArray alloc]initWithObjects:@"beijing",@"shanghai",@"guangzou",@"wuhan", nil];
-    NSString *string = @"ang";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@",string];
-    NSLog(@"%@",[stringArray filteredArrayUsingPredicate:pred]);
-    
 }
 
-/**
- 使用KVO监听的某个对象的属性值发生改变会自动调用这个方法 - 系统方法
- @param keyPath 哪一个属性值被改了
- @param object 哪一个对象的属性被改了
- @param change 改成了什么样了
- @param context 传递了什么参数
- */
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    NSLog(@"%@-%@-%@-%@",keyPath, object, change, context);
-    
-    NSLog(@"%@-%@",change[@"old"], change[@"new"]);
-    
-    NSLog(@"%@-%@",change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]); //系统提供的常量
-}
 
 - (void)getVersionNum {
-
     NSURL *url = [NSURL URLWithString:@"https://itunes.apple.com/cn/app/健康之星管家/id988708407?mt=8"];
-
     // 任务默认都是挂起的
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-
         NSLog(@"response: %@",response);
         NSLog(@"data: %@",data);
     }] resume];
 
 }
-
-
-- (void)kovTest {
-    _now = [NSDate date];
-    [self addObserver:self forKeyPath:@"now" options:NSKeyValueObservingOptionNew context:nil];
-    NSLog(@"1");
-    [self willChangeValueForKey:@"now"]; // 手动触发self.now的KVO，必写
-    NSLog(@"2");
-    [self didChangeValueForKey:@"now"]; // 手动触发self.now的KVO，必写
-    NSLog(@"4");
-}
-
-
 
 #pragma mark - 指纹测试
 /**
@@ -399,6 +364,10 @@
 {
     if (btnTag == 7) {
         [self touchVerification];
+
+    }else if(btnTag == 4){
+        FSModelUIListController *ModelList = [[FSModelUIListController alloc] init];
+        [self.navigationController pushViewController:ModelList animated:YES];
     }else {
 
         NSArray *controllers = @[[MEDMonitorController class], [MEDWebTestController class], [MEDShopingCartController class],  [MEDMonitorController class], [MEDMonitorController class], [MEDTableViewLinkController class], [MEDCollectionLinkController class], [MEDMonitorController class]];

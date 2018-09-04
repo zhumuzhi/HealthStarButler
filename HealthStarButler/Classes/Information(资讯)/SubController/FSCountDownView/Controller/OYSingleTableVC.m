@@ -31,6 +31,7 @@
     [kCountDownManager start];
 
     NSInteger timestamp = [OYSingleTableVC getNowTimestamp];
+    NSLog(@"timestamp：%ld", (long)timestamp);
 //    1535359120   2018-08-27 16:38:40
     [self countTimeGap];
 }

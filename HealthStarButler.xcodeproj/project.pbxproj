@@ -495,6 +495,7 @@
 		5DE1F58120EDA5B2005FCCD5 /* HYEdgeInsetsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F57F20EDA5B1005FCCD5 /* HYEdgeInsetsButton.m */; };
 		5DE1F58420EDE3BC005FCCD5 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */; };
 		5DE1F58820EDE4B1005FCCD5 /* MEDStatusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */; };
+		5DF02E65213ED5A700989050 /* FSModelUIListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF02E64213ED5A700989050 /* FSModelUIListController.m */; };
 		5DF1781C21251492009F59E3 /* FSChoseZoneCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1781B21251492009F59E3 /* FSChoseZoneCollectionCell.m */; };
 		5DF1F14620EF1C9F009A8E51 /* MEDPersonModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14520EF1C9F009A8E51 /* MEDPersonModelController.m */; };
 		5DF1F14C20EF1DAB009A8E51 /* GHFromModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF1F14B20EF1DAB009A8E51 /* GHFromModel.m */; };
@@ -1367,6 +1368,8 @@
 		5DE1F58320EDE3BC005FCCD5 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		5DE1F58620EDE4B1005FCCD5 /* MEDStatusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDStatusController.h; sourceTree = "<group>"; };
 		5DE1F58720EDE4B1005FCCD5 /* MEDStatusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDStatusController.m; sourceTree = "<group>"; };
+		5DF02E63213ED5A700989050 /* FSModelUIListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSModelUIListController.h; sourceTree = "<group>"; };
+		5DF02E64213ED5A700989050 /* FSModelUIListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSModelUIListController.m; sourceTree = "<group>"; };
 		5DF1781A21251492009F59E3 /* FSChoseZoneCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSChoseZoneCollectionCell.h; sourceTree = "<group>"; };
 		5DF1781B21251492009F59E3 /* FSChoseZoneCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSChoseZoneCollectionCell.m; sourceTree = "<group>"; };
 		5DF1F14420EF1C9F009A8E51 /* MEDPersonModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDPersonModelController.h; sourceTree = "<group>"; };
@@ -4127,6 +4130,7 @@
 		5DC39F862091CE31000D1B26 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DF02E60213ED56800989050 /* ModelUIs */,
 				5D267FF520DE130A006A42E2 /* Others */,
 				5D69056720D9FB12002BBD69 /* MEDMonitorController */,
 			);
@@ -4589,6 +4593,31 @@
 				5D829A3A2085C8C4001993B6 /* BaseView */,
 			);
 			path = BaseClass;
+			sourceTree = "<group>";
+		};
+		5DF02E60213ED56800989050 /* ModelUIs */ = {
+			isa = PBXGroup;
+			children = (
+				5DF02E62213ED57E00989050 /* SubController */,
+				5DF02E61213ED57400989050 /* Controller */,
+			);
+			path = ModelUIs;
+			sourceTree = "<group>";
+		};
+		5DF02E61213ED57400989050 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DF02E63213ED5A700989050 /* FSModelUIListController.h */,
+				5DF02E64213ED5A700989050 /* FSModelUIListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DF02E62213ED57E00989050 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubController;
 			sourceTree = "<group>";
 		};
 		5DF1F14220EF1C5F009A8E51 /* StatusBarTest(状态栏设置) */ = {
@@ -5141,6 +5170,7 @@
 				5D829A652085D7E2001993B6 /* MEDTabBarControllerConfig.m in Sources */,
 				5D8207F22099A50500B84C1E /* MEDHomePhysiologyController.m in Sources */,
 				5DCE9B0720C6682100512610 /* TZVideoPlayerController.m in Sources */,
+				5DF02E65213ED5A700989050 /* FSModelUIListController.m in Sources */,
 				5DA8C04720F6316700AF5C74 /* MZBaseSettingController.m in Sources */,
 				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
