@@ -23,9 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadRequest];
     [self configuration];
     [self configUI];
-    [self loadRequest];
+    
     
 //    NSString *fitHeight = [self.webView stringByEvaluatingJavaScriptFromString:@"document.body.scrollHeight;"];
 
@@ -49,11 +50,13 @@
 #pragma mark - Configuration
 - (void)configuration {
     self.navigationItem.title = @"客户服务";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - ConfigUI
 - (void)configUI {
     [self.view addSubview:self.webView];
+    self.webView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
 }
 
 #pragma mark - LazyGet
