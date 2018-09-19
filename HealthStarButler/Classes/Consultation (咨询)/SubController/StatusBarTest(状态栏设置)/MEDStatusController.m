@@ -14,6 +14,8 @@
 @property (assign, nonatomic) UIStatusBarStyle statusBarStyle;
 /** 状态栏显示 */
 @property (assign, nonatomic) BOOL  statusBarHidden;
+/** 测试Label */
+@property (nonatomic, strong) UILabel *testLabel;
 
 @end
 
@@ -26,7 +28,20 @@
     self.navigationItem.title = @"StatusBarSet";
 
     [self configTestStatusBar];
+    
+    [self configUI];
+}
 
+- (void)configUI {
+    [self.view addSubview:self.testLabel];
+}
+
+- (UILabel *)testLabel {
+    if (_testLabel == nil) {
+        _testLabel = [[UILabel alloc] init];
+        _testLabel.numberOfLines = 0;
+    }
+    return _testLabel;
     
 }
 
@@ -51,7 +66,16 @@
         make.centerX.equalTo(self.view);
     }];
     [segment2 addTarget:self action:@selector(statusShowOrHidden:) forControlEvents:UIControlEventValueChanged];
-
+    
+    
+    [self.testLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(segment2.mas_bottom);
+        make.left.right.equalTo(self);
+        make.height.equalTo(@(50));
+    }];
+    
+    NSString *name1 = @"账号";
+    NSString *name2 = @"1923 4343 5768 9807";
 }
 
 - (void)changeStyle:(UISegmentedControl *)sender {

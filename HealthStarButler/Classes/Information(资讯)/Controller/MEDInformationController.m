@@ -16,8 +16,9 @@
 #import "FSChoseZoneViewController.h"    // 地址选择
 #import "WKWebViewDemoController.h"      // WKDomeController
 #import "FSCountDownTestController.h"    // 倒计时测试
-
 #import "FSGoTopButtonView.h"
+
+#import "FSGetElementController.h"       // 客服获取元素测试
 
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -46,7 +47,8 @@
                                                        @{@"name":@"JSBridge测试", @"className":@"FSJavascriptBridgeController"},
                                                        @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"},
                                                        @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"},
-                                                       @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"}
+                                                       @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"},
+                                                       @{@"name":@"客服获取元素", @"className":@"FSGetElementController"}
                                                        ]
                        ];
     } 

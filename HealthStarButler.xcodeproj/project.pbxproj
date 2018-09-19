@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */; };
+		5D08D03F2152962500C10FF0 /* FSGetElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08D03E2152962500C10FF0 /* FSGetElementController.m */; };
 		5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */; };
 		5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86D20DBF17E0059FDD8 /* MEDShopCartCell.m */; };
 		5D09A87020DBF17E0059FDD8 /* MEDShopCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D09A86E20DBF17E0059FDD8 /* MEDShopCartCell.xib */; };
@@ -510,6 +511,8 @@
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDWebTestController.h; sourceTree = "<group>"; };
 		5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDWebTestController.m; sourceTree = "<group>"; };
+		5D08D03D2152962500C10FF0 /* FSGetElementController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGetElementController.h; sourceTree = "<group>"; };
+		5D08D03E2152962500C10FF0 /* FSGetElementController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGetElementController.m; sourceTree = "<group>"; };
 		5D09A86620DBEC350059FDD8 /* MEDShopingCartController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopingCartController.h; sourceTree = "<group>"; };
 		5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDShopingCartController.m; sourceTree = "<group>"; };
 		5D09A86C20DBF17E0059FDD8 /* MEDShopCartCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDShopCartCell.h; sourceTree = "<group>"; };
@@ -1417,6 +1420,15 @@
 				5D2EF8FC20F7537400699AA2 /* JSBridgeWebView */,
 			);
 			path = "WebJSOCTest(OC&JS)";
+			sourceTree = "<group>";
+		};
+		5D08D03C215295DD00C10FF0 /* FSGetElementTest */ = {
+			isa = PBXGroup;
+			children = (
+				5D08D03D2152962500C10FF0 /* FSGetElementController.h */,
+				5D08D03E2152962500C10FF0 /* FSGetElementController.m */,
+			);
+			path = FSGetElementTest;
 			sourceTree = "<group>";
 		};
 		5D09A86520DBEA8D0059FDD8 /* MEDshoppingCart(购物车) */ = {
@@ -2605,6 +2617,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D08D03C215295DD00C10FF0 /* FSGetElementTest */,
 				5D6CEB4F21351CA10001041A /* FSCountDownView */,
 				5D6CEB42213417F30001041A /* FSAddressList(地址列表) */,
 				5D662B6E212C0D50009455D5 /* ScrollTopViewTool */,
@@ -5079,6 +5092,7 @@
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D2EF94720F759DB00699AA2 /* FFCentreToastView.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
+				5D08D03F2152962500C10FF0 /* FSGetElementController.m in Sources */,
 				5D0ABE4620E4CFDA0088D0D4 /* UIButton+ReszingImage.m in Sources */,
 				5DCE9B1120C6682100512610 /* TZImagePickerController.m in Sources */,
 				5DCD9AB6212303F200467294 /* FSChoseZoneMData.m in Sources */,
