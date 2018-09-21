@@ -217,6 +217,7 @@
 		5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D586A7D2122FD710093CEE9 /* NSString+Size.m */; };
 		5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */; };
 		5D5E0FF620F30108003148A1 /* MZLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E0FF520F30108003148A1 /* MZLoginCell.m */; };
+		5D5E412521552407009E614F /* FSBaseWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5E412421552407009E614F /* FSBaseWebView.m */; };
 		5D62D862211AE48100A58D76 /* FSPassWordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D861211AE48100A58D76 /* FSPassWordController.m */; };
 		5D62D879211AF0AF00A58D76 /* HHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D870211AF0AF00A58D76 /* HHTextField.m */; };
 		5D62D87A211AF0AF00A58D76 /* HHPasswordErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D62D871211AF0AF00A58D76 /* HHPasswordErrorView.m */; };
@@ -883,6 +884,8 @@
 		5D5E0FF220F300E3003148A1 /* MZLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginHeaderView.m; sourceTree = "<group>"; };
 		5D5E0FF420F30108003148A1 /* MZLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZLoginCell.h; sourceTree = "<group>"; };
 		5D5E0FF520F30108003148A1 /* MZLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZLoginCell.m; sourceTree = "<group>"; };
+		5D5E412321552407009E614F /* FSBaseWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBaseWebView.h; sourceTree = "<group>"; };
+		5D5E412421552407009E614F /* FSBaseWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSBaseWebView.m; sourceTree = "<group>"; };
 		5D62D860211AE48100A58D76 /* FSPassWordController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPassWordController.h; sourceTree = "<group>"; };
 		5D62D861211AE48100A58D76 /* FSPassWordController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPassWordController.m; sourceTree = "<group>"; };
 		5D62D86D211AF0AF00A58D76 /* HHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTextField.h; sourceTree = "<group>"; };
@@ -2617,6 +2620,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D5E4122215523E5009E614F /* FSBaseWebView */,
 				5D08D03C215295DD00C10FF0 /* FSGetElementTest */,
 				5D6CEB4F21351CA10001041A /* FSCountDownView */,
 				5D6CEB42213417F30001041A /* FSAddressList(地址列表) */,
@@ -2672,6 +2676,15 @@
 				5DCD9AB3212303F200467294 /* Other */,
 			);
 			path = "ChooseZone(区域选择)";
+			sourceTree = "<group>";
+		};
+		5D5E4122215523E5009E614F /* FSBaseWebView */ = {
+			isa = PBXGroup;
+			children = (
+				5D5E412321552407009E614F /* FSBaseWebView.h */,
+				5D5E412421552407009E614F /* FSBaseWebView.m */,
+			);
+			path = FSBaseWebView;
 			sourceTree = "<group>";
 		};
 		5D62D85D211AE44A00A58D76 /* PassWordTest */ = {
@@ -5284,6 +5297,7 @@
 				5D662B71212C0D7E009455D5 /* FSGoTopButtonView.m in Sources */,
 				5D0ABE4C20E506860088D0D4 /* MEDDog.m in Sources */,
 				5DBC06DC20FC6D8A0078E9B6 /* FSCheckCodeView.m in Sources */,
+				5D5E412521552407009E614F /* FSBaseWebView.m in Sources */,
 				5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */,
 				5D3E502420FB5D8C008FBF42 /* GCDTimer.m in Sources */,
 				5D3E500520FB5D8C008FBF42 /* GHTagItem.m in Sources */,
