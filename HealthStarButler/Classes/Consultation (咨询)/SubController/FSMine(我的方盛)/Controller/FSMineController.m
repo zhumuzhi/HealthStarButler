@@ -15,9 +15,11 @@
 #import "FSMineOrderCell.h"  // 我的订单Cell
 #import "FSMineNormalCell.h" // 优惠卷/地址/设置/客服电话/清除缓存Cell
 
-#import "FSAccountSetController.h" // 账号设置
+#import "FSAccountSetController.h"  // 账号设置
 
 #import "FSShopCartController.h"
+
+#import "FSAddressListController.h" // 收货地址
 
 @interface FSMineController ()<UITableViewDataSource, UITableViewDelegate,
                             FSMineHeaderDelegate,    // 账号信息
@@ -92,8 +94,8 @@
     }else if (orderBtnType == FSMineOrderCellBtnTypeSend) {
         NSLog(@"跳转到代收货");
     }
-
 }
+
 #pragma mark 优惠卷/地址/电话/清除缓存/设置
 - (void)mineNormalCell:(FSMineNormalCell *)mineNormalCell mineModel:(FSMineMData *)mineModel cellType:(FSMineCellType)cellType {
     FSMineCellType type = cellType;
@@ -101,6 +103,8 @@
         NSLog(@"我的优惠卷");
     }else if (type == FSMineCellTypeAddress) {
         NSLog(@"我的地址");
+        FSAddressListController *addressList = [[FSAddressListController alloc] init];
+        [self.navigationController pushViewController:addressList animated:YES];
     }else if (type == FSMineCellTypeServicePhone) {
 //        NSLog(@"弹出客服电话");
         [self makePhoneCall];

@@ -25,6 +25,10 @@
 		5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC62D209ABA3B00FB16C9 /* MEDHomeMonitorCell.m */; };
 		5D1AC632209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */; };
 		5D1AC636209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */; };
+		5D1C289B216DAC1400277B21 /* FSAddressListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C289A216DAC1400277B21 /* FSAddressListController.m */; };
+		5D1C289F216DCCAF00277B21 /* FSAddressListNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C289E216DCCAF00277B21 /* FSAddressListNData.m */; };
+		5D1C28A2216DDF9100277B21 /* NSArray+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C28A0216DDF9100277B21 /* NSArray+Empty.m */; };
+		5D1C28A5216DE66000277B21 /* FSAddressListMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C28A4216DE66000277B21 /* FSAddressListMData.m */; };
 		5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */; };
 		5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */; };
 		5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */; };
@@ -543,6 +547,14 @@
 		5D1AC631209AF4AE00FB16C9 /* MEDHomeFoodPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeFoodPlanCell.m; sourceTree = "<group>"; };
 		5D1AC634209BFA8800FB16C9 /* MEDHomeHealthPlanCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHomeHealthPlanCell.h; sourceTree = "<group>"; };
 		5D1AC635209BFA8800FB16C9 /* MEDHomeHealthPlanCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHomeHealthPlanCell.m; sourceTree = "<group>"; };
+		5D1C2899216DAC1400277B21 /* FSAddressListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressListController.h; sourceTree = "<group>"; };
+		5D1C289A216DAC1400277B21 /* FSAddressListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressListController.m; sourceTree = "<group>"; };
+		5D1C289D216DCCAF00277B21 /* FSAddressListNData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressListNData.h; sourceTree = "<group>"; };
+		5D1C289E216DCCAF00277B21 /* FSAddressListNData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressListNData.m; sourceTree = "<group>"; };
+		5D1C28A0216DDF9100277B21 /* NSArray+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Empty.m"; sourceTree = "<group>"; };
+		5D1C28A1216DDF9100277B21 /* NSArray+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Empty.h"; sourceTree = "<group>"; };
+		5D1C28A3216DE66000277B21 /* FSAddressListMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressListMData.h; sourceTree = "<group>"; };
+		5D1C28A4216DE66000277B21 /* FSAddressListMData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressListMData.m; sourceTree = "<group>"; };
 		5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTestTagController.h; sourceTree = "<group>"; };
 		5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTestTagController.m; sourceTree = "<group>"; };
 		5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGuidanceTagView.m; sourceTree = "<group>"; };
@@ -1576,6 +1588,51 @@
 			path = HealthPlanCell;
 			sourceTree = "<group>";
 		};
+		5D1C2895216DAB4C00277B21 /* FSAddress */ = {
+			isa = PBXGroup;
+			children = (
+				5D1C2896216DABC300277B21 /* FSAddressList */,
+			);
+			path = FSAddress;
+			sourceTree = "<group>";
+		};
+		5D1C2896216DABC300277B21 /* FSAddressList */ = {
+			isa = PBXGroup;
+			children = (
+				5D1C289C216DAC3100277B21 /* Model */,
+				5D1C2897216DABDE00277B21 /* Controller */,
+				5D1C2898216DABE400277B21 /* View */,
+			);
+			path = FSAddressList;
+			sourceTree = "<group>";
+		};
+		5D1C2897216DABDE00277B21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D1C2899216DAC1400277B21 /* FSAddressListController.h */,
+				5D1C289A216DAC1400277B21 /* FSAddressListController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D1C2898216DABE400277B21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D1C289C216DAC3100277B21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D1C289D216DCCAF00277B21 /* FSAddressListNData.h */,
+				5D1C289E216DCCAF00277B21 /* FSAddressListNData.m */,
+				5D1C28A3216DE66000277B21 /* FSAddressListMData.h */,
+				5D1C28A4216DE66000277B21 /* FSAddressListMData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5D201DCB20CA6D2B009007D9 /* KDCustom */ = {
 			isa = PBXGroup;
 			children = (
@@ -2060,6 +2117,8 @@
 		5D3E4F3720FB5D8C008FBF42 /* NSArray+Category */ = {
 			isa = PBXGroup;
 			children = (
+				5D1C28A1216DDF9100277B21 /* NSArray+Empty.h */,
+				5D1C28A0216DDF9100277B21 /* NSArray+Empty.m */,
 				5D3E4F3820FB5D8C008FBF42 /* NSArray+Bounds.h */,
 				5D3E4F3920FB5D8C008FBF42 /* NSArray+Bounds.m */,
 				5D3E4F3A20FB5D8C008FBF42 /* NSArray+Log.h */,
@@ -3648,6 +3707,7 @@
 		5D8A552C210704F100DE8657 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D1C2895216DAB4C00277B21 /* FSAddress */,
 				5D8A552D2107052200DE8657 /* FSAccountSetController */,
 			);
 			path = SubController;
@@ -4983,6 +5043,7 @@
 				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
 				5DCD9AA6212303A500467294 /* FSLocationView.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
+				5D1C28A5216DE66000277B21 /* FSAddressListMData.m in Sources */,
 				5DA70AA620F4B83E00D9AF1D /* MEDRefreshListController.m in Sources */,
 				5D3E4FF520FB5D8C008FBF42 /* UILabel+ChangeLineSpaceAndWordSpace.m in Sources */,
 				5DCD9AE32123BC6200467294 /* NSArray+JSONModel.m in Sources */,
@@ -5019,6 +5080,7 @@
 				5D3E501120FB5D8C008FBF42 /* LocalConnection.m in Sources */,
 				5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
+				5D1C289B216DAC1400277B21 /* FSAddressListController.m in Sources */,
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
 				5DCE9B0220C6682100512610 /* MEDDetectionReportFile.m in Sources */,
 				5D3E4FE520FB5D8C008FBF42 /* NSArray+Log.m in Sources */,
@@ -5190,6 +5252,7 @@
 				5D970D7921071A5500F19D3D /* FSCollectionView.m in Sources */,
 				5D829A5F2085D73F001993B6 /* MEDDataRequest.m in Sources */,
 				5D829A8D2085DA21001993B6 /* MEDTreatmentGuideController.m in Sources */,
+				5D1C289F216DCCAF00277B21 /* FSAddressListNData.m in Sources */,
 				5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */,
 				5D4A48202091AAFD007DAD29 /* MEDManageHorizontalCell.m in Sources */,
 				5DCD9AE42123BC6200467294 /* JSONValueTransformer.m in Sources */,
@@ -5234,6 +5297,7 @@
 				5DA70AAA20F4B83E00D9AF1D /* MEDDIYBackFooter.m in Sources */,
 				5D8207EC2099A50500B84C1E /* MEDCompanyRankingController.m in Sources */,
 				5DCD9AC82123BC3F00467294 /* ContactModel.m in Sources */,
+				5D1C28A2216DDF9100277B21 /* NSArray+Empty.m in Sources */,
 				5D27457620DB985F00844B6E /* MEDPersonalPickerView.m in Sources */,
 				5D3E501520FB5D8C008FBF42 /* ReachStateLoading.m in Sources */,
 				5D201DF720CA6D2C009007D9 /* KDGoalBar.m in Sources */,

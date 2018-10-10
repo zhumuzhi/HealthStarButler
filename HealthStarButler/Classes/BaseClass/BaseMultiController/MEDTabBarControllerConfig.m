@@ -96,7 +96,7 @@
     // 替换导诊
 //    MEDTreatmentGuideController *guideController = [[MEDTreatmentGuideController alloc] init];
 //    UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:guideController];
-
+    // 替换为我的控制器
     FSMineController *mineController = [[FSMineController alloc] init];
     UIViewController *fifthNavigationController = [[MEDNavigationController alloc] initWithRootViewController:mineController];
 
