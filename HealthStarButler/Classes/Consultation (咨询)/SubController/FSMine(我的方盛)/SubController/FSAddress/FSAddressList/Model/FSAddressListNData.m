@@ -93,6 +93,7 @@
                     for (NSInteger i = 0; i<object.items.count; i++) {
                         FSAddressListMData *personMData = [object.items by_ObjectAtIndex:i];
                         personMData.ship_add_id = object.ship_add_id;
+                        
                         [subItems addObject:personMData];
                     }
                 }
@@ -104,6 +105,7 @@
                 addressMData.add_alias = object.add_alias;
                 addressMData.ship_add_id = object.ship_add_id;
                 NSString *address = [NSString stringWithFormat:@"%@%@%@%@",addressMData.provinceName.length ?addressMData.provinceName:@"" ,addressMData.cityName.length?addressMData.cityName:@"",addressMData.areaName.length ?addressMData.areaName:@"",addressMData.detail_address.length ?addressMData.detail_address:@""];
+                
                 CGSize addressSize = [address sizeWithFont:[UIFont fontWithName:@"PingFangSC-Light" size:kFont(12)] maxSize:CGSizeMake(kScreenWidth - 2 * kMargin10, MAXFLOAT)];
                 addressMData.cellHeight = addressSize.height + kMargin10;
                 
@@ -148,7 +150,7 @@
                 actionMData.is_default = object.is_default;
                 actionMData.ship_add_id = object.ship_add_id;
                 sectionMData.addressListCellType = FSAddressListCellTypeAction;
-                [items addObject:subItems];
+                [items addObjectsFromArray:subItems];
                 
                 if (tagMData.items.count == 0) {
                     

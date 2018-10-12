@@ -8,8 +8,12 @@
 
 #import "FSAddressListController.h"
 
+//Model
 #import "FSAddressListNData.h"
 #import "FSAddressListMData.h"
+//View
+#import "FSAddressContactsCell.h"
+#import "FSAddressShipAddressCell.h"
 
 @interface FSAddressListController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -24,7 +28,7 @@
 // other
 @property (nonatomic, strong) NSMutableArray *maxArray;
 @property (nonatomic, strong) NSDictionary *dict;
-@property (nonatomic , assign) NSInteger address_id;
+@property (nonatomic, assign) NSInteger address_id;
 
 @end
 
@@ -86,7 +90,6 @@
 
 #define cellIdentify @"cellIdentify"
 
-
 #pragma mark - LazyGet
 - (UITableView *)addressTableView {
     if (_addressTableView == nil) {
@@ -96,6 +99,9 @@
         _addressTableView.delegate = self;
         /*注册Cell*/
         [_addressTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentify"];
+
+        [_addressTableView registerClass:[FSAddressContactsCell class] forCellReuseIdentifier:@"FSAddressContactsCellID"];
+        [_addressTableView registerClass:[FSAddressShipAddressCell class] forCellReuseIdentifier:@"FSAddressShipAddressCellID"];
         
         /* FIXME:下拉刷新 & 上拉加载 方法*/
     }
@@ -122,32 +128,54 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
     return sectionMData.items.count;
-//    return self.dataArray.count;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
     FSAddressListMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
+    rowMData.indexPath = indexPath;
     
-//    if (<#condition#>) {
-//        <#statements#>
-//    }
-    
-    static NSString *identify = @"cellIdentify";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-    if(!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+    if (rowMData.addressListCellType == FSAddressListCellTypeConsignee) {
+        NSString *cellIdentifier = [NSString stringWithFormat:@"FSAddressListCell%ld%ld",(long)indexPath.section,(long)indexPath.row];
+        FSAddressContactsCell *cell = [[FSAddressContactsCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.listMData = rowMData;
+        return cell;
+    } else if(rowMData.addressListCellType == FSAddressListCellTypeAddress) {
+        NSString *cellIdentifier = [NSString stringWithFormat:@"FSAddressShipAddressCell%ld%ld",(long)indexPath.section,(long)indexPath.row];
+        FSAddressShipAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (!cell) {
+            cell = [[FSAddressShipAddressCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        }
+        cell.rowMData = rowMData;
+        return cell;
+    } else {
+        static NSString *identify = @"cellIdentify";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
+        if(!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
+        }
+        return cell;
     }
-    cell.textLabel.text = rowMData.mobile;
-    return cell;
 }
 
 #pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+/** 设置Header&Footer */
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return nil;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return nil;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
+    return sectionMData.sectionHeaderHeight;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
+    return sectionMData.sectionFooterHeight;
 }
 
 #pragma mark - Event
-
 
 @end

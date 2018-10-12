@@ -29,6 +29,8 @@
 		5D1C289F216DCCAF00277B21 /* FSAddressListNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C289E216DCCAF00277B21 /* FSAddressListNData.m */; };
 		5D1C28A2216DDF9100277B21 /* NSArray+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C28A0216DDF9100277B21 /* NSArray+Empty.m */; };
 		5D1C28A5216DE66000277B21 /* FSAddressListMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C28A4216DE66000277B21 /* FSAddressListMData.m */; };
+		5D1C28A82170376800277B21 /* FSAddressContactsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C28A72170376800277B21 /* FSAddressContactsCell.m */; };
+		5D1C624121703DC4006DDE9A /* FSAddressShipAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1C624021703DC4006DDE9A /* FSAddressShipAddressCell.m */; };
 		5D201DA020CA30B1009007D9 /* MEDTestTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */; };
 		5D201DA320CA30D4009007D9 /* MEDGuidanceTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */; };
 		5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D201DB220CA6D14009007D9 /* MEDGuidanceVC.m */; };
@@ -390,6 +392,7 @@
 		5DB78745211D25CD00661CDD /* NSBundle+CYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7873D211D25CD00661CDD /* NSBundle+CYPasswordView.m */; };
 		5DB78746211D25CD00661CDD /* CYPasswordView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7873E211D25CD00661CDD /* CYPasswordView.bundle */; };
 		5DB78747211D25CD00661CDD /* CYPasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB78740211D25CD00661CDD /* CYPasswordInputView.m */; };
+		5DB93702217079A600750CB3 /* FSAddressActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB93701217079A600750CB3 /* FSAddressActionCell.m */; };
 		5DB9C48C21197CAC00B4D4C0 /* FSWKWebJSController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */; };
 		5DB9C4902119810200B4D4C0 /* JStoOC.html in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C48F2119810200B4D4C0 /* JStoOC.html */; };
 		5DB9C4952119822500B4D4C0 /* webRefreshButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DB9C4912119822500B4D4C0 /* webRefreshButton@2x.png */; };
@@ -555,6 +558,10 @@
 		5D1C28A1216DDF9100277B21 /* NSArray+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Empty.h"; sourceTree = "<group>"; };
 		5D1C28A3216DE66000277B21 /* FSAddressListMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressListMData.h; sourceTree = "<group>"; };
 		5D1C28A4216DE66000277B21 /* FSAddressListMData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressListMData.m; sourceTree = "<group>"; };
+		5D1C28A62170376800277B21 /* FSAddressContactsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressContactsCell.h; sourceTree = "<group>"; };
+		5D1C28A72170376800277B21 /* FSAddressContactsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressContactsCell.m; sourceTree = "<group>"; };
+		5D1C623F21703DC4006DDE9A /* FSAddressShipAddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressShipAddressCell.h; sourceTree = "<group>"; };
+		5D1C624021703DC4006DDE9A /* FSAddressShipAddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressShipAddressCell.m; sourceTree = "<group>"; };
 		5D201D9E20CA30B1009007D9 /* MEDTestTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDTestTagController.h; sourceTree = "<group>"; };
 		5D201D9F20CA30B1009007D9 /* MEDTestTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDTestTagController.m; sourceTree = "<group>"; };
 		5D201DA120CA30D4009007D9 /* MEDGuidanceTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEDGuidanceTagView.m; sourceTree = "<group>"; };
@@ -1186,6 +1193,8 @@
 		5DB7873F211D25CD00661CDD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5DB78740211D25CD00661CDD /* CYPasswordInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYPasswordInputView.m; sourceTree = "<group>"; };
 		5DB78741211D25CD00661CDD /* CYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYConst.h; sourceTree = "<group>"; };
+		5DB93700217079A600750CB3 /* FSAddressActionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressActionCell.h; sourceTree = "<group>"; };
+		5DB93701217079A600750CB3 /* FSAddressActionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressActionCell.m; sourceTree = "<group>"; };
 		5DB9C48A21197CAC00B4D4C0 /* FSWKWebJSController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWKWebJSController.h; sourceTree = "<group>"; };
 		5DB9C48B21197CAC00B4D4C0 /* FSWKWebJSController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSWKWebJSController.m; sourceTree = "<group>"; };
 		5DB9C48F2119810200B4D4C0 /* JStoOC.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = JStoOC.html; sourceTree = "<group>"; };
@@ -1618,6 +1627,12 @@
 		5D1C2898216DABE400277B21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5D1C28A62170376800277B21 /* FSAddressContactsCell.h */,
+				5D1C28A72170376800277B21 /* FSAddressContactsCell.m */,
+				5D1C623F21703DC4006DDE9A /* FSAddressShipAddressCell.h */,
+				5D1C624021703DC4006DDE9A /* FSAddressShipAddressCell.m */,
+				5DB93700217079A600750CB3 /* FSAddressActionCell.h */,
+				5DB93701217079A600750CB3 /* FSAddressActionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5368,6 +5383,7 @@
 				5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */,
 				5D6CC9362109C1D900235B9C /* MEDLinkRightTableViewCell.m in Sources */,
 				5DA70AA720F4B83E00D9AF1D /* MEDDIYHeader.m in Sources */,
+				5D1C28A82170376800277B21 /* FSAddressContactsCell.m in Sources */,
 				5D3E4F1920FA3B05008FBF42 /* FSLoginMData.m in Sources */,
 				5D3E4FEC20FB5D8C008FBF42 /* NSString+Size.m in Sources */,
 				5D2EF94420F759DB00699AA2 /* FFToast.m in Sources */,
@@ -5380,9 +5396,11 @@
 				5D3E502220FB5D8C008FBF42 /* GCDQueue.m in Sources */,
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
+				5DB93702217079A600750CB3 /* FSAddressActionCell.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
 				5DB9C4B32119A10300B4D4C0 /* FSAliPayController.m in Sources */,
 				5DCD9AC02123B65700467294 /* ContactDataHelper.m in Sources */,
+				5D1C624121703DC4006DDE9A /* FSAddressShipAddressCell.m in Sources */,
 				5D8207F02099A50500B84C1E /* MEDCompanyRankHeadView.m in Sources */,
 				5D3E4F2620FA4483008FBF42 /* NSArray+Bounds.m in Sources */,
 				5D27454920DB4DCE00844B6E /* MEDMineHeadView.m in Sources */,
