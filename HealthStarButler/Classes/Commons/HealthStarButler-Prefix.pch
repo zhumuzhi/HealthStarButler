@@ -42,6 +42,7 @@
 #import "NSObject+MEDProperty.h"
 #import "UIView+MED.h"
 #import "NSString+MED.h"
+#import "NSString+Size.h"
 #import "NSString+Arc4random.h" // 随机数
 #import "NSString+Random.h"
 #import "NSString+Timestamp.h"

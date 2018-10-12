@@ -12,4 +12,5 @@
 + (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize;
 
 - (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+
 @end

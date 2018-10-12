@@ -17,12 +17,14 @@
 
 - (CGSize)sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
 
-
-
 /** 判断字符串是否为空 */
 + (BOOL)isBlankString:(NSString *)string;
 
++ (BOOL)isEmptyString:(NSString *)aStr;
+
 /** 计算文件大小 */
 - (unsigned long long)fileSize;
+
+
 
 @end

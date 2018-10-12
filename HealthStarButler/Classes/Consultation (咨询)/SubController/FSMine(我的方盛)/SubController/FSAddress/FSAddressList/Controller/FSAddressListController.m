@@ -7,7 +7,9 @@
 //
 
 #import "FSAddressListController.h"
+
 #import "FSAddressListNData.h"
+#import "FSAddressListMData.h"
 
 @interface FSAddressListController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -44,7 +46,7 @@
 
 #pragma mark - ConfigUI & Configration
 - (void)setupUI {
-//    self.addressTableView.frame =CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+    self.addressTableView.frame = CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight-kNavigationHeight);
     [self.view addSubview:self.addressTableView];
 }
 
@@ -63,18 +65,27 @@
     req.pageSize = self.pageSize;
     req.pageNum = self.pageNum;
     
+    MEDWeakSelf(self);
     [[GHHTTPManager sharedManager] requstDataWithUrl:req.url parametes:req.parametes finishedBlock:^(id responseObject, NSError *error) {
-        NSLog(@"获取到的地址列表数据为:%@", responseObject);
-        /* FIXME:返回解析*/
-        
-
+        // NSLog(@"获取到的地址列表数据为:%@", responseObject);
+        FSAddressListResNData *res = [[FSAddressListResNData alloc] initWithDict:responseObject];
+        if (res.errorCode == 0) {
+            weakself.dataArray = res.dataArray;
+            [weakself.addressTableView reloadData];
+            NSLog(@"获取数据成功，范返回：%@", self.dataArray);
+        }else {
+            NSLog(@"%@", res.errorMessage);
+        }
         /* 错误解决 & 提示*/
         if (error) {
+            NSLog(@"获取地址列表的错误信息:%@", res.errorMessage);
         }
-        
         
     }];
 }
+
+#define cellIdentify @"cellIdentify"
+
 
 #pragma mark - LazyGet
 - (UITableView *)addressTableView {
@@ -83,7 +94,9 @@
         _addressTableView.showsVerticalScrollIndicator = NO;
         _addressTableView.dataSource = self;
         _addressTableView.delegate = self;
-        /* FIXME:注册Cell*/
+        /*注册Cell*/
+        [_addressTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentify"];
+        
         /* FIXME:下拉刷新 & 上拉加载 方法*/
     }
     return _addressTableView;
@@ -103,20 +116,29 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.dataArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:section];
+    return sectionMData.items.count;
+//    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FSAddressListMData *sectionMData = [self.dataArray by_ObjectAtIndex:indexPath.section];
+    FSAddressListMData *rowMData = [sectionMData.items by_ObjectAtIndex:indexPath.row];
+    
+//    if (<#condition#>) {
+//        <#statements#>
+//    }
+    
     static NSString *identify = @"cellIdentify";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
     if(!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd-%zd", indexPath.section, indexPath.row];
+    cell.textLabel.text = rowMData.mobile;
     return cell;
 }
 

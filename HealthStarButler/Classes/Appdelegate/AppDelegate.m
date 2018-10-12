@@ -50,7 +50,7 @@
     _tabBarController.delegate = self;
     // 设置TabBar
     [MEDTabBarControllerConfig customizeInterfaceWithTabBarController:_tabBarController];
-    [_tabBarController setSelectedIndex:3]; // 方便使用
+    [_tabBarController setSelectedIndex:4]; // 方便使用
 
 /** 根据登录情况切换主页 */
 //    NSString *loginStr = [kUserDefaults objectForKey:Login];

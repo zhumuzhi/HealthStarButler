@@ -57,6 +57,32 @@
     return NO;
 }
 
++ (BOOL)isEmptyString:(NSString *)aStr {
+    if (aStr==nil) {
+        return YES;
+    }
+    if ([aStr isEqual:[NSNull null]]) {
+        return YES;
+    }
+    if (!aStr) {
+        return YES;
+    }
+    if ([aStr isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if (!aStr.length) {
+        return YES;
+    }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmedStr = [aStr stringByTrimmingCharactersInSet:set];
+    if (!trimmedStr.length) {
+        return YES;
+    }
+    return NO;
+    
+}
+
+
 /** 计算文件大小 */
 - (unsigned long long)fileSize
 {
