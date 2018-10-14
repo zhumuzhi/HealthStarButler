@@ -7,12 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+/** cell的按钮事件 */
+typedef NS_ENUM (NSUInteger,FSAddressActionCellButtonType) {
+    /** 设为默认 */
+    FSAddressActionCellButtonTypeDefault = 1,
+    /** 编辑 */
+    FSAddressActionCellButtonTypeEdit ,
+};
 
-@class FSAddressListMData;
+@class FSAddressActionCell, FSAddressListMData;
 
+@protocol FSAddressActionCellDelegate <NSObject>
+@optional
+- (void)addressActionCell:(FSAddressActionCell *)cell addressListMData:(FSAddressListMData *)rowMData buttonType:(FSAddressActionCellButtonType)buttonTYpe;
+@end
+
+/** 操作cell */
 @interface FSAddressActionCell : UITableViewCell
 
 @property (nonatomic, strong) FSAddressListMData *rowMData;
+@property(nonatomic, weak) id<FSAddressActionCellDelegate> delegate;
 
 @end
 

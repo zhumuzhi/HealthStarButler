@@ -12,10 +12,11 @@
 #import "FSAddressListNData.h"
 #import "FSAddressListMData.h"
 //View
-#import "FSAddressContactsCell.h"
-#import "FSAddressShipAddressCell.h"
+#import "FSAddressContactsCell.h"      // 联系人Cell
+#import "FSAddressShipAddressCell.h"   // 收货地址Cell
+#import "FSAddressActionCell.h"        // 操作Cell
 
-@interface FSAddressListController ()<UITableViewDataSource, UITableViewDelegate>
+@interface FSAddressListController ()<UITableViewDataSource, UITableViewDelegate, FSAddressActionCellDelegate>
 
 // UI
 @property (nonatomic, strong) UITableView *addressTableView;
@@ -102,7 +103,7 @@
 
         [_addressTableView registerClass:[FSAddressContactsCell class] forCellReuseIdentifier:@"FSAddressContactsCellID"];
         [_addressTableView registerClass:[FSAddressShipAddressCell class] forCellReuseIdentifier:@"FSAddressShipAddressCellID"];
-        
+        [_addressTableView registerClass:[FSAddressActionCell class] forCellReuseIdentifier:@"FSAddressActionCellID"];
         /* FIXME:下拉刷新 & 上拉加载 方法*/
     }
     return _addressTableView;
@@ -148,6 +149,15 @@
             cell = [[FSAddressShipAddressCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
         cell.rowMData = rowMData;
+        return cell;
+    } else if(rowMData.addressListCellType == FSAddressListCellTypeAction) {
+        static NSString *actionIdentify = @"FSAddressActionCellID";
+        FSAddressActionCell *cell = [tableView dequeueReusableCellWithIdentifier:actionIdentify];
+        if (cell == nil) {
+            cell = [[FSAddressActionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:actionIdentify];
+        }
+        cell.rowMData = rowMData;
+        cell.delegate = self;
         return cell;
     } else {
         static NSString *identify = @"cellIdentify";
