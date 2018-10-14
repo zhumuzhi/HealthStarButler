@@ -77,7 +77,7 @@
         if (res.errorCode == 0) {
             weakself.dataArray = res.dataArray;
             [weakself.addressTableView reloadData];
-            NSLog(@"获取数据成功，范返回：%@", self.dataArray);
+            NSLog(@"地址列表获取数据成功，返回：%@", self.dataArray);
         }else {
             NSLog(@"%@", res.errorMessage);
         }

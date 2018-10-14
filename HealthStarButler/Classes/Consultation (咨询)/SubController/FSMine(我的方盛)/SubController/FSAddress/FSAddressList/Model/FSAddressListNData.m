@@ -80,8 +80,10 @@
             for (NSInteger index = 0; index < dataArray.count; index++) {
                 
                 FSAddressListMData *sectionMData = [[FSAddressListMData alloc] init];
-                FSAddressListMData *addressMData = [[FSAddressListMData alloc] init];
                 
+                /** --- 地址模型 --- */
+                FSAddressListMData *addressMData = [[FSAddressListMData alloc] init];
+
                 FSAddressListMData *object = [dataArray by_ObjectAtIndex:index];
                 sectionMData.addressListDict = object.addressListDict;
                 
@@ -138,18 +140,21 @@
                     [tagItemArray addObject:tagObject];
                 }
                 addressMData.items = tagItemArray.copy;
-                
                 addressMData.addressListCellType = FSAddressListCellTypeAddress;
+                
+                /** --- 标签模型 --- */
                 FSAddressListMData *tagMData = [[FSAddressListMData alloc] init];
                 tagMData.items = tagItemArray.copy;
                 tagMData.cellHeight = kAutoWithSize(16) + kMargin5;
                 tagMData.addressListCellType = FSAddressListCellTypeTag;
                 
+                /** --- 交互模型 --- */
                 FSAddressListMData *actionMData = [[FSAddressListMData alloc] init];
                 actionMData.cellHeight = 44;
                 actionMData.is_default = object.is_default;
                 actionMData.ship_add_id = object.ship_add_id;
-                sectionMData.addressListCellType = FSAddressListCellTypeAction;
+                actionMData.addressListCellType = FSAddressListCellTypeAction;
+                
                 [items addObjectsFromArray:subItems];
                 
                 if (tagMData.items.count == 0) {
@@ -175,7 +180,5 @@
         }
     }
 }
-
-
 
 @end

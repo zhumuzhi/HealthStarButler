@@ -97,6 +97,15 @@
         make.width.height.equalTo(@(kAutoWithSize(16)));
     }];
     
+    CGSize editSize = [self.edit sizeThatFits:CGSizeMake(MAXFLOAT, 44)];
+    [self.backGround addSubview:self.edit];
+    [self.edit mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.editIcon.mas_left).offset(-kAutoWithSize(10));
+        make.centerY.equalTo(self.editIcon);
+        make.width.equalTo(@(editSize.width));
+        
+    }];
+    
     [self.backGround addSubview:self.actionEdit];
     [self.actionEdit mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.top.bottom.equalTo(self.backGround);
