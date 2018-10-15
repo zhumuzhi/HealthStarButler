@@ -128,6 +128,8 @@
 		5D2EF96520F82DFC00699AA2 /* MEDTableChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF95C20F82DFC00699AA2 /* MEDTableChooseCell.m */; };
 		5D2EF96620F82DFC00699AA2 /* MEDCollectionChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF95D20F82DFC00699AA2 /* MEDCollectionChooseCell.m */; };
 		5D2EF96920F82EC400699AA2 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2EF96720F82EC400699AA2 /* UIColor+Category.m */; };
+		5D3CB89E2174CC60004DD07F /* FSAddressTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CB89D2174CC60004DD07F /* FSAddressTagCell.m */; };
+		5D3CB8A12174D062004DD07F /* FSAddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CB8A02174D062004DD07F /* FSAddressItem.m */; };
 		5D3E4F1320FA3AE0008FBF42 /* FSLoginHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4F1220FA3AE0008FBF42 /* FSLoginHeader.m */; };
 		5D3E4F1820FA3B05008FBF42 /* FSLoginNData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4F1420FA3B05008FBF42 /* FSLoginNData.m */; };
 		5D3E4F1920FA3B05008FBF42 /* FSLoginMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4F1720FA3B05008FBF42 /* FSLoginMData.m */; };
@@ -715,6 +717,10 @@
 		5D2EF95F20F82DFC00699AA2 /* MEDTableChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEDTableChooseCell.h; sourceTree = "<group>"; };
 		5D2EF96720F82EC400699AA2 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		5D2EF96820F82EC400699AA2 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		5D3CB89C2174CC60004DD07F /* FSAddressTagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressTagCell.h; sourceTree = "<group>"; };
+		5D3CB89D2174CC60004DD07F /* FSAddressTagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressTagCell.m; sourceTree = "<group>"; };
+		5D3CB89F2174D062004DD07F /* FSAddressItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddressItem.h; sourceTree = "<group>"; };
+		5D3CB8A02174D062004DD07F /* FSAddressItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddressItem.m; sourceTree = "<group>"; };
 		5D3E4F0E20FA3ACA008FBF42 /* FSLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLoginCell.h; sourceTree = "<group>"; };
 		5D3E4F0F20FA3ACA008FBF42 /* FSLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSLoginCell.m; sourceTree = "<group>"; };
 		5D3E4F1120FA3AE0008FBF42 /* FSLoginHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSLoginHeader.h; sourceTree = "<group>"; };
@@ -1633,6 +1639,10 @@
 				5D1C624021703DC4006DDE9A /* FSAddressShipAddressCell.m */,
 				5DB93700217079A600750CB3 /* FSAddressActionCell.h */,
 				5DB93701217079A600750CB3 /* FSAddressActionCell.m */,
+				5D3CB89C2174CC60004DD07F /* FSAddressTagCell.h */,
+				5D3CB89D2174CC60004DD07F /* FSAddressTagCell.m */,
+				5D3CB89F2174D062004DD07F /* FSAddressItem.h */,
+				5D3CB8A02174D062004DD07F /* FSAddressItem.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5254,6 +5264,7 @@
 				5DCE9B0920C6682100512610 /* NSBundle+TZImagePicker.m in Sources */,
 				5D3E502020FB5D8C008FBF42 /* LZKeychain.m in Sources */,
 				5DCE9B0120C6682100512610 /* MEDEditTestReportController.m in Sources */,
+				5D3CB8A12174D062004DD07F /* FSAddressItem.m in Sources */,
 				5DCE9AF420C6682100512610 /* MEDTreatmentRecordModel.m in Sources */,
 				5D12B21220F2EE6200ECE416 /* MZDataModel.m in Sources */,
 				5D6CEB5D21351EA30001041A /* OYCountDownManager.m in Sources */,
@@ -5349,6 +5360,7 @@
 				5D201DE220CA6D2C009007D9 /* MEDSymptomTitleCell.m in Sources */,
 				5DBC071020FF33020078E9B6 /* WYProperty.m in Sources */,
 				5D201DE420CA6D2C009007D9 /* MEDSymptomCell.m in Sources */,
+				5D3CB89E2174CC60004DD07F /* FSAddressTagCell.m in Sources */,
 				5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */,
 				5D3E4F3220FA4734008FBF42 /* NSString+unicode.m in Sources */,
 				5DCD9AF62123F43200467294 /* FSChoseZoneListCell.m in Sources */,

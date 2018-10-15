@@ -13,8 +13,10 @@
 #import "FSAddressListMData.h"
 //View
 #import "FSAddressContactsCell.h"      // 联系人Cell
+#import "FSAddressTagCell.h"           // 标签Cell
 #import "FSAddressShipAddressCell.h"   // 收货地址Cell
 #import "FSAddressActionCell.h"        // 操作Cell
+
 
 @interface FSAddressListController ()<UITableViewDataSource, UITableViewDelegate, FSAddressActionCellDelegate>
 
@@ -98,12 +100,12 @@
         _addressTableView.showsVerticalScrollIndicator = NO;
         _addressTableView.dataSource = self;
         _addressTableView.delegate = self;
+        _addressTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         /*注册Cell*/
-        [_addressTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellIdentify"];
-
         [_addressTableView registerClass:[FSAddressContactsCell class] forCellReuseIdentifier:@"FSAddressContactsCellID"];
         [_addressTableView registerClass:[FSAddressShipAddressCell class] forCellReuseIdentifier:@"FSAddressShipAddressCellID"];
         [_addressTableView registerClass:[FSAddressActionCell class] forCellReuseIdentifier:@"FSAddressActionCellID"];
+        [_addressTableView registerClass:[FSAddressTagCell class] forCellReuseIdentifier:@"FSAddressTagCellID"];
         /* FIXME:下拉刷新 & 上拉加载 方法*/
     }
     return _addressTableView;
@@ -159,13 +161,12 @@
         cell.rowMData = rowMData;
         cell.delegate = self;
         return cell;
-    } else {
-        static NSString *identify = @"cellIdentify";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identify];
-        if(!cell) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identify];
-        }
+    }else if(rowMData.addressListCellType == FSAddressListCellTypeTag) {
+        FSAddressTagCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FSAddressTagCellID"];
+        cell.rowMData = rowMData;
         return cell;
+    }else {
+        return [UITableViewCell new];
     }
 }
 
