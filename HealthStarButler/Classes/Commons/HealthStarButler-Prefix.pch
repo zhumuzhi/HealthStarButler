@@ -85,6 +85,9 @@
 #import <YYText/YYText.h>
 #import "UIView+Toast.h"
 
+#import "JXCategoryView.h"  // 滚动视图
+
+
 #pragma mark -------------------- 网络工具 --------------------
 #import "MEDNetClient.h"
 #import "MEDDataRequest.h"

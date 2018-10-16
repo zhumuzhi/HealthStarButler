@@ -20,6 +20,8 @@
 
 #import "FSGetElementController.h"       // 客服获取元素测试
 
+#import "JXCategoryController.h"         // 标题控制器
+
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -48,8 +50,10 @@
                                                        @{@"name":@"地址选择", @"className":@"FSChoseZoneViewController"},
                                                        @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"},
                                                        @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"},
-                                                       @{@"name":@"客服获取元素", @"className":@"FSGetElementController"}
+                                                       @{@"name":@"客服获取元素", @"className":@"FSGetElementController"},
+                                                       @{@"name":@"标题控制器", @"className":@"JXCategoryController"}
                                                        ]
+
                        ];
     } 
     return _datasArray;

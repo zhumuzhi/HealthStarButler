@@ -29,6 +29,5 @@ target 'HealthStarButler' do
  # 友盟
  pod 'UMCCommon'
  pod 'UMCAnalytics'
-
  
 end
