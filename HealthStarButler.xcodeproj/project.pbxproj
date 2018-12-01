@@ -371,6 +371,8 @@
 		5D970D7A21071A5500F19D3D /* FSBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D7021071A5500F19D3D /* FSBaseTableViewCell.m */; };
 		5D970D7B21071A5500F19D3D /* FSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D7121071A5500F19D3D /* FSCollectionViewCell.m */; };
 		5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D97AE8B2089C493007D586A /* MZPlusButton.m */; };
+		5D984E7821B26D7700B03C8D /* FSShowPartOrAllController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D984E7221B26D7700B03C8D /* FSShowPartOrAllController.m */; };
+		5D984E7921B26D7700B03C8D /* FSShowMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D984E7621B26D7700B03C8D /* FSShowMData.m */; };
 		5D9FAD2920BEAE690040571B /* NSOperationDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */; };
 		5D9FAD2A20BEAE690040571B /* NSOperationDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */; };
 		5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA3551E21076470008B6642 /* FSAccountSetHeadCell.m */; };
@@ -1224,6 +1226,10 @@
 		5D970D7121071A5500F19D3D /* FSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCollectionViewCell.m; sourceTree = "<group>"; };
 		5D97AE8A2089C493007D586A /* MZPlusButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MZPlusButton.h; sourceTree = "<group>"; };
 		5D97AE8B2089C493007D586A /* MZPlusButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MZPlusButton.m; sourceTree = "<group>"; };
+		5D984E7221B26D7700B03C8D /* FSShowPartOrAllController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShowPartOrAllController.m; sourceTree = "<group>"; };
+		5D984E7321B26D7700B03C8D /* FSShowPartOrAllController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShowPartOrAllController.h; sourceTree = "<group>"; };
+		5D984E7521B26D7700B03C8D /* FSShowMData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSShowMData.h; sourceTree = "<group>"; };
+		5D984E7621B26D7700B03C8D /* FSShowMData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSShowMData.m; sourceTree = "<group>"; };
 		5D9FAD2620BEAE690040571B /* NSOperationDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSOperationDemoController.h; sourceTree = "<group>"; };
 		5D9FAD2720BEAE690040571B /* NSOperationDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSOperationDemoController.m; sourceTree = "<group>"; };
 		5D9FAD2820BEAE690040571B /* NSOperationDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSOperationDemoController.xib; sourceTree = "<group>"; };
@@ -2979,6 +2985,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D984E7021B26D7700B03C8D /* FSShowPartOrAll */,
 				5D197E532175B09500B3F5AF /* JXCategoryViewTest */,
 				5D5E4122215523E5009E614F /* FSBaseWebView */,
 				5D08D03C215295DD00C10FF0 /* FSGetElementTest */,
@@ -4075,6 +4082,41 @@
 				5D97AE8B2089C493007D586A /* MZPlusButton.m */,
 			);
 			path = "MZMiddleButton(未使用)";
+			sourceTree = "<group>";
+		};
+		5D984E7021B26D7700B03C8D /* FSShowPartOrAll */ = {
+			isa = PBXGroup;
+			children = (
+				5D984E7121B26D7700B03C8D /* Controller */,
+				5D984E7421B26D7700B03C8D /* Model */,
+				5D984E7721B26D7700B03C8D /* View */,
+			);
+			path = FSShowPartOrAll;
+			sourceTree = "<group>";
+		};
+		5D984E7121B26D7700B03C8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D984E7221B26D7700B03C8D /* FSShowPartOrAllController.m */,
+				5D984E7321B26D7700B03C8D /* FSShowPartOrAllController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D984E7421B26D7700B03C8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D984E7521B26D7700B03C8D /* FSShowMData.h */,
+				5D984E7621B26D7700B03C8D /* FSShowMData.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D984E7721B26D7700B03C8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D9FAD2420BEAE140040571B /* NSOperationDemo */ = {
@@ -5366,6 +5408,7 @@
 				5D27454C20DB76BF00844B6E /* MEDClearCacheCell.m in Sources */,
 				5D3E501620FB5D8C008FBF42 /* ReachStateUnloaded.m in Sources */,
 				5D69058C20D9FB12002BBD69 /* MEDMonitorHistoryController.m in Sources */,
+				5D984E7821B26D7700B03C8D /* FSShowPartOrAllController.m in Sources */,
 				5D69059620D9FB12002BBD69 /* MEDLineChartData.m in Sources */,
 				5D3E502120FB5D8C008FBF42 /* GCDGroup.m in Sources */,
 				5D3E501720FB5D8C008FBF42 /* ReachStateUnReachable.m in Sources */,
@@ -5632,6 +5675,7 @@
 				5D197E352175AF9700B3F5AF /* JXCategoryIndicatorTriangleView.m in Sources */,
 				5D201DBB20CA6D20009007D9 /* MEDAllBodyModel.m in Sources */,
 				5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */,
+				5D984E7921B26D7700B03C8D /* FSShowMData.m in Sources */,
 				5DA70AA820F4B83E00D9AF1D /* MEDEatBaoziHeader.m in Sources */,
 				5D6CEB492134183A0001041A /* FSAddressListCntroller.m in Sources */,
 				5D69059320D9FB12002BBD69 /* MEDMonitorDateView.m in Sources */,

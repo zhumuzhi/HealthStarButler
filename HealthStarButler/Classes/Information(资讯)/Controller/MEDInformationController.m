@@ -22,6 +22,8 @@
 
 #import "JXCategoryController.h"         // 标题控制器
 
+#import "FSShowPartOrAllController.h"    // tableView显示全部部分
+
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -51,11 +53,11 @@
                                                        @{@"name":@"WKWebDemo", @"className":@"WKWebViewDemoController"},
                                                        @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"},
                                                        @{@"name":@"客服获取元素", @"className":@"FSGetElementController"},
-                                                       @{@"name":@"标题控制器", @"className":@"JXCategoryController"}
+                                                       @{@"name":@"标题控制器", @"className":@"JXCategoryController"},
+                                                       @{@"name":@"展示部分全部", @"className":@"FSShowPartOrAllController"}
                                                        ]
-
                        ];
-    } 
+    }
     return _datasArray;
 }
 
@@ -65,14 +67,14 @@
     // Do any additional setup after loading the view.
     
     [self setupNavigation];
-
-
+    
+    
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationHeight, kScreenWidth, kScreenHeight - kNavigationHeight) style:UITableViewStylePlain];
     self.tableView = tableView;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
-
+    
     [self.view addSubview:self.goTopButton];
 }
 
@@ -88,7 +90,7 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.datasArray.count;
-//    return 80;
+    //    return 80;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = [NSString stringWithFormat:@"id%zi", indexPath.row];
@@ -99,25 +101,25 @@
         cell.textLabel.text = dict[@"name"];
         cell.textLabel.textColor = [UIColor lightGrayColor];
     }
-//    cell.textLabel.text = identifier;
+    //    cell.textLabel.text = identifier;
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *dict = self.datasArray[indexPath.row];
     Class controller = NSClassFromString(dict[@"className"]);
     NSLog(@"跳转到:%@", NSClassFromString(dict[@"className"]));
     UIViewController *viewController = [[controller alloc] init];
-
-//    if (controller == [FSChoseZoneViewController class]) {
-//        [self presentViewController:viewController animated:YES completion:nil];
-//    } else {
-//        [self.navigationController pushViewController:viewController animated:YES];
-//    }
-
+    
+    //    if (controller == [FSChoseZoneViewController class]) {
+    //        [self presentViewController:viewController animated:YES completion:nil];
+    //    } else {
+    //        [self.navigationController pushViewController:viewController animated:YES];
+    //    }
+    
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
