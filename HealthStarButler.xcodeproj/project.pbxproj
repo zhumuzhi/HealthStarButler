@@ -472,6 +472,7 @@
 		5DC39F9C2092D637000D1B26 /* MEDScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39F9B2092D637000D1B26 /* MEDScoreButton.m */; };
 		5DC39FA220932773000D1B26 /* MEDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */; };
 		5DC39FA62093289A000D1B26 /* MEDHealthQuestionnaireController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */; };
+		5DC3FC9621CC78A200AE5039 /* FSBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC3FC9521CC78A200AE5039 /* FSBaseWebViewController.m */; };
 		5DCC2E38211860DB001B60C5 /* FSCornerRadiusController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC2E37211860DB001B60C5 /* FSCornerRadiusController.m */; };
 		5DCC2E3D21186256001B60C5 /* FSCornerRadiusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC2E3C21186256001B60C5 /* FSCornerRadiusCell.m */; };
 		5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DCC6DB4210074DB000DDFD9 /* FSMineAcountCell.m */; };
@@ -1378,6 +1379,8 @@
 		5DC39FA120932773000D1B26 /* MEDBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseWebViewController.m; sourceTree = "<group>"; };
 		5DC39FA42093289A000D1B26 /* MEDHealthQuestionnaireController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDHealthQuestionnaireController.h; sourceTree = "<group>"; };
 		5DC39FA52093289A000D1B26 /* MEDHealthQuestionnaireController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDHealthQuestionnaireController.m; sourceTree = "<group>"; };
+		5DC3FC9421CC78A200AE5039 /* FSBaseWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSBaseWebViewController.h; sourceTree = "<group>"; };
+		5DC3FC9521CC78A200AE5039 /* FSBaseWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSBaseWebViewController.m; sourceTree = "<group>"; };
 		5DCC2E36211860DB001B60C5 /* FSCornerRadiusController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCornerRadiusController.h; sourceTree = "<group>"; };
 		5DCC2E37211860DB001B60C5 /* FSCornerRadiusController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCornerRadiusController.m; sourceTree = "<group>"; };
 		5DCC2E3B21186256001B60C5 /* FSCornerRadiusCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCornerRadiusCell.h; sourceTree = "<group>"; };
@@ -2985,6 +2988,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5DC3FC9321CC787500AE5039 /* FSBaseWebViewController */,
 				5D984E7021B26D7700B03C8D /* FSShowPartOrAll */,
 				5D197E532175B09500B3F5AF /* JXCategoryViewTest */,
 				5D5E4122215523E5009E614F /* FSBaseWebView */,
@@ -4595,6 +4599,15 @@
 			path = HealthQuestionnaire;
 			sourceTree = "<group>";
 		};
+		5DC3FC9321CC787500AE5039 /* FSBaseWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5DC3FC9421CC78A200AE5039 /* FSBaseWebViewController.h */,
+				5DC3FC9521CC78A200AE5039 /* FSBaseWebViewController.m */,
+			);
+			path = FSBaseWebViewController;
+			sourceTree = "<group>";
+		};
 		5DCC2E35211860B1001B60C5 /* CornerRadius */ = {
 			isa = PBXGroup;
 			children = (
@@ -4632,14 +4645,14 @@
 		5DCD9A9A212303A500467294 /* FSSearchBarView */ = {
 			isa = PBXGroup;
 			children = (
-				5DCD9A9B212303A500467294 /* FSLocationChangeView.m */,
-				5DCD9A9C212303A500467294 /* FSLocationView.h */,
-				5DCD9A9D212303A500467294 /* FSSearchBarChangeView.m */,
-				5DCD9A9E212303A500467294 /* FSSearchBarView.m */,
 				5DCD9A9F212303A500467294 /* FSLocationChangeView.h */,
+				5DCD9A9B212303A500467294 /* FSLocationChangeView.m */,
+				5DCD9AA2212303A500467294 /* FSSearchBarView.h */,
+				5DCD9A9E212303A500467294 /* FSSearchBarView.m */,
+				5DCD9A9C212303A500467294 /* FSLocationView.h */,
 				5DCD9AA0212303A500467294 /* FSLocationView.m */,
 				5DCD9AA1212303A500467294 /* FSSearchBarChangeView.h */,
-				5DCD9AA2212303A500467294 /* FSSearchBarView.h */,
+				5DCD9A9D212303A500467294 /* FSSearchBarChangeView.m */,
 			);
 			path = FSSearchBarView;
 			sourceTree = "<group>";
@@ -5428,6 +5441,7 @@
 				5D201DF920CA6D2C009007D9 /* MEDTwoTableView.m in Sources */,
 				5D3E501120FB5D8C008FBF42 /* LocalConnection.m in Sources */,
 				5D586A7E2122FD710093CEE9 /* NSString+Size.m in Sources */,
+				5DC3FC9621CC78A200AE5039 /* FSBaseWebViewController.m in Sources */,
 				5D97AE8C2089C493007D586A /* MZPlusButton.m in Sources */,
 				5D1C289B216DAC1400277B21 /* FSAddressListController.m in Sources */,
 				5D201DB820CA6D15009007D9 /* MEDSymptomVC.m in Sources */,
