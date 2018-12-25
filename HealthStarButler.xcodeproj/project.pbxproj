@@ -359,6 +359,7 @@
 		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8837EF2102FA780087DA22 /* FSMineHeader.m */; };
+		5D95137F21D12B7D002B75B2 /* FSPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95137E21D12B7D002B75B2 /* FSPageView.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1203,6 +1204,8 @@
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
 		5D8837EE2102FA780087DA22 /* FSMineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineHeader.h; sourceTree = "<group>"; };
 		5D8837EF2102FA780087DA22 /* FSMineHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineHeader.m; sourceTree = "<group>"; };
+		5D95137D21D12B7D002B75B2 /* FSPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPageView.h; sourceTree = "<group>"; };
+		5D95137E21D12B7D002B75B2 /* FSPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPageView.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -2988,6 +2991,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D95137C21D12B15002B75B2 /* FSPageView */,
 				5DC3FC9321CC787500AE5039 /* FSBaseWebViewController */,
 				5D984E7021B26D7700B03C8D /* FSShowPartOrAll */,
 				5D197E532175B09500B3F5AF /* JXCategoryViewTest */,
@@ -4043,6 +4047,15 @@
 				5D970D572107129D00F19D3D /* FSAccountSetController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D95137C21D12B15002B75B2 /* FSPageView */ = {
+			isa = PBXGroup;
+			children = (
+				5D95137D21D12B7D002B75B2 /* FSPageView.h */,
+				5D95137E21D12B7D002B75B2 /* FSPageView.m */,
+			);
+			path = FSPageView;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -5475,6 +5488,7 @@
 				5D4E339C20B3B5810026B2C4 /* MEDChineseMedicineQuestionnaireController.m in Sources */,
 				5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */,
 				5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */,
+				5D95137F21D12B7D002B75B2 /* FSPageView.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
 				5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */,
