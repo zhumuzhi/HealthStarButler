@@ -360,6 +360,10 @@
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8837EF2102FA780087DA22 /* FSMineHeader.m */; };
 		5D95137F21D12B7D002B75B2 /* FSPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95137E21D12B7D002B75B2 /* FSPageView.m */; };
+		5D95139A21D4BCF6002B75B2 /* FSPromotionTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95139921D4BCF6002B75B2 /* FSPromotionTagsView.m */; };
+		5D95139E21D4BDA5002B75B2 /* FSPromotionTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95139D21D4BDA5002B75B2 /* FSPromotionTagsCell.m */; };
+		5D9513A121D4BDDB002B75B2 /* FSPromotionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513A021D4BDDB002B75B2 /* FSPromotionLayout.m */; };
+		5D9513A521D4CF90002B75B2 /* FSTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513A421D4CF90002B75B2 /* FSTagController.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1206,6 +1210,14 @@
 		5D8837EF2102FA780087DA22 /* FSMineHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMineHeader.m; sourceTree = "<group>"; };
 		5D95137D21D12B7D002B75B2 /* FSPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPageView.h; sourceTree = "<group>"; };
 		5D95137E21D12B7D002B75B2 /* FSPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPageView.m; sourceTree = "<group>"; };
+		5D95139821D4BCF6002B75B2 /* FSPromotionTagsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPromotionTagsView.h; sourceTree = "<group>"; };
+		5D95139921D4BCF6002B75B2 /* FSPromotionTagsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPromotionTagsView.m; sourceTree = "<group>"; };
+		5D95139C21D4BDA5002B75B2 /* FSPromotionTagsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPromotionTagsCell.h; sourceTree = "<group>"; };
+		5D95139D21D4BDA5002B75B2 /* FSPromotionTagsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPromotionTagsCell.m; sourceTree = "<group>"; };
+		5D95139F21D4BDDB002B75B2 /* FSPromotionLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPromotionLayout.h; sourceTree = "<group>"; };
+		5D9513A021D4BDDB002B75B2 /* FSPromotionLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPromotionLayout.m; sourceTree = "<group>"; };
+		5D9513A321D4CF90002B75B2 /* FSTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSTagController.h; sourceTree = "<group>"; };
+		5D9513A421D4CF90002B75B2 /* FSTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSTagController.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -2991,6 +3003,8 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D9513A221D4CF74002B75B2 /* FSTagController */,
+				5D95139721D4BC97002B75B2 /* FSPromotionTags */,
 				5D95137C21D12B15002B75B2 /* FSPageView */,
 				5DC3FC9321CC787500AE5039 /* FSBaseWebViewController */,
 				5D984E7021B26D7700B03C8D /* FSShowPartOrAll */,
@@ -4056,6 +4070,28 @@
 				5D95137E21D12B7D002B75B2 /* FSPageView.m */,
 			);
 			path = FSPageView;
+			sourceTree = "<group>";
+		};
+		5D95139721D4BC97002B75B2 /* FSPromotionTags */ = {
+			isa = PBXGroup;
+			children = (
+				5D95139821D4BCF6002B75B2 /* FSPromotionTagsView.h */,
+				5D95139921D4BCF6002B75B2 /* FSPromotionTagsView.m */,
+				5D95139C21D4BDA5002B75B2 /* FSPromotionTagsCell.h */,
+				5D95139D21D4BDA5002B75B2 /* FSPromotionTagsCell.m */,
+				5D95139F21D4BDDB002B75B2 /* FSPromotionLayout.h */,
+				5D9513A021D4BDDB002B75B2 /* FSPromotionLayout.m */,
+			);
+			path = FSPromotionTags;
+			sourceTree = "<group>";
+		};
+		5D9513A221D4CF74002B75B2 /* FSTagController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513A321D4CF90002B75B2 /* FSTagController.h */,
+				5D9513A421D4CF90002B75B2 /* FSTagController.m */,
+			);
+			path = FSTagController;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -5613,6 +5649,7 @@
 				5DCC6DB5210074DB000DDFD9 /* FSMineAcountCell.m in Sources */,
 				5D2EF92220F7581D00699AA2 /* UIImage+ImageEffects.m in Sources */,
 				5DB78745211D25CD00661CDD /* NSBundle+CYPasswordView.m in Sources */,
+				5D9513A521D4CF90002B75B2 /* FSTagController.m in Sources */,
 				5DCE9AFE20C6682100512610 /* MEDMedicalRecordCommonCell.m in Sources */,
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
 				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
@@ -5681,6 +5718,7 @@
 				5D5E0FF320F300E3003148A1 /* MZLoginHeaderView.m in Sources */,
 				5D68DA9F2127AF2F0043AEFD /* FSLocation.m in Sources */,
 				5D6CC93B2109C1D900235B9C /* MEDCollectionCategoryModel.m in Sources */,
+				5D95139A21D4BCF6002B75B2 /* FSPromotionTagsView.m in Sources */,
 				5D8207AF2099536C00B84C1E /* MEDScoreOperationView.m in Sources */,
 				5DCD9AB4212303F200467294 /* FSChoseZoneSectionHeader.m in Sources */,
 				5D6CC90A210894A300235B9C /* FSAccountSetNormalCell.m in Sources */,
@@ -5753,6 +5791,7 @@
 				5DBD2C6C20A151B4008F902E /* MEDDateUtils.m in Sources */,
 				5DCE9B0320C6682100512610 /* MEDTestReportModel.m in Sources */,
 				5D3E4FF320FB5D8C008FBF42 /* UIColor+Category.m in Sources */,
+				5D9513A121D4BDDB002B75B2 /* FSPromotionLayout.m in Sources */,
 				5D8207FF2099A50500B84C1E /* MEDHomeHabitSleepCell.m in Sources */,
 				5DBD2C68209FFCBB008F902E /* NSString+MED.m in Sources */,
 				5D3E500820FB5D8C008FBF42 /* BAGridItemModel.m in Sources */,
@@ -5790,6 +5829,7 @@
 				5D4E33A520B654DE0026B2C4 /* GDDExhibitionController.m in Sources */,
 				5DCE9B0420C6682100512610 /* TZTestCell.m in Sources */,
 				5DB93702217079A600750CB3 /* FSAddressActionCell.m in Sources */,
+				5D95139E21D4BDA5002B75B2 /* FSPromotionTagsCell.m in Sources */,
 				5DC39F8D2091D10C000D1B26 /* MEDAlertMananger.m in Sources */,
 				5DB9C4B32119A10300B4D4C0 /* FSAliPayController.m in Sources */,
 				5DCD9AC02123B65700467294 /* ContactDataHelper.m in Sources */,

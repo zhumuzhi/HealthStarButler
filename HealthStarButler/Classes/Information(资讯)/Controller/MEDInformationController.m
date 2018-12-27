@@ -24,6 +24,8 @@
 
 #import "FSShowPartOrAllController.h"    // tableView显示全部部分
 
+#import "FSTagController.h"  //Tag测试控制器
+
 @interface MEDInformationController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) UIScrollView *scrollView;
@@ -54,7 +56,8 @@
                                                        @{@"name":@"倒计时测试", @"className":@"FSCountDownTestController"},
                                                        @{@"name":@"客服获取元素", @"className":@"FSGetElementController"},
                                                        @{@"name":@"标题控制器", @"className":@"JXCategoryController"},
-                                                       @{@"name":@"展示部分全部", @"className":@"FSShowPartOrAllController"}
+                                                       @{@"name":@"展示部分全部", @"className":@"FSShowPartOrAllController"},
+                                                       @{@"name":@"标签测试控制器", @"className":@"FSTagController"}
                                                        ]
                        ];
     }
