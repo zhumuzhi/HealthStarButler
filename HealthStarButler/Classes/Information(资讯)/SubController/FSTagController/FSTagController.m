@@ -17,21 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    FSPromotionTagsView *tagsView = [[FSPromotionTagsView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, 200)];
+    FSPromotionTagsView *tagsView = [[FSPromotionTagsView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, 30)];
+    
     [self.view addSubview:tagsView];
-    tagsView.itemArry = [NSMutableArray arrayWithArray:@[@"满减", @"特价"]];
+    
+    tagsView.itemArry = [NSMutableArray arrayWithArray:@[@"满减", @"特价", @"年终大促"]];
+    
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

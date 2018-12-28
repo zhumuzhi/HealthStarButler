@@ -10,11 +10,11 @@
 
 @interface FSPromotionTagsCell ()
 
-
-
 @end
 
 @implementation FSPromotionTagsCell
+
+#pragma mark - setData
 
 #pragma mark - Init
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -44,7 +44,8 @@
     if (_title == nil) {
         _title = [[UILabel alloc] init];
         _title.textColor = [UIColor whiteColor];
-        _title.backgroundColor = [UIColor lightGrayColor];
+        _title.textAlignment = NSTextAlignmentCenter;
+        _title.font = [UIFont systemFontOfSize:kFont(10)];
     }
     return _title;
 }

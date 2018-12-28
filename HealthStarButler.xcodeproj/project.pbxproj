@@ -364,6 +364,16 @@
 		5D95139E21D4BDA5002B75B2 /* FSPromotionTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95139D21D4BDA5002B75B2 /* FSPromotionTagsCell.m */; };
 		5D9513A121D4BDDB002B75B2 /* FSPromotionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513A021D4BDDB002B75B2 /* FSPromotionLayout.m */; };
 		5D9513A521D4CF90002B75B2 /* FSTagController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513A421D4CF90002B75B2 /* FSTagController.m */; };
+		5D9513A921D5FA63002B75B2 /* FSCollectionViewList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513A821D5FA62002B75B2 /* FSCollectionViewList.m */; };
+		5D9513B521D5FBA1002B75B2 /* FSGroupingCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513B421D5FBA1002B75B2 /* FSGroupingCollectionController.m */; };
+		5D9513B821D5FBC6002B75B2 /* FSAddSectionOrCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513B721D5FBC6002B75B2 /* FSAddSectionOrCellController.m */; };
+		5D9513BB21D5FBD6002B75B2 /* FSAddHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513BA21D5FBD6002B75B2 /* FSAddHeaderViewController.m */; };
+		5D9513BE21D5FBE2002B75B2 /* FSCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513BD21D5FBE2002B75B2 /* FSCycleViewController.m */; };
+		5D9513C121D5FBEE002B75B2 /* FSWaterLayoutListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513C021D5FBEE002B75B2 /* FSWaterLayoutListTableController.m */; };
+		5D9513C421D5FBFA002B75B2 /* FSReorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513C321D5FBFA002B75B2 /* FSReorderController.m */; };
+		5D9513C821D5FC0E002B75B2 /* FSMultiSelectCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513C721D5FC0E002B75B2 /* FSMultiSelectCellController.m */; };
+		5D9513CE21D600FC002B75B2 /* FSGroupingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513CD21D600FC002B75B2 /* FSGroupingCollectionCell.m */; };
+		5D9513D121D6013F002B75B2 /* FSGroupingFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1218,6 +1228,26 @@
 		5D9513A021D4BDDB002B75B2 /* FSPromotionLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPromotionLayout.m; sourceTree = "<group>"; };
 		5D9513A321D4CF90002B75B2 /* FSTagController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSTagController.h; sourceTree = "<group>"; };
 		5D9513A421D4CF90002B75B2 /* FSTagController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSTagController.m; sourceTree = "<group>"; };
+		5D9513A721D5FA62002B75B2 /* FSCollectionViewList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCollectionViewList.h; sourceTree = "<group>"; };
+		5D9513A821D5FA62002B75B2 /* FSCollectionViewList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCollectionViewList.m; sourceTree = "<group>"; };
+		5D9513B321D5FBA1002B75B2 /* FSGroupingCollectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGroupingCollectionController.h; sourceTree = "<group>"; };
+		5D9513B421D5FBA1002B75B2 /* FSGroupingCollectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingCollectionController.m; sourceTree = "<group>"; };
+		5D9513B621D5FBC6002B75B2 /* FSAddSectionOrCellController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddSectionOrCellController.h; sourceTree = "<group>"; };
+		5D9513B721D5FBC6002B75B2 /* FSAddSectionOrCellController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddSectionOrCellController.m; sourceTree = "<group>"; };
+		5D9513B921D5FBD6002B75B2 /* FSAddHeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAddHeaderViewController.h; sourceTree = "<group>"; };
+		5D9513BA21D5FBD6002B75B2 /* FSAddHeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAddHeaderViewController.m; sourceTree = "<group>"; };
+		5D9513BC21D5FBE2002B75B2 /* FSCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCycleViewController.h; sourceTree = "<group>"; };
+		5D9513BD21D5FBE2002B75B2 /* FSCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCycleViewController.m; sourceTree = "<group>"; };
+		5D9513BF21D5FBEE002B75B2 /* FSWaterLayoutListTableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSWaterLayoutListTableController.h; sourceTree = "<group>"; };
+		5D9513C021D5FBEE002B75B2 /* FSWaterLayoutListTableController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSWaterLayoutListTableController.m; sourceTree = "<group>"; };
+		5D9513C221D5FBFA002B75B2 /* FSReorderController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSReorderController.h; sourceTree = "<group>"; };
+		5D9513C321D5FBFA002B75B2 /* FSReorderController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSReorderController.m; sourceTree = "<group>"; };
+		5D9513C621D5FC0E002B75B2 /* FSMultiSelectCellController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMultiSelectCellController.h; sourceTree = "<group>"; };
+		5D9513C721D5FC0E002B75B2 /* FSMultiSelectCellController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSMultiSelectCellController.m; sourceTree = "<group>"; };
+		5D9513CC21D600FC002B75B2 /* FSGroupingCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGroupingCollectionCell.h; sourceTree = "<group>"; };
+		5D9513CD21D600FC002B75B2 /* FSGroupingCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingCollectionCell.m; sourceTree = "<group>"; };
+		5D9513CF21D6013F002B75B2 /* FSGroupingFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGroupingFlowLayout.h; sourceTree = "<group>"; };
+		5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingFlowLayout.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -3003,6 +3033,7 @@
 		5D4F725F20EB99340049C92A /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D9513A621D5FA39002B75B2 /* CollectionViewList */,
 				5D9513A221D4CF74002B75B2 /* FSTagController */,
 				5D95139721D4BC97002B75B2 /* FSPromotionTags */,
 				5D95137C21D12B15002B75B2 /* FSPageView */,
@@ -4092,6 +4123,121 @@
 				5D9513A421D4CF90002B75B2 /* FSTagController.m */,
 			);
 			path = FSTagController;
+			sourceTree = "<group>";
+		};
+		5D9513A621D5FA39002B75B2 /* CollectionViewList */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513AB21D5FAE2002B75B2 /* Controller */,
+				5D9513AA21D5FADB002B75B2 /* SubController */,
+			);
+			path = CollectionViewList;
+			sourceTree = "<group>";
+		};
+		5D9513AA21D5FADB002B75B2 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513AC21D5FB1B002B75B2 /* GroupingCollectionController */,
+				5D9513AD21D5FB2E002B75B2 /* AddSectionOrCellController */,
+				5D9513AE21D5FB3B002B75B2 /* AddHeaderViewController */,
+				5D9513AF21D5FB41002B75B2 /* CycleViewController */,
+				5D9513B121D5FB51002B75B2 /* WaterLayoutListTableController */,
+				5D9513B221D5FB5A002B75B2 /* ReorderController */,
+				5D9513B021D5FB48002B75B2 /* MultiSelectCellController */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		5D9513AB21D5FAE2002B75B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513A721D5FA62002B75B2 /* FSCollectionViewList.h */,
+				5D9513A821D5FA62002B75B2 /* FSCollectionViewList.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D9513AC21D5FB1B002B75B2 /* GroupingCollectionController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513CB21D600CF002B75B2 /* View */,
+				5D9513C921D600C0002B75B2 /* Controller */,
+			);
+			path = GroupingCollectionController;
+			sourceTree = "<group>";
+		};
+		5D9513AD21D5FB2E002B75B2 /* AddSectionOrCellController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513B621D5FBC6002B75B2 /* FSAddSectionOrCellController.h */,
+				5D9513B721D5FBC6002B75B2 /* FSAddSectionOrCellController.m */,
+			);
+			path = AddSectionOrCellController;
+			sourceTree = "<group>";
+		};
+		5D9513AE21D5FB3B002B75B2 /* AddHeaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513B921D5FBD6002B75B2 /* FSAddHeaderViewController.h */,
+				5D9513BA21D5FBD6002B75B2 /* FSAddHeaderViewController.m */,
+			);
+			path = AddHeaderViewController;
+			sourceTree = "<group>";
+		};
+		5D9513AF21D5FB41002B75B2 /* CycleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513BC21D5FBE2002B75B2 /* FSCycleViewController.h */,
+				5D9513BD21D5FBE2002B75B2 /* FSCycleViewController.m */,
+			);
+			path = CycleViewController;
+			sourceTree = "<group>";
+		};
+		5D9513B021D5FB48002B75B2 /* MultiSelectCellController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513C621D5FC0E002B75B2 /* FSMultiSelectCellController.h */,
+				5D9513C721D5FC0E002B75B2 /* FSMultiSelectCellController.m */,
+			);
+			path = MultiSelectCellController;
+			sourceTree = "<group>";
+		};
+		5D9513B121D5FB51002B75B2 /* WaterLayoutListTableController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513BF21D5FBEE002B75B2 /* FSWaterLayoutListTableController.h */,
+				5D9513C021D5FBEE002B75B2 /* FSWaterLayoutListTableController.m */,
+			);
+			path = WaterLayoutListTableController;
+			sourceTree = "<group>";
+		};
+		5D9513B221D5FB5A002B75B2 /* ReorderController */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513C221D5FBFA002B75B2 /* FSReorderController.h */,
+				5D9513C321D5FBFA002B75B2 /* FSReorderController.m */,
+			);
+			path = ReorderController;
+			sourceTree = "<group>";
+		};
+		5D9513C921D600C0002B75B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513B321D5FBA1002B75B2 /* FSGroupingCollectionController.h */,
+				5D9513B421D5FBA1002B75B2 /* FSGroupingCollectionController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D9513CB21D600CF002B75B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513CC21D600FC002B75B2 /* FSGroupingCollectionCell.h */,
+				5D9513CD21D600FC002B75B2 /* FSGroupingCollectionCell.m */,
+				5D9513CF21D6013F002B75B2 /* FSGroupingFlowLayout.h */,
+				5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -5447,6 +5593,7 @@
 				5D3E4FF620FB5D8C008FBF42 /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D2EF94620F759DB00699AA2 /* UIImage+FFToast.m in Sources */,
 				5DA8C04820F6316700AF5C74 /* MZSettingGroup.m in Sources */,
+				5D9513BE21D5FBE2002B75B2 /* FSCycleViewController.m in Sources */,
 				5DCD9AA6212303A500467294 /* FSLocationView.m in Sources */,
 				5DCE9AF720C6682100512610 /* MEDCommonAddCell.m in Sources */,
 				5D1C28A5216DE66000277B21 /* FSAddressListMData.m in Sources */,
@@ -5481,6 +5628,7 @@
 				5D197E522175AF9700B3F5AF /* JXCategoryBaseCellModel.m in Sources */,
 				5D197E4F2175AF9700B3F5AF /* UIColor+JXAdd.m in Sources */,
 				5DCC6DB821018775000DDFD9 /* FSMineOrderCell.m in Sources */,
+				5D9513CE21D600FC002B75B2 /* FSGroupingCollectionCell.m in Sources */,
 				5D6CEB5221351CE40001041A /* FSCountDownTestController.m in Sources */,
 				5D69059220D9FB12002BBD69 /* MEDBloodpressureModel.m in Sources */,
 				5D197E3D2175AF9700B3F5AF /* JXCategoryDotCell.m in Sources */,
@@ -5503,6 +5651,7 @@
 				5D3E4FF220FB5D8C008FBF42 /* UIButton+EdgeInsets.m in Sources */,
 				5D09A86F20DBF17E0059FDD8 /* MEDShopCartCell.m in Sources */,
 				5DCE9AF920C6682100512610 /* MEDTreatmentRecordDescribeView.m in Sources */,
+				5D9513B821D5FBC6002B75B2 /* FSAddSectionOrCellController.m in Sources */,
 				5DE1F58120EDA5B2005FCCD5 /* HYEdgeInsetsButton.m in Sources */,
 				5D3E4FE720FB5D8C008FBF42 /* NSMutableAttributedString+Custom.m in Sources */,
 				5DE1F58820EDE4B1005FCCD5 /* MEDStatusController.m in Sources */,
@@ -5540,6 +5689,7 @@
 				5DCE9B0E20C6682100512610 /* TZImageManager.m in Sources */,
 				5DA3552D210DC65F008B6642 /* FSShopCartCell.m in Sources */,
 				5DCE9AF320C6682100512610 /* MEDAddTreatmentRecordController.m in Sources */,
+				5D9513B521D5FBA1002B75B2 /* FSGroupingCollectionController.m in Sources */,
 				5D829A692085D8C9001993B6 /* MEDNavigationController.m in Sources */,
 				5D267FF420DDD44C006A42E2 /* MEDShopCartToolBar.m in Sources */,
 				5D4A480A20906142007DAD29 /* MEDMobileNumberTool.m in Sources */,
@@ -5576,6 +5726,7 @@
 				5DF1F15B20EF4BB0009A8E51 /* NSMutableAttributedString+Add.m in Sources */,
 				5D4A48212091AAFD007DAD29 /* MEDManageVerticalCell.m in Sources */,
 				5D6CC94A2109D33100235B9C /* FSMineController.m in Sources */,
+				5D9513A921D5FA63002B75B2 /* FSCollectionViewList.m in Sources */,
 				5D2EF96520F82DFC00699AA2 /* MEDTableChooseCell.m in Sources */,
 				5D6CC9392109C1D900235B9C /* MEDCollectionLinkController.m in Sources */,
 				5DCE9B0820C6682100512610 /* TZAssetModel.m in Sources */,
@@ -5585,6 +5736,7 @@
 				5D3E4FF120FB5D8C008FBF42 /* UIButton+Clicks.m in Sources */,
 				5D27457220DB985F00844B6E /* MEDPersonalDataModel.m in Sources */,
 				5D829A5E2085D73F001993B6 /* MEDNetClient.m in Sources */,
+				5D9513BB21D5FBD6002B75B2 /* FSAddHeaderViewController.m in Sources */,
 				5D1AC62E209ABA3B00FB16C9 /* MEDHomeMonitorCell.m in Sources */,
 				5D2EF94720F759DB00699AA2 /* FFCentreToastView.m in Sources */,
 				5D8207F52099A50500B84C1E /* MEDHomePhysiologyWaistlineCell.m in Sources */,
@@ -5605,6 +5757,7 @@
 				5DCE9AF620C6682100512610 /* MEDPersonalDatePickView.m in Sources */,
 				5D3E500B20FB5D8C008FBF42 /* DHGifImageOperation.m in Sources */,
 				5D427A0E20F8F38500FB9C65 /* GGSwitch.m in Sources */,
+				5D9513C421D5FBFA002B75B2 /* FSReorderController.m in Sources */,
 				5D3E501820FB5D8C008FBF42 /* ReachStateWIFI.m in Sources */,
 				5D3E4F1320FA3AE0008FBF42 /* FSLoginHeader.m in Sources */,
 				5D201DB720CA6D15009007D9 /* MEDDepartmentVC.m in Sources */,
@@ -5654,6 +5807,7 @@
 				5D69059120D9FB12002BBD69 /* MEDBloodPressureCodeCell.m in Sources */,
 				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
 				5D970D7321071A5500F19D3D /* FSWebView.m in Sources */,
+				5D9513D121D6013F002B75B2 /* FSGroupingFlowLayout.m in Sources */,
 				5D3E4FFA20FB5D8C008FBF42 /* FSCustomButton.m in Sources */,
 				5D3E4FE820FB5D8C008FBF42 /* NSString+Arc4random.m in Sources */,
 				5DBC070F20FF33020078E9B6 /* WYFileManager.m in Sources */,
@@ -5694,6 +5848,7 @@
 				5D12B20B20F2EB3000ECE416 /* MZModelTypeLoginController.m in Sources */,
 				5D201DE720CA6D2C009007D9 /* MEDRightTableViewCell.m in Sources */,
 				5D197E452175AF9700B3F5AF /* JXCategoryTitleView.m in Sources */,
+				5D9513C821D5FC0E002B75B2 /* FSMultiSelectCellController.m in Sources */,
 				5D3E4F2020FA4233008FBF42 /* FSBaseNData.m in Sources */,
 				5D970D7721071A5500F19D3D /* FSSpaceCell.m in Sources */,
 				5D6CEB6221351EE00001041A /* OYTableViewCell.m in Sources */,
@@ -5704,6 +5859,7 @@
 				5D829A602085D73F001993B6 /* MEDNetStatusManager.m in Sources */,
 				5D27457120DB985F00844B6E /* MEDTPersonaliconCell.m in Sources */,
 				5D197E382175AF9700B3F5AF /* JXCategoryIndicatorComponentView.m in Sources */,
+				5D9513C121D5FBEE002B75B2 /* FSWaterLayoutListTableController.m in Sources */,
 				5D69059820D9FB12002BBD69 /* MEDMonitorDateTool.m in Sources */,
 				5D197E3F2175AF9700B3F5AF /* JXCategoryDotCellModel.m in Sources */,
 				5D454FEA20FF7C160041A924 /* FSMineNormalCell.m in Sources */,

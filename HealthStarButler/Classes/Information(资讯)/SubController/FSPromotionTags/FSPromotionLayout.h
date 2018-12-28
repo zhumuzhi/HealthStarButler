@@ -14,6 +14,7 @@
 
 - (CGSize)waterFlowLayout:(FSPromotionLayout *) WaterFlowLayout heightForWidth:(CGFloat)width andIndexPath:(NSIndexPath *)indexPath;
 
+/** 此方法作用为设置CollectionView高度，如何触发设置？ */
 - (void)getCollectionViewHeight:(CGFloat)ccHeight;
 
 @end
@@ -31,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 设置每一行排列的个数 */
 @property (nonatomic, assign) NSInteger columnCount;
 
- @property(nonatomic, weak) id<FSPromotionLayoutDelegate> delegate;
+@property(nonatomic, weak) id<FSPromotionLayoutDelegate> delegate;
 
 @end
 

@@ -19,29 +19,27 @@
 
 @implementation FSPromotionLayout
 
-#pragma mark - Init
-- (instancetype)init {
-    if (self = [super init]) {
-        
-    }
-    return self;
-}
-
 #pragma mark - 计算布局
 - (void)prepareLayout {
     [super prepareLayout];
     
     [self.attrsArray removeAllObjects];
+    
     NSInteger iCount = [self.collectionView numberOfItemsInSection:0];
+    
     for (NSInteger i = 0; i<iCount; i++) {
+        
         UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForItem:i inSection:0]];
+        
         [self.attrsArray addObject:attrs];
+        
     }
+    
     [self.delegate getCollectionViewHeight:CGRectGetMaxY(((UICollectionViewLayoutAttributes*)[self.attrsArray lastObject]).frame)];
 }
 
 //返回collectionView内容区的宽度和高度，子类必须重载该方法，返回值代表了所有内容的宽度和高度，而不仅仅是可见范围的，collectionView通过该信息配置它的滚动范围，默认返回 CGSizeZero。
-- (CGSize)collectionViewContentSize{
+- (CGSize)collectionViewContentSize {
     return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.height);
 }
 
@@ -52,19 +50,19 @@
 
 //返回指定indexPath的item的布局信息。子类必须重载该方法,该方法只能为cell提供布局信息，不能为补充视图和装饰视图提供。
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
     CGFloat width = self.collectionView.frame.size.width;
     
     CGSize frameSize = [self.delegate waterFlowLayout:self heightForWidth:0.0 andIndexPath:indexPath];
     //计算每一个item的位置
     CGFloat x = CGRectGetMaxX(((UICollectionViewLayoutAttributes*)[self.attrsArray lastObject]).frame)+self.rowMargin;
     CGFloat y = 0;
-    if (x+frameSize.width>width) {
+    if (x+frameSize.width > width) {
         [self.sectionArray addObject:indexPath];
         x = self.rowMargin;
         y = CGRectGetMaxY(((UICollectionViewLayoutAttributes*)[self.attrsArray lastObject]).frame)+self.columnMargin;
-    }
-    else{
-        if (self.sectionArray.count>0) {
+    } else {
+        if (self.sectionArray.count > 0) {
             y = ((UICollectionViewLayoutAttributes*)[self.attrsArray lastObject]).frame.origin.y;
         }else{
             y = ((UICollectionViewLayoutAttributes*)[self.attrsArray lastObject]).frame.origin.y;
@@ -78,7 +76,7 @@
 }
 
 //该方法用来决定是否需要更新布局。如果collection view需要重新布局返回YES,否则返回NO,默认返回值为NO。子类重载该方法的时候，基于是否collection view的bounds的改变会引发cell和view布局的改变，给出正确的返回值。
-- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds{
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return NO;
 }
 
@@ -96,8 +94,5 @@
     }
     return _sectionArray;
 }
-
-
-
 
 @end
