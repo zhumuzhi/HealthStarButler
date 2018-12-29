@@ -17,12 +17,14 @@
         CGFloat cellSpace = 3.0;
         CGFloat cellWith = (kScreenWidth - 20) / 3.0;
         
+        // 每个Cell的宽高
         self.itemSize = CGSizeMake(cellWith, cellWith * 0.8);
-        
+        // 每个Cell之间的最小间距
         self.minimumInteritemSpacing = cellSpace;
-        self.accessibilityElementsHidden = cellSpace;
-        
+        // 组之间的各方向内边距 top, left, bottom, right
         self.sectionInset = UIEdgeInsetsMake(cellSpace, cellSpace, cellSpace, cellSpace);
+        
+        self.accessibilityElementsHidden = cellSpace;
         self.headerReferenceSize = CGSizeMake(size.width, 40);
     }
     return self;

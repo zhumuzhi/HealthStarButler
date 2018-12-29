@@ -7,17 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FSGroupingModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FSGroupingCollectionCell : UICollectionViewCell
 
-/** 图片 */
-@property (nonatomic, weak) UIImageView *imageV;
-/** 标题Label */
-@property (nonatomic, weak) UILabel *titleLabel;
-/** 删除按钮 */
-@property (nonatomic, weak) UIButton *deleteBtn;
+@property (nonatomic, strong) FSGroupingModel *rowModel;
+
 
 @end
 

@@ -9,9 +9,9 @@ target 'HealthStarButler' do
  pod 'SDWebImage', '~> 4.3.3'
  pod 'Masonry', '~> 1.1.0'
  # 导航栏NavigationBar
- pod 'WRNavigationBar', '~> 1.2.0'
+ pod 'WRNavigationBar'
  # TabBarController
- pod 'CYLTabBarController', '~> 1.17.6'
+ pod 'CYLTabBarController'
  # 下拉刷新
  pod 'MJRefresh'
  # 字典转模型

@@ -374,6 +374,9 @@
 		5D9513C821D5FC0E002B75B2 /* FSMultiSelectCellController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513C721D5FC0E002B75B2 /* FSMultiSelectCellController.m */; };
 		5D9513CE21D600FC002B75B2 /* FSGroupingCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513CD21D600FC002B75B2 /* FSGroupingCollectionCell.m */; };
 		5D9513D121D6013F002B75B2 /* FSGroupingFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */; };
+		5D9513D421D702A7002B75B2 /* allBrand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D9513D321D702A7002B75B2 /* allBrand.plist */; };
+		5D9513D721D70463002B75B2 /* FSGroupingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513D621D70463002B75B2 /* FSGroupingModel.m */; };
+		5D9513DB21D7471B002B75B2 /* ZJCollectionViewRightIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1248,6 +1251,11 @@
 		5D9513CD21D600FC002B75B2 /* FSGroupingCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingCollectionCell.m; sourceTree = "<group>"; };
 		5D9513CF21D6013F002B75B2 /* FSGroupingFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGroupingFlowLayout.h; sourceTree = "<group>"; };
 		5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingFlowLayout.m; sourceTree = "<group>"; };
+		5D9513D321D702A7002B75B2 /* allBrand.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = allBrand.plist; sourceTree = "<group>"; };
+		5D9513D521D70463002B75B2 /* FSGroupingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGroupingModel.h; sourceTree = "<group>"; };
+		5D9513D621D70463002B75B2 /* FSGroupingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingModel.m; sourceTree = "<group>"; };
+		5D9513D921D7471B002B75B2 /* ZJCollectionViewRightIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionViewRightIndex.h; sourceTree = "<group>"; };
+		5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionViewRightIndex.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -4137,6 +4145,7 @@
 		5D9513AA21D5FADB002B75B2 /* SubController */ = {
 			isa = PBXGroup;
 			children = (
+				5D9513D821D746DF002B75B2 /* CommomView */,
 				5D9513AC21D5FB1B002B75B2 /* GroupingCollectionController */,
 				5D9513AD21D5FB2E002B75B2 /* AddSectionOrCellController */,
 				5D9513AE21D5FB3B002B75B2 /* AddHeaderViewController */,
@@ -4160,8 +4169,9 @@
 		5D9513AC21D5FB1B002B75B2 /* GroupingCollectionController */ = {
 			isa = PBXGroup;
 			children = (
-				5D9513CB21D600CF002B75B2 /* View */,
 				5D9513C921D600C0002B75B2 /* Controller */,
+				5D9513D221D70297002B75B2 /* Model */,
+				5D9513CB21D600CF002B75B2 /* View */,
 			);
 			path = GroupingCollectionController;
 			sourceTree = "<group>";
@@ -4238,6 +4248,25 @@
 				5D9513D021D6013F002B75B2 /* FSGroupingFlowLayout.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5D9513D221D70297002B75B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513D321D702A7002B75B2 /* allBrand.plist */,
+				5D9513D521D70463002B75B2 /* FSGroupingModel.h */,
+				5D9513D621D70463002B75B2 /* FSGroupingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D9513D821D746DF002B75B2 /* CommomView */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513D921D7471B002B75B2 /* ZJCollectionViewRightIndex.h */,
+				5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */,
+			);
+			path = CommomView;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -5452,6 +5481,7 @@
 				5D662B55212AA042009455D5 /* WKWebViewText.html in Resources */,
 				5D829A282085C7D1001993B6 /* Assets.xcassets in Resources */,
 				5D829A262085C7D1001993B6 /* Main.storyboard in Resources */,
+				5D9513D421D702A7002B75B2 /* allBrand.plist in Resources */,
 				5DA70AB120F4B83E00D9AF1D /* dropdown_anim__0007@2x.png in Resources */,
 				5D267FD820DD4106006A42E2 /* 12.jpg in Resources */,
 				5DA70AB020F4B83E00D9AF1D /* dropdown_anim__00012@2x.png in Resources */,
@@ -5747,6 +5777,7 @@
 				5DCD9AB6212303F200467294 /* FSChoseZoneMData.m in Sources */,
 				5D2EF91E20F7581D00699AA2 /* SCLAlertViewResponder.m in Sources */,
 				5D510A6E20FC339400483971 /* FSCheckCodeSlider.m in Sources */,
+				5D9513D721D70463002B75B2 /* FSGroupingModel.m in Sources */,
 				5DCE9AF520C6682100512610 /* MEDTextField.m in Sources */,
 				5D197E3E2175AF9700B3F5AF /* JXCategoryDotView.m in Sources */,
 				5D2EF8EC20F72AA400699AA2 /* MZJSBridgeController.m in Sources */,
@@ -5829,6 +5860,7 @@
 				5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */,
 				5D12B20F20F2EE5300ECE416 /* MZDataModelHelper.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,
+				5D9513DB21D7471B002B75B2 /* ZJCollectionViewRightIndex.m in Sources */,
 				5D3E502320FB5D8C008FBF42 /* GCDSemaphore.m in Sources */,
 				5D4F726620EBBA770049C92A /* UIScrollView+ScrollToTopBtn.m in Sources */,
 				5D970D7921071A5500F19D3D /* FSCollectionView.m in Sources */,

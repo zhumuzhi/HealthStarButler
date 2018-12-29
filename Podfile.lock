@@ -14,26 +14,26 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CYLTabBarController (1.17.16)
+  - CYLTabBarController (1.17.22)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJExtension (3.0.15.1)
-  - MJRefresh (3.1.15.6)
+  - MJRefresh (3.1.15.7)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
   - SVProgressHUD (2.2.5)
   - Toast (4.0.0)
-  - UMCAnalytics (5.5.0):
+  - UMCAnalytics (5.5.2):
     - UMCCommon
-  - UMCCommon (1.5.2)
+  - UMCCommon (1.5.3)
   - WebViewJavascriptBridge (6.0.3)
   - WRNavigationBar (1.2.0)
   - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
-  - CYLTabBarController (~> 1.17.6)
+  - CYLTabBarController
   - Masonry (~> 1.1.0)
   - MBProgressHUD
   - MJExtension
@@ -44,25 +44,42 @@ DEPENDENCIES:
   - UMCAnalytics
   - UMCCommon
   - WebViewJavascriptBridge
-  - WRNavigationBar (~> 1.2.0)
+  - WRNavigationBar
   - YYText
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CYLTabBarController
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - Toast
+    - UMCAnalytics
+    - UMCCommon
+    - WebViewJavascriptBridge
+    - WRNavigationBar
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CYLTabBarController: fb72c648645336953d522407892c4f61b7b3f898
+  CYLTabBarController: 35784c2969383583d11cc56ff5abce078f19d94a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
-  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  UMCAnalytics: 4667788559a72f2fa5077117d1b8802a3b6eb6bb
-  UMCCommon: 4392868ac47ff1b101663106bb114ba616fabbad
+  UMCAnalytics: 6654fd3c8201ff6da5c86a3ae29cd5c8436d3b7b
+  UMCCommon: 016af43c0f769feb1ae1861d65aaf2b23b89c9c7
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 0f4d50228c92be8e2d35848ebffe0bcb87e886b7
+PODFILE CHECKSUM: 6472c80afc5199afda33e6e51d2ecd5284840438
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
