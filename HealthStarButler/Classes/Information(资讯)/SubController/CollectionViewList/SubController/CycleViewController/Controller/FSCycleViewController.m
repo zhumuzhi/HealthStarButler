@@ -14,20 +14,19 @@
 
 @implementation FSCycleViewController
 
+#pragma mark - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - configUI
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+#pragma mark - configration
+
+#pragma mark - Event
+
+#pragma mark - LazyGet
 
 @end

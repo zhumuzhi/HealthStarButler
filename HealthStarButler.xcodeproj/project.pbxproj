@@ -377,6 +377,7 @@
 		5D9513D421D702A7002B75B2 /* allBrand.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D9513D321D702A7002B75B2 /* allBrand.plist */; };
 		5D9513D721D70463002B75B2 /* FSGroupingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513D621D70463002B75B2 /* FSGroupingModel.m */; };
 		5D9513DB21D7471B002B75B2 /* ZJCollectionViewRightIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */; };
+		5D9513E421D75883002B75B2 /* FSCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513E321D75883002B75B2 /* FSCycleView.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1256,6 +1257,8 @@
 		5D9513D621D70463002B75B2 /* FSGroupingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSGroupingModel.m; sourceTree = "<group>"; };
 		5D9513D921D7471B002B75B2 /* ZJCollectionViewRightIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionViewRightIndex.h; sourceTree = "<group>"; };
 		5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionViewRightIndex.m; sourceTree = "<group>"; };
+		5D9513E221D75883002B75B2 /* FSCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCycleView.h; sourceTree = "<group>"; };
+		5D9513E321D75883002B75B2 /* FSCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCycleView.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -4147,9 +4150,9 @@
 			children = (
 				5D9513D821D746DF002B75B2 /* CommomView */,
 				5D9513AC21D5FB1B002B75B2 /* GroupingCollectionController */,
+				5D9513AF21D5FB41002B75B2 /* CycleViewController */,
 				5D9513AD21D5FB2E002B75B2 /* AddSectionOrCellController */,
 				5D9513AE21D5FB3B002B75B2 /* AddHeaderViewController */,
-				5D9513AF21D5FB41002B75B2 /* CycleViewController */,
 				5D9513B121D5FB51002B75B2 /* WaterLayoutListTableController */,
 				5D9513B221D5FB5A002B75B2 /* ReorderController */,
 				5D9513B021D5FB48002B75B2 /* MultiSelectCellController */,
@@ -4179,8 +4182,9 @@
 		5D9513AD21D5FB2E002B75B2 /* AddSectionOrCellController */ = {
 			isa = PBXGroup;
 			children = (
-				5D9513B621D5FBC6002B75B2 /* FSAddSectionOrCellController.h */,
-				5D9513B721D5FBC6002B75B2 /* FSAddSectionOrCellController.m */,
+				5D9513DE21D756EF002B75B2 /* View */,
+				5D9513DD21D756E8002B75B2 /* Model */,
+				5D9513DC21D756DD002B75B2 /* Controller */,
 			);
 			path = AddSectionOrCellController;
 			sourceTree = "<group>";
@@ -4197,8 +4201,9 @@
 		5D9513AF21D5FB41002B75B2 /* CycleViewController */ = {
 			isa = PBXGroup;
 			children = (
-				5D9513BC21D5FBE2002B75B2 /* FSCycleViewController.h */,
-				5D9513BD21D5FBE2002B75B2 /* FSCycleViewController.m */,
+				5D9513E121D7583F002B75B2 /* View */,
+				5D9513E021D7583A002B75B2 /* Model */,
+				5D9513DF21D7582F002B75B2 /* Controller */,
 			);
 			path = CycleViewController;
 			sourceTree = "<group>";
@@ -4267,6 +4272,54 @@
 				5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */,
 			);
 			path = CommomView;
+			sourceTree = "<group>";
+		};
+		5D9513DC21D756DD002B75B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513B621D5FBC6002B75B2 /* FSAddSectionOrCellController.h */,
+				5D9513B721D5FBC6002B75B2 /* FSAddSectionOrCellController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D9513DD21D756E8002B75B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D9513DE21D756EF002B75B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D9513DF21D7582F002B75B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513BC21D5FBE2002B75B2 /* FSCycleViewController.h */,
+				5D9513BD21D5FBE2002B75B2 /* FSCycleViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D9513E021D7583A002B75B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D9513E121D7583F002B75B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D9513E221D75883002B75B2 /* FSCycleView.h */,
+				5D9513E321D75883002B75B2 /* FSCycleView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5D970D592107167C00F19D3D /* Model */ = {
@@ -5814,6 +5867,7 @@
 				5D12B21520F2EFC300ECE416 /* MZLoginButton.m in Sources */,
 				5D09A87320DBF8FD0059FDD8 /* MEDCircleButton.m in Sources */,
 				5D62D879211AF0AF00A58D76 /* HHTextField.m in Sources */,
+				5D9513E421D75883002B75B2 /* FSCycleView.m in Sources */,
 				5DCD9AF02123F32000467294 /* FSChoseZoneLocationCell.m in Sources */,
 				5D6CC9332109C1D900235B9C /* MEDTableViewLinkController.m in Sources */,
 				5D201DB620CA6D15009007D9 /* MEDGuidanceVC.m in Sources */,

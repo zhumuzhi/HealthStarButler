@@ -31,7 +31,7 @@
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"分组及添加索引";
     [self setDataArrayAndListArray];
     [self configUI];
 }
