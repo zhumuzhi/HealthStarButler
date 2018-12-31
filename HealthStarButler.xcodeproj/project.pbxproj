@@ -378,6 +378,8 @@
 		5D9513D721D70463002B75B2 /* FSGroupingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513D621D70463002B75B2 /* FSGroupingModel.m */; };
 		5D9513DB21D7471B002B75B2 /* ZJCollectionViewRightIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */; };
 		5D9513E421D75883002B75B2 /* FSCycleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513E321D75883002B75B2 /* FSCycleView.m */; };
+		5D9513E721D7B47F002B75B2 /* FSCycleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513E621D7B47F002B75B2 /* FSCycleViewCell.m */; };
+		5D9513EA21D7C2F9002B75B2 /* FSPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9513E921D7C2F9002B75B2 /* FSPageControl.m */; };
 		5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D572107129D00F19D3D /* FSAccountSetController.m */; };
 		5D970D5C210716B400F19D3D /* FSAccountSetMData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D5B210716B400F19D3D /* FSAccountSetMData.m */; };
 		5D970D7221071A5500F19D3D /* FSNavBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D970D6021071A5500F19D3D /* FSNavBarView.m */; };
@@ -1259,6 +1261,10 @@
 		5D9513DA21D7471B002B75B2 /* ZJCollectionViewRightIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionViewRightIndex.m; sourceTree = "<group>"; };
 		5D9513E221D75883002B75B2 /* FSCycleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCycleView.h; sourceTree = "<group>"; };
 		5D9513E321D75883002B75B2 /* FSCycleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCycleView.m; sourceTree = "<group>"; };
+		5D9513E521D7B47F002B75B2 /* FSCycleViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSCycleViewCell.h; sourceTree = "<group>"; };
+		5D9513E621D7B47F002B75B2 /* FSCycleViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSCycleViewCell.m; sourceTree = "<group>"; };
+		5D9513E821D7C2F9002B75B2 /* FSPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSPageControl.h; sourceTree = "<group>"; };
+		5D9513E921D7C2F9002B75B2 /* FSPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSPageControl.m; sourceTree = "<group>"; };
 		5D970D562107129D00F19D3D /* FSAccountSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetController.h; sourceTree = "<group>"; };
 		5D970D572107129D00F19D3D /* FSAccountSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAccountSetController.m; sourceTree = "<group>"; };
 		5D970D5A210716B400F19D3D /* FSAccountSetMData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAccountSetMData.h; sourceTree = "<group>"; };
@@ -4318,6 +4324,10 @@
 			children = (
 				5D9513E221D75883002B75B2 /* FSCycleView.h */,
 				5D9513E321D75883002B75B2 /* FSCycleView.m */,
+				5D9513E521D7B47F002B75B2 /* FSCycleViewCell.h */,
+				5D9513E621D7B47F002B75B2 /* FSCycleViewCell.m */,
+				5D9513E821D7C2F9002B75B2 /* FSPageControl.h */,
+				5D9513E921D7C2F9002B75B2 /* FSPageControl.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5893,6 +5903,7 @@
 				5DBC070E20FF33020078E9B6 /* NSObject+WYCoding.m in Sources */,
 				5D970D7321071A5500F19D3D /* FSWebView.m in Sources */,
 				5D9513D121D6013F002B75B2 /* FSGroupingFlowLayout.m in Sources */,
+				5D9513EA21D7C2F9002B75B2 /* FSPageControl.m in Sources */,
 				5D3E4FFA20FB5D8C008FBF42 /* FSCustomButton.m in Sources */,
 				5D3E4FE820FB5D8C008FBF42 /* NSString+Arc4random.m in Sources */,
 				5DBC070F20FF33020078E9B6 /* WYFileManager.m in Sources */,
@@ -5911,6 +5922,7 @@
 				5D6CEB5D21351EA30001041A /* OYCountDownManager.m in Sources */,
 				5D3E500720FB5D8C008FBF42 /* BAGridCollectionCell.m in Sources */,
 				5D267FF120DD41C3006A42E2 /* MEDShopCartModel.m in Sources */,
+				5D9513E721D7B47F002B75B2 /* FSCycleViewCell.m in Sources */,
 				5DA3551F21076470008B6642 /* FSAccountSetHeadCell.m in Sources */,
 				5D12B20F20F2EE5300ECE416 /* MZDataModelHelper.m in Sources */,
 				5D8207F32099A50500B84C1E /* MEDHomePhysiologyModel.m in Sources */,

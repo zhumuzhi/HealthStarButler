@@ -66,8 +66,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** 是否显示分页控件 */
 @property (nonatomic, assign) BOOL showPageControl;
 
+/** 分页控件的位置 */
+@property (nonatomic, assign) FSCyclePageContolLocation pageControlLocation;
 
-
+/** pageContol点的样式 */
+@property (nonatomic, assign) FSCyclePageContolStyle pageControlStyle;
 
 @end
 
