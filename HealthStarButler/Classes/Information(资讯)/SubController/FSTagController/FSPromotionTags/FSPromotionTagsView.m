@@ -30,12 +30,12 @@ static NSString *cellIdentifier = @"FSPromotionTagsCellID";
 
 #pragma mark - config UI & configration
 - (void)configUI {
-    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.promotionLayout];
-    collection.backgroundColor = [UIColor clearColor];
-    collection.dataSource = self;
-    collection.delegate = self;
-    [collection registerClass:[FSPromotionTagsCell class] forCellWithReuseIdentifier:cellIdentifier];
-    self.collectionView = collection;
+    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.promotionLayout];
+    collectionView.backgroundColor = [UIColor clearColor];
+    collectionView.dataSource = self;
+    collectionView.delegate = self;
+    [collectionView registerClass:[FSPromotionTagsCell class] forCellWithReuseIdentifier:cellIdentifier];
+    self.collectionView = collectionView;
     [self addSubview:self.collectionView];
     
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,14 +54,19 @@ static NSString *cellIdentifier = @"FSPromotionTagsCellID";
 }
 #pragma mark - WaterFlowLayoutDelegate
 - (CGSize)waterFlowLayout:(FSPromotionLayout *)WaterFlowLayout heightForWidth:(CGFloat)width andIndexPath:(NSIndexPath *)indexPath {
-    CGSize size = [self getSize:_itemArry[indexPath.row]];
+    CGSize size = [self getSize:self.itemArry[indexPath.row]];
+    CGSize tempSize = CGSizeMake(size.width, self.collectionView.size.height);
+    size = tempSize;
     return size;
 }
 
 - (CGSize)getSize:(NSString *)str {
-    UIFont *font = [UIFont systemFontOfSize:kFont(12)];
+    UIFont *font = [UIFont systemFontOfSize:kFont(10)];
     NSDictionary *attrs = @{NSFontAttributeName:font};
     CGSize mySize = [str sizeWithAttributes:attrs];
+    // 两侧总间距kAutoWithSize(14)
+    CGSize tempSize = CGSizeMake(mySize.width+kAutoWithSize(14), mySize.height);
+    mySize = tempSize;
     return mySize;
 }
 
@@ -80,7 +85,7 @@ static NSString *cellIdentifier = @"FSPromotionTagsCellID";
 - (FSPromotionLayout *)promotionLayout {
     if (_promotionLayout == nil) {
         _promotionLayout = [[FSPromotionLayout alloc] init];
-        _promotionLayout.rowMargin = 10;
+        _promotionLayout.rowMargin = 10; // 行间距
         _promotionLayout.delegate = self;
 //        _promotionLayout.columnCount = 4;
 //        _promotionLayout.columnMargin = 2;

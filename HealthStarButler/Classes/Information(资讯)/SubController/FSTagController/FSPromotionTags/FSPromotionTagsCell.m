@@ -19,33 +19,36 @@
 #pragma mark - Init
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self cofignUI];
+        [self cofignUIWith:(CGRect)frame];
         [self configration];
     }
     return self;
 }
 
 #pragma mark - configUI
-- (void)cofignUI {
+- (void)cofignUIWith:(CGRect)frame {
     [self.contentView addSubview:self.title];
-    [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.equalTo(self.contentView);
-    }];
+    self.title.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+    self.title.layer.cornerRadius = frame.size.height/2;
 }
 
 #pragma mark - configration
 - (void)configration {
     self.userInteractionEnabled = YES;
-    self.backgroundColor = [UIColor randomColor];
+    self.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - LazyGet
 - (UILabel *)title {
     if (_title == nil) {
         _title = [[UILabel alloc] init];
-        _title.textColor = [UIColor whiteColor];
+        _title.textColor = [UIColor orangeColor];
+        _title.backgroundColor = [UIColor whiteColor];
         _title.textAlignment = NSTextAlignmentCenter;
         _title.font = [UIFont systemFontOfSize:kFont(10)];
+        _title.layer.borderWidth = 1;
+        _title.layer.borderColor = [UIColor orangeColor].CGColor;
+        _title.layer.masksToBounds = YES;
     }
     return _title;
 }

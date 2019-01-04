@@ -20,7 +20,7 @@
     
     self.view.backgroundColor = [UIColor lightGrayColor];
     
-    FSPromotionTagsView *tagsView = [[FSPromotionTagsView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, 30)];
+    FSPromotionTagsView *tagsView = [[FSPromotionTagsView alloc] initWithFrame:CGRectMake(0, 300, kScreenWidth, 18)];
     
     [self.view addSubview:tagsView];
     

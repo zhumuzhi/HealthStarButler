@@ -3052,7 +3052,6 @@
 			children = (
 				5D9513A621D5FA39002B75B2 /* CollectionViewList */,
 				5D9513A221D4CF74002B75B2 /* FSTagController */,
-				5D95139721D4BC97002B75B2 /* FSPromotionTags */,
 				5D95137C21D12B15002B75B2 /* FSPageView */,
 				5DC3FC9321CC787500AE5039 /* FSBaseWebViewController */,
 				5D984E7021B26D7700B03C8D /* FSShowPartOrAll */,
@@ -4136,6 +4135,7 @@
 		5D9513A221D4CF74002B75B2 /* FSTagController */ = {
 			isa = PBXGroup;
 			children = (
+				5D95139721D4BC97002B75B2 /* FSPromotionTags */,
 				5D9513A321D4CF90002B75B2 /* FSTagController.h */,
 				5D9513A421D4CF90002B75B2 /* FSTagController.m */,
 			);
