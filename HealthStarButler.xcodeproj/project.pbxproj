@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
+		5D020B2E23044272004AF008 /* CCNetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D020B2D23044272004AF008 /* CCNetWorkStatus.m */; };
 		5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */; };
 		5D08D03F2152962500C10FF0 /* FSGetElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08D03E2152962500C10FF0 /* FSGetElementController.m */; };
 		5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */; };
@@ -223,7 +224,6 @@
 		5D3E501B20FB5D8C008FBF42 /* PingFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FCB20FB5D8C008FBF42 /* PingFoundation.m */; };
 		5D3E501C20FB5D8C008FBF42 /* PingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FCD20FB5D8C008FBF42 /* PingHelper.m */; };
 		5D3E501D20FB5D8C008FBF42 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D3E4FCE20FB5D8C008FBF42 /* README.md */; };
-		5D3E501E20FB5D8C008FBF42 /* RealReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FD020FB5D8C008FBF42 /* RealReachability.m */; };
 		5D3E502020FB5D8C008FBF42 /* LZKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FD620FB5D8C008FBF42 /* LZKeychain.m */; };
 		5D3E502120FB5D8C008FBF42 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FDA20FB5D8C008FBF42 /* GCDGroup.m */; };
 		5D3E502220FB5D8C008FBF42 /* GCDQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3E4FDC20FB5D8C008FBF42 /* GCDQueue.m */; };
@@ -356,7 +356,6 @@
 		5D829A902085DA35001993B6 /* MEDInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A8F2085DA35001993B6 /* MEDInformationController.m */; };
 		5D829A932085DA47001993B6 /* MEDMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A922085DA47001993B6 /* MEDMineController.m */; };
 		5D829A962085DAC3001993B6 /* MEDManagementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A952085DAC3001993B6 /* MEDManagementController.m */; };
-		5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A982085DCC6001993B6 /* Reachability.m */; };
 		5D829A9D2085E36B001993B6 /* MEDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */; };
 		5D8837F02102FA780087DA22 /* FSMineHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8837EF2102FA780087DA22 /* FSMineHeader.m */; };
 		5D95137F21D12B7D002B75B2 /* FSPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D95137E21D12B7D002B75B2 /* FSPageView.m */; };
@@ -578,6 +577,8 @@
 /* Begin PBXFileReference section */
 		0CCBCB3689727712DA7DC713 /* Pods-HealthStarButler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HealthStarButler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler.debug.xcconfig"; sourceTree = "<group>"; };
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D020B2C23044272004AF008 /* CCNetWorkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetWorkStatus.h; sourceTree = "<group>"; };
+		5D020B2D23044272004AF008 /* CCNetWorkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNetWorkStatus.m; sourceTree = "<group>"; };
 		5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDWebTestController.h; sourceTree = "<group>"; };
 		5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDWebTestController.m; sourceTree = "<group>"; };
 		5D08D03D2152962500C10FF0 /* FSGetElementController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGetElementController.h; sourceTree = "<group>"; };
@@ -968,8 +969,6 @@
 		5D3E4FCC20FB5D8C008FBF42 /* PingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingHelper.h; sourceTree = "<group>"; };
 		5D3E4FCD20FB5D8C008FBF42 /* PingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingHelper.m; sourceTree = "<group>"; };
 		5D3E4FCE20FB5D8C008FBF42 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		5D3E4FCF20FB5D8C008FBF42 /* RealReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealReachability.h; sourceTree = "<group>"; };
-		5D3E4FD020FB5D8C008FBF42 /* RealReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealReachability.m; sourceTree = "<group>"; };
 		5D3E4FD520FB5D8C008FBF42 /* LZKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZKeychain.h; sourceTree = "<group>"; };
 		5D3E4FD620FB5D8C008FBF42 /* LZKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZKeychain.m; sourceTree = "<group>"; };
 		5D3E4FD820FB5D8C008FBF42 /* GCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
@@ -1218,8 +1217,6 @@
 		5D829A922085DA47001993B6 /* MEDMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDMineController.m; sourceTree = "<group>"; };
 		5D829A942085DAC3001993B6 /* MEDManagementController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDManagementController.h; sourceTree = "<group>"; };
 		5D829A952085DAC3001993B6 /* MEDManagementController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDManagementController.m; sourceTree = "<group>"; };
-		5D829A982085DCC6001993B6 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		5D829A992085DCC6001993B6 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		5D829A9B2085E36B001993B6 /* MEDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDBaseViewController.h; sourceTree = "<group>"; };
 		5D829A9C2085E36B001993B6 /* MEDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDBaseViewController.m; sourceTree = "<group>"; };
 		5D8837EE2102FA780087DA22 /* FSMineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSMineHeader.h; sourceTree = "<group>"; };
@@ -1625,6 +1622,8 @@
 		5D020B2B2304413A004AF008 /* CCInterface */ = {
 			isa = PBXGroup;
 			children = (
+				5D020B2C23044272004AF008 /* CCNetWorkStatus.h */,
+				5D020B2D23044272004AF008 /* CCNetWorkStatus.m */,
 			);
 			path = CCInterface;
 			sourceTree = "<group>";
@@ -2754,8 +2753,6 @@
 				5D3E4FC720FB5D8C008FBF42 /* GHHTTPManager.h */,
 				5D3E4FC820FB5D8C008FBF42 /* GHHTTPManager.m */,
 				5D3E4FC920FB5D8C008FBF42 /* Ping */,
-				5D3E4FCF20FB5D8C008FBF42 /* RealReachability.h */,
-				5D3E4FD020FB5D8C008FBF42 /* RealReachability.m */,
 			);
 			path = HTTPManager;
 			sourceTree = "<group>";
@@ -3779,7 +3776,6 @@
 			isa = PBXGroup;
 			children = (
 				5D197DE82175AF9700B3F5AF /* JXCategory */,
-				5D829A972085DCC6001993B6 /* Reachability */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -4070,15 +4066,6 @@
 				5D829A922085DA47001993B6 /* MEDMineController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5D829A972085DCC6001993B6 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				5D829A982085DCC6001993B6 /* Reachability.m */,
-				5D829A992085DCC6001993B6 /* Reachability.h */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 		5D8837F1210301190087DA22 /* 备用 */ = {
@@ -5759,6 +5746,7 @@
 				5D2EF92020F7581D00699AA2 /* SCLSwitchView.m in Sources */,
 				5D970D582107129D00F19D3D /* FSAccountSetController.m in Sources */,
 				5D95137F21D12B7D002B75B2 /* FSPageView.m in Sources */,
+				5D020B2E23044272004AF008 /* CCNetWorkStatus.m in Sources */,
 				5DCE9B0B20C6682100512610 /* TZPhotoPreviewController.m in Sources */,
 				5D69059720D9FB12002BBD69 /* MEDMonitorLineChart.m in Sources */,
 				5DA70AA520F4B83E00D9AF1D /* MEDRefreshDetailsController.m in Sources */,
@@ -5971,7 +5959,6 @@
 				5DCC2E3D21186256001B60C5 /* FSCornerRadiusCell.m in Sources */,
 				5D3E500920FB5D8C008FBF42 /* BAGridView.m in Sources */,
 				5D427A0D20F8F38500FB9C65 /* MZFormTextField.m in Sources */,
-				5D829A9A2085DCC6001993B6 /* Reachability.m in Sources */,
 				5D8207FC2099A50500B84C1E /* MEDHomeLifeHabitController.m in Sources */,
 				5D197E602175BAEE00B3F5AF /* ListViewController.m in Sources */,
 				5DA70AAA20F4B83E00D9AF1D /* MEDDIYBackFooter.m in Sources */,
@@ -5997,7 +5984,6 @@
 				5D427A0620F8E9DF00FB9C65 /* MZFromCell.m in Sources */,
 				5D3E4FEB20FB5D8C008FBF42 /* NSString+Random.m in Sources */,
 				5D6CEB6321351EE00001041A /* OYModel.m in Sources */,
-				5D3E501E20FB5D8C008FBF42 /* RealReachability.m in Sources */,
 				5DCD9AA3212303A500467294 /* FSLocationChangeView.m in Sources */,
 				5D829A932085DA47001993B6 /* MEDMineController.m in Sources */,
 				5D2EF96220F82DFC00699AA2 /* MEDNormalChooseController.m in Sources */,
