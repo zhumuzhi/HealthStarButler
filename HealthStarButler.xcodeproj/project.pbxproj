@@ -1622,6 +1622,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D020B2B2304413A004AF008 /* CCInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CCInterface;
+			sourceTree = "<group>";
+		};
 		5D03A44820DA6B420072CEC7 /* WebJSOCTest(OC&JS) */ = {
 			isa = PBXGroup;
 			children = (
@@ -3674,6 +3681,7 @@
 		5D829A1D2085C7D1001993B6 /* HealthStarButler */ = {
 			isa = PBXGroup;
 			children = (
+				5D020B2B2304413A004AF008 /* CCInterface */,
 				5D829A342085C873001993B6 /* Classes */,
 			);
 			path = HealthStarButler;
@@ -5437,7 +5445,6 @@
 				5D829A182085C7D1001993B6 /* Frameworks */,
 				5D829A192085C7D1001993B6 /* Resources */,
 				27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */,
-				00B7534735523FBBBD9BC8E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -5615,28 +5622,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00B7534735523FBBBD9BC8E2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		27A6FBC0BE5D556C47AE519A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -5647,7 +5639,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthStarButler/Pods-HealthStarButler-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FE589E07E4F36B2C354A5F3F /* [CP] Check Pods Manifest.lock */ = {
