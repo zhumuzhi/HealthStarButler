@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		07C4800CA15200AF8FCB0327 /* libPods-HealthStarButler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */; };
 		5D020B2E23044272004AF008 /* CCNetWorkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D020B2D23044272004AF008 /* CCNetWorkStatus.m */; };
+		5D020B312304447B004AF008 /* CCNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D020B302304447B004AF008 /* CCNetWorkTool.m */; };
 		5D03A44B20DA6B6C0072CEC7 /* MEDWebTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */; };
 		5D08D03F2152962500C10FF0 /* FSGetElementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D08D03E2152962500C10FF0 /* FSGetElementController.m */; };
 		5D09A86820DBEC350059FDD8 /* MEDShopingCartController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D09A86720DBEC350059FDD8 /* MEDShopingCartController.m */; };
@@ -579,6 +580,8 @@
 		2B579027A93EBEB1273A4BD5 /* libPods-HealthStarButler.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HealthStarButler.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D020B2C23044272004AF008 /* CCNetWorkStatus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetWorkStatus.h; sourceTree = "<group>"; };
 		5D020B2D23044272004AF008 /* CCNetWorkStatus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNetWorkStatus.m; sourceTree = "<group>"; };
+		5D020B2F2304447B004AF008 /* CCNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCNetWorkTool.h; sourceTree = "<group>"; };
+		5D020B302304447B004AF008 /* CCNetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCNetWorkTool.m; sourceTree = "<group>"; };
 		5D03A44920DA6B6C0072CEC7 /* MEDWebTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MEDWebTestController.h; sourceTree = "<group>"; };
 		5D03A44A20DA6B6C0072CEC7 /* MEDWebTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MEDWebTestController.m; sourceTree = "<group>"; };
 		5D08D03D2152962500C10FF0 /* FSGetElementController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSGetElementController.h; sourceTree = "<group>"; };
@@ -1624,6 +1627,8 @@
 			children = (
 				5D020B2C23044272004AF008 /* CCNetWorkStatus.h */,
 				5D020B2D23044272004AF008 /* CCNetWorkStatus.m */,
+				5D020B2F2304447B004AF008 /* CCNetWorkTool.h */,
+				5D020B302304447B004AF008 /* CCNetWorkTool.m */,
 			);
 			path = CCInterface;
 			sourceTree = "<group>";
@@ -6054,6 +6059,7 @@
 				5DCE9AFD20C6682100512610 /* MEDTreatmentRecordDescCell.m in Sources */,
 				5D2EF96120F82DFC00699AA2 /* MEDMultiSelectController.m in Sources */,
 				5D201DE920CA6D2C009007D9 /* KDBarGraph.m in Sources */,
+				5D020B312304447B004AF008 /* CCNetWorkTool.m in Sources */,
 				5DA3552E210DC65F008B6642 /* FSShopCartHeaderView.m in Sources */,
 				5DF1F15E20EF5522009A8E51 /* FSPriceAttributedStringTool.m in Sources */,
 				5D4A4811209070A0007DAD29 /* MEDProgressHUD.m in Sources */,

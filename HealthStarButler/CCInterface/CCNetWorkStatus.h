@@ -11,6 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 检测网络状态
+ */
 @interface CCNetWorkStatus : NSObject
 
 + (NetworkStatus)getNetWorkStatus;
@@ -27,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return YES有/NO没有
  */
-+(BOOL)isFi;
++(BOOL)isInternet;
 
 /**
  *  开启网络指示器
